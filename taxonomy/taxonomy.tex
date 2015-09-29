@@ -1,0 +1,158 @@
+\chapter{Turn-taking taxonomy}
+\label{ch:taxonomy}
+
+%HK> Bien amener la taxonomie. Rappeler les précurseurs, détailler le role d'une telle classification ainsi que ses spécificités.
+%HK> Citer Khouzaimi2015 à EMNLP
+%HK> Idée derrière la taxonomie : diviser pour régner.
+
+\section{Taxonomy presentation}
+
+	Turn-taking in dialogue refers to the act of taking the floor by one participant, here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Giver (G), is already speaking or not (the denomination Giver is more adapted to the case where it has the floor, but we keep it as a convention for the other case). In the first case, turn-taking either gives birth to a barge-in where G stop speaking or to a backchannel, feedback or comment and it that case, G keeps talking. If G does not have the floor, T is in a situation of initial turn-taking.
+    
+    The taxonomy we introduce here is based on two dimensions: \textit{the quantity of information that G has already injected in the dialogue} and \textit{the quantity of information that T tries to inject by taking the floor}. The different levels of information for each dimension are described on Table \ref{tab:taxlabels}.
+    
+    \begin{table}[th]
+			\footnotesize
+			\caption{\label{tab:taxlabels} {\it Taxonomy labels}}
+			\vspace{2mm}
+			\centerline{
+				\begin{tabular}{|r|l|}
+					\hline
+					\textbf{G\_NONE} & No information given \\
+					\textbf{G\_FAIL} & Failed trial \\
+					\textbf{G\_INCOHERENT} & Incoherent information \\
+					\textbf{G\_INCOMPLETE} & Incomplete information \\
+					\textbf{G\_SUFFICIENT} & Sufficient information \\
+					\textbf{G\_COMPLETE} & Complete utterance \\
+					\textbf{T\_REF\_IMPL} & Implicit ref. to G's utterance \\
+					\textbf{T\_REF\_RAW} & Raw ref. to G's utterance \\
+					\textbf{T\_REF\_INTERP} & Reference with interpretation \\
+					\textbf{T\_MOVE} & Dialogue move (with improvement) \\
+					\hline
+				\end{tabular}
+			}
+		\end{table}
+        
+        
+        \begin{table}[t]
+			\fontsize{8}{10}\selectfont
+			\caption{\label{tab:TTP} {\it Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor giver/taker.}}
+			\vspace{2mm}
+			\centerline{
+				\begin{tabular}{|r|c|c|c|c|c|c|}
+					\hline
+					& \textbf{T\_REF\_IMPL} & \textbf{T\_REF\_RAW} & \textbf{T\_REF\_INTERP} & \textbf{T\_MOVE} \\
+					\hline
+					\textbf{G\_NONE} & FLOOR\_TAKING\_IMPL & & & INIT\_DIALOGUE \\
+					\hline
+					\textbf{G\_FAIL} & FAIL\_IMPL & FAIL\_RAW & FAIL\_INTERP & \\
+					\hline
+					\textbf{G\_INCOHERENCE} & INCOHERENCE\_IMPL & INCOHERENCE\_RAW & INCOHERENCE\_INTERP & \\
+					\hline
+					\textbf{G\_INCOMPLETE} & BACKCHANNEL & FEEDBACK\_RAW & FEEDBACK\_INTERP & \\
+					\hline
+					\textbf{G\_SUFFICIENT} & REF\_IMPL & REF\_RAW & REF\_INTERP & BARGE\_IN\_RESP \\
+					\hline
+					\textbf{G\_COMPLETE} & REKINDLE & & & END\_POINT \\
+					\hline
+				\end{tabular}
+			}
+		\end{table}
+        
+        Table \ref{tab:TTP} describes the taxonomy where turn-taking phenomena (TTP) are depicted. The rows correspond to the levels of information added by G and the columns to the information that T tries to add. In order to describe each one of them in detail, we will proceed row after row.
+        
+        \paragraph{G\_NONE} G does not have the floor, therefore, T takes the floor for the first time in the dialogue. This can be done implicitly by performing some gesture to catch G's attention or by clearing her throat for instance (FLOOR\_TAKING\_IMPL). On the other hand, she can start speaking normally (FLOOR\_TAKING\_EXPL).
+        
+        \paragraph{G\_FAIL} G takes the floor for long enough to deliver a message (or at least a chunk of information) but T does not understand anything. This can be due to noise or to the fact that the words and expressions are unknown by the T (other language, unknown cultural reference, unknown vocabulary...). T can interrupt G before the end of his utterance as she estimates that letting him finish it is useless. This can be done implicitly (FAIL\_IMPL) using a facial expression (frowning), a gesture or uttering a sound:
+				
+					\begin{dialogue}
+						\speak{G} Cada hora that I spend here is ...
+						\speak{T} ...what?
+					\end{dialogue}
+					
+					It can also by uttering explicitly that G's utterance is not clear so far (FAIL\_RAW):
+					
+					\begin{dialogue}
+						\speak{G} <noise> has been <noise> from...
+						\speak{T} ...sorry, I can't hear you very well! What did you say?
+					\end{dialogue}
+					
+					Finally, T can interrupt G by trying to provide a justification to the fact that G needs to repeat, reformulate or add complementary information in his sentence (FAIL\_INTERP). For example:
+					
+					\begin{dialogue}
+						\speak{G} Freddy was at the concert and ...
+						\speak{T} ...who is Freddy?
+					\end{dialogue}
+					
+				\paragraph{G\_INCOHERENCE} T understands G's message and detects and incoherence in it, or between that message and the dialogue context. G can make a mistake like \textit{I went swimming from 10 am until 9 am}, \textit{First, go to Los Angeles, then go south to San Francisco...} or be unaware of the dialogue context: \textit{You should take line A...} while line A is closed that day. Again, this can be done implicitly (INCOHERENCE\_IMPL) by adopting the same behaviours as in the case of G\_FAIL, or explicitly (INCOHERENCE\_RAW).
+					
+						\begin{dialogue}
+							\speak{G} Investing in risk-free instruments like stocks is one of the ...
+							\speak{T} ...that is nonsense.
+						\end{dialogue}
+						
+						T can also explain the reasons she thinks this is not coherent (INCOHERENCE\_INTERP):
+						
+						\begin{dialogue}
+							\speak{G} I will visit you on Sunday and then ...
+							\speak{T} ...but you are supposed to be traveling by then!
+						\end{dialogue}
+						
+						%HK> Citer Dictanum pour le feedback (harmoniser l'exemple avec le papier de démo), citer Skantze aussi pour NUMBERS.
+					\paragraph{G\_INCOMPLETE} G's utterance is still incomplete (and G is still holding the floor) but all the information given so far is coherent. T can perform a backchannel by nodding her head for example or by saying \textit{Aha} or \textit{Ok} for example (BACKCHANNEL). This gives G a signal that he is being understood and followed, thus encouraging him to keep on speaking. T can also choose to repeat a part of G's sentence for confirmation (FEEDBACK\_RAW). If this part is correct, G continues to speak normally (or sometimes explicitly confirms by adding a \textit{yes} to his sentence):
+					
+						\begin{dialogue}
+							\speak{G} My number is 01 45...
+							\speak{T} ...01 45
+							\speak{G} 12 25
+							\speak{T} 12 29
+							\speak{G} no, 12 25
+							\speak{T} ok, 12 25
+						\end{dialogue}
+						
+						Another kind of feedback is by adding some related information to G's incomplete utterance (FEEDBACK\_INTERP), for example:
+						
+						\begin{dialogue}
+							\speak{G} I went to see the football game yesterday...
+							\speak{T} ...yeah, disappointing
+							\speak{G} ...with a friend, but we did not stay until the end.
+						\end{dialogue}
+                        
+                    %HK> Citer Layla pour le listing.
+                   	\paragraph{G\_SUFFICIENT} G has not finished talking, yet, all the information that T needs to answer has been conveyed. If G is listing a few options, T can perform a gesture meaning that she is interested in the last option uttered (REF\_IMPL). She can also do it explicitly (REF\_RAW):
+                    
+                    	\begin{dialogue}
+							\speak{G} You can book for an appointment, on Monday afternoon, Tuesday morning, Wednesday afternoon...
+							\speak{T} Oh Yeah! That would be great.
+						\end{dialogue}
+                        
+                   	T can also add comments related to her choice, once selecting an option (REF\_INTERP):
+                    
+                    	\begin{dialogue}
+							\speak{G} We have apple juice, tomato juice...
+							\speak{T} Oh Yeah! Tomato juice is my favorite, plus, my doctor advised to have it.
+						\end{dialogue}
+                    
+                    In the case of goal-oriented dialogue, G keeps talking even though he conveyed all the necessary information for T to formulate an answer. T can choose to interrupt him (BARGE\_IN\_RESP) though making the dialogue shorter (this can be viewed as a rude move in some cases):
+                    
+                 		\begin{dialogue}
+							\speak{G} I want to book a six person table tomorrow at 6 please, I was wondering if it is possible as ...
+							\speak{T} Sure, no problem. Can I have your phone number please?
+						\end{dialogue}
+                        
+                  	\paragraph{G\_COMPLETE} G has finished his utterance. If T thinks that some more information needs to be provided, she can perform a gesture or adopt a facial expression to communicate that (REKINDLE), making G take the floor again and provide further information. This can also be done explicitly and it will be considered as a new dialogue turn, as well as T providing new information to make the dialogue progress.
+                    
+                    	\begin{dialogue}
+							\speak{G} How many friends of yours are coming with us tomorrow?
+							\speak{T} Two, hopefully.
+						\end{dialogue}
+
+\section{Discussion}
+
+	%HK> Citer Beatie1982 et dérivés
+	This taxonomy is aimed to clarify the notion of turn-taking. In human-human conversation, this translate into a rich set of behaviour that we try to depict and classify given two criteria. Compared to existing classifications of turn-taking behaviours, an important part is given to the semantic content of G's and T's utterances (and other cues like gestures and facial expressions) as well as the reasons that pushed T to take the floor given this information.
+    
+    %HK> Rajouter des références: Baumann, Crystal Chao...
+    A big part of research in incremental dialogue systems and turn-taking optimisation has mainly focused on endpoint detection \cite{Raux2008} and smooth turn-taking. Therefore, their objective is to replicate the phenomenon labeled here as BARGE\_IN\_RESP. Some other studies focus on backchanneling and feedback, often neglecting the semantic part of the dialogue participants utterances and focusing exclusively on prosody and acoustic features.
+    
+    %HK> Papier turn-yielding cues: IPUs, labelling SMOOTH-SWITCHES (G finish sentence + no overlap)

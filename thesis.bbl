@@ -1,0 +1,235 @@
+\begin{thebibliography}{}
+
+\bibitem[Austin, 1962]{Austin1962}
+Austin, J. (1962).
+\newblock {\em How to Do Things with Words}.
+\newblock Oxford.
+
+\bibitem[Baumann and Schlangen, 2011]{Baumann2011}
+Baumann, T. and Schlangen, D. (2011).
+\newblock Evaluation and optimisation of incremental processors.
+\newblock {\em Dialogue and Discourse}, 2:113--141.
+
+\bibitem[Beattie, 1982]{Beattie1982}
+Beattie, G. (1982).
+\newblock Turn-taking and interruption in political interviews: Margaret
+  thatcher and jim callaghan compared and contrasted.
+\newblock {\em Semiotica}, 39:93--114.
+
+\bibitem[Bellman, 1957]{Bellman1957}
+Bellman, R. (1957).
+\newblock {\em Dynamic Programming}.
+\newblock Princeton University Press.
+
+\bibitem[Chandramohan et~al., 2011]{Chandramohan2011}
+Chandramohan, S., Geist, M., Lefèvre, F., and Pietquin, O. (2011).
+\newblock User simulation in dialogue systems using inverse reinforcement
+  learning.
+\newblock In {\em INTERSPEECH}.
+
+\bibitem[Chandramohan et~al., 2010]{Chandramohan2010}
+Chandramohan, S., Geist, M., and Pietquin, O. (2010).
+\newblock Optimizing spoken dialogue management with fitted value iteration.
+\newblock In {\em INTERSPEECH 11th Annual Conference of the International
+  Speech}.
+
+\bibitem[Dethlefs et~al., 2012]{Dethlefs2012}
+Dethlefs, N., Hastie, H.~W., Rieser, V., and Lemon, O. (2012).
+\newblock Optimising incremental dialogue decisions using information density
+  for interactive systems.
+\newblock In {\em EMNLP-CoNLL}.
+
+\bibitem[Eckert et~al., 1997]{Eckert1997}
+Eckert, W., Levin, E., and Pieraccini, R. (1997).
+\newblock User modeling for spoken dialogue system evaluation.
+\newblock In {\em Automatic Speech Recognition and Understanding, 1997.
+  Proceedings., 1997 IEEE Workshop on}.
+
+\bibitem[El~Asri et~al., 2014]{El-Asri2014}
+El~Asri, L., Lemonnier, R., Laroche, R., Pietquin, O., and Khouzaimi, H.
+  (2014).
+\newblock {NASTIA: Negotiating Appointment Setting Interface}.
+\newblock In {\em Proceedings of LREC}.
+
+\bibitem[Ghigi et~al., 2014]{Ghigi2014}
+Ghigi, F., Eskenazi, M., Torres, M.~I., and Lee, S. (2014).
+\newblock Incremental dialog processing in a task-oriented dialog.
+\newblock In {\em Fifteenth Annual Conference of the International Speech
+  Communication Association}.
+
+\bibitem[Gravano and Hirschberg, 2011]{Gravano2011}
+Gravano, A. and Hirschberg, J. (2011).
+\newblock Turn-taking cues in task-oriented dialogue.
+\newblock {\em Comput. Speech Lang.}, 25(3):601--634.
+
+\bibitem[Hastie et~al., 2013]{Hastie2013}
+Hastie, H., Aufaure, M.-A., Alexopoulos, P., Cuay\'{a}huitl, H., Dethlefs, N.,
+  Gasic, M., Henderson, J., Lemon, O., Liu, X., Mika, P., Ben~Mustapha, N.,
+  Rieser, V., Thomson, B., Tsiakoulis, P., and Vanrompay, Y. (2013).
+\newblock Demonstration of the parlance system: a data-driven incremental,
+  spoken dialogue system for interactive search.
+\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+
+\bibitem[Jonsdottir et~al., 2008]{Jonsdottir2008}
+Jonsdottir, G.~R., Thorisson, K.~R., and Nivel, E. (2008).
+\newblock Learning smooth, human-like turntaking in realtime dialogue.
+\newblock In {\em In Proceedings of Intelligent Virtual Agents (IVA 08}, pages
+  162--175. Springer.
+
+\bibitem[Khouzaimi et~al., 2014]{Khouzaimi2014a}
+Khouzaimi, H., Laroche, R., and Lef\`evre, F. (2014).
+\newblock An easy method to make dialogue systems incremental.
+\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[Kim and Banchs, 2014]{Kim2014}
+Kim, S. and Banchs, R.~E. (2014).
+\newblock Sequential labeling for tracking dynamic dialog states.
+\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[Laroche, 2010]{Laroche2010}
+Laroche, R. (2010).
+\newblock {\em Raisonnement sur les incertitudes et apprentissage pour les
+  systemes de dialogue conventionnels}.
+\newblock PhD thesis, Paris VI University.
+
+\bibitem[Laroche et~al., 2011]{CLASSiCd64}
+Laroche, R., Putois, G., Bretier, P., Aranguren, M., Velkovska, J., Hastie, H.,
+  Keizer, S., Yu, K., Jurcicek, F., Lemon, O., and Young, S. (2011).
+\newblock D6.4: Final evaluation of classic towninfo and appointment scheduling
+  systems.
+\newblock Report D6.4, CLASSIC Project.
+
+\bibitem[Lemon et~al., 2003]{Lemon2003}
+Lemon, O., Cavedon, L., and Kelly, B. (2003).
+\newblock Managing dialogue interaction: A multi-layered approach.
+\newblock In {\em Proceedings of the 4th SIGDIAL Workshop on Discourse and
+  Dialogue}.
+
+\bibitem[Lemon and Pietquin, 2007]{Lemon2007}
+Lemon, O. and Pietquin, O. (2007).
+\newblock Machine learning for spoken dialogue systems.
+\newblock In {\em Proceedings of the European Conference on Speech
+  Communication and Technologies (Interspeech'07)}.
+
+\bibitem[Levin et~al., 1997]{Levin1997}
+Levin, E., Pieraccini, R., and Eckert, W. (1997).
+\newblock Learning dialogue strategies within the markov decision process
+  framework.
+\newblock In {\em Automatic Speech Recognition and Understanding, 1997.
+  Proceedings., 1997 IEEE Workshop on}.
+
+\bibitem[Lock, 1965]{Lock1965}
+Lock, K. (1965).
+\newblock Structuring programs for multiprogram time-sharing on-line
+  applications.
+\newblock In {\em AFIPS '65 (Fall, part I) Proceedings of the November
+  30--December 1, 1965, fall joint computer conference, part I}.
+
+\bibitem[McGraw and Gruenstein, 2012]{McGraw2012}
+McGraw, I. and Gruenstein, A. (2012).
+\newblock Estimating word-stability during incremental speech recognition.
+\newblock In {\em Proceedings of the INTERSPEECH 2012 Conference}.
+
+\bibitem[Meena et~al., 2013]{Meena2013}
+Meena, R., Skantze, G., and Gustafson, J. (2013).
+\newblock A data-driven model for timing feedback in a map task dialogue
+  system.
+\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+
+\bibitem[Pietquin and Hastie, 2013]{Pietquin2013}
+Pietquin, O. and Hastie, H. (2013).
+\newblock A survey on metrics for the evaluation of user simulations.
+\newblock {\em The Knowledge Engineering Review}, 28.
+
+\bibitem[Raux and Eskenazi, 2007]{Raux2007}
+Raux, A. and Eskenazi, M. (2007).
+\newblock A multi-layer architecture for semi-synchronous event-driven dialogue
+  management.
+\newblock In {\em ASRU}.
+
+\bibitem[Raux and Eskenazi, 2008]{Raux2008}
+Raux, A. and Eskenazi, M. (2008).
+\newblock Optimizing endpointing thresholds using dialogue features in a spoken
+  dialogue system.
+\newblock In {\em SIGDIAL}.
+
+\bibitem[Sacks et~al., 1974]{Sacks1974}
+Sacks, H., Schegloff, E.~A., and Jefferson, G. (1974).
+\newblock A simplest systematics for the organization of turn-taking for
+  conversation.
+\newblock {\em Language}, 50:696--735.
+
+\bibitem[Schatzmann et~al., 2007]{Schatzmann2007}
+Schatzmann, J., Thomson, B., Weilhammer, K., Ye, H., and Young, S. (2007).
+\newblock Agenda-based user simulation for bootstrapping a pomdp dialogue
+  system.
+\newblock In {\em Human Language Technologies 2007: The Conference of the North
+  American Chapter of the Association for Computational Linguistics; Companion
+  Volume, Short Papers}.
+
+\bibitem[Schatzmann et~al., 2006]{Schatzmann2006}
+Schatzmann, J., Weilhammer, K., Stuttle, M., and Young, S. (2006).
+\newblock A survey of statistical user simulation techniques for
+  reinforcement-learning of dialogue management strategies.
+\newblock {\em The Knowledge Engineering Review}, 21.
+
+\bibitem[Schlangen and Skantze, 2011]{Schlangen2011}
+Schlangen, D. and Skantze, G. (2011).
+\newblock A general, abstract model of incremental dialogue processing.
+\newblock {\em Dialogue and Discourse}, 2:83--111.
+
+\bibitem[Searle, 1969]{Searle1969}
+Searle, J. (1969).
+\newblock {\em Speech Acts: An Essay in the Philosophy of Language}.
+\newblock Cambridge University Press, UK.
+
+\bibitem[Selfridge and Heeman, 2010]{Selfridge2010}
+Selfridge, E. and Heeman, P.~A. (2010).
+\newblock Importance-driven turn-bidding for spoken dialogue systems.
+\newblock In {\em ACL}, pages 177--185.
+
+\bibitem[Selfridge et~al., 2012]{Selfridge2012a}
+Selfridge, E.~O., Arizmendi, I., Heeman, P.~A., and Williams, J.~D. (2012).
+\newblock Integrating incremental speech recognition and pomdp-based dialogue
+  systems.
+\newblock In {\em Proceedings of the 13th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue}.
+
+\bibitem[Selfridge and Heeman, 2012]{Selfridge2012b}
+Selfridge, E.~O. and Heeman, P.~A. (2012).
+\newblock A temporal simulator for developing turn-taking methods for spoken
+  dialogue systems.
+\newblock In {\em Proceedings of the 13th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue}.
+
+\bibitem[Sutton and Barto, 1998]{Sutton1998}
+Sutton, R.~S. and Barto, A.~G. (1998).
+\newblock {\em Reinforcement Learning, An Introduction}.
+\newblock The MIT Press, Cambridge, Massachusetts, London, England.
+
+\bibitem[Tanenhaus et~al., 1995]{Tanenhaus1995}
+Tanenhaus, M.~K., Spivey-Knowlton, M.~J., Eberhard, K.~M., and Sedivy, J.~C.
+  (1995).
+\newblock Integration of visual and linguistic information in spoken language
+  comprehension.
+\newblock {\em Science}, 268:1632--1634.
+
+\bibitem[Wir\'en, 1992]{Wiren1992}
+Wir\'en, M. (1992).
+\newblock {\em Studies in Incremental Natural Language Analysis}.
+\newblock PhD thesis, Linköping University, Linköping, Sweden.
+
+\bibitem[Wlodarczak and Wagner, 2013]{Wlodarczak2013}
+Wlodarczak, M. and Wagner, P. (2013).
+\newblock Effects of talk-spurt silence boundary thresholds on distribution of
+  gaps and overlaps.
+\newblock In {\em INTERSPEECH Proceedings}.
+
+\bibitem[Yuan et~al., 2006]{Yuan2006}
+Yuan, J., Liberman, M., and Cieri, C. (2006).
+\newblock Towards an integrated understanding of speaking rate in conversation.
+\newblock In {\em INTERSPEECH Proceedings}.
+
+\end{thebibliography}

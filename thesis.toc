@@ -1,0 +1,84 @@
+\thispagestyle {empty}
+\contentsline {chapter}{List of figures}{xv}{chapter*.5}
+\contentsline {chapter}{List of tables}{xvii}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}State of the art}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Human dialogue}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Philosophy of language}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Turn-taking in human dialogue}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Incremental Dialogue systems}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Definitions}{4}{subsection.2.2.1}
+\contentsline {subsubsection}{Spoken dialogue system}{4}{section*.7}
+\contentsline {subsubsection}{Incremental dialogue systems}{5}{section*.9}
+\contentsline {subsection}{\numberline {2.2.2}Existing architectures}{6}{subsection.2.2.2}
+\contentsline {subsubsection}{Sequential paradigm}{6}{section*.10}
+\contentsline {subsubsection}{Multi-layer paradigm}{7}{section*.11}
+\contentsline {section}{\numberline {2.3}Reinforcement Learning}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Definition}{8}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{10}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Issues and motivation}{11}{section.2.4}
+\contentsline {chapter}{\numberline {3}Turn-taking taxonomy}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Taxonomy presentation}{13}{section.3.1}
+\contentsline {paragraph}{G\_NONE}{14}{section*.14}
+\contentsline {paragraph}{G\_FAIL}{14}{section*.15}
+\contentsline {paragraph}{G\_INCOHERENCE}{15}{section*.16}
+\contentsline {paragraph}{G\_INCOMPLETE}{15}{section*.17}
+\contentsline {paragraph}{G\_SUFFICIENT}{16}{section*.18}
+\contentsline {paragraph}{G\_COMPLETE}{16}{section*.19}
+\contentsline {section}{\numberline {3.2}Discussion}{16}{section.3.2}
+\contentsline {chapter}{\numberline {4}Architecture}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Description}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Overview}{19}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Time sharing}{20}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}The Scheduler}{22}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Illustration}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}A textual dialogue system: CFAsT}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}A spoken dialogue system: Dictanum}{25}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Discussion}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Levels of incrementality}{27}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{27}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Separating dialogue management from floor management}{27}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Incremental dialogue simulation}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Agenda management task}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}The service}{30}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Natural Language Understanding}{30}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.3}User simulator}{31}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Overview}{31}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Intent Manager}{32}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}NLG and Verbosity Manager}{32}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}ASR output simulator}{34}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Timing and patience manager}{36}{subsection.5.3.5}
+\contentsline {chapter}{\numberline {6}Handcrafted strategies for improving dialogue efficiency}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}User and system initiative}{39}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Strategies}{39}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Experiments}{41}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Incremental strategies}{42}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}ASR instability}{42}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}TTP implementation}{43}{subsection.6.2.2}
+\contentsline {paragraph}{FAIL\_RAW:}{43}{section*.33}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{43}{section*.34}
+\contentsline {paragraph}{FEEDBACK:}{43}{section*.35}
+\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{44}{section*.36}
+\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{44}{section*.37}
+\contentsline {subsection}{\numberline {6.2.3}Experiments}{44}{subsection.6.2.3}
+\contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Model}{47}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}State representation}{47}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Actions, rewards and episodes}{49}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Fitted-Q Value Iteration}{49}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Experiment}{50}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Setup}{50}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Results}{51}{subsection.7.2.2}
+\contentsline {chapter}{\numberline {8}Experiment with real users}{55}{chapter.8}
+\contentsline {section}{\numberline {8.1}Protocol}{55}{section.8.1}
+\contentsline {section}{\numberline {8.2}Results}{55}{section.8.2}
+\contentsline {chapter}{\numberline {9}A new reinforcement learning approach adapted to incremental dialogue}{57}{chapter.9}
+\contentsline {section}{\numberline {9.1}Problem}{57}{section.9.1}
+\contentsline {section}{\numberline {9.2}Proposed approach}{57}{section.9.2}
+\contentsline {section}{\numberline {9.3}Toy problem application}{57}{section.9.3}
+\contentsline {section}{\numberline {9.4}Simulation results}{57}{section.9.4}
+\contentsline {chapter}{\numberline {10}Conclusion}{59}{chapter.10}
+\contentsline {chapter}{References}{61}{chapter*.43}
+\contentsline {chapter}{Appendix \numberline {A}How to install \LaTeX }{65}{Appendix.a.A}
+\contentsline {chapter}{Appendix \numberline {B}Installing the CUED class file}{69}{Appendix.a.B}

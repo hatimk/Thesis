@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: Dedication/dedication.aux
+A level-1 auxiliary file: Declaration/declaration.aux
+A level-1 auxiliary file: Acknowledgement/acknowledgement.aux
+A level-1 auxiliary file: Abstract/abstract.aux
+A level-1 auxiliary file: introduction/introduction.aux
+A level-1 auxiliary file: stateofart/stateofart.aux
+A level-1 auxiliary file: taxonomy/taxonomy.aux
+A level-1 auxiliary file: architecture/architecture.aux
+A level-1 auxiliary file: simulation/simulation.aux
+A level-1 auxiliary file: baseline/baseline.aux
+A level-1 auxiliary file: rl/rl.aux
+A level-1 auxiliary file: experiment/experiment.aux
+A level-1 auxiliary file: theory/theory.aux
+A level-1 auxiliary file: conclusion/conclusion.aux
+The style file: apalike.bst
+A level-1 auxiliary file: Appendix1/appendix1.aux
+A level-1 auxiliary file: Appendix2/appendix2.aux
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "ch:baseline"
+You've used 39 entries,
+            1935 wiz_defined-function locations,
+            711 strings with 11199 characters,
+and the built_in function-call counts, 14917 in all, are:
+= -- 1375
+> -- 710
+< -- 23
++ -- 256
+- -- 240
+* -- 1166
+:= -- 2634
+add.period$ -- 118
+call.type$ -- 39
+change.case$ -- 309
+chr.to.int$ -- 39
+cite$ -- 39
+duplicate$ -- 652
+empty$ -- 1082
+format.name$ -- 305
+if$ -- 2936
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 40
+newline$ -- 198
+num.names$ -- 117
+pop$ -- 405
+preamble$ -- 1
+purify$ -- 315
+quote$ -- 0
+skip$ -- 383
+stack$ -- 0
+substring$ -- 674
+swap$ -- 57
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 226
+warning$ -- 0
+while$ -- 90
+width$ -- 0
+write$ -- 484
+(There was 1 warning)

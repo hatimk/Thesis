@@ -1,0 +1,907 @@
+\chapter{Handcrafted strategies for improving dialogue efficiency}
+\label{ch:baseline}
+
+\section{User and system initiative}
+	\subsection{Strategies}
+    \label{subsec:strategies}
+      Most of the current task oriented dialogue systems operate in a slot-filling manner. Here, we identify three strategies to fill all the slots needed by the system:
+
+      \begin{itemize}
+          \item \textbf{System Initiative (SysIni):} The system asks the user for the different slot values one by one, one at each dialogue turn like in the following example:
+
+              \begin{dialogue}
+                  \speak{SYSTEM} What kind of action do you want to perform?
+                  \speak{USER} Add.
+                  \speak{SYSTEM} Please specify a title.
+                  \speak{USER} Dentist.
+                  \speak{SYSTEM} Please specify a date.
+                  \speak{USER} March <noise>.
+                  \speak{SYSTEM} Sorry I don't understand.
+                  \speak{USER} March $7^{th}$.
+                  \speak{SYSTEM} Please specify a time slot.
+                  \speak{USER} From 10am to 11am.
+                  \speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
+                  \speak{USER} Yes.
+              \end{dialogue}
+
+              This strategy is very tedious, however, it has the advantage of baby-stepping the dialogue and recovering the errors progressively.
+
+          \item \textbf{User Initiative (UsrIni):} The user is asked by the system to make a full sentence with all the information needed to process the request. For example:
+
+              \begin{dialogue}
+                  \speak{SYSTEM} What can I do for you?
+                  \speak{USER} I would like to add the event dentist on March <noise> from 10am to 11am.
+                  \speak{SYSTEM} Sorry I don't understand.
+                  \speak{USER} I would like to add the event dentist on March $7^{th}$ from <noise> to 11am.
+                  \speak{SYSTEM} Sorry I don't understand.
+                  \speak{USER} I would like to add the event dentist on March $7^{th}$ from 10am to 11am.
+                  \speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
+                  \speak{USER} Yes.
+              \end{dialogue}
+
+              With this strategy, the dialogue can progress much faster, nevertheless, unlike SysIni, when there is still missing information (even one slot), the user has to repeat all his request.
+
+          \item \textbf{Mixed Initiative (MixIni):} Just like UsrIni, the system asks for all the slots at once but if there is still missing information, it switches to SysIni in order to gather the missing slot values one by one. For example:
+              \begin{dialogue}
+                  \speak{SYSTEM} What can I do for you?
+                  \speak{USER} I would like to add the event dentist on March <noise> from 10am to 11am.
+                  \speak{SYSTEM} Please specify a date.
+                  \speak{USER} <noise>.
+                  \speak{SYSTEM} Sorry I don't understand.
+                  \speak{USER} March $7^{th}$.
+                  \speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
+                  \speak{USER} Yes.
+              \end{dialogue}
+     	\end{itemize}
+
+              By elaborating such a hybrid strategy, we hope that it will ally both advantages of SysIni and UsrIni. In the following, we use the simulator to investigate the performance of these strategies under different conditions of noise.
+              
+    \subsection{Experiments}
+    
+    	\begin{figure*}[t!]
+                  \begin{subfigure}[t]{.5\textwidth}
+                    \begin{tikzpicture}[scale=0.8]
+                    \begin{axis}[
+                        xlabel={WER},
+                        ylabel={Mean duration (sec)},
+                        scaled ticks = false,
+                        tick label style={/pgf/number format/fixed},
+                        xmin=0, xmax=0.3,
+                        ymin=60, ymax=240,
+                        xtick={0,0.06,0.12,0.18,0.24,0.3},
+                        ytick={60,90,120,150,180,210,240},
+                        legend pos=north west,
+                        ymajorgrids=true,
+                        grid style=dashed,
+                        colorbrewer cycle list=Set1,
+                    ]
+
+                    \addplot+[
+                        error bars/.cd,
+                        y dir=both,
+                        y explicit,
+                        ]
+                        coordinates {
+                        (0.0,142.99766666666648) +- (1.1418582659936924,1.1418582659936924)
+                        (0.03,147.96833333333345) +- (1.2288951610992467,1.2288951610992467)
+                        (0.06,153.564) +- (1.328758118514143,1.328758118514143)
+                        (0.09,159.47099999999998) +- (1.4728304812362252,1.4728304812362252)
+                        (0.12,166.0806666666663) +- (1.6532596367358114,1.6532596367358114)
+                        (0.15,172.35700000000003) +- (1.7470270106444508,1.7470270106444508)
+                        (0.18,180.37166666666639) +- (1.9445203995627272,1.9445203995627272)
+                        (0.21,188.94133333333323) +- (2.095052774455862,2.095052774455862)
+                        (0.24,199.63533333333328) +- (2.3011614221910524,2.3011614221910524)
+                        (0.27,207.42400000000032) +- (2.51067389180811,2.51067389180811)
+                        (0.3,214.553) +- (2.6679071832704877,2.6679071832704877)
+                        };
+
+                    \addplot+[
+                        error bars/.cd,
+                        y dir=both,
+                        y explicit,
+                        ]
+                        coordinates {
+                        (0.0,81.58500000000005) +- (0.46277633147481456,0.46277633147481456)
+                        (0.03,91.55700000000007) +- (0.6902870184828043,0.6902870184828043)
+                        (0.06,100.77800000000005) +- (0.9526506118585435,0.9526506118585435)
+                        (0.09,111.33666666666659) +- (1.1434195514159327,1.1434195514159327)
+                        (0.12,121.80866666666675) +- (1.4308194692008798,1.4308194692008798)
+                        (0.15,135.86266666666674) +- (1.7119914373958072,1.7119914373958072)
+                        (0.18,151.0223333333334) +- (1.9759924379031968,1.9759924379031968)
+                        (0.21,165.37566666666658) +- (2.2080237670729597,2.2080237670729597)
+                        (0.24,178.27933333333334) +- (2.5147819067321247,2.5147819067321247)
+                        (0.27,188.373) +- (2.7364346139030498,2.7364346139030498)
+                        (0.3,203.0783333333333) +- (3.0990440743709335,3.0990440743709335)
+                        };
+
+                    \addplot+[
+                        error bars/.cd,
+                        y dir=both,
+                        y explicit,
+                        ]
+                        coordinates {
+                        (0.0,81.81333333333323) +- (0.49131639706677,0.49131639706677)
+                        (0.03,91.71533333333338) +- (0.7370071114727688,0.7370071114727688)
+                        (0.06,100.61999999999999) +- (0.9163154073570945,0.9163154073570945)
+                        (0.09,110.30933333333337) +- (1.1079317542734202,1.1079317542734202)
+                        (0.12,120.25133333333329) +- (1.3145078817622518,1.3145078817622518)
+                        (0.15,128.88766666666666) +- (1.4520881830480932,1.4520881830480932)
+                        (0.18,139.9666666666667) +- (1.6146051787906812,1.6146051787906812)
+                        (0.21,148.08833333333314) +- (1.7406157103623126,1.7406157103623126)
+                        (0.24,160.28433333333334) +- (2.0239947579988615,2.0239947579988615)
+                        (0.27,170.64066666666687) +- (2.1548187185752323,2.1548187185752323)
+                        (0.3,179.7433333333333) +- (2.2832048422084354,2.2832048422084354)
+                        };
+
+                    \legend{SysIni,UsrIni,MixIni}
+
+                    \end{axis}
+                    \end{tikzpicture}
+                  \end{subfigure}
+                  \begin{subfigure}[t]{.5\textwidth}
+                    \begin{tikzpicture}[scale=0.8]
+                    \begin{axis}[
+                          xlabel={WER},
+                          ylabel={Mean task completion ratio},
+                          scaled ticks = false,
+                          tick label style={/pgf/number format/fixed},
+                          xmin=0, xmax=0.3,
+                          ymin=0.5, ymax=1,
+                          xtick={0,0.06,0.12,0.18,0.24,0.3},
+                          ytick={0.5,0.6,0.7,0.8,0.9,1},
+                          legend pos=south west,
+                          ymajorgrids=true,
+                          grid style=dashed,
+                          colorbrewer cycle list=Set1,
+                      ]
+
+                      \addplot+[
+                          error bars/.cd,
+                          y dir=both,
+                          y explicit,
+                          ]
+                          coordinates {
+                          (0.0,0.8963333333333309) +- (0.010740907298735343,0.010740907298735343)
+                          (0.03,0.8833333333333309) +- (0.011750922422422917,0.011750922422422917)
+                          (0.06,0.8639999999999969) +- (0.012144551122029418,0.012144551122029418)
+                          (0.09,0.8563333333333304) +- (0.012279173616784614,0.012279173616784614)
+                          (0.12,0.8409999999999976) +- (0.013090670951314174,0.013090670951314174)
+                          (0.15,0.7986666666666636) +- (0.014211824710431396,0.014211824710431396)
+                          (0.18,0.7719999999999981) +- (0.014286115988765646,0.014286115988765646)
+                          (0.21,0.7459999999999977) +- (0.015003298932050456,0.015003298932050456)
+                          (0.24,0.7216666666666649) +- (0.015567646079111066,0.015567646079111066)
+                          (0.27,0.6789999999999989) +- (0.016263027084634833,0.016263027084634833)
+                          (0.3,0.6373333333333333) +- (0.016762246765342284,0.016762246765342284)
+                          };
+
+                      \addplot+[
+                          error bars/.cd,
+                          y dir=both,
+                          y explicit,
+                          ]
+                          coordinates {
+                          (0.0,0.9763333333333325) +- (0.005542138520263302,0.005542138520263302)
+                          (0.03,0.9643333333333323) +- (0.0068382187544231785,0.0068382187544231785)
+                          (0.06,0.9489999999999987) +- (0.007719044166505293,0.007719044166505293)
+                          (0.09,0.9296666666666643) +- (0.009204328247564411,0.009204328247564411)
+                          (0.12,0.9003333333333313) +- (0.010526556461319933,0.010526556461319933)
+                          (0.15,0.8549999999999972) +- (0.012148750461582722,0.012148750461582722)
+                          (0.18,0.8153333333333306) +- (0.013783382484395439,0.013783382484395439)
+                          (0.21,0.7673333333333308) +- (0.014562095062945068,0.014562095062945068)
+                          (0.24,0.6853333333333322) +- (0.016121110874323646,0.016121110874323646)
+                          (0.27,0.6166666666666665) +- (0.015969957907131894,0.015969957907131894)
+                          (0.3,0.545333333333334) +- (0.016208777342333305,0.016208777342333305)
+                          };
+
+                      \addplot+[
+                          error bars/.cd,
+                          y dir=both,
+                          y explicit,
+                          ]
+                          coordinates {
+                          (0.0,0.976999999999999) +- (0.005317306569642755,0.005317306569642755)
+                          (0.03,0.957666666666665) +- (0.007002288781376789,0.007002288781376789)
+                          (0.06,0.9459999999999981) +- (0.00794158848929817,0.00794158848929817)
+                          (0.09,0.929999999999998) +- (0.00905049440024744,0.00905049440024744)
+                          (0.12,0.9093333333333304) +- (0.009951619999892039,0.009951619999892039)
+                          (0.15,0.8776666666666643) +- (0.011656297952419533,0.011656297952419533)
+                          (0.18,0.8573333333333298) +- (0.012025877402041097,0.012025877402041097)
+                          (0.21,0.8209999999999981) +- (0.013776366435958311,0.013776366435958311)
+                          (0.24,0.7786666666666636) +- (0.01415042176992248,0.01415042176992248)
+                          (0.27,0.745666666666664) +- (0.015024266185076234,0.015024266185076234)
+                          (0.3,0.678333333333332) +- (0.016133166803548708,0.016133166803548708)
+                          };
+                          
+                      \legend{SysIni,UsrIni,MixIni}
+
+                      \end{axis}
+                    \end{tikzpicture}
+                  \end{subfigure}
+                  \caption{Simulated mean duration (left) and dialogue task completion (right) for different noise levels}
+                    \label{fig:genstrateval}
+              \end{figure*}
+              
+  		For the experiments, three dialogue scenarios have been used. As described in \ref{subsec:intentmanager}, a scenario is specified by two lists of events: \textit{InitList} and \textit{ToAddList}. The lists corresponding to the three scenarios are given in Table \ref{tab:expscenarios}.
+        
+       	We vary the WER between 0 and 0.3 with a step of 0.03 in order to analyse the effect of noise on the different strategies. For each noise level, the three scenarios and run 1000 times. The mean duration of the dialogues, their task completion as well as the corresponding 95\% confidence intervals are depicted in Fig. \ref{fig:genstrateval}.
+        
+        In low noise setups, SysIni is clearly less efficient as UsrIni; the dialogues take twice more time to finish with a lower completion rate (actually, it is a consequence of longer dialogue durations given the way the Patience Manager is designed). Nevertheless when the noise level reaches about 0.2, SysIni gives offers better completion rates. The duration is still lower in spite of the correlation between the two metrics. This is due to the fact that the durations distribution for UsrIni is centered on short dialogues whereas the distribution for SysIni is centered on average ones. Finally, MixIni seems to be the best strategy as it allies both the advantages of UsrIni and SysIni.
+        
+        %HK> Donner les équivalents en français pour la réplicabilité des résultats.
+        %HK> Inverser les priorités, c'est bizarre comme ça.
+        
+        \begin{table}[t]
+			\fontsize{7}{9}\selectfont
+			\caption{\label{tab:expscenarios} {\it The three scenarios used in the simulation}}
+			\vspace{2mm}
+			\centerline{
+				\begin{tabular}{|c|c|c|c|c|c|c|c|}
+					\hline
+					Scenario&Title (Priority)&Date&Slot&DateAlt1&SlotAlt1&DateAlt2&SlotAlt2 \\
+                    \hline
+                    1-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+                    1-ToAdd&Book reading(8)&November 19$^{th}$&10:30-12:30&November 14$^{th}$&9:30-11:30&November 18$^{th}$&16:30-18:30 \\
+                    &Watch the lord of the rings(12)&November 13$^{th}$&9:30-12:30&November 15$^{th}$&11:15-14:15& & \\
+					\hline
+                    2-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+                    2-ToAdd&Tennis(5)&November 17$^{th}$&13:15-15:15&November 19$^{th}$&15:15-17:15& & \\
+                    &Gardening(9)&November 18$^{th}$&13:15-15:15&November 14$^{th}$&12:30-14:30& & \\
+                    \hline
+                    3-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+                    &Holidays preparation(1)&November 16$^{th}$&12:30-14:30&November 17$^{th}$&12:15-14:15& & \\
+                    &House cleaning(6)&November 13$^{th}$&14:15-16:15&November 17$^{th}$&15:30-17:30& & \\
+                    3-ToAdd&Give back book(7)&November 16$^{th}$&14:00-14:30&November 13$^{th}$&14:00-14:30& & \\
+                    \hline
+				\end{tabular}
+			}
+		\end{table}
+
+\section{Incremental strategies}
+
+	%HK> Motiver le choix de la métrique d'étude : duration et task completion.
+    %HK> Rajouter une référence pour justifier la correlation entre les métriques objectives et subjectives.
+    
+    In this study, the two metrics under focus are duration and task completion (used as a proxy to measure dialogue efficiency). Nevertheless, one of the main motivations behind incremental dialogue process is to increase human likeness and the dialogue fluency by achieving smooth turn-taking. Some TTPs from the taxonomy established in Chapter \ref{ch:taxonomy} are more likely to improve these last aspects instead of the metrics that interest us most directly, like the BACKCHANNEL for instance. Therefore, only a few TTPs from the taxonomy established in Chapter \ref{ch:taxonomy} have been implemented: those that are more likely to improve our two objective metrics. However, the phenomena that are not studied here could have an indirect impact on duration and task completion as objective and subjective metrics are somehow correlated. In simulation, this is not visible though.
+    
+    INIT\_DIALOGUE and END\_POINT are two phenomena that already exist in traditional dialogue systems. In the Scheduler module (see Chapter \ref{ch:architecture}), we add the following phenomena: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP. The last phenomena have also been implemented in the US to make it able to interrupt the system. Section \ref{subsec:ttpimpl} provides the implementation details of these TTPs.
+    
+    \subsection{ASR instability}
+    \label{subsec:asrinstability}
+    
+    	Because of the ASR instability phenomenon explained in \ref{subsec:asroutputsimu}, the current partial utterance is not guaranteed to be a prefix of future partial utterances and it is likely to change. However, the words at the end of this partial utterance are more likely to change than the ones at the start. In \cite{McGraw2012}, it is shown that words that lasted for more than 0.6 seconds have 90\% chance of staying unchanged. In this work, the speech rate (user and system) is supposed to be 200 words per seconds \cite{Yuan2006} so 0.6 seconds corresponds to two words. Based on that, the handcrafted TTP implementation takes decisions by looking at the current partial hypothesis without its last two words (called the \textit{the last stable utterance}). This margin is called the \textit{Stability Margin} (SM = 2).
+    
+	\subsection{TTP implementation}
+    \label{subsec:ttpimpl}
+    
+    	In the following, the TTP implementation is described. The settings and the parameter values are handcrafted given our experience. In the following chapters, we will try to optimise them from data.
+    
+    	 \paragraph{FAIL\_RAW:} Happens when the user speaks for two long with no key concept detected in her speech. It depends on the system's last question (the type of information it is waiting for). Here, it is triggered when the system asks an open question (all the slots at once) and the user's utterance contains 6 words with no action type detected (add, modify or delete). This threshold is set to 3 in the case of yes/no questions, 4 for date questions and 6 for slot questions.
+         
+         \paragraph{INCOHERENCE\_INTERP:} The system can fully understand the user's partial utterance and yet have a good reason to barge-in. This is the case when the user injects new information that is not coherent with the dialogue context. For instance, if the user says \textit{I want to move the event football game to January...} and there is no event football game in the agenda, then letting him finish his utterance is a waste of time. As a consequence, it makes sense for the system to barge-in. In this implementation, this event is triggered as soon as the last stable utterance generates an overlap with an existing event in the agenda, or it tries to move or delete a non existing event.
+         
+         \paragraph{FEEDBACK:} This phenomenon translates into repeating a part if not the whole user's utterance. However, for the sake of simplicity, we limit ourselves here to the case where only the last word of the last stable utterance is repeated. The moments when feedbacks are performed in this implementation are the moments when the ASR confidence score drops below a certain threshold. To isolate the confidence score corresponding to the target word only, the ratio $s_{t-SM}/s_{t-SM-1}$ is computed (as the confidence score of a sentence is the product of the scores associated with the words in this sentence). Here, this event is triggered whenever this ratio drops under 0.7.
+         
+         \paragraph{BARGE\_IN\_RESP (System):} Depending on the last system dialogue act (apart from dialogue acts reporting errors), the system can choose to barge-in once it has all the information needed to provide an answer. Again, it should also wait for the SM.
+         
+         %HK> Trouver une référence montrant que l'utilisateur peut inférer la fin de la phrase du système avec l'habitude.
+         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the a user's decision. Hence, it has been implemented in the US.
+    
+    \subsection{Experiments}
+    
+    	In this experiment, the TTPs phenomena described in Sect. \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Sect. \ref{subsec:strategies}. Incremental processing is useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Fig. \ref{fig:generic}.
+        
+        %HK> Si on fait de l'apprentissage multi-agent, on peut en parler ici (MixIni+Incr => MixIniRL+Incr => MixIniRL+IncrRL).
+     	Adding mixed initiative behaviour or incrementality to UsrIni are both ways to improve its robustness to errors. Fig. \ref{fig:generic} shows that in our case, incrementality is more efficient. Most importantly, it is shown here that MixIni and incremental behaviour can be combined to form the best strategy.
+    
+    	\begin{figure*}[t]
+			\caption{Mean dialogue duration and task completion for generic strategies.}
+			\centering
+			\label{fig:generic}
+			\begin{minipage}{.47\textwidth}
+				\begin{tikzpicture}[scale=0.7]
+					\begin{axis}[
+						xlabel={WER},
+						ylabel={Mean duration (sec)},
+						scaled ticks = false,
+						tick label style={/pgf/number format/fixed},
+						xmin=0, xmax=0.3,
+						ymin=60, ymax=240,
+						xtick={0,0.06,0.12,0.18,0.24,0.3},
+						ytick={60,90,120,150,180,210,240},
+						legend pos=north west,
+						ymajorgrids=true,
+						grid style=dashed,
+						colorbrewer cycle list=Set1,
+					]
+						
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,81.58500000000005) +- (0.46277633147481456,0.46277633147481456)
+						(0.03,91.55700000000007) +- (0.6902870184828043,0.6902870184828043)
+						(0.06,100.77800000000005) +- (0.9526506118585435,0.9526506118585435)
+						(0.09,111.33666666666659) +- (1.1434195514159327,1.1434195514159327)
+						(0.12,121.80866666666675) +- (1.4308194692008798,1.4308194692008798)
+						(0.15,135.86266666666674) +- (1.7119914373958072,1.7119914373958072)
+						(0.18,151.0223333333334) +- (1.9759924379031968,1.9759924379031968)
+						(0.21,165.37566666666658) +- (2.2080237670729597,2.2080237670729597)
+						(0.24,178.27933333333334) +- (2.5147819067321247,2.5147819067321247)
+						(0.27,188.373) +- (2.7364346139030498,2.7364346139030498)
+						(0.3,203.0783333333333) +- (3.0990440743709335,3.0990440743709335)
+						};
+						
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,81.81333333333323) +- (0.49131639706677,0.49131639706677)
+						(0.03,91.71533333333338) +- (0.7370071114727688,0.7370071114727688)
+						(0.06,100.61999999999999) +- (0.9163154073570945,0.9163154073570945)
+						(0.09,110.30933333333337) +- (1.1079317542734202,1.1079317542734202)
+						(0.12,120.25133333333329) +- (1.3145078817622518,1.3145078817622518)
+						(0.15,128.88766666666666) +- (1.4520881830480932,1.4520881830480932)
+						(0.18,139.9666666666667) +- (1.6146051787906812,1.6146051787906812)
+						(0.21,148.08833333333314) +- (1.7406157103623126,1.7406157103623126)
+						(0.24,160.28433333333334) +- (2.0239947579988615,2.0239947579988615)
+						(0.27,170.64066666666687) +- (2.1548187185752323,2.1548187185752323)
+						(0.3,179.7433333333333) +- (2.2832048422084354,2.2832048422084354)
+						};
+							
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,68.89499999999988) +- (0.17239060751700575,0.17239060751700575)
+						(0.03,77.24000000000001) +- (0.3865324520168614,0.3865324520168614)
+						(0.06,83.54366666666665) +- (0.5155941919229704,0.5155941919229704)
+						(0.09,91.66833333333327) +- (0.7157787659418737,0.7157787659418737)
+						(0.12,99.63933333333331) +- (0.8370302270581913,0.8370302270581913)
+						(0.15,109.1126666666667) +- (1.1221873941474287,1.1221873941474287)
+						(0.18,121.26899999999999) +- (1.3593478463931417,1.3593478463931417)
+						(0.21,131.30266666666677) +- (1.5532606052178979,1.5532606052178979)
+						(0.24,145.07300000000004) +- (1.7921926571357218,1.7921926571357218)
+						(0.27,160.3329999999999) +- (2.1626745552095317,2.1626745552095317)
+						(0.3,174.00799999999992) +- (2.4265835586875766,2.4265835586875766)
+						};
+					
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,68.87866666666663) +- (0.16834398810065204,0.16834398810065204)
+						(0.03,77.9213333333333) +- (0.44751106412720304,0.44751106412720304)
+						(0.06,84.4506666666667) +- (0.5900472117450202,0.5900472117450202)
+						(0.09,90.10100000000003) +- (0.6709314064082492,0.6709314064082492)
+						(0.12,97.7956666666665) +- (0.8124917087720885,0.8124917087720885)
+						(0.15,104.66133333333325) +- (0.9510719765583472,0.9510719765583472)
+						(0.18,111.84033333333323) +- (1.0216177237791202,1.0216177237791202)
+						(0.21,120.29333333333346) +- (1.1777144036820062,1.1777144036820062)
+						(0.24,129.5513333333333) +- (1.3776865706367687,1.3776865706367687)
+						(0.27,138.98733333333325) +- (1.4126578372514091,1.4126578372514091)
+						(0.3,149.0770000000002) +- (1.7679325111923834,1.7679325111923834)
+						};
+
+					\legend{UsrIni,MixIni,UsrIni+Incr,MixIni+Incr}
+
+					\end{axis}
+					\end{tikzpicture}
+				\end{minipage}
+				\begin{minipage}{.47\textwidth}
+					\begin{tikzpicture}[scale=0.7]
+					\begin{axis}[
+						xlabel={WER},
+						ylabel={Mean task completion ratio},
+						scaled ticks = false,
+						tick label style={/pgf/number format/fixed},
+						xmin=0, xmax=0.3,
+						ymin=0.5, ymax=1,
+						xtick={0,0.06,0.12,0.18,0.24,0.3},
+						ytick={0.5,0.6,0.7,0.8,0.9,1},
+						legend pos=south west,
+						ymajorgrids=true,
+						grid style=dashed,
+						colorbrewer cycle list=Set1,
+					]
+						
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,0.9763333333333325) +- (0.005542138520263302,0.005542138520263302)
+						(0.03,0.9643333333333323) +- (0.0068382187544231785,0.0068382187544231785)
+						(0.06,0.9489999999999987) +- (0.007719044166505293,0.007719044166505293)
+						(0.09,0.9296666666666643) +- (0.009204328247564411,0.009204328247564411)
+						(0.12,0.9003333333333313) +- (0.010526556461319933,0.010526556461319933)
+						(0.15,0.8549999999999972) +- (0.012148750461582722,0.012148750461582722)
+						(0.18,0.8153333333333306) +- (0.013783382484395439,0.013783382484395439)
+						(0.21,0.7673333333333308) +- (0.014562095062945068,0.014562095062945068)
+						(0.24,0.6853333333333322) +- (0.016121110874323646,0.016121110874323646)
+						(0.27,0.6166666666666665) +- (0.015969957907131894,0.015969957907131894)
+						(0.3,0.545333333333334) +- (0.016208777342333305,0.016208777342333305)
+						};
+						
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,0.976999999999999) +- (0.005317306569642755,0.005317306569642755)
+						(0.03,0.957666666666665) +- (0.007002288781376789,0.007002288781376789)
+						(0.06,0.9459999999999981) +- (0.00794158848929817,0.00794158848929817)
+						(0.09,0.929999999999998) +- (0.00905049440024744,0.00905049440024744)
+						(0.12,0.9093333333333304) +- (0.009951619999892039,0.009951619999892039)
+						(0.15,0.8776666666666643) +- (0.011656297952419533,0.011656297952419533)
+						(0.18,0.8573333333333298) +- (0.012025877402041097,0.012025877402041097)
+						(0.21,0.8209999999999981) +- (0.013776366435958311,0.013776366435958311)
+						(0.24,0.7786666666666636) +- (0.01415042176992248,0.01415042176992248)
+						(0.27,0.745666666666664) +- (0.015024266185076234,0.015024266185076234)
+						(0.3,0.678333333333332) +- (0.016133166803548708,0.016133166803548708)
+						};
+						
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,0.9863333333333332) +- (0.004096717797348814,0.004096717797348814)
+						(0.03,0.9803333333333325) +- (0.004954963733470576,0.004954963733470576)
+						(0.06,0.9756666666666658) +- (0.0055310368085727864,0.0055310368085727864)
+						(0.09,0.9636666666666659) +- (0.006698467075052671,0.006698467075052671)
+						(0.12,0.9499999999999992) +- (0.007716527716532338,0.007716527716532338)
+						(0.15,0.9383333333333317) +- (0.008686508312704488,0.008686508312704488)
+						(0.18,0.9153333333333307) +- (0.010194596250520984,0.010194596250520984)
+						(0.21,0.8739999999999973) +- (0.01185248227916013,0.01185248227916013)
+						(0.24,0.8279999999999963) +- (0.012996966100681216,0.012996966100681216)
+						(0.27,0.7713333333333315) +- (0.01451229672611085,0.01451229672611085)
+						(0.3,0.7189999999999981) +- (0.015548111716719003,0.015548111716719003)
+						};
+					
+					\addplot+[
+						error bars/.cd,
+						y dir=both,
+						y explicit,
+						]
+						coordinates {
+						(0.0,0.9889999999999994) +- (0.0036906683766863486,0.0036906683766863486)
+						(0.03,0.9789999999999991) +- (0.005019666761848769,0.005019666761848769)
+						(0.06,0.9736666666666656) +- (0.005723997965681152,0.005723997965681152)
+						(0.09,0.9659999999999986) +- (0.006387849521640708,0.006387849521640708)
+						(0.12,0.9576666666666646) +- (0.007300718637383754,0.007300718637383754)
+						(0.15,0.9366666666666648) +- (0.008664983426285267,0.008664983426285267)
+						(0.18,0.923999999999998) +- (0.009513035884162014,0.009513035884162014)
+						(0.21,0.9136666666666643) +- (0.010119688348298588,0.010119688348298588)
+						(0.24,0.8903333333333306) +- (0.01086890250209411,0.01086890250209411)
+						(0.27,0.8576666666666638) +- (0.012094098255853992,0.012094098255853992)
+						(0.3,0.8073333333333309) +- (0.013451624047345968,0.013451624047345968)
+						};
+
+					\legend{UsrIni,MixIni,UsrIni+Incr,MixIni+Incr}
+
+					\end{axis}
+					\end{tikzpicture}
+				\end{minipage}
+		\end{figure*}
+    
+    	\begin{figure*}[t]
+		\caption{Mean dialogue duration and task completion for different turn-taking phenomena.}
+		\centering
+		\label{fig:ttp}
+		\begin{minipage}{.47\textwidth}
+			\begin{tikzpicture}[scale=0.7]
+				\begin{axis}[
+				xlabel={WER},
+				ylabel={TTP Duration (sec)},
+				scaled ticks = false,
+				tick label style={/pgf/number format/fixed},
+				xmin=0, xmax=0.3,
+				ymin=75, ymax=240,
+				xtick={0,0.06,0.12,0.18,0.24,0.3},
+				ytick={75,90,120,150,180,210,240},
+				legend pos=north west,
+				ymajorgrids=true,
+				grid style=dashed,
+				colorbrewer cycle list=Set1,
+			]
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,84.42433333333342) +- (0.48818318362776164,0.48818318362776164)
+				(0.03,94.58000000000008) +- (0.7590682979546823,0.7590682979546823)
+				(0.06,104.16933333333341) +- (0.9593474089618866,0.9593474089618866)
+				(0.09,112.96100000000004) +- (1.1435810712134045,1.1435810712134045)
+				(0.12,123.12766666666673) +- (1.3110217663901353,1.3110217663901353)
+				(0.15,133.45099999999996) +- (1.4819896270017245,1.4819896270017245)
+				(0.18,144.64833333333337) +- (1.7543463521196259,1.7543463521196259)
+				(0.21,156.10100000000006) +- (1.8389701889959469,1.8389701889959469)
+				(0.24,164.73633333333342) +- (2.0036768667811726,2.0036768667811726)
+				(0.27,174.6089999999998) +- (2.178768916306044,2.178768916306044)
+				(0.3,185.79433333333355) +- (2.3878569440384445,2.3878569440384445)
+				};
+				
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,78.89) +- (0.27456880363370567,0.27456880363370567)
+				(0.03,88.35999999999994) +- (0.5949810211874474,0.5949810211874474)
+				(0.06,96.18166666666663) +- (0.8069986384650353,0.8069986384650353)
+				(0.09,106.09966666666672) +- (0.982227425776005,0.982227425776005)
+				(0.12,115.16800000000002) +- (1.2271426247332984,1.2271426247332984)
+				(0.15,124.09800000000008) +- (1.3952859249257519,1.3952859249257519)
+				(0.18,132.79266666666678) +- (1.477832940401654,1.477832940401654)
+				(0.21,144.13166666666655) +- (1.743362552360611,1.743362552360611)
+				(0.24,155.11033333333353) +- (1.9288902333396725,1.9288902333396725)
+				(0.27,164.48399999999995) +- (2.0505359440820365,2.0505359440820365)
+				(0.3,174.51366666666692) +- (2.2123200228182895,2.2123200228182895)
+				};
+				
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,82.1359999999999) +- (0.481627449925734,0.481627449925734)
+				(0.03,91.78700000000009) +- (0.7373058956050093,0.7373058956050093)
+				(0.06,101.18999999999991) +- (0.9138083205866466,0.9138083205866466)
+				(0.09,110.40899999999996) +- (1.1087387112989255,1.1087387112989255)
+				(0.12,121.07500000000007) +- (1.3337230541358298,1.3337230541358298)
+				(0.15,130.3443333333334) +- (1.4906856150442356,1.4906856150442356)
+				(0.18,140.4889999999999) +- (1.6718904562366954,1.6718904562366954)
+				(0.21,150.54966666666675) +- (1.82883157440412,1.82883157440412)
+				(0.24,160.60566666666665) +- (1.9374852542365173,1.9374852542365173)
+				(0.27,170.51466666666659) +- (2.106442928189067,2.106442928189067)
+				(0.3,180.63199999999998) +- (2.279325713735254,2.279325713735254)
+				};
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,84.96400000000015) +- (0.5054141804694122,0.5054141804694122)
+				(0.03,92.39600000000004) +- (0.6888360306817554,0.6888360306817554)
+				(0.06,99.32033333333344) +- (0.8282528759399794,0.8282528759399794)
+				(0.09,107.10766666666646) +- (0.9777684320326531,0.9777684320326531)
+				(0.12,114.52933333333316) +- (1.1010530071532976,1.1010530071532976)
+				(0.15,124.41733333333332) +- (1.2499177639008978,1.2499177639008978)
+				(0.18,131.9396666666667) +- (1.3815070097921498,1.3815070097921498)
+				(0.21,142.7686666666668) +- (1.5213088484131245,1.5213088484131245)
+				(0.24,152.11066666666653) +- (1.7330540456111263,1.7330540456111263)
+				(0.27,161.40199999999996) +- (1.8910409783285445,1.8910409783285445)
+				(0.3,173.2549999999999) +- (2.032668761244095,2.032668761244095)
+				};
+
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,78.44466666666658) +- (0.4703811455110453,0.4703811455110453)
+				(0.03,88.15233333333322) +- (0.7061974717284895,0.7061974717284895)
+				(0.06,97.15900000000005) +- (0.90348263384854,0.90348263384854)
+				(0.09,107.15133333333337) +- (1.1525562722909646,1.1525562722909646)
+				(0.12,116.55166666666656) +- (1.3048533844230545,1.3048533844230545)
+				(0.15,127.26099999999987) +- (1.4268096858103694,1.4268096858103694)
+				(0.18,140.5930000000001) +- (1.7016911888932833,1.7016911888932833)
+				(0.21,148.98766666666674) +- (1.8194792162364515,1.8194792162364515)
+				(0.24,158.14699999999996) +- (1.9889064005737578,1.9889064005737578)
+				(0.27,172.67833333333323) +- (2.216697108794417,2.216697108794417)
+				(0.3,180.89166666666674) +- (2.319399712430317,2.319399712430317)
+				};
+
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,84.09033333333335) +- (0.4601941795292904,0.4601941795292904)
+				(0.03,92.09566666666669) +- (0.6972430851773483,0.6972430851773483)
+				(0.06,99.69833333333322) +- (0.8051001973778701,0.8051001973778701)
+				(0.09,108.1813333333333) +- (1.0185699383101847,1.0185699383101847)
+				(0.12,117.38766666666665) +- (1.1986002178713595,1.1986002178713595)
+				(0.15,126.758) +- (1.3152128894019068,1.3152128894019068)
+				(0.18,133.00100000000006) +- (1.3507781597544566,1.3507781597544566)
+				(0.21,144.1306666666665) +- (1.6094246188269945,1.6094246188269945)
+				(0.24,154.76966666666695) +- (1.7988642667400194,1.7988642667400194)
+				(0.27,167.0646666666667) +- (1.9805782881645544,1.9805782881645544)
+				(0.3,175.11600000000027) +- (2.1962243758795057,2.1962243758795057)
+				};
+
+				\legend{MixIni,FAIL\_RAW,INCOHERENCE\_INTERP,FEEDBACK\_RAW,BARGE\_IN\_RESP (System),BARGE\_IN\_RESP (User)}
+			\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+		\begin{minipage}{.47\textwidth}
+			\begin{tikzpicture}[scale=0.7]
+				\begin{axis}[
+				xlabel={WER},
+				ylabel={TTP Task completion ratio},
+				scaled ticks = false,
+				tick label style={/pgf/number format/fixed},
+				xmin=0, xmax=0.3,
+				ymin=0.6, ymax=1,
+				xtick={0,0.06,0.12,0.18,0.24,0.3},
+				ytick={0.6,0.7,0.8,0.9,1},
+				legend pos=south west,
+				ymajorgrids=true,
+				grid style=dashed,
+				colorbrewer cycle list=Set1,
+			]
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.9766666666666654) +- (0.005271391973032027,0.005271391973032027)
+				(0.03,0.9586666666666649) +- (0.006809225428295863,0.006809225428295863)
+				(0.06,0.9459999999999984) +- (0.008153746579880043,0.008153746579880043)
+				(0.09,0.9229999999999976) +- (0.00972652948498309,0.00972652948498309)
+				(0.12,0.8893333333333304) +- (0.011083121710261656,0.011083121710261656)
+				(0.15,0.8713333333333304) +- (0.011922286164062957,0.011922286164062957)
+				(0.18,0.8326666666666637) +- (0.013033893566818056,0.013033893566818056)
+				(0.21,0.8086666666666636) +- (0.013989940030052796,0.013989940030052796)
+				(0.24,0.7719999999999975) +- (0.014842951153101578,0.014842951153101578)
+				(0.27,0.7283333333333315) +- (0.015221054277984612,0.015221054277984612)
+				(0.3,0.6713333333333323) +- (0.016525640167126494,0.016525640167126494)
+				};
+				
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.9803333333333328) +- (0.004868056769504311,0.004868056769504311)
+				(0.03,0.9769999999999993) +- (0.0053173065696425145,0.0053173065696425145)
+				(0.06,0.9533333333333314) +- (0.0072281228545189955,0.0072281228545189955)
+				(0.09,0.9446666666666651) +- (0.008275544093560272,0.008275544093560272)
+				(0.12,0.9179999999999982) +- (0.009810534782117202,0.009810534782117202)
+				(0.15,0.8949999999999974) +- (0.011083102453736804,0.011083102453736804)
+				(0.18,0.8569999999999974) +- (0.012918153008676625,0.012918153008676625)
+				(0.21,0.8309999999999973) +- (0.013672488847642736,0.013672488847642736)
+				(0.24,0.787666666666664) +- (0.014272470040840647,0.014272470040840647)
+				(0.27,0.7556666666666644) +- (0.014979880497966485,0.014979880497966485)
+				(0.3,0.7256666666666647) +- (0.015620966372155766,0.015620966372155766)
+				};
+				
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.9729999999999993) +- (0.005786298590444989,0.005786298590444989)
+				(0.03,0.9649999999999989) +- (0.006661917975412438,0.006661917975412438)
+				(0.06,0.9459999999999978) +- (0.008101227956305223,0.008101227956305223)
+				(0.09,0.9159999999999974) +- (0.009789017846547567,0.009789017846547567)
+				(0.12,0.8986666666666638) +- (0.010444836546778366,0.010444836546778366)
+				(0.15,0.8766666666666638) +- (0.011634103890431869,0.011634103890431869)
+				(0.18,0.8383333333333308) +- (0.012931627207055148,0.012931627207055148)
+				(0.21,0.8133333333333304) +- (0.013554108192312718,0.013554108192312718)
+				(0.24,0.773666666666664) +- (0.014342995558809442,0.014342995558809442)
+				(0.27,0.7263333333333313) +- (0.015363185774948383,0.015363185774948383)
+				(0.3,0.6803333333333316) +- (0.015994248516264135,0.015994248516264135)
+				};
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.9736666666666655) +- (0.005723997965681301,0.005723997965681301)
+				(0.03,0.9579999999999982) +- (0.007219968901134631,0.007219968901134631)
+				(0.06,0.9433333333333311) +- (0.008136557830763266,0.008136557830763266)
+				(0.09,0.9433333333333312) +- (0.008240810100416832,0.008240810100416832)
+				(0.12,0.9266666666666641) +- (0.009367988993257973,0.009367988993257973)
+				(0.15,0.8989999999999972) +- (0.010477621367044112,0.010477621367044112)
+				(0.18,0.8903333333333306) +- (0.011063520508611709,0.011063520508611709)
+				(0.21,0.8543333333333308) +- (0.012567644036264244,0.012567644036264244)
+				(0.24,0.8359999999999974) +- (0.013356408938534313,0.013356408938534313)
+				(0.27,0.8033333333333316) +- (0.01388852059956223,0.01388852059956223)
+				(0.3,0.7693333333333308) +- (0.014567077254321065,0.014567077254321065)
+				};
+
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.976666666666666) +- (0.005430925437816175,0.005430925437816175)
+				(0.03,0.9713333333333324) +- (0.005865609056185905,0.005865609056185905)
+				(0.06,0.9539999999999983) +- (0.00730320302333284,0.00730320302333284)
+				(0.09,0.9266666666666655) +- (0.009681685803619819,0.009681685803619819)
+				(0.12,0.9033333333333303) +- (0.010532657362277521,0.010532657362277521)
+				(0.15,0.8796666666666644) +- (0.011699574761504065,0.011699574761504065)
+				(0.18,0.857666666666663) +- (0.011952090071058753,0.011952090071058753)
+				(0.21,0.8156666666666635) +- (0.013566557516351501,0.013566557516351501)
+				(0.24,0.7773333333333303) +- (0.014547138250835373,0.014547138250835373)
+				(0.27,0.7336666666666644) +- (0.015190512822885378,0.015190512822885378)
+				(0.3,0.6863333333333319) +- (0.015889826900672917,0.015889826900672917)
+				};
+
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.9779999999999992) +- (0.005212109728529413,0.005212109728529413)
+				(0.03,0.964333333333332) +- (0.006518649498853482,0.006518649498853482)
+				(0.06,0.9539999999999984) +- (0.007476485876846385,0.007476485876846385)
+				(0.09,0.9383333333333317) +- (0.008587668419827768,0.008587668419827768)
+				(0.12,0.9106666666666638) +- (0.010250797917995593,0.010250797917995593)
+				(0.15,0.8923333333333304) +- (0.011100342905615639,0.011100342905615639)
+				(0.18,0.8689999999999969) +- (0.012021173549663974,0.012021173549663974)
+				(0.21,0.831999999999997) +- (0.013293109887792191,0.013293109887792191)
+				(0.24,0.8039999999999962) +- (0.013551840586758856,0.013551840586758856)
+				(0.27,0.7699999999999971) +- (0.01425255314359996,0.01425255314359996)
+				(0.3,0.7326666666666641) +- (0.015305244974627383,0.015305244974627383)
+				};
+
+				\legend{MixIni,FAIL\_RAW,INCOHERENCE\_INTERP,FEEDBACK\_RAW,BARGE\_IN\_RESP (System),BARGE\_IN\_RESP (User)}
+			\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{figure*}
+    
+    	As already mentioned in Chapter \ref{ch:taxonomy}, the main objective of our TTP taxonomy is to break human dialogue turn-taking into small pieces, and hopefully get a better understanding of it. To illustrate this approach, we take a deeper look at MixIni+Incr by isolating its different components: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP (User) and BARGE\_IN\_RESP (System). The results reported in Fig. \ref{fig:ttp} show that FEEDBACK contributes the most to improve the baseline followed by BARGE\_IN\_RESP (User) and FAIL\_RAW. INCOHERENCE\_INTERP and BARGE\_IN\_RESP (System) seem to have no effect. This is due to the fact that in general, to detect an incoherence, one must wait until the end of the utterance (same requirement for detecting all the information needed to barge-in and provide an answer). One might argue that in some case, the US tries to refer to a non existing event (in the case of a MODIFY or DELETE action), therefore triggering an incoherence. In reality, our service is able to recognise an existing event even if only a prefix of its title is recognised. As a consequence, INCOHERENCE\_INTERP is rarely triggered in the middle of a request. In order to force that case to occur more often, a scenario where the US has to try to move an event five times before encountering a free slot has been designed. The results are shown in Fig. \ref{fig:incoh}: this time, INCOHERENCE\_INTERP has a true added value.
+        
+        This little experiment raises an important point when it comes to studying efficiency in task oriented dialogues and as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the dialogue frame. Here, the focus is efficiency, however, human-machine dialogue can also be used in a non task oriented fashion. The metrics chosen here make no longer pertinent in such a frame and it would make more sense to consider subjective ones. Moreover, even in task oriented dialogue, booking a train is very different from dictating a text message. In the first case, a keyword spotting NLU is adapted to the task at hand but in the second situation, the system does try to understand what the user is saying. The feedback can be very useful in this situation for instance.
+        
+        %HK> Enlever les \caption en italique dans toute la thèse.
+        %HK> Homogénéiser Fig., Sect., Chapter...
+        \begin{figure*}[t]
+		\caption{INCOHERENCE\_INTERP evaluated in a more adapted task}
+		\centering
+		\label{fig:incoh}
+		\begin{minipage}{.47\textwidth}
+			\begin{tikzpicture}[scale=0.7]
+				\begin{axis}[
+				xlabel={WER},
+				ylabel={TTP Duration (sec)},
+				scaled ticks = false,
+				tick label style={/pgf/number format/fixed},
+				xmin=0, xmax=0.3,
+				ymin=90, ymax=210,
+				xtick={0,0.06,0.12,0.18,0.24,0.3},
+				ytick={75,90,120,150,180,210,240},
+				legend pos=north west,
+				ymajorgrids=true,
+				grid style=dashed,
+				colorbrewer cycle list=Set1,
+			]
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,108.075) +- (0.6419332892131377,0.6419332892131377)
+				(0.03,116.85) +- (1.103828950154872,1.103828950154872)
+				(0.06,122.261) +- (1.2823207377120611,1.2823207377120611)
+				(0.09,131.249) +- (1.639843108885239,1.639843108885239)
+				(0.12,138.814) +- (1.7723748041558267,1.7723748041558267)
+				(0.15,145.831) +- (1.9864872570601626,1.9864872570601626)
+				(0.18,155.659) +- (2.2318253452522665,2.2318253452522665)
+				(0.21,162.606) +- (2.470012781947171,2.470012781947171)
+				(0.24,172.576) +- (2.569203575219061,2.569203575219061)
+				(0.27,179.634) +- (2.8019144636891453,2.8019144636891453)
+				(0.3,188.424) +- (3.074788519771463,3.074788519771463)
+				};
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,103.822) +- (0.632489042075512,0.632489042075512)
+				(0.03,112.437) +- (1.1128141109321013,1.1128141109321013)
+				(0.06,118.551) +- (1.2100542196110062,1.2100542196110062)
+				(0.09,125.758) +- (1.511699394369661,1.511699394369661)
+				(0.12,132.409) +- (1.7003061782250921,1.7003061782250921)
+				(0.15,138.976) +- (1.8894373812429979,1.8894373812429979)
+				(0.18,148.814) +- (1.9829266858879089,1.9829266858879089)
+				(0.21,153.74) +- (2.2551555924680646,2.2551555924680646)
+				(0.24,163.3) +- (2.4725429131968557,2.4725429131968557)
+				(0.27,171.989) +- (2.727933378799121,2.727933378799121)
+				(0.3,182.711) +- (2.9214149977239448,2.9214149977239448)
+				};
+
+			\legend{MixIni,INCOH\_INTERP}
+			
+			\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+		\begin{minipage}{.47\textwidth}
+			\begin{tikzpicture}[scale=0.7]
+				\begin{axis}[
+				xlabel={WER},
+				ylabel={TTP Task completion ratio},
+				scaled ticks = false,
+				tick label style={/pgf/number format/fixed},
+				xmin=0, xmax=0.3,
+				ymin=0.8, ymax=1,
+				xtick={0,0.06,0.12,0.18,0.24,0.3},
+				ytick={0.6,0.7,0.8,0.9,1},
+				legend pos=south west,
+				ymajorgrids=true,
+				grid style=dashed,
+				colorbrewer cycle list=Set1,
+			]
+			
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.987) +- (0.0070207955104817105,0.0070207955104817105)
+				(0.03,0.978) +- (0.009091527132445897,0.009091527132445897)
+				(0.06,0.982) +- (0.008240395718653329,0.008240395718653329)
+				(0.09,0.967) +- (0.01107200513005662,0.01107200513005662)
+				(0.12,0.952) +- (0.013249368045306928,0.013249368045306928)
+				(0.15,0.955) +- (0.012848842749446348,0.012848842749446348)
+				(0.18,0.947) +- (0.013885738928843518,0.013885738928843518)
+				(0.21,0.933) +- (0.01549652404896014,0.01549652404896014)
+				(0.24,0.93) +- (0.01581417591909233,0.01581417591909233)
+				(0.27,0.908) +- (0.017914014000217814,0.017914014000217814)
+				(0.3,0.892) +- (0.01923757722791516,0.01923757722791516)
+				};
+
+			\addplot+[
+				error bars/.cd,
+				y dir=both,
+				y explicit,
+				]
+				coordinates {
+				(0.0,0.986) +- (0.007282131995507919,0.007282131995507919)
+				(0.03,0.981) +- (0.00846189000164856,0.00846189000164856)
+				(0.06,0.981) +- (0.00846189000164856,0.00846189000164856)
+				(0.09,0.966) +- (0.011232698268893362,0.011232698268893362)
+				(0.12,0.954) +- (0.012984019963016083,0.012984019963016083)
+				(0.15,0.944) +- (0.014250696207554217,0.014250696207554217)
+				(0.18,0.934) +- (0.01538868384235636,0.01538868384235636)
+				(0.21,0.914) +- (0.017377143792925237,0.017377143792925237)
+				(0.24,0.917) +- (0.01709935722768548,0.01709935722768548)
+				(0.27,0.888) +- (0.019546615297795167,0.019546615297795167)
+				(0.3,0.869) +- (0.020912290701881515,0.020912290701881515)
+				};
+				
+			\legend{MixIni,INCOH\_INTERP}
+			
+			\end{axis}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{figure*}
+        
+        
+    
