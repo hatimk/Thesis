@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.29)  29 SEP 2015 22:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.29)  1 OCT 2015 00:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2067,7 +2067,7 @@ Chapter 1.
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
-[3] [4] <stateofart/DialogueChain.pdf, id=514, 542.025pt x 43.66313pt>
+[3] [4] <stateofart/DialogueChain.pdf, id=516, 542.025pt x 43.66313pt>
 File: stateofart/DialogueChain.pdf Graphic file (type pdf)
 
 <use stateofart/DialogueChain.pdf>
@@ -2077,19 +2077,32 @@ Package pdftex.def Info: stateofart/DialogueChain.pdf used on input line 56.
 Underfull \vbox (badness 7649) has occurred while \output is active []
 
  [6]
+<figures/RL.png, id=557, 435.6275pt x 175.65625pt>
+File: figures/RL.png Graphic file (type png)
+ <use figures/RL.png>
+Package pdftex.def Info: figures/RL.png used on input line 111.
+(pdftex.def)             Requested size: 348.50247pt x 140.52518pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 111.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 118.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [8] [9] [10]
-[11]) [12]
+) [8 <./figures/RL.png>] [9] [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+[12]) [13]
 \openout2 = `taxonomy/taxonomy.aux'.
 
- (./taxonomy/taxonomy.tex
+ (./taxonomy/taxonomy.tex [14
+
+
+
+]
 Chapter 3.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
@@ -2105,27 +2118,23 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 59.
-[13
-
-
-
-] [14] [15] [16]) [17]
+[15] [16] [17] [18]) [19]
 \openout2 = `architecture/architecture.aux'.
 
- (./architecture/architecture.tex [18
+ (./architecture/architecture.tex [20
 
 
 
 ]
 Chapter 4.
-[19] <figures/ClientSchedService.pdf, id=667, 548.0475pt x 140.02313pt>
+[21] <figures/ClientSchedService.pdf, id=681, 548.0475pt x 140.02313pt>
 File: figures/ClientSchedService.pdf Graphic file (type pdf)
 
 <use figures/ClientSchedService.pdf>
 Package pdftex.def Info: figures/ClientSchedService.pdf used on input line 18.
 (pdftex.def)             Requested size: 383.63063pt x 98.01552pt.
- [20 <./figures/ClientSchedService.pdf>]
-<figures/Timeline.jpg, id=680, 731.73375pt x 340.27126pt>
+ [22 <./figures/ClientSchedService.pdf>]
+<figures/Timeline.jpg, id=694, 731.73375pt x 340.27126pt>
 File: figures/Timeline.jpg Graphic file (type jpg)
 
 <use figures/Timeline.jpg>
@@ -2139,38 +2148,38 @@ Overfull \hbox (1.58252pt too wide) in paragraph at lines 44--45
 
 Underfull \vbox (badness 7326) has occurred while \output is active []
 
- [21 <./figures/Timeline.jpg>]
-<figures/SchedChrono.jpg, id=688, 505.13719pt x 509.65407pt>
+ [23 <./figures/Timeline.jpg>]
+<figures/SchedChrono.jpg, id=702, 505.13719pt x 509.65407pt>
 File: figures/SchedChrono.jpg Graphic file (type jpg)
 
 <use figures/SchedChrono.jpg>
 Package pdftex.def Info: figures/SchedChrono.jpg used on input line 57.
 (pdftex.def)             Requested size: 404.1103pt x 407.7238pt.
- [22 <./figures/SchedChrono.jpg>]
-<figures/ContextChrono.jpg, id=694, 510.40688pt x 191.21437pt>
+ [24 <./figures/SchedChrono.jpg>]
+<figures/ContextChrono.jpg, id=708, 510.40688pt x 191.21437pt>
 File: figures/ContextChrono.jpg Graphic file (type jpg)
 
 <use figures/ContextChrono.jpg>
 Package pdftex.def Info: figures/ContextChrono.jpg used on input line 66.
 (pdftex.def)             Requested size: 408.32605pt x 152.9717pt.
- [23 <./figures/ContextChrono.jpg>]
-<figures/CFAsTIncr.jpg, id=701, 696.35156pt x 481.8pt>
+ [25 <./figures/ContextChrono.jpg>]
+<figures/CFAsTIncr.jpg, id=716, 696.35156pt x 481.8pt>
 File: figures/CFAsTIncr.jpg Graphic file (type jpg)
 
 <use figures/CFAsTIncr.jpg>
 Package pdftex.def Info: figures/CFAsTIncr.jpg used on input line 94.
 (pdftex.def)             Requested size: 417.81415pt x 289.08221pt.
- [24 <./figures/CFAsTIncr.jpg>] [25] [26]) [27]
-[28]
+ [26 <./figures/CFAsTIncr.jpg>] [27] [28]) [29]
+[30]
 \openout2 = `simulation/simulation.aux'.
 
  (./simulation/simulation.tex
 Chapter 5.
-[29
+[31
 
 
 
-] [30] <figures/ArchiSimuSys.pdf, id=751, 914.66719pt x 365.86688pt>
+] [32] <figures/ArchiSimuSys.pdf, id=766, 914.66719pt x 365.86688pt>
 File: figures/ArchiSimuSys.pdf Graphic file (type pdf)
 
 <use figures/ArchiSimuSys.pdf>
@@ -2184,7 +2193,7 @@ Overfull \hbox (19.87135pt too wide) in paragraph at lines 104--105
 
 Underfull \vbox (badness 4595) has occurred while \output is active []
 
- [31 <./figures/ArchiSimuSys.pdf>]
+ [33 <./figures/ArchiSimuSys.pdf>]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 166.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -2194,77 +2203,77 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[32] [33] [34] [35] <figures/ASRSimu.pdf, id=792, 429.10312pt x 519.44063pt>
+[34] [35] [36] [37] <figures/ASRSimu.pdf, id=807, 429.10312pt x 519.44063pt>
 File: figures/ASRSimu.pdf Graphic file (type pdf)
 
 <use figures/ASRSimu.pdf>
 Package pdftex.def Info: figures/ASRSimu.pdf used on input line 290.
 (pdftex.def)             Requested size: 429.10207pt x 519.43936pt.
-) [36] [37 <./figures/ASRSimu.pdf>]
+) [38] [39 <./figures/ASRSimu.pdf>]
 \openout2 = `baseline/baseline.aux'.
 
 
-(./baseline/baseline.tex [38
+(./baseline/baseline.tex [40
 
 
 
 ]
 Chapter 6.
-[39] [40]
+[41] [42]
 Overfull \hbox (2.28003pt too wide) in paragraph at lines 62--220
 [][] [] 
  []
 
-[41] [42] [43] [44]) [45] [46]
+[43] [44] [45] [46]) [47] [48]
 \openout2 = `rl/rl.aux'.
 
  (./rl/rl.tex
 Chapter 7.
-[47
+[49
 
 
 
-] [48] [49] [50]
+] [50] [51] [52]
 
-Package natbib Warning: Citation `ch:baseline' on page 51 undefined on input li
+Package natbib Warning: Citation `ch:baseline' on page 53 undefined on input li
 ne 499.
 
-) [51] [52] [53]
+) [53] [54] [55]
 \openout2 = `experiment/experiment.aux'.
 
- (./experiment/experiment.tex [54
+ (./experiment/experiment.tex [56
 
 
 
 ]
 Chapter 8.
-) [55]
+) [57]
 \openout2 = `theory/theory.aux'.
 
- (./theory/theory.tex [56
+ (./theory/theory.tex [58
 
 
 
 ]
 Chapter 9.
-) [57]
+) [59]
 \openout2 = `conclusion/conclusion.aux'.
 
- (./conclusion/conclusion.tex [58
+ (./conclusion/conclusion.tex [60
 
 
 
 ]
 Chapter 10.
-) [59] [60
+) [61] [62
 
 
-] (./thesis.bbl [61
+] (./thesis.bbl [63
 
-] [62]) [63]
+] [64]) [65]
 \openout2 = `Appendix1/appendix1.aux'.
 
- (./Appendix1/appendix1.tex [64
+ (./Appendix1/appendix1.tex [66
 
 
 ]
@@ -2275,16 +2284,16 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-[65] [66] [67]) [68]
+[67] [68] [69]) [70]
 \openout2 = `Appendix2/appendix2.aux'.
 
  (./Appendix2/appendix2.tex
 Appendix B.
-) [69
+) [71
 
 
 
-] [70
+] [72
 
 
 ]
@@ -2305,13 +2314,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7E32B42624848540C3A15B0C9A983271;12988.
+(rerunfilecheck)             Checksum: D257FEDF77504962335E0480D8252642;12988.
  ) 
 Here is how much of TeX's memory you used:
- 44168 strings out of 493304
- 926353 string characters out of 6139871
- 1418450 words of memory out of 5000000
- 46108 multiletter control sequences out of 15000+600000
+ 44179 strings out of 493304
+ 926497 string characters out of 6139871
+ 1420617 words of memory out of 5000000
+ 46113 multiletter control sequences out of 15000+600000
  121102 words of font info for 352 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,22n,91p,10424b,2528s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2327,10 +2336,10 @@ e/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (88 pages, 948462 bytes).
+Output written on thesis.pdf (90 pages, 955392 bytes).
 PDF statistics:
- 1176 PDF objects out of 1200 (max. 8388607)
- 1040 compressed objects within 11 object streams
- 302 named destinations out of 1000 (max. 500000)
- 69218 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1190 PDF objects out of 1200 (max. 8388607)
+ 1050 compressed objects within 11 object streams
+ 306 named destinations out of 1000 (max. 500000)
+ 69223 words of extra memory for PDF output out of 74296 (max. 10000000)
 
