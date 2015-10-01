@@ -40,16 +40,13 @@
         %HK> Autres classifications, Beatie1982 et dérivées...
         %HK> Duncan1972 a aussi le mérite d'être cité
     
-\section{Incremental Dialogue systems}
-	\subsection{Definitions}
+\section{Spoken dialogue systems and incremental behaviour}
     
     	\subsubsection{Spoken dialogue system}
         \label{soa:sds}
         
-        	The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compile processes each new instruction independently from the previous ones. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance.
-        
         %HK> Citer papier SIGDIAL 2014 juste après companionship.
-        	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language without the intervention of a third person. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented as their goal is to help to user to achieve some task. There also exist a few SDSs that are only used for chatting and companionship.
+        	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented as their goal is to help to user to achieve some task. There also exist a few SDSs that are only used for chatting and companionship.
             
             \begin{figure*}[ht]
 		      	\centering
@@ -69,6 +66,8 @@
         
         \subsubsection{Incremental dialogue systems}
     
+        	The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compile processes each new instruction independently from the previous ones. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance.
+
 	    	Currently deployed dialogue systems have a simple and rigid way of managing turn-taking. The interaction mode they offer is similar to a walkie-talkie conversation as the system waits for the user to finish her utterance before taking the floor and vice-versa (even though some systems allow the user to interrupt the system). Such systems will be referred to as \textit{traditional dialogue systems} in this thesis.
         
         	%HK> Retrouver le papier sur la lecture et l'incrémental et le citer avec Tanenhaus.
@@ -77,6 +76,8 @@
             
             To replicate this behaviour, a new generation of SDSs has been the focus of current research for a few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided in small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}.
     
+
+
     \subsection{Existing architectures}
     	\subsubsection{Sequential paradigm}
         
@@ -126,7 +127,7 @@
             Therefore, when $\gamma = 0$, the agent maximises the immediate reward only and when $\gamma$ tends towards 1, the agent maximises the sum of all the future rewards. More generally, the parameter $\gamma$ controls how far-sighted is the agent in terms of future rewards.
 		\end{itemize}
         
-        A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information necessary to predict the future expected return, and no information about the past is necessary. Therefore, given a policy, each state $s \in \mathcal{S}$ is given a value $V^\pi (s)$ which is the expected return for being at this state and following the policy $\pi$ afterwards:
+        A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is at state s. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information necessary to predict the future expected return, and no information about the past is necessary. Therefore, given a policy, each state $s \in \mathcal{S}$ is given a value $V^\pi (s)$ which is the expected return for being at this state and following the policy $\pi$ afterwards:
         
         	$$ V^{\pi} (s) = \mathbb{E} [R_t | s_t = s, \pi] $$
             
@@ -136,7 +137,6 @@
             
        	Given the definition of $R_t$, we can notice that 
         \begin{eqnarray}
-        	\centering
           	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
            	& = & \mathbb{E} [r_t + \sum_{k=0}^\infty \gamma^k r_{(t+1)+k+1} | s_t = s, \pi] \nonumber \\
             & = & \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, \pi] \nonumber \\
@@ -147,15 +147,43 @@
         
         	$$ Q^{\pi} (s_t,a_t) = \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, a_t = a, \pi] $$
             
-       	% Parler d'équation de Bellman avec modèle, d'équation de bellmann optimale, puis d'aller retours entre évaluation et controle...
-            
-      	%The goal of reinforcement learning is to find the policy that maximises the value function over all states. This is called the \textit{optimal policy} $\pi^*$, hence, for all $s \in \mathcal{S}$, $V^{\pi^*} (s) \geq V^{\pi} (s)$. It can be shown that
+       	A natural question that can be asked at this point is: how do we compute these values? In reinforcement learning, this is known as the \textit{evaluation problem}. The transition model $T$ and the reward model $R$ are the elements that define the dynamic of the MDP. If they are known, $V^{\pi}$ can be directly computed. If we call $P_{ss'}^a = \mathbb{P} (s_{t+1} = s' | s_t = s, a_t = a)$ and $R_{ss'}^a$ the reward of chosing action a on state s and landing on s', we can write:
         
-        	%$$ V^{\pi^*} (s_t) = r_t + \gamma  $$
+        \begin{eqnarray}
+          	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
+           	& = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [R_t | s_t = s, a_t = a, \pi] \nonumber \\
+            & = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, a_t = a, \pi] \nonumber \\
+            & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \mathbb{E} [R_{t+1} | s_{t+1} = s', \pi]) \nonumber \\
+            & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^{\pi} (s')) \nonumber
+        \end{eqnarray}
             
-      	
+      	It is possible to define an order over the policies. Saying that $\pi_1$ is better that $\pi_2$ means that for all the states $s$, $V^{\pi_1} (s) \geq V^{\pi_2} (s)$. It can be shown that there exists at least one policy that is better that all the others: it is called the \textit{optimal policy} ($\pi^*$). To simplify the notations, $V^{\pi^*}$ will be referred to as $V^*$ and it defined as
+        
+        	$$ \forall s \in \mathcal{S}, \text{ } V^* (s) = \max_\pi V^\pi (s) $$
             
-    	%HK> Revoir les équations de Bellman, les écrire en intégrant T et R (Dynamic Programming Approach)
+       	Similarly, we can define $Q^*$ as
+        
+        	$$ \forall (s,a) \in \mathcal{S}x\mathcal{A}, \text{ } Q^*(s,a) = \max_\pi Q^{\pi}(s,a) $$
+
+        The aim of reinforcement learning is to learn the optimal policy. Similarly to what has been shown for $V^{\pi}$, if the transition and the reward models are known, the Bellman equation corresponding to $V^*$ can be written with respect to these models:
+
+                $$ V^*(s) = \max_a \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^*(s')) $$
+        
+        A similar form can be also be shown about the Q-function
+
+                $$ Q^*(s,a) = \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \max_{a' \in \mathcal{A}} Q^*(s',a'))  $$
+
+        A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $T$ and $R$ are unknown.
+
+        Fortunately, there are other methods that have been shown to be successful in learning the optimal policy without any prior knowledge about the MDP dynamics as they completely learn by trial and error. The first set of approaches are called \textit{Monte Carlo}; the Q-function is directly evaluated by calculating the mean of the returns $R_t$ for each coupe $(s,a)$. Nevertheless, this method requires the current learning episode to be finished before updating the Q-function. Moreover, acting as such means evaluating $V^{\pi}$ (or $Q^{\pi}$ according to the chosen approach) with $\pi$ being the policy currently followed by the agent. So, how do we compute the optimal policy? This raises the problem of \textit{control} wich goes along with the question of evaluation introduced earlier. In fact, as we keep changing the Q-function values because of new agent experience, we also keep upating the policy to make it greedy with respect to the new evaluation results. Fig. \ref{fig:evalctrl} illustrates this idea.
+
+        \begin{figure}
+          \centering
+          \includegraphics[scale=0.7]{figures/evalctrl.png}
+          \caption{The alternation between evaluation and control}
+          \label{fig:evalctrl}
+        \end{figure}
+
         
     \subsection{Application to dialogue systems}
     

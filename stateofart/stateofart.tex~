@@ -104,7 +104,14 @@
     
     	%HK> Insérer une image représentant l'interaction entre l'agent et l'environnement et s'y référer dans ce paragraphe.
         %HK> Remplacer tous les $$ par des eqnarray.
-    	Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figure out through the process of \textit{trial and error}, what the best actions to take are, given a reward function to maximise \cite{Sutton1998}.
+    	Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figure out through the process of \textit{trial and error}, what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Fig. \ref{fig:rlscheme}).
+        
+        \begin{figure*}[ht]
+          \centering
+          \includegraphics[scale=0.8]{figures/RL.png}
+          \caption{The interaction between the agent and the environment in reinforcement learning}
+          \label{fig:rlscheme}
+        \end{figure*}
         
         Formally, the agent is cast as a Markov Decision Process (MDP) which is a quintuple $\mathcal{M} = (\mathcal{S},\mathcal{A},T,R,\gamma)$ where:
         \begin{itemize}
@@ -127,17 +134,24 @@
         
         	$$ Q^{\pi} (s,a) = \mathbb{E} [R_t | s_t = s, a_t = a, \pi] $$
             
-     	Taking the Markov property into account, the value of state $s_t$ can be viewed as the immediate reward plus $\gamma$ times the value at time $s_{t+1}$. That is what the Bellman equation says:
-        
-        	$$ V^{\pi} (s_t) = r_t + \gamma V^{\pi} (s_{t+1})$$
+       	Given the definition of $R_t$, we can notice that 
+        \begin{eqnarray}
+        	\centering
+          	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
+           	& = & \mathbb{E} [r_t + \sum_{k=0}^\infty \gamma^k r_{(t+1)+k+1} | s_t = s, \pi] \nonumber \\
+            & = & \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, \pi] \nonumber \\
+            & = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, \pi] \nonumber
+        \end{eqnarray}
             
-      	It also holds for the Q-function:
+     	This is known as the Bellman equation and it can also be written for the Q-function as follows
         
-        	$$ Q^{\pi} (s_t,a_t) = r_t + \gamma Q^{\pi} (s_{t+1},\pi{s_{t+1}}) $$
+        	$$ Q^{\pi} (s_t,a_t) = \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, a_t = a, \pi] $$
             
-      	The goal of reinforcement learning is to find the policy that maximises the value function over all states. This is called the \textit{optimal policy} $\pi^*$, hence, for all $s \in \mathcal{S}$, $V^{\pi^*} (s) \geq V^{\pi} (s)$. It can be shown that
+       	% Parler d'équation de Bellman avec modèle, d'équation de bellmann optimale, puis d'aller retours entre évaluation et controle...
+            
+      	%The goal of reinforcement learning is to find the policy that maximises the value function over all states. This is called the \textit{optimal policy} $\pi^*$, hence, for all $s \in \mathcal{S}$, $V^{\pi^*} (s) \geq V^{\pi} (s)$. It can be shown that
         
-        	$$ V^{\pi^*} (s_t) = r_t + \gamma  $$
+        	%$$ V^{\pi^*} (s_t) = r_t + \gamma  $$
             
       	
             
@@ -201,3 +215,4 @@
     
     
     
+
