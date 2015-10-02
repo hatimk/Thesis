@@ -51,6 +51,12 @@ El~Asri, L., Lemonnier, R., Laroche, R., Pietquin, O., and Khouzaimi, H.
 \newblock {NASTIA: Negotiating Appointment Setting Interface}.
 \newblock In {\em Proceedings of LREC}.
 
+\bibitem[Gasic et~al., 2013]{Gasic2013}
+Gasic, M., Breslin, C., Henderson, M., Kim, D., Szummer, M., Thomson, B.,
+  Tsiakoulis, P., and Young, S. (2013).
+\newblock Pomdp-based dialogue manager adaptation to extended domains.
+\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+
 \bibitem[Ghigi et~al., 2014]{Ghigi2014}
 Ghigi, F., Eskenazi, M., Torres, M.~I., and Lee, S. (2014).
 \newblock Incremental dialog processing in a task-oriented dialog.
@@ -215,6 +221,12 @@ Tanenhaus, M.~K., Spivey-Knowlton, M.~J., Eberhard, K.~M., and Sedivy, J.~C.
 \newblock Integration of visual and linguistic information in spoken language
   comprehension.
 \newblock {\em Science}, 268:1632--1634.
+
+\bibitem[Williams and Young, 2007]{Williams2007}
+Williams, J.~D. and Young, S. (2007).
+\newblock Partially observable markov decision processes for spoken dialog
+  systems.
+\newblock {\em Comput. Speech Lang.}
 
 \bibitem[Wir\'en, 1992]{Wiren1992}
 Wir\'en, M. (1992).
