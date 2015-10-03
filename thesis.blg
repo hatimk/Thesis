@@ -20,45 +20,45 @@ A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "ch:baseline"
-You've used 41 entries,
+You've used 42 entries,
             1935 wiz_defined-function locations,
-            719 strings with 11562 characters,
-and the built_in function-call counts, 15751 in all, are:
-= -- 1448
-> -- 766
-< -- 24
-+ -- 276
-- -- 260
-* -- 1237
-:= -- 2787
-add.period$ -- 124
-call.type$ -- 41
-change.case$ -- 329
-chr.to.int$ -- 41
-cite$ -- 41
-duplicate$ -- 683
-empty$ -- 1131
-format.name$ -- 329
-if$ -- 3093
+            724 strings with 11764 characters,
+and the built_in function-call counts, 16057 in all, are:
+= -- 1476
+> -- 773
+< -- 25
++ -- 280
+- -- 262
+* -- 1255
+:= -- 2840
+add.period$ -- 127
+call.type$ -- 42
+change.case$ -- 335
+chr.to.int$ -- 42
+cite$ -- 42
+duplicate$ -- 701
+empty$ -- 1160
+format.name$ -- 332
+if$ -- 3155
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 208
-num.names$ -- 123
-pop$ -- 429
+missing$ -- 43
+newline$ -- 213
+num.names$ -- 126
+pop$ -- 439
 preamble$ -- 1
-purify$ -- 335
+purify$ -- 341
 quote$ -- 0
-skip$ -- 402
+skip$ -- 411
 stack$ -- 0
-substring$ -- 698
-swap$ -- 59
+substring$ -- 712
+swap$ -- 60
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 238
+type$ -- 244
 warning$ -- 0
-while$ -- 94
+while$ -- 96
 width$ -- 0
-write$ -- 508
+write$ -- 520
 (There was 1 warning)

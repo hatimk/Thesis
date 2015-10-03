@@ -222,6 +222,12 @@ Tanenhaus, M.~K., Spivey-Knowlton, M.~J., Eberhard, K.~M., and Sedivy, J.~C.
   comprehension.
 \newblock {\em Science}, 268:1632--1634.
 
+\bibitem[Williams, 2012]{Williams2012b}
+Williams, J.~D. (2012).
+\newblock A belief tracking challenge task for spoken dialog systems.
+\newblock In {\em NAACL HLT 2012 Workshop on Future directions and needs in the
+  Spoken Dialog Community: Tools and Data}.
+
 \bibitem[Williams and Young, 2007]{Williams2007}
 Williams, J.~D. and Young, S. (2007).
 \newblock Partially observable markov decision processes for spoken dialog

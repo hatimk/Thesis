@@ -1170,9 +1170,9 @@ author = {Williams, Jason D. and Young, Steve},
 title = {Partially Observable Markov Decision Processes for Spoken Dialog Systems},
 journal = {Comput. Speech Lang.},
 year = {2007},
-}
+} 
 
-@Article{Williams2012a,
+@Article{Williams2012,
 author    = {Jason D. Williams and Kai Yu and Brahim Chaib-draa and Oliver Lemon and Roberto Pieraccini and
 		   Olivier Pietquin and Pascal Poupart and Steve Young},
 title     = {Introduction to the Issue on Advances in Spoken Dialogue Systems and Mobile Interface},
@@ -1181,15 +1181,6 @@ volume    = {6},
 number    = {8},
 year      = {2012},
 pages     = {889-890},
-}
-
-@Inproceedings {Williams2012b,
-author       = {Jason D. Williams},
-booktitle    = {NAACL HLT 2012 Workshop on Future directions and needs in the Spoken Dialog
-                Community: Tools and Data},
-month        = {June},
-title        = {A belief tracking challenge task for spoken dialog systems},
-year         = {2012}
 }
 
 @InProceedings{Williams2014,
