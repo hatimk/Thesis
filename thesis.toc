@@ -11,14 +11,14 @@
 \contentsline {subsubsection}{Incremental dialogue systems}{7}{section*.9}
 \contentsline {subsubsection}{Advantages of incremental processing}{8}{section*.10}
 \contentsline {subsubsection}{New challenges raised by incremental dialogue processing}{8}{section*.11}
-\contentsline {subsection}{\numberline {2.2.1}Existing architectures}{8}{subsection.2.2.1}
-\contentsline {subsubsection}{Sequential paradigm}{8}{section*.12}
-\contentsline {subsubsection}{Multi-layer paradigm}{9}{section*.13}
-\contentsline {section}{\numberline {2.3}Reinforcement Learning}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Definition}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{13}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{14}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Issues and motivation}{15}{section.2.4}
+\contentsline {subsection}{\numberline {2.2.1}Existing architectures}{9}{subsection.2.2.1}
+\contentsline {subsubsection}{Sequential paradigm}{9}{section*.12}
+\contentsline {subsubsection}{Multi-layer paradigm}{10}{section*.13}
+\contentsline {section}{\numberline {2.3}Reinforcement Learning}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Definition}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{15}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Issues and motivation}{16}{section.2.4}
 \contentsline {chapter}{\numberline {3}Turn-taking taxonomy}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Taxonomy presentation}{19}{section.3.1}
 \contentsline {paragraph}{G\_NONE}{20}{section*.18}

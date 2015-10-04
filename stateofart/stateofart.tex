@@ -105,13 +105,28 @@
 
             \subsubsection{New challenges raised by incremental dialogue processing}
     
-                The first two problems to consider when talking about incremental spoken dialogue systems are ASR delays and stability. The ASR delay is the time needed by the recognition algorithm to provide the text output corresponding to an andio signal.
+                %HK> Citer Dan Povey pour Kaldi.
+                The first problem to consider when talking about incremental spoken dialogue systems is the question of ASR \textit{latency}, which is the time needed by the recognition algorithm to provide the text output corresponding to an audio signal. As we said earlier, the ASR accuracy has been a bottleneck in the development of spoken dialogue systems for many years but thanks to recent advances in this field, it is no longer the case. Similarly, incremental dialogue systems require quick responses from the ASR and the delays needed but speech recognition modules have been too long for many years which was a limiting factor in the development of incrmental dialogue systems. However, in the last few years, ASR technology has became reactive enough \cite{Platek2014}. Nevertheless, it is important to be aware that there is a tradeoff between the accuracy and the vocabulary size on one hand and the latency on the other hand. Kaldi, which is an ASR solution designed by researchers (and which is mostly used by them), makes it possible to design one's own acoustic and language model as well to set one's own parameters in order to control this tradeoff. On the other hand, more off-the-shelf solutions like Google ASR do not give the user such possibilities (however, accuracy and delays are well balanced for most applications).
 
+                %HK> Citer Ethan et Jason au sujet de l'instabilité si ce n'est déjà fait.
+                If we observe the successive partial results of an incremental ASR module during a user's utterance, it is likely that the progression they follow is not monotonous. In other words, a partial result is not guaranteed to be a prefix of results to come. The following example showing successive ASR results illustrate this phenomenon:
+
+                \begin{enumerate}
+                  \item Euh
+                  \item I
+                  \item Euh good
+                  \item iPod
+                  \item I would
+                  \item I good bike
+                  \item I would like
+                \end{enumerate}
+
+                This phenomenon is called ASR \textit{instability} (or stability depending on the sources) \cite{Selfridge2011}. This factor is also related to the tradeoff between latency and accuracy as prefering fast ASR over accurate ones can lead to very instable results (the system is not given enough time to check that its results are accurate, thus ending up delivering wrong partial results most of the time), and the vice versa.
 
     \subsection{Existing architectures}
     	\subsubsection{Sequential paradigm}
         
-        	A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. We will refer to this view of incremental dialogue systems as the \textit{sequential paradigm}.
+            A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. We will refer to this view of incremental dialogue systems as the \textit{sequential paradigm}.
             
             Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer(RB). As described in Section \ref{soa:sds}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU) \cite{Schlangen2011}. For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. As the RB of one module if the LB of the following one in the dialogue chain, the data propagation through the dialogue system is insured.
             

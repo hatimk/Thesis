@@ -149,6 +149,13 @@ Pietquin, O. and Hastie, H. (2013).
 \newblock A survey on metrics for the evaluation of user simulations.
 \newblock {\em The Knowledge Engineering Review}, 28.
 
+\bibitem[Pl\'{a}tek and Jur\v{c}\'{i}\v{c}ek, 2014]{Platek2014}
+Pl\'{a}tek, O. and Jur\v{c}\'{i}\v{c}ek, F. (2014).
+\newblock Free on-line speech recogniser based on kaldi asr toolkit producing
+  word posterior lattices.
+\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
 \bibitem[Raux and Eskenazi, 2007]{Raux2007}
 Raux, A. and Eskenazi, M. (2007).
 \newblock A multi-layer architecture for semi-synchronous event-driven dialogue
@@ -195,6 +202,11 @@ Searle, J. (1969).
 Selfridge, E. and Heeman, P.~A. (2010).
 \newblock Importance-driven turn-bidding for spoken dialogue systems.
 \newblock In {\em ACL}, pages 177--185.
+
+\bibitem[Selfridge et~al., 2011]{Selfridge2011}
+Selfridge, E.~O., Arizmendi, I., Heeman, P.~A., and Williams, J.~D. (2011).
+\newblock Stability and accuracy in incremental speech recognition.
+\newblock In {\em Proceedings of the SIGDIAL 2011 Conference}.
 
 \bibitem[Selfridge et~al., 2012]{Selfridge2012a}
 Selfridge, E.~O., Arizmendi, I., Heeman, P.~A., and Williams, J.~D. (2012).
