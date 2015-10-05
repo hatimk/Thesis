@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Dedication/dedication.aux
@@ -19,46 +19,47 @@ The style file: apalike.bst
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 Database file #1: biblio.bib
+Warning--I didn't find a database entry for "Lu2011"
 Warning--I didn't find a database entry for "ch:baseline"
-You've used 44 entries,
+You've used 45 entries,
             1935 wiz_defined-function locations,
-            732 strings with 12053 characters,
-and the built_in function-call counts, 16799 in all, are:
-= -- 1543
-> -- 809
-< -- 26
-+ -- 292
-- -- 274
-* -- 1311
-:= -- 2970
-add.period$ -- 133
-call.type$ -- 44
-change.case$ -- 351
-chr.to.int$ -- 44
-cite$ -- 44
-duplicate$ -- 737
-empty$ -- 1218
-format.name$ -- 348
-if$ -- 3303
+            738 strings with 12211 characters,
+and the built_in function-call counts, 17142 in all, are:
+= -- 1575
+> -- 822
+< -- 27
++ -- 296
+- -- 278
+* -- 1335
+:= -- 3029
+add.period$ -- 136
+call.type$ -- 45
+change.case$ -- 358
+chr.to.int$ -- 45
+cite$ -- 45
+duplicate$ -- 755
+empty$ -- 1247
+format.name$ -- 355
+if$ -- 3373
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 223
-num.names$ -- 132
-pop$ -- 464
+missing$ -- 46
+newline$ -- 228
+num.names$ -- 135
+pop$ -- 475
 preamble$ -- 1
-purify$ -- 357
+purify$ -- 364
 quote$ -- 0
-skip$ -- 428
+skip$ -- 437
 stack$ -- 0
-substring$ -- 736
-swap$ -- 62
+substring$ -- 748
+swap$ -- 63
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
+type$ -- 262
 warning$ -- 0
-while$ -- 100
+while$ -- 102
 width$ -- 0
-write$ -- 544
-(There was 1 warning)
+write$ -- 556
+(There were 2 warnings)
