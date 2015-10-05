@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Definition}{11}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{14}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{15}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Issues and motivation}{16}{section.2.4}
+\contentsline {section}{\numberline {2.4}Issues and motivation}{17}{section.2.4}
 \contentsline {chapter}{\numberline {3}Turn-taking taxonomy}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}Taxonomy presentation}{19}{section.3.1}
 \contentsline {paragraph}{G\_NONE}{20}{section*.18}
