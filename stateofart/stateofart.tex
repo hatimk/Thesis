@@ -228,6 +228,7 @@
 
         A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $T$ and $R$ are unknown.
 
+        %HK> Parler de la GPI.
         Fortunately, there are other methods that have been shown to be successful in learning the optimal policy without any prior knowledge about the MDP dynamics as they completely learn by trial and error. The first set of approaches are called \textit{Monte Carlo}; the Q-function is directly evaluated by calculating the mean of the returns $R_t$ for each coupe $(s,a)$. Nevertheless, this method requires the current learning episode to be finished before updating the Q-function. Moreover, acting as such means evaluating $V^{\pi}$ (or $Q^{\pi}$ according to the chosen approach) with $\pi$ being the policy currently followed by the agent. So, how do we compute the optimal policy? This raises the problem of \textit{control} wich goes along with the question of evaluation introduced earlier. In fact, as we keep changing the Q-function values because of new agent experience, we also keep upating the policy to make it greedy with respect to the new evaluation results. Fig. \ref{fig:evalctrl} illustrates this idea.
 
         \begin{figure}
@@ -237,7 +238,16 @@
           \label{fig:evalctrl}
         \end{figure}
 
-        
+        The second and the most widely used approach is called \textit{Temporal Difference Learning} (TD-Learning). The algorithms that belong to this category do not wait for the end of the episode to update the Q-function like in the case of Monte-Carlo, instead, they use other estimated values for other states and other actions; this is known as \textit{bootstraping}. The most famous TD algorithms are \textit{sarsa} and Q-Learning. The first one updates $Q(s_t,a_t)$ at time $t$ by choosing the next action given a policy derived from Q ($\epsilon$-greedy for example), obtaining an immediate reward $r_t$, moving to state $s_{t+1}$ and choosing $a_{t+1}$ using a policiy derived from Q again, then updating Q as follows ($\alpha$ being an update parameter):
+
+            $$ Q(s_t,a_t) = Q(s_t,a_t) + \alpha [r_t + \gamma Q(s_{t+1},a_{t+1}) - Q(s_t,a_t)] $$
+
+        %HK> Une référence pour sarsa?
+        The idea behind this way of boostraping is that the Q is updated at each step by considering that it will follow a policy derived from Q during the next steps; this is an \textit{on-policy} algorithm. On the contrary, Q-Learning \cite{Watkins1989} is an \textit{off-policy} algorithm as it directly estimates $Q^*$ by performing the following update at each step:
+
+            $$ Q(s_t,a_t) = Q(s_t,a_t) + \alpha [r_t + \gamma \max_a Q(s_{t+1},a_{t+1}) - Q(s_t,a_t)] $$
+
+
     \subsection{Application to dialogue systems}
     
     	Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997} and since then, it has the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answer at that time. Partially Observable Markov Decision Processes (POMDPs) are also widely used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}.
