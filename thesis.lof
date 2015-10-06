@@ -1,8 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Simulated environment architecture\relax }}{5}{figure.caption.8}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The interaction between the agent and the environment in reinforcement learning\relax }}{12}{figure.caption.14}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The alternation between evaluation and control\relax }}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The dialogue chain\relax }}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The interaction between the agent and the environment in reinforcement learning\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The alternation between evaluation and control\relax }}{16}{figure.caption.15}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{28}{figure.caption.24}

@@ -48,12 +48,12 @@
         %HK> Citer papier SIGDIAL 2014 juste après companionship.
         	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented as their goal is to help to user to achieve some task. There also exist a few SDSs that are only used for chatting and companionship.
             
-            \begin{figure}
-							\centering
-							\includegraphics[scale=0.8]{figures/DialogueChain.pdf}
-							\caption{The dialogue chain}
-							\label{fig:dialchain}
-						\end{figure}
+            \begin{figure*}[ht]
+		      	\centering
+      			\includegraphics[scale=0.8]{figures/DialogueChain.pdf}
+	      		\caption{Simulated environment architecture}
+      			\label{fig:dialchain}
+			\end{figure*}
         
             The classic architecture of an SDS is made of five main modules (Figure \ref{fig:dialchain}):
             \begin{enumerate}
