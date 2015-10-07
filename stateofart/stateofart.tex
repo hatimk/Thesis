@@ -91,7 +91,8 @@
 
         \subsubsection{Incremental dialogue systems}
     
-        	The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compile processes each new instruction independently from the previous ones. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance.
+					%HK> Pour Levelt, citer le livre au lieu de la review.
+        	The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compile processes each new instruction independently from the previous ones. In his book \textit{From intention to articulation} (1989), Levelt analyses the mecanisms underlying the way humans formulate their ideas in natural language. The approach is closer to computational linguistics than psycholinguistics. The second part of the dialogue chain (DM, NLG and TTS) are analysed using a different terminology: the \textit{Conceptualizer}, the \textit{Formulator} and the \textit{Articulator}. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992} according to \cite{Kilger1995}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance.
 
 	    	Currently deployed dialogue systems have a simple and rigid way of managing turn-taking. The interaction mode they offer is similar to a walkie-talkie conversation as the system waits for the user to finish her utterance before taking the floor and vice-versa (even though some systems allow the user to interrupt the system). Such systems will be referred to as \textit{traditional dialogue systems} in this thesis.
         
@@ -99,7 +100,44 @@
         	%HK> Rajouter Beatie1982 dans le bibtex et le citer dans ce paragraphe juste après barging-in. Retrouver le papier qui a repris Beatie1982 et le citer avec lui.
     	    In human to human conversation, the listener does not wait for the speaker to finish his sentence before processing it; it processes it as it is spoken \cite{Tanenhaus1995}. As a consequence, human beings perform a large panel of turn-taking behaviours while speaking, like backchanneling (\textit{aha}, \textit{yeah}...) or barging-in.
             
-            To replicate this behaviour, a new generation of SDSs has been the focus of current research for a few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided into small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}.
+            To replicate this behaviour, a new generation of SDSs has been the focus of current research for a few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided into small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}. Table \ref{tab:incrnluex} gives an example illustrating the functioning of an incremental NLU module (in a hotel room booking service). For the sake of simplicity, processing delays are neglected.
+						
+						 \begin{table}[th]
+								\vspace{2mm}
+								\centerline{
+									\begin{tabular}{|l|l|l|}
+										\hline
+										\textbf{Time step} & \textbf{NLU input} & \textbf{NLU output} \\
+										\hline
+										1 & I & empty \\
+										\hline
+										2 & I won't & empty \\
+										\hline
+										3 & I would & empty \\
+										\hline
+										4 & I would like to & empty \\
+										\hline
+										5 & I would like to cook a & empty \\
+										\hline
+										6 & I would like to book a room & \textbf{action:} BOOK \\
+										\hline
+										7 & I would like to book a room on May & \textbf{action:} BOOK \\
+										\hline
+										8 & I would like to book a room on May 7$^{th}$ & \textbf{action:} BOOK \\
+										& & \textbf{date:} 05-07 \\
+										\hline
+										9 & I would like to book a room on May 7$^{th}$ and I will & \textbf{action:} BOOK \\
+										& & \textbf{date:} 05-07 \\
+										\hline
+										10 & I would like to book a room on May 7$^{th}$ and I will & \textbf{action:} BOOK \\
+										& be driving & \textbf{date:} 05-07 \\
+										& & \textbf{parking:} YES \\
+										\hline
+									\end{tabular}
+								}
+								\caption{Taxonomy labels}
+								\label{tab:incrnluex}
+							\end{table}
 
             \subsubsection{Advantages of incremental processing}
 
@@ -136,7 +174,7 @@
         
             A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. We will refer to this view of incremental dialogue systems as the \textit{sequential paradigm}.
             
-            Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer(RB). As described in Section \ref{soa:sds}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU) \cite{Schlangen2011}. For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. As the RB of one module if the LB of the following one in the dialogue chain, the data propagation through the dialogue system is insured.
+            Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer (RB). As described in Section \ref{soa:sds}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU) \cite{Schlangen2011}. For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. As the RB of one module if the LB of the following one in the dialogue chain, the data propagation through the dialogue system is insured.
             
             It is important to note that a new IU in the LB does not necessarily imply that a new IU will be pushed into the RB on top of the ones that already existed there. An example given in \cite{Schlangen2011} is the following: suppose the user utters the number \textit{forty} which processed incrementally, then first the ASR outputs \textit{four} and then \textit{forty}. As a consequence, the second hypothesis does not complete the first one but it cancels it. This phenomenon will be discussed more in details in Chapter \ref{ch:simulation}.
             
@@ -227,9 +265,19 @@
                 $$ Q^*(s,a) = \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \max_{a' \in \mathcal{A}} Q^*(s',a'))  $$
 
         A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $T$ and $R$ are unknown.
+		
+				In order to better understand how these methods converge toward the optimal policy, it is necessary to tackle the question of \textit{control}, which goes along with the notion of evaluation introduced earlier:
+				
+				\begin{itemize}
+					\item \textbf{Evaluation:} Given a policy $\pi$, what is the value of $V^{\pi}$ (resp. $Q^{\pi})$ at each state s (resp. at each state-action coupe (s,a))?
+					\item \textbf{Control:} Given $V^{\pi}$ or $Q^{\pi}$, how to come up with a policy $\pi'$ that results in better returns that $\pi$?
+				\end{itemize}
+				
+				%HK> Clarifier la notion d'iteration, séparer DP du reste.
+				As shown in Fig. \ref{fig:evalctrl}, reinforcement learning algorithms (Dynamic Programming and the other categories discussed later on) keep evaluating the current policy and at the same time, altering that policy in order to improve it. A naive approach would be to fix the current policy and to perform as many evaluation iterations as necessary in order to gain a certain confidence over the estimations of $V$ or $Q$ and then to derive a new policy given these values. This is known as \textit{Policy Iteration} but this is not the most efficient way to proceed (so many iterations are needed). In fact, performing only one evaluation iteration before the next control step can be shown to be enough, keeping the convergence guarantees. This is referred to as \textit{Value Iteration}. Also, the notion of iteration can be viewed differently given the approach and the algorithm at hand. In order to refer to the general idea of intertwining evaluation and control, the expression \textit{General Policy Iteration} (GPI) is used.
 
         %HK> Parler de la GPI.
-        Fortunately, there are other methods that have been shown to be successful in learning the optimal policy without any prior knowledge about the MDP dynamics as they completely learn by trial and error. The first set of approaches are called \textit{Monte Carlo}; the Q-function is directly evaluated by calculating the mean of the returns $R_t$ for each coupe $(s,a)$. Nevertheless, this method requires the current learning episode to be finished before updating the Q-function. Moreover, acting as such means evaluating $V^{\pi}$ (or $Q^{\pi}$ according to the chosen approach) with $\pi$ being the policy currently followed by the agent. So, how do we compute the optimal policy? This raises the problem of \textit{control} wich goes along with the question of evaluation introduced earlier. In fact, as we keep changing the Q-function values because of new agent experience, we also keep upating the policy to make it greedy with respect to the new evaluation results. Fig. \ref{fig:evalctrl} illustrates this idea.
+        Fortunately, there are other methods that have been shown to be successful in learning the optimal policy without any prior knowledge about the MDP dynamics as they completely learn by trial and error. The first set of approaches are called \textit{Monte Carlo}; the Q-function is directly evaluated by calculating the mean of the returns $R_t$ for each coupe $(s,a)$. Nevertheless, this method requires the current learning episode to be finished before updating the Q-function.
 
         \begin{figure}
           \centering

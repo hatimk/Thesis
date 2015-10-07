@@ -94,6 +94,11 @@ Khouzaimi, H., Laroche, R., and Lef\`evre, F. (2014).
 \newblock In {\em Proceedings of the 15th Annual Meeting of the Special
   Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
+\bibitem[Kilger and Finkler, 1995]{Kilger1995}
+Kilger, A. and Finkler, W. (1995).
+\newblock Incremental generation for real-time applications.
+\newblock Technical report, German Research Center for Artificial Intelligence.
+
 \bibitem[Kim and Banchs, 2014]{Kim2014}
 Kim, S. and Banchs, R.~E. (2014).
 \newblock Sequential labeling for tracking dynamic dialog states.
