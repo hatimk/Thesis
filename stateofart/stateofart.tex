@@ -16,9 +16,8 @@
         
     \subsection{Turn-taking in human dialogue}
     \label{soa:ttphuman}
-    
-    	%HK> Citer Tanenhaus + article lecture incrémentale.
-        %HK> Résultats Interspeech 2013 Jens Edlund
+		
+      %HK> Résultats Interspeech 2013 Jens Edlund
     
     	Turn-taking is a sociological phenomenon that is encountered in many different situations: card games, road traffic regulation, CPU resource sharing...etc... In \cite{Sacks1974}, Harvey Sacks describes the social organisation of turn-taking as an economy where \textit{turns are valued, sought or avoided}, depending on the situation at hand. Then, in the rest of his paper, he focuses on the case of human conversation. Obviously, this is subject to many contextual and cultural variations but the objectif of \cite{Sacks1974} is to meet the challenge of extracting a set of rules that would ultimately describe the human turn-taking mechanisms in a general fashion.
         
@@ -39,158 +38,182 @@
         %HK> Parler des points propices au turn-taking, du principe de minimise gaps and overlaps, thread de recherche basé sur la prosodie.
         %HK> Autres classifications, Beatie1982 et dérivées...
         %HK> Duncan1972 a aussi le mérite d'être cité
+				
+	\subsection{Incremental speech processing}
+	
+			%HK> Citer Tanenhaus + article lecture incrémentale.
     
 \section{Spoken dialogue systems and incremental behaviour}
     
-    	\subsubsection{Spoken dialogue system}
-        \label{soa:sds}
+	\subsection{Spoken dialogue system}
+  \label{soa:sds}
         
-        %HK> Citer papier SIGDIAL 2014 juste après companionship.
-        	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented as their goal is to help to user to achieve some task. There also exist a few SDSs that are only used for chatting and companionship.
-            
-            \begin{figure}
-							\centering
-							\includegraphics[scale=0.8]{figures/DialogueChain.pdf}
-							\caption{The dialogue chain}
-							\label{fig:dialchain}
-						\end{figure}
-        
-            The classic architecture of an SDS is made of five main modules (Figure \ref{fig:dialchain}):
-            \begin{enumerate}
-            	\item Automatic Speech Recognition (ASR): transforms the user's audio speech signal into text.
-                \item Natural Language Understanding (NLU): outputs a conceptual representation of the user's utterance in text format.
-                \item Dialogue Manager (DM): given the concepts extracted from the user's request, a response (in a conceptual format too) is computed.
-                \item Natural Language Generation (NLG): transforms the concepts computed by the DM into text.
-                \item Text-To-Speech (TTS): reads the text outputted by the NLG by using a synthetic voice.
-            \end{enumerate}
-
-            %HK> Rajouter des références.
-            Speech recognition technology is an old problem with long history. During the 1950s, a group of researchers from Bell Labs developed the first technology that is able to recognise digits from speech (in fact, speech perception has been under study since the early 1930s). Then, during the second half of the last century, new advances have made it possible to build ASR solutions with larger vocabulary and with no dependence on the user. In the 1960s, Hidden Markov Models (HMMs) were proved to be useful for speech recognition and they were the most popular technique two decades later. Comercial products using ASR technology had to wait until the 1990s to be finally released in the marked as they reached and interesting vocabulary (even though their accuracy and their delay were far behind the technology we have today). Performances kept improving incrementally until 2009, when Deep Learning algorithms were tested; the Word Error Rate (WER) decreased by 30\%. During the last six years, research continued in that direction giving birth to accurate and reactive speech recognition solutions (Google, Nuance, Sphinx, Kaldi...). Therefore, ASR is no longer a bottleneck in the development of spoken dialogue systems, and as we will see later, the delays they offer make it possible to design reactive incremental dialogue systems. Commercial off-the-shelf ASR solutions like Google ASR or Nuance products are able to recognise almost every word in many languages, including named entities. Finally, the ASR output is not only the text that the recognition algorithm figures out to be the best match for the input audio signal, but a list of the N most likely hypotheses and the corresonding confidence scores: it is called the N-Best. For instance, an 5-Best could be:
-
-            \begin{itemize}
-              \item 0.965: I would like to book a flight from New-York to Los Angeles
-              \item 0.931: I could like to book a flight for New-York to Los Angeles
-              \item 0.722: Cold like a book fly New-York to Los Angeles
-              \item 0.570: Cold like look flight pork to Los Angeles
-              \item 0.441: Cold bike look fly New-York to Los Angeles  
-            \end{itemize}
-
-            %HK> Référence sur Rule-based vs. statistical-based? Un survey sur la NLU?
-            The scope of NLU technology is a subfield of Natural Language Processing (NLP) whose scope much wider than the spoken dialogue field. Since the 1950s, researchers have been trying to develop several models and ontologies in order to automatically process natural language with several applications in sight: topic recognition, sentiment analysis, news filtering and analysis, natural speech processing...etc...The ambition manifested during 1950s and the early 1960s quickly had to face reality as the expected objectives were far from being reached. As a consequence, research in this area was significantly slowed down between the 1960s and the 1980s. During the last decade, NLP reasearch has found a second wind thanks to new Machine Learning, bringing them at the heart of lucrative businesses like recommendation and digital marketing. NLU refers to the set of techniques in order to make the machine understand the underlying structure of a text in natural language. To do so, a lexicon as well as an ontology (concepts and the links between them in a specific domain) should be built. Existing dialogue systems are able to interact with the user in the domain they are built for only, however, during the last few years, researchers have been pushing the boundaries of open-domain systems \cite{Gasic2013}. Therefore, earlier NLU solutions are based on a set of handcrafted parsing rules, however, new statistical-based models have been proven to be more robust and easy to generalise over domains.
-
-            %HK> Faire un choix: "reinforcement learning", "Reinforcement Learning" ou "RL". Idem "spoken dialogue systems", "Spoken Dialogue Systems" ou bien "SDSs".
-            %HK> Autres références pour le DSTC, RNN de Hendersen...etc...
-            Dialogue Management is at the heart of Spoken Dialogue System's current research. A couple of decades ago, for the first time, dialogue has been modeled as Markov Decision Processes (MDPs) problem, hence being solved using reinforcement learning \cite{Eckert1997}. The dialogue state is generally defined by the whole dialogue history and the set of actions in each state are the dialogue acts that the system can make. In 2007, in order to represent the uncertainty over the user's intent (due to ASR or NLU imperfections), dialogues have been cast as Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007}. This gave raise to the notion of \textit{believe tracking} which objective is to keep a distribution over the possible user intents. In order to encourage research in that direction, a Dialogue State Tracking Challenge (DSTC) has been launched a few years ago \cite{Williams2012b}, bringing new contributions each year. This approach has been shown to provide intersting results, however, the size and the dimensionality of the state space makes it untractable most of the time.
-
-            %HK> Noms de startups et de boites faisant de la génération de texte automatique?
-            The NLG task is the inverse of the NLU one. It started being used in the 1990s for purposes like financial news summary. A few startups and big companies also provide automatic text generation solutions that are used to quickly produce reports or official letters. The main challenge for such systems is to be able to generate a variety of different words, expressions and sentencs in order for them not to be repetitive and for the result to be as realistic as possible. This is even more crucial when it comes to dialogue systems as they are supposed to simulate a real conversation with the user which is a highly variable task).
-
-            During the 1930s, Bell Labs were not only interested in ASR but they also developed a new approach for the inverse task: the TTS (also known as \textit{speech synthesis}). The human speech is broken into small acoustic components that are sequentially pronounced by the system. They built the first machine demonstrating this mechanism: the Voder. As far as this task is concerned, the challenge for the system si to sound as human-like as possible, in terms of phoneme transitions, speech rate and prosody. Even though substantial advances have been accomplished since the Voder, it is still easy to distinguish between a synthetised and a real human voice.
-
-            %HK> Parler du test de Turing comme test ultime?
-
-        \subsubsection{Incremental dialogue systems}
-    
-					%HK> Pour Levelt, citer le livre au lieu de la review.
-        	The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compile processes each new instruction independently from the previous ones. In his book \textit{From intention to articulation} (1989), Levelt analyses the mecanisms underlying the way humans formulate their ideas in natural language. The approach is closer to computational linguistics than psycholinguistics. The second part of the dialogue chain (DM, NLG and TTS) are analysed using a different terminology: the \textit{Conceptualizer}, the \textit{Formulator} and the \textit{Articulator}. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992} according to \cite{Kilger1995}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance.
-
-	    	Currently deployed dialogue systems have a simple and rigid way of managing turn-taking. The interaction mode they offer is similar to a walkie-talkie conversation as the system waits for the user to finish her utterance before taking the floor and vice-versa (even though some systems allow the user to interrupt the system). Such systems will be referred to as \textit{traditional dialogue systems} in this thesis.
-        
-        	%HK> Retrouver le papier sur la lecture et l'incrémental et le citer avec Tanenhaus.
-        	%HK> Rajouter Beatie1982 dans le bibtex et le citer dans ce paragraphe juste après barging-in. Retrouver le papier qui a repris Beatie1982 et le citer avec lui.
-    	    In human to human conversation, the listener does not wait for the speaker to finish his sentence before processing it; it processes it as it is spoken \cite{Tanenhaus1995}. As a consequence, human beings perform a large panel of turn-taking behaviours while speaking, like backchanneling (\textit{aha}, \textit{yeah}...) or barging-in.
-            
-            To replicate this behaviour, a new generation of SDSs has been the focus of current research for a few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided into small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}. Table \ref{tab:incrnluex} gives an example illustrating the functioning of an incremental NLU module (in a hotel room booking service). For the sake of simplicity, processing delays are neglected.
-						
-						 \begin{table}[th]
-								\vspace{2mm}
-								\centerline{
-									\begin{tabular}{|l|l|l|}
-										\hline
-										\textbf{Time step} & \textbf{NLU input} & \textbf{NLU output} \\
-										\hline
-										1 & I & empty \\
-										\hline
-										2 & I won't & empty \\
-										\hline
-										3 & I would & empty \\
-										\hline
-										4 & I would like to & empty \\
-										\hline
-										5 & I would like to cook a & empty \\
-										\hline
-										6 & I would like to book a room & \textbf{action:} BOOK \\
-										\hline
-										7 & I would like to book a room on May & \textbf{action:} BOOK \\
-										\hline
-										8 & I would like to book a room on May 7$^{th}$ & \textbf{action:} BOOK \\
-										& & \textbf{date:} 05-07 \\
-										\hline
-										9 & I would like to book a room on May 7$^{th}$ and I will & \textbf{action:} BOOK \\
-										& & \textbf{date:} 05-07 \\
-										\hline
-										10 & I would like to book a room on May 7$^{th}$ and I will & \textbf{action:} BOOK \\
-										& be driving & \textbf{date:} 05-07 \\
-										& & \textbf{parking:} YES \\
-										\hline
-									\end{tabular}
-								}
-								\caption{Taxonomy labels}
-								\label{tab:incrnluex}
-							\end{table}
-
-            \subsubsection{Advantages of incremental processing}
-
-            \subsubsection{New challenges raised by incremental dialogue processing}
-    
-                %HK> Citer Dan Povey pour Kaldi.
-                The first problem to consider when talking about incremental spoken dialogue systems is the question of ASR \textit{latency}, which is the time needed by the recognition algorithm to provide the text output corresponding to an audio signal. As we said earlier, the ASR accuracy has been a bottleneck in the development of spoken dialogue systems for many years but thanks to recent advances in this field, it is no longer the case. Similarly, incremental dialogue systems require quick responses from the ASR and the delays needed but speech recognition modules have been too long for many years which was a limiting factor in the development of incrmental dialogue systems. However, in the last few years, ASR technology has became reactive enough \cite{Platek2014}. Nevertheless, it is important to be aware that there is a tradeoff between the accuracy and the vocabulary size on one hand and the latency on the other hand. Kaldi, which is an ASR solution designed by researchers (and which is mostly used by them), makes it possible to design one's own acoustic and language model as well to set one's own parameters in order to control this tradeoff. On the other hand, more off-the-shelf solutions like Google ASR do not give the user such possibilities (however, accuracy and delays are well balanced for most applications).
-
-                %HK> Citer Ethan et Jason au sujet de l'instabilité si ce n'est déjà fait.
-                If we observe the successive partial results of an incremental ASR module during a user's utterance, it is likely that the progression they follow is not monotonous. In other words, a partial result is not guaranteed to be a prefix of results to come. The following example showing successive ASR results illustrate this phenomenon:
-
-                \begin{enumerate}
-                  \item Euh
-                  \item I
-                  \item Euh good
-                  \item iPod
-                  \item I would
-                  \item I good bike
-                  \item I would like
-                \end{enumerate}
-
-                This phenomenon is called ASR \textit{instability} (or stability depending on the sources) \cite{Selfridge2011}. This factor is also related to the tradeoff between latency and accuracy as prefering fast ASR over accurate ones can lead to very instable results (the system is not given enough time to check that its results are accurate, thus ending up delivering wrong partial results most of the time), and the vice versa.
-								
-		This leads to one of the main challenges raised by incremental processing: the ability to \textit{revise} the current hypothesis. All the modules in the dialogue chain are impacted by this problem. As an illustration, suppose that the user interacts with an incremental personal assistant on her phone and makes the following request \textit{Please call the number 01 45 80 12 35}. The last digit is first understood as being 30 and then 35, therefore, if the system is too reactive, there is a risk that it starts calling the wrong number and maybe start uttering the sentence \textit{Ok, calling 01 45 80 12 30}. Afterwards, the system understands 35 instead of 30 hence needing a correction mechanism in order to stop the TTS, to cancel the call, to perform a new one and to provide a new answer to the user. Nevertheless, even though the system at hand is equiped with such a mechanism, using it very often is not an optimal way of managing incremental input as it causes extra delay as well as non-natural behaviour (stopping the TTS and starting again with another utterance). This introduces a similar tradeoff to the one discussed for the ASR module but from the DM perspective: if decisions are taken too quickly, it is likely that some of them are wrong hence activating the correction mechanism. On the other hand, if the DM is slow to take action, then it lacks reactivity and there is no point for it to be incremental. As a consequence, it is important to determine the right moment to commit to the current partial utterance and to take action based on it \cite{Raux2008,Lu2011}. This constitues the main objective of this thesis.
-
-                Incremental NLG also raise new problems which are illustrated in \cite{Baumann2013}. In this paper, a system has to describe a car's trajectory in a virtual world. When the latter approaches an intersection where it has to turn right or left (no road straight ahead), then the system utters something like \textit{The car drives along Main Street and then turns...euh...and then turns right}. In this example, the system is sure that the car is going to turn which makes it possible for it to commit to the first part of the sentence with no risk. However, this is not always the case as a new chunk of information from the user can change the whole system's response. In this thesis, the NLG is not incremental as we consider that the DM's response is computed instantly at each new micro-turn (event though it is not necessarily stabe and it can vary from micro-turn to micro-turn). Finally, in purely vocal applications, computing the NLG results incremental does not make much sense as the user's and the system's utterances do not overlap most of the time \cite{Sacks1974}. However, this is an interesting behaviour as far as multimodal applications are concerned.
-
-                %HK> Trouver des références pour ce paragraphe et bien le justifier (le papier de Baumann parle-t-il de ça aussi?).
-                Building an incremental TTS module can also be very tricky. In order for the synthetic voice to be the most human-like as possible, prosody should be computed accurately and to do so, the sentence's structure and punctuation have to be taken into account. This information is no longer given in the case of incremental TTS or it arrives too late.
+%HK> Citer papier SIGDIAL 2014 juste après companionship.
+	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented as their goal is to help to user to achieve some task. There also exist a few SDSs that are only used for chatting and companionship.
+	
+	Traditional computer interfaces are presented in the form of controls in an application (text boxes, buttons) or web pages. They are heavily used and they have been proven to be efficient enough, providing an accurate way of human-machine interaction. So, why building spoken dialogue systems? What are the advantages of the vocal modality?
+	
+	%HK> Rajouter d'autres exemples que Amazon Echo.
+	%HK> Citer cooking coach si publié.
+	With the development of the Internet of Things (IoT) during the last few years, new human-machine interactions can be imagined. For instance, the concept of \textit{Smart Home} is currently making its enter in the marker of Artificial Intelligence through the contributions of several companies and startups: Amazon Echo... In this context, the advantage of speech communication is clearly relevant as it is hands and eyes-free. The user can command her house from any room with no extra device needed. In some situation, her hands are already occupied by some other task. For example, she can be cooking while asking \textit{What should I put next in my salad?} or \textit{Can you add milk to my errands list please?}.
+	
+	Another obvious motivation for building spoken dialogue systems is the thrive for human-likeness. In \cite{Edlund2008}, an interesting analysis of the way humans perceive dialogue systems they are interacting with is performed. These systems are complex and humans keep a simplified representation of them during the interaction (called metaphors in \cite{Edlund2008}). Two of them are the most common:
+	
+	\begin{itemize}
+		\item \textit{Interface metaphor:} The system is viewed as an interface just like non dialogue-based systems. Users adopting this representation of the system tend to use vocal commands instead of complete sentences. Moreover, they tend to keep silent when the system tries to behave like a human, by saying \textit{Hi!} for example.
+		\item \textit{Human metaphor:} In this case, the users tend to view the system as a real human, therefore adopting a more natural way of communication. These users generally have higher expectations of the system's ability to answer their requests as well as it ability to perform human-like turn-taking actions.
+	\end{itemize}
 		
+		\begin{figure}
+			\centering
+			\includegraphics[scale=0.8]{figures/DialogueChain.pdf}
+			\caption{The dialogue chain}
+			\label{fig:dialchain}
+		\end{figure}
 
-    \subsection{Existing architectures}
-    	\subsubsection{Sequential paradigm}
-        
-            A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. We will refer to this view of incremental dialogue systems as the \textit{sequential paradigm}.
-            
-            Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer (RB). As described in Section \ref{soa:sds}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU) \cite{Schlangen2011}. For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. As the RB of one module if the LB of the following one in the dialogue chain, the data propagation through the dialogue system is insured.
-            
-            It is important to note that a new IU in the LB does not necessarily imply that a new IU will be pushed into the RB on top of the ones that already existed there. An example given in \cite{Schlangen2011} is the following: suppose the user utters the number \textit{forty} which processed incrementally, then first the ASR outputs \textit{four} and then \textit{forty}. As a consequence, the second hypothesis does not complete the first one but it cancels it. This phenomenon will be discussed more in details in Chapter \ref{ch:simulation}.
-            
-            Adopting this paradigm is a natural way of enhancing traditional dialogue systems with incremental capabilities. It is interesting from a computational and design point of view as the different tasks are separated. Therefore, one is able to evaluate the different components independently \cite{Baumann2011} and have a global view on which area still needs improvement.
-        
-        \subsubsection{Multi-layer paradigm}
-        
-        	The problem of dialogue management in traditional dialogue systems can be formulated as follows: at each dialogue turn, given the dialogue context (including the last user's utterance), what is the right dialogue act to perform? In the incremental frame, this definition no longer holds as dialogue acts are no longer attached to dialogue turns. Therefore, one way to tackle the problem is to split the dialogue management task in two components, the high-level and the low-level handlers. This paradigm is directly motivated by Austin's, Searl's and Clark's contributions discussed in Section \ref{soa:philolang} as the high-level module handles illocutionary acts (the communicative track) whereas the low-level one manages locutionary acts (the meta-communicative track).
-            
-            %HK> Citer Pickering and Gravano 2003?
-            As reported in \cite{Lemon2003}, this approach is more in alignment with results in the psycholinguistic field. The phenomena observed in the meta-communicative track are complex, and the interaction happen on multiple levels, not always following the classical dialogue chain. Having a separate module for handling these phenomena is therefore a more natural paradigm.
-            
-            Switching from the traditional dialogue management approach to the incremental one is also a transition from discrete time to continuous time, from a synchronous to an asynchronous processing \cite{Raux2007}. The low-level module is continuously (approximated by a high frequency processing in computers) listening to the outside world and waiting for events that might be interesting to communicate to the high-level handler. On the other hand, the latter communicates actions (dialogue acts) and it is the role of to the low-level module to choose whether to retrieve them to the user or not as well as choosing the right moment in case it decides to speak.
-            
-            Finally, starting from a traditional dialogue system, it is more easier and straightforward to transform it into an incremental one if one adopts this paradigm. Adding an extra low-level module to the dialogue manager is enough \cite{Selfridge2012a,Khouzaimi2014a}. At each new incremental input, this module sends the whole partial utterance from the beginning of the current turn to the dialogue manager and gets its response. Based on that and eventually some other features, it decides whether to take the floor or not. As most of the requests sent to the dialogue manager are "fake" as they are not meant to be acted on, they should not affect the dialogue context. Therefore, whether multiple instances of the dialogue manager are used, whether the dialogue context is saved and restored at each new request, unless the low-level module decides to take the floor.
+		The classic architecture of an SDS is made of five main modules (Figure \ref{fig:dialchain}):
+		\begin{enumerate}
+			\item Automatic Speech Recognition (ASR): transforms the user's audio speech signal into text.
+				\item Natural Language Understanding (NLU): outputs a conceptual representation of the user's utterance in text format.
+				\item Dialogue Manager (DM): given the concepts extracted from the user's request, a response (in a conceptual format too) is computed.
+				\item Natural Language Generation (NLG): transforms the concepts computed by the DM into text.
+				\item Text-To-Speech (TTS): reads the text outputted by the NLG by using a synthetic voice.
+		\end{enumerate}
+
+		%HK> Rajouter des références.
+		Speech recognition technology is an old problem with long history. During the 1950s, a group of researchers from Bell Labs developed the first technology that is able to recognise digits from speech (in fact, speech perception has been under study since the early 1930s). Then, during the second half of the last century, new advances have made it possible to build ASR solutions with larger vocabulary and with no dependence on the user. In the 1960s, Hidden Markov Models (HMMs) were proved to be useful for speech recognition and they were the most popular technique two decades later. Comercial products using ASR technology had to wait until the 1990s to be finally released in the marked as they reached and interesting vocabulary (even though their accuracy and their delay were far behind the technology we have today). Performances kept improving incrementally until 2009, when Deep Learning algorithms were tested; the Word Error Rate (WER) decreased by 30\%. During the last six years, research continued in that direction giving birth to accurate and reactive speech recognition solutions (Google, Nuance, Sphinx, Kaldi...). Therefore, ASR is no longer a bottleneck in the development of spoken dialogue systems, and as we will see later, the delays they offer make it possible to design reactive incremental dialogue systems. Commercial off-the-shelf ASR solutions like Google ASR or Nuance products are able to recognise almost every word in many languages, including named entities. Finally, the ASR output is not only the text that the recognition algorithm figures out to be the best match for the input audio signal, but a list of the N most likely hypotheses and the corresonding confidence scores: it is called the N-Best. For instance, an 5-Best could be:
+
+		\begin{itemize}
+			\item 0.965: I would like to book a flight from New-York to Los Angeles
+			\item 0.931: I could like to book a flight for New-York to Los Angeles
+			\item 0.722: Cold like a book fly New-York to Los Angeles
+			\item 0.570: Cold like look flight pork to Los Angeles
+			\item 0.441: Cold bike look fly New-York to Los Angeles  
+		\end{itemize}
+
+		%HK> Référence sur Rule-based vs. statistical-based? Un survey sur la NLU?
+		The scope of NLU technology is a subfield of Natural Language Processing (NLP) whose scope much wider than the spoken dialogue field. Since the 1950s, researchers have been trying to develop several models and ontologies in order to automatically process natural language with several applications in sight: topic recognition, sentiment analysis, news filtering and analysis, natural speech processing...etc...The ambition manifested during 1950s and the early 1960s quickly had to face reality as the expected objectives were far from being reached. As a consequence, research in this area was significantly slowed down between the 1960s and the 1980s. During the last decade, NLP reasearch has found a second wind thanks to new Machine Learning, bringing them at the heart of lucrative businesses like recommendation and digital marketing. NLU refers to the set of techniques in order to make the machine understand the underlying structure of a text in natural language. To do so, a lexicon as well as an ontology (concepts and the links between them in a specific domain) should be built. Existing dialogue systems are able to interact with the user in the domain they are built for only, however, during the last few years, researchers have been pushing the boundaries of open-domain systems \cite{Gasic2013}. Therefore, earlier NLU solutions are based on a set of handcrafted parsing rules, however, new statistical-based models have been proven to be more robust and easy to generalise over domains.
+
+		%HK> Faire un choix: "reinforcement learning", "Reinforcement Learning" ou "RL". Idem "spoken dialogue systems", "Spoken Dialogue Systems" ou bien "SDSs".
+		%HK> Autres références pour le DSTC, RNN de Hendersen...etc...
+		Dialogue Management is at the heart of Spoken Dialogue System's current research. A couple of decades ago, for the first time, dialogue has been modeled as Markov Decision Processes (MDPs) problem, hence being solved using reinforcement learning \cite{Eckert1997}. The dialogue state is generally defined by the whole dialogue history and the set of actions in each state are the dialogue acts that the system can make. In 2007, in order to represent the uncertainty over the user's intent (due to ASR or NLU imperfections), dialogues have been cast as Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007}. This gave raise to the notion of \textit{believe tracking} which objective is to keep a distribution over the possible user intents. In order to encourage research in that direction, a Dialogue State Tracking Challenge (DSTC) has been launched a few years ago \cite{Williams2012b}, bringing new contributions each year. This approach has been shown to provide intersting results, however, the size and the dimensionality of the state space makes it untractable most of the time.
+
+		%HK> Noms de startups et de boites faisant de la génération de texte automatique?
+		The NLG task is the inverse of the NLU one. It started being used in the 1990s for purposes like financial news summary. A few startups and big companies also provide automatic text generation solutions that are used to quickly produce reports or official letters. The main challenge for such systems is to be able to generate a variety of different words, expressions and sentencs in order for them not to be repetitive and for the result to be as realistic as possible. This is even more crucial when it comes to dialogue systems as they are supposed to simulate a real conversation with the user which is a highly variable task).
+
+		During the 1930s, Bell Labs were not only interested in ASR but they also developed a new approach for the inverse task: the TTS (also known as \textit{speech synthesis}). The human speech is broken into small acoustic components that are sequentially pronounced by the system. They built the first machine demonstrating this mechanism: the Voder. As far as this task is concerned, the challenge for the system si to sound as human-like as possible, in terms of phoneme transitions, speech rate and prosody. Even though substantial advances have been accomplished since the Voder, it is still easy to distinguish between a synthetised and a real human voice.
+
+		%HK> Parler du test de Turing comme test ultime?
+
+	\subsection{Incremental dialogue systems}
     
+		%HK> Pour Levelt, citer le livre au lieu de la review.
+		The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compile processes each new instruction independently from the previous ones. In his book \textit{From intention to articulation} (1989), Levelt analyses the mecanisms underlying the way humans formulate their ideas in natural language. The approach is closer to computational linguistics than psycholinguistics. The second part of the dialogue chain (DM, NLG and TTS) are analysed using a different terminology: the \textit{Conceptualizer}, the \textit{Formulator} and the \textit{Articulator}. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992} according to \cite{Kilger1995}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance.
+
+		Currently deployed dialogue systems have a simple and rigid way of managing turn-taking. The interaction mode they offer is similar to a walkie-talkie conversation as the system waits for the user to finish her utterance before taking the floor and vice-versa (even though some systems allow the user to interrupt the system). Such systems will be referred to as \textit{traditional dialogue systems} in this thesis.
+
+		%HK> Retrouver le papier sur la lecture et l'incrémental et le citer avec Tanenhaus.
+		%HK> Rajouter Beatie1982 dans le bibtex et le citer dans ce paragraphe juste après barging-in. Retrouver le papier qui a repris Beatie1982 et le citer avec lui.
+		In human to human conversation, the listener does not wait for the speaker to finish his sentence before processing it; it processes it as it is spoken \cite{Tanenhaus1995}. As a consequence, human beings perform a large panel of turn-taking behaviours while speaking, like backchanneling (\textit{aha}, \textit{yeah}...) or barging-in.
+	
+		To replicate this behaviour, a new generation of SDSs has been the focus of current research for a few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided into small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}. Table \ref{tab:incrnluex} gives an example illustrating the functioning of an incremental NLU module (in a hotel room booking service). For the sake of simplicity, processing delays are neglected.
+	
+		\begin{table}[th]
+			\vspace{2mm}
+			\centerline{
+				\begin{tabular}{|l|l|l|}
+					\hline
+					\textbf{Time step} & \textbf{NLU input} & \textbf{NLU output} \\
+					\hline
+					1 & I & empty \\
+					\hline
+					2 & I won't & empty \\
+					\hline
+					3 & I would & empty \\
+					\hline
+					4 & I would like to & empty \\
+					\hline
+					5 & I would like to cook a & empty \\
+					\hline
+					6 & I would like to book a room & \textbf{action:} BOOK \\
+					\hline
+					7 & I would like to book a room on May & \textbf{action:} BOOK \\
+					\hline
+					8 & I would like to book a room on May 7$^{th}$ & \textbf{action:} BOOK \\
+					& & \textbf{date:} 05-07 \\
+					\hline
+					9 & I would like to book a room on May 7$^{th}$ and I will & \textbf{action:} BOOK \\
+					& & \textbf{date:} 05-07 \\
+					\hline
+					10 & I would like to book a room on May 7$^{th}$ and I will & \textbf{action:} BOOK \\
+					& be driving & \textbf{date:} 05-07 \\
+					& & \textbf{parking:} YES \\
+					\hline
+				\end{tabular}
+			}
+			\caption{Taxonomy labels}
+			\label{tab:incrnluex}
+		\end{table}
+
+	\subsection{Advantages of incremental processing}
+						
+		%HK> Human-likeness: Edlund2008
+		%HK> User satisfaction in general: Aist2007
+		%HK> Reactivity
+		%HK> Limit desynchronisations
+		%HK> Efficiency, inciting the user to formulate more focused requests : Ghigi2015, Khouzaimi2015, Tiancheng2015
+		%HK> Multimodality : Fink1998, voir du côté de Bohus
+
+	\subsection{New challenges raised by incremental dialogue processing}
+    
+		%HK> Citer Dan Povey pour Kaldi.
+		The first problem to consider when talking about incremental spoken dialogue systems is the question of ASR \textit{latency}, which is the time needed by the recognition algorithm to provide the text output corresponding to an audio signal. As we said earlier, the ASR accuracy has been a bottleneck in the development of spoken dialogue systems for many years but thanks to recent advances in this field, it is no longer the case. Similarly, incremental dialogue systems require quick responses from the ASR and the delays needed but speech recognition modules have been too long for many years which was a limiting factor in the development of incrmental dialogue systems. However, in the last few years, ASR technology has became reactive enough \cite{Platek2014}. Nevertheless, it is important to be aware that there is a tradeoff between the accuracy and the vocabulary size on one hand and the latency on the other hand. Kaldi, which is an ASR solution designed by researchers (and which is mostly used by them), makes it possible to design one's own acoustic and language model as well to set one's own parameters in order to control this tradeoff. On the other hand, more off-the-shelf solutions like Google ASR do not give the user such possibilities (however, accuracy and delays are well balanced for most applications).
+
+		%HK> Citer Ethan et Jason au sujet de l'instabilité si ce n'est déjà fait.
+		If we observe the successive partial results of an incremental ASR module during a user's utterance, it is likely that the progression they follow is not monotonous. In other words, a partial result is not guaranteed to be a prefix of results to come. The following example showing successive ASR results illustrate this phenomenon:
+
+		\begin{enumerate}
+			\item Euh
+			\item I
+			\item Euh good
+			\item iPod
+			\item I would
+			\item I good bike
+			\item I would like
+		\end{enumerate}
+
+		This phenomenon is called ASR \textit{instability} (or stability depending on the sources) \cite{Selfridge2011}. This factor is also related to the tradeoff between latency and accuracy as prefering fast ASR over accurate ones can lead to very instable results (the system is not given enough time to check that its results are accurate, thus ending up delivering wrong partial results most of the time), and the vice versa.
+		
+This leads to one of the main challenges raised by incremental processing: the ability to \textit{revise} the current hypothesis. All the modules in the dialogue chain are impacted by this problem. As an illustration, suppose that the user interacts with an incremental personal assistant on her phone and makes the following request \textit{Please call the number 01 45 80 12 35}. The last digit is first understood as being 30 and then 35, therefore, if the system is too reactive, there is a risk that it starts calling the wrong number and maybe start uttering the sentence \textit{Ok, calling 01 45 80 12 30}. Afterwards, the system understands 35 instead of 30 hence needing a correction mechanism in order to stop the TTS, to cancel the call, to perform a new one and to provide a new answer to the user. Nevertheless, even though the system at hand is equiped with such a mechanism, using it very often is not an optimal way of managing incremental input as it causes extra delay as well as non-natural behaviour (stopping the TTS and starting again with another utterance). This introduces a similar tradeoff to the one discussed for the ASR module but from the DM perspective: if decisions are taken too quickly, it is likely that some of them are wrong hence activating the correction mechanism. On the other hand, if the DM is slow to take action, then it lacks reactivity and there is no point for it to be incremental. As a consequence, it is important to determine the right moment to commit to the current partial utterance and to take action based on it \cite{Raux2008,Lu2011}. This constitues the main objective of this thesis.
+
+		Incremental NLG also raise new problems which are illustrated in \cite{Baumann2013}. In this paper, a system has to describe a car's trajectory in a virtual world. When the latter approaches an intersection where it has to turn right or left (no road straight ahead), then the system utters something like \textit{The car drives along Main Street and then turns...euh...and then turns right}. In this example, the system is sure that the car is going to turn which makes it possible for it to commit to the first part of the sentence with no risk. However, this is not always the case as a new chunk of information from the user can change the whole system's response. In this thesis, the NLG is not incremental as we consider that the DM's response is computed instantly at each new micro-turn (event though it is not necessarily stabe and it can vary from micro-turn to micro-turn). Finally, in purely vocal applications, computing the NLG results incremental does not make much sense as the user's and the system's utterances do not overlap most of the time \cite{Sacks1974}. However, this is an interesting behaviour as far as multimodal applications are concerned.
+
+		%HK> Trouver des références pour ce paragraphe et bien le justifier (le papier de Baumann parle-t-il de ça aussi?).
+		Building an incremental TTS module can also be very tricky. In order for the synthetic voice to be the most human-like as possible, prosody should be computed accurately and to do so, the sentence's structure and punctuation have to be taken into account. This information is no longer given in the case of incremental TTS or it arrives too late.
+
+
+	\subsection{Existing architectures}
+		\subsubsection{Sequential paradigm}
+			
+			A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. We will refer to this view of incremental dialogue systems as the \textit{sequential paradigm}.
+				
+			Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer (RB). As described in Section \ref{soa:sds}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU) \cite{Schlangen2011}. For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. As the RB of one module if the LB of the following one in the dialogue chain, the data propagation through the dialogue system is insured.
+			
+			It is important to note that a new IU in the LB does not necessarily imply that a new IU will be pushed into the RB on top of the ones that already existed there. An example given in \cite{Schlangen2011} is the following: suppose the user utters the number \textit{forty} which processed incrementally, then first the ASR outputs \textit{four} and then \textit{forty}. As a consequence, the second hypothesis does not complete the first one but it cancels it. This phenomenon will be discussed more in details in Chapter \ref{ch:simulation}.
+			
+			Adopting this paradigm is a natural way of enhancing traditional dialogue systems with incremental capabilities. It is interesting from a computational and design point of view as the different tasks are separated. Therefore, one is able to evaluate the different components independently \cite{Baumann2011} and have a global view on which area still needs improvement.
+
+		\subsubsection{Multi-layer paradigm}
+		
+			The problem of dialogue management in traditional dialogue systems can be formulated as follows: at each dialogue turn, given the dialogue context (including the last user's utterance), what is the right dialogue act to perform? In the incremental frame, this definition no longer holds as dialogue acts are no longer attached to dialogue turns. Therefore, one way to tackle the problem is to split the dialogue management task in two components, the high-level and the low-level handlers. This paradigm is directly motivated by Austin's, Searl's and Clark's contributions discussed in Section \ref{soa:philolang} as the high-level module handles illocutionary acts (the communicative track) whereas the low-level one manages locutionary acts (the meta-communicative track).
+				
+				%HK> Citer Pickering and Gravano 2003?
+				As reported in \cite{Lemon2003}, this approach is more in alignment with results in the psycholinguistic field. The phenomena observed in the meta-communicative track are complex, and the interaction happen on multiple levels, not always following the classical dialogue chain. Having a separate module for handling these phenomena is therefore a more natural paradigm.
+				
+				Switching from the traditional dialogue management approach to the incremental one is also a transition from discrete time to continuous time, from a synchronous to an asynchronous processing \cite{Raux2007}. The low-level module is continuously (approximated by a high frequency processing in computers) listening to the outside world and waiting for events that might be interesting to communicate to the high-level handler. On the other hand, the latter communicates actions (dialogue acts) and it is the role of to the low-level module to choose whether to retrieve them to the user or not as well as choosing the right moment in case it decides to speak.
+				
+				Finally, starting from a traditional dialogue system, it is more easier and straightforward to transform it into an incremental one if one adopts this paradigm. Adding an extra low-level module to the dialogue manager is enough \cite{Selfridge2012a,Khouzaimi2014a}. At each new incremental input, this module sends the whole partial utterance from the beginning of the current turn to the dialogue manager and gets its response. Based on that and eventually some other features, it decides whether to take the floor or not. As most of the requests sent to the dialogue manager are "fake" as they are not meant to be acted on, they should not affect the dialogue context. Therefore, whether multiple instances of the dialogue manager are used, whether the dialogue context is saved and restored at each new request, unless the low-level module decides to take the floor.
+
 \section{Reinforcement Learning}
 	\subsection{Definition}
     
