@@ -123,6 +123,11 @@ Laroche, R., Putois, G., Bretier, P., Aranguren, M., Velkovska, J., Hastie, H.,
   systems.
 \newblock Report D6.4, CLASSIC Project.
 
+\bibitem[Laroche et~al., 2013]{Laroche2013}
+Laroche, R., Roussarie, L., Baczyk, P., and Dziekan, J. (2013).
+\newblock Cooking coach spoken/multimodal dialogue systems.
+\newblock In {\em Proceedings of the IJCAI Workshop on Cooking with Computers}.
+
 \bibitem[Lemon et~al., 2003]{Lemon2003}
 Lemon, O., Cavedon, L., and Kelly, B. (2003).
 \newblock Managing dialogue interaction: A multi-layered approach.
@@ -159,6 +164,11 @@ Meena, R., Skantze, G., and Gustafson, J. (2013).
 \newblock A data-driven model for timing feedback in a map task dialogue
   system.
 \newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+
+\bibitem[Mori, 1970]{Mori1970}
+Mori, M. (1970).
+\newblock The uncanny vally.
+\newblock In {\em Energy}.
 
 \bibitem[Pietquin and Hastie, 2013]{Pietquin2013}
 Pietquin, O. and Hastie, H. (2013).

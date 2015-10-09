@@ -6,27 +6,28 @@
 \contentsline {section}{\numberline {2.1}Human dialogue}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Philosophy of language}{3}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Turn-taking in human dialogue}{4}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Spoken dialogue systems and incremental behaviour}{4}{section.2.2}
-\contentsline {subsubsection}{Spoken dialogue system}{4}{section*.7}
-\contentsline {subsubsection}{Incremental dialogue systems}{9}{section*.9}
-\contentsline {subsubsection}{Advantages of incremental processing}{10}{section*.11}
-\contentsline {subsubsection}{New challenges raised by incremental dialogue processing}{10}{section*.12}
-\contentsline {subsection}{\numberline {2.2.1}Existing architectures}{12}{subsection.2.2.1}
-\contentsline {subsubsection}{Sequential paradigm}{12}{section*.13}
-\contentsline {subsubsection}{Multi-layer paradigm}{13}{section*.14}
+\contentsline {subsection}{\numberline {2.1.3}Incremental speech processing}{5}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Spoken dialogue systems and incremental behaviour}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Spoken dialogue system}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Incremental dialogue systems}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Advantages of incremental processing}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}New challenges raised by incremental dialogue processing}{11}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Existing architectures}{13}{subsection.2.2.5}
+\contentsline {subsubsection}{Sequential paradigm}{13}{section*.9}
+\contentsline {subsubsection}{Multi-layer paradigm}{13}{section*.10}
 \contentsline {section}{\numberline {2.3}Reinforcement Learning}{14}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Definition}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{18}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{19}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Issues and motivation}{20}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{19}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{20}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Issues and motivation}{21}{section.2.4}
 \contentsline {chapter}{\numberline {3}Turn-taking taxonomy}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Taxonomy presentation}{23}{section.3.1}
-\contentsline {paragraph}{G\_NONE}{24}{section*.19}
-\contentsline {paragraph}{G\_FAIL}{24}{section*.20}
-\contentsline {paragraph}{G\_INCOHERENCE}{25}{section*.21}
-\contentsline {paragraph}{G\_INCOMPLETE}{25}{section*.22}
-\contentsline {paragraph}{G\_SUFFICIENT}{26}{section*.23}
-\contentsline {paragraph}{G\_COMPLETE}{26}{section*.24}
+\contentsline {paragraph}{G\_NONE}{24}{section*.15}
+\contentsline {paragraph}{G\_FAIL}{24}{section*.16}
+\contentsline {paragraph}{G\_INCOHERENCE}{25}{section*.17}
+\contentsline {paragraph}{G\_INCOMPLETE}{25}{section*.18}
+\contentsline {paragraph}{G\_SUFFICIENT}{26}{section*.19}
+\contentsline {paragraph}{G\_COMPLETE}{26}{section*.20}
 \contentsline {section}{\numberline {3.2}Discussion}{26}{section.3.2}
 \contentsline {chapter}{\numberline {4}Architecture}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Description}{29}{section.4.1}
@@ -57,11 +58,11 @@
 \contentsline {section}{\numberline {6.2}Incremental strategies}{52}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}ASR instability}{52}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}TTP implementation}{53}{subsection.6.2.2}
-\contentsline {paragraph}{FAIL\_RAW:}{53}{section*.38}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{53}{section*.39}
-\contentsline {paragraph}{FEEDBACK:}{53}{section*.40}
-\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{54}{section*.41}
-\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{54}{section*.42}
+\contentsline {paragraph}{FAIL\_RAW:}{53}{section*.34}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{53}{section*.35}
+\contentsline {paragraph}{FEEDBACK:}{53}{section*.36}
+\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{54}{section*.37}
+\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{54}{section*.38}
 \contentsline {subsection}{\numberline {6.2.3}Experiments}{54}{subsection.6.2.3}
 \contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{57}{chapter.7}
 \contentsline {section}{\numberline {7.1}Model}{57}{section.7.1}
@@ -80,6 +81,6 @@
 \contentsline {section}{\numberline {9.3}Toy problem application}{67}{section.9.3}
 \contentsline {section}{\numberline {9.4}Simulation results}{67}{section.9.4}
 \contentsline {chapter}{\numberline {10}Conclusion}{69}{chapter.10}
-\contentsline {chapter}{References}{71}{chapter*.48}
+\contentsline {chapter}{References}{71}{chapter*.44}
 \contentsline {chapter}{Appendix \numberline {A}How to install \LaTeX }{75}{Appendix.a.A}
 \contentsline {chapter}{Appendix \numberline {B}Installing the CUED class file}{79}{Appendix.a.B}

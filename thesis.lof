@@ -1,27 +1,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The dialogue chain\relax }}{6}{figure.caption.8}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The interaction between the agent and the environment in reinforcement learning\relax }}{14}{figure.caption.15}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The alternation between evaluation and control\relax }}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The dialogue chain\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The interaction between the agent and the environment in reinforcement learning\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The alternation between evaluation and control\relax }}{18}{figure.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{30}{figure.caption.25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{31}{figure.caption.26}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{32}{figure.caption.27}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Double context management: real and simulated\relax }}{33}{figure.caption.28}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The incremental version of the CFAsT project\relax }}{34}{figure.caption.29}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{30}{figure.caption.21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{32}{figure.caption.23}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Double context management: real and simulated\relax }}{33}{figure.caption.24}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The incremental version of the CFAsT project\relax }}{34}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{41}{figure.caption.32}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution\relax }}{45}{figure.caption.34}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{47}{figure.caption.35}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{41}{figure.caption.28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution\relax }}{45}{figure.caption.30}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{47}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{51}{figure.caption.36}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{54}{figure.caption.43}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{55}{figure.caption.44}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{56}{figure.caption.45}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{51}{figure.caption.32}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{54}{figure.caption.39}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{55}{figure.caption.40}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{56}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{61}{figure.caption.46}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{63}{figure.caption.47}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{61}{figure.caption.42}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{63}{figure.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
