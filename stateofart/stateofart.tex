@@ -46,7 +46,7 @@
 \section{Spoken dialogue systems and incremental behaviour}
     
 	\subsection{Spoken dialogue system}
-  \label{soa:sds}
+        \label{soa:sds}
         
 %HK> Citer papier SIGDIAL 2014 juste après companionship.
 	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented as their goal is to help to user to achieve some task. There also exist a few SDSs that are only used for chatting and companionship.
@@ -113,6 +113,19 @@
 
 		%HK> Parler du test de Turing comme test ultime?
 
+        \subsection{Dialogue systems evaluation}
+
+                In this section, we focus on the question of dialogue systems' evaluation. What makes a dialogue system better than another one? What metrics should be taken into account while evaluating dialogue systems? What are the most important characteristics of dialogue systems that should be improved?
+
+                %HK> Références pour PARADISE.
+                In the PARADISE framework, a disctinction is made between two kinds of metrics that are usually used for evaluating dialogue systems: objective and subjective metrics. The first category contains all the Key Performance Indicators (KPIs) that can be measured by an algorithm by accessing the dilaogue logs only, whereas the second one is made of the users's appreciations of the dialogue quality or specific charachteristics like reactivity or human-likeness.
+
+                %HK> Est-il possible de justifier de façon plus propre la correlation entre la duration et la task completion.
+                Objective metrics that are commonly used are the dialogues' mean duration and the task completion ratio. Generally speaking, these two metrics are correlated as the user gets impatient when the dialogue lasts for too long (even the user can get impatient for other reasons, like the repetition of the same system's dialogue act several times). Moreover, the user's speech rate and the way they communicate introduces some variability when using these metrics. Finally, it is legitimate to ask ourselves: do we really want shorter dialogues? First, this depends on the type of dialogue system at hand. If it is designed for entertainment or companionship, then there is no need for seeking faster dialogue strategies. However, in the case of task-oriented dialogue, looking for shorter dialogues makes sense as a measure of efficiency.
+
+                %HK> Citer Layla sur l'Ordinal Regression.
+                Subjective metrics are generally gathered using a survey at the end of each dialogue. Several metrics can be collected this way: the global quality of the dialogue, naturalness/human-likeness, reactivity...etc...However, this also raises the problem of variability between users. Most often, they are asked to evaluate the system on a likert scale (1 to 5 or 1 to 10), but a user answering 4 could be equivalent to another user answering 3 or 5. Therefore, the absolute evaluation is less significant than the relative one given a specific user.
+
 	\subsection{Incremental dialogue systems}
     
 		%HK> Pour Levelt, citer le livre au lieu de la review.
@@ -171,6 +184,9 @@
 		%HK> Limit desynchronisations
 		%HK> Efficiency, inciting the user to formulate more focused requests : Ghigi2015, Khouzaimi2015, Tiancheng2015
 		%HK> Multimodality : Fink1998, voir du côté de Bohus
+
+                As discussed in Sect. \ref{soa:sds}, human-likeness is a legitimate goal for dialogue systems (at least worth trying). When talking to each other, humans perform a rich set of turn-taking phenomena (see Sect. \ref{soa:ttphuman}) and in spite of the fact that they do not talk in a rigid talkie-walkie manner, they manage to maintain to avoid desynchronisations and to keep a conversation that is going forward. Replicating these behaviours from the machine's point of view can therefore be interesting. We might expect that the user feels more at ease while using a more human turn-taking mode hece keeping the human metaphor even further.
+
 
 	\subsection{New challenges raised by incremental dialogue processing}
     
