@@ -22,45 +22,45 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for "Lu2011"
 Warning--I didn't find a database entry for "Watkins1989"
 Warning--I didn't find a database entry for "ch:baseline"
-You've used 49 entries,
+You've used 51 entries,
             1935 wiz_defined-function locations,
-            762 strings with 12805 characters,
-and the built_in function-call counts, 18595 in all, are:
-= -- 1711
-> -- 888
-< -- 29
-+ -- 320
-- -- 300
-* -- 1448
-:= -- 3291
-add.period$ -- 148
-call.type$ -- 49
-change.case$ -- 390
-chr.to.int$ -- 49
-cite$ -- 49
-duplicate$ -- 816
-empty$ -- 1352
-format.name$ -- 383
-if$ -- 3656
+            772 strings with 13198 characters,
+and the built_in function-call counts, 19458 in all, are:
+= -- 1789
+> -- 939
+< -- 30
++ -- 338
+- -- 318
+* -- 1523
+:= -- 3445
+add.period$ -- 154
+call.type$ -- 51
+change.case$ -- 409
+chr.to.int$ -- 51
+cite$ -- 51
+duplicate$ -- 848
+empty$ -- 1408
+format.name$ -- 405
+if$ -- 3823
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 49
-newline$ -- 248
-num.names$ -- 147
-pop$ -- 511
+missing$ -- 51
+newline$ -- 258
+num.names$ -- 153
+pop$ -- 532
 preamble$ -- 1
-purify$ -- 395
+purify$ -- 414
 quote$ -- 0
-skip$ -- 473
+skip$ -- 492
 stack$ -- 0
-substring$ -- 819
-swap$ -- 66
+substring$ -- 858
+swap$ -- 68
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 286
+type$ -- 298
 warning$ -- 0
-while$ -- 111
+while$ -- 116
 width$ -- 0
-write$ -- 606
+write$ -- 631
 (There were 3 warnings)

@@ -39,10 +39,23 @@
         %HK> Autres classifications, Beatie1982 et dérivées...
         %HK> Duncan1972 a aussi le mérite d'être cité
 				
-	\subsection{Incremental speech processing}
+	\subsection{Incremental speech processing in human conversation}
 	
-			%HK> Citer Tanenhaus + article lecture incrémentale.
-    
+
+           During a conversation, the listener does not wait for the speaker's utterance to end before trying to understand it. It is processed incrementally and apart from the intuition that we have related to this, a few studies provided convincing arguments supporting the idea. One of the most famous examples is an eye-tracking based study performed in \cite{Tanenhaus1995}. Subjects are given an image to look at through a head-mounted eye-tracking mechanism that records their eye-gaze at a millisecond scale. Then, ambiguous and unambiguous sentences were uttered, for example:
+
+           \begin{itemize}
+             \item \textbf{Ambiguous version:} Put the apple on the towel in the box.
+             \item \textbf{Unambiguous version:} PUt the apple that is on the towel in the box.
+           \end{itemize}
+
+           For this example, when the users are provided with an image of an apple on a towel, a towel with nothing on it and box, their eye-gaze show different patterns depending on which version of the utterance they listen to. In the ambiguous case, they tend to start by looking at the apple, then to the towel with nothing on it, then to the apple again and finally at the box. In the unambiguous case, they directly look at the apple and then to the box. Most importantly, these movements happen as the sentence is uttered.
+
+           This is also pretty much related to the garden path sentence effect. Consider the following sentence (taken from the related wikipedia article): \textit{the govenment plans to raise taxes were defeated}. Most people feel the need to read it twice or even several times before undertanding its meaning. When one strats reading \textit{the government plans to raise taxes}, she automatically understands that taxes are planned to be raised by the government but then comes the disturbing end of the sentence \textit{are defeeated}. The only solution is to parse \textit{plans} as a noun and not as a verb. This is also an argument in favour of human incremental processing.
+
+           Finally, when humans are reading a text, they tend to skip a few words with no loss of the meaning. In \cite{Ilkin2011}, the authors show that we are able to predict a few words while reading given the context and the sentence structure (eye-traking has also been used here). For example, when the readers reach the sentence \textit{The worker was critised by his boss}, the word boss seems to be guessed ahead of time, again supporting the idea of incremental speech processing.
+
+
 \section{Spoken dialogue systems and incremental behaviour}
     
 	\subsection{Spoken dialogue system}
@@ -179,13 +192,17 @@
 	\subsection{Advantages of incremental processing}
 						
 		%HK> Human-likeness: Edlund2008
-		%HK> User satisfaction in general: Aist2007
+		%HK> User satisfaction in general: Aist2007, Skantze? Selfridge?
 		%HK> Reactivity
 		%HK> Limit desynchronisations
 		%HK> Efficiency, inciting the user to formulate more focused requests : Ghigi2015, Khouzaimi2015, Tiancheng2015
 		%HK> Multimodality : Fink1998, voir du côté de Bohus
 
+                Before discussing the different reasons why incremental processing should be preferred to rigid turn-taking, it is important to note that a few studies led with real users have shown that incremental dialogue systems offer a better user experience. For instance, in \cite{Aist2007}, an ordinal regression has been performed between the user satisfaction and several features with a flag for incremental processing among them. A significant correlation between incremental processing and the global user satisfaction has been found.
+
                 As discussed in Sect. \ref{soa:sds}, human-likeness is a legitimate goal for dialogue systems (at least worth trying). When talking to each other, humans perform a rich set of turn-taking phenomena (see Sect. \ref{soa:ttphuman}) and in spite of the fact that they do not talk in a rigid talkie-walkie manner, they manage to maintain to avoid desynchronisations and to keep a conversation that is going forward. Replicating these behaviours from the machine's point of view can therefore be interesting. We might expect that the user feels more at ease while using a more human turn-taking mode hece keeping the human metaphor even further.
+
+                The other aspect that is interesting about incremental dialogue is reactivity. As the system processes the user's request before its ends, it is possible to design accurate end-point detection in order to detect the end of this request as soon as possible.
 
 
 	\subsection{New challenges raised by incremental dialogue processing}

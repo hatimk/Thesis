@@ -1,5 +1,12 @@
 \begin{thebibliography}{}
 
+\bibitem[Aist et~al., 2007]{Aist2007}
+Aist, G., Allen, J., Campana, E., Gallo, C.~G., Stoness, S., Swift, M., and
+  Tanenhaus, M.~K. (2007).
+\newblock Incremental understanding in human-computer dialogue and experimental
+  evidence for advantages over nonincremental methods.
+\newblock In {\em Decalog}.
+
 \bibitem[Austin, 1962]{Austin1962}
 Austin, J. (1962).
 \newblock {\em How to Do Things with Words}.
@@ -86,6 +93,12 @@ Hastie, H., Aufaure, M.-A., Alexopoulos, P., Cuay\'{a}huitl, H., Dethlefs, N.,
 \newblock Demonstration of the parlance system: a data-driven incremental,
   spoken dialogue system for interactive search.
 \newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+
+\bibitem[Ilkin and Sturt, 2011]{Ilkin2011}
+Ilkin, Z. and Sturt, P. (2011).
+\newblock Active prediction of syntactic information during sentence
+  processing.
+\newblock {\em Dialogue and Discourse}, 2:35--58.
 
 \bibitem[Jonsdottir et~al., 2008]{Jonsdottir2008}
 Jonsdottir, G.~R., Thorisson, K.~R., and Nivel, E. (2008).
