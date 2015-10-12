@@ -195,17 +195,54 @@
 		%HK> User satisfaction in general: Aist2007, Skantze? Selfridge?
 		%HK> Reactivity
 		%HK> Limit desynchronisations
-		%HK> Efficiency, inciting the user to formulate more focused requests : Ghigi2015, Khouzaimi2015, Tiancheng2015
+		%HK> Efficiency, inciting the user to formulate more focused requests : Ghigi2014, Khouzaimi2015, Tiancheng2015
 		%HK> Multimodality : Fink1998, voir du côté de Bohus
 
                 Before discussing the different reasons why incremental processing should be preferred to rigid turn-taking, it is important to note that a few studies led with real users have shown that incremental dialogue systems offer a better user experience. For instance, in \cite{Aist2007}, an ordinal regression has been performed between the user satisfaction and several features with a flag for incremental processing among them. A significant correlation between incremental processing and the global user satisfaction has been found.
 
-                As discussed in Sect. \ref{soa:sds}, human-likeness is a legitimate goal for dialogue systems (at least worth trying). When talking to each other, humans perform a rich set of turn-taking phenomena (see Sect. \ref{soa:ttphuman}) and in spite of the fact that they do not talk in a rigid talkie-walkie manner, they manage to maintain to avoid desynchronisations and to keep a conversation that is going forward. Replicating these behaviours from the machine's point of view can therefore be interesting. We might expect that the user feels more at ease while using a more human turn-taking mode hece keeping the human metaphor even further.
+                As discussed in Sect. \ref{soa:sds}, human-likeness is a legitimate goal for dialogue systems (at least worth trying). When talking to each other, humans perform a rich set of turn-taking phenomena (see Sect. \ref{soa:ttphuman}) and in spite of the fact that they do not talk in a rigid talkie-walkie manner, they manage to maintain to avoid desynchronisations and to keep a conversation that is going forward. Replicating these behaviours from the machine's point of view can therefore be interesting. We might expect that the user feels more at ease while using a more human turn-taking mode hence keeping the human metaphor even further.
 
-                The other aspect that is interesting about incremental dialogue is reactivity. As the system processes the user's request before its ends, it is possible to design accurate end-point detection in order to detect the end of this request as soon as possible.
+                The other aspect that is interesting about incremental dialogue is reactivity. As the system processes the user's request before its ends, it is possible to design accurate end-point detection in order to detect the end of this request as soon as possible \cite{Raux2008}. Moreover, incremental dialogue systems can interrupt the user to report a problem, like in the following example:
+								
+								\begin{dialogue}
+									\speak{USER}{I would like to book a room for tomorrow with ...}
+									\speak{SYSTEM}{Sorry, we are full tomorrow.}
+								\end{dialogue}
+								
+								This can help the user get to her goal faster but one should be very careful about the way it is implemented as there is a risk that user interruption actually harms the user experience (event though the intent is to go faster, see Sect. \ref{soa:challengesincr}). Nevertheless, a corpus study led in \cite{Ghigi2014} showed that when users are interrupted, they tend to adopt a more sober way of expression, hence directly increasing the dialogue efficiency and indirectly as the risk of misleading off-domain words and expressions is reduced \cite{Ghigi2014,Khouzaimi2015b,Zhao2015}.
+								
+								Early barge-in both from the user and the system's side is also a way to limit desynchronisations. An example of a desynchronised dialogue could be:
+								
+								\begin{dialogue}
+									\speak{USER}{01 45 38 37 89}
+									\speak{SYSTEM}{01 45 28 37 89}
+									\speak{USER}{No, not 28 but 38}
+									\speak{SYSTEM}{Sorry, you mean 28 38}
+									\speak{USER}{What?}
+									\speak{SYSTEM}{28 38 1}
+								\end{dialogue}
+								
+								In this example, the user could have reported the mistake earlier if he could barge-in:
+								
+								\begin{dialogue}
+									\speak{USER}{01 45 38 37 89}
+									\speak{SYSTEM}{01 45 28...}
+									\speak{USER}{No, 38}
+									\speak{SYSTEM}{Ok. 01 45 38}
+									\speak{USER}{31 89}
+									\speak{SYSTEM}{31 89}
+								\end{dialogue}
+								
+								Another interesting aspect about incrementality is that it can leverage multimodal dialogue systems. In fact there are two aspects of multimodality and they can both benefit from incremental processing:
+								
+								\begin{itemize}
+									\item \textbf{Input multimodality:} Most researchers in the community refer to this aspect when talking about mutimodal systems.
+									\item \textbf{Output multimodality:}
+								\end{itemize}
 
 
 	\subsection{New challenges raised by incremental dialogue processing}
+	\label{soa:challengesincr}
     
 		%HK> Citer Dan Povey pour Kaldi.
 		The first problem to consider when talking about incremental spoken dialogue systems is the question of ASR \textit{latency}, which is the time needed by the recognition algorithm to provide the text output corresponding to an audio signal. As we said earlier, the ASR accuracy has been a bottleneck in the development of spoken dialogue systems for many years but thanks to recent advances in this field, it is no longer the case. Similarly, incremental dialogue systems require quick responses from the ASR and the delays needed but speech recognition modules have been too long for many years which was a limiting factor in the development of incrmental dialogue systems. However, in the last few years, ASR technology has became reactive enough \cite{Platek2014}. Nevertheless, it is important to be aware that there is a tradeoff between the accuracy and the vocabulary size on one hand and the latency on the other hand. Kaldi, which is an ASR solution designed by researchers (and which is mostly used by them), makes it possible to design one's own acoustic and language model as well to set one's own parameters in order to control this tradeoff. On the other hand, more off-the-shelf solutions like Google ASR do not give the user such possibilities (however, accuracy and delays are well balanced for most applications).

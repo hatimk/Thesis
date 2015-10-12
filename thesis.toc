@@ -12,15 +12,15 @@
 \contentsline {subsection}{\numberline {2.2.2}Dialogue systems evaluation}{10}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Incremental dialogue systems}{11}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Advantages of incremental processing}{13}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}New challenges raised by incremental dialogue processing}{13}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Existing architectures}{15}{subsection.2.2.6}
-\contentsline {subsubsection}{Sequential paradigm}{15}{section*.9}
-\contentsline {subsubsection}{Multi-layer paradigm}{16}{section*.10}
-\contentsline {section}{\numberline {2.3}Reinforcement Learning}{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Definition}{17}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{21}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{22}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Issues and motivation}{23}{section.2.4}
+\contentsline {subsection}{\numberline {2.2.5}New challenges raised by incremental dialogue processing}{14}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Existing architectures}{16}{subsection.2.2.6}
+\contentsline {subsubsection}{Sequential paradigm}{16}{section*.9}
+\contentsline {subsubsection}{Multi-layer paradigm}{17}{section*.10}
+\contentsline {section}{\numberline {2.3}Reinforcement Learning}{18}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Definition}{18}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Application to dialogue systems}{22}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Dialogue simulation}{23}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Issues and motivation}{24}{section.2.4}
 \contentsline {chapter}{\numberline {3}Turn-taking taxonomy}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Taxonomy presentation}{27}{section.3.1}
 \contentsline {paragraph}{G\_NONE}{28}{section*.15}
@@ -83,5 +83,3 @@
 \contentsline {section}{\numberline {9.4}Simulation results}{71}{section.9.4}
 \contentsline {chapter}{\numberline {10}Conclusion}{73}{chapter.10}
 \contentsline {chapter}{References}{75}{chapter*.44}
-\contentsline {chapter}{Appendix \numberline {A}How to install \LaTeX }{79}{Appendix.a.A}
-\contentsline {chapter}{Appendix \numberline {B}Installing the CUED class file}{83}{Appendix.a.B}

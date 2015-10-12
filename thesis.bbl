@@ -112,6 +112,12 @@ Khouzaimi, H., Laroche, R., and Lef\`evre, F. (2014).
 \newblock In {\em Proceedings of the 15th Annual Meeting of the Special
   Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
+\bibitem[Khouzaimi et~al., 2015]{Khouzaimi2015b}
+Khouzaimi, H., Laroche, R., and Lef\`evre, F. (2015).
+\newblock Optimising turn-taking strategies with reinforcement learning.
+\newblock In {\em Proceedings of the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
 \bibitem[Kilger and Finkler, 1995]{Kilger1995}
 Kilger, A. and Finkler, W. (1995).
 \newblock Incremental generation for real-time applications.
@@ -300,5 +306,12 @@ Wlodarczak, M. and Wagner, P. (2013).
 Yuan, J., Liberman, M., and Cieri, C. (2006).
 \newblock Towards an integrated understanding of speaking rate in conversation.
 \newblock In {\em INTERSPEECH Proceedings}.
+
+\bibitem[Zhao et~al., 2015]{Zhao2015}
+Zhao, T., Black, A.~W., and Eskenazi, M. (2015).
+\newblock An incremental turn-taking model with active system barge-in for
+  spoken dialog systems.
+\newblock In {\em Proceedings of the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \end{thebibliography}

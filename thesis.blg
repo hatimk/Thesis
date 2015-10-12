@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Dedication/dedication.aux
@@ -16,51 +16,49 @@ A level-1 auxiliary file: experiment/experiment.aux
 A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: apalike.bst
-A level-1 auxiliary file: Appendix1/appendix1.aux
-A level-1 auxiliary file: Appendix2/appendix2.aux
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "Lu2011"
 Warning--I didn't find a database entry for "Watkins1989"
 Warning--I didn't find a database entry for "ch:baseline"
-You've used 51 entries,
+You've used 53 entries,
             1935 wiz_defined-function locations,
-            772 strings with 13198 characters,
-and the built_in function-call counts, 19458 in all, are:
-= -- 1789
-> -- 939
+            779 strings with 13505 characters,
+and the built_in function-call counts, 20198 in all, are:
+= -- 1855
+> -- 975
 < -- 30
-+ -- 338
-- -- 318
-* -- 1523
-:= -- 3445
-add.period$ -- 154
-call.type$ -- 51
-change.case$ -- 409
-chr.to.int$ -- 51
-cite$ -- 51
-duplicate$ -- 848
-empty$ -- 1408
-format.name$ -- 405
-if$ -- 3823
++ -- 352
+- -- 330
+* -- 1579
+:= -- 3575
+add.period$ -- 160
+call.type$ -- 53
+change.case$ -- 425
+chr.to.int$ -- 53
+cite$ -- 53
+duplicate$ -- 884
+empty$ -- 1466
+format.name$ -- 419
+if$ -- 3969
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 51
-newline$ -- 258
-num.names$ -- 153
-pop$ -- 532
+missing$ -- 53
+newline$ -- 268
+num.names$ -- 159
+pop$ -- 558
 preamble$ -- 1
-purify$ -- 414
+purify$ -- 430
 quote$ -- 0
-skip$ -- 492
+skip$ -- 508
 stack$ -- 0
-substring$ -- 858
-swap$ -- 68
+substring$ -- 884
+swap$ -- 70
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 298
+type$ -- 310
 warning$ -- 0
-while$ -- 116
+while$ -- 120
 width$ -- 0
-write$ -- 631
+write$ -- 655
 (There were 3 warnings)

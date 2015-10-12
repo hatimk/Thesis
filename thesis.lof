@@ -1,8 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The dialogue chain\relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The interaction between the agent and the environment in reinforcement learning\relax }}{17}{figure.caption.11}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The alternation between evaluation and control\relax }}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The interaction between the agent and the environment in reinforcement learning\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The alternation between evaluation and control\relax }}{22}{figure.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{34}{figure.caption.21}
@@ -22,8 +22,6 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{65}{figure.caption.42}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{67}{figure.caption.43}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
