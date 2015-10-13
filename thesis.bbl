@@ -52,6 +52,12 @@ Dethlefs, N., Hastie, H.~W., Rieser, V., and Lemon, O. (2012).
   for interactive systems.
 \newblock In {\em EMNLP-CoNLL}.
 
+\bibitem[DeVault et~al., 2011]{DeVault2011}
+DeVault, D., Sagae, K., and Traum, D. (2011).
+\newblock Incremental interpretation and prediction of utterance meaning for
+  interactive dialogue.
+\newblock {\em Dialogue and Discourse}, 2:143--170.
+
 \bibitem[Eckert et~al., 1997]{Eckert1997}
 Eckert, W., Levin, E., and Pieraccini, R. (1997).
 \newblock User modeling for spoken dialogue system evaluation.
@@ -99,6 +105,13 @@ Ilkin, Z. and Sturt, P. (2011).
 \newblock Active prediction of syntactic information during sentence
   processing.
 \newblock {\em Dialogue and Discourse}, 2:35--58.
+
+\bibitem[Johnston et~al., 2014]{Johnston2014}
+Johnston, M., Chen, J., Ehlen, P., Jung, H., Lieske, J., Reddy, A., Selfridge,
+  E., Stoyanchev, S., Vasilieff, B., and Wilpon, J. (2014).
+\newblock Mva: The multimodal virtual assistant.
+\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[Jonsdottir et~al., 2008]{Jonsdottir2008}
 Jonsdottir, G.~R., Thorisson, K.~R., and Nivel, E. (2008).
@@ -213,6 +226,13 @@ Raux, A. and Eskenazi, M. (2008).
   dialogue system.
 \newblock In {\em SIGDIAL}.
 
+\bibitem[Raux and Eskenazi, 2009]{Raux2009}
+Raux, A. and Eskenazi, M. (2009).
+\newblock A finite-state turn-taking model for spoken dialog systems.
+\newblock In {\em Proceedings of Human Language Technologies: The 2009 Annual
+  Conference of the North American Chapter of the Association for Computational
+  Linguistics}, NAACL '09, pages 629--637.
+
 \bibitem[Sacks et~al., 1974]{Sacks1974}
 Sacks, H., Schegloff, E.~A., and Jefferson, G. (1974).
 \newblock A simplest systematics for the organization of turn-taking for
@@ -266,6 +286,11 @@ Selfridge, E.~O. and Heeman, P.~A. (2012).
   dialogue systems.
 \newblock In {\em Proceedings of the 13th Annual Meeting of the Special
   Interest Group on Discourse and Dialogue}.
+
+\bibitem[Strombergsson et~al., 2013]{Strombergsson2013}
+Strombergsson, S., Hjalmarsson, A., Edlund, J., and House, D. (2013).
+\newblock Timing responses to questions in dialogue.
+\newblock In {\em INTERSPEECH Proceedings}.
 
 \bibitem[Sutton and Barto, 1998]{Sutton1998}
 Sutton, R.~S. and Barto, A.~G. (1998).

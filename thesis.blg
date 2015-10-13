@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Dedication/dedication.aux
@@ -20,45 +20,45 @@ Database file #1: biblio.bib
 Warning--I didn't find a database entry for "Lu2011"
 Warning--I didn't find a database entry for "Watkins1989"
 Warning--I didn't find a database entry for "ch:baseline"
-You've used 53 entries,
+You've used 57 entries,
             1935 wiz_defined-function locations,
-            779 strings with 13505 characters,
-and the built_in function-call counts, 20198 in all, are:
-= -- 1855
-> -- 975
-< -- 30
-+ -- 352
-- -- 330
-* -- 1579
-:= -- 3575
-add.period$ -- 160
-call.type$ -- 53
-change.case$ -- 425
-chr.to.int$ -- 53
-cite$ -- 53
-duplicate$ -- 884
-empty$ -- 1466
-format.name$ -- 419
-if$ -- 3969
+            800 strings with 14340 characters,
+and the built_in function-call counts, 22126 in all, are:
+= -- 2034
+> -- 1082
+< -- 32
++ -- 392
+- -- 368
+* -- 1740
+:= -- 3902
+add.period$ -- 172
+call.type$ -- 57
+change.case$ -- 464
+chr.to.int$ -- 57
+cite$ -- 57
+duplicate$ -- 961
+empty$ -- 1595
+format.name$ -- 463
+if$ -- 4354
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 53
-newline$ -- 268
-num.names$ -- 159
-pop$ -- 558
+missing$ -- 57
+newline$ -- 288
+num.names$ -- 171
+pop$ -- 606
 preamble$ -- 1
-purify$ -- 430
+purify$ -- 469
 quote$ -- 0
-skip$ -- 508
+skip$ -- 557
 stack$ -- 0
-substring$ -- 884
-swap$ -- 70
-text.length$ -- 3
+substring$ -- 987
+swap$ -- 83
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 310
+type$ -- 334
 warning$ -- 0
-while$ -- 120
+while$ -- 132
 width$ -- 0
-write$ -- 655
+write$ -- 706
 (There were 3 warnings)

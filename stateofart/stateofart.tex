@@ -6,6 +6,7 @@
 	\subsection{Philosophy of language}
     \label{soa:philolang}
     
+        %HK> Les figures issues du Sutton et Barto doivent êtres refaites.
     	%HK> Parler de Clark également : communicative vs. meta-communicative tracks.
     
     	If I say \textit{This dog is big}, I utter a few sounds that can be cast as words. How are these words related to the real objects I refer to? How comes that a sequence of sounds can have effects on others? I can give orders to somebody and make them performs the actions I want as I can congratulate or insult someone and have an emotional impact on her. Also, how comes an utterance can also be judged as a complete nonsense or as a true or false assertion? These are a few questions raised in the philosophy of language.
@@ -32,7 +33,32 @@
         \end{enumerate}
         
         %HK> Citer Baumann et Johnsduttir  après Meena...
-        Optimising turn-taking means taking the floor at the right time. Humans are very good at detecting the cues for these timings. In artificial dialogue systems, different kinds of features can be used in order to detect these timings \cite{Gravano2011}: prosodic features, lexical features, semantic features...etc... and a lot of work has already been done in this direction \cite{Meena2013} 
+        Optimising turn-taking means taking the floor at the right time. Humans are very good at detecting the cues for these timings. In artificial dialogue systems, different kinds of features can be used in order to detect these timings \cite{Gravano2011}: prosodic features, lexical features, semantic features...etc... and a lot of work has already been done in this direction \cite{Meena2013}.
+
+        In fact, we even tend to start speaking before the end of our interlocutor's utterance, even interrupting him sometimes. A study led in \cite{Strombergsson2013} reports statistics about times and overlaps in human conversation both directly and over the telephone. Given the type of question that is addressed to the listener, the latter tends to respond more or less quickly, often infering the end of the question and starting to utter the response the answer before its end. In \cite{DeVault2011}, the ability for the machine to replicate that is investigated.
+
+        %HK> Il faut comparer ça aux autres études du genre Beaties1982, le modèle de Raux...
+        %HK> Regarder aussi les papiers cités par Raux dans son Finite-State model, dire qu'il utilise les mêmes états que Jaffe et Feldstein.
+        In reality, human turn-taking involves even more complicated behaviours resulting in intertwined turns of the speakers. \cite{Raux2009} tries to provide a simple model with very few assumptions. It is a state machine where the following states are considered:
+
+        \begin{itemize}
+          \item Only the user speaks.
+          \item Only the system speaks.
+          \item No one speaks because the user stopped talking.
+          \item No one speaks because the system stopped talking.
+          \item Both the user and the system speak after a user barge-in.
+          \item Both the system and the user speak after a system barge-in.
+        \end{itemize}
+
+ In \cite{Wlodarczak2013}, five turn-taking situations are reported:
+
+        \begin{itemize}
+           \item \textbf{Within-speaker silence:} The speaker stops for while and then resumes his utterance.
+           \item \textbf{Between-speaker silence:} The most intuitive case of turn taking. The speaker stops and after a moment of silence, the listener takes the floor.
+           \item \textbf{Within-speaker overlap:} The listener either takes the floor or performs an intervention that is not meant to interrupt the speaker and the latter keeps the floor.
+           \item \textbf{Between-speaker overlap:} The listener starts speaking before the end of the speaker's utterance, hence resulting in an overlap and a turn transition.
+           \item \textbf{Solo vocalisation:} On person speaks in an unilateral way.
+        \end{itemize}
         
         %HK> Parler de la méthode, 12 ans d'études basées sur des enregistrements...
         %HK> Parler des points propices au turn-taking, du principe de minimise gaps and overlaps, thread de recherche basé sur la prosodie.
@@ -196,7 +222,7 @@
 		%HK> Reactivity
 		%HK> Limit desynchronisations
 		%HK> Efficiency, inciting the user to formulate more focused requests : Ghigi2014, Khouzaimi2015, Tiancheng2015
-		%HK> Multimodality : Fink1998, voir du côté de Bohus
+		%HK> Multimodality : Fink1998, voir du côté de Bohus, Matthias2009
 
                 Before discussing the different reasons why incremental processing should be preferred to rigid turn-taking, it is important to note that a few studies led with real users have shown that incremental dialogue systems offer a better user experience. For instance, in \cite{Aist2007}, an ordinal regression has been performed between the user satisfaction and several features with a flag for incremental processing among them. A significant correlation between incremental processing and the global user satisfaction has been found.
 
@@ -233,12 +259,14 @@
 									\speak{SYSTEM}{31 89}
 								\end{dialogue}
 								
-								Another interesting aspect about incrementality is that it can leverage multimodal dialogue systems. In fact there are two aspects of multimodality and they can both benefit from incremental processing:
+		Another interesting aspect about incrementality is that it can leverage multimodal dialogue systems. In fact there are two aspects of multimodality and they can both benefit from incremental processing:
 								
-								\begin{itemize}
-									\item \textbf{Input multimodality:} Most researchers in the community refer to this aspect when talking about mutimodal systems.
-									\item \textbf{Output multimodality:}
-								\end{itemize}
+		\begin{itemize}
+		   \item \textbf{Input multimodality:} Most researchers in the community refer to this aspect when talking about mutimodal systems. A system input can be multimodal in the sense that it can handle speech input, but also text, gesture or eye-gaze for example. The main challenge faced by this kind of setup is the problem of mixing these inputs in order to make the inference of the user's utterance. In the case of multimodal systems, the world is considered as a flow of information coming from multiple sources of information. The different modalities are not necessarily sampled with the same rate nor support the same delays, therefore, it is important to find convenient ways to synchronise them.
+		   \item \textbf{Output multimodality:} The machine can also use different channels of information while communicating. For example, the speech modality can be used at the same time as a moving avatar with facial expressions. It can also be coupled with the input multimodality paradigm to create highly interactive interfaces like \cite{Johnston2014}.
+		\end{itemize}
+
+                On the one hand, in the case of input multimodality, incremental processing can help process the different flows of information more quickly hence producing more reactive systems that are more aware of their environment. On the other hand, systems operating in an ouput multimodality way can also be leveraged using incremental behaviour as the different modalities can be used to provide a richer real time feedback to the user, like an avatar that frowns or nods its head while not understanding or agreeing for example.
 
 
 	\subsection{New challenges raised by incremental dialogue processing}
