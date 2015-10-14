@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.10.1)  14 OCT 2015 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.10.1)  14 OCT 2015 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1418,14 +1418,20 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 Chapitre 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 5.
-[9] [10] [11]
-Overfull \hbox (4.90894pt too wide) in paragraph at lines 95--96
+[9]
+Overfull \hbox (16.73042pt too wide) in paragraph at lines 20--21
+\T1/ppl/m/n/10.95 confirm some pieces of in-for-ma-tion, spo-ken dia-logue sys-
+tems use the meta-communication
+ []
+
+[10] [11]
+Overfull \hbox (4.90894pt too wide) in paragraph at lines 97--98
 []\T1/ppl/m/n/10.95 An ob-vious mo-ti-va-tion for buil-ding spo-ken dia-logue s
 ys-tems is the thrive for human-
  []
 
 
-Overfull \hbox (2.15016pt too wide) in paragraph at lines 102--103
+Overfull \hbox (2.15016pt too wide) in paragraph at lines 104--105
 []\T1/ppl/m/n/10.95 Nevertheless, it is also le-gi-ti-mate to ask the ques-tion
  whe-ther human-likeness should
  []
@@ -1434,66 +1440,72 @@ Overfull \hbox (2.15016pt too wide) in paragraph at lines 102--103
 File: figures/DialogueChain.pdf Graphic file (type pdf)
 
 <use figures/DialogueChain.pdf>
-Package pdftex.def Info: figures/DialogueChain.pdf used on input line 116.
+Package pdftex.def Info: figures/DialogueChain.pdf used on input line 118.
 (pdftex.def)             Requested size: 448.0746pt x 582.37654pt.
 
-Overfull \hbox (29.82092pt too wide) in paragraph at lines 116--117
+Overfull \hbox (29.82092pt too wide) in paragraph at lines 118--119
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 117.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <10> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 117.
-
-Overfull \hbox (1.27786pt too wide) in paragraph at lines 131--132
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 119.
+[13] [14 <./figures/DialogueChain.pdf>]
+Overfull \hbox (1.27786pt too wide) in paragraph at lines 133--134
 []\T1/ppl/m/n/10.95 Speech re-cog-ni-tion tech-no-logy is an old pro-blem with 
 long his-tory. Du-ring the 1950s,
  []
 
-[13] [14 <./figures/DialogueChain.pdf>]
-Underfull \vbox (badness 1845) has occurred while \output is active []
-
- [15]
-[16] [17] [18] [19] [20]
+[15] [16] [17] [18] [19] [20]
 
 Package natbib Warning: Citation `Lu2011' on page 21 undefined on input line 29
-3.
+5.
 
-[21] [22] <figures/RL.png, id=714, 435.6275pt x 175.65625pt>
-File: figures/RL.png Graphic file (type png)
+[21] [22]
+Underfull \vbox (badness 2512) has occurred while \output is active []
 
-<use figures/RL.png>
-Package pdftex.def Info: figures/RL.png used on input line 332.
-(pdftex.def)             Requested size: 348.50247pt x 140.52518pt.
  [23]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 341
+<figures/RL.png, id=722, 435.6275pt x 175.65625pt>
+File: figures/RL.png Graphic file (type png)
+ <use figures/RL.png>
+Package pdftex.def Info: figures/RL.png used on input line 334.
+(pdftex.def)             Requested size: 348.50247pt x 140.52518pt.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 343
 .
 
 (c:/texlive/2015/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [24 <./figures/RL.png>] [25] <figures/evalctrl.png, id=746, 236.885pt x 186.6
-975pt>
+) [24 <./figures/RL.png>] [25] [26] <figures/evalctrl.png, id=750, 236.885pt x 
+186.6975pt>
 File: figures/evalctrl.png Graphic file (type png)
 
 <use figures/evalctrl.png>
-Package pdftex.def Info: figures/evalctrl.png used on input line 413.
+Package pdftex.def Info: figures/evalctrl.png used on input line 415.
 (pdftex.def)             Requested size: 165.81836pt x 130.68735pt.
- [26]
+
 
 Package natbib Warning: Citation `Watkins1989' on page 27 undefined on input li
-ne 423.
+ne 425.
 
-
-Overfull \hbox (15.52873pt too wide) in paragraph at lines 433--434
+[27 <./figures/evalctrl.png>]
+Overfull \hbox (15.52873pt too wide) in paragraph at lines 435--436
 \T1/ppl/m/n/10.95 the fea-tures they are fed are of dif-ferent na-tures : lexi-
 cal, se-man-tic, pro-so-dic...etc...However,
  []
 
-[27 <./figures/evalctrl.png>] [28] [29]) [30]
+
+Underfull \vbox (badness 3758) has occurred while \output is active []
+
+ [28]
+[29] [30]) [31]
 \openout2 = `taxonomy/taxonomy.aux'.
 
- (./taxonomy/taxonomy.tex
+ (./taxonomy/taxonomy.tex [32
+
+
+
+]
 Chapitre 3.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 9.37807pt on input line 33.
@@ -1511,17 +1523,13 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 59.
-[31
-
-
-
-]
+[33]
 Overfull \hbox (10.45624pt too wide) in paragraph at lines 80--81
 \T1/ppl/m/n/10.95 to re-peat, re-for-mu-late or add com-ple-men-tary in-for-ma-
 tion in his sen-tence (FAIL_INTERP).
  []
 
-[32]
+[34]
 Overfull \hbox (23.12933pt too wide) in paragraph at lines 94--95
 []\T1/ppl/m/n/10.95 T can also ex-plain the rea-sons she thinks this is not co-
 herent (IN-CO-HE-RENCE_INTERP) : 
@@ -1533,22 +1541,22 @@ Overfull \hbox (15.13629pt too wide) in paragraph at lines 129--130
 ec-ting an op-tion (REF_INTERP) : 
  []
 
-[33]
+[35]
 Overfull \hbox (4.57391pt too wide) in paragraph at lines 153--154
 []\T1/ppl/m/n/10.95 This taxo-nomy is ai-med to cla-rify the no-tion of turn-ta
 king. In human-human conver-
  []
 
-) [34]
+) [36]
 \openout2 = `architecture/architecture.aux'.
 
  (./architecture/architecture.tex
 Chapitre 4.
-[35
+[37
 
 
 
-] <figures/ClientSchedService.pdf, id=854, 548.0475pt x 140.02313pt>
+] <figures/ClientSchedService.pdf, id=862, 548.0475pt x 140.02313pt>
 File: figures/ClientSchedService.pdf Graphic file (type pdf)
 
 <use figures/ClientSchedService.pdf>
@@ -1566,8 +1574,8 @@ Overfull \hbox (6.84052pt too wide) in paragraph at lines 31--32
 om both sides is conti-
  []
 
-[36 <./figures/ClientSchedService.pdf>]
-<figures/Timeline.jpg, id=870, 731.73375pt x 340.27126pt>
+[38 <./figures/ClientSchedService.pdf>]
+<figures/Timeline.jpg, id=878, 731.73375pt x 340.27126pt>
 File: figures/Timeline.jpg Graphic file (type jpg)
 
 <use figures/Timeline.jpg>
@@ -1578,7 +1586,7 @@ Overfull \hbox (20.78996pt too wide) in paragraph at lines 44--45
  [][] 
  []
 
-<figures/SchedChrono.jpg, id=873, 505.13719pt x 509.65407pt>
+<figures/SchedChrono.jpg, id=881, 505.13719pt x 509.65407pt>
 File: figures/SchedChrono.jpg Graphic file (type jpg)
 
 <use figures/SchedChrono.jpg>
@@ -1587,15 +1595,15 @@ Package pdftex.def Info: figures/SchedChrono.jpg used on input line 57.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./figures/Timeline.jpg>] [38 <./figures/SchedChrono.jpg>]
-<figures/ContextChrono.jpg, id=889, 510.40688pt x 191.21437pt>
+ [39 <./figures/Timeline.jpg>] [40 <./figures/SchedChrono.jpg>]
+<figures/ContextChrono.jpg, id=896, 510.40688pt x 191.21437pt>
 File: figures/ContextChrono.jpg Graphic file (type jpg)
 
 <use figures/ContextChrono.jpg>
 Package pdftex.def Info: figures/ContextChrono.jpg used on input line 66.
 (pdftex.def)             Requested size: 408.32605pt x 152.9717pt.
 
-<figures/CFAsTIncr.jpg, id=892, 696.35156pt x 481.8pt>
+<figures/CFAsTIncr.jpg, id=899, 696.35156pt x 481.8pt>
 File: figures/CFAsTIncr.jpg Graphic file (type jpg)
 
 <use figures/CFAsTIncr.jpg>
@@ -1604,18 +1612,18 @@ Package pdftex.def Info: figures/CFAsTIncr.jpg used on input line 94.
 
 Underfull \vbox (badness 4531) has occurred while \output is active []
 
- [39 <./figures/ContextChrono.jpg>] [40 <./figures/CFAsTIncr.jpg>] [41] [42]) [
-43]
+ [41 <./figures/ContextChrono.jpg>] [42 <./figures/CFAsTIncr.jpg>] [43] [44]) [
+45]
 \openout2 = `simulation/simulation.aux'.
 
 
-(./simulation/simulation.tex [44
+(./simulation/simulation.tex [46
 
 
 
 ]
 Chapitre 5.
-[45] [46] <figures/ArchiSimuSys.pdf, id=956, 914.66719pt x 365.86688pt>
+[47] [48] <figures/ArchiSimuSys.pdf, id=963, 914.66719pt x 365.86688pt>
 File: figures/ArchiSimuSys.pdf Graphic file (type pdf)
 
 <use figures/ArchiSimuSys.pdf>
@@ -1635,8 +1643,8 @@ Overfull \hbox (46.27495pt too wide) in paragraph at lines 173--174
 SLOT(TIME(21,0),TIME(23,0))))
  []
 
-[47 <./figures/ArchiSimuSys.pdf>] [48] [49] [50]
-<figures/ASRSimu.pdf, id=996, 429.10312pt x 519.44063pt>
+[49 <./figures/ArchiSimuSys.pdf>] [50] [51] [52]
+<figures/ASRSimu.pdf, id=1003, 429.10312pt x 519.44063pt>
 File: figures/ASRSimu.pdf Graphic file (type pdf)
 
 <use figures/ASRSimu.pdf>
@@ -1647,12 +1655,12 @@ Overfull \hbox (10.84839pt too wide) in paragraph at lines 290--291
  [][] 
  []
 
-) [51] [52 <./figures/ASRSimu.pdf>]
+) [53] [54 <./figures/ASRSimu.pdf>]
 \openout2 = `baseline/baseline.aux'.
 
  (./baseline/baseline.tex
 Chapitre 6.
-[53
+[55
 
 
 
@@ -1661,54 +1669,54 @@ Overfull \hbox (2.08049pt too wide) in paragraph at lines 62--220
 [][] [] 
  []
 
-[54] [55]
+[56] [57]
 Overfull \hbox (0.43564pt too wide) in paragraph at lines 282--283
  []\T1/ppl/b/n/10.95 FEEDBACK :[] \T1/ppl/m/n/10.95 This phe-no-me-non trans-la
 tes into re-pea-ting a part if not the whole user's
  []
 
-[56] [57]) [58] [59]
+[58] [59]) [60] [61]
 \openout2 = `rl/rl.aux'.
 
- (./rl/rl.tex [60
+ (./rl/rl.tex [62
 
 
 
 ]
 Chapitre 7.
-[61] [62] [63]
+[63] [64] [65]
 Overfull \hbox (1.12587pt too wide) in paragraph at lines 407--408
 [][] 
  []
 
-[64]) [65] [66]
+[66]) [67] [68]
 \openout2 = `experiment/experiment.aux'.
 
  (./experiment/experiment.tex
 Chapitre 8.
-) [67
+) [69
 
 
 
 ]
 \openout2 = `theory/theory.aux'.
 
- (./theory/theory.tex [68
+ (./theory/theory.tex [70
 
 
 
 ]
 Chapitre 9.
-) [69]
+) [71]
 \openout2 = `conclusion/conclusion.aux'.
 
- (./conclusion/conclusion.tex [70
+ (./conclusion/conclusion.tex [72
 
 
 
 ]
 Chapitre 10.
-) [71] [72
+) [73] [74
 
 
 ] (./thesis.lof
@@ -1727,22 +1735,22 @@ Overfull \hbox (5.27629pt too wide) in paragraph at lines 32--32
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [73
+ [75
 
-] [74
+] [76
 
 ] (./thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
- [75
+ [77
 
-] [76
+] [78
 
-] (./thesis.bbl [77
+] (./thesis.bbl [79
 
-] [78] [79] [80]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 420.
+] [80] [81] [82]
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 425.
 
 
 (c:/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
@@ -1772,7 +1780,7 @@ Package minitoc(hints) Warning: W0024
 
 Package natbib Warning: There were undefined citations.
 
-[81]
+[83]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 28.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 28.
  (./thesis.aux (./introduction/introduction.aux)
@@ -1783,17 +1791,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 28.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 28.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 28.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 642C2ED64C44DDEF996C72407C75AB62;4941.
+(rerunfilecheck)             Checksum: 9A420F99FC2677A28A2D720E35A29B27;4932.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 28.
  ) 
 Here is how much of TeX's memory you used:
- 34133 strings out of 493091
- 751513 string characters out of 6138531
- 1505892 words of memory out of 5000000
- 36361 multiletter control sequences out of 15000+600000
+ 34139 strings out of 493091
+ 751595 string characters out of 6138531
+ 1505906 words of memory out of 5000000
+ 36364 multiletter control sequences out of 15000+600000
  78657 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,22n,109p,1842b,2742s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,22n,109p,1844b,2742s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2015/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/
@@ -1805,10 +1813,10 @@ dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2015/texmf-dist/fonts/type
 1/urw/palatino/uplbi8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:
 /texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (81 pages, 1707134 bytes).
+Output written on thesis.pdf (83 pages, 1708462 bytes).
 PDF statistics:
- 1342 PDF objects out of 1440 (max. 8388607)
- 1197 compressed objects within 12 object streams
- 283 named destinations out of 1000 (max. 500000)
+ 1350 PDF objects out of 1440 (max. 8388607)
+ 1202 compressed objects within 13 object streams
+ 286 named destinations out of 1000 (max. 500000)
  646 words of extra memory for PDF output out of 10000 (max. 10000000)
 

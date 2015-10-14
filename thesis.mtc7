@@ -1,7 +1,7 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Model}{\reset@font\mtcSfont 61}{section.121}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.1}State representation}{\reset@font\mtcSSfont 61}{subsection.122}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.2}Actions, rewards and episodes}{\reset@font\mtcSSfont 62}{subsection.123}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.3}Fitted-Q Value Iteration}{\reset@font\mtcSSfont 63}{subsection.124}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Experiment}{\reset@font\mtcSfont 64}{section.125}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Setup}{\reset@font\mtcSSfont 64}{subsection.126}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.2}Results}{\reset@font\mtcSSfont 64}{subsection.130}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Model}{\reset@font\mtcSfont 63}{section.121}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.1}State representation}{\reset@font\mtcSSfont 63}{subsection.122}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.2}Actions, rewards and episodes}{\reset@font\mtcSSfont 64}{subsection.123}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.3}Fitted-Q Value Iteration}{\reset@font\mtcSSfont 65}{subsection.124}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Experiment}{\reset@font\mtcSfont 66}{section.125}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Setup}{\reset@font\mtcSSfont 66}{subsection.126}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.2}Results}{\reset@font\mtcSSfont 66}{subsection.130}}
