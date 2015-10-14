@@ -1,0 +1,20 @@
+\providecommand\Fr{}
+\providecommand\Eng{}
+\providecommand\andname{et}
+\providecommand\andnamec{et}
+
+\begin{thebibliography}{}
+
+
+\bibitem[{Auteur}(2007){Auteur}]{exemple1}
+(Auteur, 2007) \hspace{.5em}L.~Auteur, 2007.
+\newblock {Titre d'un article de conférence}.
+\newblock Dans les actes de \textit{ Nom de la conférence}.
+
+\bibitem[{Auteur et~al.}(2007){Auteur, Auteur2, \andnamec{} Auteur3}]{exemple2}
+(Auteur et~al., 2007) \hspace{.5em}L.~Auteur, G.~Auteur2, \andname{}
+  W.~Auteur3, 2007.
+\newblock {Titre d'un article de revue}.
+\newblock \textit{ Nom de la revue\/}~\textit{ 66\/}(4), 11--23.
+
+\end{thebibliography}

@@ -1,0 +1,45 @@
+(*
+Reload Preview Document and resize/move window on the right side of screen
+
+By benoit.favre@univ-avignon.fr 2006-08-15
+Inspired from the reload script by Trevor Harmon <trevor@vocaro.com>
+
+1) make Preview scriptable :
+add theses lines to /Applications/Preview/Contents/Info.plist
+    <key>NSAppleScriptEnabled</key>
+    <string>YES</string>
+before </dict>
+
+2) call "osascript reload.txt document.pdf" from a command line
+
+*)
+
+on reload_document(doc)
+	
+	-- Make sure the document in question is the frontmost window
+	do shell script "open -a Preview " & doc
+	
+	-- close document
+	delay 0.1
+	tell application "Preview"
+		close window 1
+	end tell
+	
+	-- reopen it
+	delay 0.1
+	do shell script "open -a Preview " & doc
+	
+	-- move and resize (wait for the folder to show)
+	delay 0.5
+	tell application "Preview"
+		tell front window
+			set bounds to {620, 0, 1270, 750}
+		end tell
+	end tell
+	
+end reload_document
+
+on run argv
+	my reload_document(item 1 of argv)
+end run
+

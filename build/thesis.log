@@ -1,0 +1,882 @@
+This is pdfTeXk, Version 3.141592-1.40.1 (Web2C 7.5.6) (format=pdflatex 2007.1.31)  23 MAR 2007 10:19
+entering extended mode
+ file:line:error style messages enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(./headers.tex (/usr/local/gwTeX/texmf.texlive/tex/latex/base/book.cls
+Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/bk11.clo
+File: bk11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/gwTeX/texmf.texlive/tex/generic/babel/babel.sty
+Package: babel 2005/11/23 v3.8h The Babel package
+
+(/usr/local/gwTeX/texmf.texlive/tex/generic/babel/frenchb.ldf
+Language: french 2005/02/06 v1.6g French support from the babel system
+
+(/usr/local/gwTeX/texmf.texlive/tex/generic/babel/babel.def
+File: babel.def 2005/11/23 v3.8h Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+Package babel Info: Making : an active character on input line 219.
+Package babel Info: Making ; an active character on input line 220.
+Package babel Info: Making ! an active character on input line 221.
+Package babel Info: Making ? an active character on input line 222.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 299.
+\parindentFFN=\dimen104
+\std@mcc=\count89
+\dec@mcc=\count90
+
+*************************************
+* Local config file frenchb.cfg used
+*
+(/usr/local/gwTeX/texmf.texlive/tex/generic/babel/frenchb.cfg)))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/latin1.def
+File: latin1.def 2006/05/05 v1.1b Input encoding file
+))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks17
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2007/01/08 v0.04d Graphics/color for pdfTeX
+\Gread@gobject=\count103
+))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+)
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/tools/array.sty
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen116
+\extrarowheight=\dimen117
+\NC@list=\toks22
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+\TX@col@width=\dimen118
+\TX@old@table=\dimen119
+\TX@old@col=\dimen120
+\TX@target=\dimen121
+\TX@delta=\dimen122
+\TX@cols=\count104
+\TX@ftn=\toks23
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/minitoc/minitoc.sty
+Package: minitoc 2007/01/09 v51 Package minitoc (JPFD)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/minitoc/mtcmess.sty
+Package: mtcmess 2006/03/14
+)
+Package minitoc Info: <I0001>
+(minitoc)             *** minitoc package, version 51 ***.
+\tf@mtc=\write3
+\mtcindent=\skip48
+\mtcskipamount=\skip49
+Package minitoc Info: <I0005>
+(minitoc)             compatible with hyperref.
+Package minitoc Info: <I0023>
+(minitoc)             part level macros available.
+Package minitoc Info: <I0003>
+(minitoc)             chapter level macros available.
+\mtc@toks=\toks24
+\mtc@strutbox=\box28
+\mtc@hstrutbox=\box29
+Package minitoc Info: <I0002>
+(minitoc)             Autoconfiguration of extensions.
+\openout3 = `thesis.mtc1'.
+
+\openout3 = `thesis.mtc'.
+
+
+(./build/thesis.mtc1)
+Package minitoc Info: <I0012>
+(minitoc)             Long extensions (Unix-like) will be used.
+Package minitoc Info: <I0031>
+(minitoc)             ==> this version is configured for UNIX-like 
+(minitoc)                 (long extensions) file names.
+\openout3 = `thesis.mtc'.
+
+\openout3 = `thesis.mtc1'.
+
+\c@mtc=\count105
+\c@minitocdepth=\count106
+\c@ptc=\count107
+\c@parttocdepth=\count108
+\ptcindent=\skip50
+Package minitoc Info: <I0010>
+(minitoc)             The english language is selected.
+(minitoc)              on input line 4684.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/minitoc/english.mld
+File: english.mld 2006/01/13
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/minitoc/english.mld
+File: english.mld 2006/01/13
+)
+Package minitoc Info: <I0010>
+(minitoc)             The frenchb language is selected.
+(minitoc)              on input line 4685.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/minitoc/frenchb.mld
+File: frenchb.mld 2003/02/11
+Package minitoc Info: <I0010>
+(minitoc)             The french language is selected.
+(minitoc)              on input line 31.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/minitoc/french.mld
+File: french.mld 2006/03/21
+)))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen123
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/natbib/natbib.sty
+Package: natbib 2006/09/06 7.4a (PWD)
+\bibhang=\skip51
+\bibsep=\skip52
+LaTeX Info: Redefining \cite on input line 541.
+\c@NAT@ctr=\count109
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip53
+\f@ncyO@elh=\skip54
+\f@ncyO@erh=\skip55
+\f@ncyO@olh=\skip56
+\f@ncyO@orh=\skip57
+\f@ncyO@elf=\skip58
+\f@ncyO@erf=\skip59
+\f@ncyO@olf=\skip60
+\f@ncyO@orf=\skip61
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/tools/afterpage.sty
+Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
+\AP@output=\toks25
+\AP@partial=\box30
+\AP@footins=\box31
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip62
+\LTright=\skip63
+\LTpre=\skip64
+\LTpost=\skip65
+\LTchunksize=\count110
+\LTcapwidth=\dimen124
+\LT@head=\box32
+\LT@firsthead=\box33
+\LT@foot=\box34
+\LT@lastfoot=\box35
+\LT@cols=\count111
+\LT@rows=\count112
+\c@LT@tables=\count113
+\c@LT@chunks=\count114
+\LT@p@ftn=\toks26
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup6
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2002/07/08 v3.2 Page Geometry
+\Gm@cnth=\count115
+\Gm@cntv=\count116
+\c@Gm@tempcnt=\count117
+\Gm@bindingoffset=\dimen125
+\Gm@wd@mp=\dimen126
+\Gm@odd@mp=\dimen127
+\Gm@even@mp=\dimen128
+\Gm@dimlist=\toks27
+
+(/usr/local/gwTeX/texmf.texlive/tex/xelatex/xetexconfig/geometry.cfg))
+(/usr/local/gwTeX/texmf.texlive/tex/latex/tools/layout.sty
+Package: layout 2000/09/25 v1.2c Show layout parameters
+\oneinch=\count118
+\cnt@paperwidth=\count119
+\cnt@paperheight=\count120
+\cnt@hoffset=\count121
+\cnt@voffset=\count122
+\cnt@textheight=\count123
+\cnt@textwidth=\count124
+\cnt@topmargin=\count125
+\cnt@oddsidemargin=\count126
+\cnt@evensidemargin=\count127
+\cnt@headheight=\count128
+\cnt@headsep=\count129
+\cnt@marginparsep=\count130
+\cnt@marginparwidth=\count131
+\cnt@marginparpush=\count132
+\cnt@footskip=\count133
+\fheight=\count134
+\ref@top=\count135
+\ref@hoffset=\count136
+\ref@voffset=\count137
+\ref@head=\count138
+\ref@body=\count139
+\ref@foot=\count140
+\ref@margin=\count141
+\ref@marginwidth=\count142
+\ref@marginpar=\count143
+\Interval=\count144
+\ExtraYPos=\count145
+\PositionX=\count146
+\PositionY=\count147
+\ArrowLength=\count148
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/local/gwTeX/texmf.texlive/tex/latex/ltxmisc/boxedminipage.sty)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/rotating/rotating.sty
+Package: rotating 1997/09/26, v2.13 Rotation package
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count149
+\rot@float@box=\box36
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/caption/caption.sty
+Package: caption 2007/01/07 v3.0k Customising captions (AR)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/caption/caption3.sty
+Package: caption3 2007/01/07 v3.0k caption3 kernel (AR)
+\captionmargin=\dimen129
+\captionmarginx=\dimen130
+\captionwidth=\dimen131
+\captionindent=\dimen132
+\captionparindent=\dimen133
+\captionhangindent=\dimen134
+)
+Package caption Info: longtable package v3.15 (or newer) detected on input line
+ 359.
+Package caption Info: rotating package v2.0 (or newer) detected on input line 3
+82.
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/ltxmisc/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2007/01/18 v6.75o Hypertext links for LaTeX
+\@linkdim=\dimen135
+\Hy@linkcounter=\count150
+\Hy@pagecounter=\count151
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2007/01/18 v6.75o Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/config/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2006/08/22 v2.4 Connects package keyval with LaTeX options (
+HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 2287.
+Package hyperref Info: Link nesting OFF on input line 2292.
+Package hyperref Info: Hyper index ON on input line 2295.
+Package hyperref Info: Plain pages OFF on input line 2302.
+Package hyperref Info: Backreferencing OFF on input line 2307.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2443.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2598.
+\Fld@menulength=\count152
+\Field@Width=\dimen136
+\Fld@charsize=\dimen137
+\Choice@toks=\toks28
+\Field@toks=\toks29
+Package hyperref Info: Hyper figures OFF on input line 3076.
+Package hyperref Info: Link nesting OFF on input line 3081.
+Package hyperref Info: Hyper index ON on input line 3084.
+Package hyperref Info: backreferencing OFF on input line 3091.
+Package hyperref Info: Link coloring OFF on input line 3096.
+\Hy@abspage=\count153
+\c@Item=\count154
+)
+*hyperref using default driver hpdftex*
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2007/01/18 v6.75o Hyperref driver for pdfTeX
+\Fld@listcount=\count155
+)
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 120.
+
+
+Package hyperref Warning: Option `backref' has already been used,
+(hyperref)                setting the option has no effect on input line 120.
+
+Package hyperref Info: Option `plainpages' set `false' on input line 120.
+
+Package hyperref Warning: Option `pdfpagelabels' has already been used,
+(hyperref)                setting the option has no effect on input line 120.
+
+Package hyperref Info: Option `hypertexnames' set `false' on input line 120.
+Package hyperref Info: Option `colorlinks' set `true' on input line 120.
+) (./build/thesis.aux)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/lmr/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 4.
+ (/usr/local/gwTeX/texmf.texlive/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2007/01/14 v1.3 Font defs for Latin Modern
+)
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 4.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 4.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/t1ppl.fd
+File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
+)
+
+Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
+(frenchb.ldf)                frenchb will NOT customize it;
+(frenchb.ldf)                reported on input line 4.
+
+LaTeX Info: Redefining \dots on input line 4.
+(/usr/local/gwTeX/texmf.texlive/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count156
+\scratchdimen=\dimen138
+\scratchbox=\box37
+\nofMPsegments=\count157
+\nofMParguments=\count158
+\MPscratchCnt=\count159
+\MPscratchDim=\dimen139
+\MPnumerator=\count160
+\everyMPtoPDFconversion=\toks30
+)
+Package minitoc(hints) Info: <I0049>
+(minitoc(hints))             ==> You requested the hints option 
+(minitoc(hints))             Some hints are eventually given below.
+
+
+Package minitoc(hints) Warning: <W0030>
+(minitoc(hints))                --- The \part command is altered 
+(minitoc(hints))                after minitoc.
+
+
+Package minitoc(hints) Warning: <W0023>
+(minitoc(hints))                --- It may be the consequence 
+(minitoc(hints))                of loading the ``hyperref'' package.
+
+
+Package minitoc(hints) Warning: <W0028>
+(minitoc(hints))                --- The \chapter command is altered 
+(minitoc(hints))                after minitoc.
+
+
+Package minitoc(hints) Warning: <W0023>
+(minitoc(hints))                --- It may be the consequence 
+(minitoc(hints))                of loading the ``hyperref'' package.
+
+-------------------- Geometry parameters
+paper: a4paper
+landscape: --
+twocolumn: --
+twoside: true
+asymmetric: --
+h-parts: 71.70166pt, 0.7\paperwidth , 107.55254pt (default)
+v-parts: 101.40665pt, 0.7\paperheight , 152.11pt (default)
+hmarginratio: 2:3
+vmarginratio: 2:3
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  597.50787pt
+\paperheight 845.04684pt
+\textwidth  418.25368pt
+\textheight 619.98294pt
+\oddsidemargin  28.45274pt
+\evensidemargin 0.0pt
+\topmargin  -2.73714pt
+\headheight 12.0pt
+\headsep    28.4097pt
+\footskip   35.99886pt
+\marginparwidth 106.0pt
+\marginparsep   7.0pt
+\columnsep  10.0pt
+\skip\footins  10.0pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+\@twosidetrue \@mparswitchtrue 
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+(/usr/local/gwTeX/texmf.texlive/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2003/03/25 v2.04 ragged2e Package (MS)
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/everysel/everysel.sty
+Package: everysel 1999/06/08 v1.03 EverySelectfont Package (MS)
+LaTeX Info: Redefining \selectfont on input line 125.
+)
+\CenteringLeftskip=\skip66
+\RaggedLeftLeftskip=\skip67
+\RaggedRightLeftskip=\skip68
+\CenteringRightskip=\skip69
+\RaggedLeftRightskip=\skip70
+\RaggedRightRightskip=\skip71
+\CenteringParfillskip=\skip72
+\RaggedLeftParfillskip=\skip73
+\RaggedRightParfillskip=\skip74
+\JustifyingParfillskip=\skip75
+\CenteringParindent=\skip76
+\RaggedLeftParindent=\skip77
+\RaggedRightParindent=\skip78
+\JustifyingParindent=\skip79
+)
+Package caption Info: hyperref package v6.74m (or newer) detected on input line
+ 4.
+Package hyperref Info: Link coloring ON on input line 4.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2006/12/27 v2.28 Cross-referencing by name of section
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+)
+\c@section@level=\count161
+)
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+
+(./build/thesis.out) (./build/thesis.out)
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
+
+Package minitoc Info: <I0024>
+(minitoc)             PREPARING MINITOCS FROM thesis.toc on input line 8.
+Package minitoc Info: <I0033>
+(minitoc)             Writing thesis.mtc1.
+\openout3 = `thesis.mtc1'.
+
+Package minitoc Info: <I0033>
+(minitoc)             Writing thesis.mtc2.
+\openout3 = `thesis.mtc2'.
+
+Package minitoc Info: <I0033>
+(minitoc)             Writing thesis.mtc3.
+\openout3 = `thesis.mtc3'.
+
+Package minitoc Info: <I0033>
+(minitoc)             Writing thesis.mtc4.
+\openout3 = `thesis.mtc4'.
+
+ (./cover.tex
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 6.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 6.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 6.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 6.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 6.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.40997pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 6.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 6.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 6.
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+<logos/logo_uapv.pdf, id=39, 142.78947pt x 198.6381pt>
+File: logos/logo_uapv.pdf Graphic file (type pdf)
+
+<use logos/logo_uapv.pdf>
+Overfull \hbox (40.45276pt too wide) in paragraph at lines 8--12
+[]|[]| 
+ []
+
+
+Overfull \hbox (52.45448pt too wide) in paragraph at lines 6--14
+ [] 
+ []
+
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 14.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 50.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 50.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 50.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 50.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 50.
+
+Overfull \hbox (4.98279pt too wide) in paragraph at lines 50--50
+[]|\T1/ppl/m/n/10 M$[]$| 
+ []
+
+<logos/logo_lia.pdf, id=40, 126.85786pt x 69.3887pt>
+File: logos/logo_lia.pdf Graphic file (type pdf)
+ <use logos/logo_lia.pdf>
+Overfull \vbox (2.94412pt too high) detected at line 54
+ []
+
+
+Overfull \hbox (6.6618pt too wide) in paragraph at lines 53--60
+ [][] 
+ []
+
+[1
+
+
+{/usr/local/gwTeX/texmf.local/fonts/map/pdftex/updmap/pdftex.map} <./logos/logo
+_uapv.pdf
+
+pdfTeX warning: pdflatex (file ./logos/logo_uapv.pdf): PDF inclusion: Page Grou
+p detected which pdfTeX can't handle. Ignoring it.
+> <./logos/logo_lia.pdf>]) [2
+
+]
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 17.
+ (./build/thesis.toc
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
+)
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
+
+ [3]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4
+
+]
+Chapitre 1.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 21.
+\openout3 = `thesis.mtc'.
+
+\openout3 = `thesis.mtc'.
+
+(./build/thesis.mtc1)
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 23.
+ [5]
+File: logos/logo_uapv.pdf Graphic file (type pdf)
+ <use logos/logo_uapv.pdf>
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 60.
+LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <10> not available
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 60.
+ [6] [7] [8
+
+]
+(./build/thesis.lof)
+\tf@lof=\write6
+\openout6 = `thesis.lof'.
+
+ [9
+
+] [10
+
+] (./build/thesis.lot)
+\tf@lot=\write7
+\openout7 = `thesis.lot'.
+
+ [11
+
+] [12
+
+]
+(./build/thesis.bbl)
+Package minitoc Info: <I0009>
+(minitoc)             Listing minitoc auxiliary files. 
+(minitoc)             Creating the thesis.maf file.
+\openout3 = `thesis.maf'.
+
+
+
+Package minitoc(hints) Warning: <W0033>
+(minitoc(hints))                The caption package should be 
+(minitoc(hints))                loaded BEFORE the minitoc package.
+
+
+Package minitoc(hints) Warning: <W0024>
+(minitoc(hints))                Some hints have been written 
+(minitoc(hints))                in the thesis.log file.
+
+[13
+
+] (./build/thesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 8068 strings out of 94075
+ 110935 string characters out of 1163523
+ 2188107 words of memory out of 4639303
+ 10923 multiletter control sequences out of 10000+50000
+ 55304 words of font info for 105 fonts, out of 2000000 for 2000
+ 645 hyphenation exceptions out of 5000
+ 37i,17n,43p,420b,394s stack positions out of 5000i,500n,6000p,200000b,50000s
+{/usr/local/gwTeX/texmf.texlive/fonts/enc/dvips/base/8r
+.enc}</usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmmi10.pfb></usr/lo
+cal/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/gwTeX/texm
+f.texlive/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/gwTeX/texmf.texlive/fon
+ts/type1/urw/palatino/uplb8a.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/ur
+w/palatino/uplbi8a.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/urw/palatino
+/uplr8a.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/urw/palatino/uplr8a.pfb
+></usr/local/gwTeX/texmf.texlive/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on ./build/thesis.pdf (13 pages, 819920 bytes).
+PDF statistics:
+ 212 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 131072)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+

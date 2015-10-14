@@ -1,10 +1,6 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
-A level-1 auxiliary file: Dedication/dedication.aux
-A level-1 auxiliary file: Declaration/declaration.aux
-A level-1 auxiliary file: Acknowledgement/acknowledgement.aux
-A level-1 auxiliary file: Abstract/abstract.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: stateofart/stateofart.aux
 A level-1 auxiliary file: taxonomy/taxonomy.aux
@@ -15,50 +11,53 @@ A level-1 auxiliary file: rl/rl.aux
 A level-1 auxiliary file: experiment/experiment.aux
 A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
-The style file: apalike.bst
+The style file: lia-these-fr.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "Lu2011"
 Warning--I didn't find a database entry for "Watkins1989"
-Warning--I didn't find a database entry for "ch:baseline"
+Warning--page numbers missing in Pietquin2013
+Warning--page numbers missing in Schatzmann2006
+Warning--no number and no volume in Williams2007
+Warning--page numbers missing in Williams2007
 You've used 57 entries,
-            1935 wiz_defined-function locations,
-            800 strings with 14340 characters,
-and the built_in function-call counts, 22126 in all, are:
-= -- 2034
-> -- 1082
-< -- 32
-+ -- 392
-- -- 368
-* -- 1740
-:= -- 3902
+            2936 wiz_defined-function locations,
+            953 strings with 15643 characters,
+and the built_in function-call counts, 36478 in all, are:
+= -- 3018
+> -- 2641
+< -- 4
++ -- 836
+- -- 924
+* -- 2595
+:= -- 6385
 add.period$ -- 172
 call.type$ -- 57
 change.case$ -- 464
 chr.to.int$ -- 57
-cite$ -- 57
-duplicate$ -- 961
-empty$ -- 1595
-format.name$ -- 463
-if$ -- 4354
+cite$ -- 61
+duplicate$ -- 1276
+empty$ -- 2371
+format.name$ -- 1116
+if$ -- 6975
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 57
-newline$ -- 288
-num.names$ -- 171
-pop$ -- 606
+newline$ -- 294
+num.names$ -- 456
+pop$ -- 628
 preamble$ -- 1
-purify$ -- 469
+purify$ -- 811
 quote$ -- 0
-skip$ -- 557
+skip$ -- 1073
 stack$ -- 0
-substring$ -- 987
-swap$ -- 83
+substring$ -- 1443
+swap$ -- 84
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 334
-warning$ -- 0
-while$ -- 132
+type$ -- 1100
+warning$ -- 4
+while$ -- 358
 width$ -- 0
-write$ -- 706
-(There were 3 warnings)
+write$ -- 1212
+(There were 6 warnings)

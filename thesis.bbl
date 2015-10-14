@@ -1,342 +1,444 @@
+\providecommand\Fr{}
+\providecommand\Eng{}
+\providecommand\andname{et}
+\providecommand\andnamec{et}
+
 \begin{thebibliography}{}
 
-\bibitem[Aist et~al., 2007]{Aist2007}
-Aist, G., Allen, J., Campana, E., Gallo, C.~G., Stoness, S., Swift, M., and
-  Tanenhaus, M.~K. (2007).
+
+\bibitem[{Aist et~al.}(2007){Aist, Allen, Campana, Gallo, Stoness, Swift,
+  \andnamec{} Tanenhaus}]{Aist2007}
+(Aist et~al., 2007) \hspace{.5em}G.~Aist, J.~Allen, E.~Campana, C.~G. Gallo,
+  S.~Stoness, M.~Swift, \andname{} M.~K. Tanenhaus, 2007.
 \newblock Incremental understanding in human-computer dialogue and experimental
   evidence for advantages over nonincremental methods.
-\newblock In {\em Decalog}.
+\newblock Dans les actes de \textit{ Decalog}.
 
-\bibitem[Austin, 1962]{Austin1962}
-Austin, J. (1962).
-\newblock {\em How to Do Things with Words}.
+\bibitem[{Austin}(1962){Austin}]{Austin1962}
+(Austin, 1962) \hspace{.5em}J.~Austin, 1962.
+\newblock \textit{ How to Do Things with Words}.
 \newblock Oxford.
 
-\bibitem[Baumann and Schlangen, 2011]{Baumann2011}
-Baumann, T. and Schlangen, D. (2011).
+\bibitem[{Baumann \andnamec{} Schlangen}(2011){Baumann \andnamec{}
+  Schlangen}]{Baumann2011}
+(Baumann \andnamec{} Schlangen, 2011) \hspace{.5em}T.~Baumann \andname{}
+  D.~Schlangen, 2011.
 \newblock Evaluation and optimisation of incremental processors.
-\newblock {\em Dialogue and Discourse}, 2:113--141.
+\newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 113--141.
 
-\bibitem[Baumann and Schlangen, 2013]{Baumann2013}
-Baumann, T. and Schlangen, D. (2013).
+\bibitem[{Baumann \andnamec{} Schlangen}(2013){Baumann \andnamec{}
+  Schlangen}]{Baumann2013}
+(Baumann \andnamec{} Schlangen, 2013) \hspace{.5em}T.~Baumann \andname{}
+  D.~Schlangen, 2013.
 \newblock Open-ended, extensible system utterances are preferred, even if they
   require filled pauses.
-\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+\newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
+  Conference}.
 
-\bibitem[Beattie, 1982]{Beattie1982}
-Beattie, G. (1982).
+\bibitem[{Beattie}(1982){Beattie}]{Beattie1982}
+(Beattie, 1982) \hspace{.5em}G.~Beattie, 1982.
 \newblock Turn-taking and interruption in political interviews: Margaret
   thatcher and jim callaghan compared and contrasted.
-\newblock {\em Semiotica}, 39:93--114.
+\newblock \textit{ Semiotica\/}~\textit{39}, 93--114.
 
-\bibitem[Bellman, 1957]{Bellman1957}
-Bellman, R. (1957).
-\newblock {\em Dynamic Programming}.
+\bibitem[{Bellman}(1957){Bellman}]{Bellman1957}
+(Bellman, 1957) \hspace{.5em}R.~Bellman, 1957.
+\newblock \textit{ Dynamic Programming}.
 \newblock Princeton University Press.
 
-\bibitem[Chandramohan et~al., 2011]{Chandramohan2011}
-Chandramohan, S., Geist, M., Lefèvre, F., and Pietquin, O. (2011).
+\bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lefèvre, \andnamec{}
+  Pietquin}]{Chandramohan2011}
+(Chandramohan et~al., 2011) \hspace{.5em}S.~Chandramohan, M.~Geist,
+  F.~Lefèvre, \andname{} O.~Pietquin, 2011.
 \newblock User simulation in dialogue systems using inverse reinforcement
   learning.
-\newblock In {\em INTERSPEECH}.
+\newblock Dans les actes de \textit{ INTERSPEECH}.
 
-\bibitem[Chandramohan et~al., 2010]{Chandramohan2010}
-Chandramohan, S., Geist, M., and Pietquin, O. (2010).
+\bibitem[{Chandramohan et~al.}(2010){Chandramohan, Geist, \andnamec{}
+  Pietquin}]{Chandramohan2010}
+(Chandramohan et~al., 2010) \hspace{.5em}S.~Chandramohan, M.~Geist, \andname{}
+  O.~Pietquin, 2010.
 \newblock Optimizing spoken dialogue management with fitted value iteration.
-\newblock In {\em INTERSPEECH 11th Annual Conference of the International
-  Speech}.
+\newblock Dans les actes de \textit{ INTERSPEECH 11th Annual Conference of the
+  International Speech}.
 
-\bibitem[Dethlefs et~al., 2012]{Dethlefs2012}
-Dethlefs, N., Hastie, H.~W., Rieser, V., and Lemon, O. (2012).
+\bibitem[{Dethlefs et~al.}(2012){Dethlefs, Hastie, Rieser, \andnamec{}
+  Lemon}]{Dethlefs2012}
+(Dethlefs et~al., 2012) \hspace{.5em}N.~Dethlefs, H.~W. Hastie, V.~Rieser,
+  \andname{} O.~Lemon, 2012.
 \newblock Optimising incremental dialogue decisions using information density
   for interactive systems.
-\newblock In {\em EMNLP-CoNLL}.
+\newblock Dans les actes de \textit{ EMNLP-CoNLL}.
 
-\bibitem[DeVault et~al., 2011]{DeVault2011}
-DeVault, D., Sagae, K., and Traum, D. (2011).
+\bibitem[{DeVault et~al.}(2011){DeVault, Sagae, \andnamec{}
+  Traum}]{DeVault2011}
+(DeVault et~al., 2011) \hspace{.5em}D.~DeVault, K.~Sagae, \andname{} D.~Traum,
+  2011.
 \newblock Incremental interpretation and prediction of utterance meaning for
   interactive dialogue.
-\newblock {\em Dialogue and Discourse}, 2:143--170.
+\newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 143--170.
 
-\bibitem[Eckert et~al., 1997]{Eckert1997}
-Eckert, W., Levin, E., and Pieraccini, R. (1997).
+\bibitem[{Eckert et~al.}(1997){Eckert, Levin, \andnamec{}
+  Pieraccini}]{Eckert1997}
+(Eckert et~al., 1997) \hspace{.5em}W.~Eckert, E.~Levin, \andname{}
+  R.~Pieraccini, 1997.
 \newblock User modeling for spoken dialogue system evaluation.
-\newblock In {\em Automatic Speech Recognition and Understanding, 1997.
-  Proceedings., 1997 IEEE Workshop on}.
+\newblock Dans les actes de \textit{ Automatic Speech Recognition and
+  Understanding, 1997. Proceedings., 1997 IEEE Workshop on}.
 
-\bibitem[Edlund et~al., 2008]{Edlund2008}
-Edlund, J., Gustafson, J., Heldner, M., and Hjalmarsson, A. (2008).
+\bibitem[{Edlund et~al.}(2008){Edlund, Gustafson, Heldner, \andnamec{}
+  Hjalmarsson}]{Edlund2008}
+(Edlund et~al., 2008) \hspace{.5em}J.~Edlund, J.~Gustafson, M.~Heldner,
+  \andname{} A.~Hjalmarsson, 2008.
 \newblock Towards human-like spoken dialogue systems.
-\newblock {\em Speech Communication}, 50:630--645.
+\newblock \textit{ Speech Communication\/}~\textit{50}, 630--645.
 
-\bibitem[El~Asri et~al., 2014]{El-Asri2014}
-El~Asri, L., Lemonnier, R., Laroche, R., Pietquin, O., and Khouzaimi, H.
-  (2014).
+\bibitem[{El~Asri et~al.}(2014){El~Asri, Lemonnier, Laroche, Pietquin,
+  \andnamec{} Khouzaimi}]{El-Asri2014}
+(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, R.~Lemonnier, R.~Laroche,
+  O.~Pietquin, \andname{} H.~Khouzaimi, 2014.
 \newblock {NASTIA: Negotiating Appointment Setting Interface}.
-\newblock In {\em Proceedings of LREC}.
+\newblock Dans les actes de \textit{ Proceedings of LREC}.
 
-\bibitem[Gasic et~al., 2013]{Gasic2013}
-Gasic, M., Breslin, C., Henderson, M., Kim, D., Szummer, M., Thomson, B.,
-  Tsiakoulis, P., and Young, S. (2013).
+\bibitem[{Gasic et~al.}(2013){Gasic, Breslin, Henderson, Kim, Szummer, Thomson,
+  Tsiakoulis, \andnamec{} Young}]{Gasic2013}
+(Gasic et~al., 2013) \hspace{.5em}M.~Gasic, C.~Breslin, M.~Henderson, D.~Kim,
+  M.~Szummer, B.~Thomson, P.~Tsiakoulis, \andname{} S.~Young, 2013.
 \newblock Pomdp-based dialogue manager adaptation to extended domains.
-\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+\newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
+  Conference}.
 
-\bibitem[Ghigi et~al., 2014]{Ghigi2014}
-Ghigi, F., Eskenazi, M., Torres, M.~I., and Lee, S. (2014).
+\bibitem[{Ghigi et~al.}(2014){Ghigi, Eskenazi, Torres, \andnamec{}
+  Lee}]{Ghigi2014}
+(Ghigi et~al., 2014) \hspace{.5em}F.~Ghigi, M.~Eskenazi, M.~I. Torres,
+  \andname{} S.~Lee, 2014.
 \newblock Incremental dialog processing in a task-oriented dialog.
-\newblock In {\em Fifteenth Annual Conference of the International Speech
-  Communication Association}.
+\newblock Dans les actes de \textit{ Fifteenth Annual Conference of the
+  International Speech Communication Association}.
 
-\bibitem[Gravano and Hirschberg, 2011]{Gravano2011}
-Gravano, A. and Hirschberg, J. (2011).
+\bibitem[{Gravano \andnamec{} Hirschberg}(2011){Gravano \andnamec{}
+  Hirschberg}]{Gravano2011}
+(Gravano \andnamec{} Hirschberg, 2011) \hspace{.5em}A.~Gravano \andname{}
+  J.~Hirschberg, 2011.
 \newblock Turn-taking cues in task-oriented dialogue.
-\newblock {\em Comput. Speech Lang.}, 25(3):601--634.
+\newblock \textit{ Comput. Speech Lang.\/}~\textit{ 25\/}(3), 601--634.
 
-\bibitem[Hastie et~al., 2013]{Hastie2013}
-Hastie, H., Aufaure, M.-A., Alexopoulos, P., Cuay\'{a}huitl, H., Dethlefs, N.,
-  Gasic, M., Henderson, J., Lemon, O., Liu, X., Mika, P., Ben~Mustapha, N.,
-  Rieser, V., Thomson, B., Tsiakoulis, P., and Vanrompay, Y. (2013).
+\bibitem[{Hastie et~al.}(2013){Hastie, Aufaure, Alexopoulos, Cuay\'{a}huitl,
+  Dethlefs, Gasic, Henderson, Lemon, Liu, Mika, Ben~Mustapha, Rieser, Thomson,
+  Tsiakoulis, \andnamec{} Vanrompay}]{Hastie2013}
+(Hastie et~al., 2013) \hspace{.5em}H.~Hastie, M.-A. Aufaure, P.~Alexopoulos,
+  H.~Cuay\'{a}huitl, N.~Dethlefs, M.~Gasic, J.~Henderson, O.~Lemon, X.~Liu,
+  P.~Mika, N.~Ben~Mustapha, V.~Rieser, B.~Thomson, P.~Tsiakoulis, \andname{}
+  Y.~Vanrompay, 2013.
 \newblock Demonstration of the parlance system: a data-driven incremental,
   spoken dialogue system for interactive search.
-\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+\newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
+  Conference}.
 
-\bibitem[Ilkin and Sturt, 2011]{Ilkin2011}
-Ilkin, Z. and Sturt, P. (2011).
+\bibitem[{Ilkin \andnamec{} Sturt}(2011){Ilkin \andnamec{} Sturt}]{Ilkin2011}
+(Ilkin \andnamec{} Sturt, 2011) \hspace{.5em}Z.~Ilkin \andname{} P.~Sturt,
+  2011.
 \newblock Active prediction of syntactic information during sentence
   processing.
-\newblock {\em Dialogue and Discourse}, 2:35--58.
+\newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 35--58.
 
-\bibitem[Johnston et~al., 2014]{Johnston2014}
-Johnston, M., Chen, J., Ehlen, P., Jung, H., Lieske, J., Reddy, A., Selfridge,
-  E., Stoyanchev, S., Vasilieff, B., and Wilpon, J. (2014).
+\bibitem[{Johnston et~al.}(2014){Johnston, Chen, Ehlen, Jung, Lieske, Reddy,
+  Selfridge, Stoyanchev, Vasilieff, \andnamec{} Wilpon}]{Johnston2014}
+(Johnston et~al., 2014) \hspace{.5em}M.~Johnston, J.~Chen, P.~Ehlen, H.~Jung,
+  J.~Lieske, A.~Reddy, E.~Selfridge, S.~Stoyanchev, B.~Vasilieff, \andname{}
+  J.~Wilpon, 2014.
 \newblock Mva: The multimodal virtual assistant.
-\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[Jonsdottir et~al., 2008]{Jonsdottir2008}
-Jonsdottir, G.~R., Thorisson, K.~R., and Nivel, E. (2008).
+\bibitem[{Jonsdottir et~al.}(2008){Jonsdottir, Thorisson, \andnamec{}
+  Nivel}]{Jonsdottir2008}
+(Jonsdottir et~al., 2008) \hspace{.5em}G.~R. Jonsdottir, K.~R. Thorisson,
+  \andname{} E.~Nivel, 2008.
 \newblock Learning smooth, human-like turntaking in realtime dialogue.
-\newblock In {\em In Proceedings of Intelligent Virtual Agents (IVA 08}, pages
-  162--175. Springer.
+\newblock Dans les actes de \textit{ In Proceedings of Intelligent Virtual
+  Agents (IVA 08},  162--175. Springer.
 
-\bibitem[Khouzaimi et~al., 2014]{Khouzaimi2014a}
-Khouzaimi, H., Laroche, R., and Lef\`evre, F. (2014).
+\bibitem[{Khouzaimi et~al.}(2014){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2014a}
+(Khouzaimi et~al., 2014) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2014.
 \newblock An easy method to make dialogue systems incremental.
-\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[Khouzaimi et~al., 2015]{Khouzaimi2015b}
-Khouzaimi, H., Laroche, R., and Lef\`evre, F. (2015).
+\bibitem[{Khouzaimi et~al.}(2015){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015b}
+(Khouzaimi et~al., 2015) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015.
 \newblock Optimising turn-taking strategies with reinforcement learning.
-\newblock In {\em Proceedings of the 16th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock Dans les actes de \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[Kilger and Finkler, 1995]{Kilger1995}
-Kilger, A. and Finkler, W. (1995).
+\bibitem[{Kilger \andnamec{} Finkler}(1995){Kilger \andnamec{}
+  Finkler}]{Kilger1995}
+(Kilger \andnamec{} Finkler, 1995) \hspace{.5em}A.~Kilger \andname{}
+  W.~Finkler, 1995.
 \newblock Incremental generation for real-time applications.
-\newblock Technical report, German Research Center for Artificial Intelligence.
+\newblock Rapport technique, German Research Center for Artificial
+  Intelligence.
 
-\bibitem[Kim and Banchs, 2014]{Kim2014}
-Kim, S. and Banchs, R.~E. (2014).
+\bibitem[{Kim \andnamec{} Banchs}(2014){Kim \andnamec{} Banchs}]{Kim2014}
+(Kim \andnamec{} Banchs, 2014) \hspace{.5em}S.~Kim \andname{} R.~E. Banchs,
+  2014.
 \newblock Sequential labeling for tracking dynamic dialog states.
-\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[Laroche, 2010]{Laroche2010}
-Laroche, R. (2010).
-\newblock {\em Raisonnement sur les incertitudes et apprentissage pour les
+\bibitem[{Laroche}(2010){Laroche}]{Laroche2010}
+(Laroche, 2010) \hspace{.5em}R.~Laroche, 2010.
+\newblock \textit{ Raisonnement sur les incertitudes et apprentissage pour les
   systemes de dialogue conventionnels}.
-\newblock PhD thesis, Paris VI University.
+\newblock Th\`ese de Doctorat, Paris VI University.
 
-\bibitem[Laroche et~al., 2011]{CLASSiCd64}
-Laroche, R., Putois, G., Bretier, P., Aranguren, M., Velkovska, J., Hastie, H.,
-  Keizer, S., Yu, K., Jurcicek, F., Lemon, O., and Young, S. (2011).
+\bibitem[{Laroche et~al.}(2011){Laroche, Putois, Bretier, Aranguren, Velkovska,
+  Hastie, Keizer, Yu, Jurcicek, Lemon, \andnamec{} Young}]{CLASSiCd64}
+(Laroche et~al., 2011) \hspace{.5em}R.~Laroche, G.~Putois, P.~Bretier,
+  M.~Aranguren, J.~Velkovska, H.~Hastie, S.~Keizer, K.~Yu, F.~Jurcicek,
+  O.~Lemon, \andname{} S.~Young, 2011.
 \newblock D6.4: Final evaluation of classic towninfo and appointment scheduling
   systems.
 \newblock Report D6.4, CLASSIC Project.
 
-\bibitem[Laroche et~al., 2013]{Laroche2013}
-Laroche, R., Roussarie, L., Baczyk, P., and Dziekan, J. (2013).
+\bibitem[{Laroche et~al.}(2013){Laroche, Roussarie, Baczyk, \andnamec{}
+  Dziekan}]{Laroche2013}
+(Laroche et~al., 2013) \hspace{.5em}R.~Laroche, L.~Roussarie, P.~Baczyk,
+  \andname{} J.~Dziekan, 2013.
 \newblock Cooking coach spoken/multimodal dialogue systems.
-\newblock In {\em Proceedings of the IJCAI Workshop on Cooking with Computers}.
+\newblock Dans les actes de \textit{ Proceedings of the IJCAI Workshop on
+  Cooking with Computers}.
 
-\bibitem[Lemon et~al., 2003]{Lemon2003}
-Lemon, O., Cavedon, L., and Kelly, B. (2003).
+\bibitem[{Lemon et~al.}(2003){Lemon, Cavedon, \andnamec{} Kelly}]{Lemon2003}
+(Lemon et~al., 2003) \hspace{.5em}O.~Lemon, L.~Cavedon, \andname{} B.~Kelly,
+  2003.
 \newblock Managing dialogue interaction: A multi-layered approach.
-\newblock In {\em Proceedings of the 4th SIGDIAL Workshop on Discourse and
-  Dialogue}.
+\newblock Dans les actes de \textit{ Proceedings of the 4th SIGDIAL Workshop on
+  Discourse and Dialogue}.
 
-\bibitem[Lemon and Pietquin, 2007]{Lemon2007}
-Lemon, O. and Pietquin, O. (2007).
+\bibitem[{Lemon \andnamec{} Pietquin}(2007){Lemon \andnamec{}
+  Pietquin}]{Lemon2007}
+(Lemon \andnamec{} Pietquin, 2007) \hspace{.5em}O.~Lemon \andname{}
+  O.~Pietquin, 2007.
 \newblock Machine learning for spoken dialogue systems.
-\newblock In {\em Proceedings of the European Conference on Speech
-  Communication and Technologies (Interspeech'07)}.
+\newblock Dans les actes de \textit{ Proceedings of the European Conference on
+  Speech Communication and Technologies (Interspeech'07)}.
 
-\bibitem[Levin et~al., 1997]{Levin1997}
-Levin, E., Pieraccini, R., and Eckert, W. (1997).
+\bibitem[{Levin et~al.}(1997){Levin, Pieraccini, \andnamec{}
+  Eckert}]{Levin1997}
+(Levin et~al., 1997) \hspace{.5em}E.~Levin, R.~Pieraccini, \andname{}
+  W.~Eckert, 1997.
 \newblock Learning dialogue strategies within the markov decision process
   framework.
-\newblock In {\em Automatic Speech Recognition and Understanding, 1997.
-  Proceedings., 1997 IEEE Workshop on}.
+\newblock Dans les actes de \textit{ Automatic Speech Recognition and
+  Understanding, 1997. Proceedings., 1997 IEEE Workshop on}.
 
-\bibitem[Lock, 1965]{Lock1965}
-Lock, K. (1965).
+\bibitem[{Lock}(1965){Lock}]{Lock1965}
+(Lock, 1965) \hspace{.5em}K.~Lock, 1965.
 \newblock Structuring programs for multiprogram time-sharing on-line
   applications.
-\newblock In {\em AFIPS '65 (Fall, part I) Proceedings of the November
-  30--December 1, 1965, fall joint computer conference, part I}.
+\newblock Dans les actes de \textit{ AFIPS '65 (Fall, part I) Proceedings of
+  the November 30--December 1, 1965, fall joint computer conference, part I}.
 
-\bibitem[McGraw and Gruenstein, 2012]{McGraw2012}
-McGraw, I. and Gruenstein, A. (2012).
+\bibitem[{McGraw \andnamec{} Gruenstein}(2012){McGraw \andnamec{}
+  Gruenstein}]{McGraw2012}
+(McGraw \andnamec{} Gruenstein, 2012) \hspace{.5em}I.~McGraw \andname{}
+  A.~Gruenstein, 2012.
 \newblock Estimating word-stability during incremental speech recognition.
-\newblock In {\em Proceedings of the INTERSPEECH 2012 Conference}.
+\newblock Dans les actes de \textit{ Proceedings of the INTERSPEECH 2012
+  Conference}.
 
-\bibitem[Meena et~al., 2013]{Meena2013}
-Meena, R., Skantze, G., and Gustafson, J. (2013).
+\bibitem[{Meena et~al.}(2013){Meena, Skantze, \andnamec{}
+  Gustafson}]{Meena2013}
+(Meena et~al., 2013) \hspace{.5em}R.~Meena, G.~Skantze, \andname{}
+  J.~Gustafson, 2013.
 \newblock A data-driven model for timing feedback in a map task dialogue
   system.
-\newblock In {\em Proceedings of the SIGDIAL 2013 Conference}.
+\newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
+  Conference}.
 
-\bibitem[Mori, 1970]{Mori1970}
-Mori, M. (1970).
+\bibitem[{Mori}(1970){Mori}]{Mori1970}
+(Mori, 1970) \hspace{.5em}M.~Mori, 1970.
 \newblock The uncanny vally.
-\newblock In {\em Energy}.
+\newblock Dans les actes de \textit{ Energy}.
 
-\bibitem[Pietquin and Hastie, 2013]{Pietquin2013}
-Pietquin, O. and Hastie, H. (2013).
+\bibitem[{Pietquin \andnamec{} Hastie}(2013){Pietquin \andnamec{}
+  Hastie}]{Pietquin2013}
+(Pietquin \andnamec{} Hastie, 2013) \hspace{.5em}O.~Pietquin \andname{}
+  H.~Hastie, 2013.
 \newblock A survey on metrics for the evaluation of user simulations.
-\newblock {\em The Knowledge Engineering Review}, 28.
+\newblock \textit{ The Knowledge Engineering Review\/}~\textit{28}.
 
-\bibitem[Pl\'{a}tek and Jur\v{c}\'{i}\v{c}ek, 2014]{Platek2014}
-Pl\'{a}tek, O. and Jur\v{c}\'{i}\v{c}ek, F. (2014).
+\bibitem[{Pl\'{a}tek \andnamec{} Jur\v{c}\'{i}\v{c}ek}(2014){Pl\'{a}tek
+  \andnamec{} Jur\v{c}\'{i}\v{c}ek}]{Platek2014}
+(Pl\'{a}tek \andnamec{} Jur\v{c}\'{i}\v{c}ek, 2014) \hspace{.5em}O.~Pl\'{a}tek
+  \andname{} F.~Jur\v{c}\'{i}\v{c}ek, 2014.
 \newblock Free on-line speech recogniser based on kaldi asr toolkit producing
   word posterior lattices.
-\newblock In {\em Proceedings of the 15th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[Raux and Eskenazi, 2007]{Raux2007}
-Raux, A. and Eskenazi, M. (2007).
+\bibitem[{Raux \andnamec{} Eskenazi}(2007){Raux \andnamec{}
+  Eskenazi}]{Raux2007}
+(Raux \andnamec{} Eskenazi, 2007) \hspace{.5em}A.~Raux \andname{} M.~Eskenazi,
+  2007.
 \newblock A multi-layer architecture for semi-synchronous event-driven dialogue
   management.
-\newblock In {\em ASRU}.
+\newblock Dans les actes de \textit{ ASRU}.
 
-\bibitem[Raux and Eskenazi, 2008]{Raux2008}
-Raux, A. and Eskenazi, M. (2008).
+\bibitem[{Raux \andnamec{} Eskenazi}(2008){Raux \andnamec{}
+  Eskenazi}]{Raux2008}
+(Raux \andnamec{} Eskenazi, 2008) \hspace{.5em}A.~Raux \andname{} M.~Eskenazi,
+  2008.
 \newblock Optimizing endpointing thresholds using dialogue features in a spoken
   dialogue system.
-\newblock In {\em SIGDIAL}.
+\newblock Dans les actes de \textit{ SIGDIAL}.
 
-\bibitem[Raux and Eskenazi, 2009]{Raux2009}
-Raux, A. and Eskenazi, M. (2009).
+\bibitem[{Raux \andnamec{} Eskenazi}(2009){Raux \andnamec{}
+  Eskenazi}]{Raux2009}
+(Raux \andnamec{} Eskenazi, 2009) \hspace{.5em}A.~Raux \andname{} M.~Eskenazi,
+  2009.
 \newblock A finite-state turn-taking model for spoken dialog systems.
-\newblock In {\em Proceedings of Human Language Technologies: The 2009 Annual
-  Conference of the North American Chapter of the Association for Computational
-  Linguistics}, NAACL '09, pages 629--637.
+\newblock Dans les actes de \textit{ Proceedings of Human Language
+  Technologies: The 2009 Annual Conference of the North American Chapter of the
+  Association for Computational Linguistics}, NAACL '09,  629--637.
 
-\bibitem[Sacks et~al., 1974]{Sacks1974}
-Sacks, H., Schegloff, E.~A., and Jefferson, G. (1974).
+\bibitem[{Sacks et~al.}(1974){Sacks, Schegloff, \andnamec{}
+  Jefferson}]{Sacks1974}
+(Sacks et~al., 1974) \hspace{.5em}H.~Sacks, E.~A. Schegloff, \andname{}
+  G.~Jefferson, 1974.
 \newblock A simplest systematics for the organization of turn-taking for
   conversation.
-\newblock {\em Language}, 50:696--735.
+\newblock \textit{ Language\/}~\textit{50}, 696--735.
 
-\bibitem[Schatzmann et~al., 2007]{Schatzmann2007}
-Schatzmann, J., Thomson, B., Weilhammer, K., Ye, H., and Young, S. (2007).
+\bibitem[{Schatzmann et~al.}(2007){Schatzmann, Thomson, Weilhammer, Ye,
+  \andnamec{} Young}]{Schatzmann2007}
+(Schatzmann et~al., 2007) \hspace{.5em}J.~Schatzmann, B.~Thomson,
+  K.~Weilhammer, H.~Ye, \andname{} S.~Young, 2007.
 \newblock Agenda-based user simulation for bootstrapping a pomdp dialogue
   system.
-\newblock In {\em Human Language Technologies 2007: The Conference of the North
-  American Chapter of the Association for Computational Linguistics; Companion
-  Volume, Short Papers}.
+\newblock Dans les actes de \textit{ Human Language Technologies 2007: The
+  Conference of the North American Chapter of the Association for Computational
+  Linguistics; Companion Volume, Short Papers}.
 
-\bibitem[Schatzmann et~al., 2006]{Schatzmann2006}
-Schatzmann, J., Weilhammer, K., Stuttle, M., and Young, S. (2006).
+\bibitem[{Schatzmann et~al.}(2006){Schatzmann, Weilhammer, Stuttle, \andnamec{}
+  Young}]{Schatzmann2006}
+(Schatzmann et~al., 2006) \hspace{.5em}J.~Schatzmann, K.~Weilhammer,
+  M.~Stuttle, \andname{} S.~Young, 2006.
 \newblock A survey of statistical user simulation techniques for
   reinforcement-learning of dialogue management strategies.
-\newblock {\em The Knowledge Engineering Review}, 21.
+\newblock \textit{ The Knowledge Engineering Review\/}~\textit{21}.
 
-\bibitem[Schlangen and Skantze, 2011]{Schlangen2011}
-Schlangen, D. and Skantze, G. (2011).
+\bibitem[{Schlangen \andnamec{} Skantze}(2011){Schlangen \andnamec{}
+  Skantze}]{Schlangen2011}
+(Schlangen \andnamec{} Skantze, 2011) \hspace{.5em}D.~Schlangen \andname{}
+  G.~Skantze, 2011.
 \newblock A general, abstract model of incremental dialogue processing.
-\newblock {\em Dialogue and Discourse}, 2:83--111.
+\newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 83--111.
 
-\bibitem[Searle, 1969]{Searle1969}
-Searle, J. (1969).
-\newblock {\em Speech Acts: An Essay in the Philosophy of Language}.
+\bibitem[{Searle}(1969){Searle}]{Searle1969}
+(Searle, 1969) \hspace{.5em}J.~Searle, 1969.
+\newblock \textit{ Speech Acts: An Essay in the Philosophy of Language}.
 \newblock Cambridge University Press, UK.
 
-\bibitem[Selfridge and Heeman, 2010]{Selfridge2010}
-Selfridge, E. and Heeman, P.~A. (2010).
+\bibitem[{Selfridge \andnamec{} Heeman}(2010){Selfridge \andnamec{}
+  Heeman}]{Selfridge2010}
+(Selfridge \andnamec{} Heeman, 2010) \hspace{.5em}E.~Selfridge \andname{} P.~A.
+  Heeman, 2010.
 \newblock Importance-driven turn-bidding for spoken dialogue systems.
-\newblock In {\em ACL}, pages 177--185.
+\newblock Dans les actes de \textit{ ACL},  177--185.
 
-\bibitem[Selfridge et~al., 2011]{Selfridge2011}
-Selfridge, E.~O., Arizmendi, I., Heeman, P.~A., and Williams, J.~D. (2011).
+\bibitem[{Selfridge et~al.}(2011){Selfridge, Arizmendi, Heeman, \andnamec{}
+  Williams}]{Selfridge2011}
+(Selfridge et~al., 2011) \hspace{.5em}E.~O. Selfridge, I.~Arizmendi, P.~A.
+  Heeman, \andname{} J.~D. Williams, 2011.
 \newblock Stability and accuracy in incremental speech recognition.
-\newblock In {\em Proceedings of the SIGDIAL 2011 Conference}.
+\newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2011
+  Conference}.
 
-\bibitem[Selfridge et~al., 2012]{Selfridge2012a}
-Selfridge, E.~O., Arizmendi, I., Heeman, P.~A., and Williams, J.~D. (2012).
+\bibitem[{Selfridge et~al.}(2012){Selfridge, Arizmendi, Heeman, \andnamec{}
+  Williams}]{Selfridge2012a}
+(Selfridge et~al., 2012) \hspace{.5em}E.~O. Selfridge, I.~Arizmendi, P.~A.
+  Heeman, \andname{} J.~D. Williams, 2012.
 \newblock Integrating incremental speech recognition and pomdp-based dialogue
   systems.
-\newblock In {\em Proceedings of the 13th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue}.
+\newblock Dans les actes de \textit{ Proceedings of the 13th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue}.
 
-\bibitem[Selfridge and Heeman, 2012]{Selfridge2012b}
-Selfridge, E.~O. and Heeman, P.~A. (2012).
+\bibitem[{Selfridge \andnamec{} Heeman}(2012){Selfridge \andnamec{}
+  Heeman}]{Selfridge2012b}
+(Selfridge \andnamec{} Heeman, 2012) \hspace{.5em}E.~O. Selfridge \andname{}
+  P.~A. Heeman, 2012.
 \newblock A temporal simulator for developing turn-taking methods for spoken
   dialogue systems.
-\newblock In {\em Proceedings of the 13th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue}.
+\newblock Dans les actes de \textit{ Proceedings of the 13th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue}.
 
-\bibitem[Strombergsson et~al., 2013]{Strombergsson2013}
-Strombergsson, S., Hjalmarsson, A., Edlund, J., and House, D. (2013).
+\bibitem[{Strombergsson et~al.}(2013){Strombergsson, Hjalmarsson, Edlund,
+  \andnamec{} House}]{Strombergsson2013}
+(Strombergsson et~al., 2013) \hspace{.5em}S.~Strombergsson, A.~Hjalmarsson,
+  J.~Edlund, \andname{} D.~House, 2013.
 \newblock Timing responses to questions in dialogue.
-\newblock In {\em INTERSPEECH Proceedings}.
+\newblock Dans les actes de \textit{ INTERSPEECH Proceedings}.
 
-\bibitem[Sutton and Barto, 1998]{Sutton1998}
-Sutton, R.~S. and Barto, A.~G. (1998).
-\newblock {\em Reinforcement Learning, An Introduction}.
+\bibitem[{Sutton \andnamec{} Barto}(1998){Sutton \andnamec{}
+  Barto}]{Sutton1998}
+(Sutton \andnamec{} Barto, 1998) \hspace{.5em}R.~S. Sutton \andname{} A.~G.
+  Barto, 1998.
+\newblock \textit{ Reinforcement Learning, An Introduction}.
 \newblock The MIT Press, Cambridge, Massachusetts, London, England.
 
-\bibitem[Tanenhaus et~al., 1995]{Tanenhaus1995}
-Tanenhaus, M.~K., Spivey-Knowlton, M.~J., Eberhard, K.~M., and Sedivy, J.~C.
-  (1995).
+\bibitem[{Tanenhaus et~al.}(1995){Tanenhaus, Spivey-Knowlton, Eberhard,
+  \andnamec{} Sedivy}]{Tanenhaus1995}
+(Tanenhaus et~al., 1995) \hspace{.5em}M.~K. Tanenhaus, M.~J. Spivey-Knowlton,
+  K.~M. Eberhard, \andname{} J.~C. Sedivy, 1995.
 \newblock Integration of visual and linguistic information in spoken language
   comprehension.
-\newblock {\em Science}, 268:1632--1634.
+\newblock \textit{ Science\/}~\textit{268}, 1632--1634.
 
-\bibitem[Williams, 2012]{Williams2012b}
-Williams, J.~D. (2012).
+\bibitem[{Williams}(2012){Williams}]{Williams2012b}
+(Williams, 2012) \hspace{.5em}J.~D. Williams, 2012.
 \newblock A belief tracking challenge task for spoken dialog systems.
-\newblock In {\em NAACL HLT 2012 Workshop on Future directions and needs in the
-  Spoken Dialog Community: Tools and Data}.
+\newblock Dans les actes de \textit{ NAACL HLT 2012 Workshop on Future
+  directions and needs in the Spoken Dialog Community: Tools and Data}.
 
-\bibitem[Williams and Young, 2007]{Williams2007}
-Williams, J.~D. and Young, S. (2007).
+\bibitem[{Williams \andnamec{} Young}(2007){Williams \andnamec{}
+  Young}]{Williams2007}
+(Williams \andnamec{} Young, 2007) \hspace{.5em}J.~D. Williams \andname{}
+  S.~Young, 2007.
 \newblock Partially observable markov decision processes for spoken dialog
   systems.
-\newblock {\em Comput. Speech Lang.}
+\newblock \textit{ Comput. Speech Lang.\/}.
 
-\bibitem[Wir\'en, 1992]{Wiren1992}
-Wir\'en, M. (1992).
-\newblock {\em Studies in Incremental Natural Language Analysis}.
-\newblock PhD thesis, Linköping University, Linköping, Sweden.
+\bibitem[{Wir\'en}(1992){Wir\'en}]{Wiren1992}
+(Wir\'en, 1992) \hspace{.5em}M.~Wir\'en, 1992.
+\newblock \textit{ Studies in Incremental Natural Language Analysis}.
+\newblock Th\`ese de Doctorat, Linköping University, Linköping, Sweden.
 
-\bibitem[Wlodarczak and Wagner, 2013]{Wlodarczak2013}
-Wlodarczak, M. and Wagner, P. (2013).
+\bibitem[{Wlodarczak \andnamec{} Wagner}(2013){Wlodarczak \andnamec{}
+  Wagner}]{Wlodarczak2013}
+(Wlodarczak \andnamec{} Wagner, 2013) \hspace{.5em}M.~Wlodarczak \andname{}
+  P.~Wagner, 2013.
 \newblock Effects of talk-spurt silence boundary thresholds on distribution of
   gaps and overlaps.
-\newblock In {\em INTERSPEECH Proceedings}.
+\newblock Dans les actes de \textit{ INTERSPEECH Proceedings}.
 
-\bibitem[Yuan et~al., 2006]{Yuan2006}
-Yuan, J., Liberman, M., and Cieri, C. (2006).
+\bibitem[{Yuan et~al.}(2006){Yuan, Liberman, \andnamec{} Cieri}]{Yuan2006}
+(Yuan et~al., 2006) \hspace{.5em}J.~Yuan, M.~Liberman, \andname{} C.~Cieri,
+  2006.
 \newblock Towards an integrated understanding of speaking rate in conversation.
-\newblock In {\em INTERSPEECH Proceedings}.
+\newblock Dans les actes de \textit{ INTERSPEECH Proceedings}.
 
-\bibitem[Zhao et~al., 2015]{Zhao2015}
-Zhao, T., Black, A.~W., and Eskenazi, M. (2015).
+\bibitem[{Zhao et~al.}(2015){Zhao, Black, \andnamec{} Eskenazi}]{Zhao2015}
+(Zhao et~al., 2015) \hspace{.5em}T.~Zhao, A.~W. Black, \andname{} M.~Eskenazi,
+  2015.
 \newblock An incremental turn-taking model with active system barge-in for
   spoken dialog systems.
-\newblock In {\em Proceedings of the 16th Annual Meeting of the Special
-  Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock Dans les actes de \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \end{thebibliography}
