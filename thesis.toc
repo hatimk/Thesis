@@ -5,18 +5,18 @@
 \contentsline {section}{\numberline {2.2}Human dialogue}{10}{section.5}
 \contentsline {subsection}{\numberline {2.2.1}Dialogue acts}{10}{subsection.6}
 \contentsline {subsection}{\numberline {2.2.2}Turn-taking in human dialogue}{11}{subsection.7}
-\contentsline {subsection}{\numberline {2.2.3}Incremental speech processing in human conversation}{12}{subsection.11}
+\contentsline {subsection}{\numberline {2.2.3}Incremental speech processing in human conversation}{13}{subsection.11}
 \contentsline {section}{\numberline {2.3}Spoken dialogue systems and incremental behaviour}{13}{section.12}
 \contentsline {subsection}{\numberline {2.3.1}Spoken dialogue system}{13}{subsection.13}
-\contentsline {subsection}{\numberline {2.3.2}Dialogue systems evaluation}{17}{subsection.20}
-\contentsline {subsection}{\numberline {2.3.3}Incremental dialogue systems}{18}{subsection.21}
-\contentsline {subsection}{\numberline {2.3.4}Advantages of incremental processing}{19}{subsection.23}
-\contentsline {subsection}{\numberline {2.3.5}New challenges raised by incremental dialogue processing}{21}{subsection.24}
-\contentsline {subsection}{\numberline {2.3.6}Existing architectures}{23}{subsection.32}
-\contentsline {subsubsection}{Sequential paradigm}{23}{section*.33}
-\contentsline {subsubsection}{Multi-layer paradigm}{24}{section*.34}
-\contentsline {section}{\numberline {2.4}Reinforcement Learning}{25}{section.35}
-\contentsline {subsection}{\numberline {2.4.1}Definition}{25}{subsection.36}
+\contentsline {subsection}{\numberline {2.3.2}Dialogue systems evaluation}{18}{subsection.21}
+\contentsline {subsection}{\numberline {2.3.3}Incremental dialogue systems}{19}{subsection.22}
+\contentsline {subsection}{\numberline {2.3.4}Advantages of incremental processing}{20}{subsection.24}
+\contentsline {subsection}{\numberline {2.3.5}New challenges raised by incremental dialogue processing}{22}{subsection.25}
+\contentsline {subsection}{\numberline {2.3.6}Existing architectures}{24}{subsection.33}
+\contentsline {subsubsection}{Sequential paradigm}{24}{section*.34}
+\contentsline {subsubsection}{Multi-layer paradigm}{25}{section*.35}
+\contentsline {section}{\numberline {2.4}Reinforcement Learning}{25}{section.36}
+\contentsline {subsection}{\numberline {2.4.1}Definition}{25}{subsection.37}
 \contentsline {subsection}{\numberline {2.4.2}Application to dialogue systems}{29}{subsection.41}
 \contentsline {subsection}{\numberline {2.4.3}Dialogue simulation}{30}{subsection.42}
 \contentsline {section}{\numberline {2.5}Issues and motivation}{31}{section.43}

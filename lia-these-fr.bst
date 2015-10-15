@@ -1554,8 +1554,8 @@ FUNCTION {begin.bib}
     %GR next lines inserted just in case \andname, \andnamec, \Fr and \Eng" are not defined
   "\providecommand\Fr{} " write$ newline$
   "\providecommand\Eng{} " write$ newline$
-  "\providecommand\andname{et} " write$ newline$
-  "\providecommand\andnamec{et} " write$ newline$ newline$
+  "\providecommand\andname{and} " write$ newline$
+  "\providecommand\andnamec{and} " write$ newline$ newline$
 
   "\begin{thebibliography}{}" write$ newline$ newline$
 }

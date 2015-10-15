@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: introduction/introduction.aux
@@ -13,51 +13,52 @@ A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "Lu2011"
-Warning--I didn't find a database entry for "Watkins1989"
+Warning--I didn't find a database entry for "El-Asri2014"
+Warning--page numbers missing in Gales2007
+Warning--empty school in Macherey2009
 Warning--page numbers missing in Pietquin2013
 Warning--page numbers missing in Schatzmann2006
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 58 entries,
+You've used 80 entries,
             2936 wiz_defined-function locations,
-            959 strings with 15721 characters,
-and the built_in function-call counts, 36904 in all, are:
-= -- 3049
-> -- 2661
-< -- 4
-+ -- 840
-- -- 932
-* -- 2613
-:= -- 6468
-add.period$ -- 175
-call.type$ -- 58
-change.case$ -- 469
-chr.to.int$ -- 58
-cite$ -- 62
-duplicate$ -- 1295
-empty$ -- 2406
-format.name$ -- 1124
-if$ -- 7051
+            1072 strings with 19460 characters,
+and the built_in function-call counts, 49854 in all, are:
+= -- 4115
+> -- 3520
+< -- 5
++ -- 1090
+- -- 1232
+* -- 3456
+:= -- 8762
+add.period$ -- 241
+call.type$ -- 80
+change.case$ -- 633
+chr.to.int$ -- 80
+cite$ -- 86
+duplicate$ -- 1781
+empty$ -- 3301
+format.name$ -- 1472
+if$ -- 9519
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 59
-newline$ -- 299
-num.names$ -- 464
-pop$ -- 636
+missing$ -- 81
+newline$ -- 409
+num.names$ -- 640
+pop$ -- 867
 preamble$ -- 1
-purify$ -- 823
+purify$ -- 1124
 quote$ -- 0
-skip$ -- 1091
+skip$ -- 1496
 stack$ -- 0
-substring$ -- 1463
-swap$ -- 85
-text.length$ -- 4
+substring$ -- 2005
+swap$ -- 117
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1110
-warning$ -- 4
-while$ -- 366
+type$ -- 1520
+warning$ -- 6
+while$ -- 511
 width$ -- 0
-write$ -- 1233
-(There were 6 warnings)
+write$ -- 1698
+(There were 7 warnings)

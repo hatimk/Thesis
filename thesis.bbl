@@ -1,7 +1,7 @@
 \providecommand\Fr{}
 \providecommand\Eng{}
-\providecommand\andname{et}
-\providecommand\andnamec{et}
+\providecommand\andname{and}
+\providecommand\andnamec{and}
 
 \begin{thebibliography}{}
 
@@ -18,6 +18,12 @@
 (Austin, 1962) \hspace{.5em}J.~Austin, 1962.
 \newblock \textit{ How to Do Things with Words}.
 \newblock Oxford.
+
+\bibitem[{Baumann}(2014){Baumann}]{Baumann2014}
+(Baumann, 2014) \hspace{.5em}T.~Baumann, 2014.
+\newblock Partial representations improve the prosody of incremental speech
+  synthesis.
+\newblock Dans les actes de \textit{ Proceedings of Interspeech}.
 
 \bibitem[{Baumann \andnamec{} Schlangen}(2011){Baumann \andnamec{}
   Schlangen}]{Baumann2011}
@@ -46,6 +52,13 @@
 \newblock \textit{ Dynamic Programming}.
 \newblock Princeton University Press.
 
+\bibitem[{Breslin et~al.}(2013){Breslin, Gasic, Henderson, Kim, Szummer,
+  Thomson, Tsiakoulis, \andnamec{} Young}]{Breslin2013}
+(Breslin et~al., 2013) \hspace{.5em}C.~Breslin, M.~Gasic, M.~Henderson, D.~Kim,
+  M.~Szummer, B.~Thomson, P.~Tsiakoulis, \andname{} S.~Young, 2013.
+\newblock Continuous asr for flexible incremental dialogue.
+\newblock Dans les actes de \textit{ ICASSP},  8362--8366.
+
 \bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lefèvre, \andnamec{}
   Pietquin}]{Chandramohan2011}
 (Chandramohan et~al., 2011) \hspace{.5em}S.~Chandramohan, M.~Geist,
@@ -67,6 +80,15 @@
 \newblock \textit{ Using Language}.
 \newblock Cambridge University Press.
 
+\bibitem[{Daubigney et~al.}(2013){Daubigney, Geist, \andnamec{}
+  Pietquin}]{Daubigney2013}
+(Daubigney et~al., 2013) \hspace{.5em}L.~Daubigney, M.~Geist, \andname{}
+  O.~Pietquin, 2013.
+\newblock Model-free pomdp optimisation of tutoring systems with echo-state
+  networks.
+\newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
+  Conference}.
+
 \bibitem[{Dethlefs et~al.}(2012){Dethlefs, Hastie, Rieser, \andnamec{}
   Lemon}]{Dethlefs2012}
 (Dethlefs et~al., 2012) \hspace{.5em}N.~Dethlefs, H.~W. Hastie, V.~Rieser,
@@ -83,6 +105,12 @@
   interactive dialogue.
 \newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 143--170.
 
+\bibitem[{Duncan}(1972){Duncan}]{Duncan1972}
+(Duncan, 1972) \hspace{.5em}S.~Duncan, 1972.
+\newblock {Some signals and rules for taking speaking turns in conversations}.
+\newblock \textit{ Journal of Personality and Social Psychology\/}~\textit{23},
+  283--292.
+
 \bibitem[{Eckert et~al.}(1997){Eckert, Levin, \andnamec{}
   Pieraccini}]{Eckert1997}
 (Eckert et~al., 1997) \hspace{.5em}W.~Eckert, E.~Levin, \andname{}
@@ -98,12 +126,34 @@
 \newblock Towards human-like spoken dialogue systems.
 \newblock \textit{ Speech Communication\/}~\textit{50}, 630--645.
 
-\bibitem[{El~Asri et~al.}(2014){El~Asri, Lemonnier, Laroche, Pietquin,
-  \andnamec{} Khouzaimi}]{El-Asri2014}
-(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, R.~Lemonnier, R.~Laroche,
-  O.~Pietquin, \andname{} H.~Khouzaimi, 2014.
-\newblock {NASTIA: Negotiating Appointment Setting Interface}.
-\newblock Dans les actes de \textit{ Proceedings of LREC}.
+\bibitem[{Ekeinhor-Komi et~al.}(2014){Ekeinhor-Komi, Falih, Chardenon, Laroche,
+  \andnamec{} Lefevre}]{EkeinhorKomi2014}
+(Ekeinhor-Komi et~al., 2014) \hspace{.5em}T.~Ekeinhor-Komi, H.~Falih,
+  C.~Chardenon, R.~Laroche, \andname{} F.~Lefevre, 2014.
+\newblock Un assistant vocal personnalisable.
+\newblock Dans les actes de \textit{ Proceedings of the 21st Conférence sur le
+  Traitement Automatique des Langues Naturelles (TALN)}.
+
+\bibitem[{El~Asri et~al.}(2014){El~Asri, Khouzaimi, Laroche, \andnamec{}
+  Pietquin}]{El-Asri2014b}
+(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
+  \andname{} O.~Pietquin, 2014.
+\newblock Ordinal regression for interaction quality prediction.
+\newblock Dans les actes de \textit{ Acoustics, Speech and Signal Processing
+  (ICASSP), 2014 IEEE International Conference on}.
+
+\bibitem[{Fink et~al.}(1998){Fink, Schillo, Kummert, \andnamec{}
+  Sagerer}]{Fink1998}
+(Fink et~al., 1998) \hspace{.5em}G.~A. Fink, C.~Schillo, F.~Kummert, \andname{}
+  G.~Sagerer, 1998.
+\newblock Incremental speech recognition for multimodal interfaces.
+\newblock Dans les actes de \textit{ IECON}.
+
+\bibitem[{Gales \andnamec{} Young}(2007){Gales \andnamec{} Young}]{Gales2007}
+(Gales \andnamec{} Young, 2007) \hspace{.5em}M.~Gales \andname{} S.~Young,
+  2007.
+\newblock The application of hidden markov models in speech recognition.
+\newblock \textit{ Found. Trends Signal Process.\/}~\textit{1}.
 
 \bibitem[{Gasic et~al.}(2013){Gasic, Breslin, Henderson, Kim, Szummer, Thomson,
   Tsiakoulis, \andnamec{} Young}]{Gasic2013}
@@ -146,6 +196,13 @@
 \newblock Active prediction of syntactic information during sentence
   processing.
 \newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 35--58.
+
+\bibitem[{Jaffe \andnamec{} Feldstein}(1970){Jaffe \andnamec{}
+  Feldstein}]{Jaffe1970}
+(Jaffe \andnamec{} Feldstein, 1970) \hspace{.5em}J.~Jaffe \andname{}
+  S.~Feldstein, 1970.
+\newblock \textit{ Rhythms of dialogue}.
+\newblock Academic Press New York.
 
 \bibitem[{Johnston et~al.}(2014){Johnston, Chen, Ehlen, Jung, Lieske, Reddy,
   Selfridge, Stoyanchev, Vasilieff, \andnamec{} Wilpon}]{Johnston2014}
@@ -233,6 +290,11 @@
 \newblock Dans les actes de \textit{ Proceedings of the European Conference on
   Speech Communication and Technologies (Interspeech'07)}.
 
+\bibitem[{Levelt}(1989){Levelt}]{Levelt1989}
+(Levelt, 1989) \hspace{.5em}W.~J.~M. Levelt, 1989.
+\newblock \textit{ Speaking: From Intention to Articulation}.
+\newblock Cambridge, MA: MIT Press.
+
 \bibitem[{Levin et~al.}(1997){Levin, Pieraccini, \andnamec{}
   Eckert}]{Levin1997}
 (Levin et~al., 1997) \hspace{.5em}E.~Levin, R.~Pieraccini, \andname{}
@@ -248,6 +310,25 @@
   applications.
 \newblock Dans les actes de \textit{ AFIPS '65 (Fall, part I) Proceedings of
   the November 30--December 1, 1965, fall joint computer conference, part I}.
+
+\bibitem[{Lu et~al.}(2011){Lu, Nishimoto, \andnamec{} Minematsu}]{Lu2011}
+(Lu et~al., 2011) \hspace{.5em}D.~Lu, T.~Nishimoto, \andname{} N.~Minematsu,
+  2011.
+\newblock Decision of response timing for incremental speech recognition with
+  reinforcement learning.
+\newblock Dans les actes de \textit{ ASRU}.
+
+\bibitem[{Macherey}(2009){Macherey}]{Macherey2009}
+(Macherey, 2009) \hspace{.5em}K.~Macherey, 2009.
+\newblock \textit{ Statistical methods in natural language understanding and
+  spoken dialogue systems.}
+\newblock Th\`ese de Doctorat.
+
+\bibitem[{Matthias}(2009){Matthias}]{Matthias2009}
+(Matthias, 2009) \hspace{.5em}G.~M. Matthias, 2009.
+\newblock Incremental speech understanding in a multimodal web-based spoken
+  dialogue system.
+\newblock M\'emoire de Master, Massachusetts Institute of Technology.
 
 \bibitem[{McGraw \andnamec{} Gruenstein}(2012){McGraw \andnamec{}
   Gruenstein}]{McGraw2012}
@@ -270,6 +351,12 @@
 (Mori, 1970) \hspace{.5em}M.~Mori, 1970.
 \newblock The uncanny vally.
 \newblock Dans les actes de \textit{ Energy}.
+
+\bibitem[{Pakucs}(2003){Pakucs}]{Pakucs2003}
+(Pakucs, 2003) \hspace{.5em}B.~Pakucs, 2003.
+\newblock Towards dynamic multi-domain dialogue processing.
+\newblock Dans les actes de \textit{ 8th European Conference on Speech
+  Communication and Technology, EUROSPEECH - INTERSPEECH}.
 
 \bibitem[{Pietquin \andnamec{} Hastie}(2013){Pietquin \andnamec{}
   Hastie}]{Pietquin2013}
@@ -312,6 +399,15 @@
   Technologies: The 2009 Annual Conference of the North American Chapter of the
   Association for Computational Linguistics}, NAACL '09,  629--637.
 
+\bibitem[{Rosenthal et~al.}(2013){Rosenthal, Bohus, Kamar, \andnamec{}
+  Horvitz}]{Rosenthal2013}
+(Rosenthal et~al., 2013) \hspace{.5em}S.~Rosenthal, D.~Bohus, E.~Kamar,
+  \andname{} E.~Horvitz, 2013.
+\newblock Look versus leap: Computing value of information with
+  high-dimensional streaming evidence.
+\newblock Dans les actes de \textit{ Proceedings of the Twenty-Third
+  International Joint Conference on Artificial Intelligence (IJCAI)}.
+
 \bibitem[{Sacks et~al.}(1974){Sacks, Schegloff, \andnamec{}
   Jefferson}]{Sacks1974}
 (Sacks et~al., 1974) \hspace{.5em}H.~Sacks, E.~A. Schegloff, \andname{}
@@ -337,6 +433,11 @@
 \newblock A survey of statistical user simulation techniques for
   reinforcement-learning of dialogue management strategies.
 \newblock \textit{ The Knowledge Engineering Review\/}~\textit{21}.
+
+\bibitem[{Schegloff}(1968){Schegloff}]{Schegloff1968}
+(Schegloff, 1968) \hspace{.5em}E.~A. Schegloff, 1968.
+\newblock Sequencing in conversational openings.
+\newblock \textit{ American Anthropologist\/}~\textit{70}, pp. 1075--1095.
 
 \bibitem[{Schlangen \andnamec{} Skantze}(2011){Schlangen \andnamec{}
   Skantze}]{Schlangen2011}
@@ -383,12 +484,32 @@
 \newblock Dans les actes de \textit{ Proceedings of the 13th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue}.
 
+\bibitem[{Sidner et~al.}(2013){Sidner, Bickmore, Rich, Barry, Ring, Behrooz,
+  \andnamec{} Shayganfar}]{Sidner2013}
+(Sidner et~al., 2013) \hspace{.5em}C.~Sidner, T.~Bickmore, C.~Rich, B.~Barry,
+  L.~Ring, M.~Behrooz, \andname{} M.~Shayganfar, 2013.
+\newblock Demonstration of an always-on companion for isolated older adults.
+\newblock Dans les actes de \textit{ Proceedings of the 14th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[{Skantze \andnamec{} Schlangen}(2009){Skantze \andnamec{}
+  Schlangen}]{Skantze2009}
+(Skantze \andnamec{} Schlangen, 2009) \hspace{.5em}G.~Skantze \andname{}
+  D.~Schlangen, 2009.
+\newblock Incremental dialogue processing in a micro-domain.
+\newblock Dans les actes de \textit{ ACL}.
+
 \bibitem[{Strombergsson et~al.}(2013){Strombergsson, Hjalmarsson, Edlund,
   \andnamec{} House}]{Strombergsson2013}
 (Strombergsson et~al., 2013) \hspace{.5em}S.~Strombergsson, A.~Hjalmarsson,
   J.~Edlund, \andname{} D.~House, 2013.
 \newblock Timing responses to questions in dialogue.
 \newblock Dans les actes de \textit{ INTERSPEECH Proceedings}.
+
+\bibitem[{Sullivan}(1947){Sullivan}]{Sullivan1947}
+(Sullivan, 1947) \hspace{.5em}H.~Sullivan, 1947.
+\newblock \textit{ Conceptions of Modern Psychiatry}.
+\newblock Norton.
 
 \bibitem[{Sutton \andnamec{} Barto}(1998){Sutton \andnamec{}
   Barto}]{Sutton1998}
@@ -404,6 +525,28 @@
 \newblock Integration of visual and linguistic information in spoken language
   comprehension.
 \newblock \textit{ Science\/}~\textit{268}, 1632--1634.
+
+\bibitem[{Walker et~al.}(1997){Walker, Litman, Kamm, \andnamec{}
+  Abella}]{Walker1997}
+(Walker et~al., 1997) \hspace{.5em}M.~A. Walker, D.~J. Litman, C.~A. Kamm,
+  \andname{} A.~Abella, 1997.
+\newblock Paradise: a framework for evaluating spoken dialogue agents.
+\newblock Dans les actes de \textit{ Proceedings of the eighth conference on
+  European chapter of the Association for Computational Linguistics}.
+
+\bibitem[{Wang et~al.}(2014){Wang, Chen, Wang, Tian, Wu, \andnamec{}
+  Wang}]{Wang2014}
+(Wang et~al., 2014) \hspace{.5em}Z.~Wang, H.~Chen, G.~Wang, H.~Tian, H.~Wu,
+  \andname{} H.~Wang, 2014.
+\newblock Policy learning for domain selection in an extensible multi-domain
+  spoken dialogue system.
+\newblock Dans les actes de \textit{ Proceedings of the 19th Conference on
+  Empirical Methods in Natural Language Processing (EMNLP)}.
+
+\bibitem[{Watkins}(1989){Watkins}]{Watkins1989}
+(Watkins, 1989) \hspace{.5em}C.~J. C.~H. Watkins, 1989.
+\newblock \textit{ Learning from Delayed Rewards}.
+\newblock Th\`ese de Doctorat, King's College.
 
 \bibitem[{Williams}(2012){Williams}]{Williams2012b}
 (Williams, 2012) \hspace{.5em}J.~D. Williams, 2012.
@@ -422,7 +565,7 @@
 \bibitem[{Wir\'en}(1992){Wir\'en}]{Wiren1992}
 (Wir\'en, 1992) \hspace{.5em}M.~Wir\'en, 1992.
 \newblock \textit{ Studies in Incremental Natural Language Analysis}.
-\newblock Th\`ese de Doctorat, Linköping University, Linköping, Sweden.
+\newblock Th\`ese de Doctorat, Linkoping University, Linkoping, Sweden.
 
 \bibitem[{Wlodarczak \andnamec{} Wagner}(2013){Wlodarczak \andnamec{}
   Wagner}]{Wlodarczak2013}
@@ -431,6 +574,11 @@
 \newblock Effects of talk-spurt silence boundary thresholds on distribution of
   gaps and overlaps.
 \newblock Dans les actes de \textit{ INTERSPEECH Proceedings}.
+
+\bibitem[{Yngve}(1970){Yngve}]{Yngve1970}
+(Yngve, 1970) \hspace{.5em}V.~H. Yngve, 1970.
+\newblock On getting a word in edgewise.
+\newblock Dans les actes de \textit{ CLS-70}.
 
 \bibitem[{Yuan et~al.}(2006){Yuan, Liberman, \andnamec{} Cieri}]{Yuan2006}
 (Yuan et~al., 2006) \hspace{.5em}J.~Yuan, M.~Liberman, \andname{} C.~Cieri,
