@@ -248,7 +248,7 @@
 		Another interesting aspect about incremental dialogue systems is that they can leverage multimodality \cite{Fink1998}. In fact, there are two aspects of multimodality and they can both benefit from incremental processing:
 								
 		\begin{itemize}
-		   \item \textbf{Input multimodality:} Most researchers in the community refer to this aspect when talking about mutimodal systems. A system input can be multimodal in the sense that it can handle speech input, but also text, gesture or eye-gaze for example. The main challenge faced by this kind of setup is the problem of mixing these inputs in order to infer the correct user intent. In the case of multimodal systems, the world is considered as a flow of information coming from multiple sources of information \cite{Rosenthal2013}. The different modalities are not necessarily sampled with the same rate nor support the same delays, therefore, it is important to find convenient ways to synchronise them.
+		   \item \textbf{Input multimodality:} Most researchers in the community refer to this aspect when talking about mutimodal systems. A system input can be multimodal in the sense that it can handle speech input, but also text, gesture or eye-gaze for example. The main challenge faced by this kind of setup is the problem of mixing these inputs in order to infer the correct user intent. In the case of multimodal systems, the world is considered as a flow of information coming from multiple sources of information \cite{Chao2012,Rosenthal2013}. The different modalities are not necessarily sampled with the same rate nor support the same delays, therefore, it is important to find convenient ways to synchronise them.
 		   \item \textbf{Output multimodality:} The machine can also use different channels of information while communicating \cite{Matthias2009}. For example, the speech modality can be used at the same time as a moving avatar with facial expressions. It can also be coupled with the input multimodality paradigm to create highly interactive interfaces like \cite{Johnston2014}.
 		\end{itemize}
 
@@ -308,7 +308,6 @@ This leads to one of the main challenges raised by incremental processing: the a
 \label{soa:rl}
 	\subsection{Definition}
     
-        %HK> Remplacer tous les $$ par des eqnarray.
     	Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figures out through the process of \textit{trial and error} what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Figure \ref{fig:rlscheme}).
         
         \begin{figure*}[ht]
@@ -322,100 +321,113 @@ This leads to one of the main challenges raised by incremental processing: the a
         \begin{itemize}
             \item $\mathcal{S}$ is the \textit{state space}. At each time step $t$, the agent is in some state $s_t \in \mathcal{S}$.
             \item $\mathcal{A}$ is the \textit{action space}. At each time step $t$, the agent decides to take action $a_t \in \mathcal{A}$.
-            \item $T$ is the \textit{transition model}. It is the set of probabilities $\mathbb{P} (s_{t+1} = s'|s_t = s, a_t=a)$ for every $(s,s',a) \in \mathcal{S}^2x\mathcal{A}$.
-            \item $R$ is the \textit{reward model}. If $r_t$ is the immediate reward due to taking action $a_t$ in state $s_t$, then $R$ is the set of distributions of $r_t$ for every $(s_t,a_t) \in (\mathcal{S},\mathcal{A})$.
+            \item $T$ is the \textit{transition model}. It is the set of probabilities $\mathbb{P} (s_{t+1} = s'|s_t = s, a_t=a)$ for every $(s,s',a) \in \mathcal{S}^2 \text{x} \mathcal{A}$.
+            \item $R$ is the \textit{reward model}. Let $r$ be the immediate reward due to taking action $a$ in state $s$, then $R$ is the set of distributions of $r$ for every $(s,a) \in \mathcal{S} \text{x} \mathcal{A}$.
             \item $\gamma \in [0,1[$ is referred to as the \textit{discount factor}. In the RL framework, the aim of the agent is not to maximise the immediate reward but the \textit{expected return}, where the return $R_t$ is defined as follows:
+						
+						\begin{eqnarray}
+							R_t & = & r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + ... \nonumber \\
+							& = & \sum_{k=0}^\infty \gamma^k r_{t+k+1} \label{eq:return}
+						\end{eqnarray}
             
-            $$ R_t = r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + ... = \sum_{k=0}^\infty \gamma^k r_{t+k+1} $$
-            
-            Therefore, when $\gamma = 0$, the agent maximises the immediate reward only and when $\gamma$ tends towards 1, the agent maximises the sum of all the future rewards. More generally, the parameter $\gamma$ controls how far-sighted is the agent in terms of future rewards.
+            Therefore, when $\gamma = 0$, the agent maximises the immediate reward only and when $\gamma$ tends towards 1, the agent maximises the sum of all the future rewards. In other words, the parameter $\gamma$ controls how far-sighted is the agent in terms of future rewards.
 		\end{itemize}
         
-        A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is at state s. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information necessary to predict the future expected return, and no information about the past is necessary. Therefore, given a policy, each state $s \in \mathcal{S}$ is given a value $V^\pi (s)$ which is the expected return for being at this state and following the policy $\pi$ afterwards:
-        
-        	$$ V^{\pi} (s) = \mathbb{E} [R_t | s_t = s, \pi] $$
+        A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is at state s. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information necessary to predict the future, and no information about what happened in the past is necessary. Therefore, given a policy, each state $s \in \mathcal{S}$ is given a value $V^\pi (s)$ which is the expected return for being at this state and following the policy $\pi$ afterwards:
+					
+					\begin{eqnarray}
+						V^{\pi} (s) & = & \mathbb{E} [R_t | s_t = s, \pi] \label{eq:valuefunc}
+					\end{eqnarray}
             
       	Another interesting quantity is the expected return knowing the current state but also the next action, after which $\pi$ is followed. This is referred to as the Q-function:
-        
-        	$$ Q^{\pi} (s,a) = \mathbb{E} [R_t | s_t = s, a_t = a, \pi] $$
+					
+					\begin{eqnarray}
+						Q^{\pi} (s,a) & = & \mathbb{E} [R_t | s_t = s, a_t = a, \pi] \label{eq:qfunc}
+					\end{eqnarray}
             
        	Given the definition of $R_t$, we can notice that 
         \begin{eqnarray}
           	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
-           	& = & \mathbb{E} [r_t + \sum_{k=0}^\infty \gamma^k r_{(t+1)+k+1} | s_t = s, \pi] \nonumber \\
+           	& = & \mathbb{E} [r_t + \gamma \sum_{k=0}^\infty \gamma^k r_{(t+1)+k+1} | s_t = s, \pi] \nonumber \\
             & = & \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, \pi] \nonumber \\
-            & = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, \pi] \nonumber
+						& = & \mathbb{E} [r_t + \gamma \mathbb{E} [R_{t+1}|s_{t+1}] | s_t = s, \pi] \nonumber \\
+            & = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, \pi] \label{eq:vbellman}
         \end{eqnarray}
             
-     	This is known as the Bellman equation and it can also be written for the Q-function as follows
-        
-        	$$ Q^{\pi} (s_t,a_t) = \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, a_t = a, \pi] $$
+     	This is known as the Bellman equation for $V^{\pi}$ and it can also be written for the Q-function, as follows
+					
+					\begin{eqnarray}
+						Q^{\pi} (s_t,a_t) & = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, a_t = a, \pi] \label{eq:qbellman}
+					\end{eqnarray}
             
-       	A natural question that can be asked at this point is: how do we compute these values? In reinforcement learning, this is known as the \textit{evaluation problem}. The transition model $T$ and the reward model $R$ are the elements that define the dynamic of the MDP. If they are known, $V^{\pi}$ can be directly computed. If we call $P_{ss'}^a = \mathbb{P} (s_{t+1} = s' | s_t = s, a_t = a)$ and $R_{ss'}^a$ the reward of choosing action a on state s and landing on s', we can write:
+       	A natural question that can be asked at this point is: how do we compute these values? In reinforcement learning, this is known as the \textit{evaluation problem}. The transition model $T$ and the reward model $R$ are the elements that define the dynamics of the MDP. If they are known, $V^{\pi}$ can be directly computed. If we call $P_{ss'}^a = \mathbb{P} (s_{t+1} = s' | s_t = s, a_t = a)$ and $R_{ss'}^a$ the reward of choosing action \textit{a} on state \textit{s} and landing on \textit{s}', we can write:
         
         \begin{eqnarray}
           	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
            	& = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [R_t | s_t = s, a_t = a, \pi] \nonumber \\
             & = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, a_t = a, \pi] \nonumber \\
             & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \mathbb{E} [R_{t+1} | s_{t+1} = s', \pi]) \nonumber \\
-            & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^{\pi} (s')) \nonumber
+            & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^{\pi} (s')) \label{eq:dynprog}
         \end{eqnarray}
             
-      	It is possible to define an order over the policies. Saying that $\pi_1$ is better that $\pi_2$ means that for all the states $s$, $V^{\pi_1} (s) \geq V^{\pi_2} (s)$. It can be shown that there exists at least one policy that is better that all the others: it is called the \textit{optimal policy} ($\pi^*$). To simplify the notations, $V^{\pi^*}$ will be referred to as $V^*$ and it defined as
-        
-        	$$ \forall s \in \mathcal{S}, \text{ } V^* (s) = \max_\pi V^\pi (s) $$
+      	It is possible to define an order over the policies. Saying that $\pi_1$ is better that $\pi_2$ means that for all the states $s$, $V^{\pi_1} (s) \geq V^{\pi_2} (s)$. It can be shown that there exists at least one policy that is better than all the others: it is called the \textit{optimal policy} ($\pi^*$). To simplify the notations, $V^{\pi^*}$ will be referred to as $V^*$ and it is defined as
+					
+					\begin{eqnarray}
+						\forall s \in \mathcal{S}, \text{ } V^* (s) & = & \max_\pi V^\pi (s) \label{eq:voptim}
+					\end{eqnarray}
             
        	Similarly, we can define $Q^*$ as
-        
-        	$$ \forall (s,a) \in \mathcal{S}x\mathcal{A}, \text{ } Q^*(s,a) = \max_\pi Q^{\pi}(s,a) $$
+					
+					\begin{eqnarray}
+						\forall (s,a) \in \mathcal{S} \text{x} \mathcal{A}, \text{ } Q^*(s,a) & = & \max_\pi Q^{\pi}(s,a) \label{eq:qoptim}
+					\end{eqnarray}
 
-        The aim of reinforcement learning is to learn the optimal policy. Similarly to what has been shown for $V^{\pi}$, if the transition and the reward models are known, the Bellman equation corresponding to $V^*$ can be written with respect to these models:
-
-                $$ V^*(s) = \max_a \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^*(s')) $$
+        The aim of reinforcement learning is to learn the optimal policy. Similarly to what has been shown for $V^{\pi}$, if the transition and the reward models are known, the Bellman equation corresponding to $V^*$ (called the \textit{Bellman optimality equation}) can be written with respect to these models (similarly to \ref{eq:dynprog}):
+								
+					\begin{eqnarray}
+						V^*(s) & = & \max_a \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^*(s')) \label{eq:vbellmanoptim}
+					\end{eqnarray}
         
         A similar form can be also be shown about the Q-function
+								
+					\begin{eqnarray}
+						Q^*(s,a) & = & \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \max_{a' \in \mathcal{A}} Q^*(s',a')) \label{eq:qbellmanoptim}
+					\end{eqnarray}
 
-                $$ Q^*(s,a) = \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \max_{a' \in \mathcal{A}} Q^*(s',a'))  $$
-
-        A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $T$ and $R$ are unknown.
-		
-				In order to better understand how these methods converge toward the optimal policy, it is necessary to tackle the question of \textit{control}, which goes along with the notion of evaluation introduced earlier:
+        A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function, in the sense that $\pi^*(s) = \argmax_a Q^*(s,a)$). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $T$ and $R$ are unknown. The agent learns directly from interacting with the environment (\textit{model-free} approach).
 				
-				\begin{itemize}
-					\item \textbf{Evaluation:} Given a policy $\pi$, what is the value of $V^{\pi}$ (resp. $Q^{\pi})$ at each state s (resp. at each state-action coupe (s,a))?
-					\item \textbf{Control:} Given $V^{\pi}$ or $Q^{\pi}$, how to come up with a policy $\pi'$ that results in better returns that $\pi$?
-				\end{itemize}
+				It is possible to try to learn $T$ and $R$ first and then applying a \textit{model-based} algorithm to figure out the optimal policy. Nevertheless, this is not necessary as most algorithms compute the optimal policy by directly estimating the Q-function. This can be done in a straightforward fashion by running several episodes\footnote{To keep things simple in this introduction to reinforcement learning, we consider that our MDP stops eventually.}, computing the returns for each state-action couple and for each episode, then using the mean return over all the episodes as an estimate of $V^\pi$ or $Q^\pi$. Algorithms using this kind of approach belong to the category of \textit{Monte-Carlo methods}.
 				
-				%HK> Clarifier la notion d'iteration, séparer DP du reste.
-				%As shown in Figure \ref{fig:evalctrl}
-				Reinforcement learning algorithms (Dynamic Programming and the other categories discussed later on) keep evaluating the current policy and at the same time, altering that policy in order to improve it. A naive approach would be to fix the current policy and to perform as many evaluation iterations as necessary in order to gain a certain confidence over the estimations of $V$ or $Q$ and then to derive a new policy given these values. This is known as \textit{Policy Iteration} but this is not the most efficient way to proceed (so many iterations are needed). In fact, performing only one evaluation iteration before the next control step can be shown to be enough, keeping the convergence guarantees. This is referred to as \textit{Value Iteration}. Also, the notion of iteration can be viewed differently given the approach and the algorithm at hand. In order to refer to the general idea of intertwining evaluation and control, the expression \textit{General Policy Iteration} (GPI) is used.
-
-        %HK> Parler de la GPI.
-        Fortunately, there are other methods that have been shown to be successful in learning the optimal policy without any prior knowledge about the MDP dynamics as they completely learn by trial and error. The first set of approaches are called \textit{Monte Carlo}; the Q-function is directly evaluated by calculating the mean of the returns $R_t$ for each coupe $(s,a)$. Nevertheless, this method requires the current learning episode to be finished before updating the Q-function.
-
-        %\begin{figure}
-          %\centering
-          %\includegraphics[scale=0.7]{figures/evalctrl.png}
-          %\caption{The alternation between evaluation and control}
-          %\label{fig:evalctrl}
-        %\end{figure}
-
-        The second and the most widely used approach is called \textit{Temporal Difference Learning} (TD-Learning). The algorithms that belong to this category do not wait for the end of the episode to update the Q-function like in the case of Monte-Carlo, instead, they use other estimated values for other states and other actions; this is known as \textit{bootstraping}. The most famous TD algorithms are \textit{sarsa} and Q-Learning. The first one updates $Q(s_t,a_t)$ at time $t$ by choosing the next action given a policy derived from Q ($\epsilon$-greedy for example), obtaining an immediate reward $r_t$, moving to state $s_{t+1}$ and choosing $a_{t+1}$ using a policiy derived from Q again, then updating Q as follows ($\alpha$ being an update parameter):
-
-            $$ Q(s_t,a_t) = Q(s_t,a_t) + \alpha [r_t + \gamma Q(s_{t+1},a_{t+1}) - Q(s_t,a_t)] $$
-
-        %HK> Une référence pour sarsa?
-        The idea behind this way of bootstrapping is that the Q is updated at each step by considering that it will follow a policy derived from Q during the next steps; this is an \textit{on-policy} algorithm. On the contrary, Q-Learning \cite{Watkins1989} is an \textit{off-policy} algorithm as it directly estimates $Q^*$ by performing the following update at each step:
-
-            $$ Q(s_t,a_t) = Q(s_t,a_t) + \alpha [r_t + \gamma \max_a Q(s_{t+1},a_{t+1}) - Q(s_t,a_t)] $$
-
+				However, as the agent interacts with the environment, it encounters a similar dilemma to the one faced in the bandit problem \cite{Berry1985}: how to manage the trade-off between \textit{exploration} and \textit{exploitation}. While being at a state $s \in \mathcal{S}$, the agent can choose one action among many. Let us say that the Q-function is initialised as a zero function. Therefore, at the beginning the agent has no preference and selects a random action. If this yields a positive reward, then the agent has the choice between these two options to make the next decision:
+				
+				\begin{enumerate}
+					\item Making the same decision again as it already knows that it is likely to generate a positive reward.
+					\item Picking another action because it may yield an even greater reward.
+				\end{enumerate}
+				
+				In the first case, the agent is exploiting its current knowlegde of the environment whereas in the second case, it is said to be exploring as it is increasing its knowledge about the environment (with the risk of generating low or negative rewards in the meanwhile). Because rewards are stochastic, it is not obvious to determine whether we have sufficient data to trust our estimates and start exploiting most of the time. This is a difficult problem and a simple way to deal with it is to use the $\epsilon$-greedy approach, where the agent chooses a random action with a probability of $\epsilon$ and sticks to the greedy action (with respect to the current estimated Q-function) the rest of the time. Nevertheless, more robust solutions have already been suggested like \cite{Auer2002} for the bandit problem and \cite{Auer2005} for reinforcement learning.
+				
+				Reinforcement learning algorithms keep evaluating the current policy and at the same time, altering that policy in order to improve it. A naive approach would be to fix the current policy and to perform as many evaluation iterations as necessary in order to gain a certain confidence over the estimations of $V$ or $Q$ and then to derive a new policy to follow, given these values. This is known as \textit{Policy Iteration} but this is not the most efficient way to proceed (so many iterations are needed). In fact, performing only one evaluation iteration before the next policy improvement step can be shown to be enough, keeping the convergence guarantees. This is referred to as \textit{Value Iteration}. Also, the notion of iteration can be viewed differently given the approach and the algorithm at hand. In order to refer to the general idea of intertwining evaluation and control, the expression \textit{General Policy Iteration} (GPI) is used.
+				
+				In fact, it is also possible to evaluate $V$ or $Q$ in an even more fine-grained manner. Instead, of waiting until the end of the episode to update these values, it is possible to do it after each new decision. That is what \textit{Temporal-difference (TD) methods} do. In comparison with the Monte-Carlo approach, the new sample for $V^\pi(s)$ or $Q^\pi(s,a)$ is no longer the real return obtained in the episode but an estimated one using the Bellman equation. In the case of the \textit{sarsa} algorithm\footnote{See \cite{Sutton1998} for the algorithm description.}, the Q-function is updated as follows\footnote{At this point, we will no longer use $V$ as $Q$ is the most commonly used in reality. $V$ is mostly used for pedagogical purposes.} ($\alpha_t$ being a decreasing parameter with time):
+				
+				\begin{eqnarray}
+					Q(s_t,a_t) & = & Q(s_t,a_t) + \alpha_t [r_t + \gamma Q(s_{t+1},a_{t+1}) - Q(s_t,a_t)] \label{eq:sarsaupdate}
+				\end{eqnarray}
+				
+				It is important to notice that $a_{t+1}$ is the action chosen by following the current estimated policy derived from Q ($\epsilon$-greedy for example) and which will be actually followed in the next step. The sarsa algorithm is therefore called an \textit{on-policy} algorithm. These conditions can be relaxed giving birth to another category of algorithms, the \textit{off-policy} ones. The most famous is \textit{Q-Learning}\footnote{See \cite{Sutton1998} for the algorithm description.} \cite{Watkins1989} where the Q-function is updated as follows:
+				
+				\begin{eqnarray}
+					Q(s_t,a_t) & = & Q(s_t,a_t) + \alpha_t [r_t + \gamma \max_a Q(s_{t+1},a) - Q(s_t,a_t)] \label{eq:qlearningupdate}
+				\end{eqnarray}
+				
+				Here, the policy used for evaluation is not necessarily the one that is followed.
 
     \subsection{Application to dialogue systems}
     
-    	Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997} and since then, it has the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answer at that time. Partially Observable Markov Decision Processes (POMDPs) are also widely used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}.
+    	Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997} and since then, it has been the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answers at that time. Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007} are also widely used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}.
         
-        % Citer un maximum de papiers après Meena2013, notamment Turn-Yielding cues qui a cité Beattie1982.
-        In the field of incremental dialogue and turn-taking management, supervised learning is more common. The main problem tackled by researchers is the identification of the exact moments where the system should take the floor in order to achieve smooth turn-taking \cite{Raux2008,Meena2013}. Binary classifiers are used and the features they are fed are of different natures: lexical, semantic, prosodic...etc...However, a few papers tackled this problem by using reinforcement learning.
+        In the field of incremental dialogue and turn-taking management, supervised learning is more common. The main problem tackled by researchers is the identification of the exact moments where the system should take the floor in order to achieve smooth turn-taking \cite{Raux2008,Gravano2011,Meena2013}. Binary classifiers are used and the features they are fed are of different natures: lexical, semantic, prosodic...etc...However, a few papers tackled this problem by using reinforcement learning.
         
         \cite{Jonsdottir2008} used reinforcement learning while considering prosodic features only. Backchanneling for example can be performed by humans independently from the meaning. The cost function (negative reward) is taken as gaps and overlaps, hence following Sack's principle discussed in Section \ref{soa:ttphuman}.
         
@@ -427,20 +439,20 @@ This leads to one of the main challenges raised by incremental processing: the a
     
     \subsection{Dialogue simulation}
     
-    	A couple of decades ago, as dialogue systems started to become a popular research fields, the need for evaluation means in order to assess their quality started getting more and more important. Therefore, researchers turn to user simulation methods (also referred to as user modeling). In \cite{Eckert1997}, some of the advantages of these techniques are depicted: reduced cost with automatic evaluation of a large number of dialogues, less error risk, easy modeling of different user populations, possibility of using the same user model across different concurrent dialogue systems for comparison and providing a tool to quickly generate corpora for machine learning techniques at a low cost. Nevertheless, the authors recognise that user simulation cannot totally replace interactions with real users in the process of designing reliable dialogue systems: \textit{However, we believe that tests with human users are still vital for verifying the simulation models.}.
+    	A couple of decades ago, with the development of the dialogue systems research field, the need for evaluation means in order to assess their quality started getting more and more important. Therefore, researchers turn to user simulation methods (also referred to as user modeling). In \cite{Eckert1997}, some of the advantages of these techniques are depicted: reduced cost with automatic evaluation of a large number of dialogues, less error risk, easy modeling of different user populations, possibility of using the same user model across different concurrent dialogue systems for comparison and providing a tool to quickly generate corpora for machine learning techniques at a low cost. Nevertheless, the authors recognise that user simulation cannot totally replace interactions with real users in the process of designing reliable dialogue systems: \textit{However, we believe that tests with human users are still vital for verifying the simulation models.}.
         
-       	Simulating users accurately is a challenging task as their behaviours vary considerably from a person to another and moreover, the same user can change her preferences over time (concept-drift) \cite{Schatzmann2006}. Evaluating a user simulator and whether it handles such variability or not is a research track in itself \cite{Pietquin2013} and the qualities required are of different kinds. The trained user simulator should be consistent with the data that has been used for the training and the sequence of dialogue acts generated should be coherent. In addition, when it is used in turn to train a data-driven dialogue strategy, the quality of the latter is also an evaluation criteria. Also, it is important that the results obtained in simulation give strong indications about the behaviours with real users while being task independent and automatically able to automatically compute assessments.
+       	Simulating users accurately is a challenging task as their behaviours vary considerably from a person to another and moreover, the same user can change her preferences over time (concept-drift) \cite{Schatzmann2006}. Evaluating a user simulator and whether it handles such variability or not is a research track in itself \cite{Pietquin2013} and the qualities required are of different kinds. The trained user simulator should be consistent with the data that has been used for the training and the sequence of dialogue acts generated should be coherent. In addition, when it is used in turn to train a data-driven dialogue strategy, the quality of the latter is also an evaluation criteria. Also, it is important that the results obtained in simulation give strong indications about the behaviours with real users while being task independent and able to automatically compute assessments.
         
         User simulation is useful during the conception phase of a dialogue system. However, training the simulator from data needs the dialogue system to be conceived already. Therefore, trying to come up with a simple model with only a few parameters is not always a bad idea as it has been proven to achieve good results as well \cite{Schatzmann2007}.
         
         %HK> Citer paradise après la liste des KPIs pour la reward function
-        User simulator is also quite similar to the dialogue management task. As a consequence, it is legitimate to ask the following question: why not use reinforcement learning to train user simulators? The answer is that in the case of dialogue management, it is easier to come up with a reasonable reward function: task completion, dialogue duration, subjective evaluation...etc... When it comes to user simulation, the objective function is how well a real user is imitated which is impossible to handcraft. Fortunately, there exists a framework where the reward function is automatically inferred from data which is particularly useful here: inverse reinforcement learning \cite{Chandramohan2011}.
+        User simulator is also quite similar to the dialogue management task. As a consequence, it is legitimate to ask the following question: why not use reinforcement learning to train user simulators? The answer is that in the case of dialogue management, it is easier to come up with a reasonable reward function: task completion, dialogue duration, subjective evaluation...etc... When it comes to user simulation, the objective function is how well a real user is imitated which is impossible to handcraft. Fortunately, there exists a framework where the reward function is automatically inferred from data which is particularly useful here: Inverse Reinforcement Learning \cite{Chandramohan2011}.
         
         When it comes to incremental dialogue systems, the only existing user simulator in our knowledge is the one described in \cite{Selfridge2012b}. Its state is update every 10 ms. However, the \textit{ASR instability} phenomenon is not replicated, that is to say that the ASR hypothesis construction is monotonous whereas in reality, it is not the case. When a new audio signal increment is heard by the ASR, the output can be partially or totally modified. In this simulator, only the simple case where a new increment is added to the output is modeled.
 
 \section{Issues and motivation}
     
-    A study led by the Market Intelligence and Consulting Institute shows that the market of artificial intelligence should grow exponentially in the next decade. Virtual assistants play the main role in this domain and they are predicted to multiply their market share by 2.5. Moreover, the market is expected to multiply its turn over by 14 (30\% growth per year on average). This shows that SDSs have reached a level of maturity that enables them to significantly interest the market. Therefore, designing robust, reliable and user-friendly spoken dialogue systems raises an important issue.
+    A study led by the Market Intelligence and Consulting Institute shows that the market of artificial intelligence should grow exponentially in the next decade. Virtual assistants play the main role in this domain and they are predicted to multiply their market share by 2.5. Moreover, the market is expected to multiply its turn over by 14 (30\% growth per year on average). This shows that spoken dialogue systems have reached a level of maturity that enables them to enter the market. Therefore, designing robust, reliable and user-friendly spoken dialogue systems raises an important issue.
     
     Nevertheless, even though virtual assistants like Siri or other more domain specific spoken dialogue systems can offer a quite reasonable quality of service for certain tasks, the quality of the interaction is still poor, making room for improvement in different areas:
     
@@ -461,7 +473,7 @@ This leads to one of the main challenges raised by incremental processing: the a
         \item Turn-taking optimisation to improve dialogue efficiency (generally measured through dialogue duration and task completion). The main objective is to improve error handling by reporting errors quickly, and to improve reactivity in general as the system can respond as soon as it has enough information to do so. Unlike the previous stream, semantic features have more importance here.
     \end{enumerate}
     
-    This thesis is a contribution to the second research stream. First we try to understand what is turn-taking in human-human interaction, then we ask ourselves what phenomena can be replicated in human-machine dialogue in order to offer a better error-handling and an increased efficiency in general.
+    This thesis is a contribution to the second research stream. First we try to understand what is turn-taking in human-human interaction, then we ask ourselves what phenomena can be replicated in human-machine dialogue in order to offer a better error-handling and an increased efficiency in general. Finally, we use reinforcement learning to conceive an optimal turn-taking strategy.
     
     
     

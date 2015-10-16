@@ -14,6 +14,19 @@
   evidence for advantages over nonincremental methods.
 \newblock Dans les actes de \textit{ Decalog}.
 
+\bibitem[{Auer et~al.}(2002){Auer, Cesa-Bianchi, \andnamec{}
+  Fischer}]{Auer2002}
+(Auer et~al., 2002) \hspace{.5em}P.~Auer, N.~Cesa-Bianchi, \andname{}
+  P.~Fischer, 2002.
+\newblock Finite-time analysis of the multiarmed bandit problem.
+\newblock \textit{ Machine Learning\/}.
+
+\bibitem[{Auer \andnamec{} Ortner}(2005){Auer \andnamec{} Ortner}]{Auer2005}
+(Auer \andnamec{} Ortner, 2005) \hspace{.5em}P.~Auer \andname{} R.~Ortner,
+  2005.
+\newblock Online-regret bounds for a new reinforcement-learning algorithm.
+\newblock Dans les actes de \textit{ 1st Austrian Cognitive Vision Workshop}.
+
 \bibitem[{Austin}(1962){Austin}]{Austin1962}
 (Austin, 1962) \hspace{.5em}J.~Austin, 1962.
 \newblock \textit{ How to Do Things with Words}.
@@ -52,6 +65,13 @@
 \newblock \textit{ Dynamic Programming}.
 \newblock Princeton University Press.
 
+\bibitem[{Berry \andnamec{} Fristedt}(1985){Berry \andnamec{}
+  Fristedt}]{Berry1985}
+(Berry \andnamec{} Fristedt, 1985) \hspace{.5em}D.~A. Berry \andname{}
+  B.~Fristedt, 1985.
+\newblock \textit{ Bandit problems : sequential allocation of experiments}.
+\newblock Chapman and Hall London.
+
 \bibitem[{Breslin et~al.}(2013){Breslin, Gasic, Henderson, Kim, Szummer,
   Thomson, Tsiakoulis, \andnamec{} Young}]{Breslin2013}
 (Breslin et~al., 2013) \hspace{.5em}C.~Breslin, M.~Gasic, M.~Henderson, D.~Kim,
@@ -74,6 +94,13 @@
 \newblock Optimizing spoken dialogue management with fitted value iteration.
 \newblock Dans les actes de \textit{ INTERSPEECH 11th Annual Conference of the
   International Speech}.
+
+\bibitem[{Chao \andnamec{} Thomaz}(2012){Chao \andnamec{} Thomaz}]{Chao2012}
+(Chao \andnamec{} Thomaz, 2012) \hspace{.5em}C.~Chao \andname{} A.~L. Thomaz,
+  2012.
+\newblock Timing in multimodal turn-taking interactions: Control and analysis
+  using timed petri nets.
+\newblock \textit{ Journal of Human-Robot Interaction\/}.
 
 \bibitem[{Clark}(1996){Clark}]{Clark1996}
 (Clark, 1996) \hspace{.5em}H.~H. Clark, 1996.

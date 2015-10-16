@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.10.1)  16 OCT 2015 09:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.10.1)  16 OCT 2015 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1476,28 +1476,31 @@ Package pdftex.def Info: figures/5BestEx.pdf used on input line 138.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-<figures/AgentEnv.pdf, id=827, 496.10344pt x 271.76532pt>
+<figures/AgentEnv.pdf, id=830, 496.10344pt x 271.76532pt>
 File: figures/AgentEnv.pdf Graphic file (type pdf)
 
 <use figures/AgentEnv.pdf>
-Package pdftex.def Info: figures/AgentEnv.pdf used on input line 316.
+Package pdftex.def Info: figures/AgentEnv.pdf used on input line 315.
 (pdftex.def)             Requested size: 396.88329pt x 217.41254pt.
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 325
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 324
 .
 
 (c:/texlive/2015/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [26 <./figures/AgentEnv.pdf>] [27] [28] [29]
-Overfull \hbox (36.14749pt too wide) in paragraph at lines 418--419
-\T1/ppl/m/n/10.95 and the fea-tures they are fed are of dif-ferent na-tures : l
-exi-cal, se-man-tic, pro-so-dic...etc...However,
- []
-
-
-Underfull \vbox (badness 3758) has occurred while \output is active []
-
- [30]
-[31] [32]) [33]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 412.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 412.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 412.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 412.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 412.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 412.
+ [30] [31] [32]) [33]
 \openout2 = `taxonomy/taxonomy.aux'.
 
  (./taxonomy/taxonomy.tex [34
@@ -1506,18 +1509,6 @@ Underfull \vbox (badness 3758) has occurred while \output is active []
 
 ]
 Chapitre 3.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 33.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 33.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 33.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 33.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 33.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 33.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
@@ -1555,7 +1546,7 @@ Chapitre 4.
 
 
 
-] <figures/ClientSchedService.pdf, id=979, 548.0475pt x 140.02313pt>
+] <figures/ClientSchedService.pdf, id=1022, 548.0475pt x 140.02313pt>
 File: figures/ClientSchedService.pdf Graphic file (type pdf)
 
 <use figures/ClientSchedService.pdf>
@@ -1574,7 +1565,7 @@ om both sides is conti-
  []
 
 [40 <./figures/ClientSchedService.pdf>]
-<figures/Timeline.jpg, id=994, 731.73375pt x 340.27126pt>
+<figures/Timeline.jpg, id=1037, 731.73375pt x 340.27126pt>
 File: figures/Timeline.jpg Graphic file (type jpg)
 
 <use figures/Timeline.jpg>
@@ -1585,7 +1576,7 @@ Overfull \hbox (20.78996pt too wide) in paragraph at lines 44--45
  [][] 
  []
 
-<figures/SchedChrono.jpg, id=997, 505.13719pt x 509.65407pt>
+<figures/SchedChrono.jpg, id=1040, 505.13719pt x 509.65407pt>
 File: figures/SchedChrono.jpg Graphic file (type jpg)
 
 <use figures/SchedChrono.jpg>
@@ -1595,14 +1586,14 @@ Package pdftex.def Info: figures/SchedChrono.jpg used on input line 57.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41 <./figures/Timeline.jpg>] [42 <./figures/SchedChrono.jpg>]
-<figures/ContextChrono.jpg, id=1013, 510.40688pt x 191.21437pt>
+<figures/ContextChrono.jpg, id=1055, 510.40688pt x 191.21437pt>
 File: figures/ContextChrono.jpg Graphic file (type jpg)
 
 <use figures/ContextChrono.jpg>
 Package pdftex.def Info: figures/ContextChrono.jpg used on input line 66.
 (pdftex.def)             Requested size: 408.32605pt x 152.9717pt.
 
-<figures/CFAsTIncr.jpg, id=1016, 696.35156pt x 481.8pt>
+<figures/CFAsTIncr.jpg, id=1058, 696.35156pt x 481.8pt>
 File: figures/CFAsTIncr.jpg Graphic file (type jpg)
 
 <use figures/CFAsTIncr.jpg>
@@ -1625,7 +1616,7 @@ ne 159.
 
 ]
 Chapitre 5.
-[49] [50] <figures/ArchiSimuSys.pdf, id=1078, 914.66719pt x 365.86688pt>
+[49] [50] <figures/ArchiSimuSys.pdf, id=1121, 914.66719pt x 365.86688pt>
 File: figures/ArchiSimuSys.pdf Graphic file (type pdf)
 
 <use figures/ArchiSimuSys.pdf>
@@ -1646,7 +1637,7 @@ SLOT(TIME(21,0),TIME(23,0))))
  []
 
 [51 <./figures/ArchiSimuSys.pdf>] [52] [53] [54]
-<figures/ASRSimu.pdf, id=1117, 429.10312pt x 519.44063pt>
+<figures/ASRSimu.pdf, id=1159, 429.10312pt x 519.44063pt>
 File: figures/ASRSimu.pdf Graphic file (type pdf)
 
 <use figures/ASRSimu.pdf>
@@ -1752,13 +1743,13 @@ Overfull \hbox (5.27629pt too wide) in paragraph at lines 32--32
 ] (./thesis.bbl [81
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 135.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 162.
 
 
 (c:/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [82] [83] [84] [85]
-Underfull \hbox (badness 1253) in paragraph at lines 504--508
+Underfull \hbox (badness 1253) in paragraph at lines 531--535
 []\T1/ppl/m/n/10.95 (Strombergsson et al., 2013)  S. Strom-berg-sson, A. Hjal-m
 ars-son, J. Ed-lund, and
  []
@@ -1799,7 +1790,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 28.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 28.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 28.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1A3E523562E273470DEBA1A0EFFD29A5;4989.
+(rerunfilecheck)             Checksum: B8D492A7C179F0D35DB57DC6D7920BF5;4999.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1807,11 +1798,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 28.
  ) 
 Here is how much of TeX's memory you used:
- 34234 strings out of 493091
- 753263 string characters out of 6138531
- 1506429 words of memory out of 5000000
- 36431 multiletter control sequences out of 15000+600000
- 78667 words of font info for 163 fonts, out of 8000000 for 9000
+ 34281 strings out of 493091
+ 753890 string characters out of 6138531
+ 1508150 words of memory out of 5000000
+ 36455 multiletter control sequences out of 15000+600000
+ 79952 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,22n,109p,2022b,2742s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2015/texm
@@ -1825,10 +1816,10 @@ dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2015/texmf-dist/fonts/type
 1/urw/palatino/uplbi8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb><c:/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:
 /texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on thesis.pdf (87 pages, 1739511 bytes).
+Output written on thesis.pdf (87 pages, 1743298 bytes).
 PDF statistics:
- 1480 PDF objects out of 1728 (max. 8388607)
- 1322 compressed objects within 14 object streams
- 314 named destinations out of 1000 (max. 500000)
+ 1526 PDF objects out of 1728 (max. 8388607)
+ 1368 compressed objects within 14 object streams
+ 334 named destinations out of 1000 (max. 500000)
  654 words of extra memory for PDF output out of 10000 (max. 10000000)
 
