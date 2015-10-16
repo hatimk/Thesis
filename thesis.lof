@@ -5,34 +5,34 @@
 \contentsline {xchapter}{State of the art}{9}{chapter.3}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The dialogue chain\relax }}{16}{figure.caption.14}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces A 5-Best example corresponding to the sentence "I would like to book a flight from New-York to Los Angeles".\relax }}{17}{figure.caption.20}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{26}{figure.caption.38}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{26}{figure.caption.39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking taxonomy}{33}{chapter.46}
+\contentsline {xchapter}{Turn-taking taxonomy}{35}{chapter.47}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Architecture}{37}{chapter.57}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{38}{figure.caption.60}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{39}{figure.caption.62}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{40}{figure.caption.64}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Double context management: real and simulated\relax }}{41}{figure.caption.65}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces The incremental version of the CFAsT project\relax }}{42}{figure.caption.68}
+\contentsline {xchapter}{Architecture}{39}{chapter.58}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{40}{figure.caption.61}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{41}{figure.caption.63}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{42}{figure.caption.65}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Double context management: real and simulated\relax }}{43}{figure.caption.66}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The incremental version of the CFAsT project\relax }}{44}{figure.caption.69}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{47}{chapter.75}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{49}{figure.caption.87}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution\relax }}{52}{figure.caption.94}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{54}{figure.caption.100}
+\contentsline {xchapter}{Incremental dialogue simulation}{49}{chapter.76}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{51}{figure.caption.88}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution\relax }}{54}{figure.caption.95}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{56}{figure.caption.101}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{55}{chapter.103}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{57}{figure.caption.107}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{60}{figure.caption.118}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{60}{figure.caption.119}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{61}{figure.caption.120}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{57}{chapter.104}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{59}{figure.caption.108}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{62}{figure.caption.119}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{62}{figure.caption.120}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{63}{figure.caption.121}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{63}{chapter.121}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{67}{figure.caption.132}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{68}{figure.caption.133}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{65}{chapter.122}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{69}{figure.caption.133}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{70}{figure.caption.134}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{69}{chapter.134}
+\contentsline {xchapter}{Experiment with real users}{71}{chapter.135}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{71}{chapter.137}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{73}{chapter.138}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{73}{chapter.142}
+\contentsline {xchapter}{Conclusion}{75}{chapter.143}

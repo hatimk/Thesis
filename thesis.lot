@@ -5,23 +5,23 @@
 \contentsline {xchapter}{State of the art}{9}{chapter.3}
 \contentsline {table}{\numberline {2.1}{\ignorespaces Example of incremental NLU processing\relax }}{20}{table.caption.23}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking taxonomy}{33}{chapter.46}
-\contentsline {table}{\numberline {3.1}{\ignorespaces {\it Taxonomy labels}\relax }}{33}{table.caption.48}
-\contentsline {table}{\numberline {3.2}{\ignorespaces {\it Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor giver/taker.}\relax }}{34}{table.caption.49}
+\contentsline {xchapter}{Turn-taking taxonomy}{35}{chapter.47}
+\contentsline {table}{\numberline {3.1}{\ignorespaces {\it Taxonomy labels}\relax }}{35}{table.caption.49}
+\contentsline {table}{\numberline {3.2}{\ignorespaces {\it Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor giver/taker.}\relax }}{36}{table.caption.50}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Architecture}{37}{chapter.57}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{45}{table.caption.73}
+\contentsline {xchapter}{Architecture}{39}{chapter.58}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{47}{table.caption.74}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{47}{chapter.75}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{48}{table.caption.80}
+\contentsline {xchapter}{Incremental dialogue simulation}{49}{chapter.76}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{50}{table.caption.81}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{55}{chapter.103}
-\contentsline {table}{\numberline {6.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{57}{table.caption.108}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{57}{chapter.104}
+\contentsline {table}{\numberline {6.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{59}{table.caption.109}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{63}{chapter.121}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{65}{chapter.122}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{69}{chapter.134}
+\contentsline {xchapter}{Experiment with real users}{71}{chapter.135}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{71}{chapter.137}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{73}{chapter.138}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{73}{chapter.142}
+\contentsline {xchapter}{Conclusion}{75}{chapter.143}
