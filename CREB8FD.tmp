@@ -1,7 +1,6 @@
 %\documentclass[a4paper,8pt,twocolumn]{report}
 \documentclass[a4paper,11pt]{book}
 %\documentclass[a4paper,9pt]{report}
-\usepackage[english]{babel}
 %\usepackage[frenchb]{babel}
 \usepackage[T1]{fontenc}           % for hyphenations to work
 \usepackage[latin1]{inputenc}
@@ -11,7 +10,6 @@
 %\usepackage[french,figure]{algorithm2e}
 \usepackage{tabularx}
 %\usepackage[frenchb]{minitoc}
-\usepackage{minitoc}
 \usepackage{multirow}
 \usepackage[round,authoryear]{natbib}
 \usepackage{fancyhdr}

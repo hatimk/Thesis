@@ -1,12 +1,7 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}User and system initiative}{\reset@font\mtcSfont 57}{section.121}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.1}Strategies}{\reset@font\mtcSSfont 57}{subsection.122}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.2}Experiments}{\reset@font\mtcSSfont 58}{subsection.123}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Incremental strategies}{\reset@font\mtcSfont 59}{section.126}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}ASR instability}{\reset@font\mtcSSfont 60}{subsection.127}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.2}TTP implementation}{\reset@font\mtcSSfont 60}{subsection.128}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode FAIL\_RAW:}{\reset@font\mtcPfont 60}{section*.129}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode INCOHERENCE\_INTERP:}{\reset@font\mtcPfont 60}{section*.130}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode FEEDBACK:}{\reset@font\mtcPfont 61}{section*.131}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode BARGE\_IN\_RESP (System):}{\reset@font\mtcPfont 61}{section*.132}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode BARGE\_IN\_RESP (User):}{\reset@font\mtcPfont 61}{section*.133}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.3}Experiments}{\reset@font\mtcSSfont 61}{subsection.134}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Model}{\reset@font\mtcSfont 69}{section.141}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.1}State representation}{\reset@font\mtcSSfont 69}{subsection.142}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.2}Actions, rewards and episodes}{\reset@font\mtcSSfont 70}{subsection.143}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.3}Fitted-Q Value Iteration}{\reset@font\mtcSSfont 71}{subsection.144}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Experiment}{\reset@font\mtcSfont 72}{section.145}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}Setup}{\reset@font\mtcSSfont 72}{subsection.146}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.2}Results}{\reset@font\mtcSSfont 72}{subsection.150}}

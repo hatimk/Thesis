@@ -1,9 +1,12 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}Agenda management task}{\reset@font\mtcSfont 49}{section.93}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}The service}{\reset@font\mtcSfont 49}{section.95}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.1}Natural Language Understanding}{\reset@font\mtcSSfont 49}{subsection.96}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}User simulator}{\reset@font\mtcSfont 50}{section.102}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.1}Overview}{\reset@font\mtcSSfont 50}{subsection.103}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.2}Intent Manager}{\reset@font\mtcSSfont 51}{subsection.105}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.3}NLG and Verbosity Manager}{\reset@font\mtcSSfont 51}{subsection.109}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.4}ASR output simulator}{\reset@font\mtcSSfont 53}{subsection.110}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.5}Timing and patience manager}{\reset@font\mtcSSfont 55}{subsection.118}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}User and system initiative}{\reset@font\mtcSfont 61}{section.123}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.1}Strategies}{\reset@font\mtcSSfont 61}{subsection.124}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.1.2}Experiments}{\reset@font\mtcSSfont 63}{subsection.125}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}Incremental strategies}{\reset@font\mtcSfont 64}{section.128}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.1}ASR instability}{\reset@font\mtcSSfont 64}{subsection.129}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.2}TTP implementation}{\reset@font\mtcSSfont 64}{subsection.130}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode FAIL\_RAW:}{\reset@font\mtcPfont 64}{section*.131}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode INCOHERENCE\_INTERP:}{\reset@font\mtcPfont 65}{section*.132}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode FEEDBACK:}{\reset@font\mtcPfont 65}{section*.133}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode BARGE\_IN\_RESP (System):}{\reset@font\mtcPfont 65}{section*.134}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode BARGE\_IN\_RESP (User):}{\reset@font\mtcPfont 65}{section*.135}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.2.3}Experiments}{\reset@font\mtcSSfont 65}{subsection.136}}

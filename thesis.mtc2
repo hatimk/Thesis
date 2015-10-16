@@ -1,19 +1,8 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Introduction}{\reset@font\mtcSfont 9}{section.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Human dialogue}{\reset@font\mtcSfont 10}{section.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.1}Dialogue acts}{\reset@font\mtcSSfont 10}{subsection.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.2}Turn-taking in human dialogue}{\reset@font\mtcSSfont 11}{subsection.7}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}Incremental speech processing in human conversation}{\reset@font\mtcSSfont 13}{subsection.11}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Spoken dialogue systems and incremental behaviour}{\reset@font\mtcSfont 13}{section.12}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Spoken dialogue system}{\reset@font\mtcSSfont 13}{subsection.13}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Dialogue systems evaluation}{\reset@font\mtcSSfont 18}{subsection.21}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Incremental dialogue systems}{\reset@font\mtcSSfont 19}{subsection.22}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.4}Advantages of incremental processing}{\reset@font\mtcSSfont 20}{subsection.24}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.5}New challenges raised by incremental dialogue processing}{\reset@font\mtcSSfont 22}{subsection.25}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.6}Existing architectures}{\reset@font\mtcSSfont 24}{subsection.33}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Sequential paradigm}{\reset@font\mtcSSSfont 24}{section*.34}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Multi-layer paradigm}{\reset@font\mtcSSSfont 25}{section*.35}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Reinforcement Learning}{\reset@font\mtcSfont 26}{section.37}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}Definition}{\reset@font\mtcSSfont 26}{subsection.38}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}Application to dialogue systems}{\reset@font\mtcSSfont 30}{subsection.58}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}Dialogue simulation}{\reset@font\mtcSSfont 31}{subsection.59}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Issues and motivation}{\reset@font\mtcSfont 32}{section.60}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Taxonomy presentation}{\reset@font\mtcSfont 39}{section.66}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode G\_NONE}{\reset@font\mtcPfont 40}{section*.69}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode G\_FAIL}{\reset@font\mtcPfont 40}{section*.70}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode G\_INCOHERENCE}{\reset@font\mtcPfont 40}{section*.71}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode G\_INCOMPLETE}{\reset@font\mtcPfont 41}{section*.72}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode G\_SUFFICIENT}{\reset@font\mtcPfont 41}{section*.73}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode G\_COMPLETE}{\reset@font\mtcPfont 42}{section*.74}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Discussion}{\reset@font\mtcSfont 42}{section.75}}
