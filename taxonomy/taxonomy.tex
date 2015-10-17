@@ -2,12 +2,52 @@
 \label{ch:taxonomy}
 
 %HK> Bien amener la taxonomie. Rappeler les précurseurs, détailler le role d'une telle classification ainsi que ses spécificités.
-%HK> Citer Khouzaimi2015 à EMNLP
+%HK> Citer Khouzaimi2015 à EMNLP.
 %HK> Idée derrière la taxonomie : diviser pour régner.
+%HK> Remplacer Giver par Holder.
+
+\section{Introduction}
+
+        So far, we said that the aim of this thesis is provide contributions in order to enhance spoken dialogue systems' turn-taking abililties. In this chapter, we take a step back and as ourselves: what is turn-taking? In Chapter \ref{ch:stateofart}, we started giving the reader some clues and some previous work references in order to build a first intuition of that concept. Here, we perform an analysis of turn-taking in human conversation who is aimed to provide an answer to four following questions:
+
+        \begin{enumerate}
+          \item What phenomena characterise turn-taking in human conversation?
+          \item How can they be classified in order to clearly identify the similarities and the differences between them?
+          \item What are the general categories that emerge from the general picture drawn by this classification?
+          \item What phenomena are worth implementing in dialogue systems the most?
+        \end{enumerate}
+
+        Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). Moreover, each one of them corresponds can be viewed as a dialogue act in sense explained in Chapter \ref{ch:stateofart}. As a consequence, the different analysis levels layed in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms.
 
 \section{Taxonomy presentation}
 
-	Turn-taking in dialogue refers to the act of taking the floor by one participant, here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Giver (G), is already speaking or not (the denomination Giver is more adapted to the case where it has the floor, but we keep it as a convention for the other case). In the first case, turn-taking either gives birth to a barge-in where G stop speaking or to a backchannel, feedback or comment and it that case, G keeps talking. If G does not have the floor, T is in a situation of initial turn-taking.
+        %HK> Bien mettre en exergue les deux axes et expliquer d'où ils viennent?
+
+        Let us consider the three following dialogue siutations.
+
+        \paragraph{Dialogue 1}
+
+        \begin{dialogue}
+          \speak{Alice:} I would like to try some exotic destination this summer where I can ...
+          \speak{Bob:} ... Have you ever been to India?
+        \end{dialogue}
+
+        \paragraph{Dialogue 2}
+
+        \begin{dialogue}
+          \speak{Alice:} First you put the meat in the oven ...
+          \speak{Bob:} ...aha...
+          \speak{Alice:} ...then you start preparing the salad...
+        \end{dialogue}
+
+        \paragraph{Dialogue 3}
+
+        \begin{dialogue}
+          \speak{Alice:} What time is it please?
+          \speak{Bob:} It is half past two.
+        \end{dialogue}
+
+	Turn-taking in dialogue refers to the act of taking the floor by one participant, here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Giver (G), is already speaking or not (the denomination Giver is more adapted to the case where it has the floor, but we keep it as a convention for the other case). In the first case, turn-taking either gives birth to a barge-in where G stops speaking or to a backchannel, feedback or comment and it that case, G keeps talking. If G does not have the floor, T is in a situation of initial turn-taking.
     
     The taxonomy we introduce here is based on two dimensions: \textit{the quantity of information that G has already injected in the dialogue} and \textit{the quantity of information that T tries to inject by taking the floor}. The different levels of information for each dimension are described on Table \ref{tab:taxlabels}.
     
