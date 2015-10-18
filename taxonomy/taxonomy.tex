@@ -17,13 +17,15 @@
           \item What phenomena are worth implementing in dialogue systems the most?
         \end{enumerate}
 
-        Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). Moreover, each one of them corresponds can be viewed as a dialogue act in sense explained in Chapter \ref{ch:stateofart}. As a consequence, the different analysis levels layed in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms.
+        Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). Moreover, each one of them can be viewed as a dialogue act in sense explained in Chapter \ref{ch:stateofart}. As a consequence, the different analysis levels layed in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms.
+
+        The analysis is even pushed further. Recall that at the perlocutionary level, we focus on the impact that a dialogue act is aimed to have, like convincing, congratulating or insulting for example. Here, an extra dimension is added: what is the motivation behind a dialogue act? In the taxonomy introduced in this chapter, some TTPs are exactly the same if viewed as locutionary illocutionary and perlocutionary dialogue acts, but the reason why they are performed are different. Making this distinction are interesting from a computational point of view as it is directly correlated to the set of features that are considered by the system in order to make turn-taking decisions.
 
 \section{Taxonomy presentation}
 
-        %HK> Bien mettre en exergue les deux axes et expliquer d'où ils viennent?
+        %HK> Inverser Alice et Bob (ou trouver d'autres noms) pour cohérence de sexe avec le choix fait pour G et T.
 
-        Let us consider the three following dialogue siutations.
+        Let us consider the three following dialogue situtations.
 
         \paragraph{Dialogue 1}
 
@@ -47,10 +49,20 @@
           \speak{Bob:} It is half past two.
         \end{dialogue}
 
-	Turn-taking in dialogue refers to the act of taking the floor by one participant, here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Giver (G), is already speaking or not (the denomination Giver is more adapted to the case where it has the floor, but we keep it as a convention for the other case). In the first case, turn-taking either gives birth to a barge-in where G stops speaking or to a backchannel, feedback or comment and it that case, G keeps talking. If G does not have the floor, T is in a situation of initial turn-taking.
+        In all the dialogues, Alice initially has the floor and then Bob performs a dialogue act. In dialogue 1 and 2, he does not wait for her to finish her utterance before doing so, unlike in the last dialogue. Therefore, Bob can choose the timing of his intervention at different stages in the progression of Alice's utterance. The first criteria used in the taxonomy introduced here is defined by this decision. Moreover, in dialogues 1 and 3, Bob utterance a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kind of behaviours performed by Bob.
+
+	More formally, turn-taking in dialogue refers to the act of taking the floor by one participant (Bob in the previous examples), here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Giver (G), is already speaking or not (the denomination Giver is more adapted to the case where it has the floor, but we keep it as a convention for the other case). In the first case, turn-taking either gives birth to a barge-in where G stops speaking or to a backchannel, feedback or comment and it that case, G keeps talking. If G does not have the floor, T is in a situation of initial turn-taking.
     
-    The taxonomy we introduce here is based on two dimensions: \textit{the quantity of information that G has already injected in the dialogue} and \textit{the quantity of information that T tries to inject by taking the floor}. The different levels of information for each dimension are described on Table \ref{tab:taxlabels}.
+    The taxonomy we introduce here is based on two dimensions:
+
+    \begin{enumerate}
+      \item \textbf{The quantity of information that G has already injected in the dialogue:} This measures how early in G's utterance T chooses to perform her dialogue act.
+      \item \textbf{The quantity of information that T tries to inject by taking the floor:} T's dialogue act can consist on some implicit reaction (gestures, sounds like \textit{aha}), a complete utterance or something in between.
+    \end{enumerate}
+
+    The different levels of information for each dimension are described on Table \ref{tab:taxlabels}.
     
+    %HK> Normaliser les emplacementes et les polices de légendes.
     \begin{table}[th]
 			\footnotesize
 			\caption{\label{tab:taxlabels} {\it Taxonomy labels}}
@@ -196,3 +208,26 @@
     A big part of research in incremental dialogue systems and turn-taking optimisation has mainly focused on endpoint detection \cite{Raux2008} and smooth turn-taking. Therefore, their objective is to replicate the phenomenon labeled here as BARGE\_IN\_RESP. Some other studies focus on backchanneling and feedback, often neglecting the semantic part of the dialogue participants utterances and focusing exclusively on prosody and acoustic features.
     
     %HK> Papier turn-yielding cues: IPUs, labelling SMOOTH-SWITCHES (G finish sentence + no overlap)
+
+
+    The identified TTP can be classified in five categories:
+    
+    \begin{enumerate}
+      \item Dialogue initialisation
+      \item Negative feedback
+      \item Positive feedback
+      \item Reference
+      \item Ordered complete dialogue acts
+    \end{enumerate}
+
+    In the following, each category is discussed separately.
+
+    \subsection{Dialogue initialisation}
+
+    \subsection{Negative feedback}
+
+    \subsection{Positive feedback}
+
+    \subsection{Reference}
+
+    \subsection{Oredered complete dialogue acts}
