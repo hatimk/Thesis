@@ -8,7 +8,7 @@
 
 \section{Introduction}
 
-        So far, we said that the aim of this thesis is provide contributions in order to enhance spoken dialogue systems' turn-taking abililties. In this chapter, we take a step back and as ourselves: what is turn-taking? In Chapter \ref{ch:stateofart}, we started giving the reader some clues and some previous work references in order to build a first intuition of that concept. Here, we perform an analysis of turn-taking in human conversation who is aimed to provide an answer to four following questions:
+        So far, we said that the aim of this thesis is provide contributions in order to enhance spoken dialogue systems' turn-taking abilities. In this chapter, we take a step back and as ourselves: what is turn-taking? In Chapter \ref{ch:stateofart}, we started giving the reader some clues and some previous work references in order to build a first intuition of that concept. Here, we perform an analysis of turn-taking in human conversation who is aimed to provide an answer to four following questions:
 
         \begin{enumerate}
           \item What phenomena characterise turn-taking in human conversation?
@@ -17,7 +17,7 @@
           \item What phenomena are worth implementing in dialogue systems the most?
         \end{enumerate}
 
-        Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). Moreover, each one of them can be viewed as a dialogue act in sense explained in Chapter \ref{ch:stateofart}. As a consequence, the different analysis levels layed in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms.
+        Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). Moreover, each one of them can be viewed as a dialogue act in sense explained in Chapter \ref{ch:stateofart}. As a consequence, the different analysis levels laid in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms.
 
         The analysis is even pushed further. Recall that at the perlocutionary level, we focus on the impact that a dialogue act is aimed to have, like convincing, congratulating or insulting for example. Here, an extra dimension is added: what is the motivation behind a dialogue act? In the taxonomy introduced in this chapter, some TTPs are exactly the same if viewed as locutionary illocutionary and perlocutionary dialogue acts, but the reason why they are performed are different. Making this distinction are interesting from a computational point of view as it is directly correlated to the set of features that are considered by the system in order to make turn-taking decisions.
 
@@ -25,7 +25,7 @@
 
         %HK> Inverser Alice et Bob (ou trouver d'autres noms) pour cohérence de sexe avec le choix fait pour G et T.
 
-        Let us consider the three following dialogue situtations.
+        Let us consider the three following dialogue situations.
 
         \paragraph{Dialogue 1}
 
@@ -223,6 +223,10 @@
     In the following, each category is discussed separately.
 
     \subsection{Dialogue initialisation}
+		
+			Two TTPs constitute this category: FLOOR\_TAKING\_IMPL and INIT\_DIALOGUE. They should be distinguished from REKINDLE as they take place at the very beginning of the dialogue or when the dialogue participants stopped interaction for a long while (so that it is legitimate to consider that they are engaging in a new interaction). Viewed as locutionary dialogue acts, they are frequently different but not always. The first one involves implicit gestures and short sounds or words whereas in the second one, T makes a long utterance. However, in some cases, it is possible to inject new information in very short sentences, therefore the length of the sentence cannot be used as a criterion to distinguish between these two TTPs. As an illustration, imagine that you observe people that are interacting using a language that is unknown to you. Imagine, that they are silent and suddenly one of them utters a short sound. Is it obvious whether he just called his interlocutor's name or whether is actually uttered some new piece of information?
+			
+			Considering the illocutionary label
 
     \subsection{Negative feedback}
 
@@ -230,4 +234,4 @@
 
     \subsection{Reference}
 
-    \subsection{Oredered complete dialogue acts}
+    \subsection{Ordered complete dialogue acts}

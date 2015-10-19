@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Negative feedback}{44}{subsection.92}
 \contentsline {subsection}{\numberline {2.3.3}Positive feedback}{44}{subsection.93}
 \contentsline {subsection}{\numberline {2.3.4}Reference}{44}{subsection.94}
-\contentsline {subsection}{\numberline {2.3.5}Oredered complete dialogue acts}{44}{subsection.95}
+\contentsline {subsection}{\numberline {2.3.5}Ordered complete dialogue acts}{44}{subsection.95}
 \contentsline {xpart}{Contributions}{39}{part.64}
 \contentsline {chapter}{\numberline {3}Architecture}{45}{chapter.96}
 \contentsline {section}{\numberline {3.1}Description}{45}{section.97}
