@@ -9,17 +9,17 @@
 \contentsline {table}{\numberline {2.2}{\ignorespaces {\it Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor giver/taker.}\relax }}{42}{table.caption.78}
 \contentsline {xpart}{Contributions}{39}{part.64}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Architecture}{47}{chapter.96}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{55}{table.caption.112}
+\contentsline {xchapter}{Architecture}{47}{chapter.99}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{55}{table.caption.115}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{57}{chapter.114}
-\contentsline {table}{\numberline {4.1}{\ignorespaces {NLU rules types}\relax }}{58}{table.caption.119}
+\contentsline {xchapter}{Incremental dialogue simulation}{57}{chapter.117}
+\contentsline {table}{\numberline {4.1}{\ignorespaces {NLU rules types}\relax }}{58}{table.caption.122}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{65}{chapter.142}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{67}{table.caption.147}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{65}{chapter.145}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{67}{table.caption.150}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{73}{chapter.160}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{73}{chapter.163}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{79}{chapter.173}
+\contentsline {xchapter}{Experiment with real users}{79}{chapter.176}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{81}{chapter.176}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{81}{chapter.179}

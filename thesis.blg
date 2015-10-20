@@ -1,9 +1,13 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: stateofart/stateofart.aux
 A level-1 auxiliary file: taxonomy/taxonomy.aux
+White space in argument---line 29 of file taxonomy/taxonomy.aux
+ : \citation{I
+ :             understand what you said so far,please continue}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: architecture/architecture.aux
 A level-1 auxiliary file: simulation/simulation.aux
 A level-1 auxiliary file: baseline/baseline.aux
@@ -65,4 +69,4 @@ warning$ -- 10
 while$ -- 539
 width$ -- 0
 write$ -- 1782
-(There were 11 warnings)
+(There was 1 error message)
