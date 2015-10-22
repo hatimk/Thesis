@@ -34,13 +34,13 @@
 \contentsline {paragraph}{G\_INCOMPLETE}{42}{section*.82}
 \contentsline {paragraph}{G\_SUFFICIENT}{43}{section*.83}
 \contentsline {paragraph}{G\_COMPLETE}{43}{section*.84}
-\contentsline {section}{\numberline {2.3}Discussion}{43}{section.85}
+\contentsline {section}{\numberline {2.3}Discussion}{44}{section.85}
 \contentsline {subsection}{\numberline {2.3.1}Dialogue initialisation}{44}{subsection.91}
 \contentsline {subsection}{\numberline {2.3.2}Negative feedback}{45}{subsection.92}
 \contentsline {subsection}{\numberline {2.3.3}Positive feedback}{45}{subsection.93}
 \contentsline {subsection}{\numberline {2.3.4}Reference}{46}{subsection.96}
 \contentsline {subsection}{\numberline {2.3.5}Ordered dialogue acts}{46}{subsection.97}
-\contentsline {subsection}{\numberline {2.3.6}Synthesis}{46}{subsection.98}
+\contentsline {subsection}{\numberline {2.3.6}Synthesis}{47}{subsection.98}
 \contentsline {subsection}{\numberline {2.3.7}Turn-taking phenomena in dialogue systems}{47}{subsection.100}
 \contentsline {xpart}{Contributions}{39}{part.64}
 \contentsline {chapter}{\numberline {3}Architecture}{49}{chapter.101}
