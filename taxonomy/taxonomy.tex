@@ -1,6 +1,8 @@
 \chapter{Turn-taking taxonomy}p
 \label{ch:taxonomy}
 
+%HK> Remarque générale par rapport à toute la thèse, enlever les formulations avec << we >>
+
 %HK> Bien amener la taxonomie. Rappeler les précurseurs, détailler le role d'une telle classification ainsi que ses spécificités.
 %HK> Citer Khouzaimi2015 à EMNLP.
 %HK> Idée derrière la taxonomie : diviser pour régner.
@@ -268,7 +270,8 @@
 				
 		\subsection{Synthesis}
 		
-			In table \ref{tab:taxosynth}, the previous analysis is synthesised in the form of a table. A locutionary profile is associated with each pheonemenon, as well as a description of the illocutionary and perlocutionary acts. The elements motivating each pheonomenon also appear in the table.
+                        %HK> Expliquer en une phrase que x et y dans le tableau correspondent au contenu.
+			In tables \ref{tab:taxosynth} and \ref{tab:taxosynth2}, the previous analysis is synthesised in the form of a table. A locutionary profile is associated with each pheonemenon, as well as a description of the illocutionary and perlocutionary acts. The elements motivating each pheonomenon also appear in the table.
 		
 
                         %HK> Rendre ce tableau plus joli.
@@ -286,20 +289,24 @@
 						\textbf{FLOOR\_TAKING\_IMPL} & & I am about to & \tabitem Shift G's attention & \tabitem Desire to start \\
                                                 & & start speaking & towards T & a conversation \\
 						\hline
+                                                \rule{0pt}{4ex}
                                                 \textbf{DIALOGUE\_INIT} & & I start this & \tabitem Shift G's attention & \tabitem Desire to start \\
                                                 & & conversation and I & towards T & a conversation \\
                                                 & & inform you that x & \tabitem Make G aware & about x \\
                                                 & & & of the dialogue & \\
                                                 & & & topic (x) & \\
                                                 \hline
+                                                \rule{0pt}{4ex}
                                                 \textbf{FAIL\_IMPL} & & I don't understand & \tabitem Make G stop & \tabitem Fix desynchro- \\
                                                 & & what you are & \tabitem Make G repeat & nisation \\
                                                 & & talking about & or reformulate & \\
                                                 \hline
+                                                \rule{0pt}{4ex}
                                                 \textbf{FAIL\_RAW} & & I don't understand & \tabitem Make G stop & \tabitem Fix desynchro- \\
                                                 & & what you are & \tabitem Make G repeat & nisation \\
                                                 & & talking about & or reformulate & \\
                                                 \hline
+                                                \rule{0pt}{4ex}
                                                 \textbf{FAIL\_INTERP} & & I don't understand & \tabitem Make G stop & \tabitem Fix desynchro- \\
                                                 & & what you are & \tabitem Make G repeat & nisation \\
                                                 & & talking about & or reformulate & \\
@@ -308,16 +315,19 @@
                                                 & & & preventing T & precision about \\
                                                 & & & from understanding & the problem \\
                                                 \hline
+                                                \rule{0pt}{4ex}
                                                 \textbf{INCOHERENCE\_IMPL} & & What you just said & \tabitem Make G stop & \tabitem Fix desynchro- \\
                                                 & & is problematic & \tabitem Make G reconsider & nisation \\
                                                 & & & what he & \\
                                                 & & & just said & \\
                                                 \hline
+                                                \rule{0pt}{4ex}
                                                 \textbf{INCOHERENCE\_RAW} & & What you just said & \tabitem Make G stop & \tabitem Fix desynchro- \\
                                                 & & is problematic & \tabitem Make G reconsider & nisation \\
                                                 & & & what he & \\
                                                 & & & just said & \\
                                                 \hline
+                                                \rule{0pt}{4ex} 
                                                 \textbf{INCOHERENCE\_INTERP} & & What you just said & \tabitem Make G stop & \tabitem Fix desynchro- \\
                                                 & & is problematic & \tabitem Make G reconsider & nisation \\
                                                 & & because of x & what he & \tabitem More efficiency by \\
@@ -326,10 +336,110 @@
                                                 & & & of the problem & the problem \\
                                                 & & & in his utterance & \\
                                                 \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{BACKCHANNEL} & & I understand (and & \tabitem Make G continue & \tabitem More information \\
+                                                & & sometimes: I agree) & & from G \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{FEEDBACK\_RAW} & & I understood that & \tabitem Make G continue & \tabitem More information \\
+                                                & & you said x & \tabitem Make G correct & from G \\
+                                                & & & in case of a & \tabitem Desire to confirm\\
+                                                & & & misunderstanding & that G's utterance\\
+                                                & & & or not & has been well \\
+                                                & & & & understood \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{FEEDBACK\_INTERP} & & I understood that & \tabitem Make G continue & \tabitem More information \\
+                                                & & you said x & \tabitem Make G correct & from G \\
+                                                & & that is related  & in case of a & \tabitem Desire to confirm\\
+                                                & & to y & misunderstanding & that G's utterance\\
+                                                & & & or not & has been well \\
+                                                & & & & understood \\
+                                                & & & & \tabitem Stronger confirmation \\
+                                                & & & & by adding related \\
+                                                & & & & information y \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{REF\_IMPL} & & Yes, x & \tabitem Make G stop & \tabitem Selecting an option\\
+                                                & & & and understand & \tabitem Less effort as x \\
+                                                & & & T is referring to & has already been \\
+                                                & & & the last element & uttered by G \\
+                                                & & & he uttered (x) & \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{REF\_RAW} & & Yes, x & \tabitem Make G stop & \tabitem Selecting an option\\
+                                                & & & and understand & \tabitem Less effort as x \\
+                                                & & & T is referring to & has already been \\
+                                                & & & the last element & uttered by G \\
+                                                & & & he uttered (x) & \tabitem Desire to confirm \\
+                                                & & & \tabitem Make G correct & that the last option \\
+                                                & & & \tabitem in case of a & has been well \\
+                                                & & & misunderstanding & understood \\
+                                                \hline
 					\end{tabular}
 				}
-				\caption{Taxonomy labels}
+				\caption{Taxonomy labels (1/2)}
 				\label{tab:taxosynth}
+			\end{table}
+
+                        \begin{table}[th]
+				\fontsize{8.2}{8.2}
+                                \selectfont
+				\vspace{2mm}
+				\centerline{
+					\begin{tabular}{|c|c|c|c|c|}
+						\hline
+						\textbf{TTP} & \textbf{Locutionary act} & \textbf{Illocutionary act} & \textbf{Perlocutionary act} & \textbf{Motivations} \\
+	                                        \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{REF\_RAW} & & Yes, x & \tabitem Make G stop & \tabitem Selecting an option\\
+                                                & & & and understand & \tabitem Less effort as x \\
+                                                & & & T is referring to & has already been \\
+                                                & & & the last element & uttered by G \\
+                                                & & & he uttered (x) & \tabitem Desire to confirm \\
+                                                & & & \tabitem Make G correct & that the last option \\
+                                                & & & \tabitem in case of a & has been well \\
+                                                & & & misunderstanding & understood \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{REF\_INTERP} & & Yes, x that & \tabitem Make G stop & \tabitem Selecting an option\\
+                                                & & is related to y & and understand & \tabitem Less effort as x \\
+                                                & & & T is referring to & has already been \\
+                                                & & & the last element & uttered by G \\
+                                                & & & he uttered (x) & \tabitem Desire to confirm \\
+                                                & & & \tabitem Make G correct & that the last option \\
+                                                & & & \tabitem in case of a & has been well \\
+                                                & & & misunderstanding & understood \\
+                                                & & & & \tabitem Stronger confirmation \\
+                                                & & & & by adding related \\
+                                                & & & & information y \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{BARGE\_IN\_RESP} & & x & \tabitem Make G aware & \tabitem Desire to move \\
+                                                & & & of x & the dialogue \\
+                                                & & & & forward \\
+                                                & & & & \tabitem More efficiency \\
+                                                & & & & because enough \\
+                                                & & & & information has \\
+                                                & & & & been provided before \\
+                                                & & & & the end of the \\
+                                                & & & & utterance \\
+                                                \hline
+                                                \textbf{REKINDLE} & & The information you & \tabitem Make G resume & \tabitem Fix desynchronisation \\
+                                                & & gave is not & & \\
+                                                & & enough, please & & \\
+                                                & & provide more & & \\
+                                                & & information & & \\
+                                                \hline
+                                                \rule{0pt}{4ex}
+                                                \textbf{END\_DIALOGUE} & & x & \tabitem Make G aware & \tabitem Desire to move \\
+                                                & & & of x & the dialogue \\
+                                                & & & & forward \\
+                                                \hline
+					\end{tabular}
+				}
+				\caption{Taxonomy labels (2/2)}
+				\label{tab:taxosynth2}
 			\end{table}
 		
      %HK> Réorganiser les sections.

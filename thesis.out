@@ -28,53 +28,53 @@
 \BOOKMARK [2][-]{subsection.96}{Reference}{section.85}% 28
 \BOOKMARK [2][-]{subsection.97}{Ordered dialogue acts}{section.85}% 29
 \BOOKMARK [2][-]{subsection.98}{Synthesis}{section.85}% 30
-\BOOKMARK [2][-]{subsection.100}{Turn-taking phenomena in dialogue systems}{section.85}% 31
-\BOOKMARK [0][-]{chapter.101}{Architecture}{part.64}% 32
-\BOOKMARK [1][-]{section.102}{Description}{chapter.101}% 33
-\BOOKMARK [2][-]{subsection.103}{Overview}{section.102}% 34
-\BOOKMARK [2][-]{subsection.105}{Time sharing}{section.102}% 35
-\BOOKMARK [2][-]{subsection.107}{The Scheduler}{section.102}% 36
-\BOOKMARK [1][-]{section.110}{Illustration}{chapter.101}% 37
-\BOOKMARK [2][-]{subsection.111}{A textual dialogue system: CFAsT}{section.110}% 38
-\BOOKMARK [2][-]{subsection.113}{A spoken dialogue system: Dictanum}{section.110}% 39
-\BOOKMARK [1][-]{section.114}{Discussion}{chapter.101}% 40
-\BOOKMARK [2][-]{subsection.115}{Levels of incrementality}{section.114}% 41
-\BOOKMARK [2][-]{subsection.116}{Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{section.114}% 42
-\BOOKMARK [2][-]{subsection.118}{Separating dialogue management from floor management}{section.114}% 43
-\BOOKMARK [0][-]{chapter.119}{Incremental dialogue simulation}{part.64}% 44
-\BOOKMARK [1][-]{section.120}{Agenda management task}{chapter.119}% 45
-\BOOKMARK [1][-]{section.122}{The service}{chapter.119}% 46
-\BOOKMARK [2][-]{subsection.123}{Natural Language Understanding}{section.122}% 47
-\BOOKMARK [1][-]{section.129}{User simulator}{chapter.119}% 48
-\BOOKMARK [2][-]{subsection.130}{Overview}{section.129}% 49
-\BOOKMARK [2][-]{subsection.132}{Intent Manager}{section.129}% 50
-\BOOKMARK [2][-]{subsection.136}{NLG and Verbosity Manager}{section.129}% 51
-\BOOKMARK [2][-]{subsection.137}{ASR output simulator}{section.129}% 52
-\BOOKMARK [2][-]{subsection.145}{Timing and patience manager}{section.129}% 53
-\BOOKMARK [0][-]{chapter.147}{Handcrafted strategies for improving dialogue efficiency}{part.64}% 54
-\BOOKMARK [1][-]{section.148}{User and system initiative}{chapter.147}% 55
-\BOOKMARK [2][-]{subsection.149}{Strategies}{section.148}% 56
-\BOOKMARK [2][-]{subsection.150}{Experiments}{section.148}% 57
-\BOOKMARK [1][-]{section.153}{Incremental strategies}{chapter.147}% 58
-\BOOKMARK [2][-]{subsection.154}{ASR instability}{section.153}% 59
-\BOOKMARK [2][-]{subsection.155}{TTP implementation}{section.153}% 60
-\BOOKMARK [2][-]{subsection.161}{Experiments}{section.153}% 61
-\BOOKMARK [0][-]{chapter.165}{Reinforcement learning for turn-taking optimisation}{part.64}% 62
-\BOOKMARK [1][-]{section.166}{Model}{chapter.165}% 63
-\BOOKMARK [2][-]{subsection.167}{State representation}{section.166}% 64
-\BOOKMARK [2][-]{subsection.168}{Actions, rewards and episodes}{section.166}% 65
-\BOOKMARK [2][-]{subsection.169}{Fitted-Q Value Iteration}{section.166}% 66
-\BOOKMARK [1][-]{section.170}{Experiment}{chapter.165}% 67
-\BOOKMARK [2][-]{subsection.171}{Setup}{section.170}% 68
-\BOOKMARK [2][-]{subsection.175}{Results}{section.170}% 69
-\BOOKMARK [0][-]{chapter.178}{Experiment with real users}{part.64}% 70
-\BOOKMARK [1][-]{section.179}{Protocol}{chapter.178}% 71
-\BOOKMARK [1][-]{section.180}{Results}{chapter.178}% 72
-\BOOKMARK [0][-]{chapter.181}{A new reinforcement learning approach adapted to incremental dialogue}{part.64}% 73
-\BOOKMARK [1][-]{section.182}{Problem}{chapter.181}% 74
-\BOOKMARK [1][-]{section.183}{Proposed approach}{chapter.181}% 75
-\BOOKMARK [1][-]{section.184}{Toy problem application}{chapter.181}% 76
-\BOOKMARK [1][-]{section.185}{Simulation results}{chapter.181}% 77
-\BOOKMARK [0][-]{chapter*.186}{Liste des illustrations}{part.64}% 78
-\BOOKMARK [0][-]{chapter*.187}{Liste des tableaux}{part.64}% 79
-\BOOKMARK [0][-]{chapter*.188}{Bibliographie}{part.64}% 80
+\BOOKMARK [2][-]{subsection.101}{Turn-taking phenomena in dialogue systems}{section.85}% 31
+\BOOKMARK [0][-]{chapter.102}{Architecture}{part.64}% 32
+\BOOKMARK [1][-]{section.103}{Description}{chapter.102}% 33
+\BOOKMARK [2][-]{subsection.104}{Overview}{section.103}% 34
+\BOOKMARK [2][-]{subsection.106}{Time sharing}{section.103}% 35
+\BOOKMARK [2][-]{subsection.108}{The Scheduler}{section.103}% 36
+\BOOKMARK [1][-]{section.111}{Illustration}{chapter.102}% 37
+\BOOKMARK [2][-]{subsection.112}{A textual dialogue system: CFAsT}{section.111}% 38
+\BOOKMARK [2][-]{subsection.114}{A spoken dialogue system: Dictanum}{section.111}% 39
+\BOOKMARK [1][-]{section.115}{Discussion}{chapter.102}% 40
+\BOOKMARK [2][-]{subsection.116}{Levels of incrementality}{section.115}% 41
+\BOOKMARK [2][-]{subsection.117}{Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{section.115}% 42
+\BOOKMARK [2][-]{subsection.119}{Separating dialogue management from floor management}{section.115}% 43
+\BOOKMARK [0][-]{chapter.120}{Incremental dialogue simulation}{part.64}% 44
+\BOOKMARK [1][-]{section.121}{Agenda management task}{chapter.120}% 45
+\BOOKMARK [1][-]{section.123}{The service}{chapter.120}% 46
+\BOOKMARK [2][-]{subsection.124}{Natural Language Understanding}{section.123}% 47
+\BOOKMARK [1][-]{section.130}{User simulator}{chapter.120}% 48
+\BOOKMARK [2][-]{subsection.131}{Overview}{section.130}% 49
+\BOOKMARK [2][-]{subsection.133}{Intent Manager}{section.130}% 50
+\BOOKMARK [2][-]{subsection.137}{NLG and Verbosity Manager}{section.130}% 51
+\BOOKMARK [2][-]{subsection.138}{ASR output simulator}{section.130}% 52
+\BOOKMARK [2][-]{subsection.146}{Timing and patience manager}{section.130}% 53
+\BOOKMARK [0][-]{chapter.148}{Handcrafted strategies for improving dialogue efficiency}{part.64}% 54
+\BOOKMARK [1][-]{section.149}{User and system initiative}{chapter.148}% 55
+\BOOKMARK [2][-]{subsection.150}{Strategies}{section.149}% 56
+\BOOKMARK [2][-]{subsection.151}{Experiments}{section.149}% 57
+\BOOKMARK [1][-]{section.154}{Incremental strategies}{chapter.148}% 58
+\BOOKMARK [2][-]{subsection.155}{ASR instability}{section.154}% 59
+\BOOKMARK [2][-]{subsection.156}{TTP implementation}{section.154}% 60
+\BOOKMARK [2][-]{subsection.162}{Experiments}{section.154}% 61
+\BOOKMARK [0][-]{chapter.166}{Reinforcement learning for turn-taking optimisation}{part.64}% 62
+\BOOKMARK [1][-]{section.167}{Model}{chapter.166}% 63
+\BOOKMARK [2][-]{subsection.168}{State representation}{section.167}% 64
+\BOOKMARK [2][-]{subsection.169}{Actions, rewards and episodes}{section.167}% 65
+\BOOKMARK [2][-]{subsection.170}{Fitted-Q Value Iteration}{section.167}% 66
+\BOOKMARK [1][-]{section.171}{Experiment}{chapter.166}% 67
+\BOOKMARK [2][-]{subsection.172}{Setup}{section.171}% 68
+\BOOKMARK [2][-]{subsection.176}{Results}{section.171}% 69
+\BOOKMARK [0][-]{chapter.179}{Experiment with real users}{part.64}% 70
+\BOOKMARK [1][-]{section.180}{Protocol}{chapter.179}% 71
+\BOOKMARK [1][-]{section.181}{Results}{chapter.179}% 72
+\BOOKMARK [0][-]{chapter.182}{A new reinforcement learning approach adapted to incremental dialogue}{part.64}% 73
+\BOOKMARK [1][-]{section.183}{Problem}{chapter.182}% 74
+\BOOKMARK [1][-]{section.184}{Proposed approach}{chapter.182}% 75
+\BOOKMARK [1][-]{section.185}{Toy problem application}{chapter.182}% 76
+\BOOKMARK [1][-]{section.186}{Simulation results}{chapter.182}% 77
+\BOOKMARK [0][-]{chapter*.187}{Liste des illustrations}{part.64}% 78
+\BOOKMARK [0][-]{chapter*.188}{Liste des tableaux}{part.64}% 79
+\BOOKMARK [0][-]{chapter*.189}{Bibliographie}{part.64}% 80
