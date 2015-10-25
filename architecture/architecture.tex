@@ -156,50 +156,35 @@
 
 	\subsection{Levels of incrementality}
     
-    	Dialogue systems can be classified in four categories given the way they integrate incremental behaviour. The first category is made of traditional systems \cite{CLASSiCd64}. Then comes the second category where traditional systems locally simulate a few incremental behaviours. For instance, in \cite{El-Asri2014}, the system enumerates a list of options and the user selects the one that fits him best by uttering \textit{Yes} or \textit{Ok} for example (REF\_RAW in the taxonomy introduced in Chap. \ref{ch:taxonomy}). The architecture introduced in this thesis belongs to the third category where incremental behaviour is obtained based on modules that are innately non-incremental (the service in our case). Other examples are described in \cite{Selfridge2012a} and \cite{Hastie2013}. Finally, the fourth category is made of incremental dialogue systems that are constituted of fully-incremental modules. In \cite{Schlangen2011}, an abstract model for incremental architectures is presented where all the categories can fit, but the work that has been pursued by the authors and their research groups later on goes along with the spirit of this last category.
+    	Dialogue systems can be classified in four categories given the way they integrate incremental behaviour. The first category is made of traditional systems \cite{CLASSiCd64}. Then comes the second category where traditional systems locally simulate a few incremental behaviours. For instance, in \cite{El-Asri2014a}, the system enumerates a list of options and the user selects the one that fits him best by uttering \textit{Yes} or \textit{Ok} for example (REF\_RAW in the taxonomy introduced in Chap. \ref{ch:taxonomy}). The architecture introduced in this thesis belongs to the third category where incremental behaviour is obtained based on modules that are innately non-incremental (the service in our case). Other examples are described in \cite{Selfridge2012a} and \cite{Hastie2013}. Finally, the fourth category is made of incremental dialogue systems that are constituted of fully-incremental modules. In \cite{Schlangen2011}, an abstract model for incremental architectures is presented where all the categories can fit, but the work that has been pursued by the authors and their research groups later on goes along with the spirit of this last category.
 		
 		Categories 2, 3 and 4 embed different features related to incremental behaviour as summarised in Fig. \ref{tab:incrclassif}.
 
 	\subsection{Enhancing a traditional dialogue system's turn-taking abilities at a low cost}
     
-      \begin{table*}[!ht]
-      	\footnotesize
-        \centering
-        \begin{tabular}{|c|c|c|c|c|}
-          \hline
-          \textbf{Features}	& \textbf{Category 1} & \textbf{Category 2} & \textbf{Category 3} & \textbf{Category 4} \\
-          \hline
-          TTS interruption after input analysis & - & + & + & + \\
-          \hline
-          Link interruption time with TTS & - & + & + & + \\
-          \hline
-          User interruption by the system & - & - & + & + \\
-          \hline
-          Better reactivity & - & - & + & + \\
-          \hline
-          Optimal processing cost & - & - & - & + \\
-          \hline
-        \end{tabular}
-        \caption{Available features for dialogue systems given the way they integrate incrementality}
-        \label{tab:incrclassif}
-      \end{table*}
+             
+
+             \begin{table*}[!ht]
+      	     \footnotesize
+             \centering
+             \begin{tabular}{|c|c|c|c|c|}
+               \hline
+               \textbf{Features}	& \textbf{Category 1} & \textbf{Category 2} & \textbf{Category 3} & \textbf{Category 4} \\
+               \hline
+               TTS interruption after input analysis & - & + & + & + \\
+               \hline
+               Link interruption time with TTS & - & + & + & + \\
+               \hline
+               User interruption by the system & - & - & + & + \\
+               \hline
+               Better reactivity & - & - & + & + \\
+               \hline
+               Optimal processing cost & - & - & - & + \\
+               \hline
+             \end{tabular}
+             \caption{Available features for dialogue systems given the way they integrate incrementality}
+             \label{tab:incrclassif}
+             \end{table*}
     
     \subsection{Separating dialogue management from floor management}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     

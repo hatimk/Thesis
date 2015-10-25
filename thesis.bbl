@@ -161,13 +161,20 @@
 \newblock Dans les actes de \textit{ Proceedings of the 21st Conférence sur le
   Traitement Automatique des Langues Naturelles (TALN)}.
 
-\bibitem[{El~Asri et~al.}(2014){El~Asri, Khouzaimi, Laroche, \andnamec{}
+\bibitem[{El~Asri et~al.}(2014a){El~Asri, Khouzaimi, Laroche, \andnamec{}
   Pietquin}]{El-Asri2014b}
-(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
-  \andname{} O.~Pietquin, 2014.
+(El~Asri et~al., 2014a) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
+  \andname{} O.~Pietquin, 2014a.
 \newblock Ordinal regression for interaction quality prediction.
 \newblock Dans les actes de \textit{ Acoustics, Speech and Signal Processing
   (ICASSP), 2014 IEEE International Conference on}.
+
+\bibitem[{El~Asri et~al.}(2014b){El~Asri, Lemonnier, Laroche, Pietquin,
+  \andnamec{} Khouzaimi}]{El-Asri2014a}
+(El~Asri et~al., 2014b) \hspace{.5em}L.~El~Asri, R.~Lemonnier, R.~Laroche,
+  O.~Pietquin, \andname{} H.~Khouzaimi, 2014b.
+\newblock {NASTIA: Negotiating Appointment Setting Interface}.
+\newblock Dans les actes de \textit{ Proceedings of LREC}.
 
 \bibitem[{Fink et~al.}(1998){Fink, Schillo, Kummert, \andnamec{}
   Sagerer}]{Fink1998}

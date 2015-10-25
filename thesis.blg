@@ -17,7 +17,6 @@ A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "El-Asri2014"
 Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
@@ -28,45 +27,45 @@ Warning--page numbers missing in Pietquin2013
 Warning--page numbers missing in Schatzmann2006
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 84 entries,
+You've used 85 entries,
             2936 wiz_defined-function locations,
-            1095 strings with 20068 characters,
-and the built_in function-call counts, 52148 in all, are:
-= -- 4314
-> -- 3675
+            1098 strings with 20233 characters,
+and the built_in function-call counts, 52821 in all, are:
+= -- 4363
+> -- 3737
 < -- 5
-+ -- 1138
-- -- 1292
-* -- 3608
-:= -- 9172
-add.period$ -- 253
-call.type$ -- 84
-change.case$ -- 661
++ -- 1159
+- -- 1312
+* -- 3664
+:= -- 9294
+add.period$ -- 256
+call.type$ -- 85
+change.case$ -- 671
 chr.to.int$ -- 84
-cite$ -- 94
-duplicate$ -- 1858
-empty$ -- 3445
-format.name$ -- 1548
-if$ -- 9946
-int.to.chr$ -- 1
+cite$ -- 95
+duplicate$ -- 1880
+empty$ -- 3485
+format.name$ -- 1571
+if$ -- 10074
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 86
-newline$ -- 429
-num.names$ -- 672
-pop$ -- 899
+missing$ -- 87
+newline$ -- 434
+num.names$ -- 679
+pop$ -- 914
 preamble$ -- 1
-purify$ -- 1177
+purify$ -- 1191
 quote$ -- 0
-skip$ -- 1574
+skip$ -- 1587
 stack$ -- 0
-substring$ -- 2085
-swap$ -- 121
+substring$ -- 2102
+swap$ -- 122
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1590
+type$ -- 1606
 warning$ -- 10
-while$ -- 539
+while$ -- 543
 width$ -- 0
-write$ -- 1782
+write$ -- 1803
 (There was 1 error message)
