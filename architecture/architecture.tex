@@ -145,7 +145,7 @@
         Dictanum also offers the possibility for the user to interrupt the system during the final feedback, in order to make local corrections. To do that, this feedback is sent to the TTS in the following format: \textit{The dictated number is 01 <sep> 45 <sep> 65 <sep> 79 <sep> 98. Is that correct?}. The latter pronounces the sentence chunk after chunk (chunks are delimited using the separator \textit{<sep>}), each chunk lasting for the same number of micro-turns. This leads to the following kind of strategy:
         
         \begin{dialogue}
-        	\speak{SYSTEM} The dictated number is: 01 45 67...
+            \speak{SYSTEM} The dictated number is: 01 45 67...
             \speak{USER} No, 65.
             \speak{SYSTEM} Sorry. The dictated number is 01 45 65 79 98. Is that right?
             \speak{USER} Yes.
@@ -162,7 +162,15 @@
 
 	\subsection{Enhancing a traditional dialogue system's turn-taking abilities at a low cost}
     
-             
+             Adopting the sequential paradigm described in Chapter \ref{ch:stateofart} is a natural way of designing incremental dialogue systems \cite{Schlangen2011}. The dialogue chain is kept unchanged, however, an important amount of work has to be done in order to design an incremental version of each one of the modules. The approach introduced in this chapter makes it possible to build an incremental dialogue system starting from a traditional one instead of starting from scratch. Therefore, the development cost is significantly reduced and moreover, the resulting incremental dialogue system obtained benefits from all the experience and the adjustments embedded in the original dialogue system. In this section, an analysis is led to determine which challenges brought by building incremental dialogue systems are simplified when using the approached introduced in this chapter.
+
+             Incremental ASR is a prerequisit for the implementation of a Scheduler-based architecture. Therefore, it is not simplified by this approach and an inaccurate, slow or unstable ASR module still hurts the dialogue quality in the same way. In terms of NLU, two cases have to be distinguished: putting the SCheduler before the NLU or after it. In the first case, it does not make sense to use an incremental NLU as the Scheduler proceeds on a restart incremental fashion (sending the whole user's partial utterance at each micro-turn). However, in the second case, it is possible to benefit from the advantages of incremental NLU (forming concepts in a real incremental way resulting in more efficient processing). In that case, the Scheduler receives a sequence of potentially unstable set of concepts.
+
+             The core difference between both approaches resides in the DM task. In a full-incremental architecture, dialogue act and turn-taking decisions and intertwined. The DM receives the input concepts chunk by chunk, and at each micro-turn, the new information can be viewed as the continuity of what has been understood so far, or as a signal pushing the DM to revoke the current hypothesis before taking a new action. In the Scheduler-based approach, as the restart incremental paradigm is adopted, the revoke mecanism is intrinsicly implemented as it is performed beforehand (the ASR changing its best hypothesis is a case of revoke).
+
+             Incremental NLG does not make sense in the frame proposed here as the Scheduler can only retrieve full dialogue acts that have been precomputed by the service. As a consequence, the system can change its mind about the utterance currently uttered but it can only generate a new dialogue act from scratch with is potentially not related to the previous one. Nevertheless, as discussed in Chapter \ref{ch:stateofart}, this is not a major problem when it comes to spoken dialogue systems relying on voice as the only interaction modality. It is mostly used when the system produces comments about a moving object or situation it is observing \cite{Baumann2013}.
+
+             Finally, as far as the TTS task is concerned, the same remark as for the NLG can be made. However, it can be interesting to give the Scheduler the power to stop the TTS. This is particularly interesting when the DM decides to revoke its current belief.
 
              \begin{table*}[!ht]
       	     \footnotesize

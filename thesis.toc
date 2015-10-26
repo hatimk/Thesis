@@ -54,7 +54,7 @@
 \contentsline {section}{\numberline {3.3}Discussion}{61}{section.115}
 \contentsline {subsection}{\numberline {3.3.1}Levels of incrementality}{61}{subsection.116}
 \contentsline {subsection}{\numberline {3.3.2}Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{61}{subsection.117}
-\contentsline {subsection}{\numberline {3.3.3}Separating dialogue management from floor management}{61}{subsection.119}
+\contentsline {subsection}{\numberline {3.3.3}Separating dialogue management from floor management}{62}{subsection.119}
 \contentsline {chapter}{\numberline {4}Incremental dialogue simulation}{63}{chapter.120}
 \contentsline {section}{\numberline {4.1}Agenda management task}{63}{section.121}
 \contentsline {section}{\numberline {4.2}The service}{63}{section.123}
