@@ -32,6 +32,12 @@
 \newblock \textit{ How to Do Things with Words}.
 \newblock Oxford.
 
+\bibitem[{Baumann}(2008){Baumann}]{Baumann2008}
+(Baumann, 2008) \hspace{.5em}T.~Baumann, 2008.
+\newblock Simulating spoken dialogue with a focus on realistic turn-taking.
+\newblock Dans les actes de \textit{ Proceedings of the 5th International
+  Workshop on Constraints and Language Processing (CSLP)}.
+
 \bibitem[{Baumann}(2014){Baumann}]{Baumann2014}
 (Baumann, 2014) \hspace{.5em}T.~Baumann, 2014.
 \newblock Partial representations improve the prosody of incremental speech
@@ -263,13 +269,21 @@
 \newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[{Khouzaimi et~al.}(2015){Khouzaimi, Laroche, \andnamec{}
+\bibitem[{Khouzaimi et~al.}(2015a){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2015b}
-(Khouzaimi et~al., 2015) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
-  F.~Lef\`evre, 2015.
+(Khouzaimi et~al., 2015a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015a.
 \newblock Optimising turn-taking strategies with reinforcement learning.
 \newblock Dans les actes de \textit{ Proceedings of the 16th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[{Khouzaimi et~al.}(2015b){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015c}
+(Khouzaimi et~al., 2015b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015b.
+\newblock Turn-taking phenomena in incremental dialogue systems.
+\newblock Dans les actes de \textit{ Proceedings of the 2015 Conference on
+  Empirical Methods in Natural Language Processing (EMNLP)}.
 
 \bibitem[{Kilger \andnamec{} Finkler}(1995){Kilger \andnamec{}
   Finkler}]{Kilger1995}

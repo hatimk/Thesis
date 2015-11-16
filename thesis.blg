@@ -1,13 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: stateofart/stateofart.aux
 A level-1 auxiliary file: taxonomy/taxonomy.aux
-White space in argument---line 31 of file taxonomy/taxonomy.aux
- : \citation{I
- :             understand what you said so far,please continue}
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: architecture/architecture.aux
 A level-1 auxiliary file: simulation/simulation.aux
 A level-1 auxiliary file: baseline/baseline.aux
@@ -17,6 +13,7 @@ A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
+Warning--I didn't find a database entry for "Johsdottir2008"
 Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
@@ -27,45 +24,45 @@ Warning--page numbers missing in Pietquin2013
 Warning--page numbers missing in Schatzmann2006
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 85 entries,
+You've used 87 entries,
             2936 wiz_defined-function locations,
-            1098 strings with 20233 characters,
-and the built_in function-call counts, 52821 in all, are:
-= -- 4363
-> -- 3737
+            1108 strings with 20613 characters,
+and the built_in function-call counts, 53863 in all, are:
+= -- 4450
+> -- 3797
 < -- 5
-+ -- 1159
-- -- 1312
-* -- 3664
-:= -- 9294
-add.period$ -- 256
-call.type$ -- 85
-change.case$ -- 671
-chr.to.int$ -- 84
-cite$ -- 95
-duplicate$ -- 1880
-empty$ -- 3485
-format.name$ -- 1571
-if$ -- 10074
-int.to.chr$ -- 2
++ -- 1176
+- -- 1332
+* -- 3723
+:= -- 9477
+add.period$ -- 262
+call.type$ -- 87
+change.case$ -- 685
+chr.to.int$ -- 85
+cite$ -- 97
+duplicate$ -- 1926
+empty$ -- 3568
+format.name$ -- 1594
+if$ -- 10278
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 87
-newline$ -- 434
-num.names$ -- 679
-pop$ -- 914
+missing$ -- 89
+newline$ -- 444
+num.names$ -- 694
+pop$ -- 938
 preamble$ -- 1
-purify$ -- 1191
+purify$ -- 1215
 quote$ -- 0
-skip$ -- 1587
+skip$ -- 1617
 stack$ -- 0
-substring$ -- 2102
-swap$ -- 122
+substring$ -- 2139
+swap$ -- 124
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1606
+type$ -- 1642
 warning$ -- 10
-while$ -- 543
+while$ -- 555
 width$ -- 0
-write$ -- 1803
-(There was 1 error message)
+write$ -- 1845
+(There were 11 warnings)
