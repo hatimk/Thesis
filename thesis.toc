@@ -29,9 +29,9 @@
 \contentsline {paragraph}{Dialogue 2}{40}{section*.73}
 \contentsline {paragraph}{Dialogue 3}{40}{section*.74}
 \contentsline {paragraph}{H\_NONE:}{41}{section*.79}
-\contentsline {paragraph}{H\_FAIL:}{41}{section*.80}
+\contentsline {paragraph}{H\_FAIL:}{42}{section*.80}
 \contentsline {paragraph}{H\_INCOHERENCE:}{42}{section*.81}
-\contentsline {paragraph}{H\_INCOMPLETE:}{42}{section*.82}
+\contentsline {paragraph}{H\_INCOMPLETE:}{43}{section*.82}
 \contentsline {paragraph}{H\_SUFFICIENT:}{43}{section*.83}
 \contentsline {paragraph}{H\_COMPLETE:}{44}{section*.84}
 \contentsline {section}{\numberline {2.3}Discussion}{44}{section.85}
