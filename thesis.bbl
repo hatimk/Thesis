@@ -122,6 +122,15 @@
 \newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
   Conference}.
 
+\bibitem[{Deng et~al.}(2013){Deng, Li, Huang, Yao, Yu, Seide, Seltzer, Zweig,
+  He, Williams, Gong, \andnamec{} Acero}]{Deng2013}
+(Deng et~al., 2013) \hspace{.5em}L.~Deng, J.~Li, J.-T. Huang, K.~Yao, D.~Yu,
+  F.~Seide, M.~Seltzer, G.~Zweig, X.~He, J.~Williams, Y.~Gong, \andname{}
+  A.~Acero, 2013.
+\newblock Recent advances in deep learning for speech research at microsoft.
+\newblock Dans les actes de \textit{ IEEE International Conference on
+  Acoustics, Speech, and Signal Processing (ICASSP)}.
+
 \bibitem[{Dethlefs et~al.}(2012){Dethlefs, Hastie, Rieser, \andnamec{}
   Lemon}]{Dethlefs2012}
 (Dethlefs et~al., 2012) \hspace{.5em}N.~Dethlefs, H.~W. Hastie, V.~Rieser,
@@ -394,6 +403,14 @@
   system.
 \newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
   Conference}.
+
+\bibitem[{Mohamed et~al.}(2009){Mohamed, Dahl, \andnamec{}
+  Hinton}]{Mohamed2009}
+(Mohamed et~al., 2009) \hspace{.5em}A.~Mohamed, G.~Dahl, \andname{} G.~Hinton,
+  2009.
+\newblock Deep belief networks for phone recognition.
+\newblock \textit{ NIPS 22nd workshop on deep learning for speech
+  recognition\/}.
 
 \bibitem[{Mori}(1970){Mori}]{Mori1970}
 (Mori, 1970) \hspace{.5em}M.~Mori, 1970.
