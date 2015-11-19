@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {1.3.1}Spoken dialogue system}{16}{subsection.14}
 \contentsline {subsection}{\numberline {1.3.2}Dialogue systems evaluation}{21}{subsection.22}
 \contentsline {subsection}{\numberline {1.3.3}Incremental dialogue systems}{21}{subsection.23}
-\contentsline {subsection}{\numberline {1.3.4}Advantages of incremental processing}{23}{subsection.25}
-\contentsline {subsection}{\numberline {1.3.5}New challenges raised by incremental dialogue processing}{24}{subsection.26}
+\contentsline {subsection}{\numberline {1.3.4}Advantages of incremental processing}{22}{subsection.25}
+\contentsline {subsection}{\numberline {1.3.5}New challenges raised by incremental dialogue processing}{25}{subsection.26}
 \contentsline {subsection}{\numberline {1.3.6}Existing architectures}{26}{subsection.34}
 \contentsline {subsubsection}{Sequential paradigm}{26}{section*.35}
 \contentsline {subsubsection}{Multi-layer paradigm}{27}{section*.36}

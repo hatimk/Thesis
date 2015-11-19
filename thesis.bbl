@@ -71,6 +71,14 @@
 \newblock \textit{ Dynamic Programming}.
 \newblock Princeton University Press.
 
+\bibitem[{Bengio et~al.}(2003){Bengio, Ducharme, Vincent, \andnamec{}
+  Janvin}]{Bengio2003}
+(Bengio et~al., 2003) \hspace{.5em}Y.~Bengio, R.~Ducharme, P.~Vincent,
+  \andname{} C.~Janvin, 2003.
+\newblock A neural probabilistic language model.
+\newblock \textit{ The Journal of Machine Learning Research\/}~\textit{3},
+  1137--1155.
+
 \bibitem[{Berry \andnamec{} Fristedt}(1985){Berry \andnamec{}
   Fristedt}]{Berry1985}
 (Berry \andnamec{} Fristedt, 1985) \hspace{.5em}D.~A. Berry \andname{}
@@ -113,6 +121,13 @@
 \newblock \textit{ Using Language}.
 \newblock Cambridge University Press.
 
+\bibitem[{Collobert et~al.}(2011){Collobert, Weston, Bottou, Karlen,
+  Kavukcuoglu, \andnamec{} Kuksa}]{Collobert2011}
+(Collobert et~al., 2011) \hspace{.5em}R.~Collobert, J.~Weston, L.~Bottou,
+  M.~Karlen, K.~Kavukcuoglu, \andname{} P.~P. Kuksa, 2011.
+\newblock Natural language processing (almost) from scratch.
+\newblock \textit{ CoRR\/}~\textit{abs/1103.0398}.
+
 \bibitem[{Daubigney et~al.}(2013){Daubigney, Geist, \andnamec{}
   Pietquin}]{Daubigney2013}
 (Daubigney et~al., 2013) \hspace{.5em}L.~Daubigney, M.~Geist, \andname{}
@@ -146,6 +161,11 @@
 \newblock Incremental interpretation and prediction of utterance meaning for
   interactive dialogue.
 \newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 143--170.
+
+\bibitem[{Dudley}(1939){Dudley}]{Dudley1939}
+(Dudley, 1939) \hspace{.5em}H.~Dudley, 1939.
+\newblock The vocoder.
+\newblock \textit{ Bell Labs Record\/}~\textit{17}, 122--126.
 
 \bibitem[{Duncan}(1972){Duncan}]{Duncan1972}
 (Duncan, 1972) \hspace{.5em}S.~Duncan, 1972.
@@ -278,18 +298,10 @@
 \newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[{Khouzaimi et~al.}(2015a){Khouzaimi, Laroche, \andnamec{}
-  Lef\`evre}]{Khouzaimi2015b}
-(Khouzaimi et~al., 2015a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
-  F.~Lef\`evre, 2015a.
-\newblock Optimising turn-taking strategies with reinforcement learning.
-\newblock Dans les actes de \textit{ Proceedings of the 16th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
-
-\bibitem[{Khouzaimi et~al.}(2015b){Khouzaimi, Laroche, \andnamec{}
+\bibitem[{Khouzaimi et~al.}(2015){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2015c}
-(Khouzaimi et~al., 2015b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
-  F.~Lef\`evre, 2015b.
+(Khouzaimi et~al., 2015) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015.
 \newblock Turn-taking phenomena in incremental dialogue systems.
 \newblock Dans les actes de \textit{ Proceedings of the 2015 Conference on
   Empirical Methods in Natural Language Processing (EMNLP)}.
@@ -352,14 +364,13 @@
 \newblock \textit{ Speaking: From Intention to Articulation}.
 \newblock Cambridge, MA: MIT Press.
 
-\bibitem[{Levin et~al.}(1997){Levin, Pieraccini, \andnamec{}
-  Eckert}]{Levin1997}
-(Levin et~al., 1997) \hspace{.5em}E.~Levin, R.~Pieraccini, \andname{}
-  W.~Eckert, 1997.
-\newblock Learning dialogue strategies within the markov decision process
-  framework.
-\newblock Dans les actes de \textit{ Automatic Speech Recognition and
-  Understanding, 1997. Proceedings., 1997 IEEE Workshop on}.
+\bibitem[{Levin \andnamec{} Pieraccini}(1997){Levin \andnamec{}
+  Pieraccini}]{Levin1997a}
+(Levin \andnamec{} Pieraccini, 1997) \hspace{.5em}E.~Levin \andname{}
+  R.~Pieraccini, 1997.
+\newblock A stochastic model of computer-human interaction for learning
+  dialogue strategies.
+\newblock Dans les actes de \textit{ In EUROSPEECH 97}.
 
 \bibitem[{Lock}(1965){Lock}]{Lock1965}
 (Lock, 1965) \hspace{.5em}K.~Lock, 1965.
@@ -562,6 +573,14 @@
 \newblock Dans les actes de \textit{ Proceedings of the 14th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
+\bibitem[{Skantze \andnamec{} Johansson}(2015){Skantze \andnamec{}
+  Johansson}]{Skantze2015}
+(Skantze \andnamec{} Johansson, 2015) \hspace{.5em}G.~Skantze \andname{}
+  M.~Johansson, 2015.
+\newblock Modelling situated human-robot interaction using iristk.
+\newblock Dans les actes de \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
 \bibitem[{Skantze \andnamec{} Schlangen}(2009){Skantze \andnamec{}
   Schlangen}]{Skantze2009}
 (Skantze \andnamec{} Schlangen, 2009) \hspace{.5em}G.~Skantze \andname{}
@@ -587,6 +606,14 @@
   Barto, 1998.
 \newblock \textit{ Reinforcement Learning, An Introduction}.
 \newblock The MIT Press, Cambridge, Massachusetts, London, England.
+
+\bibitem[{Tabet \andnamec{} Boughazi}(2011){Tabet \andnamec{}
+  Boughazi}]{Tabet2011}
+(Tabet \andnamec{} Boughazi, 2011) \hspace{.5em}Y.~Tabet \andname{}
+  M.~Boughazi, 2011.
+\newblock Speech synthesis techniques. a survey.
+\newblock Dans les actes de \textit{ Systems, Signal Processing and their
+  Applications (WOSSPA), 2011 7th International Workshop on}.
 
 \bibitem[{Tanenhaus et~al.}(1995){Tanenhaus, Spivey-Knowlton, Eberhard,
   \andnamec{} Sedivy}]{Tanenhaus1995}
@@ -617,12 +644,6 @@
 (Watkins, 1989) \hspace{.5em}C.~J. C.~H. Watkins, 1989.
 \newblock \textit{ Learning from Delayed Rewards}.
 \newblock Th\`ese de Doctorat, King's College.
-
-\bibitem[{Williams}(2012){Williams}]{Williams2012b}
-(Williams, 2012) \hspace{.5em}J.~D. Williams, 2012.
-\newblock A belief tracking challenge task for spoken dialog systems.
-\newblock Dans les actes de \textit{ NAACL HLT 2012 Workshop on Future
-  directions and needs in the Spoken Dialog Community: Tools and Data}.
 
 \bibitem[{Williams \andnamec{} Young}(2007){Williams \andnamec{}
   Young}]{Williams2007}

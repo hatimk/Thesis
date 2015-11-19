@@ -13,11 +13,13 @@ A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
+Warning--I didn't find a database entry for "Levin1997"
 Warning--I didn't find a database entry for "Johsdottir2008"
 Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
 Warning--page numbers missing in Chao2012
+Warning--page numbers missing in Collobert2011
 Warning--page numbers missing in Gales2007
 Warning--empty school in Macherey2009
 Warning--no number and no volume in Mohamed2009
@@ -28,45 +30,45 @@ Warning--no number and no volume in Searle1968
 Warning--page numbers missing in Searle1968
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 90 entries,
+You've used 93 entries,
             2936 wiz_defined-function locations,
-            1123 strings with 21225 characters,
-and the built_in function-call counts, 55985 in all, are:
-= -- 4604
-> -- 3998
+            1146 strings with 21724 characters,
+and the built_in function-call counts, 58157 in all, are:
+= -- 4799
+> -- 4157
 < -- 5
-+ -- 1240
-- -- 1400
-* -- 3904
-:= -- 9868
-add.period$ -- 271
-call.type$ -- 90
-change.case$ -- 716
-chr.to.int$ -- 88
-cite$ -- 104
-duplicate$ -- 1984
-empty$ -- 3677
-format.name$ -- 1670
-if$ -- 10665
-int.to.chr$ -- 3
++ -- 1295
+- -- 1464
+* -- 4073
+:= -- 10248
+add.period$ -- 280
+call.type$ -- 93
+change.case$ -- 741
+chr.to.int$ -- 92
+cite$ -- 108
+duplicate$ -- 2039
+empty$ -- 3799
+format.name$ -- 1747
+if$ -- 11064
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 92
-newline$ -- 459
-num.names$ -- 718
-pop$ -- 970
+missing$ -- 95
+newline$ -- 474
+num.names$ -- 743
+pop$ -- 989
 preamble$ -- 1
-purify$ -- 1264
+purify$ -- 1309
 quote$ -- 0
-skip$ -- 1668
+skip$ -- 1732
 stack$ -- 0
-substring$ -- 2199
-swap$ -- 127
+substring$ -- 2322
+swap$ -- 130
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1702
-warning$ -- 14
-while$ -- 571
+type$ -- 1766
+warning$ -- 15
+while$ -- 599
 width$ -- 0
-write$ -- 1908
-(There were 15 warnings)
+write$ -- 1971
+(There were 17 warnings)
