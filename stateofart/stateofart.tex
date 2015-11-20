@@ -2,7 +2,7 @@
 
 \label{ch:stateofart}
 
-\section{Introduction}
+\section*{Introduction}
 				
 				(This introduction is meant to be developed further and moved to the general thesis introduction section later. It will be replaced with a transition instead).
 
@@ -93,29 +93,32 @@
            Finally, when humans are reading a text, they tend to skip a few words with no loss of the meaning. In \cite{Ilkin2011}, the authors show that it is possible to predict a few words while reading given the context and the sentence structure (eye-tracking has also been used here). For example, when the readers reach the sentence \textit{The worker was criticised by his boss}, the word boss seems to be guessed ahead of time, again supporting the idea of incremental processing.
 
 
-\section{Spoken dialogue systems and incremental behaviour}
-    
-	\subsection{Spoken dialogue system}
-        \label{soa:sds}
+\section{Spoken dialogue systems}
         
 	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented since their goal is to help the user achieve some task. There also exist a few SDSs that are only used for tutoring \cite{Daubigney2013} or simply chatting and companionship \cite{Sidner2013}.
 	
-	Traditional computer interfaces are presented in the form of controls in an application (text boxes, buttons) or web pages. They are heavily used and they have been proven to be efficient enough, providing an accurate way of human-machine interaction. So, why building spoken dialogue systems? What are the advantages of the vocal modality?
+	\subsection{Towards a human-like interaction}
+  \label{soa:humanlike}
+	
+		Traditional computer interfaces are presented in the form of controls in an application (text boxes, buttons) or web pages. They are heavily used and they have been proven to be efficient enough, providing an accurate way of human-machine interaction. So, why building spoken dialogue systems? What are the advantages of the vocal modality?
+			
+		An obvious motivation for building spoken dialogue systems is the quest for human-likeness. In \cite{Edlund2008}, an interesting analysis of the way humans perceive dialogue systems they are interacting with is performed. These systems are complex and humans keep a biased representation of them during the interaction (called metaphors in the article). Two of them are the most common:
 		
-	An obvious motivation for building spoken dialogue systems is the quest for human-likeness. In \cite{Edlund2008}, an interesting analysis of the way humans perceive dialogue systems they are interacting with is performed. These systems are complex and humans keep a biased representation of them during the interaction (called metaphors in the article). Two of them are the most common:
-	
-	\begin{itemize}
-		\item \textit{Interface metaphor:} The system is viewed as an interface just like non dialogue-based systems. Users adopting this representation of the system tend to use vocal commands instead of complete sentences. Moreover, they tend to keep silent when the system tries to behave like a human, by saying \textit{Hi!} for example.
-		\item \textit{Human metaphor:} In this case, the users tend to view the system as a real human, therefore adopting a more natural way of communication. These users generally have higher expectations of the system's ability to answer their requests as well as its ability to perform human-like turn-taking behaviours.
-	\end{itemize}
-	
-	Nevertheless, it is also legitimate to ask the question whether human-likeness should be a goal in the conception of dialogue systems or not. In \cite{Edlund2008}, four kinds of objections to pursuing that goal are discussed. The first one is the feasibility: is there any hope that someday, systems that behave exactly like humans could be built. This has raised huge debates during the last decades. The second question is utility: do people really need systems that imitate humans? Apart from the fact that it would help us to better understand the way humans communicate, it is easy to justify in the case of some applications like companionship and entertainment. It is less obvious when it comes to task-oriented dialogue. The third point is related to the concept of \textit{uncanny valley} \cite{Mori1970}: as machine's human-likeness increases, they reach a point where they start becoming disturbing for the user. Nevertheless, by bringing even more improvements, this valley will be crossed hopefully and human-like solutions that no longer have such problems will be built. Finally, the last brought up question is the one of symmetry. If machines have a similar behaviour to humans, then users are likely to push the human metaphor to the limit by unconsciously thinking that machines really understand what they are saying, thus expecting more complex reactions like the ones due to emotions for example.
+		\begin{itemize}
+			\item \textit{Interface metaphor:} The system is viewed as an interface just like non dialogue-based systems. Users adopting this representation of the system tend to use vocal commands instead of complete sentences. Moreover, they tend to keep silent when the system tries to behave like a human, by saying \textit{Hi!} for example.
+			\item \textit{Human metaphor:} In this case, the users tend to view the system as a real human, therefore adopting a more natural way of communication. These users generally have higher expectations of the system's ability to answer their requests as well as its ability to perform human-like turn-taking behaviours.
+		\end{itemize}
+		
+		Nevertheless, it is also legitimate to ask the question whether human-likeness should be a goal in the conception of dialogue systems or not. In \cite{Edlund2008}, four kinds of objections to pursuing that goal are discussed. The first one is the feasibility: is there any hope that someday, systems that behave exactly like humans could be built. This has raised huge debates during the last decades. The second question is utility: do people really need systems that imitate humans? Apart from the fact that it would help us to better understand the way humans communicate, it is easy to justify in the case of some applications like companionship and entertainment. It is less obvious when it comes to task-oriented dialogue. The third point is related to the concept of \textit{uncanny valley} \cite{Mori1970}: as machine's human-likeness increases, they reach a point where they start becoming disturbing for the user. Nevertheless, by bringing even more improvements, this valley will be crossed hopefully and human-like solutions that no longer have such problems will be built. Finally, the last brought up question is the one of symmetry. If machines have a similar behaviour to humans, then users are likely to push the human metaphor to the limit by unconsciously thinking that machines really understand what they are saying, thus expecting more complex reactions like the ones due to emotions for example.
 
-        The multiplication of services and support platforms in modern society engenders huge costs that dialogue systems can help to reduce. By analysing client paths while demanding assistance from an expert, it is possible to identify commonly asked questions and recurrent patterns. By gathering such information, it is also possible to design dialogue systems that can interact with users and respond to their requests without any human intervention (of course, in the case the interaction fails, the client is redirected to a normal service platform). This can dramatically reduce service and support costs and also improve the quality of service as it is accessible any time, with no interruptions (unlike real platforms that are more often open at working time only). Moreover, when a client calls, the answer is immediate and her call is no longer queued causing waiting time (which she pays for) with sometimes no answer at all.
+					The multiplication of services and support platforms in modern society engenders huge costs that dialogue systems can help to reduce. By analysing client paths while demanding assistance from an expert, it is possible to identify commonly asked questions and recurrent patterns. By gathering such information, it is also possible to design dialogue systems that can interact with users and respond to their requests without any human intervention (of course, in the case the interaction fails, the client is redirected to a normal service platform). This can dramatically reduce service and support costs and also improve the quality of service as it is accessible any time, with no interruptions (unlike real platforms that are more often open at working time only). Moreover, when a client calls, the answer is immediate and her call is no longer queued causing waiting time (which she pays for) with sometimes no answer at all.
 
-	With the development of the Internet of Things (IoT) during the last few years, new human-machine interactions can be imagined. For instance, the concept of \textit{Smart Home} is currently making its enter in the market of Artificial Intelligence through the contributions of several companies and start-ups: Amazon Echo... In this context, the advantage of speech communication is clearly relevant as it is hands and eyes-free. The user can command her house from any room with no extra device needed. In some situations, her hands are already occupied by some other task. For example, she can be cooking \cite{Laroche2013} while asking \textit{What should I put next in my salad?} or \textit{Can you add milk to my shopping list please?}.
+		With the development of the Internet of Things (IoT) during the last few years, new human-machine interactions can be imagined. For instance, the concept of \textit{Smart Home} is currently making its enter in the market of Artificial Intelligence through the contributions of several companies and start-ups: Amazon Echo... In this context, the advantage of speech communication is clearly relevant as it is hands and eyes-free. The user can command her house from any room with no extra device needed. In some situations, her hands are already occupied by some other task. For example, she can be cooking \cite{Laroche2013} while asking \textit{What should I put next in my salad?} or \textit{Can you add milk to my shopping list please?}.
 
-        Finally, as talking agents and talking robots can also be designed for entertainment and companionship \cite{Sidner2013} and the vocal modality is the most natural way of interaction, it is very useful in this area.
+					Finally, as talking agents and talking robots can also be designed for entertainment and companionship \cite{Sidner2013} and the vocal modality is the most natural way of interaction, it is very useful in this area.
+					
+	\subsection{Spoken dialogue systems architecture}
+	\label{soa:architecture}
 
 		
 		\begin{figure}
@@ -133,26 +136,36 @@
 				\item Natural Language Generation (NLG): transforms the concepts computed by the DM into text.
 				\item Text-To-Speech (TTS): reads the text outputted by the NLG by using a synthetic voice.
 		\end{enumerate}
-
-		%HK> Rajouter des références.
-		Speech recognition technology is an old problem with long history. During the 1950s, a group of researchers from Bell Labs developed the first technology that is able to recognise digits from speech (in fact, speech perception has been under study since the early 1930s). Then, during the second half of the last century, new advances have made it possible to build ASR solutions with larger vocabulary and with no dependence on the user. In the 1960s, Hidden Markov Models (HMMs) were proved to be useful for speech recognition \cite{Gales2007} and they were the most popular technique two decades later. Commercial products using ASR technology had to wait until the 1990s to be finally released in the marked as they reached an interesting vocabulary scope (even though their accuracy and their delay were far behind the technology available today). Performances kept improving slowly and gradually until 2009, when Deep Learning algorithms were tested \cite{Mohamed2009,Deng2013} introducing huge improvement; the Word Error Rate (WER) decreased by 30\%. During the last six years, research continued in that direction giving birth to accurate and reactive speech recognition solutions (Google, Nuance, Sphinx, Kaldi...). These solutions also provide results incrementally in a continuous fashion. Therefore, ASR is less and less considered as a bottleneck in the development of spoken dialogue systems, and as it will be shown later, the delays they offer make it possible to design reactive incremental dialogue systems. Commercial off-the-shelf ASR solutions like Google ASR or Nuance products are able to recognise almost every word in many languages, including named entities. Finally, the ASR output is not only the text that the recognition algorithm figures out to be the best match for the input audio signal, but a list of the N most likely hypotheses and the corresponding confidence scores: it is called the N-Best. For instance, an 5-Best example is represented in Fig. \ref{fig:dialchain}.
 		
-		\begin{figure}
-			\centering
-			\includegraphics[scale=1]{figures/5BestEx.pdf}
-			\caption{A 5-Best example corresponding to the sentence "I would like to book a flight from New-York to Los Angeles".}
-			\label{fig:dialchain}
-		\end{figure}
+		\subsubsection{Automatic Speech Recognition}
+
+			%HK> Rajouter des références.
+			Speech recognition technology is an old problem with long history. During the 1950s, a group of researchers from Bell Labs developed the first technology that is able to recognise digits from speech (in fact, speech perception has been under study since the early 1930s). Then, during the second half of the last century, new advances have made it possible to build ASR solutions with larger vocabulary and with no dependence on the user. In the 1960s, Hidden Markov Models (HMMs) were proved to be useful for speech recognition \cite{Gales2007} and they were the most popular technique two decades later. Commercial products using ASR technology had to wait until the 1990s to be finally released in the marked as they reached an interesting vocabulary scope (even though their accuracy and their delay were far behind the technology available today). Performances kept improving slowly and gradually until 2009, when Deep Learning algorithms were tested \cite{Mohamed2009,Deng2013} introducing huge improvement; the Word Error Rate (WER) decreased by 30\%. During the last six years, research continued in that direction giving birth to accurate and reactive speech recognition solutions (Google, Nuance, Sphinx, Kaldi...). These solutions also provide results incrementally in a continuous fashion. Therefore, ASR is less and less considered as a bottleneck in the development of spoken dialogue systems, and as it will be shown later, the delays they offer make it possible to design reactive incremental dialogue systems. Commercial off-the-shelf ASR solutions like Google ASR or Nuance products are able to recognise almost every word in many languages, including named entities. Finally, the ASR output is not only the text that the recognition algorithm figures out to be the best match for the input audio signal, but a list of the N most likely hypotheses and the corresponding confidence scores: it is called the N-Best. For instance, an 5-Best example is represented in Fig. \ref{fig:dialchain}.
+			
+			\begin{figure}
+				\centering
+				\includegraphics[scale=1]{figures/5BestEx.pdf}
+				\caption{A 5-Best example corresponding to the sentence "I would like to book a flight from New-York to Los Angeles".}
+				\label{fig:dialchain}
+			\end{figure}
+			
+		\subsubsection{Natural Language Understanding}
 		
-		NLU is a sub-field of Natural Language Processing (NLP) whose scope is wider than the spoken dialogue field. Since the 1950s, researchers have been trying to develop several models and ontologies in order to automatically process natural language with several applications in sight: topic recognition, sentiment analysis, news filtering and analysis, natural speech processing...etc...The ambition manifested during 1950s and the early 1960s quickly had to face reality as the expected objectives were far from being reached. As a consequence, research in this area was significantly slowed down between the 1960s and the 1980s. During the last decade, NLP research has found a second wind thanks to new Machine Learning techniques, bringing them at the heart of lucrative businesses like recommendation and digital marketing. NLU refers to the set of techniques in order to make the machine understand the underlying structure of a text in natural language. To do so, a lexicon as well as an ontology (concepts and the links between them in a specific domain) should be built. Therefore, earlier NLU solutions are based on a set of handcrafted parsing rules, however, new statistical-based models \cite{Macherey2009} have been proven to be more robust and easy to generalise over domains. Also Deep Learning has also been applied to NLP showing interesting performances that NLU modules can benefit from \cite{Bengio2003,Collobert2011}.
+			NLU is a sub-field of Natural Language Processing (NLP) whose scope is wider than the spoken dialogue field. Since the 1950s, researchers have been trying to develop several models and ontologies in order to automatically process natural language with several applications in sight: topic recognition, sentiment analysis, news filtering and analysis, natural speech processing...etc...The ambition manifested during 1950s and the early 1960s quickly had to face reality as the expected objectives were far from being reached. As a consequence, research in this area was significantly slowed down between the 1960s and the 1980s. During the last decade, NLP research has found a second wind thanks to new Machine Learning techniques, bringing them at the heart of lucrative businesses like recommendation and digital marketing. NLU refers to the set of techniques in order to make the machine understand the underlying structure of a text in natural language. To do so, a lexicon as well as an ontology (concepts and the links between them in a specific domain) should be built. Therefore, earlier NLU solutions are based on a set of handcrafted parsing rules, however, new statistical-based models \cite{Macherey2009} have been proven to be more robust and easy to generalise over domains. Also Deep Learning has also been applied to NLP showing interesting performances that NLU modules can benefit from \cite{Bengio2003,Collobert2011}.
 
-		As far as Dialogue Management is concerned, two decades ago, for the first time, dialogue has been modeled as Markov Decision Processes (MDPs) problem (see Sect. \ref{soa:rl}), hence being solved using reinforcement learning \cite{Levin1997a}. The dialogue state contains all the information needed to determine what is the best action to perform as well as the quality of that state (roughly speaking, to what extent it is desirable for the system to be at that state, in order to maintain the Markov property explained later). The possible actions in each state are the dialogue acts that the system can make while being at that state. In 2007, in order to represent the uncertainty over the user's intent (due to ASR or NLU imperfections), dialogues have been cast as Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007}. This gave raise to the notion of \textit{belief tracking} which objective is to keep a distribution over the possible user intents. Finally, existing dialogue systems are able to interact with the user in the domain they are built for only, however, during the last few years, researchers have been pushing the boundaries of domain  extension methods \cite{Gasic2013} and open-domain systems \cite{Pakucs2003,EkeinhorKomi2014,Wang2014}
+		\subsubsection{Dialogue Management}
 		
-		The NLG task is the inverse of the NLU one: it translates dialogue acts' concepts into sentences. It started being used in the 1990s for purposes like financial news summary. A few start-ups and big companies also provide automatic text generation solutions that are used to quickly produce reports or official letters. The main challenge for such systems is to be able to generate a variety of different words, expressions and sentences in order for them not to be repetitive and for the result to be as realistic as possible. This is even more crucial when it comes to dialogue systems as they are supposed to simulate real conversations with the user, which is a highly variable. Nevertheless, in practice, template-based generation methods are the most widely used.
+			As far as Dialogue Management is concerned, two decades ago, for the first time, dialogue has been modeled as Markov Decision Processes (MDPs) problem (see Sect. \ref{soa:rl}), hence being solved using reinforcement learning \cite{Levin1997a}. The dialogue state contains all the information needed to determine what is the best action to perform as well as the quality of that state (roughly speaking, to what extent it is desirable for the system to be at that state, in order to maintain the Markov property explained later). The possible actions in each state are the dialogue acts that the system can make while being at that state. In 2007, in order to represent the uncertainty over the user's intent (due to ASR or NLU imperfections), dialogues have been cast as Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007}. This gave raise to the notion of \textit{belief tracking} which objective is to keep a distribution over the possible user intents. Finally, existing dialogue systems are able to interact with the user in the domain they are built for only, however, during the last few years, researchers have been pushing the boundaries of domain  extension methods \cite{Gasic2013} and open-domain systems \cite{Pakucs2003,EkeinhorKomi2014,Wang2014}.
+			
+		\subsubsection{Natural Language Generation}
+		
+			The NLG task is the inverse of the NLU one: it translates dialogue acts' concepts into sentences. It started being used in the 1990s for purposes like financial news summary. A few start-ups and big companies also provide automatic text generation solutions that are used to quickly produce reports or official letters. The main challenge for such systems is to be able to generate a variety of different words, expressions and sentences in order for them not to be repetitive and for the result to be as realistic as possible. This is even more crucial when it comes to dialogue systems as they are supposed to simulate real conversations with the user, which is a highly variable. Nevertheless, in practice, template-based generation methods are the most widely used.
+			
+		\subsubsection{Speech Synthesis}
 
-		During the 1930s, Bell Labs were not only interested in ASR but they also developed a new approach for the reciprocal task: the TTS (also known as \textit{speech synthesis}). The human speech is broken into small acoustic components that are sequentially pronounced by the system. They built the first machine demonstrating this mechanism: the Voder \cite{Dudley1939}. As far as this task is concerned, the challenge for the system is to sound as human-like as possible, in terms of phoneme transitions, speech rate and prosody. Two research threads tackle this problem in two different manners \cite{Tabet2011}: the first one uses corpus-based methods where the resulting audio is a combination of pre-recorded phonemes extracted from a corpus and the second one uses HMMs to generate a completely synthetic voice. Even though substantial advances have been accomplished since the Voder, it is still easy to distinguish between a synthesised and a real human voice.
+			During the 1930s, Bell Labs were not only interested in ASR but they also developed a new approach for the reciprocal task: the TTS (also known as \textit{speech synthesis}). The human speech is broken into small acoustic components that are sequentially pronounced by the system. They built the first machine demonstrating this mechanism: the Voder \cite{Dudley1939}. As far as this task is concerned, the challenge for the system is to sound as human-like as possible, in terms of phoneme transitions, speech rate and prosody. Two research threads tackle this problem in two different manners \cite{Tabet2011}: the first one uses corpus-based methods where the resulting audio is a combination of pre-recorded phonemes extracted from a corpus and the second one uses HMMs to generate a completely synthetic voice. Even though substantial advances have been accomplished since the Voder, it is still easy to distinguish between a synthesised and a real human voice.
 
-	\subsection{Dialogue systems evaluation}
+	\subsection{Spoken dialogue systems evaluation}
 
 		When building dialogue systems and improve them, it is necessary to determine metrics in order to measure their evolution. What makes a dialogue system better than another one? What metrics should be taken into account while evaluating dialogue systems? What are the most important characteristics of a dialogue system that should be improved?
 
@@ -161,16 +174,22 @@
 		Objective metrics that are commonly used are the dialogues' mean duration and the task completion ratio. Generally speaking, these two metrics are correlated as the user gets impatient when the dialogue lasts for too long (the user can also get impatient for other reasons, like the repetition of the same system's dialogue act several times). Moreover, the user's speech rate and the way they communicate introduces some variability when using these metrics. Finally, it is legitimate to ask ourselves: are shorter dialogues the real desired objective? First, this depends on the type of dialogue system at hand. If it is designed for entertainment or companionship, then there is no need for seeking faster dialogue strategies. However, in the case of task-oriented dialogue, looking for shorter dialogues makes sense as a measure of efficiency. In these situations and especially for daily tasks, an efficiency threshold has to be necessarily reached in order for people to use the dialogue system at hand.
 
 		Subjective metrics are generally gathered using a survey at the end of each dialogue or by experts rate dialogues afterwards\cite{El-Asri2014b}. Several metrics can be collected this way: the global quality of the dialogue, naturalness/human-likeness, reactivity...etc...However, this also raises the problem of variability between users. Most often, they are asked to evaluate the system on a Likert scale (1 to 5 or 1 to 10), but a user answering 4 could be equivalent to another user answering 3 or 5. Therefore, the absolute evaluation is less significant than the relative one given a specific user.
+		
+		(Complete and add more citations, see Layla's thesis).
+		
+	\subsection{Disserto}
 
-	\subsection{Incremental dialogue systems}
-    
-		The idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compiler processes each new instruction independently from the previous ones. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992} according to \cite{Kilger1995}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance. Nevertheless, in his book \textit{Speaking: From Intention to Articulation} \cite{Levelt1989}, Levelt analysed the mechanisms underlying the way humans formulate their ideas in natural language and already reported that the processes involved are incremental. The approach is closer to computational linguistics than psycholinguistics. The second part of the dialogue chain (DM, NLG and TTS) is analysed using a different terminology: the \textit{Conceptualizer}, the \textit{Formulator} and the \textit{Articulator}.
-
+\section{Incremental dialogue systems}
+	
+	\subsection{Principles}
+	
 		Currently deployed dialogue systems have a simple and rigid way of managing turn-taking. The interaction mode they offer is similar to a walkie-talkie conversation as the system waits for the user to finish her utterance before taking the floor and vice-versa (even though some systems allow the user to interrupt them). Such systems will be referred to as \textit{traditional dialogue systems} in this thesis.
+    
+		The first idea of incremental systems goes back to incremental compilers \cite{Lock1965}. An incremental compiler processes each new instruction independently from the previous ones. Therefore, a local modification of the code does not affect the whole result of the compilation. The idea of processing natural language in an incremental way is first introduced in \cite{Wiren1992} according to \cite{Kilger1995}. Instead of feeding modules with complete utterances, the input is pushed chunk by chunk (500ms of audio signal, one word of a sentence...etc...) making the output change several times before the end of the user's utterance. Nevertheless, in his book \textit{Speaking: From Intention to Articulation} \cite{Levelt1989}, Levelt analysed the mechanisms underlying the way humans formulate their ideas in natural language and already reported that the processes involved are incremental. The approach is closer to computational linguistics than psycholinguistics. The second part of the dialogue chain (DM, NLG and TTS) is analysed using a different terminology: the \textit{Conceptualizer}, the \textit{Formulator} and the \textit{Articulator}.
 
 		As discussed in Sect. \ref{soa:inchuman}, in human to human conversation, the listener does not wait for the speaker to finish his sentence before processing it; it processes it as it is spoken. As a consequence, human beings perform a large panel of turn-taking behaviours while speaking, like backchanneling (\textit{aha}, \textit{yeah}...) or barging-in.
 	
-		To replicate these behaviours, a new generation of SDSs has been the focus of current research for the last few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided into small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}. Table \ref{tab:incrnluex} gives an example illustrating the functioning of an incremental NLU module (in a hotel room booking service). For the sake of simplicity, processing delays are neglected.
+		To replicate these behaviours, a new generation of SDSs has been the focus of research for the last few years. An SDS is said to be incremental when it is able to process the user's speech on the fly. The input signal is divided into small chunks and the growing sentence is reprocessed at each new chunk \cite{Schlangen2011}. Table \ref{tab:incrnluex} gives an example illustrating the functioning of an incremental NLU module (in a hotel room booking service). For the sake of simplicity, processing delays are neglected.
 	
 		\begin{table}[th]
 			\vspace{2mm}
@@ -216,7 +235,7 @@
 
                 Before discussing the different reasons why incremental processing should be preferred to rigid turn-taking, it is important to note that a few studies with real users have shown that incremental dialogue systems offer a better user experience. For instance, in \cite{Aist2007}, an ordinal regression has been performed between the user satisfaction and several features with a flag for incremental processing among them. A significant correlation between incremental processing and the global user satisfaction has been found. Other studies also confirm the advantage of incremental speech processing \cite{Skantze2009,El-Asri2014a,Zhao2015}.
 
-                As discussed in Section \ref{soa:sds}, human-likeness is a legitimate goal for dialogue systems (at least worth trying). When talking to each other, humans perform a rich set of turn-taking phenomena (see Section \ref{soa:ttphuman}) and in spite of the fact that they do not talk in a rigid walkie-talkie manner, they manage to avoid desynchronisations and to keep a conversation that is going forward. Replicating these behaviours from the machine's point of view can therefore be interesting. It might be expected that the user feels more at ease while using a more human turn-taking mode hence pushing the human metaphor even further.
+                As discussed in Section \ref{soa:humanlike}, human-likeness is a legitimate goal for dialogue systems (at least worth trying). When talking to each other, humans perform a rich set of turn-taking phenomena (see Section \ref{soa:ttphuman}) and in spite of the fact that they do not talk in a rigid walkie-talkie manner, they manage to avoid desynchronisations and to keep a conversation that is going forward. Replicating these behaviours from the machine's point of view can therefore be interesting. It might be expected that the user feels more at ease while using a more human turn-taking mode hence pushing the human metaphor even further.
 
                 The other aspect that is interesting about incremental dialogue is reactivity. As the system processes the user's request before its ends, it is possible to design accurate end-point detection in order to detect the end of this request as soon as possible \cite{Raux2008}. Moreover, incremental dialogue systems can interrupt the user to report a problem, like in the following example:
 								
@@ -261,7 +280,7 @@
 	\label{soa:challengesincr}
     
 		%HK> Citer Dan Povey pour Kaldi.
-		The first problem to consider when talking about incremental spoken dialogue systems is the question of ASR \textit{latency}, which is the time needed by the recognition algorithm to provide the text output corresponding to an audio signal. As discussed earlier, the ASR accuracy has been a bottleneck in the development of spoken dialogue systems for many years but thanks to recent advances in this field, it is no longer the case. Similarly, incremental dialogue systems require quick responses from the ASR but speech recognition modules have been too slow for many years which was a limiting factor in the development of incremental dialogue processing. However, in the last few years, ASR technology has became reactive enough \cite{Breslin2013,Platek2014}. Nevertheless, it is important to be aware that there is a tradeoff between the accuracy and the vocabulary size on the one hand and the latency on the other hand. Kaldi, which is an ASR solution designed by researchers (and which is mostly used by them), makes it possible to design one's own acoustic and language model as well as setting one's own parameters in order to control this tradeoff. On the other hand, more off-the-shelf solutions like Google ASR do not give the user such possibilities (however, accuracy and delays are well balanced for most applications).
+		The first problem to consider when talking about incremental spoken dialogue systems is the question of ASR \textit{latency}, which is the time needed by the recognition algorithm to provide the text output corresponding to an audio signal. As discussed earlier, the ASR accuracy has been a bottleneck in the development of spoken dialogue systems for many years but thanks to recent advances in this field, it is no longer the case. Similarly, incremental dialogue systems require quick responses from the ASR but speech recognition modules have been too slow for many years which was a limiting factor in the development of incremental dialogue processing. But, in the last few years, ASR technology has become reactive enough \cite{Breslin2013,Platek2014}. Still, it is important to be aware that there is a tradeoff between the accuracy, the vocabulary size and the latency. Kaldi, which is an ASR solution designed by researchers (and which is mostly used by them), makes it possible to design one's own acoustic and language model as well as setting one's own parameters in order to control this tradeoff. Off-the-shelf solutions like Google ASR do not give the user such possibilities (however, accuracy and delays in open domain are well balanced for most applications).
 
 		%HK> Citer Ethan et Jason au sujet de l'instabilité si ce n'est déjà fait.
 		If the successive partial results of an incremental ASR module are observed during a user's utterance, it is likely that the progression they follow is not monotonous. In other words, a partial result is not guaranteed to be a prefix of results to come. The following example showing successive ASR results illustrates this phenomenon:
@@ -278,7 +297,7 @@
 
 		This phenomenon is called ASR \textit{instability} (or stability depending on the sources) \cite{Selfridge2011}. This factor is also related to the tradeoff between latency and accuracy as preferring fast ASR over accurate ones can lead to very unstable results (the system is not given enough time to compute accurate results most of the time, thus ending up delivering wrong partial results frequently), and vice-versa.
 		
-This leads to one of the main challenges raised by incremental processing: the ability to \textit{revise} the current hypothesis. All the modules in the dialogue chain are impacted by this problem. As an illustration, suppose that the user interacts with an incremental personal assistant on her phone and makes the following request \textit{Please call the number 01 45 80 12 35}. The last digit is first understood as being 30 and then 35, therefore, if the system is too reactive, there is a risk that it starts calling the wrong number and maybe start uttering the sentence \textit{Ok, calling 01 45 80 12 30}. Afterwards, the system understands 35 instead of 30 hence needing a correction mechanism in order to stop the TTS, to cancel the call, to perform a new one and to provide a new answer to the user. Nevertheless, even though the system at hand is equipped with such a mechanism, using it very often is not an optimal way of managing incremental input as it causes extra delay as well as non-natural behaviour (stopping the TTS and starting again with another utterance). This introduces a similar tradeoff to the one discussed for the ASR module but from the DM perspective: if decisions are taken too quickly, it is likely that some of them are wrong hence activating the correction mechanism. On the other hand, if the DM is slow to take action, then it lacks reactivity and there is no point for it to be incremental. As a consequence, it is important to determine the right moment to commit to the current partial utterance and to take action based on it \cite{Raux2008,Lu2011}. This constitutes one of the main contributions of this thesis.
+This leads to one of the main challenges raised by incremental processing: the ability to \textit{revise} the current hypothesis. All the modules in the dialogue chain are impacted by this problem. As an illustration, suppose that the user interacts with an incremental personal assistant on her phone and makes the following request \textit{Please call the number 01 45 80 12 35}. The last digit is first understood as being 30 and then 35, therefore, if the system is too reactive, there is a risk that it starts calling the wrong number and maybe start uttering the sentence \textit{Ok, calling 01 45 80 12 30}. Afterwards, the system understands 35 instead of 30 hence needing a correction mechanism in order to stop the TTS, to cancel the call, to perform a new one and to provide a new answer to the user. Nevertheless, even though the system at hand is equipped with such a mechanism, using it very often is not an optimal way of managing incremental input as it causes extra delay as well as non-natural behaviour (stopping the TTS and starting again with another utterance). This introduces a similar tradeoff to the one discussed for the ASR module but from the DM perspective: if decisions are taken too quickly, it is likely that some of them are wrong hence activating the correction mechanism. On the other hand, if the DM is slow to take action, then it lacks reactivity and there is no point for it to be incremental. As a consequence, it is important to determine the right moment to commit to the current partial utterance and to take action based on it \cite{Raux2008,Lu2011}.
 
 		Incremental NLG also raises new problems which are illustrated in \cite{Baumann2013}. In this paper, a system has to describe a car's trajectory in a virtual world. When the latter approaches an intersection where it has to turn right or left (no road straight ahead), then the system utters something like \textit{The car drives along Main Street and then turns...euh...and then turns right}. In this example, the system is sure that the car is going to turn which makes it possible for it to commit to the first part of the sentence with no risk. However, this is not always the case as a new chunk of information from the user can change the whole system's response. In this thesis, the NLG is not incremental as the DM's response is considered to be computed instantly at each new micro-turn (event though it is not necessarily stable and it can vary from micro-turn to micro-turn). Finally, in purely vocal applications, computing the NLG results incrementally does not make much sense as the user's and the system's utterances do not overlap most of the time \cite{Sacks1974}. However, this is an interesting behaviour as far as multimodal applications are concerned.
 
@@ -290,9 +309,9 @@ This leads to one of the main challenges raised by incremental processing: the a
 			
 			A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. This view of incremental dialogue systems will be referred to as the \textit{sequential paradigm}.
 				
-			Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer (RB). As described in Section \ref{soa:sds}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU). For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by the IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. The RB of one module is the LB of the following one in the dialogue chain so the data propagation through the dialogue system is insured.
+			Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer (RB). As described in Section \ref{soa:architecture}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU). For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by the IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. The RB of one module is the LB of the following one in the dialogue chain so the data propagation through the dialogue system is insured.
 			
-			Because of the ASR instability, new IU in the LB does not necessarily imply that a new IU will be pushed into the RB on top of the ones that already existed there. An example given in \cite{Schlangen2011} is the following: suppose the user utters the number \textit{forty} which processed incrementally, then first the ASR outputs \textit{four} and then \textit{forty}. As a consequence, the second hypothesis does not complete the first one but it replaces it in the RB. This phenomenon will be discussed more in details in Chapter \ref{ch:simulation}.
+			Because of the ASR instability, new IU in the LB does not necessarily imply that a new IU will be pushed into the RB on top of the ones that already existed there. An example given in \cite{Schlangen2011} is the following: suppose the user utters the number \textit{forty} which processed incrementally, then first the ASR outputs \textit{four} and then \textit{forty}. As a consequence, the second hypothesis does not complete the first one but it replaces it in the RB. This phenomenon will be discussed in more details in Chapter \ref{ch:simulation}.
 			
 			Adopting this paradigm is a natural way of enhancing traditional dialogue systems with incremental capabilities. It is interesting from a computational and design point of view as the different tasks are separated. Therefore, one is able to evaluate the different components independently \cite{Baumann2011} and have a global view to determine which area still needs improvement.
 
@@ -300,183 +319,201 @@ This leads to one of the main challenges raised by incremental processing: the a
 		
 			The problem of dialogue management in traditional dialogue systems can be formulated as follows: at each dialogue turn, given the dialogue context (including the last user's utterance), what is the right dialogue act to perform? In the incremental frame, this definition no longer holds as dialogue acts are no longer attached to dialogue turns. Therefore, one way to tackle the problem is to split the dialogue management task in two components, the high-level and the low-level handlers. This paradigm is directly motivated by Austin's, Searl's and Clark's contributions discussed in Section \ref{soa:dialogueacts} as the high-level module handles illocutionary acts (the communicative track) whereas the low-level one manages phonetic acts (the meta-communicative track).
 				
-				As reported in \cite{Lemon2003}, this approach is more in alignment with results in the psycholinguistic field. The phenomena observed at the phonetic level\footnote{The authors use the concept of meta-communicative track instead but it can be argued that it is not accurate. The meta-communicative track is related to a special kind of illocutionary acts. See section \ref{soa:dialogueacts} for further details.} are complex, and the interaction happen on multiple levels, not always following the classical dialogue chain. Having a separate module for handling these phenomena is therefore a more natural paradigm.
+				As reported in \cite{Lemon2003}, this approach is more in alignment with results in the psycholinguistic field. The phenomena observed at the phonetic level are complex, and the interaction happen on multiple levels, not always following the classical dialogue chain. Having a separate module for handling these phenomena is therefore a more natural paradigm.
 				
 				Switching from the traditional dialogue management approach to the incremental one is also a transition from discrete time to continuous time, from a synchronous to an asynchronous processing \cite{Raux2007}. The low-level module is continuously (approximated by a high frequency processing in computers) listening to the outside world and waiting for events that might be interesting to communicate to the high-level handler. In that case, the latter returns actions (dialogue acts) and it is the role of the low-level module to choose whether to retrieve them to the user or not as well as choosing the right moment in case it decides to speak.
 				
-				Finally, starting from a traditional dialogue system, it is more easier and straightforward to transform it into an incremental one if one adopts this paradigm. Adding an extra low-level module to the dialogue manager is enough \cite{Selfridge2012a}. At each new incremental input, this module sends the whole partial utterance from the beginning of the current turn to the dialogue manager and gets a response. Based on that and eventually some other features, it decides whether to take the floor or not. As most of the requests sent to the dialogue manager are "fake" as they are not meant to be acted on, they should not affect the dialogue context. Therefore, either multiple instances of the dialogue manager are used, either the dialogue context is saved and restored at each new request, unless the low-level module decides to take the floor (see Chapter \ref{ch:architecture} for greater explanations).
+				Finally, starting from a traditional dialogue system, it is easier and more straightforward to transform it into an incremental one if one adopts this paradigm. Adding an extra low-level module to the dialogue manager is enough \cite{Selfridge2012a}. At each new incremental input, this module sends the whole partial utterance from the beginning of the current turn to the dialogue manager and gets a response. Based on that and eventually some other features, it decides whether to take the floor or not. As most of the requests sent to the dialogue manager are "fake" as they are not meant to be acted on, they should not affect the dialogue context. Therefore, either multiple instances of the dialogue manager are used, either the dialogue context is saved and restored at each new request, unless the low-level module decides to take the floor (see Chapter \ref{ch:architecture} for additional explanations).
 
 \section{Reinforcement Learning}
 \label{soa:rl}
-	\subsection{Definition}
+
+	\subsection{Reinforcement in biology}
+	
+		(To complete and restructure)
     
-    	Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figures out through the process of \textit{trial and error} what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Figure \ref{fig:rlscheme}).
+		Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figures out through the process of \textit{trial and error} what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Figure \ref{fig:rlscheme}).
+			
+			\begin{figure*}[ht]
+				\centering
+				\includegraphics[scale=0.8]{figures/AgentEnv.pdf}
+				\caption{The interaction cycle between the agent and the environment in reinforcement learning}
+				\label{fig:rlscheme}
+			\end{figure*}
+			
+		\subsection{Markov Decision Processes}
         
-        \begin{figure*}[ht]
-          \centering
-          \includegraphics[scale=0.8]{figures/AgentEnv.pdf}
-          \caption{The interaction cycle between the agent and the environment in reinforcement learning}
-          \label{fig:rlscheme}
-        \end{figure*}
-        
-        The most common model consists in casting the agent as a Markov Decision Process (MDP) which is a quintuple $\mathcal{M} = (\mathcal{S},\mathcal{A},T,R,\gamma)$ where:
-        \begin{itemize}
-            \item $\mathcal{S}$ is the \textit{state space}. At each time step $t$, the agent is in some state $s_t \in \mathcal{S}$.
-            \item $\mathcal{A}$ is the \textit{action space}. At each time step $t$, the agent decides to take action $a_t \in \mathcal{A}$.
-            \item $T$ is the \textit{transition model}. It is the set of probabilities $\mathbb{P} (s_{t+1} = s'|s_t = s, a_t=a)$ for every $(s,s',a) \in \mathcal{S}^2 \text{x} \mathcal{A}$.
-            \item $R$ is the \textit{reward model}. Let $r$ be the immediate reward due to taking action $a$ in state $s$, then $R$ is the set of distributions of $r$ for every $(s,a) \in \mathcal{S} \text{x} \mathcal{A}$.
-            \item $\gamma \in [0,1[$ is referred to as the \textit{discount factor}. In the RL framework, the aim of the agent is not to maximise the immediate reward but the \textit{expected return}, where the return $R_t$ is defined as follows:
-						
-						\begin{eqnarray}
-							R_t & = & r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + ... \nonumber \\
-							& = & \sum_{k=0}^\infty \gamma^k r_{t+k+1} \label{eq:return}
-						\end{eqnarray}
-            
-            Therefore, when $\gamma = 0$, the agent maximises the immediate reward only and when $\gamma$ tends towards 1, the agent maximises the sum of all the future rewards. In other words, the parameter $\gamma$ controls how far-sighted is the agent in terms of future rewards.
-		\end{itemize}
-        
-        A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is at state s. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information necessary to predict the future, and no information about what happened in the past is necessary. Therefore, given a policy, each state $s \in \mathcal{S}$ is given a value $V^\pi (s)$ which is the expected return for being at this state and following the policy $\pi$ afterwards:
+			The most common model consists in casting the agent as a Markov Decision Process (MDP) which is a quintuple $\mathcal{M} = (\mathcal{S},\mathcal{A},\mathscr{T},\mathscr{R},\gamma)$ where:
+			\begin{itemize}
+					\item $\mathcal{S}$ is the \textit{state space}. At each time step $t$, the agent is in some state $s_t \in \mathcal{S}$.
+					\item $\mathcal{A}$ is the \textit{action space}. At each time step $t$, the agent decides to take action $a_t \in \mathcal{A}$.
+					\item $\mathscr{T}$ is the \textit{transition model} where each $(s,a,s')$ in $\mathcal{S} \text{x} \mathcal{A} \text{x} \mathcal{S}$ is associated with a real number in $[0,1]$ corresponding to the probability $\mathbb{P} (s_{t+1} = s'|s_t = s, a_t=a)$. A more compact notation will be used in the following: $\mathscr{T}_{ss'}^a = \mathscr{T} (s,a,s')$.
+					\item $\mathscr{R}$ is the \textit{reward model}. Let $r$ be the immediate reward due to taking action $a$ in state $s$, then $\mathscr{R}$ is the set of distributions of $r$ for every $(s,a) \in \mathcal{S} \text{x} \mathcal{A}$. The following notation will be used in the rest of this chapter: $\mathscr{R}_{ss'}^a = \mathbb{E} [\mathscr{R} (s,a,s')|s,a,s']$.
+					\item $\gamma \in [0,1[$ is referred to as the \textit{discount factor}. In the RL framework, the aim of the agent is not to maximise the immediate reward but the \textit{expected return}, where the return $R_t$ is defined as follows:
 					
 					\begin{eqnarray}
-						V^{\pi} (s) & = & \mathbb{E} [R_t | s_t = s, \pi] \label{eq:valuefunc}
+						R_t & = & r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + ... \nonumber \\
+						& = & \sum_{k=0}^\infty \gamma^k r_{t+k+1} \label{eq:return}
 					\end{eqnarray}
-            
-      	Another interesting quantity is the expected return knowing the current state but also the next action, after which $\pi$ is followed. This is referred to as the Q-function:
 					
-					\begin{eqnarray}
-						Q^{\pi} (s,a) & = & \mathbb{E} [R_t | s_t = s, a_t = a, \pi] \label{eq:qfunc}
-					\end{eqnarray}
-            
-       	Given the definition of $R_t$, one can notice that 
-        \begin{eqnarray}
-          	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
-           	& = & \mathbb{E} [r_t + \gamma \sum_{k=0}^\infty \gamma^k r_{(t+1)+k+1} | s_t = s, \pi] \nonumber \\
-            & = & \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, \pi] \nonumber \\
-						& = & \mathbb{E} [r_t + \gamma \mathbb{E} [R_{t+1}|s_{t+1}] | s_t = s, \pi] \nonumber \\
-            & = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, \pi] \label{eq:vbellman}
-        \end{eqnarray}
-            
-     	This is known as the Bellman equation for $V^{\pi}$ and it can also be written for the Q-function, as follows
-					
-					\begin{eqnarray}
-						Q^{\pi} (s_t,a_t) & = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t = s, a_t = a, \pi] \label{eq:qbellman}
-					\end{eqnarray}
-            
-       	A natural question that can be asked at this point is: how are these values computed? In reinforcement learning, this is known as the \textit{evaluation problem}. The transition model $T$ and the reward model $R$ are the elements that define the dynamics of the MDP. If they are known, $V^{\pi}$ can be directly computed. Let $P_{ss'}^a = \mathbb{P} (s_{t+1} = s' | s_t = s, a_t = a)$ and $R_{ss'}^a$ the reward of choosing action \textit{a} on state \textit{s} and landing on \textit{s}', then:
-        
-        \begin{eqnarray}
-          	V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
-           	& = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [R_t | s_t = s, a_t = a, \pi] \nonumber \\
-            & = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, a_t = a, \pi] \nonumber \\
-            & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \mathbb{E} [R_{t+1} | s_{t+1} = s', \pi]) \nonumber \\
-            & = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^{\pi} (s')) \label{eq:dynprog}
-        \end{eqnarray}
-            
-      	It is possible to define an order over the policies. Saying that $\pi_1$ is better that $\pi_2$ means that for all the states $s$, $V^{\pi_1} (s) \geq V^{\pi_2} (s)$. It can be shown that there exists at least one policy that is better than all the others: it is called the \textit{optimal policy} ($\pi^*$). To simplify the notations, $V^{\pi^*}$ will be referred to as $V^*$ and it is defined as
-					
-					\begin{eqnarray}
-						\forall s \in \mathcal{S}, \text{ } V^* (s) & = & \max_\pi V^\pi (s) \label{eq:voptim}
-					\end{eqnarray}
-            
-       	Similarly, one can define $Q^*$ as
-					
-					\begin{eqnarray}
-						\forall (s,a) \in \mathcal{S} \text{x} \mathcal{A}, \text{ } Q^*(s,a) & = & \max_\pi Q^{\pi}(s,a) \label{eq:qoptim}
-					\end{eqnarray}
-
-        The aim of reinforcement learning is to learn the optimal policy. Similarly to what has been shown for $V^{\pi}$, if the transition and the reward models are known, the Bellman equation corresponding to $V^*$ (called the \textit{Bellman optimality equation}) can be written with respect to these models (similarly to \ref{eq:dynprog}):
-								
-					\begin{eqnarray}
-						V^*(s) & = & \max_a \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma V^*(s')) \label{eq:vbellmanoptim}
-					\end{eqnarray}
-        
-        A similar form can be also be shown about the Q-function
-								
-					\begin{eqnarray}
-						Q^*(s,a) & = & \sum_{s' \in \mathcal{S}} P_{ss'}^a (R_{ss'}^a + \gamma \max_{a' \in \mathcal{A}} Q^*(s',a')) \label{eq:qbellmanoptim}
-					\end{eqnarray}
-
-        A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function, in the sense that $\pi^*(s) = \argmax_a Q^*(s,a)$). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $T$ and $R$ are unknown. The agent learns directly from interacting with the environment (\textit{model-free} approach).
-				
-				It is possible to try to learn $T$ and $R$ first and then applying a \textit{model-based} algorithm to figure out the optimal policy. Nevertheless, this is not necessary as most algorithms compute the optimal policy by directly estimating the Q-function. This can be done in a straightforward fashion by running several episodes\footnote{To keep things simple in this introduction to reinforcement learning, the MDP is considered to eventually stop.}, computing the returns for each state-action couple and for each episode, then using the mean return over all the episodes as an estimate of $V^\pi$ or $Q^\pi$. Algorithms using this kind of approach belong to the category of \textit{Monte-Carlo methods}.
-				
-				However, as the agent interacts with the environment, it encounters a similar dilemma to the one faced in the bandit problem \cite{Berry1985}: how to manage the trade-off between \textit{exploration} and \textit{exploitation}. While being at a state $s \in \mathcal{S}$, the agent can choose one action among many. Let us say that the Q-function is initialised as a zero function. Therefore, at the beginning the agent has no preference and selects a random action. If this yields a positive reward, then the agent has the choice between these two options to make the next decision:
-				
-				\begin{enumerate}
-					\item Making the same decision again as it already knows that it is likely to generate a positive reward.
-					\item Picking another action because it may yield an even greater reward.
-				\end{enumerate}
-				
-				In the first case, the agent is exploiting its current knowledge of the environment whereas in the second case, it is said to be exploring as it is increasing its knowledge about the environment (with the risk of generating low or negative rewards in the meanwhile). Because rewards are stochastic, it is not obvious to determine whether sufficient data is available to trust our estimates and start exploiting most of the time. This is a difficult problem and a simple way to deal with it is to use the $\epsilon$-greedy approach, where the agent chooses a random action with a probability of $\epsilon$ and sticks to the greedy action (with respect to the current estimated Q-function) the rest of the time. Nevertheless, more robust solutions have already been suggested like \cite{Auer2002} for the bandit problem and \cite{Auer2005} for reinforcement learning.
-				
-				Reinforcement learning algorithms keep evaluating the current policy and at the same time, altering that policy in order to improve it. A naive approach would be to fix the current policy and to perform as many evaluation iterations as necessary in order to gain a certain confidence over the estimations of $V$ or $Q$ and then to derive a new policy to follow, given these values. This is known as \textit{Policy Iteration} but this is not the most efficient way to proceed (so many iterations are needed). In fact, performing only one evaluation iteration before the next policy improvement step can be shown to be enough, keeping the convergence guarantees. This is referred to as \textit{Value Iteration}. Also, the notion of iteration can be viewed differently given the approach and the algorithm at hand. In order to refer to the general idea of intertwining evaluation and control, the expression \textit{General Policy Iteration} (GPI) is used.
-				
-				In fact, it is also possible to evaluate $V$ or $Q$ in an even more fine-grained manner. Instead, of waiting until the end of the episode to update these values, it is possible to do it after each new decision. That is what \textit{Temporal-difference (TD) methods} do. In comparison with the Monte-Carlo approach, the new sample for $V^\pi(s)$ or $Q^\pi(s,a)$ is no longer the real return obtained in the episode but an estimated one using the Bellman equation. In the case of the \textit{sarsa} algorithm\footnote{See \cite{Sutton1998} for the algorithm description.}, the Q-function is updated as follows\footnote{At this point, $V$ will no longer be used, as $Q$ is the most commonly used in reality. $V$ is mostly used for pedagogical purposes.} ($\alpha_t$ being a decreasing parameter with time):
+					Therefore, when $\gamma = 0$, the agent maximises the immediate reward only and when $\gamma$ tends towards 1, the agent maximises the sum of all the future rewards. In other words, the parameter $\gamma$ controls how far-sighted is the agent in terms of future rewards.
+	\end{itemize}
+			
+			A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is at state s. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information available to predict the future, and adding information about what happened during previous time steps has no power of prediction. Therefore, given a policy, each state $s \in \mathcal{S}$ is associated with a value $V^\pi (s)$ which is the expected return when at this state and following the policy $\pi$ afterwards:
 				
 				\begin{eqnarray}
-					Q(s_t,a_t) & = & Q(s_t,a_t) + \alpha_t [r_t + \gamma Q(s_{t+1},a_{t+1}) - Q(s_t,a_t)] \label{eq:sarsaupdate}
+					V^{\pi} (s_t) & = & \mathbb{E} [R_t | s_t, \pi] \label{eq:valuefunc}
 				\end{eqnarray}
-				
-				It is important to notice that $a_{t+1}$ is the action chosen by following the current estimated policy derived from Q ($\epsilon$-greedy for example) and which will be actually followed in the next step. The sarsa algorithm is therefore called an \textit{on-policy} algorithm. These conditions can be relaxed giving birth to another category of algorithms, the \textit{off-policy} ones. The most famous is \textit{Q-Learning}\footnote{See \cite{Sutton1998} for the algorithm description.} \cite{Watkins1989} where the Q-function is updated as follows:
+					
+			Another interesting quantity is the expected return knowing the current state but also the next action, after which $\pi$ is followed. This is referred to as the Q-function:
 				
 				\begin{eqnarray}
-					Q(s_t,a_t) & = & Q(s_t,a_t) + \alpha_t [r_t + \gamma \max_a Q(s_{t+1},a) - Q(s_t,a_t)] \label{eq:qlearningupdate}
+					Q^{\pi} (s_t,a_t) & = & \mathbb{E} [R_t | s_t, a_t, \pi] \label{eq:qfunc}
 				\end{eqnarray}
+					
+			Given the definition of $R_t$, one can notice that 
+			\begin{eqnarray}
+					V^{\pi} (s_t)   & = & \mathbb{E} [R_t | s_t, \pi] \nonumber \\
+					& = & \mathbb{E} [r_t + \gamma \sum_{k=0}^\infty \gamma^k r_{(t+1)+k+1} | s_t, \pi] \nonumber \\
+					& = & \mathbb{E} [r_t + \gamma R_{t+1} | s_t, \pi] \nonumber \\
+					& = & \mathbb{E} [r_t + \gamma \mathbb{E} [R_{t+1}|s_{t+1}, \pi] | s_t, \pi] \nonumber \\
+					& = & \mathbb{E} [r_t + \gamma V^{\pi} (s_{t+1}) | s_t, \pi] \label{eq:vbellman}
+			\end{eqnarray}
+					
+		This is known as the Bellman equation for $V^{\pi}$ and it can also be written for the Q-function, as follows
 				
-				Here, the policy used for evaluation is not necessarily the one that is followed.
+				\begin{eqnarray}
+					Q^{\pi} (s_t,a_t) & = & \mathbb{E} [r_t + \gamma Q^{\pi} (s_{t+1}, \pi(s_{t+1})) | s_t, a_t, \pi] \label{eq:qbellman}
+				\end{eqnarray}
+	
+	\subsection{Reinforcement Learning}
+            
+			A natural question that can be asked at this point is: how are these values computed? In reinforcement learning, this is known as the \textit{evaluation problem}. The transition model $\mathscr{T}$ and the reward model $\mathscr{R}$ are the elements that define the dynamics of the MDP. If they are known, $V^{\pi}$ can be directly computed:
+			
+			\begin{eqnarray}
+					V^{\pi} (s)   & = & \mathbb{E} [R_t | s_t = s, \pi] \nonumber \\
+					& = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [R_t | s_t = s, a_t = a, \pi] \nonumber \\
+					& = & \sum_{a \in \mathcal{A}} \pi (s,a) \mathbb{E} [r_t + \gamma R_{t+1} | s_t = s, a_t = a, \pi] \nonumber \\
+					& = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} \mathscr{T}_{ss'}^a (\mathscr{R}_{ss'}^a + \gamma \mathbb{E} [R_{t+1} | s_{t+1} = s', \pi]) \nonumber \\
+					& = & \sum_{a \in \mathcal{A}} \pi (s,a)  \sum_{s' \in \mathcal{S}} \mathscr{T}_{ss'}^a (\mathscr{R}_{ss'}^a + \gamma V^{\pi} (s')) \label{eq:dynprog}
+			\end{eqnarray}
+					
+			It is possible to define an order over the policies. Saying that $\pi_1$ is better that $\pi_2$ means that for all the states $s$, $V^{\pi_1} (s) \geq V^{\pi_2} (s)$. It can be shown that there exists at least one policy that is better than all the others: it is called the \textit{optimal policy} ($\pi^*$). To simplify the notations, $V^{\pi^*}$ will be referred to as $V^*$ and it is defined as
+				
+				\begin{eqnarray}
+					\forall s \in \mathcal{S}, \text{ } V^* (s) & = & \max_\pi V^\pi (s) \label{eq:voptim}
+				\end{eqnarray}
+					
+			Similarly, one can define $Q^*$ as
+				
+				\begin{eqnarray}
+					\forall (s,a) \in \mathcal{S} \text{x} \mathcal{A}, \text{ } Q^*(s,a) & = & \max_\pi Q^{\pi}(s,a) \label{eq:qoptim}
+				\end{eqnarray}
 
-    \subsection{Application to dialogue systems}
-    
-    	Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997} and since then, it has been the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answers at that time. Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007} are also widely used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}.
-        
-        In the field of incremental dialogue and turn-taking management, supervised learning is more common. The main problem tackled by researchers is the identification of the exact moments where the system should take the floor in order to achieve smooth turn-taking \cite{Raux2008,Gravano2011,Meena2013}. Binary classifiers are used and the features they are fed are of different natures: lexical, semantic, prosodic...etc...However, a few papers tackled this problem by using reinforcement learning.
-        
-        \cite{Jonsdottir2008} used reinforcement learning while considering prosodic features only. Backchanneling for example can be performed by humans independently from the meaning. The cost function (negative reward) is taken as gaps and overlaps, hence following Sack's principle discussed in Section \ref{soa:ttphuman}.
-        
-        \cite{Dethlefs2012} adopted a complementary approach where only the semantic content of the user's utterance is taken into account (hierarchical reinforcement learning is used). In human conversation, it is more likely for the listener to react right after a relevant information. Similarly, in the case of a restaurant finding spoken dialogue system, the system should react right after understanding the restaurant's type or price range. In this work, the information pertinence is measured by the Information Density (ID). Therefore, the more the ID is high during system actions, the more reward it gets.
-        
-        Instead of trying to minimise gaps and overlaps, the reward function can be designed in a way to optimise dialogue duration and task completion like it is the case in \cite{Selfridge2010}. The system in this paper learns optimal initial turn-taking, in the sense that when a silence is detected, the dialogue participant that has the most relevant thing to say takes the floor first. Like in the previous paper, only semantic features are considered.
-        
-        A third approach to optimise turn-taking in spoken dialogue systems is to directly try to imitate human behaviours. In \cite{Kim2014} Inverse Reinforcement Learning is used to infer a reward function directly from user trajectories in a gathered dialogue corpus. Therefore, the reward function automatically incorporates objective and subjective dialogue quality criteria. The authors have made the choice not to consider lexical and semantic features, but rather to limit their work to timing and prosody signals.
-    
-    \subsection{Dialogue simulation}
-    
-    	A couple of decades ago, with the development of the dialogue systems research field, the need for evaluation means in order to assess their quality started getting more and more important. Therefore, researchers turn to user simulation methods (also referred to as user modeling). In \cite{Eckert1997}, some of the advantages of these techniques are depicted: reduced cost with automatic evaluation of a large number of dialogues, less error risk, easy modeling of different user populations, possibility of using the same user model across different concurrent dialogue systems for comparison and providing a tool to quickly generate corpora for machine learning techniques at a low cost. Nevertheless, the authors recognise that user simulation cannot totally replace interactions with real users in the process of designing reliable dialogue systems: \textit{However, testing with human users is still a vital for verifying the simulation models.}.
-        
-       	Simulating users accurately is a challenging task as their behaviours vary considerably from a person to another and moreover, the same user can change her preferences over time (concept-drift) \cite{Schatzmann2006}. Evaluating a user simulator and whether it handles such variability or not is a research track in itself \cite{Pietquin2013} and the qualities required are of different kinds. The trained user simulator should be consistent with the data that has been used for the training and the sequence of dialogue acts generated should be coherent. In addition, when it is used in turn to train a data-driven dialogue strategy, the quality of the latter is also an evaluation criteria. Also, it is important that the results obtained in simulation give strong indications about the behaviours with real users while being task independent and able to automatically compute assessments.
-        
-        User simulation is useful during the conception phase of a dialogue system. However, training the simulator from data needs the dialogue system to be conceived already. Therefore, trying to come up with a simple model with only a few parameters is not always a bad idea as it has been proven to achieve good results as well \cite{Schatzmann2007}.
-        
-        %HK> Citer paradise après la liste des KPIs pour la reward function
-        User simulator is also quite similar to the dialogue management task. As a consequence, it is legitimate to ask the following question: why not use reinforcement learning to train user simulators? The answer is that in the case of dialogue management, it is easier to come up with a reasonable reward function: task completion, dialogue duration, subjective evaluation...etc... When it comes to user simulation, the objective function is how well a real user is imitated which is impossible to handcraft. Fortunately, there exists a framework where the reward function is automatically inferred from data which is particularly useful here: Inverse Reinforcement Learning \cite{Chandramohan2011}.
-        
-        When it comes to incremental dialogue systems, the only existing user simulator in our knowledge is the one described in \cite{Selfridge2012b}. Its state is update every 10 ms. However, the \textit{ASR instability} phenomenon is not replicated, that is to say that the ASR hypothesis construction is monotonous whereas in reality, it is not the case. When a new audio signal increment is heard by the ASR, the output can be partially or totally modified. In this simulator, only the simple case where a new increment is added to the output is modeled.
+			The aim of reinforcement learning is to learn the optimal policy. Similarly to what has been shown for $V^{\pi}$, if the transition and the reward models are known, the Bellman equation corresponding to $V^*$ (called the \textit{Bellman optimality equation}) can be written with respect to these models (similarly to \ref{eq:dynprog}):
+							
+				\begin{eqnarray}
+					V^*(s) & = & \max_a \sum_{s' \in \mathcal{S}} \mathscr{T}_{ss'}^a (\mathscr{R}_{ss'}^a + \gamma V^*(s')) \label{eq:vbellmanoptim}
+				\end{eqnarray}
+			
+			A similar form can be also be shown about the Q-function
+							
+				\begin{eqnarray}
+					Q^*(s,a) & = & \sum_{s' \in \mathcal{S}} \mathscr{T}_{ss'}^a (\mathscr{R}_{ss'}^a + \gamma \max_{a' \in \mathcal{A}} Q^*(s',a')) \label{eq:qbellmanoptim}
+				\end{eqnarray}
 
-\section{Issues and motivation}
-    
-    A study led by the Market Intelligence and Consulting Institute shows that the market of artificial intelligence should grow exponentially in the next decade. Virtual assistants play the main role in this domain and they are predicted to multiply their market share by 2.5. Moreover, the market is expected to multiply its turn over by 14 (30\% growth per year on average). This shows that spoken dialogue systems have reached a level of maturity that enables them to enter the market. Therefore, designing robust, reliable and user-friendly spoken dialogue systems raises an important issue.
-    
-    Nevertheless, even though virtual assistants like Siri or other more domain specific spoken dialogue systems can offer a quite reasonable quality of service for certain tasks, the quality of the interaction is still poor, making room for improvement in different areas:
-    
-    % HK> Rajouter une citation pour les erreurs d'ASR et la gestion des erreurs.
-    \begin{itemize}
-    	\item The ASR module is not perfect and the errors that it engenders are not well handled by the DM.
-        \item The vocabulary is very restrained hence users often use off-domain words, especially those who are not familiar with the system.
-        \item Current Natural Language Processing (NLP) techniques still do not cover a lot of discourse formulations, therefore NLU modules are often too simple to handle all the situations encountered in real dialogue.
-        \item Current SDSs do not adapt to the user's profile neither to groups of users' particular behaviours (accent, culture, specific expressions...).
-        \item Turn-taking is handled in a walkie-talkie manner which is too simple compared to the reality of dialogue.
-    \end{itemize}
-    
-    This thesis focuses on the last point: turn-taking capabilities improvement. Two research streams have been identified:
-    
+			A set of \textit{Dynamic Programming} methods exist in order to efficiently solve these kinds of equations and come up with the optimal policy given the transition and the reward model (knowing $Q^*$ implies knowing $\pi^*$ as the latter is the greedy policy with respect to the former Q-function, in the sense that $\pi^*(s) = \argmax_a Q^*(s,a)$). However, even though this kind of approaches are theoretically interesting, they only have a few practical applications as most of the times, $\mathscr{T}$ and $\mathscr{R}$ are unknown. The agent learns directly from interacting with the environment (\textit{model-free} approach).
+			
+			It is possible to try to learn $\mathscr{T}$ and $\mathscr{R}$ first and then applying a \textit{model-based} algorithm to figure out the optimal policy. Nevertheless, this is not necessary as most algorithms compute the optimal policy by directly estimating the Q-function. This can be done in a straightforward fashion by running several episodes\footnote{To keep things simple in this introduction to reinforcement learning, the MDP is considered to eventually stop.}, computing the returns for each state-action couple and for each episode, then using the mean return over all the episodes as an estimate of $V^\pi$ or $Q^\pi$. Algorithms using this kind of approach belong to the category of \textit{Monte-Carlo methods}.
+			
+			However, as the agent interacts with the environment, it encounters a similar dilemma to the one faced in the bandit problem \cite{Berry1985,Bubeck2012}: how to manage the trade-off between \textit{exploration} and \textit{exploitation}. While being at a state $s \in \mathcal{S}$, the agent can choose one action among many. Let us say that the Q-function is initialised as a zero function. Therefore, at the beginning the agent has no preference and selects a random action. If this yields a positive reward, then the agent has the choice between these two options to make the next decision:
+			
+			\begin{enumerate}
+				\item Making the same decision again as it already knows that it is likely to generate a positive reward.
+				\item Picking another action because it may yield an even greater reward.
+			\end{enumerate}
+			
+			In the first case, the agent is exploiting its current knowledge of the environment whereas in the second case, it is said to be exploring as it is increasing its knowledge about the environment (with the risk of generating low or negative rewards in the meanwhile). Because rewards are stochastic, it is not obvious to determine whether sufficient data is available to trust our estimates and start exploiting most of the time. This is a difficult problem and a simple way to deal with it is to use the $\epsilon$-greedy approach, where the agent chooses a random action with a probability of $\epsilon$ and sticks to the greedy action (with respect to the current estimated Q-function) the rest of the time. Nevertheless, more robust solutions have already been suggested like \cite{Auer2002} for the bandit problem and \cite{Auer2005} for reinforcement learning.
+			
+			Reinforcement learning algorithms keep evaluating the current policy and at the same time, altering that policy in order to improve it. A naive approach would be to fix the current policy and to perform as many evaluation iterations as necessary in order to gain a certain confidence over the estimations of $V$ or $Q$ and then to derive a new policy to follow, given these values. This is known as \textit{Policy Iteration} but this is not the most efficient way to proceed (so many iterations are needed). In fact, performing only one evaluation iteration before the next policy improvement step can be shown to be enough, keeping the convergence guarantees. This is referred to as \textit{Value Iteration}. Also, the notion of iteration can be viewed differently given the approach and the algorithm at hand. In order to refer to the general idea of intertwining evaluation and control, the expression \textit{General Policy Iteration} (GPI) is used.
+			
+			In fact, it is also possible to evaluate $V$ or $Q$ in an even more fine-grained manner. Instead, of waiting until the end of the episode to update these values, it is possible to do it after each new decision. That is what \textit{Temporal-difference (TD) methods} do. In comparison with the Monte-Carlo approach, the new sample for $V^\pi(s)$ or $Q^\pi(s,a)$ is no longer the real return obtained in the episode but an estimated one using the Bellman equation. In the case of the \textit{sarsa} algorithm\footnote{See \cite{Sutton1998} for the algorithm description.}, the Q-function is updated as follows\footnote{At this point, $V$ will no longer be used, as $Q$ is the most commonly used in reality. $V$ is mostly used for pedagogical purposes.} ($\alpha_t$ being a decreasing parameter with time):
+			
+			\begin{eqnarray}
+				Q_t(s_t,a_t) & = & Q_t(s_t,a_t) + \alpha_t [r_t + \gamma Q_t(s_{t+1},\pi_t(s_{t+1})) - Q_t(s_t,a_t)] \label{eq:sarsaupdate}
+			\end{eqnarray}
+			
+			It is important to notice that $a_{t+1}$ is the action chosen by following the current estimated policy derived from Q ($\epsilon$-greedy for example) and which will be actually followed in the next step. The sarsa algorithm is therefore called an \textit{on-policy} algorithm. These conditions can be relaxed giving birth to another category of algorithms, the \textit{off-policy} ones. The most famous is \textit{Q-Learning}\footnote{See \cite{Sutton1998} for the algorithm description.} \cite{Watkins1989} where the Q-function is updated as follows:
+			
+			\begin{eqnarray}
+				Q_t(s_t,a_t) & = & Q_t(s_t,a_t) + \alpha_t [r_t + \gamma \max_a Q_t(s_{t+1},a) - Q_t(s_t,a_t)] \label{eq:qlearningupdate}
+			\end{eqnarray}
+			
+			Here, the policy used for evaluation is not necessarily the one that is followed.
+
+\section{Reinforcement learning in spoken dialogue systems}
+	
+	\subsection{In the litterature}
+	
+		(Take some information from Layla's thesis to talk about summary states and industrial SDSs, in addition to the following paragraph...).
+	
+		Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997} and since then, it has been the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answers at that time. Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007} can also be used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}.
+	
+	\subsection{Spoken dialogue systems at Orange and the LIA}
+	
+	\subsection{Dialogue simulation}
+	
+		A couple of decades ago, with the development of the dialogue systems research field, the need for evaluation means in order to assess their quality started getting more and more important. Therefore, researchers turn to user simulation methods (also referred to as user modeling). In \cite{Eckert1997}, some of the advantages of these techniques are depicted: reduced cost with automatic evaluation of a large number of dialogues, less error risk, easy modeling of different user populations, possibility of using the same user model across different concurrent dialogue systems for comparison and providing a tool to quickly generate corpora for machine learning techniques at a low cost. Nevertheless, the authors recognise that user simulation cannot totally replace interactions with real users in the process of designing reliable dialogue systems: \textit{we believe that tests with human users are still vital for verifying the simulation models}.
+			
+			Simulating users accurately is a challenging task as their behaviours vary considerably from one person to another and the same user can change her preferences over time (concept-drift) \cite{Schatzmann2006}. Evaluating a user simulator and whether it handles such variability or not is a research track in itself \cite{Pietquin2013} and the qualities required are of different kinds. The trained user simulator should be consistent with the data that has been used for the training and the sequence of dialogue acts generated should be coherent. In addition, when it is used in turn to train a data-driven dialogue strategy, the quality of the latter is also an evaluation criteria. Also, it is important that the results obtained in simulation give strong indications about the behaviours with real users.
+			
+			User simulation is useful during the conception phase of a dialogue system. However, training the simulator from data needs the dialogue system to be conceived already. Therefore, trying to come up with a simple model with only a few parameters is not always a bad idea as it has been proven to achieve good results as well \cite{Schatzmann2007}.
+			
+			%HK> Citer paradise après la liste des KPIs pour la reward function
+			User simulator is also quite similar to the dialogue management task. As a consequence, it is legitimate to ask the following question: why not use reinforcement learning to train user simulators? The answer is that in the case of dialogue management, it is easier to come up with a reasonable reward function: task completion, dialogue duration, subjective evaluation...etc... When it comes to user simulation, the objective function is how well a real user is imitated which is impossible to evaluate. Fortunately, there exists a framework where the reward function is automatically inferred from data which is particularly useful here: Inverse Reinforcement Learning \cite{Chandramohan2011,El-Asri2012}.
+			
+			When it comes to incremental dialogue systems, the only existing user simulator in our knowledge is the one described in \cite{Selfridge2012b}. Its state is updated every 10 ms. However, the \textit{ASR instability} phenomenon is not replicated, that is to say that the ASR hypothesis construction is monotonous whereas in reality, it is the heart of the problem. When a new audio signal increment is heard by the ASR, the output can be partially or totally modified. In this simulator, only the simple case where a new increment is added to the output is modeled.
+				
+\section{Reinforcement learning in incremental dialogue systems}
+
+	In the field of incremental dialogue and turn-taking management, supervised learning is more common. The main problem tackled by researchers is the identification of the exact moments where the system should take the floor in order to achieve smooth turn-taking \cite{Raux2008,Gravano2011,Meena2013}. Binary classifiers are used and the features they are fed are of different natures: lexical, semantic, prosodic...etc...However, a few papers tackled this problem by using reinforcement learning.
+        
+	\cite{Jonsdottir2008} used reinforcement learning while considering prosodic features only. Backchanneling for example can be performed by humans independently from the meaning. The cost function (negative reward) is taken as gaps and overlaps, hence following Sack's principle discussed in Section \ref{soa:ttphuman}.
+	
+	\cite{Dethlefs2012} adopted a complementary approach where only the semantic content of the user's utterance is taken into account (hierarchical reinforcement learning is used). In human conversation, it is more likely for the listener to react right after a relevant information. Similarly, in the case of a restaurant finding spoken dialogue system, the system should react right after understanding the restaurant's type or price range. In this work, the information pertinence is measured by the Information Density (ID). Therefore, the more the ID is high during system actions, the more reward it gets.
+	
+	Instead of trying to minimise gaps and overlaps, the reward function can be designed in a way to optimise dialogue duration and task completion like it is the case in \cite{Selfridge2010}. The system in this paper learns optimal initial turn-taking, in the sense that when a silence is detected, the dialogue participant that has the most relevant thing to say takes the floor first. Like in the previous paper, only semantic features are considered.
+	
+	A third approach to optimise turn-taking in spoken dialogue systems is to directly try to imitate human behaviours. In \cite{Kim2014} Inverse Reinforcement Learning is used to infer a reward function directly from user trajectories in a gathered dialogue corpus. Therefore, the reward function automatically incorporates objective and subjective dialogue quality criteria. The authors have made the choice not to consider lexical and semantic features, but rather to limit their work to timing and prosody signals.
+
+	(Conlude and recall the motivations).
+
+%\section{Issues and motivation}
+    %
+    %A study led by the Market Intelligence and Consulting Institute forecasts that the market of artificial intelligence will grow exponentially in the next decade. Virtual assistants play the main role in this domain and they are predicted to multiply their market share by 2.5. Moreover, the market is expected to multiply its turn over by 14 (30\% growth per year on average). This is explained by the fact
+		%that spoken dialogue systems have reached a level of maturity that enables them to enter the market. Therefore, designing robust, reliable and user-friendly spoken dialogue systems raises an important issue.
+    %
+    %Nevertheless, even though virtual assistants like Siri or other more domain specific spoken dialogue systems can offer a quite reasonable quality of service for certain tasks, the quality of the interaction is still poor, making room for improvement in different areas:
+    %
+    %HK> Rajouter une citation pour les erreurs d'ASR et la gestion des erreurs.
+    %\begin{itemize}
+    	%\item The ASR module is not perfect and the errors that it engenders are not well handled by the DM.
+        %\item The vocabulary is very restrained hence users often use off-domain words, especially those who are not familiar with the system.
+        %\item Current Natural Language Processing (NLP) techniques still do not cover a lot of discourse formulations, therefore NLU modules are often too simple to handle all the situations encountered in real dialogue.
+        %\item Current SDSs do not adapt to the user's profile neither to groups of users' particular behaviours (accent, culture, specific expressions...).
+        %\item Turn-taking is handled in a walkie-talkie manner which is too simple compared to the reality of dialogue.
+    %\end{itemize}
+    %
+    %This thesis focuses on the last point: turn-taking capabilities improvement. Two research streams have been identified:
+    %
     %HK> Revoir les papiers de références ici et bien les placer.
-    \begin{enumerate}
-    	\item Barge-in points identification to achieve smoother and more human like turn-taking. When a barge-in point is detected, it can be interpreted as an end-point so that the system can take the floor in a more reactive way, or as a suitable point for backchanneling. In these kind of studies, prosodic features are crucial but they can also be mixed with lexical and semantic ones.
-        \item Turn-taking optimisation to improve dialogue efficiency (generally measured through dialogue duration and task completion). The main objective is to improve error handling by reporting errors quickly, and to improve reactivity in general as the system can respond as soon as it has enough information to do so. Unlike the previous stream, semantic features have more importance here.
-    \end{enumerate}
-    
-    This thesis is a contribution to the second research stream. The first objective is to understand what is turn-taking in human-human interaction before trying to figure out what phenomena can be replicated in human-machine dialogue in order to offer a better error-handling and an increased efficiency in general. Finally, reinforcement learning is used to conceive an optimal turn-taking strategy.
-    
+    %\begin{enumerate}
+    	%\item Barge-in points identification to achieve smoother and more human like turn-taking. When a barge-in point is detected, it can be interpreted as an end-point so that the system can take the floor in a more reactive way, or as a suitable point for backchanneling. In these kind of studies, prosodic features are crucial but they can also be mixed with lexical and semantic ones.
+        %\item Turn-taking optimisation to improve dialogue efficiency (generally measured through dialogue duration and task completion). The main objective is to improve error handling by reporting errors quickly, and to improve reactivity in general as the system can respond as soon as it has enough information to do so. Unlike the previous stream, semantic features have more importance here.
+    %\end{enumerate}
+    %
+    %This thesis is a contribution to the second research stream. The first objective is to understand what is turn-taking in human-human interaction before trying to figure out what phenomena can be replicated in human-machine dialogue in order to offer a better error-handling and an increased efficiency in general. Finally, reinforcement learning is used to conceive an optimal turn-taking strategy.
+    %
     
     
     

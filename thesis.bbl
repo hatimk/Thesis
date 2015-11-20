@@ -14,6 +14,12 @@
   evidence for advantages over nonincremental methods.
 \newblock Dans les actes de \textit{ Decalog}.
 
+\bibitem[{Asri et~al.}(2012){Asri, Laroche, \andnamec{} Pietquin}]{El-Asri2012}
+(Asri et~al., 2012) \hspace{.5em}L.~E. Asri, R.~Laroche, \andname{}
+  O.~Pietquin, 2012.
+\newblock Reward function learning for dialogue management.
+\newblock Dans les actes de \textit{ STAIRS}.
+
 \bibitem[{Auer et~al.}(2002){Auer, Cesa-Bianchi, \andnamec{}
   Fischer}]{Auer2002}
 (Auer et~al., 2002) \hspace{.5em}P.~Auer, N.~Cesa-Bianchi, \andname{}
@@ -92,6 +98,15 @@
   M.~Szummer, B.~Thomson, P.~Tsiakoulis, \andname{} S.~Young, 2013.
 \newblock Continuous asr for flexible incremental dialogue.
 \newblock Dans les actes de \textit{ ICASSP},  8362--8366.
+
+\bibitem[{Bubeck \andnamec{} Cesa-Bianchi}(2012){Bubeck \andnamec{}
+  Cesa-Bianchi}]{Bubeck2012}
+(Bubeck \andnamec{} Cesa-Bianchi, 2012) \hspace{.5em}S.~Bubeck \andname{}
+  N.~Cesa-Bianchi, 2012.
+\newblock Regret analysis of stochastic and nonstochastic multi-armed bandit
+  problems.
+\newblock \textit{ Foundations and Trends® in Machine Learning\/}~\textit{5},
+  1--122.
 
 \bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lefèvre, \andnamec{}
   Pietquin}]{Chandramohan2011}
