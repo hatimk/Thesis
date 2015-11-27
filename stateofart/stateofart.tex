@@ -97,6 +97,10 @@
         
 	A spoken dialogue system (SDS) is an automated application that interacts directly with a human being in natural language. Virtual assistant like Siri (Apple) or Cortana (Microsoft) are good examples of SDSs. They are task-oriented since their goal is to help the user achieve some task. There also exist a few SDSs that are only used for tutoring \cite{Daubigney2013} or simply chatting and companionship \cite{Sidner2013}.
 	
+	Historically, McCarthy and Hayes were the first to suggest the introduction of mental qualities (intentions, belief...) in a dialogue system \cite{McCarthy1969,McCarthy1979} in the 70's. This started a new research thread aimed at describing the internal state and the system's behaviour in a humanlike fashion \cite{Newell1980,Bratman1987,Cohen1990,Sadek1991,Konolige1993}. In Orange, a new dialogue system called ARTIMIS has been developed. It is based on a new theory of interaction \cite{Sadek1991} based on the Belief-Desire-Intentions model introduced in \cite{Bratman1988}. During the following years it has been improved and enhanced with new capabilities: an action plan \cite{Louis2002}, a preference-based operator \cite{Meyer2006} and uncertainty management capacities \cite{Laroche2008}.
+	
+	However, this approach based on logic has been abandoned for two main reasons. Firstly, it does not guarantee the VUI-completeness \cite{Pieraccini2005,Paek2008}: it can lead to behaviours that has not been specified in advance, and secondly it requires an expertise in the logic field (which considerably reduces the span of potential dialogue system designers). As a result, like all the major actors in the field (Nuance, AT\&T, SpeechCycle...etc...), Orange turned to a new solution where the dialogue system is viewed as an automaton. This solution is called Disserto which has proved to be simple, robust enough to allow the development of widely deployed industrial dialogue systems and flexible enough to allow state of the art research. All the services developed in this thesis have been generated using Disserto.
+	
 	\subsection{Towards a human-like interaction}
   \label{soa:humanlike}
 	
@@ -177,7 +181,9 @@
 		
 		(Complete and add more citations, see Layla's thesis).
 		
-	\subsection{Disserto}
+	\subsection{Spoken Dialogue Systems at Orange}
+	
+		
 
 \section{Incremental dialogue systems}
 	

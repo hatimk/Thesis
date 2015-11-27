@@ -92,6 +92,18 @@
 \newblock \textit{ Bandit problems : sequential allocation of experiments}.
 \newblock Chapman and Hall London.
 
+\bibitem[{Bratman}(1987){Bratman}]{Bratman1987}
+(Bratman, 1987) \hspace{.5em}M.~Bratman, 1987.
+\newblock \textit{ Intention, plans, and practical reason}.
+\newblock Harvard University Press.
+
+\bibitem[{Bratman et~al.}(1988){Bratman, Israel, \andnamec{}
+  Pollack}]{Bratman1988}
+(Bratman et~al., 1988) \hspace{.5em}M.~E. Bratman, D.~J. Israel, \andname{}
+  M.~E. Pollack, 1988.
+\newblock Plans and resource-bounded practical reasoning.
+\newblock \textit{ Computational Intelligence\/}~\textit{4}, 349--355.
+
 \bibitem[{Breslin et~al.}(2013){Breslin, Gasic, Henderson, Kim, Szummer,
   Thomson, Tsiakoulis, \andnamec{} Young}]{Breslin2013}
 (Breslin et~al., 2013) \hspace{.5em}C.~Breslin, M.~Gasic, M.~Henderson, D.~Kim,
@@ -135,6 +147,13 @@
 (Clark, 1996) \hspace{.5em}H.~H. Clark, 1996.
 \newblock \textit{ Using Language}.
 \newblock Cambridge University Press.
+
+\bibitem[{Cohen \andnamec{} Levesque}(1990){Cohen \andnamec{}
+  Levesque}]{Cohen1990}
+(Cohen \andnamec{} Levesque, 1990) \hspace{.5em}P.~R. Cohen \andname{} H.~J.
+  Levesque, 1990.
+\newblock Persistence, intention, and commitment.
+\newblock Dans les actes de \textit{ Intentions in Communication}.
 
 \bibitem[{Collobert et~al.}(2011){Collobert, Weston, Bottou, Karlen,
   Kavukcuoglu, \andnamec{} Kuksa}]{Collobert2011}
@@ -336,11 +355,27 @@
 \newblock Dans les actes de \textit{ Proceedings of the 15th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
+\bibitem[{Konolige \andnamec{} Pollack}(1993){Konolige \andnamec{}
+  Pollack}]{Konolige1993}
+(Konolige \andnamec{} Pollack, 1993) \hspace{.5em}K.~Konolige \andname{} M.~E.
+  Pollack, 1993.
+\newblock A representationalist theory of intention.
+\newblock Dans les actes de \textit{ Proceedings of the 13th International
+  Joint Conference on Artifical Intelligence (IJCAI)}.
+
 \bibitem[{Laroche}(2010){Laroche}]{Laroche2010}
 (Laroche, 2010) \hspace{.5em}R.~Laroche, 2010.
 \newblock \textit{ Raisonnement sur les incertitudes et apprentissage pour les
   systemes de dialogue conventionnels}.
 \newblock Th\`ese de Doctorat, Paris VI University.
+
+\bibitem[{Laroche et~al.}(2008){Laroche, Bouchon-Meunier, \andnamec{}
+  Bretier}]{Laroche2008}
+(Laroche et~al., 2008) \hspace{.5em}R.~Laroche, B.~Bouchon-Meunier, \andname{}
+  P.~Bretier, 2008.
+\newblock Uncertainty management in dialogue systems.
+\newblock Dans les actes de \textit{ European Conference on Information
+  Processing and Management of Uncertainty in Knowledge-Based Systems}.
 
 \bibitem[{Laroche et~al.}(2011){Laroche, Putois, Bretier, Aranguren, Velkovska,
   Hastie, Keizer, Yu, Jurcicek, Lemon, \andnamec{} Young}]{CLASSiCd64}
@@ -394,6 +429,12 @@
 \newblock Dans les actes de \textit{ AFIPS '65 (Fall, part I) Proceedings of
   the November 30--December 1, 1965, fall joint computer conference, part I}.
 
+\bibitem[{Louis}(2002){Louis}]{Louis2002}
+(Louis, 2002) \hspace{.5em}V.~Louis, 2002.
+\newblock \textit{ Conception et mise en oeuvre de mod\`eles formels du calcul
+  de plans d'action complexes par un agent rationnel dialoguant}.
+\newblock Th\`ese de Doctorat, Universit\'e de Caen/Basse-Normandie, France.
+
 \bibitem[{Lu et~al.}(2011){Lu, Nishimoto, \andnamec{} Minematsu}]{Lu2011}
 (Lu et~al., 2011) \hspace{.5em}D.~Lu, T.~Nishimoto, \andname{} N.~Minematsu,
   2011.
@@ -413,6 +454,20 @@
   dialogue system.
 \newblock M\'emoire de Master, Massachusetts Institute of Technology.
 
+\bibitem[{Mccarthy}(1979){Mccarthy}]{McCarthy1979}
+(Mccarthy, 1979) \hspace{.5em}J.~Mccarthy, 1979.
+\newblock Ascribing mental qualities to machines.
+\newblock Dans les actes de \textit{ Philosophical Perspectives in Artificial
+  Intelligence},  161--195.
+
+\bibitem[{Mccarthy \andnamec{} Hayes}(1969){Mccarthy \andnamec{}
+  Hayes}]{McCarthy1969}
+(Mccarthy \andnamec{} Hayes, 1969) \hspace{.5em}J.~Mccarthy \andname{} P.~J.
+  Hayes, 1969.
+\newblock Some philosophical problems from the standpoint of artificial
+  intelligence.
+\newblock Dans les actes de \textit{ Machine Intelligence},  463--502.
+
 \bibitem[{McGraw \andnamec{} Gruenstein}(2012){McGraw \andnamec{}
   Gruenstein}]{McGraw2012}
 (McGraw \andnamec{} Gruenstein, 2012) \hspace{.5em}I.~McGraw \andname{}
@@ -430,6 +485,12 @@
 \newblock Dans les actes de \textit{ Proceedings of the SIGDIAL 2013
   Conference}.
 
+\bibitem[{Meyer}(2006){Meyer}]{Meyer2006}
+(Meyer, 2006) \hspace{.5em}G.~Meyer, 2006.
+\newblock \textit{ Formalisation logique de pr\'ef\'erences qualitatives pour
+  la s\'election de la r\'eaction d'un agent rationnel dialoguant}.
+\newblock Th\`ese de Doctorat, Universit\'e de Paris XI.
+
 \bibitem[{Mohamed et~al.}(2009){Mohamed, Dahl, \andnamec{}
   Hinton}]{Mohamed2009}
 (Mohamed et~al., 2009) \hspace{.5em}A.~Mohamed, G.~Dahl, \andname{} G.~Hinton,
@@ -443,11 +504,33 @@
 \newblock The uncanny vally.
 \newblock Dans les actes de \textit{ Energy}.
 
+\bibitem[{Newell}(1980){Newell}]{Newell1980}
+(Newell, 1980) \hspace{.5em}A.~Newell, 1980.
+\newblock The knowledge level.
+\newblock \textit{ AI Magazine\/}~\textit{2}, 1--20.
+
+\bibitem[{Paek \andnamec{} Pieraccini}(2008){Paek \andnamec{}
+  Pieraccini}]{Paek2008}
+(Paek \andnamec{} Pieraccini, 2008) \hspace{.5em}T.~Paek \andname{}
+  R.~Pieraccini, 2008.
+\newblock Automating spoken dialogue management design using machine learning:
+  An industry perspective.
+\newblock \textit{ Speech Communication\/}~\textit{50}, 716--729.
+
 \bibitem[{Pakucs}(2003){Pakucs}]{Pakucs2003}
 (Pakucs, 2003) \hspace{.5em}B.~Pakucs, 2003.
 \newblock Towards dynamic multi-domain dialogue processing.
 \newblock Dans les actes de \textit{ 8th European Conference on Speech
   Communication and Technology, EUROSPEECH - INTERSPEECH}.
+
+\bibitem[{Pieraccini \andnamec{} Huerta}(2005){Pieraccini \andnamec{}
+  Huerta}]{Pieraccini2005}
+(Pieraccini \andnamec{} Huerta, 2005) \hspace{.5em}R.~Pieraccini \andname{}
+  J.~Huerta, 2005.
+\newblock Where do we go from here? research and commercial spoken dialog
+  systems.
+\newblock Dans les actes de \textit{ Proceedings of the 6th SIGdial Workshop on
+  Discourse and Dialogue}.
 
 \bibitem[{Pietquin \andnamec{} Hastie}(2013){Pietquin \andnamec{}
   Hastie}]{Pietquin2013}
@@ -506,6 +589,12 @@
 \newblock A simplest systematics for the organization of turn-taking for
   conversation.
 \newblock \textit{ Language\/}~\textit{50}, 696--735.
+
+\bibitem[{Sadek}(1991){Sadek}]{Sadek1991}
+(Sadek, 1991) \hspace{.5em}M.~D. Sadek, 1991.
+\newblock \textit{ Attitudes Mentales et Interaction Rationnelle : vers une
+  th\'eorie formelle de la Communication}.
+\newblock Th\`ese de Doctorat, Universit\'e de Rennes I, France.
 
 \bibitem[{Schatzmann et~al.}(2007){Schatzmann, Thomson, Weilhammer, Ye,
   \andnamec{} Young}]{Schatzmann2007}

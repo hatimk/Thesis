@@ -19,6 +19,7 @@ Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
 Warning--page numbers missing in Chao2012
+Warning--empty publisher in Cohen1990
 Warning--page numbers missing in Collobert2011
 Warning--page numbers missing in Gales2007
 Warning--empty school in Macherey2009
@@ -30,45 +31,45 @@ Warning--no number and no volume in Searle1968
 Warning--page numbers missing in Searle1968
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 95 entries,
+You've used 108 entries,
             2936 wiz_defined-function locations,
-            1158 strings with 22040 characters,
-and the built_in function-call counts, 59379 in all, are:
-= -- 4907
-> -- 4236
-< -- 5
-+ -- 1319
-- -- 1492
-* -- 4159
-:= -- 10458
-add.period$ -- 286
-call.type$ -- 95
-change.case$ -- 756
-chr.to.int$ -- 94
-cite$ -- 110
-duplicate$ -- 2081
-empty$ -- 3882
-format.name$ -- 1783
-if$ -- 11301
+            1234 strings with 24103 characters,
+and the built_in function-call counts, 66804 in all, are:
+= -- 5587
+> -- 4628
+< -- 7
++ -- 1431
+- -- 1644
+* -- 4588
+:= -- 11743
+add.period$ -- 325
+call.type$ -- 108
+change.case$ -- 839
+chr.to.int$ -- 107
+cite$ -- 124
+duplicate$ -- 2369
+empty$ -- 4417
+format.name$ -- 1963
+if$ -- 12732
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 97
-newline$ -- 484
-num.names$ -- 759
-pop$ -- 1007
+missing$ -- 108
+newline$ -- 549
+num.names$ -- 863
+pop$ -- 1114
 preamble$ -- 1
-purify$ -- 1336
+purify$ -- 1501
 quote$ -- 0
-skip$ -- 1769
+skip$ -- 2035
 stack$ -- 0
-substring$ -- 2377
-swap$ -- 132
-text.length$ -- 5
+substring$ -- 2767
+swap$ -- 163
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1806
-warning$ -- 15
-while$ -- 612
+type$ -- 2056
+warning$ -- 16
+while$ -- 719
 width$ -- 0
-write$ -- 2013
-(There were 17 warnings)
+write$ -- 2291
+(There were 18 warnings)

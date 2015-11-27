@@ -1,9 +1,9 @@
 \select@language {english}
 \addvspace {10\p@ }
 \contentsline {xchapter}{State of the art}{11}{chapter.4}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The dialogue chain\relax }}{18}{figure.caption.16}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces A 5-Best example corresponding to the sentence "I would like to book a flight from New-York to Los Angeles".\relax }}{19}{figure.caption.23}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{29}{figure.caption.47}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The dialogue chain\relax }}{19}{figure.caption.16}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces A 5-Best example corresponding to the sentence "I would like to book a flight from New-York to Los Angeles".\relax }}{20}{figure.caption.23}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{30}{figure.caption.47}
 \contentsline {xpart}{State of the art}{11}{part.3}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Turn-taking taxonomy}{39}{chapter.74}
