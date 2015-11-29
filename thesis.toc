@@ -64,47 +64,47 @@
 \contentsline {subsection}{\numberline {3.2.2}A spoken dialogue system: Dictanum}{59}{subsection.128}
 \contentsline {section}{\numberline {3.3}Discussion}{61}{section.129}
 \contentsline {subsection}{\numberline {3.3.1}Levels of incrementality}{61}{subsection.130}
-\contentsline {subsection}{\numberline {3.3.2}Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{61}{subsection.131}
-\contentsline {subsection}{\numberline {3.3.3}Separating dialogue management from floor management}{62}{subsection.133}
-\contentsline {chapter}{\numberline {4}Incremental dialogue simulation}{63}{chapter.134}
-\contentsline {section}{\numberline {4.1}Agenda management task}{63}{section.135}
-\contentsline {section}{\numberline {4.2}The service}{63}{section.137}
-\contentsline {subsection}{\numberline {4.2.1}Natural Language Understanding}{63}{subsection.138}
-\contentsline {section}{\numberline {4.3}User simulator}{64}{section.144}
-\contentsline {subsection}{\numberline {4.3.1}Overview}{64}{subsection.145}
-\contentsline {subsection}{\numberline {4.3.2}Intent Manager}{65}{subsection.147}
-\contentsline {subsection}{\numberline {4.3.3}NLG and Verbosity Manager}{66}{subsection.151}
-\contentsline {subsection}{\numberline {4.3.4}ASR output simulator}{66}{subsection.152}
-\contentsline {subsection}{\numberline {4.3.5}Timing and patience manager}{69}{subsection.160}
-\contentsline {chapter}{\numberline {5}Handcrafted strategies for improving dialogue efficiency}{71}{chapter.162}
-\contentsline {section}{\numberline {5.1}User and system initiative}{71}{section.163}
-\contentsline {subsection}{\numberline {5.1.1}Strategies}{71}{subsection.164}
-\contentsline {subsection}{\numberline {5.1.2}Experiments}{73}{subsection.165}
-\contentsline {section}{\numberline {5.2}Incremental strategies}{74}{section.168}
-\contentsline {subsection}{\numberline {5.2.1}ASR instability}{74}{subsection.169}
-\contentsline {subsection}{\numberline {5.2.2}TTP implementation}{74}{subsection.170}
-\contentsline {paragraph}{FAIL\_RAW:}{74}{section*.171}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{75}{section*.172}
-\contentsline {paragraph}{FEEDBACK:}{75}{section*.173}
-\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{75}{section*.174}
-\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{75}{section*.175}
-\contentsline {subsection}{\numberline {5.2.3}Experiments}{75}{subsection.176}
-\contentsline {chapter}{\numberline {6}Reinforcement learning for turn-taking optimisation}{79}{chapter.180}
-\contentsline {section}{\numberline {6.1}Model}{79}{section.181}
-\contentsline {subsection}{\numberline {6.1.1}State representation}{79}{subsection.182}
-\contentsline {subsection}{\numberline {6.1.2}Actions, rewards and episodes}{80}{subsection.183}
-\contentsline {subsection}{\numberline {6.1.3}Fitted-Q Value Iteration}{81}{subsection.184}
-\contentsline {section}{\numberline {6.2}Experiment}{82}{section.185}
-\contentsline {subsection}{\numberline {6.2.1}Setup}{82}{subsection.186}
-\contentsline {subsection}{\numberline {6.2.2}Results}{82}{subsection.190}
-\contentsline {chapter}{\numberline {7}Experiment with real users}{85}{chapter.193}
-\contentsline {section}{\numberline {7.1}Protocol}{85}{section.194}
-\contentsline {section}{\numberline {7.2}Results}{85}{section.195}
-\contentsline {chapter}{\numberline {8}A new reinforcement learning approach adapted to incremental dialogue}{87}{chapter.196}
-\contentsline {section}{\numberline {8.1}Problem}{87}{section.197}
-\contentsline {section}{\numberline {8.2}Proposed approach}{87}{section.198}
-\contentsline {section}{\numberline {8.3}Toy problem application}{87}{section.199}
-\contentsline {section}{\numberline {8.4}Simulation results}{87}{section.200}
-\contentsline {starchapter}{Liste des illustrations}{91}{chapter*.201}
-\contentsline {starchapter}{Liste des tableaux}{93}{chapter*.202}
-\contentsline {starchapter}{Bibliographie}{95}{chapter*.203}
+\contentsline {subsection}{\numberline {3.3.2}Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{62}{subsection.131}
+\contentsline {subsection}{\numberline {3.3.3}Separating dialogue management from floor management}{63}{subsection.133}
+\contentsline {chapter}{\numberline {4}Incremental dialogue simulation}{65}{chapter.134}
+\contentsline {section}{\numberline {4.1}Agenda management task}{65}{section.135}
+\contentsline {section}{\numberline {4.2}The service}{65}{section.137}
+\contentsline {subsection}{\numberline {4.2.1}Natural Language Understanding}{65}{subsection.138}
+\contentsline {section}{\numberline {4.3}User simulator}{66}{section.144}
+\contentsline {subsection}{\numberline {4.3.1}Overview}{66}{subsection.145}
+\contentsline {subsection}{\numberline {4.3.2}Intent Manager}{67}{subsection.147}
+\contentsline {subsection}{\numberline {4.3.3}NLG and Verbosity Manager}{68}{subsection.151}
+\contentsline {subsection}{\numberline {4.3.4}ASR output simulator}{68}{subsection.152}
+\contentsline {subsection}{\numberline {4.3.5}Timing and patience manager}{71}{subsection.160}
+\contentsline {chapter}{\numberline {5}Handcrafted strategies for improving dialogue efficiency}{73}{chapter.162}
+\contentsline {section}{\numberline {5.1}User and system initiative}{73}{section.163}
+\contentsline {subsection}{\numberline {5.1.1}Strategies}{73}{subsection.164}
+\contentsline {subsection}{\numberline {5.1.2}Experiments}{75}{subsection.165}
+\contentsline {section}{\numberline {5.2}Incremental strategies}{76}{section.168}
+\contentsline {subsection}{\numberline {5.2.1}ASR instability}{76}{subsection.169}
+\contentsline {subsection}{\numberline {5.2.2}TTP implementation}{76}{subsection.170}
+\contentsline {paragraph}{FAIL\_RAW:}{76}{section*.171}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{77}{section*.172}
+\contentsline {paragraph}{FEEDBACK:}{77}{section*.173}
+\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{77}{section*.174}
+\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{77}{section*.175}
+\contentsline {subsection}{\numberline {5.2.3}Experiments}{77}{subsection.176}
+\contentsline {chapter}{\numberline {6}Reinforcement learning for turn-taking optimisation}{81}{chapter.180}
+\contentsline {section}{\numberline {6.1}Model}{81}{section.181}
+\contentsline {subsection}{\numberline {6.1.1}State representation}{81}{subsection.182}
+\contentsline {subsection}{\numberline {6.1.2}Actions, rewards and episodes}{82}{subsection.183}
+\contentsline {subsection}{\numberline {6.1.3}Fitted-Q Value Iteration}{83}{subsection.184}
+\contentsline {section}{\numberline {6.2}Experiment}{84}{section.185}
+\contentsline {subsection}{\numberline {6.2.1}Setup}{84}{subsection.186}
+\contentsline {subsection}{\numberline {6.2.2}Results}{84}{subsection.190}
+\contentsline {chapter}{\numberline {7}Experiment with real users}{87}{chapter.193}
+\contentsline {section}{\numberline {7.1}Protocol}{87}{section.194}
+\contentsline {section}{\numberline {7.2}Results}{87}{section.195}
+\contentsline {chapter}{\numberline {8}A new reinforcement learning approach adapted to incremental dialogue}{89}{chapter.196}
+\contentsline {section}{\numberline {8.1}Problem}{89}{section.197}
+\contentsline {section}{\numberline {8.2}Proposed approach}{89}{section.198}
+\contentsline {section}{\numberline {8.3}Toy problem application}{89}{section.199}
+\contentsline {section}{\numberline {8.4}Simulation results}{89}{section.200}
+\contentsline {starchapter}{Liste des illustrations}{93}{chapter*.201}
+\contentsline {starchapter}{Liste des tableaux}{95}{chapter*.202}
+\contentsline {starchapter}{Bibliographie}{97}{chapter*.203}

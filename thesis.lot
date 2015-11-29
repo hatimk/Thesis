@@ -12,16 +12,16 @@
 \contentsline {xpart}{Contributions}{39}{part.73}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Turn-taking decision module: the Scheduler}{53}{chapter.115}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{62}{table.caption.132}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{63}{table.caption.132}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{63}{chapter.134}
-\contentsline {table}{\numberline {4.1}{\ignorespaces {NLU rules types}\relax }}{64}{table.caption.139}
+\contentsline {xchapter}{Incremental dialogue simulation}{65}{chapter.134}
+\contentsline {table}{\numberline {4.1}{\ignorespaces {NLU rules types}\relax }}{66}{table.caption.139}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{71}{chapter.162}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{73}{table.caption.167}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{73}{chapter.162}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{75}{table.caption.167}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{79}{chapter.180}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{81}{chapter.180}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{85}{chapter.193}
+\contentsline {xchapter}{Experiment with real users}{87}{chapter.193}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{87}{chapter.196}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{89}{chapter.196}
