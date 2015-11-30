@@ -15,7 +15,7 @@
         
      	\begin{figure*}[t]
           \centering
-          \includegraphics[scale=0.7]{figures/ClientSchedService.pdf}
+          \includegraphics[scale=0.4]{figures/ClientSchedService.jpg}
           \caption{The Scheduler: an interface between the client and the service}
           \label{fig:archioverview}
         \end{figure*}
@@ -54,7 +54,7 @@
     
     	\begin{figure*}[ht]
           \centering
-          \includegraphics[scale=0.8]{figures/SchedChrono.jpg}
+          \includegraphics[scale=0.8]{figures/SchedulerDiagEng.pdf}
           \caption{Incremental behaviour with the Scheduler}
           \label{fig:schedchrono}
         \end{figure*}
@@ -166,7 +166,7 @@
 
                 \begin{itemize}
                   \item \textbf{TTS interruption after input analysis:} The user has the ability to interrupt the system but also to perform brief feedback without interrupting the system's sentence. All categories except the first one can easily embed this feature.
-                  \item \textbf{Link interruption time with TTS:} Useful for simulating REF TTP (REF\_IMPL, REF\_RAW and REF\_INTERP). This has been successfully implemented in a system belong to the second category in \cite{El-Asri2014a}. Therefore, it can also be implemented in systems with a higher degree of incrementality (categories 3 and 4).
+                  \item \textbf{Link interruption time with TTS:} Useful for simulating REF TTP (REF\_IMPL, REF\_RAW and REF\_INTERP). This has been successfully implemented in a system that belongs to the second category in \cite{El-Asri2014a}. Therefore, it can also be implemented in systems with a higher degree of incrementality (categories 3 and 4).
                   \item \textbf{User interruption by the system:} As it will be shown in the rest of this thesis, interrupting the user can improve the dialogue efficiency in some cases. To do so, the sytem at hand must offer real incremental capacities which is the case for categories 3 and 4 only.
                   \item \textbf{Better reactivity:} One of the main advantages of incremental processing is delivering responses in a quicker fashion since the processing of the user's request starts earlier. Again, real incremental abilities are required which makes it a property that is specific to categories 3 and 4 exclusively.
                   \item \textbf{Optimal processing cost:} The third category processes the user's request in a restart incremental way (sending the whole partial utterance at each new micro-turn). This is not optimal as it is possible to process it chunk by chunk. Therefore, this is an advantage that category 4 offers over all the others.
