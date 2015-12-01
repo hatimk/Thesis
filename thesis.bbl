@@ -363,7 +363,7 @@
 \newblock Dans les actes de \textit{ Proceedings of the 13th International
   Joint Conference on Artifical Intelligence (IJCAI)}.
 
-\bibitem[{Laroche}(2010){Laroche}]{Laroche2010}
+\bibitem[{Laroche}(2010){Laroche}]{Laroche2010a}
 (Laroche, 2010) \hspace{.5em}R.~Laroche, 2010.
 \newblock \textit{ Raisonnement sur les incertitudes et apprentissage pour les
   systemes de dialogue conventionnels}.
@@ -508,6 +508,14 @@
 (Newell, 1980) \hspace{.5em}A.~Newell, 1980.
 \newblock The knowledge level.
 \newblock \textit{ AI Magazine\/}~\textit{2}, 1--20.
+
+\bibitem[{Paek}(2007){Paek}]{Paek2007}
+(Paek, 2007) \hspace{.5em}T.~Paek, 2007.
+\newblock Toward evaluation that leads to best practices: reconciling dialog
+  evaluation in research and industry.
+\newblock Dans les actes de \textit{ Proceedings of the Workshop on Bridging
+  the Gap: Academic and Industrial Research in Dialog Technologies},  40--47.
+  Association for Computational Linguistics (ACL).
 
 \bibitem[{Paek \andnamec{} Pieraccini}(2008){Paek \andnamec{}
   Pieraccini}]{Paek2008}
@@ -677,6 +685,14 @@
 \newblock Dans les actes de \textit{ Proceedings of the 14th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
+\bibitem[{Singh et~al.}(2002){Singh, Litman, Kearns, \andnamec{}
+  Walker}]{Singh2002}
+(Singh et~al., 2002) \hspace{.5em}S.~Singh, D.~Litman, M.~Kearns, \andname{}
+  M.~Walker, 2002.
+\newblock Optimizing dialogue management with reinforcement learning:
+  Experiments with the njfun system.
+\newblock \textit{ Journal of Artificial Intelligence Research\/}, 105--133.
+
 \bibitem[{Skantze \andnamec{} Johansson}(2015){Skantze \andnamec{}
   Johansson}]{Skantze2015}
 (Skantze \andnamec{} Johansson, 2015) \hspace{.5em}G.~Skantze \andname{}
@@ -748,6 +764,12 @@
 (Watkins, 1989) \hspace{.5em}C.~J. C.~H. Watkins, 1989.
 \newblock \textit{ Learning from Delayed Rewards}.
 \newblock Th\`ese de Doctorat, King's College.
+
+\bibitem[{Williams}(2008){Williams}]{Williams2008}
+(Williams, 2008) \hspace{.5em}J.~D. Williams, 2008.
+\newblock The best of both worlds: unifying conventional dialog systems and
+  pomdps.
+\newblock Dans les actes de \textit{ INTERSPEECH},  1173--1176.
 
 \bibitem[{Williams \andnamec{} Young}(2007){Williams \andnamec{}
   Young}]{Williams2007}

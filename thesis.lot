@@ -1,27 +1,27 @@
 \select@language {english}
 \addvspace {10\p@ }
 \contentsline {xchapter}{State of the art}{11}{chapter.4}
-\contentsline {table}{\numberline {1.1}{\ignorespaces Example of incremental NLU processing\relax }}{24}{table.caption.32}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Example of incremental NLU processing\relax }}{24}{table.caption.31}
 \contentsline {xpart}{State of the art}{11}{part.3}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking taxonomy}{39}{chapter.74}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy labels\relax }}{41}{table.caption.86}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{42}{table.caption.87}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Taxonomy labels (1/2)\relax }}{51}{table.caption.112}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Taxonomy labels (2/2)\relax }}{52}{table.caption.113}
-\contentsline {xpart}{Contributions}{39}{part.73}
+\contentsline {xchapter}{Turn-taking taxonomy}{41}{chapter.73}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy labels\relax }}{43}{table.caption.85}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{44}{table.caption.86}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Taxonomy labels (1/2)\relax }}{53}{table.caption.111}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Taxonomy labels (2/2)\relax }}{54}{table.caption.112}
+\contentsline {xpart}{Contributions}{41}{part.72}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{53}{chapter.115}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{63}{table.caption.132}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{55}{chapter.114}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{65}{table.caption.131}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{65}{chapter.134}
-\contentsline {table}{\numberline {4.1}{\ignorespaces {NLU rules types}\relax }}{66}{table.caption.139}
+\contentsline {xchapter}{Incremental dialogue simulation}{67}{chapter.133}
+\contentsline {table}{\numberline {4.1}{\ignorespaces {NLU rules types}\relax }}{68}{table.caption.138}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{73}{chapter.162}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{75}{table.caption.167}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{75}{chapter.161}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{77}{table.caption.166}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{81}{chapter.180}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{83}{chapter.179}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{87}{chapter.193}
+\contentsline {xchapter}{Experiment with real users}{89}{chapter.192}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{89}{chapter.196}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{91}{chapter.195}

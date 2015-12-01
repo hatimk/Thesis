@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: introduction/introduction.aux
@@ -14,6 +14,7 @@ A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "Levin1997"
+Warning--I didn't find a database entry for "Putois2010"
 Warning--I didn't find a database entry for "Johsdottir2008"
 Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
@@ -29,47 +30,48 @@ Warning--page numbers missing in Pietquin2013
 Warning--page numbers missing in Schatzmann2006
 Warning--no number and no volume in Searle1968
 Warning--page numbers missing in Searle1968
+Warning--no number and no volume in Singh2002
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 108 entries,
+You've used 111 entries,
             2936 wiz_defined-function locations,
-            1234 strings with 24103 characters,
-and the built_in function-call counts, 66804 in all, are:
-= -- 5587
-> -- 4628
-< -- 7
-+ -- 1431
-- -- 1644
-* -- 4588
-:= -- 11743
-add.period$ -- 325
-call.type$ -- 108
-change.case$ -- 839
-chr.to.int$ -- 107
-cite$ -- 124
-duplicate$ -- 2369
-empty$ -- 4417
-format.name$ -- 1963
-if$ -- 12732
+            1254 strings with 24768 characters,
+and the built_in function-call counts, 68843 in all, are:
+= -- 5782
+> -- 4720
+< -- 9
++ -- 1457
+- -- 1676
+* -- 4710
+:= -- 12067
+add.period$ -- 335
+call.type$ -- 111
+change.case$ -- 860
+chr.to.int$ -- 110
+cite$ -- 128
+duplicate$ -- 2453
+empty$ -- 4571
+format.name$ -- 1999
+if$ -- 13150
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 108
-newline$ -- 549
-num.names$ -- 863
-pop$ -- 1114
+missing$ -- 111
+newline$ -- 564
+num.names$ -- 887
+pop$ -- 1140
 preamble$ -- 1
-purify$ -- 1501
+purify$ -- 1540
 quote$ -- 0
-skip$ -- 2035
+skip$ -- 2112
 stack$ -- 0
-substring$ -- 2767
-swap$ -- 163
-text.length$ -- 7
+substring$ -- 2918
+swap$ -- 184
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2056
-warning$ -- 16
-while$ -- 719
+type$ -- 2116
+warning$ -- 17
+while$ -- 747
 width$ -- 0
-write$ -- 2291
-(There were 18 warnings)
+write$ -- 2357
+(There were 20 warnings)
