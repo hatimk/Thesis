@@ -1,10 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: stateofart/stateofart.aux
 A level-1 auxiliary file: taxonomy/taxonomy.aux
 A level-1 auxiliary file: architecture/architecture.aux
+A level-1 auxiliary file: strategies/strategies.aux
 A level-1 auxiliary file: simulation/simulation.aux
 A level-1 auxiliary file: baseline/baseline.aux
 A level-1 auxiliary file: rl/rl.aux
@@ -35,7 +36,7 @@ Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
 You've used 111 entries,
             2936 wiz_defined-function locations,
-            1254 strings with 24768 characters,
+            1255 strings with 24793 characters,
 and the built_in function-call counts, 68843 in all, are:
 = -- 5782
 > -- 4720

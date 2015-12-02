@@ -1,0 +1,63 @@
+\chapter{Dialogue strategies}
+\label{ch:strategies}
+
+\section{Utterance representation}
+\label{sec:represent}
+	
+	When interacting with a dialogue system, the user's utterance can be represented in different ways. A simple way of representing the different chunks of information that it contains is slot-filling. For example, if the user says \textit{I would like to buy the book entitled Dracula and written by Bram Stoker}, the NLU can output the following matrix:
+	
+		$$
+		\begin{bmatrix}
+			\text{ACTION:} & \text{Buy} \\
+			\text{OBJECT:} & \text{Book} \\
+			\text{TITLE:} & \text{Dracula} \\
+			\text{WRITER:} & \text{Bram Stoker}
+		\end{bmatrix}
+		$$
+	
+	Each entry is called a \textit{slot}, it has two attributes: the \textit{slot name} (on the left) and the \textit{slot value} (on the right). Of course, depending on the application at hand, this matrix could be different; some slots could be considered as non relevant hence being discarded, others could be combined and new slots could be added. Therefore, while designing a dialogue system, a representation is chosen and one has to stick to it. This representation is widely used when it comes to dialogue systems design since it is a simple and natural way of representing the user's utterance. It is well adapted to most tasks where the dialogue system plays the role of an interface between a user and a data base. The system expects a user's request with predefined slots and depending on the latter and the data base content, a response is computed and returned. Therefore, this is the representation used in this thesis and Section \ref{sec:elemtask} provides more precisions about this topic.
+
+\section{Elementary tasks}
+\label{sec:elemtask}
+
+	A \textit{task} is associated with an objective that the user wants to achieve. For example:
+	
+	\begin{itemize}
+		\item Checking a bank account
+		\item Scheduling an appointment
+		\item Finding a restaurant nearby
+		\item Booking a hotel room
+		\item Modifying a flight reservation
+	\end{itemize}
+	
+	Some tasks involve retrieving information from a database and others make the system modify the outside world (data base modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system after it the user has made a request with all the necessary information. The task of driving a robot from point A to point B could involve the following elementary tasks.
+	
+	\begin{enumerate}
+		\item Go straightforward until you reach the STOP sign
+		\item Turn right
+		\item Go straightforward until you reach the wall
+		\item turn left
+		\item Go straightforward until you reach the point B
+	\end{enumerate}
+	
+	The way a task is organised in elementary tasks might affect the efficiency of its execution. However, this is not under the control of the dialogue system. The latter only controls the way elementary tasks are handled. As a consequence, this thesis focuses on the optimisation of elementary tasks using different dialogue strategies.
+	
+	To complete an elementary task, the system requires information that can be represented as a slot matrix:
+	
+		$$
+		\begin{bmatrix}
+			s_1 & x_1 \\
+			s_2 & x_2 \\
+			... & ... \\
+			s_n & x_n
+		\end{bmatrix}
+		$$
+		
+	The way these slots are communicated depends on the dialogue strategy, the way the requests are formulated, the noise level and the NLU's ability to recognise a large variety of words and expressions. In Section \ref{sec:slotfillstrat}, a different slot-filling strategies are introduced and discussed.
+
+\section{Slot-filling strategies}
+\label{sec:slotfillstrat}
+
+
+\section{Incremental strategies}
+\label{sec:incrstrat}
