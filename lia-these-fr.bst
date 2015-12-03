@@ -616,8 +616,8 @@ FUNCTION {format.in.ed.booktitle}
 { booktitle empty$
   { "" }
   { editor empty$
-    { "Dans les actes de " format.emphasize.booktitle * }
-    { "Dans " format.editors.fml * ", " * format.emphasize.booktitle * }
+    { "In Proceedings of " format.emphasize.booktitle * }
+    { "In " format.editors.fml * ", " * format.emphasize.booktitle * }
     if$
   }
   if$

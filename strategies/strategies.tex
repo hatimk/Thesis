@@ -52,12 +52,40 @@
 			s_n & x_n
 		\end{bmatrix}
 		$$
-		
+	
+	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. $ET_k$ consists on performing an action $a_k$ as a response to a user's request $X_k = (x_1, x_2, ...)$ which a vector containing the slot values provided in his utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to compute $a_k$, then $a_k = f(X_k,C_k)$, $f$ being defined in the dialogue system.
+	
 	The way these slots are communicated depends on the dialogue strategy, the way the requests are formulated, the noise level and the NLU's ability to recognise a large variety of words and expressions. In Section \ref{sec:slotfillstrat}, a different slot-filling strategies are introduced and discussed.
 
 \section{Slot-filling strategies}
 \label{sec:slotfillstrat}
 
+	Depending on the task, the dialogue system and the user, slots can be filled in different ways in order to complete an elementary task. Three generic strategies are presented here but before delving into that, the notion of \textit{initiative} is introduced. Consider the following dialogue between a customer and a receptionist:
+	
+	\begin{dialogue}
+		\speak{Customer} Hi. I would like to book a room please, leaving on Monday.
+		\speak{Receptionist} Sure. Are you driving sir?
+		\speak{Customer} No. I came here by train.
+		\speak{Receptionist} All right. Would you like a smoking room?
+		\speak{Customer} No, I don't smoke.
+		\speak{Receptionist} Ok. What about breakfast?
+		\speak{Customer} Yes, please. I will have it here.
+		\speak{Receptionist} Great, all set then! Let me get your key...
+		\speak{Customer} Thanks. When should I check out on Monday?
+		\speak{Receptionist} Checkout is before 11:30am.
+		\speak{Customer} Ok. My train is leaving at 6:00pm, would it be possible to leave my bag here and get it back by then?
+		\speak{Receptionist} Absolutely sir. No problem.
+	\end{dialogue}
+
+	This dialogue can be split into three phases. First, the customer starts the conversation by making a request. It is a result of his own initiative and he is setting the subject of the conversation. Then the receptionist provides an answer and takes the initiative right after by starting to ask specific questions. When, all the necessary information for the reservation is provided, the customer takes the initiative again to get some additional clarifications.
+	
+	Such a distinction can also be made in the case of dialogue systems \cite{Ferguson2007}. When using a \textit{system initiative} strategy, the latter makes requests and asks questions that the user should respond to in order to move the dialogue forward. Symmetrical strategies are called \textit{user initiative} (the user leads the course of the dialogue). Finally, strategies that involve both dialogue modes are called \textit{mixed initiative} strategies. This three dialogue strategies are presented and discussed in the following.
+	
+	\subsection{System initiative strategies}
+	
+	\subsection{User initiative strategies}
+	
+	\subsection{Mixed initiative strategies}
 
 \section{Incremental strategies}
 \label{sec:incrstrat}

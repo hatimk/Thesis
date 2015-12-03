@@ -16,14 +16,14 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Dialogue strategies}{67}{chapter.133}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{69}{chapter.143}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{70}{table.caption.148}
+\contentsline {xchapter}{Incremental dialogue simulation}{71}{chapter.146}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{72}{table.caption.151}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{77}{chapter.171}
-\contentsline {table}{\numberline {6.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{79}{table.caption.176}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{79}{chapter.174}
+\contentsline {table}{\numberline {6.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{81}{table.caption.179}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{85}{chapter.189}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{87}{chapter.192}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{91}{chapter.202}
+\contentsline {xchapter}{Experiment with real users}{93}{chapter.205}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{93}{chapter.205}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{95}{chapter.208}
