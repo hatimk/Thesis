@@ -139,7 +139,37 @@
 	
 	\subsection{First efficiency comparison}
 	
-		
+		Let $N$ be the number of turns in the dialogue that are performed to complete the elementary task $ET$ (recall that a dialogue turn is made of a system and a user turn) and $p_{err}$ the probability of a failure to transmit a slot value. The objective of this preliminary study is to make a rough comparison between the previous strategies in a simple fashion; of course, in real dialogues, representing errors involves more complicated models than a simple probability. Also, suppose that for $ET$ to be completed, $n_s$ slots have to be specified. The dialogue turns dedicated to greetings, saying bye and confirmation are neglected in the following. Moreover, $ET$ is supposed to involve contrained slots only, since open slots are a little bit more complicated and they require a special treatement. Nevertheless, they are also more rare in common tasks.
+
+                \paragraph{System initiative:} The $i^{th}$ slot requires $N_i = 1 + n^i_{err}$ dialogue turns, $n^i_{err}$ being the number of errors that occured before the system considers that the slot value has been understood. Therefore, $N_i$ follows a geometric distribution with parameter $1-p_{err}$:
+
+                     \begin{eqnarray}
+                       \mathbb{P} (N_s = k) & = & p_{err}^{k-1} (1-p_{err}) \text{,  } \forall k \in \mathbb{N}^*
+                     \end{eqnarray}
+
+                     As a consequence, since $N = \sum_{i=1}^{n_s} N_i$:
+
+                     \begin{eqnarray}
+                       \mathbb{E} [N] & = & \frac{n_s}{1-p_{err}}
+                     \end{eqnarray}
+
+                \paragraph{User initiative:} Here, $N = 1 + n_{err}$  but $n_{err}$ corresponds to the number of user utterances where at least one slot has been misunderstood. Therefore, $N$ follows a geometric distribution with parameter $(1-p_{err})^{n_s}$ which leads to:
+
+                     \begin{eqnarray}
+                       \mathbb{E} [N] & = & \frac{1}{(1-p_{err})^{n_s}}
+                     \end{eqnarray}
+
+                \paragraph{Mixed initiative:} In this case, $N=2$ with a probability of $(1-p_{err})^{n_s}$ (all the slots have been understood from the first request). Otherwise, let $n_{mis}$ be the number of missing (misunderstood) slots. Therefore:
+
+                     \begin{eqnarray}
+                       \mathbb{E} [N] & = & 2 (1-p_{err})^{n_s} + \frac{\mathbb{E} [n_{mis}]}{1-p_{err}}
+                     \end{eqnarray}
+
+                     Moreover, $n_{mis}$ follows a binomial distribution with parameters $p_{err}$ and $n_s$, hence:
+
+                     \begin{eqnarray}
+                       \mathbb{E} [N] & = & 2 (1-p_{err})^{n_s} + \frac{p_{err} n_s}{1-p_{err}}
+                     \end{eqnarray}
 
 \section{Incremental strategies}
 \label{sec:incrstrat}
