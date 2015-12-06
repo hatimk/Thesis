@@ -185,7 +185,7 @@
 					ymin=0, ymax=40,
 					xtick={0,0.1,0.2,0.3,0.4,0.5},
 					ytick={0,10,20,30,40},
-          legend pos=north east,
+                                        legend pos=north west,
 					ymajorgrids=true,
 					grid style=dashed,
           %colorbrewer cycle list=Set2,
@@ -389,3 +389,29 @@
 
 \section{Incremental strategies}
 \label{sec:incrstrat}
+
+     Incremental dialogue processing brings a new dimension (a new decision degree of freedom) that can be exploited in order improve the dialogue efficiency. In Chapter \ref{ch:taxonomy}, the following TTP have been selected for implementation: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK\_RAW and BARGE\_IN\_RESP from the user's and the system's perspective. In the following, the ways they can be implemented are discussed.
+
+     The concept of elementary has been proven to be useful for slot-filling strategies analysis. As far as incremental strategies are concerned, analysis is made at a more atomic level since only one dialogue turn is considered. In the following, the user is supposed to have the floor and the system is waiting for her to provide $n_s$ slot values in the same utterance.
+
+     The reader should keep in mind that the architecture used here is the one introduced in Chapter \ref{ch:architecture}, therefore, the Scheduler module is in charge of making turn-taking decisions. It can perform three kinds of actions:
+
+     \begin{itemize}
+       \item \textbf{WAIT:} Performed most of the time, it is chosen when the Scheduler decides not to retrieve the service's response at a certain micro-turn, hence waiting for the user to provide more information during the following micro-turns.
+       \item \textbf{SPEAK:} The Scheduler decides to commit to the current user's utterance and to provide the corresponding service's response right away. This either translates into a barge-in or an accurate end point detection.
+       \item \textbf{REPEAT:} The Scheduler does not retrieve the last service's utterance but the last word of the last user's utterance\footnote{This is a simple way of simulating feedback. In reality, any part of the last partial utterance could be repeated.}. The objective is not to barge-in but perform a feedback that might trigger a reaction from the user or not.
+     \end{itemize}
+
+     \paragraph{FAIL\_RAW:} If the user has been holding the floor for too long without providing a single slot value, it might be interesting for the system to interrupt her asking for a reformulation or a repeat. This situation can happen for two main reasons: the user uses off-domain words or expressions (mainly because she is not familiar with the system) or her utterance has been altered because of noise and ASR imperfections. The system can use several criteria in order to decide whether to interrupt the user or not. For example, it can rely on a time threshold: if the user speaks for a period that is larger than that threshold without providing any slot value, then it performs a SPEAK. This duration can be replaced by a number of words or phonemes for example. Consider the following dialogue where the user tries to check his bank account in a noisy environment:
+
+          \begin{dialogue}
+            \speak{USER} <noise> like to <noise> number 58 45...
+            \speak{SYSTEM} ...Sorry, I don't understand. What can I do for you?
+            \speak{USER} Check account number <noise> I repeat, check account 58 45 18 A.
+            \speak{SYSTEM} All right, you want to check the account number 58 45 18 A right?
+            \speak{USER} Yes.
+          \end{dialogue}
+
+          The user is interrupted by the system at the first dialogue turn. If the latter didn't make such a decision, its response would have been the same (\textit{Sorry, I don't understand. What can I do for you?}) as an important part of the request was lost. Therefore, the system barge-in spared the user some time and energy. In this example, the second time the user tries to formulate his request, he does it in a more concise way and repeats it as an effort to make himself clearer. This kind of behaviour have been noticed as a result of a corpus study made in \cite{Ghigi2014}.
+
+     \paragraph{INCOHERENCE\_INTERP:} 

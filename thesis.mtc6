@@ -1,0 +1,12 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}User and system initiative}{\reset@font\mtcSfont 85}{section.188}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.1}Strategies}{\reset@font\mtcSSfont 85}{subsection.189}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.2}Experiments}{\reset@font\mtcSSfont 87}{subsection.190}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Incremental strategies}{\reset@font\mtcSfont 88}{section.193}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}ASR instability}{\reset@font\mtcSSfont 88}{subsection.194}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.2}TTP implementation}{\reset@font\mtcSSfont 88}{subsection.195}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode FAIL\_RAW:}{\reset@font\mtcPfont 88}{section*.196}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode INCOHERENCE\_INTERP:}{\reset@font\mtcPfont 89}{section*.197}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode FEEDBACK:}{\reset@font\mtcPfont 89}{section*.198}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode BARGE\_IN\_RESP (System):}{\reset@font\mtcPfont 89}{section*.199}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode BARGE\_IN\_RESP (User):}{\reset@font\mtcPfont 89}{section*.200}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.3}Experiments}{\reset@font\mtcSSfont 89}{subsection.201}}
