@@ -4,7 +4,7 @@
 \section{Utterance representation}
 \label{sec:represent}
 	
-	When interacting with a dialogue system, the user's utterance can be represented in different ways. A simple way of representing the different chunks of information that it contains is slot-filling. For example, if the user says \textit{I would like to buy the book entitled Dracula and written by Bram Stoker}, the NLU can output the following matrix:
+	When interacting with a dialogue system, the user's utterance can be represented in different manners. A simple way of encoding the different chunks of information that it contains is by using a slot representation. For example, if the user says \textit{I would like to buy the book Dracula by Bram Stoker}, the NLU can output the following matrix:
 	
 		$$
 		\begin{bmatrix}
@@ -15,7 +15,7 @@
 		\end{bmatrix}
 		$$
 	
-	Each entry is called a \textit{slot}, it has two attributes: the \textit{slot name} (on the left) and the \textit{slot value} (on the right). Of course, depending on the application at hand, this matrix could be different; some slots could be considered as non relevant hence being discarded, others could be combined and new slots could be added. Therefore, while designing a dialogue system, a representation is chosen and one has to stick to it. This representation is widely used when it comes to dialogue systems design since it is a simple and natural way of representing the user's utterance. It is well adapted to most tasks where the dialogue system plays the role of an interface between a user and a data base. The system expects a user's request with predefined slots and depending on the latter and the data base content, a response is computed and returned. Therefore, this is the representation used in this thesis and Section \ref{sec:elemtask} provides more precisions about this topic.
+	Each entry is called a \textit{slot}, it has two attributes: the \textit{slot name} (on the left) and the \textit{slot value} (on the right). Of course, depending on the application at hand, this matrix could be different; some slots could be considered as non relevant hence being discarded, others could be combined and new slots could be added. Therefore, while designing a dialogue system, a representation is chosen and one has to stick to it. This representation is widely used when it comes to dialogue systems design since it is a simple and natural way of representing information. It is well adapted to most tasks where the dialogue system plays the role of an interface between a user and a database. The system expects a user's request with predefined slots and depending on the latter and the database content, a response is computed and returned. This is the representation used in this thesis and Section \ref{sec:elemtask} defines it more formally.
 
 \section{Elementary tasks}
 \label{sec:elemtask}
@@ -30,7 +30,7 @@
 		\item Modifying a flight reservation
 	\end{itemize}
 	
-	Some tasks involve retrieving information from a database and others make the system modify the outside world (data base modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system after it the user has made a request with all the necessary information. The task of driving a robot from point A to point B could involve the following elementary tasks.
+	Some tasks involve retrieving information from a database and others make the system modify the outside world (database modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system after it the user has made a request with all the necessary information. The task of driving a robot from point A to point B could involve the following elementary tasks.
 	
 	\begin{enumerate}
 		\item Go straightforward until you reach the STOP sign
@@ -40,7 +40,7 @@
 		\item Go straightforward until you reach the point B
 	\end{enumerate}
 	
-	The way a task is organised in elementary tasks might affect the efficiency of its execution. However, this is not under the control of the dialogue system. The latter only controls the way elementary tasks are handled. As a consequence, this thesis focuses on the optimisation of elementary tasks using different dialogue strategies.
+	The way a task is organised in elementary tasks might affect the efficiency of its execution. However, this is very dependent on the task at hand and as a consequence, it is out of the scope of this thesis. The latter focuses on the way elementary tasks are handled: the optimisation of elementary tasks using different dialogue strategies.
 	
 	To complete an elementary task, the system requires information that can be represented as a slot matrix:
 	
@@ -53,16 +53,16 @@
 		\end{bmatrix}
 		$$
 	
-	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. $ET_k$ consists on performing an action $a_k$ as a response to a user's request $X_k = (x_1, x_2, ...)$ which a vector containing the slot values provided in his utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to compute $a_k$, then $a_k = f(X_k,C_k)$, $f$ being defined in the dialogue system.
+	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. More precisely, $ET_k$ consists on performing an action $a_k$ as a response to a user's request $X_k = (x_1, x_2, ...)$ which is a vector containing the slot values provided in his utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to compute $a_k$, then $a_k = f(X_k,C_k)$, $f$ being defined in the dialogue system.
 	
 	Moreover, a distinction can be made between two kinds of slots:
 	
 	\begin{itemize}
-		\item \textbf{Open slots:} Every input from the user can be considered as a valid value. For example, if the user is asked to utter a message that will be sent to some of his friends later on, he can utter anything. Therefore, unless the system asks for a specific confirmation, it cannot determine whether the user's input is right or wrong.
-		\item \textbf{Constrained slots:} Some user's inputs are considered valid (but not necessarily correct) and others are not. If the slot at hand is a date and the user responds something which is not a date, this response is not valid in which case is sure that the slot value is wrong. However, the validity of the response does not guarantee its correctness but it is noteworthy that if a generic ASR with open grammar is used, valid responses that are incorrect are quite rare. On the other hand, if the ASR uses a grammar that is specific to the task at hand, they are more likely to happen.
+		\item \textbf{Open slots:} Every input from the user can be considered as a valid value. For example, if the user is asked to utter a message that will be sent to some of his friends later on, he can utter anything. Therefore, unless the system asks for a confirmation, it cannot determine whether the user's input is right or wrong.
+		\item \textbf{Constrained slots:} Some user's inputs are considered valid (but not necessarily correct) and others are not. If the slot at hand is a date and the user responds something which is not a date, this response is not valid in which case it is sure that the slot value is wrong. However, the validity of the response does not guarantee its correctness but it is noteworthy that if a generic ASR with an open grammar domain is used, valid responses that are incorrect are quite rare. On the other hand, if the ASR uses a grammar that is specific to the task at hand, they are more likely to happen.
 	\end{itemize}
 	
-	The way these slots are communicated depends on the dialogue strategy, the way the requests are formulated, the noise level and the NLU's ability to recognise a large variety of words and expressions. In Section \ref{sec:slotfillstrat}, a different slot-filling strategies are introduced and discussed.
+	The way these slots are communicated depends on the dialogue strategy, the way the requests are formulated, the noise level and the NLU's ability to recognise a large variety of words and expressions. In Section \ref{sec:slotfillstrat}, three different slot-filling strategies are introduced and discussed.
 
 \section{Slot-filling strategies}
 \label{sec:slotfillstrat}
@@ -92,7 +92,7 @@
 	
 		System initiative strategies can be compared to form-filling. The user is asked to fill several slots in a progressive way. Slot values can be asked for one by one or little group by little group. However, the \textit{one by one} case is the most common and the most simple, therefore, this thesis will focus on that case.
 		
-		Formally, consider an elementary task $ET$ that involves $n$ slots: $s_1, ..., s_n$. Completing $ET$ using the system initiative strategies consists on a dialogue with $n$ system questions $q(s_1),...,q(s_n)$ followed by the $n$ corresponding answers containing the required slot values $x_1,...,x_n$. If an error occurs when trying to get $x_k$, the problem is reported and the user is asked to repeat (or reformulate) her response again. To recap, a user initiative dialogue looks like the following:
+		Formally, consider an elementary task $ET$ that involves $n$ slots: $s_1, ..., s_n$. Completing $ET$ using the system initiative strategies consists on a dialogue with $n$ system questions $q(s_1),...,q(s_n)$ followed by the $n$ corresponding answers containing the required slot values $x_1,...,x_n$. If an error occurs when trying to get $x_k$, the problem is reported and the user is asked to repeat (or reformulate) her response again. Moving to the next slot requires successfully communicating the current one. To recap, a user initiative dialogue looks like the following:
 		
 		\begin{dialogue}
 			\speak{SYSTEM} $q(s_1)$
@@ -279,7 +279,7 @@
 (0.16,2.3911320998183)
 (0.17,2.5386892155507)
 (0.18,2.69730922732397)
-(0.19,2.86797199079244)
+(0.19,2.86797199079244)p
 (0.2,3.0517578125)
 (0.21,3.24985918465773)
 (0.22,3.46359406305176)
