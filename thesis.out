@@ -55,40 +55,40 @@
 \BOOKMARK [2][-]{subsection.144}{Mixed initiative strategies}{section.141}% 55
 \BOOKMARK [2][-]{subsection.145}{First efficiency comparison}{section.141}% 56
 \BOOKMARK [1][-]{section.155}{Incremental strategies}{chapter.133}% 57
-\BOOKMARK [0][-]{chapter.159}{Incremental dialogue simulation}{part.72}% 58
-\BOOKMARK [1][-]{section.160}{Agenda management task}{chapter.159}% 59
-\BOOKMARK [1][-]{section.162}{The service}{chapter.159}% 60
-\BOOKMARK [2][-]{subsection.163}{Natural Language Understanding}{section.162}% 61
-\BOOKMARK [1][-]{section.169}{User simulator}{chapter.159}% 62
-\BOOKMARK [2][-]{subsection.170}{Overview}{section.169}% 63
-\BOOKMARK [2][-]{subsection.172}{Intent Manager}{section.169}% 64
-\BOOKMARK [2][-]{subsection.176}{NLG and Verbosity Manager}{section.169}% 65
-\BOOKMARK [2][-]{subsection.177}{ASR output simulator}{section.169}% 66
-\BOOKMARK [2][-]{subsection.185}{Timing and patience manager}{section.169}% 67
-\BOOKMARK [0][-]{chapter.187}{Handcrafted strategies for improving dialogue efficiency}{part.72}% 68
-\BOOKMARK [1][-]{section.188}{User and system initiative}{chapter.187}% 69
-\BOOKMARK [2][-]{subsection.189}{Strategies}{section.188}% 70
-\BOOKMARK [2][-]{subsection.190}{Experiments}{section.188}% 71
-\BOOKMARK [1][-]{section.193}{Incremental strategies}{chapter.187}% 72
-\BOOKMARK [2][-]{subsection.194}{ASR instability}{section.193}% 73
-\BOOKMARK [2][-]{subsection.195}{TTP implementation}{section.193}% 74
-\BOOKMARK [2][-]{subsection.201}{Experiments}{section.193}% 75
-\BOOKMARK [0][-]{chapter.205}{Reinforcement learning for turn-taking optimisation}{part.72}% 76
-\BOOKMARK [1][-]{section.206}{Model}{chapter.205}% 77
-\BOOKMARK [2][-]{subsection.207}{State representation}{section.206}% 78
-\BOOKMARK [2][-]{subsection.208}{Actions, rewards and episodes}{section.206}% 79
-\BOOKMARK [2][-]{subsection.209}{Fitted-Q Value Iteration}{section.206}% 80
-\BOOKMARK [1][-]{section.210}{Experiment}{chapter.205}% 81
-\BOOKMARK [2][-]{subsection.211}{Setup}{section.210}% 82
-\BOOKMARK [2][-]{subsection.215}{Results}{section.210}% 83
-\BOOKMARK [0][-]{chapter.218}{Experiment with real users}{part.72}% 84
-\BOOKMARK [1][-]{section.219}{Protocol}{chapter.218}% 85
-\BOOKMARK [1][-]{section.220}{Results}{chapter.218}% 86
-\BOOKMARK [0][-]{chapter.221}{A new reinforcement learning approach adapted to incremental dialogue}{part.72}% 87
-\BOOKMARK [1][-]{section.222}{Problem}{chapter.221}% 88
-\BOOKMARK [1][-]{section.223}{Proposed approach}{chapter.221}% 89
-\BOOKMARK [1][-]{section.224}{Toy problem application}{chapter.221}% 90
-\BOOKMARK [1][-]{section.225}{Simulation results}{chapter.221}% 91
-\BOOKMARK [0][-]{chapter*.226}{Liste des illustrations}{part.72}% 92
-\BOOKMARK [0][-]{chapter*.227}{Liste des tableaux}{part.72}% 93
-\BOOKMARK [0][-]{chapter*.228}{Bibliographie}{part.72}% 94
+\BOOKMARK [0][-]{chapter.162}{Incremental dialogue simulation}{part.72}% 58
+\BOOKMARK [1][-]{section.163}{Agenda management task}{chapter.162}% 59
+\BOOKMARK [1][-]{section.165}{The service}{chapter.162}% 60
+\BOOKMARK [2][-]{subsection.166}{Natural Language Understanding}{section.165}% 61
+\BOOKMARK [1][-]{section.172}{User simulator}{chapter.162}% 62
+\BOOKMARK [2][-]{subsection.173}{Overview}{section.172}% 63
+\BOOKMARK [2][-]{subsection.175}{Intent Manager}{section.172}% 64
+\BOOKMARK [2][-]{subsection.179}{NLG and Verbosity Manager}{section.172}% 65
+\BOOKMARK [2][-]{subsection.180}{ASR output simulator}{section.172}% 66
+\BOOKMARK [2][-]{subsection.188}{Timing and patience manager}{section.172}% 67
+\BOOKMARK [0][-]{chapter.190}{Handcrafted strategies for improving dialogue efficiency}{part.72}% 68
+\BOOKMARK [1][-]{section.191}{User and system initiative}{chapter.190}% 69
+\BOOKMARK [2][-]{subsection.192}{Strategies}{section.191}% 70
+\BOOKMARK [2][-]{subsection.193}{Experiments}{section.191}% 71
+\BOOKMARK [1][-]{section.196}{Incremental strategies}{chapter.190}% 72
+\BOOKMARK [2][-]{subsection.197}{ASR instability}{section.196}% 73
+\BOOKMARK [2][-]{subsection.198}{TTP implementation}{section.196}% 74
+\BOOKMARK [2][-]{subsection.204}{Experiments}{section.196}% 75
+\BOOKMARK [0][-]{chapter.208}{Reinforcement learning for turn-taking optimisation}{part.72}% 76
+\BOOKMARK [1][-]{section.209}{Model}{chapter.208}% 77
+\BOOKMARK [2][-]{subsection.210}{State representation}{section.209}% 78
+\BOOKMARK [2][-]{subsection.211}{Actions, rewards and episodes}{section.209}% 79
+\BOOKMARK [2][-]{subsection.212}{Fitted-Q Value Iteration}{section.209}% 80
+\BOOKMARK [1][-]{section.213}{Experiment}{chapter.208}% 81
+\BOOKMARK [2][-]{subsection.214}{Setup}{section.213}% 82
+\BOOKMARK [2][-]{subsection.218}{Results}{section.213}% 83
+\BOOKMARK [0][-]{chapter.221}{Experiment with real users}{part.72}% 84
+\BOOKMARK [1][-]{section.222}{Protocol}{chapter.221}% 85
+\BOOKMARK [1][-]{section.223}{Results}{chapter.221}% 86
+\BOOKMARK [0][-]{chapter.224}{A new reinforcement learning approach adapted to incremental dialogue}{part.72}% 87
+\BOOKMARK [1][-]{section.225}{Problem}{chapter.224}% 88
+\BOOKMARK [1][-]{section.226}{Proposed approach}{chapter.224}% 89
+\BOOKMARK [1][-]{section.227}{Toy problem application}{chapter.224}% 90
+\BOOKMARK [1][-]{section.228}{Simulation results}{chapter.224}% 91
+\BOOKMARK [0][-]{chapter*.229}{Liste des illustrations}{part.72}% 92
+\BOOKMARK [0][-]{chapter*.230}{Liste des tableaux}{part.72}% 93
+\BOOKMARK [0][-]{chapter*.231}{Bibliographie}{part.72}% 94
