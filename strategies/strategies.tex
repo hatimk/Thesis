@@ -100,27 +100,24 @@
 			\speak{SYSTEM} $q(s_2)$
 			\speak{USER} <noise>
 			\speak{SYSTEM} Sorry, I don't understand. $q(s_2)$
-			\speak{USER} $x_2$
-			[...]
+			\speak{USER} $x_2$ \\ \\ $[...]$
 			\speak{SYSTEM} $q(s_n)$
 			\speak{USER} $x_n$
-			\speak{SYSTEM} Confirmation message.
+			\speak{SYSTEM} Confirmation message
 		\end{dialogue}
 		
-		A misunderstanding can happen for two reasons: either the system does not understand anything because or noise, either the ASR outputs an utterance but it is not compatible with the type of information required. The latter situation happens only in the case of constrained slots. Therefore, the reader might notice that it is very easy for the system to accept an erroneous answer in the case of an open slot as any answer, except empty ones (because of noise), is accepted by the system. The problem becomes visible by the user at the confirmation phase only making him restart the current elementary task from the beginning. Since this inevitably leads to a very tedious dialogue strategy, in this thesis, intermediate confirmations are added after each open slot response in order to be able to correct them immediately before tackling the remaining slots.
+		A misunderstanding can happen for two reasons: either the system does not understand anything because of noise, either the ASR outputs an utterance but it is not compatible with the type of information required. The latter situation happens only in the case of constrained slots. Therefore, the reader might notice that it is very easy for the system to accept an erroneous answer in the case of an open slot as any answer, except empty ones (because of noise), is accepted by the system. The problem becomes visible by the user at the confirmation phase only, making him restart the current elementary task from the beginning. Since this inevitably leads to a very tedious dialogue strategy, in this thesis, intermediate confirmations are added after each open slot response in order to be able to correct them immediately before tackling the remaining slots.
 	
 	\subsection{User initiative strategies}
 	
-		When the user initiative strategy is used to complete an elementary task $ET$ (involving $n$ slots $s_1,...,s_n$), the user is supposed to provide all the slot values in a complete utterance. If there are missing slots in his request, he is asked to repeat (or reformulate) it. The dialogue then looks as follows:
+		When the user initiative strategy is used to complete an elementary task $ET$ (involving $n$ slots $s_1,...,s_n$), the user is supposed to provide all the slot values in a complete utterance. If there are missing slots in his request, he is asked to repeat (or reformulate) it. The dialogue then looks like this:
 		
 		\begin{dialogue}
 			\speak{SYSTEM} What can I do for you?
 			\speak{USER} $x_1$, <noise>,...,$x_n$
-			\speak{SYSTEM} Confirmation message.
-			\speak{USER} No.
-			\speak{SYSTEM} What can I do for you?
+			\speak{SYSTEM} Sorry, I don't understand. What can I do for you?
 			\speak{USER} $x_1$, $x_2$,...,$x_n$
-			\speak{SYSTEM} Confirmation message.
+			\speak{SYSTEM} Confirmation message
 		\end{dialogue}
 	
 	\subsection{Mixed initiative strategies}
@@ -134,12 +131,20 @@
 			\speak{USER} $x_2$
 			\speak{SYSTEM} $q(s_4)$
 			\speak{USER} $x_4$
-			\speak{SYSTEM} Confirmation message.
+			\speak{SYSTEM} Confirmation message
 		\end{dialogue}
 	
 	\subsection{First efficiency comparison}
 	
-		Let $N$ be the number of turns in the dialogue that are performed to complete the elementary task $ET$ (recall that a dialogue turn is made of a system and a user turn) and $p_{err}$ the probability of a failure to transmit a slot value. The objective of this preliminary study is to make a rough comparison between the previous strategies in a simple fashion; of course, in real dialogues, representing errors involves more complicated models than a simple probability. Also, suppose that for $ET$ to be completed, $n_s$ slots have to be specified. The dialogue turns dedicated to greetings, saying bye and confirmation are neglected in the following. Moreover, $ET$ is supposed to involve contrained slots only, since open slots are a little bit more complicated and they require a special treatement. Nevertheless, they are also more rare in common tasks.
+		Let $N$ be the number of turns in the dialogue that are performed to complete the elementary task $ET$ (recall that a dialogue turn is made of a system and a user turn). Also, suppose that for $ET$ to be completed, $n_s$ slots have to be specified. The objective of this preliminary study is to make a rough comparison between the previous strategies in a simple fashion, therefore, the following simplifying assumptions:
+		
+		\begin{itemize}
+			\item All the slots have the same probability of not being understood: $p_{err}$.
+			\item The dialogue turns dedicated to greeting, saying bye and confirmation are neglected.
+			\item Open domain ASR grammar is used (the most common in recent dialogue systems).
+			\item Only constrained slots are considered (since they are the most usually used and since open slots only involve a constant number of turns in comparison with constrained ones when $p_err$ vary).
+			\item As a consequence, errors are mostly due to invalid input (not valid but incorrect), so the answer to the final confirmation is always positive.
+		\end{itemize}
 
                 \paragraph{System initiative:} The $i^{th}$ slot requires $N_i = 1 + n^i_{err}$ dialogue turns, $n^i_{err}$ being the number of errors that occured before the system considers that the slot value has been understood. Therefore, $N_i$ follows a geometric distribution with parameter $1-p_{err}$:
 
@@ -165,13 +170,19 @@
                        \mathbb{E} [N] & = & (1-p_{err})^{n_s} + \frac{\mathbb{E} [n_{mis}]}{1-p_{err}} (1 - (1-p_{err})^{n_s})
                      \end{eqnarray}
 
-                     Moreover, $n_{mis}$ follows a binomial distribution with parameters $p_{err}$ and $n_s$, hence:
+                     Moreover, $n_{mis}$ follows a binomial distribution with parameters $p_{err}$ and $n_s$:
+										
+											\begin{eqnarray}
+												\mathbb{P} (n_{mis} = k) & = & \dbinom{n_s}{k} p_{err}^k (1-p_{err})^{n_s-k}
+											\end{eqnarray}
+										
+										Consequently,
 
                      \begin{eqnarray}
                        \mathbb{E} [N] & = & (1-p_{err})^{n_s} + \frac{p_{err} n_s}{1-p_{err}} (1 - (1-p_{err})^{n_s})
                      \end{eqnarray}
 										
-								
+								Figure \ref{fig:effcompare} compares the efficiency of these three slot-filling strategies under different noise conditions. $\mathbb{E} [N]$ is used as a proxy for efficiency and $p_{err}$ represents the level of noise.
 								
 								\begin{figure}[t]
 				\centering
@@ -279,7 +290,7 @@
 (0.16,2.3911320998183)
 (0.17,2.5386892155507)
 (0.18,2.69730922732397)
-(0.19,2.86797199079244)p
+(0.19,2.86797199079244)
 (0.2,3.0517578125)
 (0.21,3.24985918465773)
 (0.22,3.46359406305176)
@@ -383,26 +394,26 @@
 
 				\end{axis}
 				\end{tikzpicture}
-				\caption{Slot-filling strategies efficiency comparison}
+				\caption{Slot-filling strategies efficiency comparison ($n_s = 5$)}
 				\label{fig:effcompare}
 		\end{figure}
 
 \section{Incremental strategies}
 \label{sec:incrstrat}
 
-     Incremental dialogue processing brings a new dimension (a new decision degree of freedom) that can be exploited in order improve the dialogue efficiency. In Chapter \ref{ch:taxonomy}, the following TTP have been selected for implementation: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK\_RAW and BARGE\_IN\_RESP from the user's and the system's perspective. In the following, the ways they can be implemented are discussed.
+     Incremental dialogue processing brings a new dimension (a new degree of freedom in the decision) that can be exploited in order to improve the dialogue efficiency. In Chapter \ref{ch:taxonomy}, the following TTP have been selected for implementation: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK\_RAW and BARGE\_IN\_RESP from the user's and the system's perspective. In the following, the ways they can be implemented are presented.
 
      The concept of elementary task has been proven to be useful for slot-filling strategies analysis. As far as incremental strategies are concerned, analysis is made at a more atomic level since only one dialogue turn is considered. In the following, the user is supposed to have the floor and the system is waiting for her to provide $n_s$ slot values in the same utterance.
 
-     The reader should keep in mind that the architecture used here is the one introduced in Chapter \ref{ch:architecture}, therefore, the Scheduler module is in charge of making turn-taking decisions. It can perform three kinds of actions:
+     The reader should keep in mind that the architecture used here is the one introduced in Chapter \ref{ch:architecture}, therefore, the Scheduler module is in charge of making turn-taking decisions. Moreover, as discussed in Chapter \ref{ch:stateofart}, another important aspect to consider is \textit{ASR instability} which is one of the major difficulties that incremental processing brings (recall that as the user speaks, his current partial utterance is not necessarily a prefix of the partial utterances to come). Nevertheless, early words in the user's utterance are likely to stay unchanged than later ones \cite{McGraw2012}. As a consequence, making the Scheduler take decisions based on the whole current user's utterance is risky since it is likely to change. Therefore, a \textit{stability margin} (SM) is taken into account. It corresponds to the last part of the utterance that the Scheduler has to discard before making decisions. SM can be expressed in time units (discarding the last second for example) or a number of words or phonemes. The user's request without SM is called the \textit{last stable utterance}.
+		
+		The Scheduler can perform three kinds of actions:
 
      \begin{itemize}
        \item \textbf{WAIT:} Performed most of the time, it is chosen when the Scheduler decides not to retrieve the service's response at a certain micro-turn, hence waiting for the user to provide more information during the following micro-turns.
        \item \textbf{SPEAK:} The Scheduler decides to commit to the current user's utterance and to provide the corresponding service's response right away. This either translates into a barge-in or an accurate end point detection.
-       \item \textbf{REPEAT:} The Scheduler does not retrieve the last service's utterance but the last word of the last user's utterance\footnote{This is a simple way of simulating feedback. In reality, any part of the last partial utterance could be repeated.}. The objective is not to barge-in but perform a feedback that might trigger a reaction from the user or not.
+       \item \textbf{REPEAT:} The Scheduler does not retrieve the last service's utterance but the last pronounced of the last user's stable utterance only\footnote{This is a simple way of simulating feedback. In reality, any part of the last stable utterance could be repeated.}. The objective is not to barge-in, instead, the system performs a feedback that might trigger a reaction from the user, but not necessarily.
      \end{itemize}
-		
-			As discussed in Chapter \ref{ch:stateofart}, another important aspect to consider is \textit{ASR instability} which is one of the major difficulties that incremental processing brings (recall that as the user speaks, his current partial utterance is not necessarily a prefix of the partial utterances to come). Nevertheless, early words in the user's utterance are likely to stay unchanged than later ones \cite{McGraw2012}. As a consequence, making the Scheduler take decisions based on the whole current user's utterance is risky since it is likely to change. Therefore, a \textit{stability margin} (SM) is taken into account. It corresponds to the last part of the utterance that the Scheduler has to discard before making decisions. SM can be expressed in time units (discarding the last second for example) or a number of words or phonemes. The user's request without SM is called the \textit{last stable utterance}.
 
      \paragraph{FAIL\_RAW:} If the user has been holding the floor for too long without providing a single slot value, it might be interesting for the system to interrupt her asking for a reformulation or a repeat. This situation can happen for two main reasons: the user uses off-domain words or expressions (mainly because she is not familiar with the system) or her utterance has been altered because of noise and ASR imperfections. The system can use several criteria in order to decide whether to interrupt the user or not. For example, it can rely on a time threshold: if the user speaks for a period that is larger than that threshold without providing any slot value, then it performs a SPEAK. This duration can be replaced by a number of words or phonemes for example. Consider the following dialogue where the user tries to check his bank account in a noisy environment:
 
@@ -414,7 +425,7 @@
             \speak{USER} Yes.
           \end{dialogue}
 
-          The user is interrupted by the system at the first dialogue turn. If the latter didn't make such a decision, its response would have been the same (\textit{Sorry, I don't understand. What can I do for you?}) as an important part of the request was lost. Therefore, the system barge-in spared the user some time and energy. In this example, the second time the user tries to formulate his request, he does it in a more concise way and repeats it as an effort to make himself clearer. This kind of behaviour have been noticed as a result of a corpus study made in \cite{Ghigi2014}.
+          The user is interrupted by the system at the first dialogue turn. If the latter didn't make such a decision, its response would have been the same (\textit{Sorry, I don't understand. What can I do for you?}) since an important part of the request was lost. Therefore, the system barge-in spared the user some time and energy. In this example, the second time the user tries to formulate his request, he does it in a more concise way and repeats it as an effort to make himself clearer. This kind of behaviour have been noticed as a result of a corpus study led in \cite{Ghigi2014}.
 
      \paragraph{INCOHERENCE\_INTERP:} Some user's requests can be problematic for the system because they are not coherent with the current dialogue context. The user might ask for a non existing information or try to perform some forbidden modification in the database for example. This can also be due to an transmission error (noise, ASR imperfection...) or simply because the user is not well aware of the dialogue context and the system's constraints. However, if an open grammar domain is used, the first reason is less likely to be the cause of the problem (transmission error more often lead to a non understandable utterance by the system). Consider the following example:
 		
@@ -429,6 +440,6 @@
 			
 				However, implementing this TTP can be very challenging as the user must perceive that even though the system speaks out, it does not plan to take the floor. Moreover, negative reactions to a feedback like \textit{No, I said 45 52} must be clearly separated from positive ones. In this thesis, it will only be implemented in simulation.
 				
-			\paragraph{BARGE\_IN\_RESP (System):} When the user has provided all the necessary information for the system to provide an answer, the latter can decide to take the floor right away to improve the dialogue efficiency. The implementation of this behaviour is similar to INCOHERENCE\_INTERP. A list of dialogue acts has to be determined in advance and as soon as the service's response to the last stable belongs that list, the Scheduler decides to SPEAK.
+			\paragraph{BARGE\_IN\_RESP (System):} When the user has provided all the necessary information for the system to provide an answer, the latter can decide to take the floor right away to improve the dialogue efficiency. The implementation of this behaviour is similar to INCOHERENCE\_INTERP. A list of dialogue acts has to be determined in advance and as soon as the service's response to the last stable utterance belongs to that list, the Scheduler decides to SPEAK.
 			
-			\paragraph{BARGE\_IN\_RESP (User):} This TTP does not involve the Scheduler as the decision to speak is made by the user. However, it is important that the system does not allow user interruptions all the time, otherwise, none of the previous TTP implementations are possible. Suppose that the ASR is always listening and as soon as it detects a new input, if the system speaks, it releases the floor. Also, suppose that the user is speaking and for some reason (previous TTP), the system decides to interrupt him. During a little time window, both the user and the system are speaking and as the system is speaking it is interrupted right away. A simple solution that is adopted in this thesis is to define a time interval during which the ASR is no longer listening after the system takes the floor. Of course, this is only the case when a SPEAK is performed and not a REPEAT.
+			\paragraph{BARGE\_IN\_RESP (User):} This TTP does not involve the Scheduler as the decision to speak is made by the user. However, it is important that the system does not allow user interruptions all the time, otherwise, none of the previous TTP implementations are possible. Suppose that the ASR is always listening and as soon as it detects a new input, if the system speaks, it releases the floor. Also, suppose that the user is speaking and for some reason (previous TTP), the system decides to interrupt him. During a little time window, both the user and the system are speaking and as the system is speaking it is interrupted right away. A simple solution that is adopted in this thesis is to define a time interval during which the ASR is no longer listening after the system takes the floor. Of course, this is only the case when a SPEAK is performed (the REPEAT action is not treated as such).
