@@ -1,45 +1,50 @@
 \chapter{Incremental dialogue simulation}
 \label{ch:simulation}
+	%HK> Parler de Agenda-based
+	Using dialogue simulation techniques is very common in the research community\cite{Eckert1997,Pietquin2013} for several reason which are discussed in Chapter \ref{ch:stateofart}. In this chapter, an incremental dialogue system based on the methodology presented in Chapter \ref{ch:architecture} is introduced as well as a new incremental dialogue User Simulator (US) that is able to interact with it. The novelty of the latter is that it is able to simulate the ASR instability phenomenon.
+	
+	This simulated environment is used for two main purposes later on. Firstly, the slot-filling and the incremental dialogue strategies described in Chapter \ref{ch:architecture} are implemented and compared. This somehow validates the preliminary efficiency analysis led in that Chapter. It also provides new analysis elements to go further and prepare a basis for the experiments with real users. Secondly, it is a very useful tool for generating data to train machine learning algorithms. In Chapter \ref{ch:rl}, it is used to train a reinforcement learning algorithm which purpose is to optimise turn-taking decisions.
 
 \section{Agenda management task}
 
-	A personal agenda assistant has been implemented as our task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in french but they are translated in English in this thesis}. This is a slot filling task with four slots:
+	A personal agenda assistant has been implemented as our task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in french but they are translated in English to ensure language coherence in this thesis}. This is a slot-filling task with four slots:
     
     \begin{itemize}
     	\item \textbf{ACTION:} The type of action the user wants to perform. Can take three different values: ADD, MODIFY or DELETE.
         \item \textbf{DESCRIPTION:} The title of the event.
         \item \textbf{DATE:} The date of the event.
-        \item \textbf{SLOT:} The time slot of the event.
+        \item \textbf{WINDOW:} The time window of the event.
     \end{itemize}
     
-    However, the no overlap is tolerated between events in the agenda.
+    However, no overlap is tolerated between events in the agenda.
     
-    The US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the dialogue before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high probability first. Its aim is to make as many events as possible fit in the agenda.
+    The US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the agenda before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high priority first\footnote{To make the algorithms easier to understand, the larger priority value, the more important the event, unlike common usage.}. Its aim is to make as many events with the highest priority values as possible fit in the agenda.
 		
 		\section{The service}
 		
 			\subsection{Natural Language Understanding}
 			
-				A recursive algorithm transforms the user's utterance hypothesis into a concept tree. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in table \ref{tab:ruletypes}
+				A rule-based algorithm transforms the user's utterance hypothesis into concepts. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in table \ref{tab:ruletypes}
 				
 				\begin{table}[t]
 					\fontsize{8}{10}\selectfont
-					\caption{\label{tab:ruletypes} {NLU rules types}}
 					\vspace{2mm}
 					\centerline{
 						\begin{tabular}{|l|l|l|}
 							\hline
 							\textbf{Rule type} & \textbf{Description} & \textbf{Example} \\
 							\hline
-							Tag & Words are associated to a label & remove : [DELETE] \\
-							Regular expressions & Spots words that satisfy a regular expression & Regex([0-9]+) : NUMBER(\$word) \\
+							Tag & Words are associated with labels & remove : [DELETE] \\
+							Regular expressions & Words matching a regular expression & Regex([0-9]+) : NUMBER(\$word) \\
+							& are transformed into concepts & \\
 							Combine & Words and concepts are mapped into a new concept & Combine(NUMBER,MONTH) : DATE \\
 							\hline
 						\end{tabular}
 					}
+					\caption{\label{tab:ruletypes} {NLU rules types}}
 				\end{table}
 				
-				The NLU algorithm keeps applying these rules the order they appear in the rules file until two consecutive results are identical. For instance, parsing the sentence \textit{I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm} is performed following these steps:
+				For instance, parsing the sentence \textit{I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm} is performed following these steps:
                 
                 \begin{enumerate}
             	\item \textbf{I want to ADD the TAG\_EVENT birthday party on MONTH(January) NUMBER(6) from TIME(9,0) to TIME(11,0)}
@@ -48,60 +53,37 @@
                         \item event : [TAG\_EVENT]
                         \item Regex(janvier|...|decembre) : MONTH(\$word)
                         \item Regex([0-9]+) : NUMBER(\$word)
-                        \item Regex((([0-1]?[0-9])|(2[0-3]))h([0-5][0-9])?) : TIME(\$word)
+                        \item Regex((([0-1]?[0-9])|(2[0-3]))h([0-5][0-9])?) : TIME(\$word)\footnote{Adapted to the french way of uttering time values.}
                     \end{itemize}
-              	\item \textbf{I want to ADD the TAG\_EVENT birthday party on DATE(6,1) \\ SLOT(TIME(21,0),TIME(23,0))}
+              	\item \textbf{I want to ADD the TAG\_EVENT birthday party on DATE(6,1) \\ WINDOW(TIME(21,0),TIME(23,0))}
                 	\begin{itemize}
                     	\item Combine(NUMBER,MONTH) : DATE(NUMBER,MONTH)
-                        \item Combine(from,TIME\_1,to,TIME\_2) : SLOT(TIME\_1,TIME\_2)
+                        \item Combine(from,TIME\_1,to,TIME\_2) : WINDOW(TIME\_1,TIME\_2)
                     \end{itemize}
-              	\item \textbf{I want to ADD EVENT(birthday party, DATE(6,1), \\ SLOT(TIME(21,0),TIME(23,0)))}
+              	\item \textbf{I want to ADD EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0)))}
                 	\begin{itemize}
-                    	\item Combine(TAG\_EVENT,\$x,on,DATE,SLOT) : EVENT(\$x,DATE,SLOT)
+                    	\item Combine(TAG\_EVENT,\$x,on,DATE,WINDOW) : EVENT(\$x,DATE,WINDOW)
                     \end{itemize}
-               	\item \textbf{I want ACTION(ADD, EVENT(birthday party, DATE(6,1), \\ SLOT(TIME(21,0),TIME(23,0))))}
+               	\item \textbf{I want ACTION(ADD, EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0))))}
                 	\begin{itemize}
                     	\item Combine(ADD,EVENT) : ACTION(ADD,EVENT)
                     \end{itemize}
             \end{enumerate}
-                
-                
-%                 \begin{sidewaystable}
-%     				\centering
-%                     \fontsize{8}{10}\selectfont
-% 					\caption{\label{tab:parsingex} {Parsing example}}
-%                     \begin{tabular}{|l|l|l|}
-% 							\hline
-% 							\textbf{Step} & \textbf{Parsing result} & \textbf{Rules applied} \\
-% 							\hline
-% 							0 & I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm & \\
-% 							1 & I want to ADD the TAG\_EVENT birthday party on MONTH(January) NUMBER(6) & \\
-%                             & from TIME(9,0) to TIME(11,0) & add : [ADD] \\
-% 							& & event : [TAG\_EVENT] \\
-% 							& & Regex(january|...|february) : MONTH(\$word) \\
-% 							& & Regex([0-9]+) : NUMBER(\$word) \\
-% 							& & Regex((([0-1]?[0-9])|(2[0-3]))h([0-5][0-9])?) : TIME(\$word) \\
-% 							2 & I want to ADD the TAG\_EVENT birthday party on DATE(6,1) SLOT(TIME(21,0),TIME(23,0)) & Combine(NUMBER,MONTH) : DATE(NUMBER,MONTH) \\
-% 							& & Combine(from,TIME\_1,to,TIME\_2) : SLOT(TIME\_1,TIME\_2) \\
-% 							3 & I want to ADD EVENT(birthday party, DATE(6,1), SLOT(TIME(21,0),TIME(23,0))) & Combine(TAG\_EVENT,\$x,on,DATE,SLOT) : EVENT(\$x,DATE,SLOT) \\
-% 							4 & I want ACTION(ADD, EVENT(birthday party, DATE(6,1), SLOT(TIME(21,0),TIME(23,0)))) & Combine(ADD,EVENT) : ACTION(ADD,EVENT) \\
-% 							\hline
-% 						\end{tabular}
-%     			\end{sidewaystable}
+            
     
 \section{User simulator}
 	\subsection{Overview}
     
-    	The User Simulator (US) is composed of six modules (see Figure \ref{fig:archi}). The Intent Manager, the NLU, the Verbosity Manager, the ASR output simulator, the NLG and the Patience Manager. In every incremental dialogue setup, each dialogue turn is divided into smaller micro-turn given a particular criteria; a micro-turn could be a time window (500 milliseconds for example), it could also be word-based or concept-based (a new word or a new concept marks the end of a micro-turn). The US described here is word-based.
+    	The US is composed of five modules (see Figure \ref{fig:archi}). The Intent Manager, the NLU, the Verbosity Manager, the NLG and the Patience Manager. As discussed in Chapter \ref{ch:architecture}, in every incremental dialogue setup, each dialogue turn is divided into smaller micro-turn given a particular criteria; a micro-turn could be a time window (500 milliseconds for example), it could also be word-based or concept-based (a new word or a new concept marks the end of a micro-turn). The US described here is word-based.
         
         %HK> Blinder un peu, c'est une simplification du barge-in human car rien ne garantit que la personne interrompue se taise.
-        At each micro-turn, the US generates a partial N-Best. It embeds the whole utterance from the beginning of the turn (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the Scheduler at a certain micro-turn and it stops speaking, either it does not and it continues speaking if it has additional thing to say, or spontaneously releases the floor. When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
+        At each micro-turn, the US generates a partial N-Best. It corresponds to the whole utterance from the beginning of the turn (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the Scheduler at a certain micro-turn and it stops speaking, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
         
         In the following, the different components of the US are described in detail.
         
         \begin{figure*}[htb]
           \centering
-          \includegraphics[scale=0.5]{figures/ArchiSimuSys.pdf}
+          \includegraphics[scale=0.45]{figures/ArchiSimuSys.pdf}
           \caption{Simulated environment architecture}
           \label{fig:archi}
         \end{figure*}
@@ -170,7 +152,7 @@
     
     \subsection{NLG and Verbosity Manager}
 		
-			The NLG module transforms action concepts as well as date, slot, description and yes/no concepts into simple straight forward utterances. For instance the NLG result for the intent ACTION(ADD, EVENT(birthday party, DATE(6,1), SLOT(TIME(21,0),TIME(23,0)))) is \textit{add the event birthday party on January $6^{th}$ from 9pm to 11pm}.
+			The NLG module transforms action concepts as well as date, time window, description and yes/no concepts into simple straight forward utterances. For instance the NLG result for the intent ACTION(ADD, EVENT(birthday party, DATE(6,1), WINDOW(TIME(21,0),TIME(23,0)))) is \textit{add the event birthday party on January $6^{th}$ from 9pm to 11pm}.
 			
 			Nevertheless, compared to human/human conversations, limiting interactions to this kind of simple utterances is not realistic. Therefore, they are enhanced in the Verbosity Manager with prefixes like \textit{I would like to}, \textit{Is it possible to}...and suffixes like \textit{if possible}, \textit{please}... In \cite{Ghigi2014}, a corpus study showed that users tend to go off-domain and to repeat the same information several times in the same sentence. These behaviours are also replicated in the Verbosity Manager: 10\% of the times, the US utters an off-domain sentence, and 30\% of the times where there is a misunderstanding, it repeats the same information twice. These proportions have been estimated based on the corpus study mentioned before.
 		
@@ -279,7 +261,7 @@
         
         %HK> Comment justifier l'hypothèse selon laquelle la connaissance NLU peut être utilisée comme un proxy pour le modèle de langage.
         
-        To replicate this behaviour, a language model is needed to compute the scores corresponding to the different hypotheses in the N-Best. Therefore, for sentences that are more in alignment with the model will have high scores thus pushed to the top of this N-Best. Here, we use the NLU knowledge as a proxy for the language model by making the following assumption: \textit{the more an utterance generates key concepts once fed to the NLU, the more it is likely to be the correct one}. Therefore, as soon as a new action, date or time slot concept is detected in $hyp_i$, $s_i$ is boosted as follows:
+        To replicate this behaviour, a language model is needed to compute the scores corresponding to the different hypotheses in the N-Best. Therefore, for sentences that are more in alignment with the model will have high scores thus pushed to the top of this N-Best. Here, we use the NLU knowledge as a proxy for the language model by making the following assumption: \textit{the more an utterance generates key concepts once fed to the NLU, the more it is likely to be the correct one}. Therefore, as soon as a new action, date or time window concept is detected in $hyp_i$, $s_i$ is boosted as follows:
         
         	$$ s_i \leftarrow s_i + BF.(1 - s_i) $$
             
