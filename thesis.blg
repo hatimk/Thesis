@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: introduction/introduction.aux
@@ -35,45 +35,45 @@ Warning--page numbers missing in Searle1968
 Warning--no number and no volume in Singh2002
 Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
-You've used 112 entries,
+You've used 113 entries,
             2936 wiz_defined-function locations,
-            1260 strings with 24912 characters,
-and the built_in function-call counts, 69416 in all, are:
-= -- 5835
-> -- 4758
+            1266 strings with 25050 characters,
+and the built_in function-call counts, 70023 in all, are:
+= -- 5890
+> -- 4796
 < -- 9
-+ -- 1469
-- -- 1692
-* -- 4749
-:= -- 12170
-add.period$ -- 338
-call.type$ -- 112
-change.case$ -- 867
-chr.to.int$ -- 111
-cite$ -- 130
-duplicate$ -- 2470
-empty$ -- 4604
-format.name$ -- 2019
-if$ -- 13255
++ -- 1481
+- -- 1708
+* -- 4784
+:= -- 12275
+add.period$ -- 341
+call.type$ -- 113
+change.case$ -- 874
+chr.to.int$ -- 112
+cite$ -- 131
+duplicate$ -- 2494
+empty$ -- 4647
+format.name$ -- 2039
+if$ -- 13372
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 112
-newline$ -- 569
-num.names$ -- 895
-pop$ -- 1145
+missing$ -- 113
+newline$ -- 574
+num.names$ -- 903
+pop$ -- 1157
 preamble$ -- 1
-purify$ -- 1553
+purify$ -- 1566
 quote$ -- 0
-skip$ -- 2132
+skip$ -- 2152
 stack$ -- 0
-substring$ -- 2938
-swap$ -- 185
+substring$ -- 2958
+swap$ -- 186
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2136
+type$ -- 2156
 warning$ -- 18
-while$ -- 755
+while$ -- 763
 width$ -- 0
-write$ -- 2378
+write$ -- 2399
 (There were 21 warnings)

@@ -90,16 +90,16 @@
     
     \subsection{Intent Manager}
     \label{subsec:intentmanager}
-    
-    	The aim of the US is to make the biggest number possible of events taken from \textit{InitList} and \textit{ToAddList} fit in the agenda. The events with the highest priority are considered first. To do so, the Intent Manager runs Algorithm \ref{algo:intent} where
+
+        The Intent Manager computes the next dialogue act made by the US given the current dialogue state and by using an agenda-based approach \cite{Wei1999,Schatzmann2007}: the Intent Manager uses a stack of actions that is updated during the dialogue. The US finishes the dialogue when that stack is empty. Here, the aim of the US is to make the biggest number possible of events with the highest priority values taken from \textit{InitList} and \textit{ToAddList} fit in the agenda. To do so, the Intent Manager recursively runs the act function (taking the action stack as an argument) depicted in Algorithm \ref{algo:intent} where
         
         %HK> Cf les remarques de Romain sur le premier draft IWSDS pour cette partie.
         
         \begin{itemize}
-          \item \textbf{actionList:} the list of actions to be performed by the system (initially the list of ADD actions corresponding to \textit{ToAddList}).
+          \item \textbf{actionStack:} the stack\footnote{The top element of the stack is called actionStack.top and it is removed by calling actionStack.removeTop().} of actions to be performed by the system (initially the list of ADD actions corresponding to \textit{ToAddList}).
           \item \textbf{act():} function that performs a list of actions.
           \item \textbf{perform():} function that performs a single action.
-          \item \textbf{alternatives():} function that returns the alternative events of the one corresponding to the input action.
+          \item \textbf{alternatives(action):} function that returns the alternative events that can be used to perform \textit{action}.
           \item \textbf{conflictsByAlt:} contains couples (event,conflictSet) mapping events to the sets of conflicting events in the agenda.
           \item \textbf{maxPrioByAlt:} contains couples (event, maxPrio) mapping events to the maximum priority in conflictsByAlt(event).
         \end{itemize}
@@ -108,19 +108,19 @@
               \DontPrintSemicolon
               \SetKwFunction{act}{act}
               \SetKwProg{myalg}{Algorithm}{}{}
-              \myalg{\act{actionList}}{
-                \If{actionList not empty}{
-                	added $\gets$ perform(actionList(0))\;
+              \myalg{\act{actionStack}}{
+                \If{actionStack not empty}{
+                	added $\gets$ perform(actionStack.top)\;
                 	\If{not added}{
-                    	alt $\gets$ alternatives(actionList(0))\;
+                    	alt $\gets$ alternatives(actionStack.top)\;
                         conflictsByAlt $\gets$ []\;
                         maxPrioByAlt $\gets$ []\;
                         addedAlt $\gets$ false\;
                         \While{alt not empty AND not addedAlt}{
                         	addedAlt $\gets$ perform(alt(0))\;
                             \If{not addedAlt}{
-                            	conflictsByAlt $\gets$ [conflictsByAlt (alt(0),conflicts(alt(0)))]\;
-                                maxPrioByAlt $\gets$ [maxPrioByAlt (alt(0),max priority of conflicts(alt(0)))]\;
+                            	conflictsByAlt $\gets$ [conflictsByAlt ; (alt(0),conflicts(alt(0)))]\;
+                                maxPrioByAlt $\gets$ [maxPrioByAlt ; (alt(0),max priority of conflicts(alt(0)))]\;
                                 alt.remove(0)\;
                             }
                         }
@@ -129,22 +129,18 @@
                         	selectedAlt $\gets$ argmin maxPrioByAlt\;
                             movedToAlt $\gets$ true\;
                             \While{conflictsByAlt no empty AND movedToAlt}{
-                            	moveActionList $\gets$ list of move actions to the different alternatives of conflict\;
-                                movedToAlt $\gets$ act(moveActionList)\;
+                            	moveActionStack $\gets$ stack of move actions to the different alternatives of conflict\;
+                                movedToAlt $\gets$ act(moveActionStack)\;
                             }
                             \uIf{movedToAlt}{
-                            	perform(ationList(0))\;
-                            }
-                            \Else{
-                            	\KwRet{false}\;
+                            	perform(ationStack.top)\;
                             }
                         }
-                   	}
+                    }
                     
-                    actionList.remove(0)\;
-                    \KwRet{act(actionList)}\;
+                    actionList.removeTop()\;
+                    act(actionStack)\;
                 }
-                \KwRet{true}\;
               }{}
               \caption{Intent Manager algorithm}
               \label{algo:intent}

@@ -772,6 +772,12 @@
 \newblock \textit{ Learning from Delayed Rewards}.
 \newblock Th\`ese de Doctorat, King's College.
 
+\bibitem[{Wei \andnamec{} A.}(1999){Wei \andnamec{} A.}]{Wei1999}
+(Wei \andnamec{} A., 1999) \hspace{.5em}X.~Wei \andname{} R.~A., 1999.
+\newblock n agenda-based dialog management architecture for spoken language
+  systems.
+\newblock In Proceedings of \textit{ Proceedings of IEEE ASRU}.
+
 \bibitem[{Williams}(2008){Williams}]{Williams2008}
 (Williams, 2008) \hspace{.5em}J.~D. Williams, 2008.
 \newblock The best of both worlds: unifying conventional dialog systems and
