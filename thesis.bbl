@@ -314,6 +314,11 @@
 \newblock \textit{ Rhythms of dialogue}.
 \newblock Academic Press New York.
 
+\bibitem[{Jiang}(2005){Jiang}]{Jiang2005}
+(Jiang, 2005) \hspace{.5em}H.~Jiang, 2005.
+\newblock Confidence measures for speech recognition: A survey.
+\newblock \textit{ Speech communication\/}~\textit{45}, 455--470.
+
 \bibitem[{Johnston et~al.}(2014){Johnston, Chen, Ehlen, Jung, Lieske, Reddy,
   Selfridge, Stoyanchev, Vasilieff, \andnamec{} Wilpon}]{Johnston2014}
 (Johnston et~al., 2014) \hspace{.5em}M.~Johnston, J.~Chen, P.~Ehlen, H.~Jung,
@@ -547,6 +552,15 @@
 \newblock In Proceedings of \textit{ Proceedings of the 6th SIGdial Workshop on
   Discourse and Dialogue}.
 
+\bibitem[{Pietquin \andnamec{} Beaufort}(2005){Pietquin \andnamec{}
+  Beaufort}]{Pietquin2005}
+(Pietquin \andnamec{} Beaufort, 2005) \hspace{.5em}O.~Pietquin \andname{}
+  R.~Beaufort, 2005.
+\newblock Comparing asr modeling methods for spoken dialogue simulation and
+  optimal strategy learning.
+\newblock In Proceedings of \textit{ 9th European Conference on Speech
+  Communication and Technology (Eurospeech/Interspeech)}.
+
 \bibitem[{Pietquin \andnamec{} Hastie}(2013){Pietquin \andnamec{}
   Hastie}]{Pietquin2013}
 (Pietquin \andnamec{} Hastie, 2013) \hspace{.5em}O.~Pietquin \andname{}
@@ -650,6 +664,14 @@
 (Searle, 1968) \hspace{.5em}J.~R. Searle, 1968.
 \newblock Austin on locutionary and illocutionary acts.
 \newblock \textit{ The Philosophical Review\/}.
+
+\bibitem[{Seigel \andnamec{} Woodland}(2011){Seigel \andnamec{}
+  Woodland}]{Seigel2011}
+(Seigel \andnamec{} Woodland, 2011) \hspace{.5em}M.~S. Seigel \andname{} P.~C.
+  Woodland, 2011.
+\newblock Combining information sources for confidence estimation with crf
+  models.
+\newblock In Proceedings of \textit{ INTERSPEECH}.
 
 \bibitem[{Selfridge \andnamec{} Heeman}(2010){Selfridge \andnamec{}
   Heeman}]{Selfridge2010}

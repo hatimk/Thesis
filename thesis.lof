@@ -20,20 +20,20 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{74}{figure.caption.155}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Incremental dialogue simulation}{77}{chapter.163}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{80}{figure.caption.177}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution\relax }}{83}{figure.caption.185}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{85}{figure.caption.191}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{80}{figure.caption.178}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{82}{figure.caption.186}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces ASR score sampling distribution\relax }}{84}{figure.caption.188}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{87}{chapter.194}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{89}{figure.caption.198}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{92}{figure.caption.209}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{92}{figure.caption.210}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{93}{figure.caption.211}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{87}{chapter.198}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{89}{figure.caption.202}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{92}{figure.caption.213}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{92}{figure.caption.214}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{93}{figure.caption.215}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{95}{chapter.212}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{99}{figure.caption.223}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{100}{figure.caption.224}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{95}{chapter.216}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{99}{figure.caption.227}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{100}{figure.caption.228}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{101}{chapter.225}
+\contentsline {xchapter}{Experiment with real users}{101}{chapter.229}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{103}{chapter.228}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{103}{chapter.232}
