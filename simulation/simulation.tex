@@ -1,94 +1,111 @@
 \chapter{Incremental dialogue simulation}
 \label{ch:simulation}
-	
-	Using dialogue simulation techniques is very common in the research community \cite{Eckert1997,Pietquin2013} for several reasons which are discussed in Chapter \ref{ch:stateofart}. In this chapter, a new simulated environment is introduced. It is based on an incremental dialogue system based on the methodology presented in Chapter \ref{ch:architecture} as well as a new incremental dialogue User Simulator (US) that is able to interact with it. The novelty of the latter is that it is able to simulate the ASR instability phenomenon.
-	
-	This simulated environment is used for two main purposes later on. Firstly, the slot-filling and the incremental dialogue strategies described in Chapter \ref{ch:architecture} are implemented and compared. This somehow validates the preliminary efficiency analysis led in that Chapter. It also provides new analysis elements to go further and prepare a basis for the experiments with real users. Secondly, it is a very useful tool for generating data to train machine learning algorithms. In Chapter \ref{ch:rl}, it is used to train a reinforcement learning algorithm which purpose is to optimise turn-taking decisions.
-	
-	\paragraph{Important note:} The parameter values specified here are mostly empirical. They are given as an indication for the reader to have an idea about their magnitude. These values will be used later on in this thesis but they are meant to be changed in order to test several dialogue configurations.
 
-\section{Agenda management task}
+	% In this chapter, a new simulated environment is introduced. It is based on an incremental dialogue system based on the methodology presented in Chapter \ref{ch:architecture} as well as a new incremental dialogue User Simulator (US) that is able to interact with it. The novelty of the latter is that it is able to simulate the ASR instability phenomenon.
+	
+	Using dialogue simulation techniques is very common in the research community \cite{Eckert1997,Pietquin2013} for several reasons which are discussed in Chapter \ref{ch:stateofart}. In this chapter, a new incremental dialogue simulation framework is introduced. Its novelty resides in the fact that it is able to simulate the ASR instability phenomenon. It is presented in its most generic and abstract form that can be used by the reader to instantiate his/her own simulator adapted to a target domain.
+	
+	Later on, it used for two main purposes. Firstly, a domain and a task are chosen and the slot-filling and the incremental dialogue strategies described in Chapter \ref{ch:architecture} are implemented and compared. This somehow validates the preliminary efficiency analysis led in that Chapter. It also provides new analysis elements to go further and prepare a basis for the experiments with real users. Secondly, it is a very useful tool for generating data to train machine learning algorithms. In Chapter \ref{ch:rl}, it is used to train a reinforcement learning algorithm which purpose is to optimise turn-taking decisions.
+	
+	%\paragraph{Important note:} The parameter values specified here are mostly empirical. They are given as an indication for the reader to have an idea about their magnitude. These values will be used later on in this thesis but they are meant to be changed in order to test several dialogue configurations.
 
-	A personal agenda assistant has been implemented as our task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in french but they are translated in English to ensure language coherence in this thesis}. This is a slot-filling task with four slots:
-    
-    \begin{itemize}
-    	\item \textbf{ACTION:} The type of action the user wants to perform. Can take three different values: ADD, MODIFY or DELETE.
-        \item \textbf{DESCRIPTION:} The title of the event.
-        \item \textbf{DATE:} The date of the event.
-        \item \textbf{WINDOW:} The time window of the event.
-    \end{itemize}
-    
-    However, no overlap is tolerated between events in the agenda.
-    
-    The US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the agenda before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high priority first\footnote{To make the algorithms easier to understand, the larger priority value, the more important the event, unlike common usage.}. Its aim is to make as many events with the highest priority values as possible fit in the agenda.
+%\section{Agenda management task}
+%
+	%A personal agenda assistant has been implemented as our task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in french but they are translated in English to ensure language coherence in this thesis}. This is a slot-filling task with four slots:
+    %
+    %\begin{itemize}
+    	%\item \textbf{ACTION:} The type of action the user wants to perform. Can take three different values: ADD, MODIFY or DELETE.
+        %\item \textbf{DESCRIPTION:} The title of the event.
+        %\item \textbf{DATE:} The date of the event.
+        %\item \textbf{WINDOW:} The time window of the event.
+    %\end{itemize}
+    %
+    %However, no overlap is tolerated between events in the agenda.
+    %
+    %The US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the agenda before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high priority first\footnote{To make the algorithms easier to understand, the larger priority value, the more important the event, unlike common usage.}. Its aim is to make as many events with the highest priority values as possible fit in the agenda.
 		
-		\section{The service}
-		
-			\subsection{Natural Language Understanding}
-			
-				A rule-based algorithm transforms the user's utterance hypothesis into concepts. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in table \ref{tab:ruletypes}
-				
-				\begin{table}[t]
-					\fontsize{8}{10}\selectfont
-					\vspace{2mm}
-					\centerline{
-						\begin{tabular}{|l|l|l|}
-							\hline
-							\textbf{Rule type} & \textbf{Description} & \textbf{Example} \\
-							\hline
-							Tag & Words are associated with labels & remove : [DELETE] \\
-							Regular expressions & Words matching a regular expression & Regex([0-9]+) : NUMBER(\$word) \\
-							& are transformed into concepts & \\
-							Combine & Words and concepts are mapped into a new concept & Combine(NUMBER,MONTH) : DATE \\
-							\hline
-						\end{tabular}
-					}
-					\caption{\label{tab:ruletypes} {NLU rules types}}
-				\end{table}
-				
-				For instance, parsing the sentence \textit{I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm} is performed following these steps:
-                
-                \begin{enumerate}
-            	\item \textbf{I want to ADD the TAG\_EVENT birthday party on MONTH(January) NUMBER(6) from TIME(9,0) to TIME(11,0)}
-                	\begin{itemize}
-                    	\item add : [ADD]
-                        \item event : [TAG\_EVENT]
-                        \item Regex(janvier|...|decembre) : MONTH(\$word)
-                        \item Regex([0-9]+) : NUMBER(\$word)
-                        \item Regex((([0-1]?[0-9])|(2[0-3]))h([0-5][0-9])?) : TIME(\$word)\footnote{Adapted to the french way of uttering time values.}
-                    \end{itemize}
-              	\item \textbf{I want to ADD the TAG\_EVENT birthday party on DATE(6,1) \\ WINDOW(TIME(21,0),TIME(23,0))}
-                	\begin{itemize}
-                    	\item Combine(NUMBER,MONTH) : DATE(NUMBER,MONTH)
-                        \item Combine(from,TIME\_1,to,TIME\_2) : WINDOW(TIME\_1,TIME\_2)
-                    \end{itemize}
-              	\item \textbf{I want to ADD EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0)))}
-                	\begin{itemize}
-                    	\item Combine(TAG\_EVENT,\$x,on,DATE,WINDOW) : EVENT(\$x,DATE,WINDOW)
-                    \end{itemize}
-               	\item \textbf{I want ACTION(ADD, EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0))))}
-                	\begin{itemize}
-                    	\item Combine(ADD,EVENT) : ACTION(ADD,EVENT)
-                    \end{itemize}
-            \end{enumerate}
-            
+		%\section{The service}
+		%
+			%\subsection{Natural Language Understanding}
+			%
+				%A rule-based algorithm transforms the user's utterance hypothesis into concepts. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in table \ref{tab:ruletypes}
+				%
+				%\begin{table}[t]
+					%\fontsize{8}{10}\selectfont
+					%\vspace{2mm}
+					%\centerline{
+						%\begin{tabular}{|l|l|l|}
+							%\hline
+							%\textbf{Rule type} & \textbf{Description} & \textbf{Example} \\
+							%\hline
+							%Tag & Words are associated with labels & remove : [DELETE] \\
+							%Regular expressions & Words matching a regular expression & Regex([0-9]+) : NUMBER(\$word) \\
+							%& are transformed into concepts & \\
+							%Combine & Words and concepts are mapped into a new concept & Combine(NUMBER,MONTH) : DATE \\
+							%\hline
+						%\end{tabular}
+					%}
+					%\caption{\label{tab:ruletypes} {NLU rules types}}
+				%\end{table}
+				%
+				%For instance, parsing the sentence \textit{I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm} is performed following these steps:
+                %
+                %\begin{enumerate}
+            	%\item \textbf{I want to ADD the TAG\_EVENT birthday party on MONTH(January) NUMBER(6) from TIME(9,0) to TIME(11,0)}
+                	%\begin{itemize}
+                    	%\item add : [ADD]
+                        %\item event : [TAG\_EVENT]
+                        %\item Regex(janvier|...|decembre) : MONTH(\$word)
+                        %\item Regex([0-9]+) : NUMBER(\$word)
+                        %\item Regex((([0-1]?[0-9])|(2[0-3]))h([0-5][0-9])?) : TIME(\$word)\footnote{Adapted to the french way of uttering time values.}
+                    %\end{itemize}
+              	%\item \textbf{I want to ADD the TAG\_EVENT birthday party on DATE(6,1) \\ WINDOW(TIME(21,0),TIME(23,0))}
+                	%\begin{itemize}
+                    	%\item Combine(NUMBER,MONTH) : DATE(NUMBER,MONTH)
+                        %\item Combine(from,TIME\_1,to,TIME\_2) : WINDOW(TIME\_1,TIME\_2)
+                    %\end{itemize}
+              	%\item \textbf{I want to ADD EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0)))}
+                	%\begin{itemize}
+                    	%\item Combine(TAG\_EVENT,\$x,on,DATE,WINDOW) : EVENT(\$x,DATE,WINDOW)
+                    %\end{itemize}
+               	%\item \textbf{I want ACTION(ADD, EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0))))}
+                	%\begin{itemize}
+                    	%\item Combine(ADD,EVENT) : ACTION(ADD,EVENT)
+                    %\end{itemize}
+            %\end{enumerate}
+						
+\section{Overview}
+	
+	How to run dialogues with no users? The well known answer is: by designing a User Simulator (US). Rigorously, in the case of SDSs, a US should be able to process an input audio signal and to output a new audio signal as well. Even though this method has its merits (noise and ASR imperfections are naturally taken into account), it goes against one of the main advantages of user simulation techniques which is the ability to quickly generate an important number of dialogues. Therefore, the user simulator elaborated here inputs and outputs text. An ASR output simulator is in charge of replicating the ASR behaviour. Figure \ref{fig:simuoverview} gives an overview of how these parts fit together in the whole architecture as well as the composition of the US. The latter is composed of five modules: The Intent Manager, the NLU, the Verbosity Manager, the NLG and the Patience Manager.
+	
+		\begin{figure*}[htb]
+			\centering
+			\includegraphics[scale=0.45]{figures/SimuSys.jpg}
+			\caption{Simulated environment architecture}
+			\label{fig:simuoverview}
+		\end{figure*}
     
 \section{User simulator}
-	\subsection{Overview}
-    
-    	The US is composed of five modules (see Figure \ref{fig:archi}). The Intent Manager, the NLU, the Verbosity Manager, the NLG and the Patience Manager. As discussed in Chapter \ref{ch:architecture}, in every incremental dialogue setup, each dialogue turn is divided into smaller micro-turn given a particular criteria; a micro-turn could be a time window (500 milliseconds for example), it could also be word-based or concept-based (a new word or a new concept marks the end of a micro-turn). The US described here is word-based.
-        
+	%\subsection{Overview}
+    %
+    	%The US is composed of five modules (see Figure \ref{fig:archi}). The Intent Manager, the NLU, the Verbosity Manager, the NLG and the Patience Manager. As discussed in Chapter \ref{ch:architecture}, in every incremental dialogue setup, each dialogue turn is divided into smaller micro-turn given a particular criteria; a micro-turn could be a time window (500 milliseconds for example), it could also be word-based or concept-based (a new word or a new concept marks the end of a micro-turn). The US described here is word-based.
+        %
+				
         %HK> Blinder un peu, c'est une simplification du barge-in human car rien ne garantit que la personne interrompue se taise.
-        At each micro-turn, the US generates a partial N-Best. It corresponds to the whole utterance from the beginning of the turn (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the Scheduler at a certain micro-turn and it stops speaking, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
         
-        In the following, the different components of the US are described in detail.
-        
-        \begin{figure*}[htb]
-          \centering
-          \includegraphics[scale=0.45]{figures/ArchiSimuSys.pdf}
-          \caption{Simulated environment architecture}
-          \label{fig:archi}
-        \end{figure*}
+				%At each micro-turn, the US generates a partial N-Best. It corresponds to the whole utterance from the beginning of the turn (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the Scheduler at a certain micro-turn and it stops speaking, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
+				%
+        %
+        %In the following, the different components of the US are described in detail.
+        %
+        %\begin{figure*}[htb]
+          %\centering
+          %\includegraphics[scale=0.45]{figures/ArchiSimuSys.pdf}
+          %\caption{Simulated environment architecture}
+          %\label{fig:archi}
+        %\end{figure*}
+				
+				In a nutshell, at the $p^{th}$ micro-turn of the $k^{th}$ user turn $\mu T^{k,U}_p$, the US generates a partial utterance $Req^k_p$ that is transformed into an N-Best ${(s^k_{p,1}, hyp^k_{p,1}),...,(s^k_{p,N}, hyp^k_{p,N})}$. It corresponds to the whole utterance pronounced during the partial turn $T^{k,U}_p$ (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the dialogue system at a certain micro-turn and it stops speaking\footnote{This is of course an approximation of real barge-in cases since the overlap is neglected.}, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
     
     \subsection{Intent Manager}
     \label{subsec:intentmanager}
