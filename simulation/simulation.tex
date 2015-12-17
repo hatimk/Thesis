@@ -106,64 +106,86 @@
         %\end{figure*}
 				
 				In a nutshell, at the $p^{th}$ micro-turn of the $k^{th}$ user turn $\mu T^{k,U}_p$, the US generates a partial utterance $Req^k_p$ that is transformed into an N-Best ${(s^k_{p,1}, hyp^k_{p,1}),...,(s^k_{p,N}, hyp^k_{p,N})}$. It corresponds to the whole utterance pronounced during the partial turn $T^{k,U}_p$ (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the dialogue system at a certain micro-turn and it stops speaking\footnote{This is of course an approximation of real barge-in cases since the overlap is neglected.}, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
+
+                                In the following, the role and the functioning of the US and the ASR output simulator are discribed in an abstract fashion before being instanciated later on to give birth to a personal agenda management simulated environment.
     
+\section{User Simulator}
+
     \subsection{Intent Manager}
     \label{subsec:intentmanager}
 
-        The Intent Manager computes the next dialogue act made by the US given the current dialogue state and by using an agenda-based approach \cite{Wei1999,Schatzmann2007}: the Intent Manager uses a stack of actions that is updated during the dialogue. The US finishes the dialogue when that stack is empty. Here, the aim of the US is to make the biggest number possible of events with the highest priority values taken from \textit{InitList} and \textit{ToAddList} fit in the agenda. To do so, the Intent Manager recursively runs the act function (taking the action stack as an argument) depicted in Algorithm \ref{algo:intent} where
+        The Intent Manager is in charge of computing the dialogue acts that the US performs. It maintains an internal dialogue context and takes the dialogue acts coming from the dialogue system as inputs. Thus, it can be viewed as a dialogue manager in itself but with the difference that it is aimed to generate requests and lead the dialogue instead of serving a user (at least in task-oriented situations). Therefore, it is given a task or a list of tasks to accomplish before it starts interacting with the dialogue system.
+
+        A common approach to design such a module is the agenda-based method \cite{Wei1999,Schatzmann2007}. Inspired by the latter, the approach adopted in this thesis suggests that the tasks the Intent Manager should accomplish are given in the form of a stack (LIFO structure): \textit{actionStack}. They are removed and executed one by one and during each step, new actions could be added. The Algorithm \ref{alg:abstractim} describes a recursive function called \textit{act} that is given \textit{actionStack} and that is in charge of performing all the corresponding actions by using the method \textit{execute()}. The latter removes and tries to execute the top element of the action stack which might lead to the creation of new actions that are added on top of \textit{actionStack} (which justifies the fact that the whole stack is passed as an argument and not the top element only). Once it has finished its treatment, \textit{act} is called over the updated stack.
+
+        \begin{algorithm}[htp]
+          \DontPrintSemicolon
+          \SetKwFunction{act}{act}
+          \SetKwProg{myalg}{Algorith}{}{}
+          \myalg{\act{actionStack}}{
+            \If{actionStack not empty}{
+              execute(actionStack)\;
+              act(actionStack)\;
+            }
+          }
+          \caption{Intent Manager abstract algorithm}
+          \label{alg:abstractim}
+        \end{algorithm}
+
+        %The Intent Manager computes the next dialogue act made by the US given the current dialogue state and by using an agenda-based approach \cite{Wei1999,Schatzmann2007}: the Intent Manager uses a stack of actions that is updated during the dialogue. The US finishes the dialogue when that stack is empty. Here, the aim of the US is to make the biggest number possible of events with the highest priority values taken from \textit{InitList} and \textit{ToAddList} fit in the agenda. To do so, the Intent Manager recursively runs the act function (taking the action stack as an argument) depicted in Algorithm \ref{algo:intent} where
         
         %HK> Cf les remarques de Romain sur le premier draft IWSDS pour cette partie.
         
-        \begin{itemize}
-          \item \textbf{actionStack:} the stack\footnote{The top element of the stack is called actionStack.top and it is removed by calling actionStack.removeTop().} of actions to be performed by the system (initially the list of ADD actions corresponding to \textit{ToAddList}).
-          \item \textbf{act():} function that performs a list of actions.
-          \item \textbf{perform():} function that performs a single action.
-          \item \textbf{alternatives(action):} function that returns the alternative events that can be used to perform \textit{action}.
-          \item \textbf{conflictsByAlt:} contains couples (event,conflictSet) mapping events to the sets of conflicting events in the agenda.
-          \item \textbf{maxPrioByAlt:} contains couples (event, maxPrio) mapping events to the maximum priority in conflictsByAlt(event).
-        \end{itemize}
+        %\begin{itemize}
+         % \item \textbf{actionStack:} the stack\footnote{The top element of the stack is called actionStack.top and it is removed by calling actionStack.removeTop().} of actions to be performed by the system (initially the list of ADD actions corresponding to \textit{ToAddList}).
+          %\item \textbf{act():} function that performs a list of actions.
+          %\item \textbf{perform():} function that performs a single action.
+          %\item \textbf{alternatives(action):} function that returns the alternative events that can be used to perform \textit{action}.
+          %\item \textbf{conflictsByAlt:} contains couples (event,conflictSet) mapping events to the sets of conflicting events in the agenda.
+          %\item \textbf{maxPrioByAlt:} contains couples (event, maxPrio) mapping events to the maximum priority in conflictsByAlt(event).
+        %\end{itemize}
 			
-			\begin{algorithm}[htp]
-              \DontPrintSemicolon
-              \SetKwFunction{act}{act}
-              \SetKwProg{myalg}{Algorithm}{}{}
-              \myalg{\act{actionStack}}{
-                \If{actionStack not empty}{
-                	added $\gets$ perform(actionStack.top)\;
-                	\If{not added}{
-                    	alt $\gets$ alternatives(actionStack.top)\;
-                        conflictsByAlt $\gets$ []\;
-                        maxPrioByAlt $\gets$ []\;
-                        addedAlt $\gets$ false\;
-                        \While{alt not empty AND not addedAlt}{
-                        	addedAlt $\gets$ perform(alt(0))\;
-                            \If{not addedAlt}{
-                            	conflictsByAlt $\gets$ [conflictsByAlt ; (alt(0),conflicts(alt(0)))]\;
-                                maxPrioByAlt $\gets$ [maxPrioByAlt ; (alt(0),max priority of conflicts(alt(0)))]\;
-                                alt.remove(0)\;
-                            }
-                        }
-                        
-                        \If{not addedAlt}{
-                        	selectedAlt $\gets$ argmin maxPrioByAlt\;
-                            movedToAlt $\gets$ true\;
-                            \While{conflictsByAlt no empty AND movedToAlt}{
-                            	moveActionStack $\gets$ stack of move actions to the different alternatives of conflict\;
-                                movedToAlt $\gets$ act(moveActionStack)\;
-                            }
-                            \uIf{movedToAlt}{
-                            	perform(ationStack.top)\;
-                            }
-                        }
-                    }
-                    
-                    actionList.removeTop()\;
-                    act(actionStack)\;
-                }
-              }{}
-              \caption{Intent Manager algorithm}
-              \label{algo:intent}
-          	\end{algorithm}
+	%		\begin{algorithm}[htp]
+        %      \DontPrintSemicolon
+        %      \SetKwFunction{act}{act}
+        %      \SetKwProg{myalg}{Algorithm}{}{}
+        %      \myalg{\act{actionStack}}{
+        %        \If{actionStack not empty}{
+        %        	added $\gets$ perform(actionStack.top)\;
+        %        	\If{not added}{
+        %            	alt $\gets$ alternatives(actionStack.top)\;
+        %                conflictsByAlt $\gets$ []\;
+        %                maxPrioByAlt $\gets$ []\;
+        %                addedAlt $\gets$ false\;
+        %                \While{alt not empty AND not addedAlt}{
+        %                	addedAlt $\gets$ perform(alt(0))\;
+        %                    \If{not addedAlt}{
+        %                    	conflictsByAlt $\gets$ [conflictsByAlt ; (alt(0),conflicts(alt(0)))]\;
+        %                        maxPrioByAlt $\gets$ [maxPrioByAlt ; (alt(0),max priority of conflicts(alt(0)))]\;
+        %                        alt.remove(0)\;
+        %                    }
+        %                }
+        %                
+        %                \If{not addedAlt}{
+        %                	selectedAlt $\gets$ argmin maxPrioByAlt\;
+        %                    movedToAlt $\gets$ true\;
+        %                    \While{conflictsByAlt no empty AND movedToAlt}{
+        %                    	moveActionStack $\gets$ stack of move actions to the different alternatives of conflict\;
+        %                        movedToAlt $\gets$ act(moveActionStack)\;
+        %                    }
+        %                    \uIf{movedToAlt}{
+        %                    	perform(ationStack.top)\;
+        %                    }
+        %                }
+        %            }
+        %            
+        %            actionList.removeTop()\;
+        %            act(actionStack)\;
+        %        }
+        %      }{}
+        %      \caption{Intent Manager algorithm}
+        %      \label{algo:intent}
+        %  	\end{algorithm}
     
     \subsection{NLG and Verbosity Manager}
 		
