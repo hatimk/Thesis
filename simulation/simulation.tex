@@ -202,11 +202,26 @@
 			Compared to human/human conversations, limiting interactions to this kind of simple utterances is not realistic. Therefore, they are enhanced in the Verbosity Manager with prefixes like \textit{I would like to}, \textit{Is it possible to}...and suffixes like \textit{if possible}, \textit{please}... In \cite{Ghigi2014}, a corpus study showed that users tend to go off-domain and to repeat the same information several times in the same sentence. These behaviours are also replicated in the Verbosity Manager: with a probability $p_{od}$ the NLU output is replaced with an off-domain sentence randomly picked in a predefined list and with a probability $p_{rep}$ and given that the system just reported a misunderstanding, the utterance is repeated twice (for example, \textit{Check my account, I repeat, check my account}).
 			
 			%These behaviours are also replicated in the Verbosity Manager: 10\% of the times, the US utters an off-domain sentence, and 30\% of the times where there is a misunderstanding, it repeats the same information twice.
-		
-    \subsection{ASR output simulator}
-    \label{subsec:asroutputsimu}
-		
-			\begin{figure*}[hb]
+    
+    \subsection{Timing and patience manager}
+    
+    	When it comes to incremental processing, timing is key. However, the main objective of simulation is to generate dialogues in an accelerated mode, hence, no track of timing is kept. In order to approximate durations, the user's and the system's speech rates are considered to be constant with value $SR$.
+			
+			% to be 200 words per minute \cite{Yuan2006}.
+        
+        Users tend to get impatient, at various degrees, when dialogue systems take too long to accomplish the task they are asked for. To simulate this behaviour, a duration threshold is chosen at each new dialogue that will cause the user to hangup as soon as it is reached. It is computed as follows
+        
+       	\begin{eqnarray}
+        	d_{pat} = 2 \mu_{pat}.sigmoid(X)
+        \end{eqnarray}
+        
+        where X follows a gaussian distribution of mean 0 and variance 1 and consequently $\mu_{pat}$ is the mean duration threshold.
+				
+				%(here, $\mu_pat = 180 s$).
+				
+\section{ASR output simulator}
+
+\begin{figure*}[hb]
           \centering
           \includegraphics[scale=0.8]{figures/ASRSimu.pdf}
           \caption{An illustration of the incremental ASR output N-Best update}
@@ -339,20 +354,132 @@
       	where BF is the Boost Factor parameter. An illustration of this mechanism is provided in Fig. \ref{fig:asrsimu}.
 				
 				% Here it is set to 0.2.
-    
-    \subsection{Timing and patience manager}
-    
-    	When it comes to incremental processing, timing is key. However, the main objective of simulation is to generate dialogues in an accelerated mode, hence, no track of timing is kept. In order to approximate durations, the user's and the system's speech rates are considered to be constant with value $SR$.
-			
-			% to be 200 words per minute \cite{Yuan2006}.
-        
-        Users tend to get impatient, at various degrees, when dialogue systems take too long to accomplish the task they are asked for. To simulate this behaviour, a duration threshold is chosen at each new dialogue that will cause the user to hangup as soon as it is reached. It is computed as follows
-        
-       	\begin{eqnarray}
-        	d_{pat} = 2 \mu_{pat}.sigmoid(X)
-        \end{eqnarray}
-        
-        where X follows a gaussian distribution of mean 0 and variance 1 and consequently $\mu_{pat}$ is the mean duration threshold.
+
+\section{Agenda service task}
+
+	So far, an abstract framework for simulating incremental dialogue has been described. In this section, it is instanciated in order to be able to able to generate dialogues with an incremental dialogue system which purpose is to help users manage their personal agenda. This task will be used in Chapter \ref{ch:baseline} in order to run a few experiments regarding the dialogue strategies introduced in Chapter \ref{ch:strategies} and in Chapter \ref{ch:rl} in order to test a new reinforcement learning approach. First the service and its dialogue task are presented, then the way the user simulator and the ASR output simulator are instanciated is described.
+	
+	\section{The service: agenda management task}
+	
+		\subsection{Dialogue Manager}
+
+			A personal agenda assistant has been implemented as our task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in french but they are translated in English to ensure language coherence in this thesis}. This is a slot-filling task with four slots:
 				
-				%(here, $\mu_pat = 180 s$).
+				\begin{itemize}
+					\item \textbf{ACTION:} The type of action the user wants to perform. Can take three different values: ADD, MODIFY or DELETE.
+						\item \textbf{DESCRIPTION:} The title of the event.
+						\item \textbf{DATE:} The date of the event.
+						\item \textbf{WINDOW:} The time window of the event.
+				\end{itemize}
+				
+				However, no overlap is tolerated between events in the agenda.
+				
+				The US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the agenda before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high priority first\footnote{To make the algorithms easier to understand, the larger priority value, the more important the event, unlike common usage.}. Its aim is to make as many events with the highest priority values as possible fit in the agenda.
+				
+		
+		\subsection{Natural Language Understanding}
+		
+			A rule-based algorithm transforms the user's utterance hypothesis into concepts. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in table \ref{tab:ruletypes}
+			
+			\begin{table}[t]
+				\fontsize{8}{10}\selectfont
+				\vspace{2mm}
+				\centerline{
+					\begin{tabular}{|l|l|l|}
+						\hline
+						\textbf{Rule type} & \textbf{Description} & \textbf{Example} \\
+						\hline
+						Tag & Words are associated with labels & remove : [DELETE] \\
+						Regular expressions & Words matching a regular expression & Regex([0-9]+) : NUMBER(\$word) \\
+						& are transformed into concepts & \\
+						Combine & Words and concepts are mapped into a new concept & Combine(NUMBER,MONTH) : DATE \\
+						\hline
+					\end{tabular}
+				}
+				\caption{\label{tab:ruletypes} {NLU rules types}}
+			\end{table}
+			
+			For instance, parsing the sentence \textit{I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm} is performed following these steps:
+							
+							\begin{enumerate}
+						\item \textbf{I want to ADD the TAG\_EVENT birthday party on MONTH(January) NUMBER(6) from TIME(9,0) to TIME(11,0)}
+								\begin{itemize}
+										\item add : [ADD]
+											\item event : [TAG\_EVENT]
+											\item Regex(janvier|...|decembre) : MONTH(\$word)
+											\item Regex([0-9]+) : NUMBER(\$word)
+											\item Regex((([0-1]?[0-9])|(2[0-3]))h([0-5][0-9])?) : TIME(\$word)\footnote{Adapted to the french way of uttering time values.}
+									\end{itemize}
+							\item \textbf{I want to ADD the TAG\_EVENT birthday party on DATE(6,1) \\ WINDOW(TIME(21,0),TIME(23,0))}
+								\begin{itemize}
+										\item Combine(NUMBER,MONTH) : DATE(NUMBER,MONTH)
+											\item Combine(from,TIME\_1,to,TIME\_2) : WINDOW(TIME\_1,TIME\_2)
+									\end{itemize}
+							\item \textbf{I want to ADD EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0)))}
+								\begin{itemize}
+										\item Combine(TAG\_EVENT,\$x,on,DATE,WINDOW) : EVENT(\$x,DATE,WINDOW)
+									\end{itemize}
+							\item \textbf{I want ACTION(ADD, EVENT(birthday party, DATE(6,1), \\ WINDOW(TIME(21,0),TIME(23,0))))}
+								\begin{itemize}
+										\item Combine(ADD,EVENT) : ACTION(ADD,EVENT)
+									\end{itemize}
+					\end{enumerate}
+					
+					
+			\subsection{Simulator instanciation}
+			
+				The aim of the US is to make the biggest number possible of events with the highest priority values taken from \textit{InitList} and \textit{ToAddList} fit in the agenda. To do so, the Intent Manager recursively runs the act function (taking the action stack as an argument) depicted in Algorithm \ref{algo:intent} where
+        
+        %HK> Cf les remarques de Romain sur le premier draft IWSDS pour cette partie.
+        
+        %\begin{itemize}
+         % \item \textbf{actionStack:} the stack\footnote{The top element of the stack is called actionStack.top and it is removed by calling actionStack.removeTop().} of actions to be performed by the system (initially the list of ADD actions corresponding to \textit{ToAddList}).
+          %\item \textbf{act():} function that performs a list of actions.
+          %\item \textbf{perform():} function that performs a single action.
+          %\item \textbf{alternatives(action):} function that returns the alternative events that can be used to perform \textit{action}.
+          %\item \textbf{conflictsByAlt:} contains couples (event,conflictSet) mapping events to the sets of conflicting events in the agenda.
+          %\item \textbf{maxPrioByAlt:} contains couples (event, maxPrio) mapping events to the maximum priority in conflictsByAlt(event).
+        %\end{itemize}
+			
+	%		\begin{algorithm}[htp]
+        %      \DontPrintSemicolon
+        %      \SetKwFunction{act}{act}
+        %      \SetKwProg{myalg}{Algorithm}{}{}
+        %      \myalg{\act{actionStack}}{
+        %        \If{actionStack not empty}{
+        %        	added $\gets$ perform(actionStack.top)\;
+        %        	\If{not added}{
+        %            	alt $\gets$ alternatives(actionStack.top)\;
+        %                conflictsByAlt $\gets$ []\;
+        %                maxPrioByAlt $\gets$ []\;
+        %                addedAlt $\gets$ false\;
+        %                \While{alt not empty AND not addedAlt}{
+        %                	addedAlt $\gets$ perform(alt(0))\;
+        %                    \If{not addedAlt}{
+        %                    	conflictsByAlt $\gets$ [conflictsByAlt ; (alt(0),conflicts(alt(0)))]\;
+        %                        maxPrioByAlt $\gets$ [maxPrioByAlt ; (alt(0),max priority of conflicts(alt(0)))]\;
+        %                        alt.remove(0)\;
+        %                    }
+        %                }
+        %                
+        %                \If{not addedAlt}{
+        %                	selectedAlt $\gets$ argmin maxPrioByAlt\;
+        %                    movedToAlt $\gets$ true\;
+        %                    \While{conflictsByAlt no empty AND movedToAlt}{
+        %                    	moveActionStack $\gets$ stack of move actions to the different alternatives of conflict\;
+        %                        movedToAlt $\gets$ act(moveActionStack)\;
+        %                    }
+        %                    \uIf{movedToAlt}{
+        %                    	perform(ationStack.top)\;
+        %                    }
+        %                }
+        %            }
+        %            
+        %            actionList.removeTop()\;
+        %            act(actionStack)\;
+        %        }
+        %      }{}
+        %      \caption{Intent Manager algorithm}
+        %      \label{algo:intent}
+        %  	\end{algorithm}
     
