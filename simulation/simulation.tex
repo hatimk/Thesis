@@ -189,9 +189,19 @@
     
     \subsection{NLG and Verbosity Manager}
 		
-			The NLG module transforms action concepts as well as date, time window, description and yes/no concepts into simple straightforward utterances. For instance the NLG result for the intent ACTION(ADD, EVENT(birthday party, DATE(6,1), WINDOW(TIME(21,0), \\ TIME(23,0)))) is \textit{add the event birthday party on January $6^{th}$ from 9pm to 11pm}.
+			%The NLG module transforms action concepts as well as date, time window, description and yes/no concepts into simple straightforward utterances. For instance the NLG result for the intent ACTION(ADD, EVENT(birthday party, DATE(6,1), WINDOW(TIME(21,0), \\ TIME(23,0)))) is \textit{add the event birthday party on January $6^{th}$ from 9pm to 11pm}.
 			
-			Nevertheless, compared to human/human conversations, limiting interactions to this kind of simple utterances is not realistic. Therefore, they are enhanced in the Verbosity Manager with prefixes like \textit{I would like to}, \textit{Is it possible to}...and suffixes like \textit{if possible}, \textit{please}... In \cite{Ghigi2014}, a corpus study showed that users tend to go off-domain and to repeat the same information several times in the same sentence. These behaviours are also replicated in the Verbosity Manager: 10\% of the times, the US utters an off-domain sentence, and 30\% of the times where there is a misunderstanding, it repeats the same information twice.
+			The NLG module transforms the Intent Manager's output into a simple and straightforward utterance. For example:
+			
+			\begin{itemize}
+				\item Book a room for tomorrow.
+				\item Record channel 2 from 6pm until 8pm.
+				\item Delete the event football game from the agenda.
+			\end{itemize}
+			
+			Compared to human/human conversations, limiting interactions to this kind of simple utterances is not realistic. Therefore, they are enhanced in the Verbosity Manager with prefixes like \textit{I would like to}, \textit{Is it possible to}...and suffixes like \textit{if possible}, \textit{please}... In \cite{Ghigi2014}, a corpus study showed that users tend to go off-domain and to repeat the same information several times in the same sentence. These behaviours are also replicated in the Verbosity Manager: with a probability $p_{od}$ the NLU output is replaced with an off-domain sentence randomly picked in a predefined list and with a probability $p_{rep}$ and given that the system just reported a misunderstanding, the utterance is repeated twice (for example, \textit{Check my account, I repeat, check my account}).
+			
+			%These behaviours are also replicated in the Verbosity Manager: 10\% of the times, the US utters an off-domain sentence, and 30\% of the times where there is a misunderstanding, it repeats the same information twice.
 		
     \subsection{ASR output simulator}
     \label{subsec:asroutputsimu}
@@ -213,7 +223,7 @@
 					\item (0.31) I like to add the holiday party on
         \end{itemize}
         
-       	More formally, at time t, the N-Best is an N-uplet ${(s_1^{(t)},hyp_1^{(t)}),...,(s_N^{(t)},hyp_N^{(t)})}$. At time t+1, a new word $w_{t+1}$ is sent to the ASR output simulator and the latter calculates a new associated N-Best. Therefore, at this stage, the system has two N-Bests:
+       	More formally, at the $p^{th}$ micro-turn of the $k^{th}$ user turn $\mu T^{k,U}_p$, the N-Best is an N-uplet ${(s^k_{p,1}, hyp^k_{p,1}),...,(s^k_{p,N}, hyp^k_{p,N})}$. At time t+1, a new word $w_{t+1}$ is sent to the ASR output simulator and the latter calculates a new associated N-Best. Therefore, at this stage, the system has two N-Bests:
 				
 				\begin{itemize}
 					\item \textbf{The word N-Best:} It corresponds to the different hypotheses related to the last word pronounced. In Figure \ref{fig:asrsimu}, the top right box represents the word N-Best associated with the word $6^{th}$.
@@ -222,14 +232,20 @@
 				
 				Both are combined to form the new utterance N-Best. In the following, the way the word N-Best is calculated and the way it is incorporated into the partial utterance N-Best are described.
 				
-				In order to simulate noise and ASR imperfections, the ASR output simulator uses a module called the Scrambler. It receives a word as input and performs ones of the three following operations in order to compute the ouptut\footnote{Like most of the parameters, in this chapters, the values given here are empirical and they can be changed to model several configurations.}:
+				In order to simulate noise and ASR imperfections, the ASR output simulator uses a module called the Scrambler. It receives a word as input and performs ones of the three following operations in order to compute the output:
 				
-				\begin{itemize}
-					\item Replace the word with a different word taken randomly from a dictionary (probability: 0.7).
-					\item Add a new word (probability : 0.15).
-					\item Delete the word (probability : 0.15)
-				\end{itemize}
+				%\begin{itemize}
+					%\item Replace the word with a different word taken randomly from a dictionary (probability: 0.7).
+					%\item Add a new word (probability : 0.15).
+					%\item Delete the word (probability : 0.15)
+				%\end{itemize}
         
+				\begin{itemize}
+					\item Replace the word with a different word taken randomly from a dictionary (probability: $p_{repl}$).
+					\item Add a new word (probability : $p_{add}$).
+					\item Delete the word (probability : $p_{del}$)
+				\end{itemize}
+				
         A Word Error Rate (WER) is given as a parameter to the ASR output simulator. It controls the noise level that one wants to simulate. The algorithm used to generate the N-Best associated with a single word is described below:
         
         %HK> Citer le papier d'Olivier et de Richard Beaufort sur la simulation d'ASR en rapport avec ce graph.
@@ -296,7 +312,7 @@
 
 				\end{axis}
 				\end{tikzpicture}
-				\caption{ASR score sampling distribution}
+				\caption{ASR score sampling distribution (\sigma_{conf} = 1)}
 				\label{fig:scoresample}
 		\end{figure}
     
@@ -310,21 +326,25 @@
 							sigmoid(x) & = & \frac{1}{1 + e^{-x}}
 						\end{eqnarray}
 						
-						More precisely, $X \sim \mathcal{N} (-1,1)$ if the first hypothesis is wrong and $X \sim \mathcal{N} (1,1)$ when it is right. The standard deviation of X is one. By taking the sigmoid, this leads to two distributions\footnote{Confidence score estimation is a complex problem and it is still a research topic \cite{Jiang2005,Seigel2011}. The simple model introduced here is inspired by \cite{Pietquin2005}. Also, notice that the scores are between 0 and 1 but they do not sum up to 1 since they are not probabilities.} (depicted in Figure \ref{fig:scoresample}) with a mean of 0.3 and 0.7 and a standard deviation of 0.18 for both (which can be changed to simulate different levels of accuracy of the confidence score model. The closest to 0, the more discriminative the model).
+						More precisely, $X \sim \mathcal{N} (-1,\sigma_{conf})$ if the first hypothesis is wrong and $X \sim \mathcal{N} (1,\sigma_{conf})$ when it is right. The standard deviation of X is one. By taking the sigmoid, this leads to two distributions\footnote{Confidence score estimation is a complex problem and it is still a research topic \cite{Jiang2005,Seigel2011}. The simple model introduced here is inspired by \cite{Pietquin2005}. Also, notice that the scores are between 0 and 1 but they do not sum up to 1 since they are not probabilities.} (depicted in Figure \ref{fig:scoresample} for $\sigma_{conf} = 1$) with a mean of 0.3 and 0.7 and the same standard deviation for both (which is a growing function of $\sigma_{conf}$ and which can be changed to simulate different levels of accuracy of the confidence score model. The closest to 0, the more discriminative the model).
             \item The scores for the other hypotheses are computed in an iterative way. For $i$ between 2 and N, $s_i$ is uniformly sampled in $[0,s_{i-1}]$.
         \end{enumerate}
         
-        In incremental settings, the ASR input is a continuous audio stream. In reality, it is split into small consecutive chunks of data. At each new input arrival, the output is updated. However, a new chunk of audio data in the input does not necessarily translate into a new chunk of text added to the output. In reality, the latter can be partially or even completely changed while update. An example from \cite{Schlangen2011} is when the user utters the word \textit{forty}: the system first understands \textit{four} and then \textit{forty}. The transition between the two hypotheses does not translate into an addition of information but the first hypothesis has to be revoked and replaced by the second one. This phenomenon is referred to as the \textit{ASR instability}.
+        %In incremental settings, the ASR input is a continuous audio stream. In reality, it is split into small consecutive chunks of data. At each new input arrival, the output is updated. However, a new chunk of audio data in the input does not necessarily translate into a new chunk of text added to the output. In reality, the latter can be partially or even completely changed while update. An example from \cite{Schlangen2011} is when the user utters the word \textit{forty}: the system first understands \textit{four} and then \textit{forty}. The transition between the two hypotheses does not translate into an addition of information but the first hypothesis has to be revoked and replaced by the second one. This phenomenon is referred to as the \textit{ASR instability}.
         
-        As already mentioned in this thesis, early partial utterances are not necessarily prefixes of later ones (ASR instability phenomenon). To replicate this behaviour, a language model is needed to compute the scores corresponding to the different hypotheses in the N-Best. Therefore, sentences that are more in alignment with the model have higher scores thus being pushed to the top of this N-Best. Here, the NLU knowledge is used as a proxy for the language model by making the following assumption: \textit{the more an utterance generates key concepts once fed to the NLU, the more it is likely to be the correct one}. Therefore, as soon as a new action, date or time window concept is detected in $hyp_i$, $s_i$ is boosted as follows:
+        As already mentioned in this thesis, early partial utterances are not necessarily prefixes of later ones (ASR instability phenomenon). To replicate this behaviour, a language model is needed to compute the scores corresponding to the different hypotheses in the N-Best. Therefore, sentences that are more in alignment with the model have higher scores thus being pushed to the top of this N-Best. Here, the NLU knowledge is used as a proxy for the language model by making the following assumption: \textit{the more an utterance generates key concepts once fed to the NLU, the more it is likely to be the correct one}. Therefore, as soon as a new action, date or time window concept is detected in $hyp^k_{p,i}$, $s^k_{p,i}$ is boosted as follows:
         
-        	$$ s_i \leftarrow s_i + BF.(1 - s_i) $$
+        	$$ s^k_{p,i} \leftarrow s^k_{p,i} + BF.(1 - s^k_{p,i}) $$
             
-      	where BF is the Boost Factor parameter. Here it is set to 0.2. An illustration of this mechanism is provided in Fig. \ref{fig:asrsimu}.
+      	where BF is the Boost Factor parameter. An illustration of this mechanism is provided in Fig. \ref{fig:asrsimu}.
+				
+				% Here it is set to 0.2.
     
     \subsection{Timing and patience manager}
     
-    	When it comes to incremental processing, timing is key. However, the main objective of simulation is to generate dialogues in an accelerated mode, hence, no track of timing is kept. In order to approximate durations, the user's and the system's speech rates are considered to be 200 words per minute \cite{Yuan2006}.
+    	When it comes to incremental processing, timing is key. However, the main objective of simulation is to generate dialogues in an accelerated mode, hence, no track of timing is kept. In order to approximate durations, the user's and the system's speech rates are considered to be constant with value $SR$.
+			
+			% to be 200 words per minute \cite{Yuan2006}.
         
         Users tend to get impatient, at various degrees, when dialogue systems take too long to accomplish the task they are asked for. To simulate this behaviour, a duration threshold is chosen at each new dialogue that will cause the user to hangup as soon as it is reached. It is computed as follows
         
@@ -332,5 +352,7 @@
         	d_{pat} = 2 \mu_{pat}.sigmoid(X)
         \end{eqnarray}
         
-        where X follows a gaussian distribution of mean 0 and variance 1 and consequently $\mu_{pat}$ is the mean duration threshold (here, $\mu_pat = 180 s$).
+        where X follows a gaussian distribution of mean 0 and variance 1 and consequently $\mu_{pat}$ is the mean duration threshold.
+				
+				%(here, $\mu_pat = 180 s$).
     
