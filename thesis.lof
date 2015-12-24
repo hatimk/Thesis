@@ -20,20 +20,20 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{74}{figure.caption.155}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Incremental dialogue simulation}{77}{chapter.163}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{80}{figure.caption.178}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces An illustration of the incremental ASR output N-Best update\relax }}{82}{figure.caption.186}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces ASR score sampling distribution\relax }}{84}{figure.caption.188}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{78}{figure.caption.165}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{80}{figure.caption.177}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{82}{figure.caption.180}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{87}{chapter.198}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{89}{figure.caption.202}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{92}{figure.caption.213}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{92}{figure.caption.214}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{93}{figure.caption.215}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{89}{chapter.206}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{91}{figure.caption.210}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for generic strategies.\relax }}{94}{figure.caption.221}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{94}{figure.caption.222}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{95}{figure.caption.223}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{95}{chapter.216}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{99}{figure.caption.227}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{100}{figure.caption.228}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{97}{chapter.224}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{101}{figure.caption.235}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{102}{figure.caption.236}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{101}{chapter.229}
+\contentsline {xchapter}{Experiment with real users}{103}{chapter.237}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{103}{chapter.232}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{105}{chapter.240}
