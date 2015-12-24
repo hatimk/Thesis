@@ -1,47 +1,111 @@
 \chapter{Handcrafted strategies for improving dialogue efficiency}
 \label{ch:baseline}
 
+	Several strategies for handling slot-filling dialogue tasks have been discussed in Chapter \ref{ch:strategies}. The hypothesis laid stipulates that they perform differently under different noise conditions. A rough study has been made leading to a first model that made it possible to derive the tendencies of these strategies in terms of dialogue duration as a function of noise. In this chapter, the personal agenda simulated environment introduced in Chapter \ref{ch:simulation} is used in order to validate these results.
+	
+	On top of that, incremental processing offers a new degree of freedom that can be used in order to derive new dialogue strategies. Inspired by the TTP taxonomy introduced in Chapter \ref{ch:taxonomy}, five turn-taking strategies have been selected for their a priori potential of improving task oriented dialogue. Here, they are also implemented in the simulated environment and mixed with the previous turn-taking strategies. The new formed strategies are also compared in terms of dialogue duration and task completion.
+	
+	The best strategy obtained in this Chapter will serve as a baseline for the one elaborated later and which is automatically learnt from data.
+
 \section{User and system initiative}
 	\subsection{Strategies}
-    \label{subsec:strategies}
-      Most of the current task oriented dialogue systems operate in a slot-filling manner. Here, we identify three strategies to fill all the slots needed by the system:
+  \label{subsec:strategies}
+				
+				In Chapter \ref{ch:strategies}, three slot-filling strategies have been addressed: SysIni, UsrIni and MixIni. Here, they are implemented in the personal agenda management simulated environment and compared. In the following, the way they are instanciated as well as dialogue examples are provided.
 
       \begin{itemize}
-          \item \textbf{System Initiative (SysIni):} The system asks the user for the different slot values one by one, one at each dialogue turn like in the following example:
+          \item \textbf{System Initiative (SysIni):} Recall that while using this strategy, the system asks the user for the different slot values one by one. The first slot the system asks for is the action type: whether it is an ADD, a MODIFY or a DELETE action. To improve the system's performance, the order the remaining slots are asked for is made dependent on this type of action.
+					
+						In the case of an ADD action, the date and the slot are asked for first. Therefore, in the case of a conflict, there is no need to ask for the description. If no conflict is detected, the description is asked for and as it is an open slot (anything could be taken as a valid description), the user is asked for a confirmation of that particular slot before moving to the general confirmation (related to the complete request with all the associated slots).
+						
+						As far as MODIFY actions are concerned, the description slot can also be an invalid utterance if the user provides a non existing event\footnote{In order to improve the dialogue efficiency, in the case of MODIFY and DELETE requests, only a prefix of the description is necessary to identify an event. For instance, if the event \textit{Guitar lesson} is planned in the agenda, then the user saying \textit{Guitar} is enough for the system to understand that she is refering to that event. In the case it is a prefix of more than one event, the first one in the system's internal list is taken.}. Therefore, as it involves only one dialogue turn (instead of the two turns required to determine the date and the time window) and as it is more natural to perform a MODIFY action by asking which event is to be moved, the description slot is asked for first.
+						
+						Finally, DELETE actions are the most simple as they require only one additional slot: the description. The following dialogue illustrates the way these three types of actions are handled in the context of a noisy environment where a few requests fail to be communicated to the system.
+						
+						\begin{dialogue}
+								\speak{SYSTEM} What kind of action do you want to perform?
+								\speak{USER} Add.
+								\speak{SYSTEM} Please specify a date.
+								\speak{USER} March <noise>.
+								\speak{SYSTEM} Sorry I don't understand.
+								\speak{USER} March $6^{th}$.
+								\speak{SYSTEM} Please specify a time window.
+								\speak{USER} From 10am to 11am.
+								\speak{SYSTEM} Sorry. The time window on March $6^{th}$ from 10am to 11am is already taken by the event football game that is planned on March $6^{th}$ from 10am to 12am. Do you want to specify another date and time window?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Please specify a date.
+								\speak{USER} March $7^{th}$.
+								\speak{SYSTEM} Please specify a time window.
+								\speak{USER} From 10am to 11am.
+								\speak{SYSTEM} Please specify a description.
+								\speak{USER} Long list.
+								\speak{SYSTEM} You said long list right?
+								\speak{USER} No.
+								\speak{SYSTEM} Please specify a description.
+								\speak{USER} Dentist.
+								\speak{SYSTEM} You said dentist right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Done. Would you like to perform other actions?
+								\speak{USER} Yes.
+								\speak{SYSTEM} What kind of action do you want to perform?
+								\speak{USER} Move\footnote{Move and modify actions are equivalent}.
+								\speak{SYSTEM} Please specify a description.
+								\speak{USER} Guitar <noise>
+								\speak{SYSTEM} Please specify a new date.
+								\speak{USER} March $10^{th}$.
+								\speak{SYSTEM} Please specify a new time window.
+								\speak{USER} From 2pm to 3pm.
+								\speak{SYSTEM} Ok. So you want to move the event guitar lesson to March $10^{th}$ from 2pm to 3pm. Is that right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Done. Would you like to perform other actions?
+								\speak{USER} Yes.
+								\speak{SYSTEM} What kind of action do you want to perform?
+								\speak{USER} Delete.
+								\speak{SYSTEM} Please specify a description.
+								\speak{USER} Visit George.
+								\speak{SYSTEM} Ok. So you want to delete the event visit George that is planned for March $9^{th}$ from 6:30pm to 7:30pm. Is that right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Done. Would you like to perform other actions?
+								\speak{USER} No.
+								\speak{SYSTEM} Thank you. Bye.
+						\end{dialogue}
 
-              \begin{dialogue}
-                  \speak{SYSTEM} What kind of action do you want to perform?
-                  \speak{USER} Add.
-                  \speak{SYSTEM} Please specify a title.
-                  \speak{USER} Dentist.
-                  \speak{SYSTEM} Please specify a date.
-                  \speak{USER} March <noise>.
-                  \speak{SYSTEM} Sorry I don't understand.
-                  \speak{USER} March $7^{th}$.
-                  \speak{SYSTEM} Please specify a time slot.
-                  \speak{USER} From 10am to 11am.
-                  \speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
-                  \speak{USER} Yes.
-              \end{dialogue}
+              As discussed in Chapter \ref{ch:strategies}, this strategy is very tedious, however, it has the advantage of baby-stepping the dialogue and recovering the errors progressively.
 
-              This strategy is very tedious, however, it has the advantage of baby-stepping the dialogue and recovering the errors progressively.
+          \item \textbf{User Initiative (UsrIni):} In the case of ADD or MODIFY actions, the event description, its date and its time window should be provided in the user's request, otherwise, an error is reported. For DELETE actions, only the description is required. For example:
 
-          \item \textbf{User Initiative (UsrIni):} The user is asked by the system to make a full sentence with all the information needed to process the request. For example:
+						\begin{dialogue}
+								\speak{SYSTEM} What can I do for you?
+								\speak{USER} I would like to add the event dentist on March <noise> from 10am to 11am.
+								\speak{SYSTEM} Sorry I don't understand.
+								\speak{USER} I said, I want to add the event dentist on March $6^{th}$ from <noise> to 11am.
+								\speak{SYSTEM} Sorry I don't understand.
+								\speak{USER} Add the event dentist on March $6^{th}$ from 10am to 11am.
+								\speak{SYSTEM} Sorry. The time window on March $6^{th}$ from 10am to 11am is already taken by the event football game that is planned on March $6^{th}$ from 10am to 12am. What can I do for you?
+								\speak{USER} I would like to add the event dentist on March $7^{th}$ from 10am to 11am.
+								\speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Done. Would you like to perform other actions?
+								\speak{USER} Yes.
+								\speak{SYSTEM} What can I do for you?
+								\speak{USER} I want to move the event guitar <noise> to March $10^{th}$ from 2pm to 3pm please.
+								\speak{SYSTEM} Ok. So you want to move the event guitar lesson to March $10^{th}$ from 2pm to 3pm. Is that right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Done. Would you like to perform other actions?
+								\speak{USER} Yes.
+								\speak{SYSTEM} What can I do for you?
+								\speak{USER} Delete the event visit Georges.
+								\speak{SYSTEM} Ok. So you want to delete the event visit George that is planned for March $9^{th}$ from 6:30pm to 7:30pm. Is that right?
+								\speak{USER} Yes.
+								\speak{SYSTEM} Thank you. Bye.
+						\end{dialogue}
 
-              \begin{dialogue}
-                  \speak{SYSTEM} What can I do for you?
-                  \speak{USER} I would like to add the event dentist on March <noise> from 10am to 11am.
-                  \speak{SYSTEM} Sorry I don't understand.
-                  \speak{USER} I would like to add the event dentist on March $7^{th}$ from <noise> to 11am.
-                  \speak{SYSTEM} Sorry I don't understand.
-                  \speak{USER} I would like to add the event dentist on March $7^{th}$ from 10am to 11am.
-                  \speak{SYSTEM} Ok. So you want to add the event dentist on March $7^{th}$ from 10am to 11am. Is that right?
-                  \speak{USER} Yes.
-              \end{dialogue}
+              Again, as pointed out in Chapter \ref{ch:strategies}, with this strategy, the dialogue can progress much faster if no errors occur. Nevertheless, unlike SysIni, when there is still missing information (even one slot), the user has to repeat his request from the start.
 
-              With this strategy, the dialogue can progress much faster, nevertheless, unlike SysIni, when there is still missing information (even one slot), the user has to repeat all his request.
-
-          \item \textbf{Mixed Initiative (MixIni):} Just like UsrIni, the system asks for all the slots at once but if there is still missing information, it switches to SysIni in order to gather the missing slot values one by one. For example:
+          \item \textbf{Mixed Initiative (MixIni):} As previously discussed, this strategy starts in a similar way as UsrIni. The action type slot is important to determine which other slots should be gathered and how they should be processed. Therefore, if it is not detected in the user's utterance, the other slots are ignored and a misunderstanding is reported. On the contrary, if it has been detected, the system spots all the other slots present in the sentence and tries to gather the missing ones by switching to the SysIni strategy. For example:
+					
               \begin{dialogue}
                   \speak{SYSTEM} What can I do for you?
                   \speak{USER} I would like to add the event dentist on March <noise> from 10am to 11am.
@@ -54,7 +118,7 @@
               \end{dialogue}
      	\end{itemize}
 
-              By elaborating such a hybrid strategy, we hope that it will ally both advantages of SysIni and UsrIni. In the following, we use the simulator to investigate the performance of these strategies under different conditions of noise.
+              By elaborating such a hybrid strategy, an a priori approach introduced in Chapter \ref{ch:strategies} showed that it allies both advantages of SysIni and UsrIni. In the following, the simulated environment is used to validate this affirmation.
               
     \subsection{Experiments}
     
@@ -223,80 +287,61 @@
               
   		For the experiments, three dialogue scenarios have been used. As described in \ref{subsec:intentmanager}, a scenario is specified by two lists of events: \textit{InitList} and \textit{ToAddList}. The lists corresponding to the three scenarios are given in Table \ref{tab:expscenarios}.
         
-       	We vary the WER between 0 and 0.3 with a step of 0.03 in order to analyse the effect of noise on the different strategies. For each noise level, the three scenarios and run 1000 times. The mean duration of the dialogues, their task completion as well as the corresponding 95\% confidence intervals are depicted in Fig. \ref{fig:genstrateval}.
+       	The WER is varied between 0 and 0.3 with a step of 0.03 in order to analyse the effect of noise on the different strategies. For each noise level, the three scenarios are run 1000 times. The mean duration of the dialogues, their task completion as well as the corresponding 95\% confidence intervals are depicted in Figure \ref{fig:genstrateval}.
         
-        In low noise setups, SysIni is clearly less efficient as UsrIni; the dialogues take twice more time to finish with a lower completion rate (actually, it is a consequence of longer dialogue durations given the way the Patience Manager is designed). Nevertheless when the noise level reaches about 0.2, SysIni gives offers better completion rates. The duration is still lower in spite of the correlation between the two metrics. This is due to the fact that the durations distribution for UsrIni is centered on short dialogues whereas the distribution for SysIni is centered on average ones. Finally, MixIni seems to be the best strategy as it allies both the advantages of UsrIni and SysIni.
+        The results obtained here clearly validate the analysis led in Chapter \ref{ch:strategies} since the graph in Figure \ref{fig:effcompare} is very similar to the ones depicted in Figure \ref{fig:genstrateval}. In low noise setups, SysIni is clearly less efficient than UsrIni; the dialogues take twice more time to finish which in turn translates into a lower task completion ratio. Nevertheless when the noise level reaches about 0.2, SysIni offers better completion rates. The duration is still lower in spite of the correlation between the two metrics. This is due to the fact that the durations distribution for UsrIni is centered on short dialogues whereas the distribution for SysIni is centered on average ones. Finally, MixIni seems to be the best strategy as it allies both the advantages of UsrIni and SysIni.
         
         %HK> Donner les équivalents en français pour la réplicabilité des résultats.
         %HK> Inverser les priorités, c'est bizarre comme ça.
         
-        \begin{table}[t]
-			\fontsize{7}{9}\selectfont
-			\caption{\label{tab:expscenarios} {\it The three scenarios used in the simulation}}
-			\vspace{2mm}
-			\centerline{
-				\begin{tabular}{|c|c|c|c|c|c|c|c|}
-					\hline
-					Scenario&Title (Priority)&Date&Slot&DateAlt1&SlotAlt1&DateAlt2&SlotAlt2 \\
-                    \hline
-                    1-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
-                    1-ToAdd&Book reading(8)&November 19$^{th}$&10:30-12:30&November 14$^{th}$&9:30-11:30&November 18$^{th}$&16:30-18:30 \\
-                    &Watch the lord of the rings(12)&November 13$^{th}$&9:30-12:30&November 15$^{th}$&11:15-14:15& & \\
-					\hline
-                    2-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
-                    2-ToAdd&Tennis(5)&November 17$^{th}$&13:15-15:15&November 19$^{th}$&15:15-17:15& & \\
-                    &Gardening(9)&November 18$^{th}$&13:15-15:15&November 14$^{th}$&12:30-14:30& & \\
-                    \hline
-                    3-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
-                    &Holidays preparation(1)&November 16$^{th}$&12:30-14:30&November 17$^{th}$&12:15-14:15& & \\
-                    &House cleaning(6)&November 13$^{th}$&14:15-16:15&November 17$^{th}$&15:30-17:30& & \\
-                    3-ToAdd&Give back book(7)&November 16$^{th}$&14:00-14:30&November 13$^{th}$&14:00-14:30& & \\
-                    \hline
-				\end{tabular}
-			}
-		\end{table}
+        \begin{table}[b]
+					\fontsize{7}{9}\selectfont
+					\vspace{2mm}
+					\centerline{
+						\begin{tabular}{|c|c|c|c|c|c|c|c|}
+							\hline
+							Scenario&Title (Priority)&Date&Window&DateAlt1&WindowAlt1&DateAlt2&WindowAlt2 \\
+												\hline
+												1-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+												1-ToAdd&Book reading(8)&November 19$^{th}$&10:30-12:30&November 14$^{th}$&9:30-11:30&November 18$^{th}$&16:30-18:30 \\
+												&Watch the lord of the rings(12)&November 13$^{th}$&9:30-12:30&November 15$^{th}$&11:15-14:15& & \\
+							\hline
+												2-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+												2-ToAdd&Tennis(5)&November 17$^{th}$&13:15-15:15&November 19$^{th}$&15:15-17:15& & \\
+												&Gardening(9)&November 18$^{th}$&13:15-15:15&November 14$^{th}$&12:30-14:30& & \\
+												\hline
+												3-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+												&Holidays preparation(1)&November 16$^{th}$&12:30-14:30&November 17$^{th}$&12:15-14:15& & \\
+												&House cleaning(6)&November 13$^{th}$&14:15-16:15&November 17$^{th}$&15:30-17:30& & \\
+												3-ToAdd&Give back book(7)&November 16$^{th}$&14:00-14:30&November 13$^{th}$&14:00-14:30& & \\
+												\hline
+						\end{tabular}
+					}
+					\caption{The three scenarios used in the simulation}
+					\label{tab:expscenarios}
+					\end{table}
 
 \section{Incremental strategies}
 
 	%HK> Motiver le choix de la métrique d'étude : duration et task completion.
     %HK> Rajouter une référence pour justifier la correlation entre les métriques objectives et subjectives.
     
-    In this study, the two metrics under focus are duration and task completion (used as a proxy to measure dialogue efficiency). Nevertheless, one of the main motivations behind incremental dialogue process is to increase human likeness and the dialogue fluency by achieving smooth turn-taking. Some TTPs from the taxonomy established in Chapter \ref{ch:taxonomy} are more likely to improve these last aspects instead of the metrics that interest us most directly, like the BACKCHANNEL for instance. Therefore, only a few TTPs from the taxonomy established in Chapter \ref{ch:taxonomy} have been implemented: those that are more likely to improve our two objective metrics. However, the phenomena that are not studied here could have an indirect impact on duration and task completion as objective and subjective metrics are somehow correlated. In simulation, this is not visible though.
+    %In this study, the two metrics under focus are duration and task completion (used as a proxy to measure dialogue efficiency). Nevertheless, one of the main motivations behind incremental dialogue process is to increase human likeness and the dialogue fluency by achieving smooth turn-taking. Some TTP from the taxonomy established in Chapter \ref{ch:taxonomy} are more likely to improve these last aspects instead of the metrics that interest us most directly, like the BACKCHANNEL for instance. Therefore, only a few TTP from the taxonomy established in Chapter \ref{ch:taxonomy} have been implemented: those that are more likely to improve the two objective metrics. However, the phenomena that are not studied here could have an indirect impact on duration and task completion as objective and subjective metrics are somehow correlated. In simulation, this is not visible though.
+    %
+    %INIT\_DIALOGUE and END\_POINT are two phenomena that already exist in traditional dialogue systems. In the Scheduler module (see Chapter \ref{ch:architecture}), the following phenomena are added: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP. The last phenomena have also been implemented in the US to make it able to interrupt the system. Section \ref{subsec:ttpimpl} provides the implementation details of these TTP.
+		
+		Five TTP have been selected for implementation in Chapter \ref{ch:taxonomy}:  FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK and BARGE\_IN\_RESP both from the system's and the user's point of view. Their generic implementation have been discussed in Chapter \ref{ch:strategies} and in the following, more specific implementation details in the personal agenda management domain are provided.
     
-    INIT\_DIALOGUE and END\_POINT are two phenomena that already exist in traditional dialogue systems. In the Scheduler module (see Chapter \ref{ch:architecture}), we add the following phenomena: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP. The last phenomena have also been implemented in the US to make it able to interrupt the system. Section \ref{subsec:ttpimpl} provides the implementation details of these TTPs.
-    
-    \subsection{ASR instability}
-    \label{subsec:asrinstability}
-    
-    	Because of the ASR instability phenomenon explained in \ref{subsec:asroutputsimu}, the current partial utterance is not guaranteed to be a prefix of future partial utterances and it is likely to change. However, the words at the end of this partial utterance are more likely to change than the ones at the start. In \cite{McGraw2012}, it is shown that words that lasted for more than 0.6 seconds have 90\% chance of staying unchanged. In this work, the speech rate (user and system) is supposed to be 200 words per seconds \cite{Yuan2006} so 0.6 seconds corresponds to two words. Based on that, the handcrafted TTP implementation takes decisions by looking at the current partial hypothesis without its last two words (called the \textit{the last stable utterance}). This margin is called the \textit{Stability Margin} (SM = 2).
+    %\subsection{ASR instability}
+    %\label{subsec:asrinstability}
+    %
+    	%Because of the ASR instability phenomenon explained in \ref{subsec:asroutputsimu}, the current partial utterance is not guaranteed to be a prefix of future partial utterances and it is likely to change. However, the words at the end of this partial utterance are more likely to change than the ones at the start. In \cite{McGraw2012}, it is shown that words that lasted for more than 0.6 seconds have 90\% chance of staying unchanged. In this work, the speech rate (user and system) is supposed to be 200 words per seconds \cite{Yuan2006} so 0.6 seconds corresponds to two words. Based on that, the handcrafted TTP implementation takes decisions by looking at the current partial hypothesis without its last two words (called the \textit{the last stable utterance}). This margin is called the \textit{Stability Margin} (SM = 2).
     
 	\subsection{TTP implementation}
     \label{subsec:ttpimpl}
-    
-    	In the following, the TTP implementation is described. The settings and the parameter values are handcrafted given our experience. In the following chapters, we will try to optimise them from data.
-    
-    	 \paragraph{FAIL\_RAW:} Happens when the user speaks for two long with no key concept detected in her speech. It depends on the system's last question (the type of information it is waiting for). Here, it is triggered when the system asks an open question (all the slots at once) and the user's utterance contains 6 words with no action type detected (add, modify or delete). This threshold is set to 3 in the case of yes/no questions, 4 for date questions and 6 for slot questions.
-         
-         \paragraph{INCOHERENCE\_INTERP:} The system can fully understand the user's partial utterance and yet have a good reason to barge-in. This is the case when the user injects new information that is not coherent with the dialogue context. For instance, if the user says \textit{I want to move the event football game to January...} and there is no event football game in the agenda, then letting him finish his utterance is a waste of time. As a consequence, it makes sense for the system to barge-in. In this implementation, this event is triggered as soon as the last stable utterance generates an overlap with an existing event in the agenda, or it tries to move or delete a non existing event.
-         
-         \paragraph{FEEDBACK:} This phenomenon translates into repeating a part if not the whole user's utterance. However, for the sake of simplicity, we limit ourselves here to the case where only the last word of the last stable utterance is repeated. The moments when feedbacks are performed in this implementation are the moments when the ASR confidence score drops below a certain threshold. To isolate the confidence score corresponding to the target word only, the ratio $s_{t-SM}/s_{t-SM-1}$ is computed (as the confidence score of a sentence is the product of the scores associated with the words in this sentence). Here, this event is triggered whenever this ratio drops under 0.7.
-         
-         \paragraph{BARGE\_IN\_RESP (System):} Depending on the last system dialogue act (apart from dialogue acts reporting errors), the system can choose to barge-in once it has all the information needed to provide an answer. Again, it should also wait for the SM.
-         
-         %HK> Trouver une référence montrant que l'utilisateur peut inférer la fin de la phrase du système avec l'habitude.
-         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the a user's decision. Hence, it has been implemented in the US.
-    
-    \subsection{Experiments}
-    
-    	In this experiment, the TTPs phenomena described in Sect. \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Sect. \ref{subsec:strategies}. Incremental processing is useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Fig. \ref{fig:generic}.
-        
-        %HK> Si on fait de l'apprentissage multi-agent, on peut en parler ici (MixIni+Incr => MixIniRL+Incr => MixIniRL+IncrRL).
-     	Adding mixed initiative behaviour or incrementality to UsrIni are both ways to improve its robustness to errors. Fig. \ref{fig:generic} shows that in our case, incrementality is more efficient. Most importantly, it is shown here that MixIni and incremental behaviour can be combined to form the best strategy.
-    
-    	\begin{figure*}[t]
-			\caption{Mean dialogue duration and task completion for generic strategies.}
+		
+		\begin{figure*}[t]
 			\centering
-			\label{fig:generic}
 			\begin{minipage}{.47\textwidth}
 				\begin{tikzpicture}[scale=0.7]
 					\begin{axis}[
@@ -493,294 +538,315 @@
 					\end{axis}
 					\end{tikzpicture}
 				\end{minipage}
+			\caption{Mean dialogue duration and task completion for aggregated strategies.}
+			\label{fig:generic}
 		\end{figure*}
     
     	\begin{figure*}[t]
+			\centering
+			\begin{minipage}{.47\textwidth}
+				\begin{tikzpicture}[scale=0.7]
+					\begin{axis}[
+					xlabel={WER},
+					ylabel={TTP Duration (sec)},
+					scaled ticks = false,
+					tick label style={/pgf/number format/fixed},
+					xmin=0, xmax=0.3,
+					ymin=75, ymax=240,
+					xtick={0,0.06,0.12,0.18,0.24,0.3},
+					ytick={75,90,120,150,180,210,240},
+					legend pos=north west,
+					ymajorgrids=true,
+					grid style=dashed,
+					colorbrewer cycle list=Set1,
+				]
+				
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,84.42433333333342) +- (0.48818318362776164,0.48818318362776164)
+					(0.03,94.58000000000008) +- (0.7590682979546823,0.7590682979546823)
+					(0.06,104.16933333333341) +- (0.9593474089618866,0.9593474089618866)
+					(0.09,112.96100000000004) +- (1.1435810712134045,1.1435810712134045)
+					(0.12,123.12766666666673) +- (1.3110217663901353,1.3110217663901353)
+					(0.15,133.45099999999996) +- (1.4819896270017245,1.4819896270017245)
+					(0.18,144.64833333333337) +- (1.7543463521196259,1.7543463521196259)
+					(0.21,156.10100000000006) +- (1.8389701889959469,1.8389701889959469)
+					(0.24,164.73633333333342) +- (2.0036768667811726,2.0036768667811726)
+					(0.27,174.6089999999998) +- (2.178768916306044,2.178768916306044)
+					(0.3,185.79433333333355) +- (2.3878569440384445,2.3878569440384445)
+					};
+					
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,78.89) +- (0.27456880363370567,0.27456880363370567)
+					(0.03,88.35999999999994) +- (0.5949810211874474,0.5949810211874474)
+					(0.06,96.18166666666663) +- (0.8069986384650353,0.8069986384650353)
+					(0.09,106.09966666666672) +- (0.982227425776005,0.982227425776005)
+					(0.12,115.16800000000002) +- (1.2271426247332984,1.2271426247332984)
+					(0.15,124.09800000000008) +- (1.3952859249257519,1.3952859249257519)
+					(0.18,132.79266666666678) +- (1.477832940401654,1.477832940401654)
+					(0.21,144.13166666666655) +- (1.743362552360611,1.743362552360611)
+					(0.24,155.11033333333353) +- (1.9288902333396725,1.9288902333396725)
+					(0.27,164.48399999999995) +- (2.0505359440820365,2.0505359440820365)
+					(0.3,174.51366666666692) +- (2.2123200228182895,2.2123200228182895)
+					};
+					
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,82.1359999999999) +- (0.481627449925734,0.481627449925734)
+					(0.03,91.78700000000009) +- (0.7373058956050093,0.7373058956050093)
+					(0.06,101.18999999999991) +- (0.9138083205866466,0.9138083205866466)
+					(0.09,110.40899999999996) +- (1.1087387112989255,1.1087387112989255)
+					(0.12,121.07500000000007) +- (1.3337230541358298,1.3337230541358298)
+					(0.15,130.3443333333334) +- (1.4906856150442356,1.4906856150442356)
+					(0.18,140.4889999999999) +- (1.6718904562366954,1.6718904562366954)
+					(0.21,150.54966666666675) +- (1.82883157440412,1.82883157440412)
+					(0.24,160.60566666666665) +- (1.9374852542365173,1.9374852542365173)
+					(0.27,170.51466666666659) +- (2.106442928189067,2.106442928189067)
+					(0.3,180.63199999999998) +- (2.279325713735254,2.279325713735254)
+					};
+				
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,84.96400000000015) +- (0.5054141804694122,0.5054141804694122)
+					(0.03,92.39600000000004) +- (0.6888360306817554,0.6888360306817554)
+					(0.06,99.32033333333344) +- (0.8282528759399794,0.8282528759399794)
+					(0.09,107.10766666666646) +- (0.9777684320326531,0.9777684320326531)
+					(0.12,114.52933333333316) +- (1.1010530071532976,1.1010530071532976)
+					(0.15,124.41733333333332) +- (1.2499177639008978,1.2499177639008978)
+					(0.18,131.9396666666667) +- (1.3815070097921498,1.3815070097921498)
+					(0.21,142.7686666666668) +- (1.5213088484131245,1.5213088484131245)
+					(0.24,152.11066666666653) +- (1.7330540456111263,1.7330540456111263)
+					(0.27,161.40199999999996) +- (1.8910409783285445,1.8910409783285445)
+					(0.3,173.2549999999999) +- (2.032668761244095,2.032668761244095)
+					};
+
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,78.44466666666658) +- (0.4703811455110453,0.4703811455110453)
+					(0.03,88.15233333333322) +- (0.7061974717284895,0.7061974717284895)
+					(0.06,97.15900000000005) +- (0.90348263384854,0.90348263384854)
+					(0.09,107.15133333333337) +- (1.1525562722909646,1.1525562722909646)
+					(0.12,116.55166666666656) +- (1.3048533844230545,1.3048533844230545)
+					(0.15,127.26099999999987) +- (1.4268096858103694,1.4268096858103694)
+					(0.18,140.5930000000001) +- (1.7016911888932833,1.7016911888932833)
+					(0.21,148.98766666666674) +- (1.8194792162364515,1.8194792162364515)
+					(0.24,158.14699999999996) +- (1.9889064005737578,1.9889064005737578)
+					(0.27,172.67833333333323) +- (2.216697108794417,2.216697108794417)
+					(0.3,180.89166666666674) +- (2.319399712430317,2.319399712430317)
+					};
+
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,84.09033333333335) +- (0.4601941795292904,0.4601941795292904)
+					(0.03,92.09566666666669) +- (0.6972430851773483,0.6972430851773483)
+					(0.06,99.69833333333322) +- (0.8051001973778701,0.8051001973778701)
+					(0.09,108.1813333333333) +- (1.0185699383101847,1.0185699383101847)
+					(0.12,117.38766666666665) +- (1.1986002178713595,1.1986002178713595)
+					(0.15,126.758) +- (1.3152128894019068,1.3152128894019068)
+					(0.18,133.00100000000006) +- (1.3507781597544566,1.3507781597544566)
+					(0.21,144.1306666666665) +- (1.6094246188269945,1.6094246188269945)
+					(0.24,154.76966666666695) +- (1.7988642667400194,1.7988642667400194)
+					(0.27,167.0646666666667) +- (1.9805782881645544,1.9805782881645544)
+					(0.3,175.11600000000027) +- (2.1962243758795057,2.1962243758795057)
+					};
+
+					\legend{MixIni,FAIL\_RAW,INCOHERENCE\_INTERP,FEEDBACK\_RAW,BARGE\_IN\_RESP (System),BARGE\_IN\_RESP (User)}
+				\end{axis}
+				\end{tikzpicture}
+			\end{minipage}
+			\begin{minipage}{.47\textwidth}
+				\begin{tikzpicture}[scale=0.7]
+					\begin{axis}[
+					xlabel={WER},
+					ylabel={TTP Task completion ratio},
+					scaled ticks = false,
+					tick label style={/pgf/number format/fixed},
+					xmin=0, xmax=0.3,
+					ymin=0.6, ymax=1,
+					xtick={0,0.06,0.12,0.18,0.24,0.3},
+					ytick={0.6,0.7,0.8,0.9,1},
+					legend pos=south west,
+					ymajorgrids=true,
+					grid style=dashed,
+					colorbrewer cycle list=Set1,
+				]
+				
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,0.9766666666666654) +- (0.005271391973032027,0.005271391973032027)
+					(0.03,0.9586666666666649) +- (0.006809225428295863,0.006809225428295863)
+					(0.06,0.9459999999999984) +- (0.008153746579880043,0.008153746579880043)
+					(0.09,0.9229999999999976) +- (0.00972652948498309,0.00972652948498309)
+					(0.12,0.8893333333333304) +- (0.011083121710261656,0.011083121710261656)
+					(0.15,0.8713333333333304) +- (0.011922286164062957,0.011922286164062957)
+					(0.18,0.8326666666666637) +- (0.013033893566818056,0.013033893566818056)
+					(0.21,0.8086666666666636) +- (0.013989940030052796,0.013989940030052796)
+					(0.24,0.7719999999999975) +- (0.014842951153101578,0.014842951153101578)
+					(0.27,0.7283333333333315) +- (0.015221054277984612,0.015221054277984612)
+					(0.3,0.6713333333333323) +- (0.016525640167126494,0.016525640167126494)
+					};
+					
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,0.9803333333333328) +- (0.004868056769504311,0.004868056769504311)
+					(0.03,0.9769999999999993) +- (0.0053173065696425145,0.0053173065696425145)
+					(0.06,0.9533333333333314) +- (0.0072281228545189955,0.0072281228545189955)
+					(0.09,0.9446666666666651) +- (0.008275544093560272,0.008275544093560272)
+					(0.12,0.9179999999999982) +- (0.009810534782117202,0.009810534782117202)
+					(0.15,0.8949999999999974) +- (0.011083102453736804,0.011083102453736804)
+					(0.18,0.8569999999999974) +- (0.012918153008676625,0.012918153008676625)
+					(0.21,0.8309999999999973) +- (0.013672488847642736,0.013672488847642736)
+					(0.24,0.787666666666664) +- (0.014272470040840647,0.014272470040840647)
+					(0.27,0.7556666666666644) +- (0.014979880497966485,0.014979880497966485)
+					(0.3,0.7256666666666647) +- (0.015620966372155766,0.015620966372155766)
+					};
+					
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,0.9729999999999993) +- (0.005786298590444989,0.005786298590444989)
+					(0.03,0.9649999999999989) +- (0.006661917975412438,0.006661917975412438)
+					(0.06,0.9459999999999978) +- (0.008101227956305223,0.008101227956305223)
+					(0.09,0.9159999999999974) +- (0.009789017846547567,0.009789017846547567)
+					(0.12,0.8986666666666638) +- (0.010444836546778366,0.010444836546778366)
+					(0.15,0.8766666666666638) +- (0.011634103890431869,0.011634103890431869)
+					(0.18,0.8383333333333308) +- (0.012931627207055148,0.012931627207055148)
+					(0.21,0.8133333333333304) +- (0.013554108192312718,0.013554108192312718)
+					(0.24,0.773666666666664) +- (0.014342995558809442,0.014342995558809442)
+					(0.27,0.7263333333333313) +- (0.015363185774948383,0.015363185774948383)
+					(0.3,0.6803333333333316) +- (0.015994248516264135,0.015994248516264135)
+					};
+				
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,0.9736666666666655) +- (0.005723997965681301,0.005723997965681301)
+					(0.03,0.9579999999999982) +- (0.007219968901134631,0.007219968901134631)
+					(0.06,0.9433333333333311) +- (0.008136557830763266,0.008136557830763266)
+					(0.09,0.9433333333333312) +- (0.008240810100416832,0.008240810100416832)
+					(0.12,0.9266666666666641) +- (0.009367988993257973,0.009367988993257973)
+					(0.15,0.8989999999999972) +- (0.010477621367044112,0.010477621367044112)
+					(0.18,0.8903333333333306) +- (0.011063520508611709,0.011063520508611709)
+					(0.21,0.8543333333333308) +- (0.012567644036264244,0.012567644036264244)
+					(0.24,0.8359999999999974) +- (0.013356408938534313,0.013356408938534313)
+					(0.27,0.8033333333333316) +- (0.01388852059956223,0.01388852059956223)
+					(0.3,0.7693333333333308) +- (0.014567077254321065,0.014567077254321065)
+					};
+
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,0.976666666666666) +- (0.005430925437816175,0.005430925437816175)
+					(0.03,0.9713333333333324) +- (0.005865609056185905,0.005865609056185905)
+					(0.06,0.9539999999999983) +- (0.00730320302333284,0.00730320302333284)
+					(0.09,0.9266666666666655) +- (0.009681685803619819,0.009681685803619819)
+					(0.12,0.9033333333333303) +- (0.010532657362277521,0.010532657362277521)
+					(0.15,0.8796666666666644) +- (0.011699574761504065,0.011699574761504065)
+					(0.18,0.857666666666663) +- (0.011952090071058753,0.011952090071058753)
+					(0.21,0.8156666666666635) +- (0.013566557516351501,0.013566557516351501)
+					(0.24,0.7773333333333303) +- (0.014547138250835373,0.014547138250835373)
+					(0.27,0.7336666666666644) +- (0.015190512822885378,0.015190512822885378)
+					(0.3,0.6863333333333319) +- (0.015889826900672917,0.015889826900672917)
+					};
+
+				\addplot+[
+					error bars/.cd,
+					y dir=both,
+					y explicit,
+					]
+					coordinates {
+					(0.0,0.9779999999999992) +- (0.005212109728529413,0.005212109728529413)
+					(0.03,0.964333333333332) +- (0.006518649498853482,0.006518649498853482)
+					(0.06,0.9539999999999984) +- (0.007476485876846385,0.007476485876846385)
+					(0.09,0.9383333333333317) +- (0.008587668419827768,0.008587668419827768)
+					(0.12,0.9106666666666638) +- (0.010250797917995593,0.010250797917995593)
+					(0.15,0.8923333333333304) +- (0.011100342905615639,0.011100342905615639)
+					(0.18,0.8689999999999969) +- (0.012021173549663974,0.012021173549663974)
+					(0.21,0.831999999999997) +- (0.013293109887792191,0.013293109887792191)
+					(0.24,0.8039999999999962) +- (0.013551840586758856,0.013551840586758856)
+					(0.27,0.7699999999999971) +- (0.01425255314359996,0.01425255314359996)
+					(0.3,0.7326666666666641) +- (0.015305244974627383,0.015305244974627383)
+					};
+
+					\legend{MixIni,FAIL\_RAW,INCOHERENCE\_INTERP,FEEDBACK\_RAW,BARGE\_IN\_RESP (System),BARGE\_IN\_RESP (User)}
+				\end{axis}
+				\end{tikzpicture}
+			\end{minipage}
 		\caption{Mean dialogue duration and task completion for different turn-taking phenomena.}
-		\centering
 		\label{fig:ttp}
-		\begin{minipage}{.47\textwidth}
-			\begin{tikzpicture}[scale=0.7]
-				\begin{axis}[
-				xlabel={WER},
-				ylabel={TTP Duration (sec)},
-				scaled ticks = false,
-				tick label style={/pgf/number format/fixed},
-				xmin=0, xmax=0.3,
-				ymin=75, ymax=240,
-				xtick={0,0.06,0.12,0.18,0.24,0.3},
-				ytick={75,90,120,150,180,210,240},
-				legend pos=north west,
-				ymajorgrids=true,
-				grid style=dashed,
-				colorbrewer cycle list=Set1,
-			]
-			
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,84.42433333333342) +- (0.48818318362776164,0.48818318362776164)
-				(0.03,94.58000000000008) +- (0.7590682979546823,0.7590682979546823)
-				(0.06,104.16933333333341) +- (0.9593474089618866,0.9593474089618866)
-				(0.09,112.96100000000004) +- (1.1435810712134045,1.1435810712134045)
-				(0.12,123.12766666666673) +- (1.3110217663901353,1.3110217663901353)
-				(0.15,133.45099999999996) +- (1.4819896270017245,1.4819896270017245)
-				(0.18,144.64833333333337) +- (1.7543463521196259,1.7543463521196259)
-				(0.21,156.10100000000006) +- (1.8389701889959469,1.8389701889959469)
-				(0.24,164.73633333333342) +- (2.0036768667811726,2.0036768667811726)
-				(0.27,174.6089999999998) +- (2.178768916306044,2.178768916306044)
-				(0.3,185.79433333333355) +- (2.3878569440384445,2.3878569440384445)
-				};
-				
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,78.89) +- (0.27456880363370567,0.27456880363370567)
-				(0.03,88.35999999999994) +- (0.5949810211874474,0.5949810211874474)
-				(0.06,96.18166666666663) +- (0.8069986384650353,0.8069986384650353)
-				(0.09,106.09966666666672) +- (0.982227425776005,0.982227425776005)
-				(0.12,115.16800000000002) +- (1.2271426247332984,1.2271426247332984)
-				(0.15,124.09800000000008) +- (1.3952859249257519,1.3952859249257519)
-				(0.18,132.79266666666678) +- (1.477832940401654,1.477832940401654)
-				(0.21,144.13166666666655) +- (1.743362552360611,1.743362552360611)
-				(0.24,155.11033333333353) +- (1.9288902333396725,1.9288902333396725)
-				(0.27,164.48399999999995) +- (2.0505359440820365,2.0505359440820365)
-				(0.3,174.51366666666692) +- (2.2123200228182895,2.2123200228182895)
-				};
-				
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,82.1359999999999) +- (0.481627449925734,0.481627449925734)
-				(0.03,91.78700000000009) +- (0.7373058956050093,0.7373058956050093)
-				(0.06,101.18999999999991) +- (0.9138083205866466,0.9138083205866466)
-				(0.09,110.40899999999996) +- (1.1087387112989255,1.1087387112989255)
-				(0.12,121.07500000000007) +- (1.3337230541358298,1.3337230541358298)
-				(0.15,130.3443333333334) +- (1.4906856150442356,1.4906856150442356)
-				(0.18,140.4889999999999) +- (1.6718904562366954,1.6718904562366954)
-				(0.21,150.54966666666675) +- (1.82883157440412,1.82883157440412)
-				(0.24,160.60566666666665) +- (1.9374852542365173,1.9374852542365173)
-				(0.27,170.51466666666659) +- (2.106442928189067,2.106442928189067)
-				(0.3,180.63199999999998) +- (2.279325713735254,2.279325713735254)
-				};
-			
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,84.96400000000015) +- (0.5054141804694122,0.5054141804694122)
-				(0.03,92.39600000000004) +- (0.6888360306817554,0.6888360306817554)
-				(0.06,99.32033333333344) +- (0.8282528759399794,0.8282528759399794)
-				(0.09,107.10766666666646) +- (0.9777684320326531,0.9777684320326531)
-				(0.12,114.52933333333316) +- (1.1010530071532976,1.1010530071532976)
-				(0.15,124.41733333333332) +- (1.2499177639008978,1.2499177639008978)
-				(0.18,131.9396666666667) +- (1.3815070097921498,1.3815070097921498)
-				(0.21,142.7686666666668) +- (1.5213088484131245,1.5213088484131245)
-				(0.24,152.11066666666653) +- (1.7330540456111263,1.7330540456111263)
-				(0.27,161.40199999999996) +- (1.8910409783285445,1.8910409783285445)
-				(0.3,173.2549999999999) +- (2.032668761244095,2.032668761244095)
-				};
-
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,78.44466666666658) +- (0.4703811455110453,0.4703811455110453)
-				(0.03,88.15233333333322) +- (0.7061974717284895,0.7061974717284895)
-				(0.06,97.15900000000005) +- (0.90348263384854,0.90348263384854)
-				(0.09,107.15133333333337) +- (1.1525562722909646,1.1525562722909646)
-				(0.12,116.55166666666656) +- (1.3048533844230545,1.3048533844230545)
-				(0.15,127.26099999999987) +- (1.4268096858103694,1.4268096858103694)
-				(0.18,140.5930000000001) +- (1.7016911888932833,1.7016911888932833)
-				(0.21,148.98766666666674) +- (1.8194792162364515,1.8194792162364515)
-				(0.24,158.14699999999996) +- (1.9889064005737578,1.9889064005737578)
-				(0.27,172.67833333333323) +- (2.216697108794417,2.216697108794417)
-				(0.3,180.89166666666674) +- (2.319399712430317,2.319399712430317)
-				};
-
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,84.09033333333335) +- (0.4601941795292904,0.4601941795292904)
-				(0.03,92.09566666666669) +- (0.6972430851773483,0.6972430851773483)
-				(0.06,99.69833333333322) +- (0.8051001973778701,0.8051001973778701)
-				(0.09,108.1813333333333) +- (1.0185699383101847,1.0185699383101847)
-				(0.12,117.38766666666665) +- (1.1986002178713595,1.1986002178713595)
-				(0.15,126.758) +- (1.3152128894019068,1.3152128894019068)
-				(0.18,133.00100000000006) +- (1.3507781597544566,1.3507781597544566)
-				(0.21,144.1306666666665) +- (1.6094246188269945,1.6094246188269945)
-				(0.24,154.76966666666695) +- (1.7988642667400194,1.7988642667400194)
-				(0.27,167.0646666666667) +- (1.9805782881645544,1.9805782881645544)
-				(0.3,175.11600000000027) +- (2.1962243758795057,2.1962243758795057)
-				};
-
-				\legend{MixIni,FAIL\_RAW,INCOHERENCE\_INTERP,FEEDBACK\_RAW,BARGE\_IN\_RESP (System),BARGE\_IN\_RESP (User)}
-			\end{axis}
-			\end{tikzpicture}
-		\end{minipage}
-		\begin{minipage}{.47\textwidth}
-			\begin{tikzpicture}[scale=0.7]
-				\begin{axis}[
-				xlabel={WER},
-				ylabel={TTP Task completion ratio},
-				scaled ticks = false,
-				tick label style={/pgf/number format/fixed},
-				xmin=0, xmax=0.3,
-				ymin=0.6, ymax=1,
-				xtick={0,0.06,0.12,0.18,0.24,0.3},
-				ytick={0.6,0.7,0.8,0.9,1},
-				legend pos=south west,
-				ymajorgrids=true,
-				grid style=dashed,
-				colorbrewer cycle list=Set1,
-			]
-			
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,0.9766666666666654) +- (0.005271391973032027,0.005271391973032027)
-				(0.03,0.9586666666666649) +- (0.006809225428295863,0.006809225428295863)
-				(0.06,0.9459999999999984) +- (0.008153746579880043,0.008153746579880043)
-				(0.09,0.9229999999999976) +- (0.00972652948498309,0.00972652948498309)
-				(0.12,0.8893333333333304) +- (0.011083121710261656,0.011083121710261656)
-				(0.15,0.8713333333333304) +- (0.011922286164062957,0.011922286164062957)
-				(0.18,0.8326666666666637) +- (0.013033893566818056,0.013033893566818056)
-				(0.21,0.8086666666666636) +- (0.013989940030052796,0.013989940030052796)
-				(0.24,0.7719999999999975) +- (0.014842951153101578,0.014842951153101578)
-				(0.27,0.7283333333333315) +- (0.015221054277984612,0.015221054277984612)
-				(0.3,0.6713333333333323) +- (0.016525640167126494,0.016525640167126494)
-				};
-				
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,0.9803333333333328) +- (0.004868056769504311,0.004868056769504311)
-				(0.03,0.9769999999999993) +- (0.0053173065696425145,0.0053173065696425145)
-				(0.06,0.9533333333333314) +- (0.0072281228545189955,0.0072281228545189955)
-				(0.09,0.9446666666666651) +- (0.008275544093560272,0.008275544093560272)
-				(0.12,0.9179999999999982) +- (0.009810534782117202,0.009810534782117202)
-				(0.15,0.8949999999999974) +- (0.011083102453736804,0.011083102453736804)
-				(0.18,0.8569999999999974) +- (0.012918153008676625,0.012918153008676625)
-				(0.21,0.8309999999999973) +- (0.013672488847642736,0.013672488847642736)
-				(0.24,0.787666666666664) +- (0.014272470040840647,0.014272470040840647)
-				(0.27,0.7556666666666644) +- (0.014979880497966485,0.014979880497966485)
-				(0.3,0.7256666666666647) +- (0.015620966372155766,0.015620966372155766)
-				};
-				
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,0.9729999999999993) +- (0.005786298590444989,0.005786298590444989)
-				(0.03,0.9649999999999989) +- (0.006661917975412438,0.006661917975412438)
-				(0.06,0.9459999999999978) +- (0.008101227956305223,0.008101227956305223)
-				(0.09,0.9159999999999974) +- (0.009789017846547567,0.009789017846547567)
-				(0.12,0.8986666666666638) +- (0.010444836546778366,0.010444836546778366)
-				(0.15,0.8766666666666638) +- (0.011634103890431869,0.011634103890431869)
-				(0.18,0.8383333333333308) +- (0.012931627207055148,0.012931627207055148)
-				(0.21,0.8133333333333304) +- (0.013554108192312718,0.013554108192312718)
-				(0.24,0.773666666666664) +- (0.014342995558809442,0.014342995558809442)
-				(0.27,0.7263333333333313) +- (0.015363185774948383,0.015363185774948383)
-				(0.3,0.6803333333333316) +- (0.015994248516264135,0.015994248516264135)
-				};
-			
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,0.9736666666666655) +- (0.005723997965681301,0.005723997965681301)
-				(0.03,0.9579999999999982) +- (0.007219968901134631,0.007219968901134631)
-				(0.06,0.9433333333333311) +- (0.008136557830763266,0.008136557830763266)
-				(0.09,0.9433333333333312) +- (0.008240810100416832,0.008240810100416832)
-				(0.12,0.9266666666666641) +- (0.009367988993257973,0.009367988993257973)
-				(0.15,0.8989999999999972) +- (0.010477621367044112,0.010477621367044112)
-				(0.18,0.8903333333333306) +- (0.011063520508611709,0.011063520508611709)
-				(0.21,0.8543333333333308) +- (0.012567644036264244,0.012567644036264244)
-				(0.24,0.8359999999999974) +- (0.013356408938534313,0.013356408938534313)
-				(0.27,0.8033333333333316) +- (0.01388852059956223,0.01388852059956223)
-				(0.3,0.7693333333333308) +- (0.014567077254321065,0.014567077254321065)
-				};
-
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,0.976666666666666) +- (0.005430925437816175,0.005430925437816175)
-				(0.03,0.9713333333333324) +- (0.005865609056185905,0.005865609056185905)
-				(0.06,0.9539999999999983) +- (0.00730320302333284,0.00730320302333284)
-				(0.09,0.9266666666666655) +- (0.009681685803619819,0.009681685803619819)
-				(0.12,0.9033333333333303) +- (0.010532657362277521,0.010532657362277521)
-				(0.15,0.8796666666666644) +- (0.011699574761504065,0.011699574761504065)
-				(0.18,0.857666666666663) +- (0.011952090071058753,0.011952090071058753)
-				(0.21,0.8156666666666635) +- (0.013566557516351501,0.013566557516351501)
-				(0.24,0.7773333333333303) +- (0.014547138250835373,0.014547138250835373)
-				(0.27,0.7336666666666644) +- (0.015190512822885378,0.015190512822885378)
-				(0.3,0.6863333333333319) +- (0.015889826900672917,0.015889826900672917)
-				};
-
-			\addplot+[
-				error bars/.cd,
-				y dir=both,
-				y explicit,
-				]
-				coordinates {
-				(0.0,0.9779999999999992) +- (0.005212109728529413,0.005212109728529413)
-				(0.03,0.964333333333332) +- (0.006518649498853482,0.006518649498853482)
-				(0.06,0.9539999999999984) +- (0.007476485876846385,0.007476485876846385)
-				(0.09,0.9383333333333317) +- (0.008587668419827768,0.008587668419827768)
-				(0.12,0.9106666666666638) +- (0.010250797917995593,0.010250797917995593)
-				(0.15,0.8923333333333304) +- (0.011100342905615639,0.011100342905615639)
-				(0.18,0.8689999999999969) +- (0.012021173549663974,0.012021173549663974)
-				(0.21,0.831999999999997) +- (0.013293109887792191,0.013293109887792191)
-				(0.24,0.8039999999999962) +- (0.013551840586758856,0.013551840586758856)
-				(0.27,0.7699999999999971) +- (0.01425255314359996,0.01425255314359996)
-				(0.3,0.7326666666666641) +- (0.015305244974627383,0.015305244974627383)
-				};
-
-				\legend{MixIni,FAIL\_RAW,INCOHERENCE\_INTERP,FEEDBACK\_RAW,BARGE\_IN\_RESP (System),BARGE\_IN\_RESP (User)}
-			\end{axis}
-			\end{tikzpicture}
-		\end{minipage}
 	\end{figure*}
     
-    	As already mentioned in Chapter \ref{ch:taxonomy}, the main objective of our TTP taxonomy is to break human dialogue turn-taking into small pieces, and hopefully get a better understanding of it. To illustrate this approach, we take a deeper look at MixIni+Incr by isolating its different components: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP (User) and BARGE\_IN\_RESP (System). The results reported in Fig. \ref{fig:ttp} show that FEEDBACK contributes the most to improve the baseline followed by BARGE\_IN\_RESP (User) and FAIL\_RAW. INCOHERENCE\_INTERP and BARGE\_IN\_RESP (System) seem to have no effect. This is due to the fact that in general, to detect an incoherence, one must wait until the end of the utterance (same requirement for detecting all the information needed to barge-in and provide an answer). One might argue that in some case, the US tries to refer to a non existing event (in the case of a MODIFY or DELETE action), therefore triggering an incoherence. In reality, our service is able to recognise an existing event even if only a prefix of its title is recognised. As a consequence, INCOHERENCE\_INTERP is rarely triggered in the middle of a request. In order to force that case to occur more often, a scenario where the US has to try to move an event five times before encountering a free slot has been designed. The results are shown in Fig. \ref{fig:incoh}: this time, INCOHERENCE\_INTERP has a true added value.
-        
-        This little experiment raises an important point when it comes to studying efficiency in task oriented dialogues and as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the dialogue frame. Here, the focus is efficiency, however, human-machine dialogue can also be used in a non task oriented fashion. The metrics chosen here make no longer pertinent in such a frame and it would make more sense to consider subjective ones. Moreover, even in task oriented dialogue, booking a train is very different from dictating a text message. In the first case, a keyword spotting NLU is adapted to the task at hand but in the second situation, the system does try to understand what the user is saying. The feedback can be very useful in this situation for instance.
-        
-        %HK> Enlever les \caption en italique dans toute la thèse.
-        %HK> Homogénéiser Fig., Sect., Chapter...
+    	First, recall that as announced in Chapter \ref{ch:simulation}, SM=2 and therefore, the last stable utterance corresponds to the last user's request without the last two words.
+    
+    	 \paragraph{FAIL\_RAW:} Happens when the user speaks for too long with no key concept detected in her speech. It depends on the system's last question (the type of information it is waiting for). For open questions (all the slots at once), this key concept is the action type (ADD, MODIFY or DELETE). For the dates and the time window, it corresponds to the slot value whereas in the case of yes/no questions, it corresponds to the concepts YES and NO. This TTP is not relevant when the user utters an event description since it is an open slot. Let $KeyConcept$ be a boolean indicating whether the key concept the system is waiting for has been pronounced or not and let $\Delta t$ be the duration of the user's utterance so far. Therefore:
+			
+			\begin{eqnarray}
+				CommitCond & = & \neg KeyConcept \wedge (\Delta t \geq \xi) \nonumber
+			\end{eqnarray}
+			
+			where $\xi$ is empirically set to 6 for open questions, 4 for date questions, 6 for time window questions and 3 for yes/no questions (values chosen to be reasonable given the number of words that is needed to provide the key concept).
+         
+         \paragraph{INCOHERENCE\_INTERP:} In this implementation, this event is triggered as soon as the last stable utterance generates an overlap with an existing event in the agenda, or it tries to move or delete a non existing event.
+         
+         \paragraph{FEEDBACK:} At each new micro-turn, given that no boosting is involved, the N-Best best score relative variation is equal to the best score of the most recent word N-Best. Therefore, as the word score is not accessible by the Scheduler, the ratio $s_t/s_{t-1}$ can be used as a proxy for that value. Similarly, the score of the last word of the last stable utterance can be estimated by $s_{t-SM}/s_{t-SM-1}$. Let $persist$ be a boolean that determines whether the last word of the last stable utterance has changed since it has first been pronounced, then (0.7 being an empirical value):
+				
+					\begin{eqnarray}
+						CommitCond & = & persist \wedge (\frac{s_{t-SM}}{s_{t-SM-1}} \leq 0.7) \nonumber
+					\end{eqnarray}
+         
+         \paragraph{BARGE\_IN\_RESP (System):} Depending on the last system's dialogue act (apart from dialogue acts reporting errors), the system can choose to barge-in once it has all the information needed to provide an answer. Again, it should also wait for the SM.
+         
+         %HK> Trouver une référence montrant que l'utilisateur peut inférer la fin de la phrase du système avec l'habitude.
+         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the a user's decision. Hence, it has been implemented in the US: a barge-in point has been determined in advance for each system's dialogue act template.
+    
+    \subsection{Experiments}
+		
+		%HK> Enlever les \caption en italique dans toute la thèse.
+        %HK> Homogénéiser Figure, Section, Chapter...
         \begin{figure*}[t]
-		\caption{INCOHERENCE\_INTERP evaluated in a more adapted task}
 		\centering
-		\label{fig:incoh}
 		\begin{minipage}{.47\textwidth}
 			\begin{tikzpicture}[scale=0.7]
 				\begin{axis}[
@@ -901,7 +967,18 @@
 			\end{axis}
 			\end{tikzpicture}
 		\end{minipage}
+		\caption{INCOHERENCE\_INTERP evaluated in a more adapted task}
+		\label{fig:incoh}
 	\end{figure*}
+    
+    	In this experiment, the TTP described in Section \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Section \ref{subsec:strategies}. Incremental processing is useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Figure \ref{fig:generic}.
+        
+        %HK> Si on fait de l'apprentissage multi-agent, on peut en parler ici (MixIni+Incr => MixIniRL+Incr => MixIniRL+IncrRL).
+     	Adding mixed initiative behaviour or incrementality to UsrIni are both ways to improve its robustness to errors. Figure \ref{fig:generic} shows that incrementality is more efficient. Most importantly, it is shown that MixIni and incremental behaviour can be combined to form the best strategy.
+    
+    	As already mentioned in Chapter \ref{ch:taxonomy}, the main objective of the TTP taxonomy is to break human dialogue turn-taking into small pieces in order to get a better understanding of it. To illustrate this approach, a deeper look is taken at MixIni+Incr by isolating its different components\footnote{One of the advantages of the Scheduler approach is that the different TTP are implemented as independent decision makers that can easily be combined to form the aggregated strategies, but that can also be isolated and analysed separately.}: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP (User) and BARGE\_IN\_RESP (System). The results reported in Figure \ref{fig:ttp} show that FEEDBACK contributes the most to improve the baseline followed by BARGE\_IN\_RESP (User) and FAIL\_RAW. INCOHERENCE\_INTERP and BARGE\_IN \_RESP (System) seem to have no effect. This is due to the fact that in general, to detect an incoherence, one must wait until the end of the utterance (same requirement for detecting all the information needed to barge-in and provide an answer). One might argue that in some cases, the US tries to refer to a non existing event (in the case of a MODIFY or DELETE action), therefore triggering an incoherence. However, as stated before, the service is able to recognise an existing event even if only a prefix of its title is recognised. As a consequence, INCOHERENCE\_INTERP is rarely triggered in the middle of a request. Therefore, another scenario where that situation occurs more often has been tested: the US has to try to move an event five times before encountering a free time window has been designed. The results are shown in Figure \ref{fig:incoh}: this time, INCOHERENCE\_INTERP has a visible added value.
+				
+				 This little experiment raises an important point when it comes to studying efficiency in task oriented dialogues and as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the nature of the task at hand. In the previous example, INCOHERENCE\_INTERP is shown to have no impact in some kind of situation but it brings some improvement in other situations. Another example is the feedback which is more likely to improve the baseline when open slots are involved and especially long ones like this is the case in message dictation for example (\textit{Send mom a message telling her that...}) whereas it has very limited impact in a train booking dialogue for example, where only constrained slots come into play.
         
         
     

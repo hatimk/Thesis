@@ -21,10 +21,10 @@
 \contentsline {table}{\numberline {5.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{87}{table.caption.203}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{89}{chapter.206}
-\contentsline {table}{\numberline {6.1}{\ignorespaces {\it The three scenarios used in the simulation}\relax }}{91}{table.caption.211}
+\contentsline {table}{\numberline {6.1}{\ignorespaces The three scenarios used in the simulation\relax }}{95}{table.caption.213}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{97}{chapter.224}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{99}{chapter.228}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{103}{chapter.237}
+\contentsline {xchapter}{Experiment with real users}{105}{chapter.241}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{105}{chapter.240}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{107}{chapter.244}
