@@ -31,9 +31,9 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{97}{figure.caption.226}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{99}{chapter.228}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{103}{figure.caption.239}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{104}{figure.caption.240}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{105}{figure.caption.249}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{106}{figure.caption.250}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{105}{chapter.241}
+\contentsline {xchapter}{Experiment with real users}{107}{chapter.252}
 \addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{107}{chapter.244}
+\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{109}{chapter.255}

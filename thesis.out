@@ -74,19 +74,19 @@
 \BOOKMARK [0][-]{chapter.228}{Reinforcement learning for turn-taking optimisation}{part.72}% 74
 \BOOKMARK [1][-]{section.229}{Model}{chapter.228}% 75
 \BOOKMARK [2][-]{subsection.230}{State representation}{section.229}% 76
-\BOOKMARK [2][-]{subsection.231}{Actions, rewards and episodes}{section.229}% 77
-\BOOKMARK [2][-]{subsection.232}{Fitted-Q Value Iteration}{section.229}% 78
-\BOOKMARK [1][-]{section.233}{Experiment}{chapter.228}% 79
-\BOOKMARK [2][-]{subsection.234}{Setup}{section.233}% 80
-\BOOKMARK [2][-]{subsection.238}{Results}{section.233}% 81
-\BOOKMARK [0][-]{chapter.241}{Experiment with real users}{part.72}% 82
-\BOOKMARK [1][-]{section.242}{Protocol}{chapter.241}% 83
-\BOOKMARK [1][-]{section.243}{Results}{chapter.241}% 84
-\BOOKMARK [0][-]{chapter.244}{A new reinforcement learning approach adapted to incremental dialogue}{part.72}% 85
-\BOOKMARK [1][-]{section.245}{Problem}{chapter.244}% 86
-\BOOKMARK [1][-]{section.246}{Proposed approach}{chapter.244}% 87
-\BOOKMARK [1][-]{section.247}{Toy problem application}{chapter.244}% 88
-\BOOKMARK [1][-]{section.248}{Simulation results}{chapter.244}% 89
-\BOOKMARK [0][-]{chapter*.249}{Liste des illustrations}{part.72}% 90
-\BOOKMARK [0][-]{chapter*.250}{Liste des tableaux}{part.72}% 91
-\BOOKMARK [0][-]{chapter*.251}{Bibliographie}{part.72}% 92
+\BOOKMARK [2][-]{subsection.236}{Actions, rewards and episodes}{section.229}% 77
+\BOOKMARK [2][-]{subsection.237}{Fitted-Q Value Iteration}{section.229}% 78
+\BOOKMARK [1][-]{section.244}{Experiment}{chapter.228}% 79
+\BOOKMARK [2][-]{subsection.245}{Setup}{section.244}% 80
+\BOOKMARK [2][-]{subsection.251}{Results}{section.244}% 81
+\BOOKMARK [0][-]{chapter.252}{Experiment with real users}{part.72}% 82
+\BOOKMARK [1][-]{section.253}{Protocol}{chapter.252}% 83
+\BOOKMARK [1][-]{section.254}{Results}{chapter.252}% 84
+\BOOKMARK [0][-]{chapter.255}{A new reinforcement learning approach adapted to incremental dialogue}{part.72}% 85
+\BOOKMARK [1][-]{section.256}{Problem}{chapter.255}% 86
+\BOOKMARK [1][-]{section.257}{Proposed approach}{chapter.255}% 87
+\BOOKMARK [1][-]{section.258}{Toy problem application}{chapter.255}% 88
+\BOOKMARK [1][-]{section.259}{Simulation results}{chapter.255}% 89
+\BOOKMARK [0][-]{chapter*.260}{Liste des illustrations}{part.72}% 90
+\BOOKMARK [0][-]{chapter*.261}{Liste des tableaux}{part.72}% 91
+\BOOKMARK [0][-]{chapter*.262}{Bibliographie}{part.72}% 92
