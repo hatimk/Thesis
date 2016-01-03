@@ -30,14 +30,12 @@
 		\item Modifying a flight reservation
 	\end{itemize}
 	
-	Some tasks involve retrieving information from a database and others make the system modify the outside world (database modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system after it the user has made a request with all the necessary information. The task of driving a robot from point A to point B could involve the following elementary tasks.
+	Some tasks involve retrieving information from a database and others make the system modify the outside world (database modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system after it the user has made a request with all the necessary information. The task of scheduling an appointment could involve several elementary tasks, for example
 	
 	\begin{enumerate}
-		\item Go straightforward until you reach the STOP sign
-		\item Turn right
-		\item Go straightforward until you reach the wall
-		\item turn left
-		\item Go straightforward until you reach the point B
+		\item Proposing a first time window (refused by the system).
+		\item Refusing a second time window that are proposed by the system.
+		\item Proposing a third time window (accepted by the system).
 	\end{enumerate}
 	
 	The way a task is organised in elementary tasks might affect the efficiency of its execution. However, this is very dependent on the task at hand and as a consequence, it is out of the scope of this thesis. The latter focuses on the way elementary tasks are handled: the optimisation of elementary tasks using different dialogue strategies.
@@ -46,14 +44,14 @@
 	
 		$$
 		\begin{bmatrix}
-			s_1 & x_1 \\
-			s_2 & x_2 \\
+			slot_1 & x_1 \\
+			slot_2 & x_2 \\
 			... & ... \\
-			s_n & x_n
+			slot_n & x_n
 		\end{bmatrix}
 		$$
 	
-	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. More precisely, $ET_k$ consists on performing an action $a_k$ as a response to a user's request $X_k = (x_1, x_2, ...)$ which is a vector containing the slot values provided in his utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to compute $a_k$, then $a_k = f(X_k,C_k)$, $f$ being defined in the dialogue system.
+	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. More precisely,  before performing $ET_k$, the system has to understand the user's request $X_k = (x_1, x_2, ...)$ which is a vector containing the slot values provided in his utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to perform $ET_k$, then $ET_k = f(X_k,C_k)$, $f$ being defined in the dialogue system.
 	
 	Moreover, a distinction can be made between two kinds of slots:
 	
@@ -70,15 +68,15 @@
 	Depending on the task, the dialogue system and the user, slots can be filled in different ways in order to complete an elementary task. Three generic strategies are presented here but before delving into that, the notion of \textit{initiative} is introduced. Consider the following dialogue between a customer and a receptionist:
 	
 	\begin{dialogue}
-		\speak{Customer} Hi. I would like to book a room please, leaving on Monday.
-		\speak{Receptionist} Sure. Are you driving sir?
+		\speak{Customer} Hi. I would like to book a room for tonight please.
+		\speak{Receptionist} Sure. Do you need a parking lot?
 		\speak{Customer} No. I came here by train.
 		\speak{Receptionist} All right. Would you like a smoking room?
 		\speak{Customer} No, I don't smoke.
 		\speak{Receptionist} Ok. What about breakfast?
 		\speak{Customer} Yes, please. I will have it here.
 		\speak{Receptionist} Great, all set then! Let me get your key...
-		\speak{Customer} Thanks. When should I check out on Monday?
+		\speak{Customer} Thanks. When should I check out tomorrow?
 		\speak{Receptionist} Checkout is before 11:30am.
 		\speak{Customer} Ok. My train is leaving at 6:00pm, would it be possible to leave my bag here and get it back by then?
 		\speak{Receptionist} Absolutely sir. No problem.
@@ -86,22 +84,22 @@
 
 	This dialogue can be split into three phases. First, the customer starts the conversation by making a request. It is a result of his own initiative and he is setting the subject of the conversation. Then the receptionist provides an answer and takes the initiative right after by starting to ask specific questions. When, all the necessary information for the reservation is provided, the customer takes the initiative again to get some additional clarifications.
 	
-	Such a distinction can also be made in the case of dialogue systems \cite{Ferguson2007}. When using a \textit{system initiative} strategy, the latter makes requests and asks questions that the user should respond to in order to move the dialogue forward. Symmetrical strategies are called \textit{user initiative} (the user leads the course of the dialogue). Finally, strategies that involve both dialogue modes are called \textit{mixed initiative} strategies. This three dialogue strategies are presented and discussed in the following.
+	Such a distinction can also be made in the case of dialogue systems \cite{Ferguson2007}. When using a \textit{system initiative} strategy, the latter makes requests and asks questions that the user should respond to in order to move the dialogue forward. Symmetrical strategies are called \textit{user initiative} (the user leads the course of the dialogue). Finally, strategies that involve both dialogue modes are called \textit{mixed initiative} strategies. These three dialogue strategies are presented and discussed in the following.
 	
 	\subsection{System initiative strategies}
 	
 		System initiative strategies can be compared to form-filling. The user is asked to fill several slots in a progressive way. Slot values can be asked for one by one or little group by little group. However, the \textit{one by one} case is the most common and the most simple, therefore, this thesis will focus on that case.
 		
-		Formally, consider an elementary task $ET$ that involves $n$ slots: $s_1, ..., s_n$. Completing $ET$ using the system initiative strategies consists on a dialogue with $n$ system questions $q(s_1),...,q(s_n)$ followed by the $n$ corresponding answers containing the required slot values $x_1,...,x_n$. If an error occurs when trying to get $x_k$, the problem is reported and the user is asked to repeat (or reformulate) her response again. Moving to the next slot requires successfully communicating the current one. To recap, a user initiative dialogue looks like the following:
+		Formally, consider an elementary task $ET$ that involves $n$ slots: $slot_1, ..., slot_n$. Completing $ET$ using the system initiative strategies consists on a dialogue with $n$ system questions $ASK(s_1),...,ASK(s_n)$ followed by the $n$ corresponding answers containing the required slot values $x_1,...,x_n$. If an error occurs when trying to get $x_k$, the problem is reported and the user is asked to repeat (or reformulate) her response again. Moving to the next slot requires successfully communicating the current one. To recap, a user initiative dialogue looks like the following:
 		
 		\begin{dialogue}
-			\speak{SYSTEM} $q(s_1)$
+			\speak{SYSTEM} $ASK(s_1)$
 			\speak{USER} $x_1$
-			\speak{SYSTEM} $q(s_2)$
+			\speak{SYSTEM} $ASK(s_2)$
 			\speak{USER} <noise>
-			\speak{SYSTEM} Sorry, I don't understand. $q(s_2)$
+			\speak{SYSTEM} Sorry, I don't understand. $ASK(s_2)$
 			\speak{USER} $x_2$ \\ \\ $[...]$
-			\speak{SYSTEM} $q(s_n)$
+			\speak{SYSTEM} $ASK(s_n)$
 			\speak{USER} $x_n$
 			\speak{SYSTEM} Confirmation message
 		\end{dialogue}
@@ -127,9 +125,9 @@
 		\begin{dialogue}
 			\speak{SYSTEM} What can I do for you?
 			\speak{USER} $x_1$, <noise>,$x_3$,<noise>,$x_n$
-			\speak{SYSTEM} $q(s_2)$
+			\speak{SYSTEM} $ASK(s_2)$
 			\speak{USER} $x_2$
-			\speak{SYSTEM} $q(s_4)$
+			\speak{SYSTEM} $ASK(s_4)$
 			\speak{USER} $x_4$
 			\speak{SYSTEM} Confirmation message
 		\end{dialogue}
@@ -140,16 +138,16 @@
 		
 		\begin{itemize}
 			\item All the slots have the same probability of not being understood: $p_{err}$.
-			\item The dialogue turns dedicated to greeting, saying bye and confirmation are neglected.
-			\item Open domain ASR grammar is used (the most common in recent dialogue systems).
-			\item Only constrained slots are considered (since they are the most usually used and since open slots only involve a constant number of turns in comparison with constrained ones when $p_err$ vary).
-			\item As a consequence, errors are mostly due to invalid input (not valid but incorrect), so the answer to the final confirmation is always positive.
+			\item The dialogue turns dedicated to greeting, saying bye and confirmation are irrelevant for the comparison and are therefore neglected.
+			\item Open domain ASR grammar is used (the most common in current dialogue systems).
+			\item Only constrained slots are considered (since they are the most frequently used and since open slots only involve a constant number of turns in comparison with constrained ones when $p_{err}$ vary).
+			\item As a consequence, errors are mostly due to invalid input (asked for again right after the request), so the answer to the final confirmation is considered to be always positive.
 		\end{itemize}
 
                 \paragraph{System initiative:} The $i^{th}$ slot requires $N_i = 1 + n^i_{err}$ dialogue turns, $n^i_{err}$ being the number of errors that occured before the system considers that the slot value has been understood. Therefore, $N_i$ follows a geometric distribution with parameter $1-p_{err}$:
 
                      \begin{eqnarray}
-                       \mathbb{P} (N_s = k) & = & p_{err}^{k-1} (1-p_{err}) \text{,  } \forall k \in \mathbb{N}^*
+                       \mathbb{P} (N_i = k) & = & p_{err}^{k-1} (1-p_{err}) \text{,  } \forall k \in \mathbb{N}^*
                      \end{eqnarray}
 
                      As a consequence, since $N = \sum_{i=1}^{n_s} N_i$:
@@ -164,11 +162,11 @@
                        \mathbb{E} [N] & = & \frac{1}{(1-p_{err})^{n_s}}
                      \end{eqnarray}
 
-                \paragraph{Mixed initiative:} In this case, $N=1$ with a probability of $(1-p_{err})^{n_s}$ (all the slots have been understood from the first request). Otherwise, let $n_{mis}$ be the number of missing (misunderstood) slots. Therefore:
-
-                     \begin{eqnarray}
-                       \mathbb{E} [N] & = & (1-p_{err})^{n_s} + \frac{\mathbb{E} [n_{mis}]}{1-p_{err}} (1 - (1-p_{err})^{n_s})
-                     \end{eqnarray}
+                \paragraph{Mixed initiative:} Let $n_{mis}$ be the number of missing (misunderstood) slots. Then by reasoning similarly as in the user initiative case,
+								
+											\begin{eqnarray}
+												\mathbb{E} [N | n_{mis}] & = & 1 + \frac{n_{mis}}{1-p_{err}}
+											\end{eqnarray}
 
                      Moreover, $n_{mis}$ follows a binomial distribution with parameters $p_{err}$ and $n_s$:
 										
@@ -179,14 +177,14 @@
 										Consequently,
 
                      \begin{eqnarray}
-                       \mathbb{E} [N] & = & (1-p_{err})^{n_s} + \frac{p_{err} n_s}{1-p_{err}} (1 - (1-p_{err})^{n_s})
+                       \mathbb{E} [N] & = & 1 + \frac{p_{err} n_s}{1-p_{err}}
                      \end{eqnarray}
 										
 								Figure \ref{fig:effcompare} compares the efficiency of these three slot-filling strategies under different noise conditions. $\mathbb{E} [N]$ is used as a proxy for efficiency and $p_{err}$ represents the level of noise.
 								
 								\begin{figure}[t]
 				\centering
-				\begin{tikzpicture}[scale=1.5]
+				\begin{tikzpicture}[scale=1.0]
 				\begin{axis}[
 					xlabel={Error probability ($p_{err}$)},
 					ylabel={Average number of turns ($\mathbb{E} [N]$)},
@@ -335,58 +333,56 @@
 					]
 					coordinates {
 					(0,1)
-(0.01,0.95346529990505)
-(0.02,0.91372479712653)
-(0.03,0.880579279457732)
-(0.04,0.853836718933333)
-(0.05,0.833312269736842)
-(0.06,0.818828270570213)
-(0.07,0.810214251821505)
-(0.08,0.807306947895652)
-(0.09,0.809950315105495)
-(0.1,0.817995555555556)
-(0.11,0.831301147489888)
-(0.12,0.849732882618182)
-(0.13,0.873163910981609)
-(0.14,0.901474793972093)
-(0.15,0.934553566176471)
-(0.16,0.972295806780952)
-(0.17,1.01460472134217)
-(0.18,1.06139123480976)
-(0.19,1.11257409677284)
-(0.2,1.16808)
-(0.21,1.22784371345063)
-(0.22,1.29180823105641)
-(0.23,1.35992493770649)
-(0.24,1.43215379402105)
-(0.25,1.50846354166667)
-(0.26,1.58883193115676)
-(0.27,1.67324597429315)
-(0.28,1.76170222364445)
-(0.29,1.85420708172676)
-(0.3,1.95077714285714)
-(0.31,2.0514395709942)
-(0.32,2.15623251727059)
-(0.33,2.26520558136418)
-(0.34,2.37842032135758)
-(0.35,2.49595081730769)
-(0.36,2.6178842944)
-(0.37,2.74432181230794)
-(0.38,2.87537902823226)
-(0.39,3.01118704207541)
-(0.4,3.15189333333334)
-(0.41,3.29766280058644)
-(0.42,3.44867891597242)
-(0.43,3.60514500876141)
-(0.44,3.76728569417143)
-(0.45,3.93534846590909)
-(0.46,4.10960547365926)
-(0.47,4.29035550995095)
-(0.48,4.47792623458462)
-(0.49,4.67267666922746)
-(0.5,4.875)
-
-
+(0.01,1.05050505050505)
+(0.02,1.10204081632653)
+(0.03,1.15463917525773)
+(0.04,1.20833333333333)
+(0.05,1.26315789473684)
+(0.06,1.31914893617021)
+(0.07,1.37634408602151)
+(0.08,1.43478260869565)
+(0.09,1.49450549450549)
+(0.1,1.55555555555556)
+(0.11,1.61797752808989)
+(0.12,1.68181818181818)
+(0.13,1.74712643678161)
+(0.14,1.81395348837209)
+(0.15,1.88235294117647)
+(0.16,1.95238095238095)
+(0.17,2.02409638554217)
+(0.18,2.09756097560976)
+(0.19,2.17283950617284)
+(0.2,2.25)
+(0.21,2.32911392405063)
+(0.22,2.41025641025641)
+(0.23,2.49350649350649)
+(0.24,2.57894736842105)
+(0.25,2.66666666666667)
+(0.26,2.75675675675676)
+(0.27,2.84931506849315)
+(0.28,2.94444444444445)
+(0.29,3.04225352112676)
+(0.3,3.14285714285714)
+(0.31,3.2463768115942)
+(0.32,3.35294117647059)
+(0.33,3.46268656716418)
+(0.34,3.57575757575758)
+(0.35,3.69230769230769)
+(0.36,3.8125)
+(0.37,3.93650793650794)
+(0.38,4.06451612903226)
+(0.39,4.19672131147541)
+(0.4,4.33333333333334)
+(0.41,4.47457627118644)
+(0.42,4.62068965517242)
+(0.43,4.77192982456141)
+(0.44,4.92857142857143)
+(0.45,5.09090909090909)
+(0.46,5.25925925925926)
+(0.47,5.43396226415095)
+(0.48,5.61538461538462)
+(0.49,5.80392156862746)
+(0.5,6)
 					};
                     
 
@@ -427,7 +423,7 @@
 
           The user is interrupted by the system at the first dialogue turn. If the latter didn't make such a decision, its response would have been the same (\textit{Sorry, I don't understand. What can I do for you?}) since an important part of the request was lost. Therefore, the system barge-in spared the user some time and energy. In this example, the second time the user tries to formulate his request, he does it in a more concise way and repeats it as an effort to make himself clearer. This kind of behaviour have been noticed as a result of a corpus study led in \cite{Ghigi2014}.
 
-     \paragraph{INCOHERENCE\_INTERP:} Some user's requests can be problematic for the system because they are not coherent with the current dialogue context. The user might ask for a non existing information or try to perform some forbidden modification in the database for example. This can also be due to an transmission error (noise, ASR imperfection...) or simply because the user is not well aware of the dialogue context and the system's constraints. However, if an open grammar domain is used, the first reason is less likely to be the cause of the problem (transmission error more often lead to a non understandable utterance by the system). Consider the following example:
+     \paragraph{INCOHERENCE\_INTERP:} Some user's requests can be problematic for the system because they are not coherent with the current dialogue context. The user might ask for a non existing information or try to perform some forbidden modification in the database for example. This can also be due to a transmission error (noise, ASR imperfection...) or simply because the user is not well aware of the dialogue context and the system's constraints. However, if an open grammar domain is used, the first reason is less likely to be the cause of the problem (a transmission error more often leads to a non understandable utterance by the system). Consider the following example:
 		
 					\begin{dialogue}
 						\speak{USER} I would like to book a room for tomorrow and I will be ...

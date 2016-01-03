@@ -1,9 +1,7 @@
-\chapter{Turn-taking taxonomy}
+\chapter{Turn-taking phenomena taxonomy}
 \label{ch:taxonomy}
 
 \section{Introduction}
-
-				In this chapter, the following question is tackled: what is turn-taking? In \cite{Raux2009}, four basic turn-taking transitions are introduced: \textit{the turn transitions with gap}, \textit{the turn transitions with overlap}, \textit{the failed interruptions} and \textit{the time outs}. A \textit{turn-taking labeling scheme} has been proposed in \cite{Gravano2011} (which extends the original \textit{classification of interruptions and smooth speaker-switches} introduced in \cite{Beattie1982}). This classification is richer as the meaning of the involved turn-taking behaviours is taken into account. Here, the aim is to go even further by using several levels of analysis in order to introduce a new taxonomy of turn-taking phenomena \cite{Khouzaimi2015c}. It is aimed to provide a better grasp of the concept of turn-taking by breaking it into small manageable pieces that can be implemented and studied separately.
 				
 				In Chapter \ref{ch:stateofart}, the reader is given some clues and some previous work references in order to build a first intuition of what turn-taking is. Here, an analysis of turn-taking in human conversation is performed. It is aimed to provide an answer to the four following questions:
 
@@ -13,6 +11,8 @@
           \item What are the general categories that emerge from the general picture drawn by this classification?
           \item What phenomena are worth implementing in dialogue systems and why?
         \end{enumerate}
+				
+				To do so, a new \textit{turn-taking phenomena taxonomy} is introduced \cite{Khouzaimi2015c}. Compared to the existing classifications presented in \ref{soa:ttphuman}, it is aimed to go further by using several levels of analysis hence providing a better grasp of the concept of turn-taking by breaking it into small manageable pieces that can be implemented and studied separately.
 
         Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). The analysis levels laid in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms. Nevertheless, the locutionary act concept is subject to a few disagreements between J. L. Austin and his successor, J. R. Searle. Looking deeper into a locutionary act, it can be broken into three sub-levels: the \textit{phonetic}, the \textit{phatic} and the \textit{rhetic} which correspond to the verbal, the syntactic and the semantic levels.  In \cite{Searle1968}, the author argues that there is no distinction possible between the rhetic level and the illocutionary one and therefore refuses the more general distinction between locutionary and illocutionary level. As a result, he suggests to adopt the four layer structure composed of: \textit{phonetic acts}, \textit{phatic acts}, \textit{propositional acts} (the act of expressing the proposition) and \textit{illocutionary acts}. Nevertheless, the philosophical subtleties brought by these considerations are beyond the scope of this thesis and the objective in this chapter is to provide pragmatic criteria that will make it possible to distinguish the several TTP at hand. Therefore, only the three following analysis levels have been taken from this theory of language (as they are enough for this analysis): the phonetic, the illocutionary and the perlocutionary levels.
 
@@ -25,33 +25,33 @@
         \paragraph{Dialogue 1}
 
         \begin{dialogue}
-          \speak{Albert} I would like to try some exotic destination this summer where I can ...
-          \speak{Betty} ... Have you ever been to India?
+          \speak{Hector} I would like to try some exotic destination this summer where I can ...
+          \speak{Tania} ... Have you ever been to India?
         \end{dialogue}
 
         \paragraph{Dialogue 2}
 
         \begin{dialogue}
-          \speak{Albert} First you put the meat in the oven ...
-          \speak{Betty} ...aha...
-          \speak{Albert} ...then you start preparing the salad...
+          \speak{Hector} First you put the meat in the oven ...
+          \speak{Tania} ...aha...
+          \speak{Hector} ...then you start preparing the salad...
         \end{dialogue}
 
         \paragraph{Dialogue 3}
 
         \begin{dialogue}
-          \speak{Albert} What time is it please?
-          \speak{Betty} It is half past two.
+          \speak{Hector} What time is it please?
+          \speak{Tania} It is half past two.
         \end{dialogue}
 
-        In all the dialogues, Albert initially has the floor and then Betty performs a dialogue act. In dialogue 1 and 2, he does not wait for her to finish her utterance before doing so, unlike in the last dialogue. Therefore, Betty can choose the timing of his intervention at different stages in the progression of Albert's utterance. The first criterion used in the taxonomy introduced here corresponds this decision. Moreover, in dialogues 1 and 3, Betty utters a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kind of behaviours performed by Betty.
+        In all the dialogues, Hector initially has the floor and then Tania performs a dialogue act. In dialogue 1 and 2, she does not wait for him to finish his utterance before doing so, unlike in the last dialogue. Therefore, Tania can choose the timing of her intervention at different stages in the progression of Hector's utterance. The first criterion used in the taxonomy introduced here corresponds this decision. Moreover, in dialogues 1 and 3, Tania utters a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kind of behaviours performed by Tania.
 
-	More formally, turn-taking in dialogue refers to the act of taking the floor by one participant (Betty in the previous examples), here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Holder (H), is already speaking or not (the denomination Holder is more adapted to the case where it has the floor, but it is kept as a convention for the other case).
+	More formally, turn-taking in dialogue refers to the act of taking the floor by one participant (Tania in the previous examples), here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Holder (H), is already speaking or not (the denomination Holder is more adapted to the case where it has the floor, but it is kept as a convention for the other case).
     
     The taxonomy introduced here is based on two dimensions:
 
     \begin{enumerate}
-      \item \textbf{The quantity of information that H has already injected in the dialogue:} This measures how early in H's utterance T chooses to perform her dialogue act.
+      \item \textbf{The quantity of information that H has already injected in the dialogue from T's perspective\footnote{Since T is making the turn-taking decisions, the analysis is performed from her perspective.}:} This measures how early in H's utterance T chooses to perform her dialogue act.
       \item \textbf{The quantity of information that T tries to inject by taking the floor:} T's dialogue act can consist on some implicit reaction (gestures, sounds like \textit{aha}), a complete utterance or something in between.
     \end{enumerate}
 
@@ -63,8 +63,8 @@
 			\centerline{
 				\begin{tabular}{|r|l|}
 					\hline
-					\textbf{H\_NONE} & No information given \\
-					\textbf{H\_FAIL} & Failed trial \\
+					\textbf{H\_NONE} & No information given\footnote{No real holder here, but the person that does not try to take the floor first is referred to as such, by convention.} \\
+					\textbf{H\_FAIL} & Failure to deliver any information \\
 					\textbf{H\_INCOHERENT} & Incoherent information \\
 					\textbf{H\_INCOMPLETE} & Incomplete information \\
 					\textbf{H\_SUFFICIENT} & Sufficient information \\
@@ -203,7 +203,7 @@
 
 	This taxonomy is aimed to clarify the notion of turn-taking. In human-human conversation, this translates into a rich set of behaviours that are depicted and classified given two criteria. Compared to existing classifications of turn-taking behaviours, an important part is given to the semantic content of H's and T's utterances (and other cues like gestures and facial expressions) as well as the reasons that pushed T to take the floor given this information.
 
-    As far as replicating TTPs in human-machine interactions is concerned, a big part of research in incremental dialogue systems and turn-taking optimisation has mainly focused on endpoint detection \cite{Raux2008} and smooth turn-taking. Therefore, their objective is to replicate the phenomenon labeled here as BARGE\_IN\_RESP. Some other studies focus on backchanneling and feedback, often neglecting the semantic part of the dialogue participants utterances and focusing exclusively on prosody and acoustic features \cite{Baumann2008,Johsdottir2008}.
+    As far as replicating TTPs in human-machine interactions is concerned, a big part of research in incremental dialogue systems and turn-taking optimisation has mainly focused on endpoint detection \cite{Raux2008} and smooth turn-taking. Therefore, their objective is to replicate the phenomenon labeled here as BARGE\_IN\_RESP. Some other studies focus on backchanneling and feedback, often neglecting the semantic part of the dialogue participants utterances and focusing exclusively on prosody and acoustic features \cite{Baumann2008,Jonsdottir2008}.
 
     The identified TTP can be classified in five categories (referenced by different colors in Table \ref{tab:TTP}):
     
@@ -233,11 +233,11 @@
 
     \subsection{Negative feedback}
 
-         Negative feedback is communicated through one of the six following phenomena: FAIL- \_IMPL, FAIL\_RAW, FAIL\_INTERP, INCOHERENCE\_IMPL, INCOHERENCE\_RAW and INCOHERENCE\_INTERP. They all suggest that both participants have to take a step back in order to clarify or to correct something in the dialogue. From a phonetic point of view, like in \ref{tax:dialinit}, there is no rigourous distinction between these TTPs (unless the implicit ones are only gestures or facial expressions), even though the implicit ones are supposed to be shorter than the implicit ones, which in turn are supposed to be shorter than the interpreted ones.
+         Negative feedback is communicated through one of the six following phenomena: FAIL- \_IMPL, FAIL\_RAW, FAIL\_INTERP, INCOHERENCE\_IMPL, INCOHERENCE\_RAW and INCOHERENCE\_INTERP. They all suggest that both participants have to take a step back in order to clarify or to correct something in the dialogue. From a phonetic point of view, like in \ref{tax:dialinit}, there is no rigourous distinction between these TTPs (unless the implicit ones are only gestures or facial expressions), even though the implicit ones are generally shorter than the explicit ones, which in turn are generally shorter than the interpreted ones.
 
-         It is interesting to notice that, viewed as a phonetic and an illocutionary dialogue act, FAIL\_IMPL and INCOHERENCE\_IMPL are the same or at least extremely hard to distinguish. This is also true for FAIL\_INTERP and INCOHERENCE\_INTERP. These dialogue acts translate into exactly the same signal sent by T, and only the dialogue context makes it possible to separate them. As perlocutionary act they are slightly different as they are both make H stop and take a step back in the dialogue. However, they are different as in the case of FAIL TTPs, the goal is to make H repeat the same sentence again (or rephrases it while keeping the same meaning), whereas in the case of INCOHERENCE TTPs, T want H to change his sentence and its meaning because it is problematic.
+         It is interesting to notice that, viewed as a phonetic and an illocutionary dialogue act, FAIL\_IMPL and INCOHERENCE\_IMPL are the same or at least extremely hard to distinguish. This is also true for FAIL\_INTERP and INCOHERENCE\_INTERP. These dialogue acts translate into exactly the same signal sent by T, and only the dialogue context makes it possible to separate them. As perlocutionary act they are quite similar as they are both make H stop and take a step back in the dialogue. However, they are different as in the case of FAIL TTPs, where the goal is to make H repeat the same sentence again (or rephrases it while keeping the same meaning), whereas in the case of INCOHERENCE TTPs, T want H to change his sentence and its meaning because it is problematic.
 
-         Actually, the real difference between FAIL and INCOHERENCE TTPs comes from the fourth level that has been added to the analysis: the motivation behind behaving as such (these kind of differences is what motivated adding this dimension of analysis). As said earlier, the behaviour can be identical between the two categories (frowning, or saying \textit{What?} for example), but the core different between them comes from the fact that what pushes T to perform a FAIL TTP is the fact that she does not understand what has been said by H so far, and she does not want to lose track of the conversation, whereas in the case of an INCOHERENCE, she feels the need to signal a problem.
+         Actually, the strong difference between FAIL and INCOHERENCE TTPs comes from the fourth level that has been added to the analysis: the motivation behind behaving as such (these kind of differences is what motivated adding this dimension of analysis). As said earlier, the behaviour can be identical between the two categories (frowning, or saying \textit{What?} for example), but the core different between them comes from the fact that what pushes T to perform a FAIL TTP is the fact that she does not understand what has been said by H so far, and she does not want to lose track of the conversation, whereas in the case of an INCOHERENCE, she feels the need to signal a problem.
 
     \subsection{Positive feedback}
 		
@@ -453,15 +453,15 @@
 
 				In some cases, the user is likely to utter a sentence that is not coherent for the system or that is in contradiction with some data accessible by the latter (like when trying to buy a movie ticket when all the seats are already sold). By definition, the INCOHERENCE TTPs can help manage this case in a more efficient way. For the same reasons as FAIL\_RAW, INCOHERENCE\_RAW is not easy to implement. Unlike FAIL TTPs, it is not natural and more difficult to declare an incoherence without explaining the underlying reasons. Therefore, INCOHERENCE\_INTERP is the most interesting TTP to implement.
 
-				BACKCHANNEL has already been implemented in a few incremental dialogue systems \cite{Meena2013,Hastie2013} with the aim of increasing its grounding capacities and its naturalness. This thesis focuses more on the efficiency aspect of incremental dialogue than the human-likeness side of the problem. These are somehow correlated, but as this is not a TTP that directly makes the dialogue more efficient (by preventing and fixing errors), it will not be implemented. Moreover, as the first step of the approach followed here is to use simulated dialogues, it is hard to evaluate this TTP in such conditions. On the contrary, FEEDBACK\_RAW provides a concrete opportunity to correct errors. When T tries to repeat a part of T's utterance and she succeeds, this gives H a proof that T heard his sentence (even though, this does not necessarily mean that T has well understood the message). If she fails, it is also interesting as H can repeat or reformulate his utterance, hence avoiding a desynchronisation. This is clearly interesting to be implemented in a dialogue system, yet, it can be very challenging. The involved turn-taking mechanism is difficult to manage in the sense that the user should not interpret the system's intervention as a barge-in hence being interrupted. Moreover, the system should be able to recognise whether the user ignored the feedback or tried to correct its content. Therefore, this TTP has been implemented in simulation only. Finally, FEEDBACK\_INTERP requires high NLP capabilities and access to an important knowledge base. Therefore, it has not been implemented here.
+				BACKCHANNEL has already been implemented in a few incremental dialogue systems \cite{Meena2013,Hastie2013} with the aim of increasing its grounding capacities and its naturalness. This thesis focuses more on the efficiency aspect of incremental dialogue than the human-likeness side of the problem. These are somehow correlated, but as this is not a TTP that directly makes the dialogue more efficient (by preventing and fixing errors), it will not be implemented. Moreover, as the first step of the approach followed here is to use simulated dialogues, it is hard to evaluate this TTP in such conditions. On the contrary, FEEDBACK\_RAW provides a concrete opportunity to correct errors. When T tries to repeat a part of H's utterance and she succeeds, this gives H a proof that T heard his sentence (even though, this does not necessarily mean that T has well understood the message). If she fails, it is also interesting as H can repeat or reformulate his utterance, hence avoiding a desynchronisation. This is clearly interesting to be implemented in a dialogue system, yet, it can be very challenging. The involved turn-taking mechanism is difficult to manage in the sense that the user should not interpret the system's intervention as a barge-in hence being interrupted. Moreover, the system should be able to recognise whether the user ignored the feedback or tried to correct its content. Therefore, this TTP has been implemented in simulation only. Finally, FEEDBACK\_INTERP requires high NLP capabilities and access to an important knowledge base. Therefore, it has not been implemented here.
 
-				In \cite{El-Asri2014a}, REF\_RAW has been implemented from the user's point of view: the system enumerates a list of alternatives and the user barges-in to select one of them. This has been shown to significantly increase the dialogue quality. However, implementing it requires changing the dialogue management strategy whereas, as discussed in Chapter \ref{ch:architecture}, this thesis focuses on the impact of adding a turn-taking layer on top of pre-existing dialogue management strategies. As a consequence, REF\_IMPL, REF\_RAW and REF\_INTERP are not studied here.
+				In \cite{El-Asri2014a}, REF\_RAW has been implemented from the user's point of view: the system enumerates a list of alternatives and the user barges-in to select one of them. This has been shown to significantly increase the dialogue quality \cite{El-Asri2014c}. However, implementing it requires changing the dialogue management strategy whereas, as discussed in Chapter \ref{ch:architecture}, this thesis focuses on the impact of adding a turn-taking layer on top of pre-existing dialogue management strategies. As a consequence, REF\_IMPL, REF\_RAW and REF\_INTERP are not studied here.
 
 				Finally, BARGE\_IN\_RESP is clearly worth implementing from both sides. From the system's perspective, taking the floor as soon as it has enough information to do so can directly increase dialogue efficiency by reducing dialogue duration but also indirectly by preventing the user from adding new misleading information \cite{Ghigi2014}. From the user's point of view, being able to take the floor before the end of the system's utterance can make the dialogue less tiresome. This is especially true for users that are familiar with the system and as a consequence, they are able to predict the rest of the systems dialogue acts ahead of time.
 
 				To summarise, four TTP requiring incremental dialogue processing have been selected for rule-based implementation (one of them from both sides: system and user):
 				\begin{itemize}
-					\item FAIL\_RAW (System side)
+					\item FAIL\_RAW (System side\footnote{\textit{System side} means that the turn-taking decision is made by the system. In other words, T is the system. \textit{User side} designates the opposite situation.})
 					\item INCOHERENCE\_INTEPR (System side)
 					\item FEEDBACK\_RAW (System side)
 					\item BARGE\_IN\_RESP (System and user side)

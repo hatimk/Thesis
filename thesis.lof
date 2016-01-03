@@ -3,26 +3,26 @@
 \contentsline {xchapter}{State of the art}{11}{chapter.4}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces The dialogue chain\relax }}{19}{figure.caption.16}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces A 5-Best example corresponding to the sentence "I would like to book a flight from New-York to Los Angeles".\relax }}{20}{figure.caption.23}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{29}{figure.caption.46}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{30}{figure.caption.46}
 \contentsline {xpart}{State of the art}{11}{part.3}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking taxonomy}{41}{chapter.73}
+\contentsline {xchapter}{Turn-taking phenomena taxonomy}{41}{chapter.73}
 \contentsline {xpart}{Contributions}{41}{part.72}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{55}{chapter.114}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{56}{figure.caption.117}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{57}{figure.caption.119}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{58}{figure.caption.122}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Double context management: real and simulated\relax }}{59}{figure.caption.123}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The incremental version of the CFAsT project. The traditional view is represented on the left and the new incremental one is depicted on the left.\relax }}{60}{figure.caption.126}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{55}{chapter.117}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{56}{figure.caption.120}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{57}{figure.caption.122}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{58}{figure.caption.125}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces A double context: the real context and the simulation context.\relax }}{59}{figure.caption.126}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The incremental version of the CFAsT project. The traditional view is represented on the left and the new incremental one is depicted on the left.\relax }}{60}{figure.caption.129}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{67}{chapter.133}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{74}{figure.caption.155}
+\contentsline {xchapter}{Dialogue strategies}{67}{chapter.135}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{73}{figure.caption.155}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Incremental dialogue simulation}{77}{chapter.163}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{78}{figure.caption.165}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{80}{figure.caption.177}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{82}{figure.caption.180}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{81}{figure.caption.179}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{83}{figure.caption.186}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{89}{chapter.206}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{94}{figure.caption.212}

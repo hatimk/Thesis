@@ -50,6 +50,8 @@
             \item Is there simultaneous speech?
             \item Is the first speaker's utterance complete?
         \end{enumerate}
+				
+				If the listener manages to successfully take the floor and there is simultaneous speech present, either the speaker's utterance is complete which leads to an OVERLAP or not which translates into a SIMPLE INTERRUPTION. On the contrary, if there is no simultaneous speech, either the speaker's utterance is complete which leads to a SMOOTH SPEAKER SWITCH, either a SILENT INTERRUPTION is involved. Finally, if the listener does not succeed in taking the floor, only one category is reported: BUTTING-IN INTERRUPTION. In \cite{Gravano2011}, this classification is extended by introducing the following question: \textit{Is the listener's utterance in response to the speaker's one and indicates only "I am still here/I hear you and please continue?"}. As a consequence, two new categories are introduced when the answer is yes and given the fact that there is simultaneous speech or not: BACKCHANNEL and BACKCHANNEL WITH OVERLAP.
         
         Optimising turn-taking means taking the floor at the right time. Humans are very good at detecting the cues for these timings. In artificial dialogue systems, different kinds of features can be used in order to detect these timings \cite{Gravano2011}: prosodic features, lexical features, semantic features...etc... and a lot of work has already been done in this direction \cite{Raux2008,Jonsdottir2008,Meena2013}.
 
@@ -66,7 +68,7 @@
           \item Both the system and the user speak after a system barge-in.
         \end{itemize}
 				
-				This is a very low-level model where only phonetic acts are considered (unlike the classification proposed in \cite{Beattie1982} for example where the intent of the listener when he tries to take the floor is taken into account). A similar approach is used in \cite{Wlodarczak2013}, but the situations identified are different:
+				In this framework, four basic turn-taking transitions are introduced: \textit{turn transitions with gap}, \textit{turn transitions with overlap}, \textit{failed interruptions} and \textit{time outs}. This is a very low-level model where only phonetic acts are considered (unlike the classification proposed in \cite{Beattie1982} for example where the intent of the listener when he tries to take the floor is taken into account). A similar approach is used in \cite{Wlodarczak2013}, but the situations identified are different:
 
         \begin{itemize}
            \item \textbf{Within-speaker silence:} The speaker stops for while and then resumes his utterance.
@@ -171,15 +173,15 @@
 
 	\subsection{Spoken dialogue systems evaluation}
 
-		When building dialogue systems and improve them, it is necessary to determine metrics in order to measure their evolution. What makes a dialogue system better than another one? What metrics should be taken into account while evaluating dialogue systems? What are the most important characteristics of a dialogue system that should be improved?
+		When building dialogue systems and improving them, it is necessary to determine metrics in order to measure their evolution. What makes a dialogue system better than another one? What metrics should be taken into account while evaluating dialogue systems? What are the most important characteristics of a dialogue system that should be improved?
+		
+		A distinction can be made between the evaluation of a dialogue system as a whole (\textit{usability} as it is called in \cite{Moller2007}) and the evaluation of the different components separately. In the second case, more standard metrics exist such as the Word Error Rate (WER) for the ASR or the CER (Concept Error Rate) when it comes to evaluating the NLU. Nevertheless, this is not the case for the DM: the usability evaluation is preferred to a local evaluation of the DM since they are very correlated \cite{Dybkjaer2004}. As a consequence, many evaluation frameworks for dialogue systems have been developed and used both in academia \cite{Walker1997,Hone2000,Schmitt2012} and industry \cite{Evanini2008,Witt2011}.
 
 		In the PARADISE framework \cite{Walker1997}, a distinction is made between two kinds of metrics that are usually used for evaluating dialogue systems: objective and subjective metrics. The first category contains all the Key Performance Indicators (KPIs) that can be measured by an algorithm by accessing the dialogue logs only, whereas the second one is made of the user's appreciations of the dialogue quality or specific characteristics like human-likeness or to what extent the user enjoyed the dialogue experience.
 
-		Objective metrics that are commonly used are the dialogues' mean duration and the task completion ratio. Generally speaking, these two metrics are correlated as the user gets impatient when the dialogue lasts for too long (the user can also get impatient for other reasons, like the repetition of the same system's dialogue act several times). Moreover, the user's speech rate and the way they communicate introduces some variability when using these metrics. Finally, it is legitimate to ask ourselves: are shorter dialogues the real desired objective? First, this depends on the type of dialogue system at hand. If it is designed for entertainment or companionship, then there is no need for seeking faster dialogue strategies. However, in the case of task-oriented dialogue, looking for shorter dialogues makes sense as a measure of efficiency. In these situations and especially for daily tasks, an efficiency threshold has to be necessarily reached in order for people to use the dialogue system at hand.
+		Objective metrics that are commonly used are the dialogues' mean duration and the task completion ratio. Generally speaking, these two metrics are correlated as the user gets impatient when the dialogue lasts for too long (the user can also get impatient for other reasons, like the repetition of the same system's dialogue act several times). Moreover, the user's speech rate and the way they communicate introduces some variability when using these metrics. Finally, it is legitimate to ask the question: are shorter dialogues the real desired objective? First, this depends on the type of dialogue system at hand. If it is designed for entertainment or companionship, then there is no need for seeking faster dialogue strategies. However, in the case of task-oriented dialogue, looking for shorter dialogues makes sense as a measure of efficiency. In these situations and especially for daily tasks, an efficiency threshold has to be necessarily reached in order for people to use the dialogue system at hand.
 
 		Subjective metrics are generally gathered using a survey at the end of each dialogue or by experts rate dialogues afterwards\cite{El-Asri2014b}. Several metrics can be collected this way: the global quality of the dialogue, naturalness/human-likeness, reactivity...etc...However, this also raises the problem of variability between users. Most often, they are asked to evaluate the system on a Likert scale (1 to 5 or 1 to 10), but a user answering 4 could be equivalent to another user answering 3 or 5. Therefore, the absolute evaluation is less significant than the relative one given a specific user.
-		
-		(Complete and add more citations, see Layla's thesis).
 	
 
 \section{Incremental dialogue systems}
@@ -332,8 +334,6 @@ This leads to one of the main challenges raised by incremental processing: the a
 \label{soa:rl}
 
 	\subsection{Reinforcement in biology}
-	
-		(To complete and restructure)
     
 		Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figures out through the process of \textit{trial and error} what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Figure \ref{fig:rlscheme}).
 			
@@ -343,6 +343,10 @@ This leads to one of the main challenges raised by incremental processing: the a
 				\caption{The interaction cycle between the agent and the environment in reinforcement learning}
 				\label{fig:rlscheme}
 			\end{figure*}
+			
+			It was first inspired by the field of biology where living organisms are considered as the agents. Rewards are associated with stimuli that the agent seeks like food for example. Conversely, punishments are stimuli that it tries to avoid like important heat for instance. In \cite{Thorndike1898}, hungry animals where put in enclosures where the only way to escape is to perform some simple act (pulling at a loop of cord, pressing a lever, stepping on a platform...). If after a certain period of time they were not able to escape, they are taken out of the box without being fed. This experiment showed how animals were able to learn what to do in order to escape from the enclosure.
+			
+			During the last two decades, similarities between reinforcement learning and neurons behaviours in the brain were also discovered. In \cite{Schultz1995,Schultz1998}, similarly to the previous experiment, monkeys were put in situations where the accomplishment of an action is necessary to get food and the reaction of their dopamine neurons was analysed. Among many other applications where reinforcement learning meets neuroscience, \cite{Doya2007} commented on this experiment: \textit{Although dopamine neurons initially responded to the rewards, when those rewards became fully predictable from preceding sensory cues, such as light and sound, their reward responses went away. Instead, dopamine neurons started to respond to reward-predictive sensory cues. If the reward is omitted after learning, dopamine neuron firing was suppressed at the timing when reward delivery is expected. These are interesting findings on their own, but most exciting for those who are familiar with reinforcement learning theory because it exactly matches what the TD error does}.
 			
 		\subsection{Markov Decision Processes}
         
@@ -460,7 +464,9 @@ This leads to one of the main challenges raised by incremental processing: the a
 	
 		(Take some information from Layla's thesis to talk about summary states and industrial SDSs, in addition to the following paragraph...).
 	
-		Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997} and since then, it has been the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answers at that time. Partially Observable Markov Decision Processes (POMDPs) \cite{Williams2007} can also be used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}.
+		Reinforcement learning has been first applied to dialogue systems in \cite{Levin1997b} and since then, it has been the leading machine learning framework in the field. The dialogue state at time $t$ is generally determined by the history of dialogue acts since the beginning of the dialogue. At each turn, the set of actions is made of all the possible answers at that time.
+		
+		Dialogue has first been cast as an MDP. For instance, one of the earliest applications of this framework is described in \cite{Singh1999}. The system involved handles a simple slot-filling task where it decides whether to ask for all the slots at once, to ask for a specific slot or whether to perform a confirmation. In order to handle ASR imperfections, Partially Observable Markov Decision Processes (POMDPs) \cite{Young2006,Williams2007} can be used. In this framework, the dialogue state is replaced by a distribution over all possible states which is a more natural way of modeling uncertainty, however, they are more complex and more difficult to scale \cite{Lemon2007}. Another interesting approach that has been applied to dialogue systems is Hierarchical Reinforcement Learning \cite{Cuayahuitl2007}. This approach is particularly adapted since the dialogue space is often very large with an important dimensionality. It requires the dialogue to be cast as a Semi-Markov Decision Process (SMDP) \cite{Bradtke1994,Barto2003}.
 	
 	\subsection{Spoken dialogue systems at Orange and the LIA}
 
@@ -479,7 +485,7 @@ This leads to one of the main challenges raised by incremental processing: the a
 	
 	\subsection{Dialogue simulation}
 	
-		A couple of decades ago, with the development of the dialogue systems research field, the need for evaluation means in order to assess their quality started getting more and more important. Therefore, researchers turn to user simulation methods (also referred to as user modeling). In \cite{Eckert1997}, some of the advantages of these techniques are depicted: reduced cost with automatic evaluation of a large number of dialogues, less error risk, easy modeling of different user populations, possibility of using the same user model across different concurrent dialogue systems for comparison and providing a tool to quickly generate corpora for machine learning techniques at a low cost. Nevertheless, the authors recognise that user simulation cannot totally replace interactions with real users in the process of designing reliable dialogue systems: \textit{we believe that tests with human users are still vital for verifying the simulation models}.
+		A couple of decades ago, with the development of the dialogue systems research field, the need for evaluation means in order to assess their quality started getting more and more important. Therefore, researchers turn to user simulation methods (also referred to as user modeling). In \cite{Eckert1997}, some of the advantages of these techniques are depicted: the possibility to quickly generate corpora for machine learning techniques at a low cost, easy modeling of different user populations and the possibility of using the same user model across different concurrent dialogue systems for comparison. Nevertheless, the authors recognise that user simulation cannot totally replace interactions with real users in the process of designing reliable dialogue systems: \textit{we believe that tests with human users are still vital for verifying the simulation models}.
 			
 			Simulating users accurately is a challenging task as their behaviours vary considerably from one person to another and the same user can change her preferences over time (concept-drift) \cite{Schatzmann2006}. Evaluating a user simulator and whether it handles such variability or not is a research track in itself \cite{Pietquin2013} and the qualities required are of different kinds. The trained user simulator should be consistent with the data that has been used for the training and the sequence of dialogue acts generated should be coherent. In addition, when it is used in turn to train a data-driven dialogue strategy, the quality of the latter is also an evaluation criteria. Also, it is important that the results obtained in simulation give strong indications about the behaviours with real users.
 			

@@ -4,20 +4,20 @@
 \contentsline {table}{\numberline {1.1}{\ignorespaces Example of incremental NLU processing\relax }}{24}{table.caption.31}
 \contentsline {xpart}{State of the art}{11}{part.3}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking taxonomy}{41}{chapter.73}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy labels\relax }}{43}{table.caption.85}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{44}{table.caption.86}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Taxonomy labels (1/2)\relax }}{53}{table.caption.111}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Taxonomy labels (2/2)\relax }}{54}{table.caption.112}
+\contentsline {xchapter}{Turn-taking phenomena taxonomy}{41}{chapter.73}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy labels\relax }}{43}{table.caption.86}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{44}{table.caption.88}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Taxonomy labels (1/2)\relax }}{53}{table.caption.113}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Taxonomy labels (2/2)\relax }}{54}{table.caption.114}
 \contentsline {xpart}{Contributions}{41}{part.72}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{55}{chapter.114}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{65}{table.caption.131}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{55}{chapter.117}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{65}{table.caption.134}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{67}{chapter.133}
+\contentsline {xchapter}{Dialogue strategies}{67}{chapter.135}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Incremental dialogue simulation}{77}{chapter.163}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{83}{table.caption.190}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{85}{table.caption.199}
 \contentsline {table}{\numberline {5.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{87}{table.caption.203}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{89}{chapter.206}
