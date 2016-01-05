@@ -38,6 +38,14 @@
 \newblock \textit{ How to Do Things with Words}.
 \newblock Oxford.
 
+\bibitem[{Barlier et~al.}(2015){Barlier, Laroche, \andnamec{}
+  Pietquin}]{Barlier2015}
+(Barlier et~al., 2015) \hspace{.5em}M.~Barlier, R.~Laroche, \andname{}
+  O.~Pietquin, 2015.
+\newblock An easy method to make dialogue systems incremental.
+\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
 \bibitem[{Barto \andnamec{} Mahadevan}(2003){Barto \andnamec{}
   Mahadevan}]{Barto2003}
 (Barto \andnamec{} Mahadevan, 2003) \hspace{.5em}A.~G. Barto \andname{}
@@ -127,6 +135,14 @@
 \newblock Continuous asr for flexible incremental dialogue.
 \newblock In Proceedings of \textit{ ICASSP},  8362--8366.
 
+\bibitem[{Bretier et~al.}(2010){Bretier, Laroche, \andnamec{}
+  Putois}]{Bretier2010}
+(Bretier et~al., 2010) \hspace{.5em}P.~Bretier, R.~Laroche, \andname{}
+  G.~Putois, 2010.
+\newblock D5.3.4: Industrial self-help system ("system 3") apdapted to final
+  architecture.
+\newblock Prototype D5.3.4, CLASSIC Project.
+
 \bibitem[{Bubeck \andnamec{} Cesa-Bianchi}(2012){Bubeck \andnamec{}
   Cesa-Bianchi}]{Bubeck2012}
 (Bubeck \andnamec{} Cesa-Bianchi, 2012) \hspace{.5em}S.~Bubeck \andname{}
@@ -177,6 +193,14 @@
   M.~Karlen, K.~Kavukcuoglu, \andname{} P.~P. Kuksa, 2011.
 \newblock Natural language processing (almost) from scratch.
 \newblock \textit{ CoRR\/}~\textit{abs/1103.0398}.
+
+\bibitem[{Cuay\'ahuitl et~al.}(2015){Cuay\'ahuitl, Keizer, \andnamec{}
+  Lemon}]{Cuayahuitl2015}
+(Cuay\'ahuitl et~al., 2015) \hspace{.5em}H.~Cuay\'ahuitl, S.~Keizer, \andname{}
+  O.~Lemon, 2015.
+\newblock Strategic dialogue management via deep reinforcement learning.
+\newblock In Proceedings of \textit{ NIPS Workshop on Deep Reinforcement
+  Learning}.
 
 \bibitem[{Cuay\'ahuitl et~al.}(2007){Cuay\'ahuitl, Renals, Lemon, \andnamec{}
   Shimodaira}]{Cuayahuitl2007}
@@ -276,18 +300,43 @@
 \newblock In Proceedings of \textit{ Acoustics, Speech and Signal Processing
   (ICASSP), 2014 IEEE International Conference on}.
 
-\bibitem[{El~Asri et~al.}(2014b){El~Asri, Laroche, \andnamec{}
+\bibitem[{El~Asri et~al.}(2014b){El~Asri, Khouzaimi, Laroche, \andnamec{}
+  Pietquin}]{El-Asri2014d}
+(El~Asri et~al., 2014b) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
+  \andname{} O.~Pietquin, 2014b.
+\newblock Ordinal regression for interaction quality prediction.
+\newblock In Proceedings of \textit{ Acoustics, Speech and Signal Processing
+  (ICASSP), 2014 IEEE International Conference on}.
+
+\bibitem[{El~Asri \andnamec{} Laroche}(2013){El~Asri \andnamec{}
+  Laroche}]{El-Asri2013a}
+(El~Asri \andnamec{} Laroche, 2013) \hspace{.5em}L.~El~Asri \andname{}
+  R.~Laroche, 2013.
+\newblock Will my spoken dialogue system be a slow learner ?
+\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
+  Conference}.
+
+\bibitem[{El~Asri et~al.}(2014c){El~Asri, Laroche, \andnamec{}
   Pietquin}]{El-Asri2014c}
-(El~Asri et~al., 2014b) \hspace{.5em}L.~El~Asri, R.~Laroche, \andname{}
-  O.~Pietquin, 2014b.
+(El~Asri et~al., 2014c) \hspace{.5em}L.~El~Asri, R.~Laroche, \andname{}
+  O.~Pietquin, 2014c.
 \newblock {DINASTI: Dialogues with a Negotiating Appointment Setting
   Interface}.
 \newblock In Proceedings of \textit{ {Proc. of LREC }}.
 
-\bibitem[{El~Asri et~al.}(2014c){El~Asri, Lemonnier, Laroche, Pietquin,
+\bibitem[{El~Asri et~al.}(2016){El~Asri, Laroche, \andnamec{}
+  Pietquin}]{El-Asri2016}
+(El~Asri et~al., 2016) \hspace{.5em}L.~El~Asri, R.~Laroche, \andname{}
+  O.~Pietquin, 2016.
+\newblock Compact and interpretable dialogue state representation with genetic
+  sparse distributed memory.
+\newblock In Proceedings of \textit{ International Workshop Series on Spoken
+  Dialogue Systems Technology (IWSDS)}.
+
+\bibitem[{El~Asri et~al.}(2014){El~Asri, Lemonnier, Laroche, Pietquin,
   \andnamec{} Khouzaimi}]{El-Asri2014a}
-(El~Asri et~al., 2014c) \hspace{.5em}L.~El~Asri, R.~Lemonnier, R.~Laroche,
-  O.~Pietquin, \andname{} H.~Khouzaimi, 2014c.
+(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, R.~Lemonnier, R.~Laroche,
+  O.~Pietquin, \andname{} H.~Khouzaimi, 2014.
 \newblock {NASTIA: Negotiating Appointment Setting Interface}.
 \newblock In Proceedings of \textit{ Proceedings of LREC}.
 
@@ -698,6 +747,14 @@
   Technologies: The 2009 Annual Conference of the North American Chapter of the
   Association for Computational Linguistics}, NAACL '09,  629--637.
 
+\bibitem[{Rieser \andnamec{} Lemon}(2011){Rieser \andnamec{}
+  Lemon}]{Rieser2011b}
+(Rieser \andnamec{} Lemon, 2011) \hspace{.5em}V.~Rieser \andname{} O.~Lemon,
+  2011.
+\newblock Learning and evaluation of dialogue strategies for new applications:
+  Empirical methods for optimization from small data sets.
+\newblock \textit{ Computational Linguistics\/}~\textit{37}, 153--196.
+
 \bibitem[{Rosenthal et~al.}(2013){Rosenthal, Bohus, Kamar, \andnamec{}
   Horvitz}]{Rosenthal2013}
 (Rosenthal et~al., 2013) \hspace{.5em}S.~Rosenthal, D.~Bohus, E.~Kamar,
@@ -903,6 +960,13 @@
 \newblock \textit{ Animal intelligence: An experimental study of the
   associative processes in animals}.
 \newblock Columbia University Press.
+
+\bibitem[{Walker}(2000){Walker}]{Walker2000}
+(Walker, 2000) \hspace{.5em}M.~Walker, 2000.
+\newblock An application of reinforcement learning to dialogue strategy
+  selection in a spoken dialogue system for email.
+\newblock \textit{ Journal of Artificial Intelligence Research\/}~\textit{12},
+  387--416.
 
 \bibitem[{Walker et~al.}(1997){Walker, Litman, Kamm, \andnamec{}
   Abella}]{Walker1997}
