@@ -1,3 +1,55 @@
 \chapter*{Introduction}
 
-Introduction here.
+\section*{Context and thesis subject}
+
+				Building machines that are able to vocally communicate with users is driven by the desire to make human-computer interaction as natural and efficient as possible. Replicating the way humans converse in a machine involves many issues: no more need for traditional interaction devices like the keyboard, hands-free and eye-free interaction (useful in many situations like cars for example), new communication paradigms where a real human-human conversation is simulated...These issues are also emphasised by the new technological trends in the modern world: Internet of Things, Smart Devices...Also, recent advances (especially in the field of speech recognition) gave birth to vocal agents both in academia and industry, even though this kind of systems belonged exclusively to the science-fiction domain a few years ago. Nowadays, it is possible to check for restaurants around, check one's account or send a search query on the web by uttering a few words only. Also, conversational agents are able to understand more and more vocabulary and language variations.
+				
+				Nevertheless, the ability of these systems to engage in a real and natural conversation is still very limited. One of the main reasons is the oversimplified turn-taking mechanism they use: the user and the system take turns in a walkie-talkie fashion since when the user speaks, the system waits until the end of the user's utterance before processing the request and while the answer is being delivered, the user has no possibility of interrupting the system. This mechanism hurts both the naturalness and the efficiency of the dialogue.
+				
+				Through several contributions, this thesis addresses the problem of turn-taking capabilities enhancement in dialogue systems. First, simple hints and explanations are provided in the following in order to give the reader a first intuition of what \textit{Reinforcement Learning Applied to Incremental Dialogue Systems} means. The rest of this thesis clarifies these ideas by providing more precise definitions and by grounding the manipulated notions in the current existing literature.
+
+        Originally, a \textbf{dialogue} designates a sequence of communication acts between two or more individuals through speech, either spoken or written (from Greek, \textit{dia} means \textit{through} and logos means \textit{speech}). With the emergence of speech technologies, a research thread (to which this thesis belongs) developed machines that are able to substitute these individuals to a certain extent. They are made of a set of elements that are interacting with each other following precise rules, generally in the purpose of performing a specific task. As a consequence, they are referred to as \textbf{dialogue systems}.
+
+        \textit{Incrementalism} is a method of work aimed to achieve a given task gradually, step by step. The adjective \textbf{incremental} designates any process that advances in that way. At each step, each new brick laid is called an increment. How is that related to dialogue systems? In a nutshell, an utterance is incrementally processed if the listener (the system) does not wait until its end before processing it, understanding it on the fly instead. As a result, these \textbf{incremental dialogue systems} can also utter words or sentences while the speaker is still holding the floor.
+
+        In computer science, \textbf{Learning} refers to the field of \textit{Machine Learning} which is the science of building models that will drive algorithms to perform a certain task, and calibrating them automatically from data. \textbf{Reinforcement} is borrowed from the field of behavioral psychology. A behaviour can be strengthened in many ways, like being more frequently performed, for longer durations or after shorter delays for example. This is generally due to a \textit{positive stimulus} received by the agent under study, after adopting this behaviour. \textbf{Reinforcement Learning} is a mathematical framework with algorithms for solving problems through experience.
+
+        So, what is the point of applying reinforcement learning to incremental dialogue systems? What is the problem to solve in such systems? Traditional dialogue systems have only one kind of decision to take: what to say. Incremental dialogue systems, on the other hand, are free to speak whenever they want, which adds an extra dimension to the decisions it should take. In this thesis, decisions about the content of what the system should say are not studied, only timing decisions are focused on. Reinforcement Learning is therefore applied to investigate the following question: can an incremental dialogue system learn the proper timing for speaking by itself?
+				
+\section*{Motivations}
+
+				According to a study performed by Gartner Consulting, the market of artificial intelligence applications was worth 5 billion dollars in 2014 with an exponential growth potential given the forecasts, reaching a 42 billion dollars size in 2024. As far as personal assistants are concerned, the market size should be multiplied by 13 by then. Therefore, these technologies are on the way of becoming profoundly present in several aspects of our every day life. In order for the vocal modality to be used in such a context, it has to be a robust and comfortable way of human machine interaction in the sense that:
+				
+				\begin{itemize}
+					\item Conversational agents should be reactive enough for the conversation to be smooth and not tedious like it is the case in currently deployed dialogue systems.
+					\item Task-oriented dialogue systems should be efficient in such a way that users prefer talking to their devices instead of using any other kind of human/machine interface.
+					\item Dialogue strategies should be robust to errors and misunderstandings. They should be able to quickly recover from them in order to avoid desynchronisations between the system and the user.
+				\end{itemize}
+				
+				In traditional dialogue systems, the multiplication of dialogue turns degrades the user experience because of the important silences at each floor transition (from the user to the system and vice-versa). For the same reason, recovering from errors becomes costly which leads to frustrating and tiresome interactions for the user. In a world were humans interact more and more with machines several times a day, it is crucial to make the user experience more attractive.
+				
+				Incremental processing is a powerful tool that enables dialogue systems to fix the current turn-taking limitations. An incremental dialogue system is aimed to process the user's request very quickly as she speaks, which makes it able to act very quickly to answer the requests and fix errors in a reactive way. The user's and the system's speech are no longer viewed as organised sequences of turns but as a continuous signal where two sources are combined.
+				
+				Nevertheless, the induced freedom in terms of time sharing between the user and the system can lead to chaotic situations if it is not well managed. Humans use several implicit rules to keep their conversations synchronised, therefore, it is interesting to take a close look the complex mechanisms behind these...
+				
+\section*{Objectives and contributions}
+
+				The echosystem in which this thesis took place is the product of the collaboration between academy (LIA) and industry (Orange Labs). As a consequence, the motivations behind this work are twofold:
+				
+				\begin{itemize}
+					\item Bringing theoretical insights which can strengthen our understanding of turn-taking mechanisms in human conversation and help designing new algorithms to enhance incremental dialogue systems turn-taking capabilities.
+					\item Building a prototype using industrial tools in order to provide a proof of concept and to demonstrate the advantages of the proposed methodology through real interactions with users.
+				\end{itemize}
+				
+				To do so, the following contributions have been made:
+				
+				\begin{itemize}
+					\item New incremental dialogue architecture: it transforms a traditional dialogue system into an incremental one at a low cost. As a proof of concept, it has been implemented in a textual (CFAsT) and a vocal dialogue system (DictaNum).
+					\item New turn-taking phenomena taxonomy in human dialogue: separating turn-taking behaviours made it possible to make clear choices about which ones should be implemented in an incremental dialogue system in order to improve its efficiency.
+					\item New incremental dialogue simulation framework (personal agenda management domain): it is able to simulate incremental ASR instability.
+					\item Rule-based incremental strategy proposal: it has been implemented in simulation and combined with several slot-filling strategies. The results show that the incremental strategy improves dialogue efficiency in terms of dialogue duration and task completion.
+					\item Data-driven strategy using reinforcement learning: it is implemented in simulation and shown to achieve better results than the rule-based one.
+					\item Real users experiment: an incremental dialogue system prototype (majordomo domain) has been developed and used to test the previous strategies with real users.
+				\end{itemize}
+				
+\section*{Outline}

@@ -2,6 +2,20 @@
 
 \label{ch:stateofart}
 
+\section*{Introduction}
+				
+				(This introduction is meant to be developed further and moved to the general thesis introduction section later. It will be replaced with a transition instead).
+
+        Defining the concepts constituting the thesis subject is the first step towards delimiting its frame. Here, simple hints and explanations are given in order to give the reader a first intuition of what \textit{Reinforcement Learning Applied to Incremental Dialogue Systems} means. The rest of this chapter clarifies these ideas by providing more precise definitions and by grounding the manipulated notions in the current existing literature.
+
+        Originally, a \textbf{dialogue} designates a sequence of communication acts between two or more individuals through speech, either spoken or written (from Greek, \textit{dia} means \textit{through} and logos means \textit{speech}). With the emergence of speech technologies, a research thread (to which this thesis belongs) developed machines that are able to substitute these individuals to a certain extent. They are made of a set of elements that are interacting with each other following precise rules, generally in the purpose of performing a specific task. As a consequence, they are referred to as \textbf{dialogue systems}.
+
+        \textit{Incrementalism} is a method of work aimed to achieve a given task gradually, step by step. The adjective \textbf{incremental} designates any process that advances in that way. At each step, each new brick laid is called an increment. How is that related to dialogue systems? In a nutshell, an utterance is incrementally processed if the listener does not wait until its end before processing it, understanding it on the fly instead. As a result, these \textbf{incremental dialogue systems} can also utter words or sentences while the speaker is still holding the floor.
+
+        In computer science, \textbf{Learning} refers to the field of \textit{Machine Learning} which is the science of building models that will drive algorithms to perform a certain task, and calibrating them automatically from data. \textbf{Reinforcement} is borrowed from the field of behavioral psychology. A behaviour can be strengthened in many ways, like being more frequently performed, for longer durations or after shorter delays for example. This is generally due to a \textit{positive stimulus} received by the agent under study, after adopting this behaviour. \textbf{Reinforcement Learning} is a mathematical framework with algorithms for solving problems through experience.
+
+        So, what is the point of applying reinforcement learning to incremental dialogue systems? What is the problem to solve in such systems? Traditional dialogue systems have only one kind of decision to take: what to say. Incremental dialogue systems, on the other hand, are free to speak whenever they want, which adds an extra dimension to the decisions it should take. In this thesis, decisions about the content of what the system should say are not studied, only timing decisions are focused on. Reinforcement Learning is therefore applied to investigate the following question: can an incremental dialogue system learn the proper timing for speaking by itself?
+
 \section{Human dialogue}
 	\subsection{Dialogue acts}
     \label{soa:dialogueacts}
