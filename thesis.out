@@ -79,13 +79,17 @@
 \BOOKMARK [2][-]{subsection.249}{Setup}{section.248}% 79
 \BOOKMARK [2][-]{subsection.255}{Results}{section.248}% 80
 \BOOKMARK [0][-]{chapter.256}{Experiment with real users}{part.76}% 81
-\BOOKMARK [1][-]{section.257}{Protocol}{chapter.256}% 82
-\BOOKMARK [1][-]{section.258}{Results}{chapter.256}% 83
-\BOOKMARK [0][-]{chapter.259}{A new reinforcement learning approach adapted to incremental dialogue}{part.76}% 84
-\BOOKMARK [1][-]{section.260}{Problem}{chapter.259}% 85
-\BOOKMARK [1][-]{section.261}{Proposed approach}{chapter.259}% 86
-\BOOKMARK [1][-]{section.262}{Toy problem application}{chapter.259}% 87
-\BOOKMARK [1][-]{section.263}{Simulation results}{chapter.259}% 88
-\BOOKMARK [0][-]{chapter*.264}{Liste des illustrations}{part.76}% 89
-\BOOKMARK [0][-]{chapter*.265}{Liste des tableaux}{part.76}% 90
-\BOOKMARK [0][-]{chapter*.266}{Bibliographie}{part.76}% 91
+\BOOKMARK [1][-]{section.257}{The Majordomo domain}{chapter.256}% 82
+\BOOKMARK [1][-]{section.258}{Experimental protocol}{chapter.256}% 83
+\BOOKMARK [2][-]{subsection.259}{Implementation}{section.258}% 84
+\BOOKMARK [2][-]{subsection.260}{Conduct of the dialogue}{section.258}% 85
+\BOOKMARK [2][-]{subsection.262}{Key Performance Indicators}{section.258}% 86
+\BOOKMARK [1][-]{section.263}{Results and discussion}{chapter.256}% 87
+\BOOKMARK [0][-]{chapter.265}{A new reinforcement learning approach adapted to incremental dialogue}{part.76}% 88
+\BOOKMARK [1][-]{section.266}{Problem}{chapter.265}% 89
+\BOOKMARK [1][-]{section.267}{Proposed approach}{chapter.265}% 90
+\BOOKMARK [1][-]{section.268}{Toy problem application}{chapter.265}% 91
+\BOOKMARK [1][-]{section.269}{Simulation results}{chapter.265}% 92
+\BOOKMARK [0][-]{chapter*.270}{Liste des illustrations}{part.76}% 93
+\BOOKMARK [0][-]{chapter*.271}{Liste des tableaux}{part.76}% 94
+\BOOKMARK [0][-]{chapter*.272}{Bibliographie}{part.76}% 95

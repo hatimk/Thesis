@@ -2,6 +2,99 @@
 
 \label{ch:experiment}
 
-\section{Protocol}
+	In spite of the efforts that have been made in order to approximate human-machine dialogue through simulation, there are still complex behaviours and subtleties that could not be replicated. In this chapter the simulation results are tested with real users in a real dialogue setup as a validation. In the following, the interaction domain is presented then the experimental protocol is described. Finally, the result experiments are depicted and discussed.
 
-\section{Results}
+\section{The Majordomo domain}
+
+	The prototype used for the experiment (called Majordomo) has been implemented as a part of the Voicehome project at Orange Labs. This project is aimed at exploring the new opportunities that the use of the vocal modality to communicate with a smart home can bring. For that reason and in order to show that the methodology presented in this thesis is not domain dependent, this new task has been used for experiments instead of the agenda management task (event though they are somehow quite similar).
+	
+	Majordomo is able to program the following tasks during a specific time window:
+	
+	\begin{itemize}
+		\item Alarm
+		\item Heating
+		\item Open windows
+		\item Absence mode
+		\item Laundry
+		\item Air conditioning
+		\item Swimming pool warming
+		\item Swimming pool cleaning
+		\item Calm mode
+		\item Mow lawn
+		\item Water lawn
+		\item Record channel 1
+		\item Record channel 2
+		\item Record channel 3
+		\item Hoover
+		\item Run bath
+	\end{itemize}
+	
+	However some tasks cannot be run simultaneously. For example:
+	
+	\begin{itemize}
+		\item The lawn cannot be mowed while watered.
+		\item The heating cannot be activated when the windows are open.
+		\item The swimming pool cannot be warmed and cleaned at the same time.
+		\item When the calm mode is activated, no hoovering nor laundry are allowed.
+	\end{itemize}
+	
+	This is a slot-filling task where the user is supposed to provide the following information: the action type (ADD, MODIFY or DELETE), the task (see the list below), the date and the time window.
+
+\section{Experimental protocol}
+
+	\subsection{Implementation}
+	
+		The Client has been developed in the form of a website where the users are supposed to read a few instructions before starting to interact with the system. Google ASR has been chosen since it is a powerful off-the-shelf solution and does not require to develop any acoustic nor language model which is costly and which is not the focus of this work. Moreover, it is able to provide incremental partial results. However, it is still not able to provide the partial confidence scores (only the confidence score at the end of the utterance is provided).
+		
+		The implementation of the Service is similar to the personal agenda management case described in the previous chapters. The only difference is that home tasks are manipulated instead of events. Therefore, an open slot has been replaced with a slot where only a few alternatives are possible. Moreover, in the personal agenda management domain, no events can overlap whereas in the Majordomo domain some tasks can be run at the same time as others and others cannot. This is encoded in a compatibility matrix provided to the Service.
+		
+		As far as the Scheduler is concerned, similarly to the strategies developed in the simulation case, a handcrafted (version presented in Chapter \ref{ch:rl}, with no FEEDBACK\_RAW) as well as a reinforcement learning strategy have been implemented. The reinforcement learning strategy has been learned in simulation and tested directly with real users. Since Google ASR does not provide the confidence scores incrementally, this feature has been removed from the model. Finally, when transitioning from simulation to the real word, there is no need to estimate timing from the number of words so the real time has been taken into account.
+		
+	\subsection{Conduct of the dialogue}
+	
+		Once the user decides to start a dialogue, the system displays the interface depicted in Figure \ref{fig:majordomo}. A small briefing paragraph explains the task to accomplish which is also synthesised in the form of a table. Ten different scenarios were used and one of them was picked randomly at each new interaction. Similarly, the dialogue strategy is also picked randomly: the user can interact with the non-incremental strategy, with the handcrafted incremental or the reinforcement learning incremental strategy.
+		
+		When ready, the user clicks on the \textit{Start} button. During the interaction, the ASR is always on so the client is always listening except in the case of a system barge-in (when the system interrupts the user) when it is enabled for two seconds. This is necessary in order to make the system take the floor, otherwise, it will be immediately interrupted before the user even realises that there is an intervention.
+		
+		After the interaction, either the user ends the dialogue normally by saying \textit{Goodbye} or hangs up by clicking on the \textit{Hang up} button.
+	
+	\begin{figure*}[t]
+		\centering
+		\includegraphics[scale=0.4]{figures/majordome.png}
+		\caption{The Majordomo interface}
+		\label{fig:majordomo}
+	\end{figure*}
+	
+	\subsection{Key Performance Indicators}
+	
+		In order to evaluate the three turn-taking strategies, dialogue duration and task completion have been computed. In addition, the users filled a survey at the end of each dialogue where they provided the following subjective Key Performance Indicators (KPIs):
+		
+		\begin{itemize}
+			\item \textbf{Reactivity:}
+		\end{itemize}
+
+
+\section{Results and discussion}
+
+	\begin{table}[th]
+		\footnotesize
+		\vspace{2mm}
+		\centerline{
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			Category & KPI & \textbf{None} & \textbf{Handcrafted} & \textbf{RL} \\
+			\hline
+			Duration (sec) & 111.2 & 99.4 & \textbf{98.8} \\
+			Task completion & 0.63 & 0.58 & \textbf{0.71} \\
+			\hline
+			Reactivity & 4.23 & 4.51 & \textbf{4.58} \\
+			Barge-in quality & 4.30 & 4.22 & \textbf{4.31} \\
+			Efficiency & 4.23 & 4.18 & \textbf{4.30} \\
+			Global quality & 4.05 & \textbf{4.17} & 4.11 \\
+			Potential use & 2.63 & 2.66 & \textbf{2.75} \\
+			\hline
+		\end{tabular}
+		}
+		\caption{Raw results}
+		\label{tab:rawres}
+	\end{table}

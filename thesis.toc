@@ -116,13 +116,17 @@
 \contentsline {subsection}{\numberline {7.2.1}Setup}{109}{subsection.249}
 \contentsline {subsection}{\numberline {7.2.2}Results}{110}{subsection.255}
 \contentsline {chapter}{\numberline {8}Experiment with real users}{111}{chapter.256}
-\contentsline {section}{\numberline {8.1}Protocol}{111}{section.257}
-\contentsline {section}{\numberline {8.2}Results}{111}{section.258}
-\contentsline {chapter}{\numberline {9}A new reinforcement learning approach adapted to incremental dialogue}{113}{chapter.259}
-\contentsline {section}{\numberline {9.1}Problem}{113}{section.260}
-\contentsline {section}{\numberline {9.2}Proposed approach}{113}{section.261}
-\contentsline {section}{\numberline {9.3}Toy problem application}{113}{section.262}
-\contentsline {section}{\numberline {9.4}Simulation results}{113}{section.263}
-\contentsline {starchapter}{Liste des illustrations}{117}{chapter*.264}
-\contentsline {starchapter}{Liste des tableaux}{119}{chapter*.265}
-\contentsline {starchapter}{Bibliographie}{121}{chapter*.266}
+\contentsline {section}{\numberline {8.1}The Majordomo domain}{111}{section.257}
+\contentsline {section}{\numberline {8.2}Experimental protocol}{112}{section.258}
+\contentsline {subsection}{\numberline {8.2.1}Implementation}{112}{subsection.259}
+\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{113}{subsection.260}
+\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{114}{subsection.262}
+\contentsline {section}{\numberline {8.3}Results and discussion}{114}{section.263}
+\contentsline {chapter}{\numberline {9}A new reinforcement learning approach adapted to incremental dialogue}{115}{chapter.265}
+\contentsline {section}{\numberline {9.1}Problem}{115}{section.266}
+\contentsline {section}{\numberline {9.2}Proposed approach}{115}{section.267}
+\contentsline {section}{\numberline {9.3}Toy problem application}{115}{section.268}
+\contentsline {section}{\numberline {9.4}Simulation results}{115}{section.269}
+\contentsline {starchapter}{Liste des illustrations}{119}{chapter*.270}
+\contentsline {starchapter}{Liste des tableaux}{121}{chapter*.271}
+\contentsline {starchapter}{Bibliographie}{123}{chapter*.272}
