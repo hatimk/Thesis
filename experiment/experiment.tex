@@ -70,12 +70,19 @@
 		In order to evaluate the three turn-taking strategies, dialogue duration and task completion have been computed. In addition, the users filled a survey at the end of each dialogue where they provided the following subjective Key Performance Indicators (KPIs):
 		
 		\begin{itemize}
-			\item \textbf{Reactivity:}
+			\item \textbf{Reactivity:} The users are asked whether they find the system reactive or not. There are 6 possible answers going from 1 (not reactive at all, very slow) to 6 (very reactive).
+			\item \textbf{Reactivity impact:} The system reactivity does not necessarily improve the dialogue quality since it can be perceived as too intrusive. The objective of this metric is to assess the impact associated with the reactivity through 6 possible values going from 1 (very negative, hurts the dialogue quality) to 6 (very positive, significant improvement of the dialogue quality).
+			\item \textbf{Realism:} The users are asked whether the system acts like a human operator. There 6 possible answers going from 1 (no, not at all) to 6 (yes, clearly).
+			\item \textbf{Efficiency:} The users are asked to assess the dialogue efficiency by selecting one of the 6 possible answers, going from 1 (very bad) to 6 (very good).
+			\item \textbf{Global quality:} The users are asked how they globally appreciated the dialogue on a scale from 1 (Very unpleasant experience) to 6 (Very enjoyable experience).
+			\item \textbf{Potential user:} Finally, the users are also asked whether they would use the Majordomo at home (if it was a real commercialised product) on a scale from 1 (clearly not) to 4 (absolutely).
 		\end{itemize}
 
 
 \section{Results and discussion}
 
+	266 dialogues have been collected thanks to 51 volunteer users. 81 dialogues were run using the non-incremental strategy, 90 using the handcrafted strategy and 95 using the reinforcement learning one. The experiment results are depicted in Table \ref{tab:results}.
+	
 	\begin{table}[th]
 		\footnotesize
 		\vspace{2mm}
@@ -84,17 +91,20 @@
 			\hline
 			Category & KPI & \textbf{None} & \textbf{Handcrafted} & \textbf{RL} \\
 			\hline
-			Duration (sec) & 111.2 & 99.4 & \textbf{98.8} \\
-			Task completion & 0.63 & 0.58 & \textbf{0.71} \\
+			\multirow{2}{*}{Objective} & Duration (sec) & 110.0 & 99.5 & \textbf{97.9} \\
+			& Task completion & 0.62 & 0.59 & \textbf{0.72} \\
 			\hline
-			Reactivity & 4.23 & 4.51 & \textbf{4.58} \\
-			Barge-in quality & 4.30 & 4.22 & \textbf{4.31} \\
-			Efficiency & 4.23 & 4.18 & \textbf{4.30} \\
-			Global quality & 4.05 & \textbf{4.17} & 4.11 \\
-			Potential use & 2.63 & 2.66 & \textbf{2.75} \\
+			\multirow{6}{*}{Subjective} & Reactivity (1-6) & 4.20 & 4.50 & \textbf{4.56} \\
+			& Reactivity impact (1-6) & 4.27 & 4.20 & \textbf{4.29} \\
+			& Realism (1-6) & 3.62 & \textbf{3.67} & \textbf{3.67} \\
+			& Efficiency (1-6) & 4.20 & 4.18 & \textbf{4.29} \\
+			& Global quality (1-6) & 4.02 & \textbf{4.17} & 4.09 \\
+			& Potential use (1-4) & 2.62 & 2.66 & \textbf{2.75} \\
 			\hline
 		\end{tabular}
 		}
-		\caption{Raw results}
-		\label{tab:rawres}
+		\caption{Mean values for each strategy and for each KPI}
+		\label{tab:results}
 	\end{table}
+	
+	Incremental strategies improvement 
