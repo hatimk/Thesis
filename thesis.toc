@@ -122,11 +122,11 @@
 \contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{113}{subsection.260}
 \contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{114}{subsection.262}
 \contentsline {section}{\numberline {8.3}Results and discussion}{114}{section.263}
-\contentsline {chapter}{\numberline {9}A new reinforcement learning approach adapted to incremental dialogue}{115}{chapter.265}
-\contentsline {section}{\numberline {9.1}Problem}{115}{section.266}
-\contentsline {section}{\numberline {9.2}Proposed approach}{115}{section.267}
-\contentsline {section}{\numberline {9.3}Toy problem application}{115}{section.268}
-\contentsline {section}{\numberline {9.4}Simulation results}{115}{section.269}
-\contentsline {starchapter}{Liste des illustrations}{119}{chapter*.270}
-\contentsline {starchapter}{Liste des tableaux}{121}{chapter*.271}
-\contentsline {starchapter}{Bibliographie}{123}{chapter*.272}
+\contentsline {chapter}{\numberline {9}A new reinforcement learning approach adapted to incremental dialogue}{117}{chapter.265}
+\contentsline {section}{\numberline {9.1}Problem}{117}{section.266}
+\contentsline {section}{\numberline {9.2}Proposed approach}{117}{section.267}
+\contentsline {section}{\numberline {9.3}Toy problem application}{117}{section.268}
+\contentsline {section}{\numberline {9.4}Simulation results}{117}{section.269}
+\contentsline {starchapter}{Liste des illustrations}{121}{chapter*.270}
+\contentsline {starchapter}{Liste des tableaux}{123}{chapter*.271}
+\contentsline {starchapter}{Bibliographie}{125}{chapter*.272}

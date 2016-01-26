@@ -67,7 +67,7 @@
 	
 	\subsection{Key Performance Indicators}
 	
-		In order to evaluate the three turn-taking strategies, dialogue duration and task completion have been computed. In addition, the users filled a survey at the end of each dialogue where they provided the following subjective Key Performance Indicators (KPIs):
+		In order to evaluate the three turn-taking strategies, dialogue duration and task completion have been computed (the tasks scheduled by the Majordomo are logged at the end of the dialogue). In addition, the users filled a survey at the end of each dialogue where they provided the following subjective Key Performance Indicators (KPIs):
 		
 		\begin{itemize}
 			\item \textbf{Reactivity:} The users are asked whether they find the system reactive or not. There are 6 possible answers going from 1 (not reactive at all, very slow) to 6 (very reactive).
@@ -81,7 +81,7 @@
 
 \section{Results and discussion}
 
-	266 dialogues have been collected thanks to 51 volunteer users. 81 dialogues were run using the non-incremental strategy, 90 using the handcrafted strategy and 95 using the reinforcement learning one. The experiment results are depicted in Table \ref{tab:results}.
+	266 dialogues have been collected with the collaboration of 51 volunteer users. 81 dialogues were run using the non-incremental strategy, 90 using the handcrafted strategy and 95 using the reinforcement learning one. The experiment results are depicted in Table \ref{tab:results}.
 	
 	\begin{table}[th]
 		\footnotesize
@@ -107,4 +107,10 @@
 		\label{tab:results}
 	\end{table}
 	
-	Incremental strategies improvement 
+	Incremental strategies are 11\% shorter on average. At a first glance, this can be viewed as an obvious result since by construction, incremental strategies are more reactive. Nevertheless, the user can also be interrupted before she has provided all the information that she wanted which complicates the dialogue and makes it last longer like it is the case in the experiment led in \cite{Ghigi2014}. Therefore, this result shows that the Majordomo successfully interrupted the user on average. However, there is no visible change when comparing the handcrafted and the RL strategy. This trend is maintained when considering only successful dialogues (None: 107.0, Handcrafted: 95.4, RL: 93.1).
+	
+	As far as the task completion metric is concerned, the RL strategy offers a real advantage. It offers a gain of 10\% compared to the non-incremental baseline. The handcrafted strategy, on the other hand, degrades the latter by 3\%. When the system is reactive enough to the point that it can even interrupt the user in case of a problem, the users happen to be more engaged and more focused. This is particularly important in this task since some of the scenarios require the user to keep track of what he is doing and listen carefully to the system's responses, hence engendering an important cognitive load.
+	
+	From the subjective point of view, the RL strategy offers the best mean value except for the global quality metric. This is a strange result since it should be highly correlated to the task completion. An important number of users rated the dialogue for being of a good quality even though they did not finish the task. This is linked to the point made previously about the cognitive load since some users lost track of their dialogue progression with respect to the objective and then stopped the dialogue, however, they put the blame on themselves instead of the system hence giving a high global quality mark anyway.
+	
+	As far as statistical significance is concerned, a pairwise (none vs. handcrafted, handcrafted vs. RL and RL vs. none) Welch test has been performed (and a binomial proportions test for task completion since it is more adapted). Only the reactivity metric when the RL and the non-incremental strategies are compared showed statistically significant results since the corresponding p-value is under 0.05. The other p-values are above that threshold. As far as task completion is concerned, it is a Bernoulli random variable, hence, its variable only depends on its mean. Therefore, the only problem with the significance comes from the lack of data. For other metrics, the high variability... 
