@@ -14,6 +14,14 @@
   evidence for advantages over nonincremental methods.
 \newblock In Proceedings of \textit{ Decalog}.
 
+\bibitem[{Arnold et~al.}(2000){Arnold, Eisenband, Brown-Schmidt, \andnamec{}
+  Trueswell}]{Arnold2000}
+(Arnold et~al., 2000) \hspace{.5em}J.~E. Arnold, J.~G. Eisenband,
+  S.~Brown-Schmidt, \andname{} J.~C. Trueswell, 2000.
+\newblock The rapid use of gender information: evidence of the time course of
+  pronoun resolution from eyetracking.
+\newblock \textit{ Cognition\/}~\textit{ 76\/}(1), B13--B26.
+
 \bibitem[{Asri et~al.}(2012){Asri, Laroche, \andnamec{} Pietquin}]{El-Asri2012}
 (Asri et~al., 2012) \hspace{.5em}L.~E. Asri, R.~Laroche, \andname{}
   O.~Pietquin, 2012.
@@ -268,6 +276,15 @@
 \newblock Evaluation and usability of multimodal spoken language dialogue
   systems.
 \newblock In Proceedings of \textit{ Speech Communications},  33--54.
+
+\bibitem[{Eberhard et~al.}(1995){Eberhard, Spivey-Knowlton, Sedivy, \andnamec{}
+  Tanenhaus}]{Eberhard1995}
+(Eberhard et~al., 1995) \hspace{.5em}K.~Eberhard, M.~Spivey-Knowlton,
+  J.~Sedivy, \andname{} M.~Tanenhaus, 1995.
+\newblock Eye movements as a window into real-time spoken language
+  comprehension in natural contexts.
+\newblock \textit{ Journal of Psycholinguistic Research\/}~\textit{ 24\/}(6),
+  409--436.
 
 \bibitem[{Eckert et~al.}(1997){Eckert, Levin, \andnamec{}
   Pieraccini}]{Eckert1997}
