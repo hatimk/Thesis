@@ -81,7 +81,7 @@
 
 \section{Results and discussion}
 
-	206 dialogues have been collected with the collaboration of 47 volunteer users. 65 dialogues were run using the non-incremental strategy, 65 using the handcrafted strategy and 76 using the reinforcement learning one. The experiment results are depicted in Table \ref{tab:globalmetrics}.
+	266 dialogues have been collected with the collaboration of 51 volunteer users. 81 dialogues were run using the non-incremental strategy, 90 using the handcrafted strategy and 95 using the reinforcement learning one. The experiment results are depicted in Table \ref{tab:globalmetrics}.
 
 	\begin{table}[th]
 	  \footnotesize
@@ -105,31 +105,17 @@
 	  }
 	  \caption{Global dialogue evaluation metrics}
 	  \label{tab:globalmetrics}
-        \end{table}
-
-        As far as the mean dialogue duration is concerned, the incremental strategies slightly improve the dialogue duration (even though this is not statistically significant). At a first glance, this improvement can be viewed as an obvious result since by construction, incremental strategies are more reactive. Nevertheless, the user can also be interrupted before she has provided all the information that she wanted which complicates the dialogue and makes it last longer like it is the case in the experiment led in \cite{Ghigi2014}. Therefore, this result shows that the Majordomo successfully interrupted the user on average. However, there is no visible change when comparing the handcrafted and the RL strategy.
-
-        The task completion ratio, on the other hand, has been significantly\footnote{All the p-values are computed according to the Welch t-test since the number of samples is important enough for the means to be considered as following a normal distribution (and since it is more powerful than non-parametric tests). A binomial proportions test has also been run for task completion, leading to very similar p-values.} improved by the \textit{RL} strategy compared to \textit{None} (by 15\% with $p = 0.030$). Moreover, an important difference has been reported between \textit{RL} and \textit{Handcrafted} (12\%) even though it is not statistically significant at a 0.05 threshold ($p = 0.065$). Finally, \textit{Handcrafted} shows a minor improvement over \textit{None} (3\%) with no statistical significance ($p = 0.36$). The Majordomo task requires a certain level of engagement and focus in order to keep track of all what has been accomplished so far while keeping the final objective in mind. When interacting with a reactive system that takes the floor in an intelligent way (to correct errors hence fixing desynchronisation, to deliver a response when all the information has been provided) without overwhelming the user, the latter feels more engaged in the conversation thus accomplishing the task more efficiently even when a certain cognitive load is involved. Another impact of such strategy as reported in \cite{Ghigi} is that when the users realise that they can be interrupted in case of a problem, they tend to provide more concise and focused answers, which reduces the risk of a misunderstanding.
-
-        The subjective metrics are the noisier ones. Therefore, except from the \textit{Reactivity} KPI where \textit{RL} significantly improves it in comparison with \textit{None} ($p = 0.048$), the other p-values are above 0.05. Nevertheless, generally speaking, the metrics are in favour of the \textit{RL} strategy.
+      \end{table}
+	
+	Incremental strategies are 11\% shorter on average. At a first glance, this can be viewed as an obvious result since by construction, incremental strategies are more reactive. Nevertheless, the user can also be interrupted before she has provided all the information that she wanted which complicates the dialogue and makes it last longer like it is the case in the experiment led in \cite{Ghigi2014}. Therefore, this result shows that the Majordomo successfully interrupted the user on average. However, there is no visible change when comparing the handcrafted and the RL strategy. This trend is maintained when considering only successful dialogues (None: 107.0, Handcrafted: 95.4, RL: 93.1).
+	
+	As far as the task completion metric is concerned, the RL strategy offers a real advantage. It offers a gain of 10\% compared to the non-incremental baseline. The handcrafted strategy, on the other hand, degrades the latter by 3\%. When the system is reactive enough to the point that it can even interrupt the user in case of a problem, the users happen to be more engaged and more focused. This is particularly important in this task since some of the scenarios require the user to keep track of what he is doing and listen carefully to the system's responses, hence engendering an important cognitive load.
 	
 	From the subjective point of view, the RL strategy offers the best mean value except for the global quality metric. This is a strange result since it should be highly correlated to the task completion. An important number of users rated the dialogue for being of a good quality even though they did not finish the task. This is linked to the point made previously about the cognitive load since some users lost track of their dialogue progression with respect to the objective and then stopped the dialogue, however, they put the blame on themselves instead of the system hence giving a high global quality mark anyway.
+	
+	As far as statistical significance is concerned, a pairwise (none vs. handcrafted, handcrafted vs. RL and RL vs. none) Welch test has been performed (and a binomial proportions test for task completion since it is more adapted). Only the reactivity metric when the RL and the non-incremental strategies are compared showed statistically significant results since the corresponding p-value is under 0.05. The other p-values are above that threshold. As far as task completion is concerned, it is a Bernoulli random variable, hence, its variable only depends on its mean. Therefore, the only problem with the significance comes from the lack of data. Unfortunately, the Majordomo has not been a part of an industrial project at Orange during the course of the thesis which made it more difficult to find testers. The corpus collect period stopped after 266 dialogues because of the time constraint of the thesis. For other metrics, the high variability can also be a source for the lack of significance. This problem have already been reported in the literature for experiments where the system performance is directly evaluated through live dialogues. In many experiments, the variance is reduced by making the users watch videos and fill surveys for example...nevertheless, this inevitably introduces some bias since the real user experience is not directly measured. In this experiment, no bias is introduced but variance is high. These ideas are developed in the next section where the experiment is compared to related work in the literature.
 
-	\begin{table}[th]
-	  \footnotesize
-	  \vspace{2mm}
-	  \centerline{
-	  \begin{tabular}{|c|c|c|c|}
-	      \hline
-	      KPI & \textit{None} & \textit{Handcrafted} & \textit{RL} \\
-	      \hline
-	      Latency (ms) & 1545 $\pm$ 61 & 1303 $\pm$ 78 & \textbf{588 $\pm$ 59} \\
-	      FC ratio & No barge-in & 0.31 $\pm$ 0.091 & \textbf{0.068 $\pm$ 0.023} \\
-	      \hline
-	  \end{tabular}
-	  }
-	  \caption{Global dialogue evaluation metrics}
-	  \label{tab:localmetrics}
-	\end{table}
 
-        To complete this study, more local metrics have been investigated: the latency and the false cut-in ratio. The latency is the mean delay involved in each human to machine floor transition\footnote{Estimated as the delay between the moment when the Scheduler delivers the last message and the moment when it received the last ASR output. Computing the real latency requires a Voice Activity Detection (VAD) module in the Client which could slow it down.} (549 transitions for \textit{None}, 542 for \textit{Handcrafted} and 727 for \textit{RL}) whereas the false cut-in ratio refers to the proportion over all the SPEAK decisions (\textit{Handcrafted} : 99, \textit{RL} : 456) of the ones where the system should have waited longer before taking the floor (manually annotated). The results are reported in Table \ref{tab:localmetrics} (all the differences are statistically significant with $p < 0.000001$). The \textit{Handcrafted} strategy reduces the latency by 200ms compared to \textit{None}, however, it interrupts the user too soon one third of the time thus being too aggressive. On the other hand, \textit{RL} reduces the latency by 1 second while maintaining a more reasonable false cut-in ratio. As a consequence, \textit{RL} takes more risk since it chooses to SPEAK more often and when it was it is better managed.
+\section{Comparison with other turn-taking experiments}   
+
+        \cite{Aist2007} is one of the first papers to demonstrate that incremental processing can improve the dialogue quality (it is still one of the reference papers to support this idea). Nevertheless, only 22 dialogues were collected (11 with the non-incremental reference and 11 with the incremental version of the system) with only 2 dialogue turns each. Then user sentences were pre-recorded, on-domain and clearly understandable by the system. The authors asserted the following: \textit{this technique allowed us to minimize variance due to extraneous factors such as interspeaker variability, acoustic noise, and so forth and concentrate specifically on the differnce between incremental processing and its nonincremental counterpart}. This made it possible to show statistically significant gain on dialogue duration (44 vs. 52 seconds), however, one can argue that there is obvious bias due to the fact that the experimental setup is far from the real dialogue conditions. The same comment can be made concerning the user satisfaction metrics since they are only provided by people watching videos corresponding to the previous dialogues.

@@ -27,6 +27,5 @@
 \contentsline {table}{\numberline {7.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{106}{table.caption.236}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Experiment with real users}{111}{chapter.256}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Mean values for each strategy and for each KPI\relax }}{114}{table.caption.264}
-\addvspace {10\p@ }
-\contentsline {xchapter}{A new reinforcement learning approach adapted to incremental dialogue}{117}{chapter.266}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{114}{table.caption.264}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{116}{table.caption.266}

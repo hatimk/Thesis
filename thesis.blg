@@ -10,10 +10,10 @@ A level-1 auxiliary file: simulation/simulation.aux
 A level-1 auxiliary file: baseline/baseline.aux
 A level-1 auxiliary file: rl/rl.aux
 A level-1 auxiliary file: experiment/experiment.aux
-A level-1 auxiliary file: theory/theory.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
+Warning--I didn't find a database entry for "Ghigi"
 Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
@@ -38,7 +38,7 @@ Warning--no number and no volume in Witt2011
 Warning--page numbers missing in Witt2011
 You've used 145 entries,
             2936 wiz_defined-function locations,
-            1437 strings with 30564 characters,
+            1438 strings with 30557 characters,
 and the built_in function-call counts, 89584 in all, are:
 = -- 7573
 > -- 6068
@@ -77,4 +77,4 @@ warning$ -- 22
 while$ -- 972
 width$ -- 0
 write$ -- 3075
-(There were 22 warnings)
+(There were 23 warnings)
