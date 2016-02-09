@@ -31,8 +31,8 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{101}{figure.caption.230}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{103}{chapter.232}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{109}{figure.caption.253}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{110}{figure.caption.253}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{110}{figure.caption.254}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{111}{chapter.256}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces The Majordomo interface\relax }}{113}{figure.caption.261}
+\contentsline {xchapter}{Experiment with real users}{113}{chapter.256}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces The Majordomo interface\relax }}{115}{figure.caption.261}

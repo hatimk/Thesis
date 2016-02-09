@@ -421,6 +421,13 @@
 \newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
   Conference}.
 
+\bibitem[{Hirasawa et~al.}(1999){Hirasawa, Nakano, Kawabata, \andnamec{}
+  Aikawa}]{Hirasawa1999}
+(Hirasawa et~al., 1999) \hspace{.5em}J.~Hirasawa, M.~Nakano, T.~Kawabata,
+  \andname{} K.~Aikawa, 1999.
+\newblock Effects of system barge-in responses on user impressions.
+\newblock In Proceedings of \textit{ EUROSPEECH}.
+
 \bibitem[{Hone \andnamec{} Graham}(2000){Hone \andnamec{} Graham}]{Hone2000}
 (Hone \andnamec{} Graham, 2000) \hspace{.5em}K.~S. Hone \andname{} R.~Graham,
   2000.
@@ -763,6 +770,15 @@
 \newblock In Proceedings of \textit{ Proceedings of Human Language
   Technologies: The 2009 Annual Conference of the North American Chapter of the
   Association for Computational Linguistics}, NAACL '09,  629--637.
+
+\bibitem[{Raux \andnamec{} Eskenazi}(2012){Raux \andnamec{}
+  Eskenazi}]{Raux2012}
+(Raux \andnamec{} Eskenazi, 2012) \hspace{.5em}A.~Raux \andname{} M.~Eskenazi,
+  2012.
+\newblock Optimizing the turn-taking behavior of task-oriented spoken dialog
+  systems.
+\newblock \textit{ ACM Transactions on Speech and Language
+  Processing\/}~\textit{ 9\/}(1), 1:1--1:23.
 
 \bibitem[{Rieser \andnamec{} Lemon}(2011){Rieser \andnamec{}
   Lemon}]{Rieser2011b}

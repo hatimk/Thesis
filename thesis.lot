@@ -26,6 +26,6 @@
 \contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{103}{chapter.232}
 \contentsline {table}{\numberline {7.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{106}{table.caption.236}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{111}{chapter.256}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{114}{table.caption.264}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{116}{table.caption.266}
+\contentsline {xchapter}{Experiment with real users}{113}{chapter.256}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{116}{table.caption.264}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Local dialogue evaluation metrics\relax }}{117}{table.caption.266}

@@ -13,7 +13,6 @@ A level-1 auxiliary file: experiment/experiment.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "Ghigi"
 Warning--no number and no volume in Auer2002
 Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
@@ -36,45 +35,45 @@ Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
 Warning--no number and no volume in Witt2011
 Warning--page numbers missing in Witt2011
-You've used 145 entries,
+You've used 147 entries,
             2936 wiz_defined-function locations,
-            1438 strings with 30557 characters,
-and the built_in function-call counts, 89584 in all, are:
-= -- 7573
-> -- 6068
+            1447 strings with 30861 characters,
+and the built_in function-call counts, 90908 in all, are:
+= -- 7689
+> -- 6158
 < -- 12
-+ -- 1868
-- -- 2144
-* -- 6138
-:= -- 15647
-add.period$ -- 438
-call.type$ -- 145
-change.case$ -- 1119
-chr.to.int$ -- 143
-cite$ -- 167
-duplicate$ -- 3198
-empty$ -- 5990
-format.name$ -- 2574
-if$ -- 17148
++ -- 1896
+- -- 2176
+* -- 6240
+:= -- 15873
+add.period$ -- 444
+call.type$ -- 147
+change.case$ -- 1135
+chr.to.int$ -- 145
+cite$ -- 169
+duplicate$ -- 3241
+empty$ -- 6077
+format.name$ -- 2614
+if$ -- 17401
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 145
-newline$ -- 734
-num.names$ -- 1158
-pop$ -- 1473
+missing$ -- 147
+newline$ -- 744
+num.names$ -- 1174
+pop$ -- 1492
 preamble$ -- 1
-purify$ -- 2002
+purify$ -- 2030
 quote$ -- 0
-skip$ -- 2741
+skip$ -- 2778
 stack$ -- 0
-substring$ -- 3856
-swap$ -- 236
+substring$ -- 3924
+swap$ -- 239
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2782
+type$ -- 2822
 warning$ -- 22
-while$ -- 972
+while$ -- 986
 width$ -- 0
-write$ -- 3075
-(There were 23 warnings)
+write$ -- 3117
+(There were 22 warnings)

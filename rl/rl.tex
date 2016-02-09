@@ -86,6 +86,8 @@
 					\caption{Dialogue example with state representation features' values.}
 					\label{tab:dialexfeat}
 				\end{sidewaystable}
+
+        It is noteworthy that the only domain-related features are SYSTEM\_REQ and \\ LAST\_INCR\_RESP, therefore, in order to transpose this method to another domain, one should only provide the list of alternatives for both features. This is due to the fact that, instead of directly analysing the current partial utterance at each micro-turn, only the response it generates once fed to the Service is taken into account, and this is proven here to be a sufficient information.
         
         %HK> Justifier le choix d'une représentation linéaire
         %HK> Il faut introduire Fitted-Q, dire qu'on a essayé autre chose (tabulaire, Q-Learning...).
