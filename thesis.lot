@@ -16,16 +16,16 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Dialogue strategies}{71}{chapter.139}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{81}{chapter.167}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{89}{table.caption.203}
-\contentsline {table}{\numberline {5.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{91}{table.caption.207}
+\contentsline {xchapter}{Incremental dialogue simulation}{81}{chapter.162}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{89}{table.caption.198}
+\contentsline {table}{\numberline {5.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{91}{table.caption.202}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{93}{chapter.210}
-\contentsline {table}{\numberline {6.1}{\ignorespaces The three scenarios used in the simulation\relax }}{99}{table.caption.217}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{93}{chapter.205}
+\contentsline {table}{\numberline {6.1}{\ignorespaces The three scenarios used in the simulation\relax }}{99}{table.caption.212}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{103}{chapter.232}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{106}{table.caption.236}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{103}{chapter.227}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{106}{table.caption.231}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{113}{chapter.256}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{116}{table.caption.264}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Local dialogue evaluation metrics\relax }}{117}{table.caption.266}
+\contentsline {xchapter}{Experiment with real users}{113}{chapter.251}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{116}{table.caption.259}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Local dialogue evaluation metrics\relax }}{117}{table.caption.261}

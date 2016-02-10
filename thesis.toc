@@ -71,58 +71,53 @@
 \contentsline {subsection}{\numberline {4.3.1}System initiative strategies}{74}{subsection.146}
 \contentsline {subsection}{\numberline {4.3.2}User initiative strategies}{75}{subsection.147}
 \contentsline {subsection}{\numberline {4.3.3}Mixed initiative strategies}{75}{subsection.148}
-\contentsline {subsection}{\numberline {4.3.4}First efficiency comparison}{75}{subsection.149}
+\contentsline {subsection}{\numberline {4.3.4}First efficiency comparison}{76}{subsection.149}
 \contentsline {paragraph}{System initiative:}{76}{section*.150}
 \contentsline {paragraph}{User initiative:}{76}{section*.153}
 \contentsline {paragraph}{Mixed initiative:}{76}{section*.155}
 \contentsline {section}{\numberline {4.4}Incremental strategies}{77}{section.160}
-\contentsline {paragraph}{FAIL\_RAW:}{78}{section*.162}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{79}{section*.163}
-\contentsline {paragraph}{FEEDBACK\_RAW:}{79}{section*.164}
-\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{80}{section*.165}
-\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{80}{section*.166}
-\contentsline {chapter}{\numberline {5}Incremental dialogue simulation}{81}{chapter.167}
-\contentsline {section}{\numberline {5.1}Overview}{81}{section.168}
-\contentsline {section}{\numberline {5.2}Incremental dialogue simulation}{82}{section.170}
-\contentsline {subsection}{\numberline {5.2.1}User Simulator}{82}{subsection.172}
-\contentsline {subsubsection}{Intent Manager}{82}{section*.173}
-\contentsline {subsubsection}{NLG and Verbosity Manager}{83}{section*.177}
-\contentsline {subsubsection}{Timing and patience manager}{83}{section*.178}
-\contentsline {subsection}{\numberline {5.2.2}ASR output simulator}{84}{subsection.181}
-\contentsline {section}{\numberline {5.3}Personal Agenda management simulated environment}{86}{section.191}
-\contentsline {subsection}{\numberline {5.3.1}The service: personal agenda assistant}{87}{subsection.192}
-\contentsline {subsubsection}{Dialogue Manager}{87}{section*.193}
-\contentsline {subsubsection}{Natural Language Understanding}{88}{section*.196}
-\contentsline {subsection}{\numberline {5.3.2}Simulator instanciation}{89}{subsection.202}
-\contentsline {section}{\numberline {5.4}Functionning illustration}{91}{section.209}
-\contentsline {chapter}{\numberline {6}Handcrafted strategies for improving dialogue efficiency}{93}{chapter.210}
-\contentsline {section}{\numberline {6.1}User and system initiative}{93}{section.211}
-\contentsline {subsection}{\numberline {6.1.1}Strategies}{93}{subsection.212}
-\contentsline {subsection}{\numberline {6.1.2}Experiments}{98}{subsection.215}
-\contentsline {section}{\numberline {6.2}Incremental strategies}{99}{section.218}
-\contentsline {subsection}{\numberline {6.2.1}TTP implementation}{99}{subsection.219}
-\contentsline {paragraph}{FAIL\_RAW:}{99}{section*.222}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{100}{section*.224}
-\contentsline {paragraph}{FEEDBACK:}{100}{section*.225}
-\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{100}{section*.227}
-\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{101}{section*.228}
-\contentsline {subsection}{\numberline {6.2.2}Experiments}{101}{subsection.229}
-\contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{103}{chapter.232}
-\contentsline {section}{\numberline {7.1}Model}{103}{section.233}
-\contentsline {subsection}{\numberline {7.1.1}State representation}{103}{subsection.234}
-\contentsline {subsection}{\numberline {7.1.2}Actions, rewards and episodes}{107}{subsection.240}
-\contentsline {subsection}{\numberline {7.1.3}Fitted-Q Value Iteration}{108}{subsection.241}
-\contentsline {section}{\numberline {7.2}Experiment}{109}{section.248}
-\contentsline {subsection}{\numberline {7.2.1}Setup}{109}{subsection.249}
-\contentsline {subsection}{\numberline {7.2.2}Results}{109}{subsection.255}
-\contentsline {chapter}{\numberline {8}Experiment with real users}{113}{chapter.256}
-\contentsline {section}{\numberline {8.1}The Majordomo domain}{113}{section.257}
-\contentsline {section}{\numberline {8.2}Experimental protocol}{114}{section.258}
-\contentsline {subsection}{\numberline {8.2.1}Implementation}{114}{subsection.259}
-\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{115}{subsection.260}
-\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{116}{subsection.262}
-\contentsline {section}{\numberline {8.3}Results and discussion}{116}{section.263}
-\contentsline {section}{\numberline {8.4}Discussion}{118}{section.268}
-\contentsline {starchapter}{Liste des illustrations}{123}{chapter*.269}
-\contentsline {starchapter}{Liste des tableaux}{125}{chapter*.270}
-\contentsline {starchapter}{Bibliographie}{127}{chapter*.271}
+\contentsline {chapter}{\numberline {5}Incremental dialogue simulation}{81}{chapter.162}
+\contentsline {section}{\numberline {5.1}Overview}{81}{section.163}
+\contentsline {section}{\numberline {5.2}Incremental dialogue simulation}{82}{section.165}
+\contentsline {subsection}{\numberline {5.2.1}User Simulator}{82}{subsection.167}
+\contentsline {subsubsection}{Intent Manager}{82}{section*.168}
+\contentsline {subsubsection}{NLG and Verbosity Manager}{83}{section*.172}
+\contentsline {subsubsection}{Timing and patience manager}{83}{section*.173}
+\contentsline {subsection}{\numberline {5.2.2}ASR output simulator}{84}{subsection.176}
+\contentsline {section}{\numberline {5.3}Personal Agenda management simulated environment}{86}{section.186}
+\contentsline {subsection}{\numberline {5.3.1}The service: personal agenda assistant}{87}{subsection.187}
+\contentsline {subsubsection}{Dialogue Manager}{87}{section*.188}
+\contentsline {subsubsection}{Natural Language Understanding}{88}{section*.191}
+\contentsline {subsection}{\numberline {5.3.2}Simulator instanciation}{89}{subsection.197}
+\contentsline {section}{\numberline {5.4}Functionning illustration}{91}{section.204}
+\contentsline {chapter}{\numberline {6}Handcrafted strategies for improving dialogue efficiency}{93}{chapter.205}
+\contentsline {section}{\numberline {6.1}User and system initiative}{93}{section.206}
+\contentsline {subsection}{\numberline {6.1.1}Strategies}{93}{subsection.207}
+\contentsline {subsection}{\numberline {6.1.2}Experiments}{98}{subsection.210}
+\contentsline {section}{\numberline {6.2}Incremental strategies}{99}{section.213}
+\contentsline {subsection}{\numberline {6.2.1}TTP implementation}{99}{subsection.214}
+\contentsline {paragraph}{FAIL\_RAW:}{99}{section*.217}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{100}{section*.219}
+\contentsline {paragraph}{FEEDBACK:}{100}{section*.220}
+\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{100}{section*.222}
+\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{101}{section*.223}
+\contentsline {subsection}{\numberline {6.2.2}Experiments}{101}{subsection.224}
+\contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{103}{chapter.227}
+\contentsline {section}{\numberline {7.1}Model}{103}{section.228}
+\contentsline {subsection}{\numberline {7.1.1}State representation}{103}{subsection.229}
+\contentsline {subsection}{\numberline {7.1.2}Actions, rewards and episodes}{107}{subsection.235}
+\contentsline {subsection}{\numberline {7.1.3}Fitted-Q Value Iteration}{108}{subsection.236}
+\contentsline {section}{\numberline {7.2}Experiment}{109}{section.243}
+\contentsline {subsection}{\numberline {7.2.1}Setup}{109}{subsection.244}
+\contentsline {subsection}{\numberline {7.2.2}Results}{109}{subsection.250}
+\contentsline {chapter}{\numberline {8}Experiment with real users}{113}{chapter.251}
+\contentsline {section}{\numberline {8.1}The Majordomo domain}{113}{section.252}
+\contentsline {section}{\numberline {8.2}Experimental protocol}{114}{section.253}
+\contentsline {subsection}{\numberline {8.2.1}Implementation}{114}{subsection.254}
+\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{115}{subsection.255}
+\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{116}{subsection.257}
+\contentsline {section}{\numberline {8.3}Results and discussion}{116}{section.258}
+\contentsline {section}{\numberline {8.4}Discussion}{118}{section.263}
+\contentsline {starchapter}{Liste des illustrations}{123}{chapter*.264}
+\contentsline {starchapter}{Liste des tableaux}{125}{chapter*.265}
+\contentsline {starchapter}{Bibliographie}{127}{chapter*.266}

@@ -19,20 +19,20 @@
 \contentsline {xchapter}{Dialogue strategies}{71}{chapter.139}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{77}{figure.caption.159}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{81}{chapter.167}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{82}{figure.caption.169}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{85}{figure.caption.183}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{87}{figure.caption.190}
+\contentsline {xchapter}{Incremental dialogue simulation}{81}{chapter.162}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulated environment architecture\relax }}{82}{figure.caption.164}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{85}{figure.caption.178}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{87}{figure.caption.185}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{93}{chapter.210}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{98}{figure.caption.216}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{99}{figure.caption.220}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{100}{figure.caption.221}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{101}{figure.caption.230}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{93}{chapter.205}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{98}{figure.caption.211}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{99}{figure.caption.215}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{100}{figure.caption.216}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{101}{figure.caption.225}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{103}{chapter.232}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{110}{figure.caption.253}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{110}{figure.caption.254}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{103}{chapter.227}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)\relax }}{110}{figure.caption.248}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.\relax }}{110}{figure.caption.249}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{113}{chapter.256}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces The Majordomo interface\relax }}{115}{figure.caption.261}
+\contentsline {xchapter}{Experiment with real users}{113}{chapter.251}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces The Majordomo interface\relax }}{115}{figure.caption.256}

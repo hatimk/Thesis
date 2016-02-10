@@ -54,38 +54,38 @@
 \BOOKMARK [2][-]{subsection.148}{Mixed initiative strategies}{section.145}% 54
 \BOOKMARK [2][-]{subsection.149}{First efficiency comparison}{section.145}% 55
 \BOOKMARK [1][-]{section.160}{Incremental strategies}{chapter.139}% 56
-\BOOKMARK [0][-]{chapter.167}{Incremental dialogue simulation}{part.76}% 57
-\BOOKMARK [1][-]{section.168}{Overview}{chapter.167}% 58
-\BOOKMARK [1][-]{section.170}{Incremental dialogue simulation}{chapter.167}% 59
-\BOOKMARK [2][-]{subsection.172}{User Simulator}{section.170}% 60
-\BOOKMARK [2][-]{subsection.181}{ASR output simulator}{section.170}% 61
-\BOOKMARK [1][-]{section.191}{Personal Agenda management simulated environment}{chapter.167}% 62
-\BOOKMARK [2][-]{subsection.192}{The service: personal agenda assistant}{section.191}% 63
-\BOOKMARK [2][-]{subsection.202}{Simulator instanciation}{section.191}% 64
-\BOOKMARK [1][-]{section.209}{Functionning illustration}{chapter.167}% 65
-\BOOKMARK [0][-]{chapter.210}{Handcrafted strategies for improving dialogue efficiency}{part.76}% 66
-\BOOKMARK [1][-]{section.211}{User and system initiative}{chapter.210}% 67
-\BOOKMARK [2][-]{subsection.212}{Strategies}{section.211}% 68
-\BOOKMARK [2][-]{subsection.215}{Experiments}{section.211}% 69
-\BOOKMARK [1][-]{section.218}{Incremental strategies}{chapter.210}% 70
-\BOOKMARK [2][-]{subsection.219}{TTP implementation}{section.218}% 71
-\BOOKMARK [2][-]{subsection.229}{Experiments}{section.218}% 72
-\BOOKMARK [0][-]{chapter.232}{Reinforcement learning for turn-taking optimisation}{part.76}% 73
-\BOOKMARK [1][-]{section.233}{Model}{chapter.232}% 74
-\BOOKMARK [2][-]{subsection.234}{State representation}{section.233}% 75
-\BOOKMARK [2][-]{subsection.240}{Actions, rewards and episodes}{section.233}% 76
-\BOOKMARK [2][-]{subsection.241}{Fitted-Q Value Iteration}{section.233}% 77
-\BOOKMARK [1][-]{section.248}{Experiment}{chapter.232}% 78
-\BOOKMARK [2][-]{subsection.249}{Setup}{section.248}% 79
-\BOOKMARK [2][-]{subsection.255}{Results}{section.248}% 80
-\BOOKMARK [0][-]{chapter.256}{Experiment with real users}{part.76}% 81
-\BOOKMARK [1][-]{section.257}{The Majordomo domain}{chapter.256}% 82
-\BOOKMARK [1][-]{section.258}{Experimental protocol}{chapter.256}% 83
-\BOOKMARK [2][-]{subsection.259}{Implementation}{section.258}% 84
-\BOOKMARK [2][-]{subsection.260}{Conduct of the dialogue}{section.258}% 85
-\BOOKMARK [2][-]{subsection.262}{Key Performance Indicators}{section.258}% 86
-\BOOKMARK [1][-]{section.263}{Results and discussion}{chapter.256}% 87
-\BOOKMARK [1][-]{section.268}{Discussion}{chapter.256}% 88
-\BOOKMARK [0][-]{chapter*.269}{Liste des illustrations}{part.76}% 89
-\BOOKMARK [0][-]{chapter*.270}{Liste des tableaux}{part.76}% 90
-\BOOKMARK [0][-]{chapter*.271}{Bibliographie}{part.76}% 91
+\BOOKMARK [0][-]{chapter.162}{Incremental dialogue simulation}{part.76}% 57
+\BOOKMARK [1][-]{section.163}{Overview}{chapter.162}% 58
+\BOOKMARK [1][-]{section.165}{Incremental dialogue simulation}{chapter.162}% 59
+\BOOKMARK [2][-]{subsection.167}{User Simulator}{section.165}% 60
+\BOOKMARK [2][-]{subsection.176}{ASR output simulator}{section.165}% 61
+\BOOKMARK [1][-]{section.186}{Personal Agenda management simulated environment}{chapter.162}% 62
+\BOOKMARK [2][-]{subsection.187}{The service: personal agenda assistant}{section.186}% 63
+\BOOKMARK [2][-]{subsection.197}{Simulator instanciation}{section.186}% 64
+\BOOKMARK [1][-]{section.204}{Functionning illustration}{chapter.162}% 65
+\BOOKMARK [0][-]{chapter.205}{Handcrafted strategies for improving dialogue efficiency}{part.76}% 66
+\BOOKMARK [1][-]{section.206}{User and system initiative}{chapter.205}% 67
+\BOOKMARK [2][-]{subsection.207}{Strategies}{section.206}% 68
+\BOOKMARK [2][-]{subsection.210}{Experiments}{section.206}% 69
+\BOOKMARK [1][-]{section.213}{Incremental strategies}{chapter.205}% 70
+\BOOKMARK [2][-]{subsection.214}{TTP implementation}{section.213}% 71
+\BOOKMARK [2][-]{subsection.224}{Experiments}{section.213}% 72
+\BOOKMARK [0][-]{chapter.227}{Reinforcement learning for turn-taking optimisation}{part.76}% 73
+\BOOKMARK [1][-]{section.228}{Model}{chapter.227}% 74
+\BOOKMARK [2][-]{subsection.229}{State representation}{section.228}% 75
+\BOOKMARK [2][-]{subsection.235}{Actions, rewards and episodes}{section.228}% 76
+\BOOKMARK [2][-]{subsection.236}{Fitted-Q Value Iteration}{section.228}% 77
+\BOOKMARK [1][-]{section.243}{Experiment}{chapter.227}% 78
+\BOOKMARK [2][-]{subsection.244}{Setup}{section.243}% 79
+\BOOKMARK [2][-]{subsection.250}{Results}{section.243}% 80
+\BOOKMARK [0][-]{chapter.251}{Experiment with real users}{part.76}% 81
+\BOOKMARK [1][-]{section.252}{The Majordomo domain}{chapter.251}% 82
+\BOOKMARK [1][-]{section.253}{Experimental protocol}{chapter.251}% 83
+\BOOKMARK [2][-]{subsection.254}{Implementation}{section.253}% 84
+\BOOKMARK [2][-]{subsection.255}{Conduct of the dialogue}{section.253}% 85
+\BOOKMARK [2][-]{subsection.257}{Key Performance Indicators}{section.253}% 86
+\BOOKMARK [1][-]{section.258}{Results and discussion}{chapter.251}% 87
+\BOOKMARK [1][-]{section.263}{Discussion}{chapter.251}% 88
+\BOOKMARK [0][-]{chapter*.264}{Liste des illustrations}{part.76}% 89
+\BOOKMARK [0][-]{chapter*.265}{Liste des tableaux}{part.76}% 90
+\BOOKMARK [0][-]{chapter*.266}{Bibliographie}{part.76}% 91
