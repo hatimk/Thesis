@@ -69,23 +69,24 @@
 \BOOKMARK [2][-]{subsection.210}{Experiments}{section.206}% 69
 \BOOKMARK [1][-]{section.213}{Incremental strategies}{chapter.205}% 70
 \BOOKMARK [2][-]{subsection.214}{TTP implementation}{section.213}% 71
-\BOOKMARK [2][-]{subsection.224}{Experiments}{section.213}% 72
+\BOOKMARK [2][-]{subsection.222}{Experiments}{section.213}% 72
 \BOOKMARK [0][-]{chapter.227}{Reinforcement learning for turn-taking optimisation}{part.76}% 73
-\BOOKMARK [1][-]{section.228}{Model}{chapter.227}% 74
-\BOOKMARK [2][-]{subsection.229}{State representation}{section.228}% 75
-\BOOKMARK [2][-]{subsection.235}{Actions, rewards and episodes}{section.228}% 76
-\BOOKMARK [2][-]{subsection.236}{Fitted-Q Value Iteration}{section.228}% 77
-\BOOKMARK [1][-]{section.243}{Experiment}{chapter.227}% 78
-\BOOKMARK [2][-]{subsection.244}{Setup}{section.243}% 79
-\BOOKMARK [2][-]{subsection.250}{Results}{section.243}% 80
-\BOOKMARK [0][-]{chapter.251}{Experiment with real users}{part.76}% 81
-\BOOKMARK [1][-]{section.252}{The Majordomo domain}{chapter.251}% 82
-\BOOKMARK [1][-]{section.253}{Experimental protocol}{chapter.251}% 83
-\BOOKMARK [2][-]{subsection.254}{Implementation}{section.253}% 84
-\BOOKMARK [2][-]{subsection.255}{Conduct of the dialogue}{section.253}% 85
-\BOOKMARK [2][-]{subsection.257}{Key Performance Indicators}{section.253}% 86
-\BOOKMARK [1][-]{section.258}{Results and discussion}{chapter.251}% 87
-\BOOKMARK [1][-]{section.263}{Discussion}{chapter.251}% 88
-\BOOKMARK [0][-]{chapter*.264}{Liste des illustrations}{part.76}% 89
-\BOOKMARK [0][-]{chapter*.265}{Liste des tableaux}{part.76}% 90
-\BOOKMARK [0][-]{chapter*.266}{Bibliographie}{part.76}% 91
+\BOOKMARK [1][-]{section.228}{Reinforcement Learning Model}{chapter.227}% 74
+\BOOKMARK [2][-]{subsection.229}{Background}{section.228}% 75
+\BOOKMARK [2][-]{subsection.230}{State representation}{section.228}% 76
+\BOOKMARK [2][-]{subsection.236}{Actions, rewards and episodes}{section.228}% 77
+\BOOKMARK [2][-]{subsection.237}{Fitted-Q Value Iteration}{section.228}% 78
+\BOOKMARK [1][-]{section.244}{Experiment}{chapter.227}% 79
+\BOOKMARK [2][-]{subsection.245}{Setup}{section.244}% 80
+\BOOKMARK [2][-]{subsection.251}{Results}{section.244}% 81
+\BOOKMARK [0][-]{chapter.252}{Experiment with real users}{part.76}% 82
+\BOOKMARK [1][-]{section.253}{The Majordomo domain}{chapter.252}% 83
+\BOOKMARK [1][-]{section.254}{Experimental protocol}{chapter.252}% 84
+\BOOKMARK [2][-]{subsection.255}{Implementation}{section.254}% 85
+\BOOKMARK [2][-]{subsection.256}{Conduct of the dialogue}{section.254}% 86
+\BOOKMARK [2][-]{subsection.258}{Key Performance Indicators}{section.254}% 87
+\BOOKMARK [1][-]{section.259}{Results and discussion}{chapter.252}% 88
+\BOOKMARK [1][-]{section.264}{Discussion}{chapter.252}% 89
+\BOOKMARK [0][-]{chapter*.265}{Liste des illustrations}{part.76}% 90
+\BOOKMARK [0][-]{chapter*.266}{Liste des tableaux}{part.76}% 91
+\BOOKMARK [0][-]{chapter*.267}{Bibliographie}{part.76}% 92

@@ -5,7 +5,21 @@
 	
 	In this chapter, a new approach is proposed where the Scheduler automatically learns optimal turn-taking behaviours through interactions. Reinforcement learning is applied in order to make decisions at the micro-turn level based on a new state representation model. A new simulation experiment shows that the resulting strategy outperforms the handcrafted one from Chapter \ref{ch:baseline}.
 
-\section{Model}
+\section{Reinforcement Learning Model}
+
+        \subsection{Background}
+
+             This section recalls a few elements about reinforcement learning and MDPs (see Chapter \ref{ch:stateofart} for more details). The Scheduler is modeled as an MDP: a tuple $(\mathcal{S},\mathcal{A},\mathscr{T},\mathscr{R},\gamma)$ where
+
+             \begin{itemize}
+                \item $\mathcal{S}$ is the state space: all the states in which the agent could be.
+                \item $\mathcal{A}$ is the action space: all the actions that it can perform.
+                \item $\mathscr{T}$ is the transition model: the distributions over the state space where the random variable is the next state $s' \in \mathcal{S}$ given that the agent is currently at state $s \in \mathcal{S}$ and performs action $a \in \mathcal{A}$.
+                \item $\mathscr{R}$ is the reward model: the distributions over $\mathbb{R}$ where the random variable is the immediate reward $r \in \mathbb{R}$ given that the agent is currently at state $s \in \mathcal{S}$ and performs action $a \in \mathcal{A}$.
+                \item $\gamma$ is a discount factor in $[0,1[$. The more it is close to 1, the more the agent is farsighted (maximising long term returns).
+             \end{itemize}
+
+             The time step at which the Scheduler is run is the micro-turn, therefore, at each new micro-turn, the Scheduler computes the current state and then makes a decision (which action to perform). As discussed in Chapter \ref{ch:stateofart}, the state space representation is a challenge in itself since it should embed all the necessary information while being tractable. In the next section, a new state representation adapted to incremental processing is introduced. It is general enough so that it can be easily implemented for any slot-filling task.
 
 	\subsection{State representation}
     
@@ -37,7 +51,7 @@
 						
             \item \textbf{NB\_USER\_WORDS:} This feature is a counter of the number of words since the last change of LAST\_INCR\_RESP (the number of words since the service did not change its mind about the response to deliver). It is equal to zero at the exact micro-turn when the change happens and it is incremented until the next change.
 						
-            \item \textbf{NORMALISED\_SCORE:} At each micro-turn, the ASR score is updated: most of the time, it is multiplied by the ASR score corresponding to the new incoming word (see Figure \ref{fig:asrsimu}). Except from the cases where a boost comes into play, the score keeps decreasing as the user speaks. To avoid penalising long sentences, the score is normalised by taking the geometric mean over the words (of course, this is an approximation as the number of inputs that forms the current ASR hypothesis is not exactly the number of words because of deletions and additions in the Scrambler). If $s$ is the current score for $n$ number of words, NORMALISED\_SCORE = $s^{\frac{1}{n}}$.
+            \item \textbf{NORMALISED\_SCORE:} At each micro-turn, the ASR score is updated: most of the time, it is multiplied by the ASR score corresponding to the new incoming word (see Figure \ref{fig:asrsimu}). Except from the cases where a boost comes into play, the score keeps decreasing as the user speaks. To avoid penalising long sentences, the score is normalised by taking the geometric mean over the words (this induces a bias since the number of inputs that forms the current ASR hypothesis may not be exactly the number of words because of the Scrambler's additions and deletions). If $s$ is the current score for $n$ number of words, NORMALISED\_SCORE = $s^{\frac{1}{n}}$.
             \item \textbf{TIME:} Corresponds to the duration of the current episode in milliseconds.
         \end{itemize}
 				
@@ -91,13 +105,13 @@
         
         %HK> Justifier le choix d'une représentation linéaire
         %HK> Il faut introduire Fitted-Q, dire qu'on a essayé autre chose (tabulaire, Q-Learning...).
-        A linear model is used to represent the Q-function. First, it has been noticed that 21 combinations between SYSTEM\_REQ and LAST\_INCR\_RESP are frequently visited (the others barely happen or not at all). Therefore, 21 features are defined $\delta_1$,...,$\delta_{21}$ where $\delta_i = 1$ if and only if the current state corresponds to the $i^{th}$ combination, and 0 otherwise. The rare combinations are not included in the model for two reasons. First, they require maintaining heavier models with no real improvements over the simpler ones and second, Fitted-Q algorithm was chosen for resolving the MDP and it involves a matrix inversion that should be well conditioned. Having features that are equal to zero most of the time is not compliant with that condition.
+        A linear model is used to represent the Q-function. First, it has been noticed that 21 combinations between SYSTEM\_REQ and LAST\_INCR\_RESP are frequently visited (the others barely happen or not at all). Therefore, 21 features are defined $\delta_1$,...,$\delta_{21}$ where $\delta_i = 1$ if and only if the current state corresponds to the $i^{th}$ combination, and 0 otherwise. The rare combinations are not included in the model since they require maintaining heavier models with no real improvements over the simpler ones.
         
         %HK> Utiliser eqnarray
         The Q-function should clearly not be monotonous with respect to NB\_USER\_WORDS since the user should not be interrupted too soon nor too late. It should be maximal around some value, therefore, the Q-function should not be linear with respect to that feature. Instead, NB\_USER\_WORDS is represented by three RBF functions $\phi^{nw}_1$, $\phi^{nw}_2$ and $\phi^{nw}_3$ centered in 0, 5 and 10 with a standard deviation of 2, 3 and 3. In other words
         
 				\begin{eqnarray}
-					\phi^{nw}_i & = & \exp (\frac{NB\_USER\_WORDS - \mu_i}{2 \sigma_i^2}) \\
+					\phi^{nw}_i & = & \exp \left( \frac{(NB\_USER\_WORDS - \mu_i)^2}{2 \sigma_i^2} \right) \\
           \mu_1 & = & 0, \text{ } \mu_2 = 5, \text{ }, \mu_3 = 10 \nonumber \\
           \sigma_1 & = & 2, \text{ } \sigma_2 = 3, \text{ } \sigma_3 = 3 \nonumber
 				\end{eqnarray}
@@ -107,7 +121,7 @@
         Finally, TIME is normalised so that it is near zero at the beginning of the episode and around 1 when the duration reaches 6 minutes (the maximum duration due to patience limit):
         
 				\begin{eqnarray}
-					T & = & sigmoid(\frac{(TIME-180)}{60})
+					T & = & sigmoid \left( \frac{TIME-180}{60} \right)
 				\end{eqnarray}
             
        	There is no need to use RBFs for this last feature since the Q-function is supposed to be monotonous with respect to it. The longer the dialogue, the more likely the user is to hang up.
@@ -121,7 +135,7 @@
    	\subsection{Actions, rewards and episodes}
     
     	%HK> Décrire plus en détail et justifier.
-    	The system can perform the action WAIT and the action SPEAK (see Chapter \ref{ch:baseline} for a description of these actions). The action REPEAT introduces more complexity to the system for the following reasons:
+    	The system can perform the action WAIT and the action SPEAK (see Chapter \ref{ch:baseline} for a description of these actions). The action REPEAT, which consists on repeating the last word of the last stable utterance (with no intention of interrupting the user), introduces more complexity to the system for the following reasons:
 			
 			\begin{itemize}
 				\item When performing a feedback, the speaker is not interrupted (total overlap) and therefore, in the case of a right feedback (repeating the true word that the user uttered), there is no visible impact on the dialogue duration. As a consequence, in simulation mode, the optimal strategy would be to perform feedbacks all the time which is of course not acceptable in real dialogue.
@@ -131,7 +145,7 @@
 			
 			As a consequence, the action REPEAT is not addressed here.
         
-    	At each micro-turn, the system receives a reward $-\Delta t$ which corresponds to the opposite of the time elapsed since the micro-turn before. Moreover, there are two rewarding situations where the system gets a reward of 150 seconds:
+    	At each micro-turn, the system receives a reward $-\Delta t$ which corresponds to the opposite of the time elapsed since the micro-turn before. Moreover, there are two rewarding situations where the system gets a reward of 150 (the reward the Scheduler gets when an elementary task - see Chapter \ref{ch:strategies} - is completed):
         
         \begin{itemize}
         	\item The Scheduler retrieves a confirmation that the task corresponding to the user's requests has been accomplished to the client (happens when the user says \textit{yes} to a confirmation question).
@@ -155,40 +169,40 @@
 				Q_i & = & T^* Q_{i-1}
 			\end{eqnarray}
 						
-					However, an exact representation of the Q-function is assumed which is not possible in the present case since the state space is infinite (even if the ASR score is discretised, it will still be too big). As a consequence, a linear representation of the Q-function is adopted:
+					However, an exact representation of the Q-function is assumed which is not possible in the present case since the state space is infinite. Discretisation of continuous variables is generally a poor option since it implies arbitrary choices of granularity and phase. Also, it does not solve the curse of dimensionality (and may even make it worse). A classical solution consists in using a linear representation of the Q-function:
         
 			\begin{eqnarray}
 				\hat{Q}(s,a) & = & \theta(a)^T \Phi(s)
 			\end{eqnarray}
             
-      	where $\theta(a)$ is a parameter vector associated with action a. The aim of Fitted-Q algorithm is to estimate the parameters that approximate the Q-function $Q^*$ best. $\hat{Q}$ is the projection of Q on the space of the functions that can be written as a linear combination of the state vector's components. Let $\Pi$ be the corresponding projection operator, then it can be shown that $\Pi T^*$ is still a contraction and admits a unique fixed point that can be iteratively computed as follows: $\hat{Q}_{\theta_i (a)} = \Pi T^* \hat{Q}_{\theta_{i-1} (a)}$ for each action $a$. Since the transition probabilities of the MDP and the reward function are not known, a sampled operator $\hat{T}$ is used instead of $T$. For a transition (s,a,r,s'), it is defined as
+      	where $\theta(a)$ is a parameter vector associated with action a. The aim of Fitted-Q algorithm is to estimate the parameters that approximate the Q-function $Q^*$ best. $\hat{Q}$ is the projection of Q on the space of the functions that can be written as a linear combination of the state vector's components. Let $\Pi$ be the corresponding projection operator, then it can be shown that $\Pi T^*$ is still a contraction and admits a unique fixed point that can be iteratively computed as follows: $\hat{Q}_{\theta_i (a)} = \Pi T^* \hat{Q}_{\theta_{i-1} (a)}$ for each action $a$. Since the transition probabilities of the MDP and the reward function are not known, a sampled operator $\hat{T}$ is used instead of $T$. For a transition $(s_j,a_j,r_j,s_j')$, it is defined as
         
 				\begin{eqnarray}
-					\hat{T} Q(s,a) & = & r + \gamma \max_{a'} Q(s',a')
+					\hat{T} Q(s_j,a_j) & = & r_j + \gamma \max_{a'} Q(s_j',a')
 				\end{eqnarray}
             
       	The Fitted-Q algorithm therefore estimates the $\theta$ vector using the iteration rule: $\hat{Q}_{\theta_i (a)} = \hat{T} \hat{Q}_{\theta_{i-1} (a)}$ for each action $a$. To compute the projection, the least square estimator is used:
         
 				\begin{eqnarray}
-					\theta_i (a) & = & \argmin_{\theta \in \mathbb{R}^p} \sum_{j=1}^N (r_j + \gamma \max_a \theta_{i-1}(a)^T \phi{s_j} - \theta (a_j) \phi(s_j))^2
+					\theta_i (a) & = & \argmin_{\theta \in \mathbb{R}^p} \sum_{j=1}^N \left(r_j + \gamma \max_a [\theta_{i-1}(a)^T \phi(s_j')] - \theta (a_j)^T \phi(s_j) \right)^2
 				\end{eqnarray}
             
-      	where N is the number of transitions in the data batch. This is a classic least square optimisation and $\theta_i$ can be computed as follows (the matrix inversion has to be performed only once and not at every iteration):
+      	where N is the number of transitions in the data batch. This is a classic least square optimisation and $\theta_i$ can be computed as follows (since the matrix inversion does not depend on $i$, it has to be performed only once):
         
 				\begin{eqnarray}
-					\theta_i (a) & = & (\sum_{j=1}^N \phi(s_j)^T \phi(s_j))^{-1} \sum_{j=1}^N \phi(s_j) (r_j + \gamma \max_a \theta_{i-1}(a)^T \phi(s_j))
+					\theta_i (a) & = & \left( \sum_{j=1}^N \phi(s_j)^T \phi(s_j) \right)^{-1} \sum_{j=1}^N \phi(s_j) \left( r_j + \gamma \max_a \theta_{i-1}(a)^T \phi(s_j) \right)
 				\end{eqnarray}
 
 \section{Experiment}
 	
     \subsection{Setup}
 
-		The dialogue scenarios described in Chapter \ref{ch:baseline} are used here. For learning, the noise level is fixed at 0.15. 50 learning curves have been produced with 3000 episodes each and the average curve is depicted in Figure \ref{fig:learn}. The $\theta$ vectors in the Q-function model are initially zeros and they are updated every 500 episodes, therefore, the learnt strategy reward evolution is representation by one average point in the middle of each 500 episodes interval. There are three phases to distinguish:
+		The dialogue scenarios described in Chapter \ref{ch:baseline} are used here. For learning, the noise level is fixed at 0.15. 50 runs have been produced with 3000 episodes each and the average curve is depicted in Figure \ref{fig:learn}. The $\theta$ parameters in the Q-function model are initiated to zeros and updated every 500 episodes, therefore, the learnt strategy reward evolution is representation by one average point in the middle of each 500 episodes interval. There are three phases to distinguish:
         
         %HK> Faire une référence au chapitre sur l'optimisation du travail sur le dilemme exploitation/exploration.
         \begin{enumerate}
         	\item \textbf{Pure exploration (Episodes 0-500):} The actions are taken randomly with a probability of 0.9 for choosing WAIT and 0.1 for SPEAK. Picking equiprobable actions results in the user being interrupted so often that the interesting scenarios are very rarely explored.
-            \item \textbf{Exploration/exploitation (Episodes 500-2500):} An $\epsilon$-greedy policy is used with respect to the current Q-function, with $\epsilon=0.1$.
+            \item \textbf{Exploration/exploitation (Episodes 500-2500):} An $\epsilon$-greedy policy is used with respect to the current Q-function, with $\epsilon=0.1$ (unlike the previous phase, when a random action is picked, the actions WAIT and SPEAK are equiprobable).
             \item \textbf{Pure exploitation (Episodes 2500-3000):} A 100\% greedy policy is used.
         \end{enumerate}
 				
@@ -434,7 +448,7 @@
 
   \end{axis}
   \end{tikzpicture}
-  \caption{Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation)}
+  \caption{Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.}
   \label{fig:learn}
 \end{figure}
 
@@ -561,7 +575,7 @@
   (0.27,0.745666666666664) +- (0.015024266185076234,0.015024266185076234)
   (0.3,0.678333333333332) +- (0.016133166803548708,0.016133166803548708)
   };
-
+p
   \addplot[
 	color=color5,
 	thick, mark=*, mark options={fill=white},
@@ -609,7 +623,7 @@
   \end{axis}
   \end{tikzpicture}
 \end{minipage}
-\caption{Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental strategies under different noise conditions.}
+\caption{Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.}
 \label{fig:rlvsbaselines}
 \end{figure*}
    

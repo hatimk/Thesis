@@ -96,28 +96,29 @@
 \contentsline {subsection}{\numberline {6.1.2}Experiments}{98}{subsection.210}
 \contentsline {section}{\numberline {6.2}Incremental strategies}{99}{section.213}
 \contentsline {subsection}{\numberline {6.2.1}TTP implementation}{99}{subsection.214}
-\contentsline {paragraph}{FAIL\_RAW:}{99}{section*.217}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{100}{section*.219}
-\contentsline {paragraph}{FEEDBACK:}{100}{section*.220}
-\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{100}{section*.222}
-\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{101}{section*.223}
-\contentsline {subsection}{\numberline {6.2.2}Experiments}{101}{subsection.224}
+\contentsline {paragraph}{FAIL\_RAW:}{99}{section*.215}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{100}{section*.217}
+\contentsline {paragraph}{FEEDBACK:}{100}{section*.218}
+\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{100}{section*.220}
+\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{100}{section*.221}
+\contentsline {subsection}{\numberline {6.2.2}Experiments}{100}{subsection.222}
 \contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{103}{chapter.227}
-\contentsline {section}{\numberline {7.1}Model}{103}{section.228}
-\contentsline {subsection}{\numberline {7.1.1}State representation}{103}{subsection.229}
-\contentsline {subsection}{\numberline {7.1.2}Actions, rewards and episodes}{107}{subsection.235}
-\contentsline {subsection}{\numberline {7.1.3}Fitted-Q Value Iteration}{108}{subsection.236}
-\contentsline {section}{\numberline {7.2}Experiment}{109}{section.243}
-\contentsline {subsection}{\numberline {7.2.1}Setup}{109}{subsection.244}
-\contentsline {subsection}{\numberline {7.2.2}Results}{109}{subsection.250}
-\contentsline {chapter}{\numberline {8}Experiment with real users}{113}{chapter.251}
-\contentsline {section}{\numberline {8.1}The Majordomo domain}{113}{section.252}
-\contentsline {section}{\numberline {8.2}Experimental protocol}{114}{section.253}
-\contentsline {subsection}{\numberline {8.2.1}Implementation}{114}{subsection.254}
-\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{115}{subsection.255}
-\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{116}{subsection.257}
-\contentsline {section}{\numberline {8.3}Results and discussion}{116}{section.258}
-\contentsline {section}{\numberline {8.4}Discussion}{118}{section.263}
-\contentsline {starchapter}{Liste des illustrations}{123}{chapter*.264}
-\contentsline {starchapter}{Liste des tableaux}{125}{chapter*.265}
-\contentsline {starchapter}{Bibliographie}{127}{chapter*.266}
+\contentsline {section}{\numberline {7.1}Reinforcement Learning Model}{103}{section.228}
+\contentsline {subsection}{\numberline {7.1.1}Background}{103}{subsection.229}
+\contentsline {subsection}{\numberline {7.1.2}State representation}{104}{subsection.230}
+\contentsline {subsection}{\numberline {7.1.3}Actions, rewards and episodes}{107}{subsection.236}
+\contentsline {subsection}{\numberline {7.1.4}Fitted-Q Value Iteration}{108}{subsection.237}
+\contentsline {section}{\numberline {7.2}Experiment}{110}{section.244}
+\contentsline {subsection}{\numberline {7.2.1}Setup}{110}{subsection.245}
+\contentsline {subsection}{\numberline {7.2.2}Results}{110}{subsection.251}
+\contentsline {chapter}{\numberline {8}Experiment with real users}{113}{chapter.252}
+\contentsline {section}{\numberline {8.1}The Majordomo domain}{113}{section.253}
+\contentsline {section}{\numberline {8.2}Experimental protocol}{114}{section.254}
+\contentsline {subsection}{\numberline {8.2.1}Implementation}{114}{subsection.255}
+\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{115}{subsection.256}
+\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{116}{subsection.258}
+\contentsline {section}{\numberline {8.3}Results and discussion}{116}{section.259}
+\contentsline {section}{\numberline {8.4}Discussion}{118}{section.264}
+\contentsline {starchapter}{Liste des illustrations}{123}{chapter*.265}
+\contentsline {starchapter}{Liste des tableaux}{125}{chapter*.266}
+\contentsline {starchapter}{Bibliographie}{127}{chapter*.267}

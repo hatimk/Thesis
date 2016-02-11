@@ -38,7 +38,7 @@
 								\speak{SYSTEM} Please specify a time window.
 								\speak{USER} From 10am until 11am.
 								\speak{SYSTEM} Please specify a description.
-								\speak{USER} Long list.
+								\speak{USER} Long list. \textit{(Recognition error: the user actually said Dentist)}.
 								\speak{SYSTEM} You said long list right?
 								\speak{USER} No.
 								\speak{SYSTEM} Please specify a description.
@@ -72,7 +72,7 @@
 								\speak{SYSTEM} Thank you. Bye.
 						\end{dialogue}
 
-              As discussed in Chapter \ref{ch:strategies}, this strategy is very tedious, however, it has the advantage of baby-stepping the dialogue and recovering the errors progressively.
+              As discussed in Chapter \ref{ch:strategies}, this strategy is very tedious, however, it has the advantage of baby-stepping the dialogue and recovering from errors as soon as they occur.
 
           \item \textbf{User Initiative (UsrIni):} In the case of ADD or MODIFY actions, the event description, its date and its time window should be provided in the user's request, otherwise, an error is reported. For DELETE actions, only the description is required. For example:
 
@@ -122,7 +122,7 @@
               
     \subsection{Experiments}
     
-    	\begin{figure*}[t!]
+    	\begin{figure*}[b!]
                   \begin{subfigure}[t]{.5\textwidth}
                     \begin{tikzpicture}[scale=0.8]
                     \begin{axis}[
@@ -351,8 +351,35 @@
     
 	\subsection{TTP implementation}
     \label{subsec:ttpimpl}
-		
-		\begin{figure*}[t]
+    
+    	First, recall that as announced in Chapter \ref{ch:simulation}, SM=2 and therefore, the last stable utterance corresponds to the last user's request without the last two words.
+    
+    	 \paragraph{FAIL\_RAW:} Happens when the user speaks for too long with no key concept detected in her speech. It depends on the system's last question (the type of information it is waiting for). For open questions (all the slots at once), this key concept is the action type (ADD, MODIFY or DELETE). For the dates and the time window, it corresponds to the slot value whereas in the case of yes/no questions, it corresponds to the concepts YES and NO. This TTP is not relevant when the user utters an event description since it is an open slot. Let $KeyConcept$ be a boolean indicating whether the key concept the system is waiting for has been pronounced or not and let $\Delta t$ be the duration of the user's utterance so far. Therefore:
+			
+			\begin{eqnarray}
+				CommitCond & = & \neg KeyConcept \wedge (\Delta t \geq \xi) \nonumber
+			\end{eqnarray}
+			
+			where $\xi$ is set to 6 for open questions, 4 for date questions, 6 for time window questions and 3 for yes/no questions (values which showed empirical best values on the task).
+         
+         \paragraph{INCOHERENCE\_INTERP:} In this implementation, this event is triggered as soon as the last stable utterance generates an overlap with an existing event in the agenda, or it tries to move or delete a non existing event.
+         
+         \paragraph{FEEDBACK:} At each new micro-turn, given that no boosting is involved, the N-Best best score relative variation is equal to the best score of the most recent word N-Best. Therefore, as the word score is not accessible by the Scheduler, the ratio $s_t/s_{t-1}$ can be used as a proxy for that value. Similarly, the score of the last word of the last stable utterance can be estimated by $s_{t-SM}/s_{t-SM-1}$. Let $persist$ be a boolean that determines whether the last word of the last stable utterance has changed since it has first been pronounced, then (0.7 being an empirical value):
+				
+					\begin{eqnarray}
+						CommitCond & = & persist \wedge (\frac{s_{t-SM}}{s_{t-SM-1}} \leq 0.7) \nonumber
+					\end{eqnarray}
+         
+         \paragraph{BARGE\_IN\_RESP (System):} Depending on the last system's dialogue act (apart from dialogue acts reporting errors), the system can choose to barge-in once it has all the information needed to provide an answer. Again, it should also wait for the SM.
+         
+         %HK> Trouver une référence montrant que l'utilisateur peut inférer la fin de la phrase du système avec l'habitude.
+         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the a user's decision. Hence, it has been implemented in the US: a barge-in point has been determined in advance for each system's dialogue act template.
+    
+    \subsection{Experiments}
+    
+    	In this experiment, the TTP described in Section \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Section \ref{subsec:strategies}. Incremental processing is useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Figure \ref{fig:generic}.
+
+        \begin{figure*}[htp]
 			\centering
 			\begin{minipage}{.47\textwidth}
 				\begin{tikzpicture}[scale=0.7]
@@ -568,7 +595,7 @@
 			\label{fig:generic}
 		\end{figure*}
     
-    	\begin{figure*}[t]
+    	\begin{figure*}[htp]
 			\centering
 			\begin{minipage}{.47\textwidth}
 				\begin{tikzpicture}[scale=0.7]
@@ -867,35 +894,10 @@
 		\caption{Mean dialogue duration and task completion for different turn-taking phenomena.}
 		\label{fig:ttp}
 	\end{figure*}
-    
-    	First, recall that as announced in Chapter \ref{ch:simulation}, SM=2 and therefore, the last stable utterance corresponds to the last user's request without the last two words.
-    
-    	 \paragraph{FAIL\_RAW:} Happens when the user speaks for too long with no key concept detected in her speech. It depends on the system's last question (the type of information it is waiting for). For open questions (all the slots at once), this key concept is the action type (ADD, MODIFY or DELETE). For the dates and the time window, it corresponds to the slot value whereas in the case of yes/no questions, it corresponds to the concepts YES and NO. This TTP is not relevant when the user utters an event description since it is an open slot. Let $KeyConcept$ be a boolean indicating whether the key concept the system is waiting for has been pronounced or not and let $\Delta t$ be the duration of the user's utterance so far. Therefore:
-			
-			\begin{eqnarray}
-				CommitCond & = & \neg KeyConcept \wedge (\Delta t \geq \xi) \nonumber
-			\end{eqnarray}
-			
-			where $\xi$ is empirically set to 6 for open questions, 4 for date questions, 6 for time window questions and 3 for yes/no questions (values chosen to be reasonable given the number of words that is needed to provide the key concept).
-         
-         \paragraph{INCOHERENCE\_INTERP:} In this implementation, this event is triggered as soon as the last stable utterance generates an overlap with an existing event in the agenda, or it tries to move or delete a non existing event.
-         
-         \paragraph{FEEDBACK:} At each new micro-turn, given that no boosting is involved, the N-Best best score relative variation is equal to the best score of the most recent word N-Best. Therefore, as the word score is not accessible by the Scheduler, the ratio $s_t/s_{t-1}$ can be used as a proxy for that value. Similarly, the score of the last word of the last stable utterance can be estimated by $s_{t-SM}/s_{t-SM-1}$. Let $persist$ be a boolean that determines whether the last word of the last stable utterance has changed since it has first been pronounced, then (0.7 being an empirical value):
-				
-					\begin{eqnarray}
-						CommitCond & = & persist \wedge (\frac{s_{t-SM}}{s_{t-SM-1}} \leq 0.7) \nonumber
-					\end{eqnarray}
-         
-         \paragraph{BARGE\_IN\_RESP (System):} Depending on the last system's dialogue act (apart from dialogue acts reporting errors), the system can choose to barge-in once it has all the information needed to provide an answer. Again, it should also wait for the SM.
-         
-         %HK> Trouver une référence montrant que l'utilisateur peut inférer la fin de la phrase du système avec l'habitude.
-         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the a user's decision. Hence, it has been implemented in the US: a barge-in point has been determined in advance for each system's dialogue act template.
-    
-    \subsection{Experiments}
-		
-		%HK> Enlever les \caption en italique dans toute la thèse.
+
+        %HK> Enlever les \caption en italique dans toute la thèse.
         %HK> Homogénéiser Figure, Section, Chapter...
-        \begin{figure*}[t]
+        \begin{figure*}[htp]
 		\centering
 		\begin{minipage}{.47\textwidth}
 			\begin{tikzpicture}[scale=0.7]
@@ -1026,15 +1028,13 @@
 		\caption{INCOHERENCE\_INTERP evaluated in a more adapted task}
 		\label{fig:incoh}
 	\end{figure*}
-    
-    	In this experiment, the TTP described in Section \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Section \ref{subsec:strategies}. Incremental processing is useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Figure \ref{fig:generic}.
         
         %HK> Si on fait de l'apprentissage multi-agent, on peut en parler ici (MixIni+Incr => MixIniRL+Incr => MixIniRL+IncrRL).
      	Adding mixed initiative behaviour or incrementality to UsrIni are both ways to improve its robustness to errors. Figure \ref{fig:generic} shows that incrementality is more efficient. Most importantly, it is shown that MixIni and incremental behaviour can be combined to form the best strategy.
     
     	As already mentioned in Chapter \ref{ch:taxonomy}, the main objective of the TTP taxonomy is to break human dialogue turn-taking into small pieces in order to get a better understanding of it. To illustrate this approach, a deeper look is taken at MixIni+Incr by isolating its different components\footnote{One of the advantages of the Scheduler approach is that the different TTP are implemented as independent decision makers that can easily be combined to form the aggregated strategies, but that can also be isolated and analysed separately.}: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP (User) and BARGE\_IN\_RESP (System). The results reported in Figure \ref{fig:ttp} show that FEEDBACK contributes the most to improve the baseline followed by BARGE\_IN\_RESP (User) and FAIL\_RAW. INCOHERENCE\_INTERP and BARGE\_IN \_RESP (System) seem to have no effect. This is due to the fact that in general, to detect an incoherence, one must wait until the end of the utterance (same requirement for detecting all the information needed to barge-in and provide an answer). One might argue that in some cases, the US tries to refer to a non existing event (in the case of a MODIFY or DELETE action), therefore triggering an incoherence. However, as stated before, the service is able to recognise an existing event even if only a prefix of its title is recognised. As a consequence, INCOHERENCE\_INTERP is rarely triggered in the middle of a request. Therefore, another scenario where that situation occurs more often has been tested: the US has to try to move an event five times before encountering a free time window has been designed. The results are shown in Figure \ref{fig:incoh}: this time, INCOHERENCE\_INTERP has a visible added value.
 				
-				 This little experiment raises an important point when it comes to studying efficiency in task oriented dialogues and as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the nature of the task at hand. In the previous example, INCOHERENCE\_INTERP is shown to have no impact in some kind of situation but it brings some improvement in other situations. Another example is the feedback which is more likely to improve the baseline when open slots are involved and especially long ones like this is the case in message dictation for example (\textit{Send mom a message telling her that...}) whereas it has very limited impact in a train booking dialogue for example, where only constrained slots come into play. It is one of the motivations behind adopting a data-driven approach (see Chapter \ref{ch:rl}), so that the Scheduler figures out by itself what are the appropriate behaviours given the situation at hand.
+				 This experiment raises an important point when it comes to studying efficiency in task oriented dialogues and as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the nature of the task at hand. In the previous example, INCOHERENCE\_INTERP is shown to have no impact in some kind of situation but it brings some improvement in other situations. Another example is the feedback which is more likely to improve the baseline when open slots are involved and especially long ones like this is the case in message dictation for example (\textit{Send mom a message telling her that...}) whereas it has very limited impact in a train booking dialogue for example, where only constrained slots come into play. It is one of the motivations behind adopting a data-driven approach (see Chapter \ref{ch:rl}), so that the Scheduler figures out by itself what are the appropriate behaviours given the situation at hand.
         
         
     
