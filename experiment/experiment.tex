@@ -2,34 +2,45 @@
 
 \label{ch:experiment}
 
-	In spite of the efforts that have been made in order to approximate human-machine dialogue through simulation, there are still complex behaviours and subtleties that could not be replicated. In this chapter the simulation results are tested with real users in a real dialogue setup as a validation. In the following, the interaction domain is presented then the experimental protocol is described. Finally, the result experiments are depicted and discussed.
+	In spite of the efforts that have been made in order to approximate human-machine dialogue through simulation, there are still many complex behaviours and subtleties that could not be replicated. In this chapter the simulation results are tested with real users in a real dialogue setup as a validation. In the following, the interaction domain is presented then the experimental protocol is described. Finally, the result experiments are depicted and discussed.
 
 \section{The Majordomo domain}
 
-	The prototype used for the experiment (called Majordomo) has been implemented as a part of the Voicehome project at Orange Labs. This project is aimed at exploring the new opportunities that the use of the vocal modality to communicate with a smart home can bring. For that reason and in order to show that the methodology presented in this thesis is not domain dependent, this new task has been used for experiments instead of the agenda management task (event though they are somehow quite similar).
+	The prototype used for the experiment (called Majordomo) has been implemented as a part of the VoiceHome\footnote{FUI project.} project at Orange Labs. This project is aimed at exploring the new opportunities that the use of the vocal modality to communicate with a smart home can bring. For that reason and in order to show that the methodology presented in this thesis is not domain dependent, this new task has been used for experiments instead of the agenda management task (event though they are somehow quite similar).
 	
-	Majordomo is able to program the following tasks during a specific time window:
-	
-	\begin{itemize}
-		\item Alarm
-		\item Heating
-		\item Open windows
-		\item Absence mode
-		\item Laundry
-		\item Air conditioning
-		\item Swimming pool warming
-		\item Swimming pool cleaning
-		\item Calm mode
-		\item Mow lawn
-		\item Water lawn
-		\item Record channel 1
-		\item Record channel 2
-		\item Record channel 3
-		\item Hoover
-		\item Run bath
-	\end{itemize}
-	
-	However some tasks cannot be run simultaneously. For example:
+	Majordomo is able to schedule a set of tasks during a specific time window. These tasks are depicted in Table \ref{tab:majtasks}.
+
+	\begin{table}[th]
+	  \footnotesize
+	  \centerline{
+	  \begin{tabular}{|c|c|}
+	      \hline
+	      Task & Conflicting tasks \\
+	      \hline
+	      Alarm & Laundry, Hoover \\
+              Heating & Open windows, Air conditioning \\
+              Open windows & Heating, Air conditioning \\
+              Absence mode & Open windows \\
+              Laundry & Alarm, Calm mode \\
+              Air conditioning & Heating, Open windows \\
+              Swimming pool warming & Swimming pool cleaning \\
+              Swimming pool cleaning & Swimming pool warming \\
+              Calm mode & Laundry, Hoover, Mow lawn \\
+              Mow lawn & Water lawn \\
+              Water lawn & Mow lawn \\
+              Record channel 1 & Record channel 2, Record channel 3 \\
+              Record channel 2 & Record channel 1, Record channel 3 \\
+              Record channel 3 & Record channel 1, Record channel 2 \\
+              Hoover & Alarm, Calm mode \\
+              Run bath & \\
+	      \hline
+	  \end{tabular}
+	  }
+	  \caption{Majordomo tasks}
+	  \label{tab:majtasks}
+        \end{table}
+
+	However some tasks cannot be run simultaneously (in Table \ref{tab:majtasks}, the second column shows which tasks cannot be scheduled at the same time as the one in the first column). For example:
 	
 	\begin{itemize}
 		\item The lawn cannot be mowed while watered.
@@ -44,11 +55,11 @@
 
 	\subsection{Implementation}
 	
-		The Client has been developed in the form of a website where the users are supposed to read a few instructions before starting to interact with the system. Google ASR has been chosen since it is a powerful off-the-shelf solution and does not require to develop any acoustic nor language model, which is costly and which is not the focus of this work. Moreover, it is able to provide incremental partial results. However, it is still not able to provide the partial confidence scores (only the confidence score at the end of the utterance is computed).
+		The Client has been developed in the form of a website where the users are supposed to read a few instructions before starting to interact with the system. Google ASR has been chosen since it is a powerful off-the-shelf solution that does not require to develop any acoustic nor language model, which is costly and not in the focus of this work. Moreover, it is able to provide incremental partial results. However, it is still not able to provide the partial confidence scores (only the confidence score at the end of the utterance is computed).
 		
 		The implementation of the Service is similar to the personal agenda management case described in the previous chapters. The only difference is that home tasks are manipulated instead of events. Therefore, an open slot has been replaced with a slot where only a few alternatives are possible. Moreover, in the personal agenda management domain, no events can overlap whereas in the Majordomo domain some tasks can be run at the same time as others and others cannot. This is encoded in a compatibility matrix provided to the Service.
 		
-		As far as the Scheduler is concerned, similarly to the strategies developed in the simulation case, a handcrafted (version presented in Chapter \ref{ch:baseline}, with no FEEDBACK\_RAW) as well as a reinforcement learning strategy have been implemented. The reinforcement learning strategy has been learned in simulation and tested directly with real users. Since Google ASR does not provide the confidence scores incrementally, this feature has been removed from the model. Finally, when transitioning from simulation to the real word, there is no need to estimate timing from the number of words so the real time has been taken into account.
+		As far as the Scheduler is concerned, similarly to the strategies developed in the simulation case, a handcrafted (version presented in Chapter \ref{ch:baseline}, with no FEEDBACK\_RAW) as well as a reinforcement learning strategy have been implemented. The reinforcement learning strategy has been learnt in simulation and tested directly with real users. Since Google ASR does not provide the confidence scores incrementally, this feature has been removed from the model. Finally, when transitioning from simulation to the real word, there is no need to estimate timing from the number of words, therefore, real time has been taken into account.
 		
 	\subsection{Conduct of the dialogue}
 	
@@ -60,7 +71,7 @@
 	
 	\begin{figure*}[t]
 		\centering
-		\includegraphics[scale=0.4]{figures/majordome.png}
+		\includegraphics[scale=0.48]{figures/majordome.png}
 		\caption{The Majordomo interface}
 		\label{fig:majordomo}
 	\end{figure*}
@@ -109,7 +120,7 @@
 
         As far as the mean dialogue duration is concerned, the incremental strategies slightly improve the dialogue duration (even though this is not statistically significant). At a first glance, this improvement can be viewed as an obvious result since by construction, incremental strategies are more reactive. Nevertheless, the user can also be interrupted before she has provided all the information that she wanted which complicates the dialogue and makes it last longer like it is the case in the experiment led in \cite{Ghigi2014}. Therefore, this result shows that the Majordomo successfully interrupted the user on average. However, there is no visible change when comparing the \textit{Handcrafted} and the \textit{RL} strategy.
 
-        The task completion ratio, on the other hand, has been significantly\footnote{All the p-values are computed according to the Welch t-test since the number of samples is important enough for the means to be considered as following a normal distribution (and since it is more powerful than non-parametric tests). A binomial proportions test has also been run for task completion, leading to very similar p-values.} improved by the \textit{RL} strategy compared to \textit{None} (by 15\% with $p = 0.030$). Moreover, an important difference has been reported between \textit{RL} and \textit{Handcrafted} (12\%) even though it is not statistically significant at a 0.05 threshold ($p = 0.065$). Finally, \textit{Handcrafted} shows a minor improvement over \textit{None} (3\%) with no statistical significance ($p = 0.36$). The Majordomo task requires a certain level of engagement and focus in order to keep track of all what has been accomplished so far, while keeping the final objective in mind. When interacting with a reactive system that takes the floor in an intelligent way (to correct errors hence fixing desynchronisations, to deliver a response when all the information has been provided...) without overwhelming the user, the latter feels more engaged in the conversation thus accomplishing the task more efficiently, even when a certain cognitive load is involved. Another impact of such strategy as reported in \cite{Ghigi2014} is that when the users realise that they can be interrupted in case of a problem, they tend to provide more concise and focused answers, which reduces the risk of a misunderstanding.
+        The task completion ratio, on the other hand, has been significantly\footnote{All the p-values are computed according to the Welch t-test since the number of samples is important enough for the means to be considered as following a normal distribution (and since it is more powerful than non-parametric tests). A binomial proportions test has also been run for task completion, leading to very similar p-values.} improved by the \textit{RL} strategy compared to \textit{None} (by 15\% with $p = 0.030$). Moreover, an important difference has been reported between \textit{RL} and \textit{Handcrafted} (12\%) even though it is not exactly statistically significant ($p = 0.065$). Finally, \textit{Handcrafted} shows a minor improvement over \textit{None} (3\%) with no statistical significance ($p = 0.36$). The Majordomo task requires a certain level of engagement and focus in order to keep track of all what has been accomplished so far, while keeping the final objective in mind. When interacting with a reactive system that takes the floor in an intelligent way (to correct errors hence fixing desynchronisations, to deliver a response when all the information has been provided...) without overwhelming the user, the latter feels more engaged in the conversation thus accomplishing the task more efficiently, even when a certain cognitive load is involved. Another impact of such strategy as reported in \cite{Ghigi2014} is that when the users realise that they can be interrupted in case of a problem, they tend to provide more concise and focused answers, which reduces the risk of a misunderstanding.
 
         The subjective metrics are the noisier ones. Therefore, except from the \textit{Reactivity} KPI where \textit{RL} significantly improves it in comparison with \textit{None} ($p = 0.048$), the other p-values are above 0.05. Nevertheless, generally speaking, the metrics are in favour of the \textit{RL} strategy.
 
@@ -134,9 +145,9 @@
 
 \section{Discussion}
 
-        In comparison with previous work (see Chapter \ref{ch:stateofart}), this is the first direct application of reinforcement learning to turn-taking management in an incremental dialogue system that is evaluated in real conditions. In many previous studies, an indirect way of testing dialogue strategies is used (controlled dialogue acts \cite{Aist2007}, a posteriori evaluation using recordings of interactions \cite{Meena2013}, a posteriori comparison with human decision corpus \cite{Jonsdottir2008,Dethlefs2012}...). As it is said in \cite{Aist2007}, the objective is \textit{to minimize variance due to extraneous factors such as interspeaker variability, acoustic noise, and so forth and concentrate specifically on the difference between incremental processing and its nonincremental counterpart}. However, the price to pay to reduce variance is a certain bias due to the fact that the experiment is not run in real conditions.
+        In comparison with previous work (see Chapter \ref{ch:stateofart}), this is the first direct application of reinforcement learning to turn-taking management in an incremental dialogue system that is evaluated in real conditions. In many previous studies, an indirect way of testing dialogue strategies is used: controlled dialogue acts \cite{Aist2007}, a posteriori evaluation using recordings of interactions \cite{Meena2013}, a posteriori comparison with human decision corpus \cite{Jonsdottir2008,Dethlefs2012}, etc... As it is said in \cite{Aist2007}, the objective is \textit{to minimize variance due to extraneous factors such as interspeaker variability, acoustic noise, and so forth and concentrate specifically on the difference between incremental processing and its nonincremental counterpart}. However, the price to pay to reduce variance is a certain bias due to the fact that the experiment is not run in real conditions.
 
-        Some papers use handcrafted strategies \cite{Raux2009,Ghigi2014}, some collect annotated corpora on which they run supervised learning algorithms \cite{Meena2013} and others propose autonomous reinforcement learning based strategies \cite{Selfridge2010,Jonsdottir2008,Dethlefs2012}. However, to our knowledge, live studies only fit in the first two categories and no purely autonomous system using reinforcement learning has been tested with real users and directly evaluated by them, in real dialogue conditions. More generally, previous work related to incremental dialogue processing and turn-taking optimisation can be split into two categories given the metrics that are involved:
+        Some papers use handcrafted strategies \cite{Raux2009,Ghigi2014}, some collect annotated corpora on which they run supervised learning algorithms \cite{Meena2013} and others propose autonomous reinforcement learning based strategies \cite{Jonsdottir2008,Selfridge2010,Dethlefs2012}. However, to our knowledge, live studies only fit in the first two categories and no purely autonomous system using reinforcement learning has been tested with real users and directly evaluated by them, in real dialogue conditions. More generally, previous work related to incremental dialogue processing and turn-taking optimisation can be split into two categories given the metrics that are involved:
 
         \begin{itemize}
           \item \textbf{Local metrics:} These studies are based on the principle introduced in \cite{Sacks1974} and saying that gaps and overlaps should be minimised in order to achieve smooth turn-taking. As a consequence, local metrics where only floor transitions are considered are used, mainly the latency and the false cut-in ratio \cite{Jonsdottir2008,Raux2012}.

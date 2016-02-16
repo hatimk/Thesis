@@ -113,12 +113,12 @@
 \contentsline {subsection}{\numberline {7.2.2}Results}{118}{subsection.255}
 \contentsline {chapter}{\numberline {8}Experiment with real users}{121}{chapter.256}
 \contentsline {section}{\numberline {8.1}The Majordomo domain}{121}{section.257}
-\contentsline {section}{\numberline {8.2}Experimental protocol}{122}{section.258}
-\contentsline {subsection}{\numberline {8.2.1}Implementation}{122}{subsection.259}
-\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{123}{subsection.260}
-\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{124}{subsection.262}
-\contentsline {section}{\numberline {8.3}Results and discussion}{124}{section.263}
-\contentsline {section}{\numberline {8.4}Discussion}{126}{section.268}
-\contentsline {starchapter}{Liste des illustrations}{131}{chapter*.269}
-\contentsline {starchapter}{Liste des tableaux}{133}{chapter*.270}
-\contentsline {starchapter}{Bibliographie}{135}{chapter*.271}
+\contentsline {section}{\numberline {8.2}Experimental protocol}{122}{section.260}
+\contentsline {subsection}{\numberline {8.2.1}Implementation}{122}{subsection.261}
+\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{123}{subsection.262}
+\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{124}{subsection.264}
+\contentsline {section}{\numberline {8.3}Results and discussion}{124}{section.265}
+\contentsline {section}{\numberline {8.4}Discussion}{126}{section.270}
+\contentsline {starchapter}{Liste des illustrations}{131}{chapter*.271}
+\contentsline {starchapter}{Liste des tableaux}{133}{chapter*.272}
+\contentsline {starchapter}{Bibliographie}{135}{chapter*.273}
