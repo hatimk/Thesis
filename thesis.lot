@@ -1,31 +1,31 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {xchapter}{State of the art}{21}{chapter.12}
-\contentsline {table}{\numberline {1.1}{\ignorespaces Example of incremental NLU processing\relax }}{33}{table.caption.38}
-\contentsline {xpart}{State of the art}{21}{part.11}
+\contentsline {xchapter}{State of the art}{23}{chapter.13}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Example of incremental NLU processing\relax }}{35}{table.caption.39}
+\contentsline {xpart}{State of the art}{23}{part.12}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking phenomena taxonomy}{51}{chapter.80}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy labels\relax }}{53}{table.caption.93}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{54}{table.caption.95}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Taxonomy labels (1/2)\relax }}{63}{table.caption.120}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Taxonomy labels (2/2)\relax }}{64}{table.caption.121}
-\contentsline {xpart}{Contributions}{51}{part.79}
+\contentsline {xchapter}{Turn-taking phenomena taxonomy}{53}{chapter.81}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Taxonomy labels\relax }}{55}{table.caption.94}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{56}{table.caption.96}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Taxonomy labels (1/2)\relax }}{65}{table.caption.121}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Taxonomy labels (2/2)\relax }}{66}{table.caption.122}
+\contentsline {xpart}{Contributions}{53}{part.80}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{65}{chapter.124}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{75}{table.caption.141}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{67}{chapter.125}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{77}{table.caption.142}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{77}{chapter.142}
+\contentsline {xchapter}{Dialogue strategies}{79}{chapter.143}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{87}{chapter.165}
-\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{95}{table.caption.201}
-\contentsline {table}{\numberline {5.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{97}{table.caption.205}
+\contentsline {xchapter}{Incremental dialogue simulation}{89}{chapter.166}
+\contentsline {table}{\numberline {5.1}{\ignorespaces {NLU rules types}\relax }}{97}{table.caption.202}
+\contentsline {table}{\numberline {5.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{99}{table.caption.206}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{99}{chapter.208}
-\contentsline {table}{\numberline {6.1}{\ignorespaces The three scenarios used in the simulation\relax }}{105}{table.caption.215}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{101}{chapter.209}
+\contentsline {table}{\numberline {6.1}{\ignorespaces The three scenarios used in the simulation\relax }}{107}{table.caption.216}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{109}{chapter.230}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{112}{table.caption.235}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{111}{chapter.231}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{114}{table.caption.236}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{119}{chapter.255}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{122}{table.caption.263}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Local dialogue evaluation metrics\relax }}{123}{table.caption.265}
+\contentsline {xchapter}{Experiment with real users}{121}{chapter.256}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Global dialogue evaluation metrics\relax }}{124}{table.caption.264}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Local dialogue evaluation metrics\relax }}{125}{table.caption.266}

@@ -1,0 +1,67 @@
+\providecommand\Fr{}
+\providecommand\Eng{}
+\providecommand\andname{and}
+\providecommand\andnamec{and}
+
+\begin{thebibliography}{}
+
+
+\bibitem[{Khouzaimi et~al.}(2014a){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2014c}
+(Khouzaimi et~al., 2014a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2014a.
+\newblock Dictanum : syst\`eme de dialogue incr\'emental pour la dict\'ee de
+  num\'eros.
+\newblock In Proceedings of \textit{ Proceedings of the TALN 2014 Conference}.
+
+\bibitem[{Khouzaimi et~al.}(2014b){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2014a}
+(Khouzaimi et~al., 2014b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2014b.
+\newblock An easy method to make dialogue systems incremental.
+\newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[{Khouzaimi et~al.}(2015a){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015a}
+(Khouzaimi et~al., 2015a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015a.
+\newblock Dialogue efficiency evaluation of turn-taking phenomena in a
+  multi-layer incremental simulated environment.
+\newblock In Proceedings of \textit{ Proceedings of the HCI International 2015
+  Conference}.
+
+\bibitem[{Khouzaimi et~al.}(2015b){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015b}
+(Khouzaimi et~al., 2015b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015b.
+\newblock Optimising turn-taking strategies with reinforcement learning.
+\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[{Khouzaimi et~al.}(2015c){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015c}
+(Khouzaimi et~al., 2015c) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015c.
+\newblock Turn-taking phenomena in incremental dialogue systems.
+\newblock In Proceedings of \textit{ Proceedings of the 2015 Conference on
+  Empirical Methods in Natural Language Processing (EMNLP)}.
+
+\bibitem[{Khouzaimi et~al.}(2016a){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2016a}
+(Khouzaimi et~al., 2016a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2016a.
+\newblock Incremental human-machine dialogue simulation.
+\newblock In Proceedings of \textit{ Proceedings of the International Workshop
+  on Spoken Dialogue Systems (IWSDS)}.
+
+\bibitem[{Khouzaimi et~al.}(2016b){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2016b}
+(Khouzaimi et~al., 2016b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2016b.
+\newblock Reinforcement learning applied to incremental spoken dialogue systems
+  (submitted).
+\newblock In Proceedings of \textit{ International Joint Conference on
+  Artificial Intelligence (IJCAI)}.
+
+\end{thebibliography}

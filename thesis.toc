@@ -1,124 +1,124 @@
 \select@language {english}
-\contentsline {part}{I\hspace {1em}State of the art}{19}{part.11}
-\contentsline {chapter}{\numberline {1}State of the art}{21}{chapter.12}
-\contentsline {section}{\numberline {1.1}Human dialogue}{21}{section.13}
-\contentsline {subsection}{\numberline {1.1.1}Dialogue acts}{21}{subsection.14}
-\contentsline {subsection}{\numberline {1.1.2}Turn-taking in human dialogue}{22}{subsection.15}
-\contentsline {subsection}{\numberline {1.1.3}Incremental speech processing in human conversation}{24}{subsection.19}
-\contentsline {section}{\numberline {1.2}Spoken dialogue systems}{25}{section.20}
-\contentsline {subsection}{\numberline {1.2.1}Towards a human-like interaction}{26}{subsection.21}
-\contentsline {subsection}{\numberline {1.2.2}Spoken dialogue systems architecture}{27}{subsection.22}
-\contentsline {subsubsection}{Automatic Speech Recognition}{29}{section*.29}
-\contentsline {subsubsection}{Natural Language Understanding}{29}{section*.31}
-\contentsline {subsubsection}{Dialogue Management}{30}{section*.32}
-\contentsline {subsubsection}{Natural Language Generation}{30}{section*.33}
-\contentsline {subsubsection}{Speech Synthesis}{31}{section*.34}
-\contentsline {subsection}{\numberline {1.2.3}Spoken dialogue systems evaluation}{31}{subsection.35}
-\contentsline {section}{\numberline {1.3}Incremental dialogue systems}{32}{section.36}
-\contentsline {subsection}{\numberline {1.3.1}Principles}{32}{subsection.37}
-\contentsline {subsection}{\numberline {1.3.2}Advantages of incremental processing}{33}{subsection.39}
-\contentsline {subsection}{\numberline {1.3.3}New challenges raised by incremental dialogue processing}{35}{subsection.40}
-\contentsline {subsection}{\numberline {1.3.4}Existing architectures}{37}{subsection.48}
-\contentsline {subsubsection}{Sequential paradigm}{37}{section*.49}
-\contentsline {subsubsection}{Multi-layer paradigm}{38}{section*.50}
-\contentsline {section}{\numberline {1.4}Reinforcement Learning}{38}{section.51}
-\contentsline {subsection}{\numberline {1.4.1}Reinforcement in biology}{38}{subsection.52}
-\contentsline {subsection}{\numberline {1.4.2}Markov Decision Processes}{40}{subsection.54}
-\contentsline {subsection}{\numberline {1.4.3}Reinforcement Learning}{41}{subsection.60}
-\contentsline {section}{\numberline {1.5}Reinforcement learning in spoken dialogue systems}{44}{section.74}
-\contentsline {subsection}{\numberline {1.5.1}In the litterature}{44}{subsection.75}
-\contentsline {subsection}{\numberline {1.5.2}Spoken dialogue systems at Orange and the LIA}{45}{subsection.76}
-\contentsline {subsection}{\numberline {1.5.3}Dialogue simulation}{46}{subsection.77}
-\contentsline {section}{\numberline {1.6}Reinforcement learning in incremental dialogue systems}{47}{section.78}
-\contentsline {xpart}{State of the art}{21}{part.11}
-\contentsline {part}{II\hspace {1em}Contributions}{49}{part.79}
-\contentsline {chapter}{\numberline {2}Turn-taking phenomena taxonomy}{51}{chapter.80}
-\contentsline {section}{\numberline {2.1}Introduction}{51}{section.81}
-\contentsline {section}{\numberline {2.2}Taxonomy presentation}{52}{section.86}
-\contentsline {paragraph}{Dialogue 1}{52}{section*.87}
-\contentsline {paragraph}{Dialogue 2}{52}{section*.88}
-\contentsline {paragraph}{Dialogue 3}{52}{section*.89}
-\contentsline {paragraph}{H\_NONE:}{53}{section*.96}
-\contentsline {paragraph}{H\_FAIL:}{53}{section*.97}
-\contentsline {paragraph}{H\_INCOHERENCE:}{54}{section*.98}
-\contentsline {paragraph}{H\_INCOMPLETE:}{55}{section*.99}
-\contentsline {paragraph}{H\_SUFFICIENT:}{55}{section*.100}
-\contentsline {paragraph}{H\_COMPLETE:}{56}{section*.101}
-\contentsline {section}{\numberline {2.3}Discussion}{56}{section.102}
-\contentsline {subsection}{\numberline {2.3.1}Dialogue initialisation}{57}{subsection.112}
-\contentsline {subsection}{\numberline {2.3.2}Negative feedback}{58}{subsection.113}
-\contentsline {subsection}{\numberline {2.3.3}Positive feedback}{58}{subsection.114}
-\contentsline {subsection}{\numberline {2.3.4}Reference}{59}{subsection.117}
-\contentsline {subsection}{\numberline {2.3.5}Ordered dialogue acts}{59}{subsection.118}
-\contentsline {subsection}{\numberline {2.3.6}Synthesis}{60}{subsection.119}
-\contentsline {section}{\numberline {2.4}Turn-taking phenomena in dialogue systems}{60}{section.122}
-\contentsline {xpart}{Contributions}{51}{part.79}
-\contentsline {chapter}{\numberline {3}Turn-taking decision module: the Scheduler}{65}{chapter.124}
-\contentsline {section}{\numberline {3.1}Description}{65}{section.125}
-\contentsline {subsection}{\numberline {3.1.1}Overview}{65}{subsection.126}
-\contentsline {subsection}{\numberline {3.1.2}Time sharing}{66}{subsection.128}
-\contentsline {subsection}{\numberline {3.1.3}The Scheduler}{67}{subsection.131}
-\contentsline {section}{\numberline {3.2}Illustration}{70}{section.134}
-\contentsline {subsection}{\numberline {3.2.1}A textual dialogue system: CFAsT}{70}{subsection.135}
-\contentsline {subsection}{\numberline {3.2.2}A spoken dialogue system: Dictanum}{71}{subsection.137}
-\contentsline {section}{\numberline {3.3}Discussion}{73}{section.138}
-\contentsline {subsection}{\numberline {3.3.1}Levels of incrementality}{73}{subsection.139}
-\contentsline {subsection}{\numberline {3.3.2}Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{74}{subsection.140}
-\contentsline {chapter}{\numberline {4}Dialogue strategies}{77}{chapter.142}
-\contentsline {section}{\numberline {4.1}Utterance representation}{77}{section.143}
-\contentsline {section}{\numberline {4.2}Elementary tasks}{77}{section.144}
-\contentsline {section}{\numberline {4.3}Slot-filling strategies}{79}{section.148}
-\contentsline {subsection}{\numberline {4.3.1}System initiative strategies}{80}{subsection.149}
-\contentsline {subsection}{\numberline {4.3.2}User initiative strategies}{81}{subsection.150}
-\contentsline {subsection}{\numberline {4.3.3}Mixed initiative strategies}{81}{subsection.151}
-\contentsline {subsection}{\numberline {4.3.4}First efficiency comparison}{82}{subsection.152}
-\contentsline {paragraph}{System initiative:}{82}{section*.153}
-\contentsline {paragraph}{User initiative:}{82}{section*.156}
-\contentsline {paragraph}{Mixed initiative:}{82}{section*.158}
-\contentsline {section}{\numberline {4.4}Incremental strategies}{83}{section.163}
-\contentsline {chapter}{\numberline {5}Incremental dialogue simulation}{87}{chapter.165}
-\contentsline {section}{\numberline {5.1}Overview}{87}{section.166}
-\contentsline {section}{\numberline {5.2}Incremental dialogue simulation}{88}{section.168}
-\contentsline {subsection}{\numberline {5.2.1}User Simulator}{88}{subsection.170}
-\contentsline {subsubsection}{Intent Manager}{88}{section*.171}
-\contentsline {subsubsection}{NLG and Verbosity Manager}{89}{section*.175}
-\contentsline {subsubsection}{Timing and patience manager}{89}{section*.176}
-\contentsline {subsection}{\numberline {5.2.2}ASR output simulator}{90}{subsection.179}
-\contentsline {section}{\numberline {5.3}Personal Agenda management simulated environment}{92}{section.189}
-\contentsline {subsection}{\numberline {5.3.1}The service: personal agenda assistant}{93}{subsection.190}
-\contentsline {subsubsection}{Dialogue Manager}{93}{section*.191}
-\contentsline {subsubsection}{Natural Language Understanding}{94}{section*.194}
-\contentsline {subsection}{\numberline {5.3.2}Simulator instanciation}{95}{subsection.200}
-\contentsline {section}{\numberline {5.4}Functionning illustration}{97}{section.207}
-\contentsline {chapter}{\numberline {6}Handcrafted strategies for improving dialogue efficiency}{99}{chapter.208}
-\contentsline {section}{\numberline {6.1}User and system initiative}{99}{section.209}
-\contentsline {subsection}{\numberline {6.1.1}Strategies}{99}{subsection.210}
-\contentsline {subsection}{\numberline {6.1.2}Experiments}{104}{subsection.213}
-\contentsline {section}{\numberline {6.2}Incremental strategies}{105}{section.216}
-\contentsline {subsection}{\numberline {6.2.1}TTP implementation}{105}{subsection.217}
-\contentsline {paragraph}{FAIL\_RAW:}{105}{section*.218}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{106}{section*.220}
-\contentsline {paragraph}{FEEDBACK:}{106}{section*.221}
-\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{106}{section*.223}
-\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{106}{section*.224}
-\contentsline {subsection}{\numberline {6.2.2}Experiments}{106}{subsection.225}
-\contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{109}{chapter.230}
-\contentsline {section}{\numberline {7.1}Reinforcement Learning Model}{109}{section.231}
-\contentsline {subsection}{\numberline {7.1.1}Background}{109}{subsection.232}
-\contentsline {subsection}{\numberline {7.1.2}State representation}{110}{subsection.233}
-\contentsline {subsection}{\numberline {7.1.3}Actions, rewards and episodes}{113}{subsection.239}
-\contentsline {subsection}{\numberline {7.1.4}Fitted-Q Value Iteration}{114}{subsection.240}
-\contentsline {section}{\numberline {7.2}Experiment}{116}{section.247}
-\contentsline {subsection}{\numberline {7.2.1}Setup}{116}{subsection.248}
-\contentsline {subsection}{\numberline {7.2.2}Results}{116}{subsection.254}
-\contentsline {chapter}{\numberline {8}Experiment with real users}{119}{chapter.255}
-\contentsline {section}{\numberline {8.1}The Majordomo domain}{119}{section.256}
-\contentsline {section}{\numberline {8.2}Experimental protocol}{120}{section.257}
-\contentsline {subsection}{\numberline {8.2.1}Implementation}{120}{subsection.258}
-\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{121}{subsection.259}
-\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{122}{subsection.261}
-\contentsline {section}{\numberline {8.3}Results and discussion}{122}{section.262}
-\contentsline {section}{\numberline {8.4}Discussion}{124}{section.267}
-\contentsline {starchapter}{Liste des illustrations}{129}{chapter*.268}
-\contentsline {starchapter}{Liste des tableaux}{131}{chapter*.269}
-\contentsline {starchapter}{Bibliographie}{133}{chapter*.270}
+\contentsline {part}{I\hspace {1em}State of the art}{21}{part.12}
+\contentsline {chapter}{\numberline {1}State of the art}{23}{chapter.13}
+\contentsline {section}{\numberline {1.1}Human dialogue}{23}{section.14}
+\contentsline {subsection}{\numberline {1.1.1}Dialogue acts}{23}{subsection.15}
+\contentsline {subsection}{\numberline {1.1.2}Turn-taking in human dialogue}{24}{subsection.16}
+\contentsline {subsection}{\numberline {1.1.3}Incremental speech processing in human conversation}{26}{subsection.20}
+\contentsline {section}{\numberline {1.2}Spoken dialogue systems}{27}{section.21}
+\contentsline {subsection}{\numberline {1.2.1}Towards a human-like interaction}{28}{subsection.22}
+\contentsline {subsection}{\numberline {1.2.2}Spoken dialogue systems architecture}{29}{subsection.23}
+\contentsline {subsubsection}{Automatic Speech Recognition}{31}{section*.30}
+\contentsline {subsubsection}{Natural Language Understanding}{31}{section*.32}
+\contentsline {subsubsection}{Dialogue Management}{32}{section*.33}
+\contentsline {subsubsection}{Natural Language Generation}{32}{section*.34}
+\contentsline {subsubsection}{Speech Synthesis}{33}{section*.35}
+\contentsline {subsection}{\numberline {1.2.3}Spoken dialogue systems evaluation}{33}{subsection.36}
+\contentsline {section}{\numberline {1.3}Incremental dialogue systems}{34}{section.37}
+\contentsline {subsection}{\numberline {1.3.1}Principles}{34}{subsection.38}
+\contentsline {subsection}{\numberline {1.3.2}Advantages of incremental processing}{35}{subsection.40}
+\contentsline {subsection}{\numberline {1.3.3}New challenges raised by incremental dialogue processing}{37}{subsection.41}
+\contentsline {subsection}{\numberline {1.3.4}Existing architectures}{39}{subsection.49}
+\contentsline {subsubsection}{Sequential paradigm}{39}{section*.50}
+\contentsline {subsubsection}{Multi-layer paradigm}{40}{section*.51}
+\contentsline {section}{\numberline {1.4}Reinforcement Learning}{40}{section.52}
+\contentsline {subsection}{\numberline {1.4.1}Reinforcement in biology}{40}{subsection.53}
+\contentsline {subsection}{\numberline {1.4.2}Markov Decision Processes}{42}{subsection.55}
+\contentsline {subsection}{\numberline {1.4.3}Reinforcement Learning}{43}{subsection.61}
+\contentsline {section}{\numberline {1.5}Reinforcement learning in spoken dialogue systems}{46}{section.75}
+\contentsline {subsection}{\numberline {1.5.1}In the litterature}{46}{subsection.76}
+\contentsline {subsection}{\numberline {1.5.2}Spoken dialogue systems at Orange and the LIA}{47}{subsection.77}
+\contentsline {subsection}{\numberline {1.5.3}Dialogue simulation}{48}{subsection.78}
+\contentsline {section}{\numberline {1.6}Reinforcement learning in incremental dialogue systems}{49}{section.79}
+\contentsline {xpart}{State of the art}{23}{part.12}
+\contentsline {part}{II\hspace {1em}Contributions}{51}{part.80}
+\contentsline {chapter}{\numberline {2}Turn-taking phenomena taxonomy}{53}{chapter.81}
+\contentsline {section}{\numberline {2.1}Introduction}{53}{section.82}
+\contentsline {section}{\numberline {2.2}Taxonomy presentation}{54}{section.87}
+\contentsline {paragraph}{Dialogue 1}{54}{section*.88}
+\contentsline {paragraph}{Dialogue 2}{54}{section*.89}
+\contentsline {paragraph}{Dialogue 3}{54}{section*.90}
+\contentsline {paragraph}{H\_NONE:}{55}{section*.97}
+\contentsline {paragraph}{H\_FAIL:}{55}{section*.98}
+\contentsline {paragraph}{H\_INCOHERENCE:}{56}{section*.99}
+\contentsline {paragraph}{H\_INCOMPLETE:}{57}{section*.100}
+\contentsline {paragraph}{H\_SUFFICIENT:}{57}{section*.101}
+\contentsline {paragraph}{H\_COMPLETE:}{58}{section*.102}
+\contentsline {section}{\numberline {2.3}Discussion}{58}{section.103}
+\contentsline {subsection}{\numberline {2.3.1}Dialogue initialisation}{59}{subsection.113}
+\contentsline {subsection}{\numberline {2.3.2}Negative feedback}{60}{subsection.114}
+\contentsline {subsection}{\numberline {2.3.3}Positive feedback}{60}{subsection.115}
+\contentsline {subsection}{\numberline {2.3.4}Reference}{61}{subsection.118}
+\contentsline {subsection}{\numberline {2.3.5}Ordered dialogue acts}{61}{subsection.119}
+\contentsline {subsection}{\numberline {2.3.6}Synthesis}{62}{subsection.120}
+\contentsline {section}{\numberline {2.4}Turn-taking phenomena in dialogue systems}{62}{section.123}
+\contentsline {xpart}{Contributions}{53}{part.80}
+\contentsline {chapter}{\numberline {3}Turn-taking decision module: the Scheduler}{67}{chapter.125}
+\contentsline {section}{\numberline {3.1}Description}{67}{section.126}
+\contentsline {subsection}{\numberline {3.1.1}Overview}{67}{subsection.127}
+\contentsline {subsection}{\numberline {3.1.2}Time sharing}{68}{subsection.129}
+\contentsline {subsection}{\numberline {3.1.3}The Scheduler}{69}{subsection.132}
+\contentsline {section}{\numberline {3.2}Illustration}{72}{section.135}
+\contentsline {subsection}{\numberline {3.2.1}A textual dialogue system: CFAsT}{72}{subsection.136}
+\contentsline {subsection}{\numberline {3.2.2}A spoken dialogue system: Dictanum}{73}{subsection.138}
+\contentsline {section}{\numberline {3.3}Discussion}{75}{section.139}
+\contentsline {subsection}{\numberline {3.3.1}Levels of incrementality}{75}{subsection.140}
+\contentsline {subsection}{\numberline {3.3.2}Enhancing a traditional dialogue system's turn-taking abilities at a low cost}{76}{subsection.141}
+\contentsline {chapter}{\numberline {4}Dialogue strategies}{79}{chapter.143}
+\contentsline {section}{\numberline {4.1}Utterance representation}{79}{section.144}
+\contentsline {section}{\numberline {4.2}Elementary tasks}{79}{section.145}
+\contentsline {section}{\numberline {4.3}Slot-filling strategies}{81}{section.149}
+\contentsline {subsection}{\numberline {4.3.1}System initiative strategies}{82}{subsection.150}
+\contentsline {subsection}{\numberline {4.3.2}User initiative strategies}{83}{subsection.151}
+\contentsline {subsection}{\numberline {4.3.3}Mixed initiative strategies}{83}{subsection.152}
+\contentsline {subsection}{\numberline {4.3.4}First efficiency comparison}{84}{subsection.153}
+\contentsline {paragraph}{System initiative:}{84}{section*.154}
+\contentsline {paragraph}{User initiative:}{84}{section*.157}
+\contentsline {paragraph}{Mixed initiative:}{84}{section*.159}
+\contentsline {section}{\numberline {4.4}Incremental strategies}{85}{section.164}
+\contentsline {chapter}{\numberline {5}Incremental dialogue simulation}{89}{chapter.166}
+\contentsline {section}{\numberline {5.1}Overview}{89}{section.167}
+\contentsline {section}{\numberline {5.2}Incremental dialogue simulation}{90}{section.169}
+\contentsline {subsection}{\numberline {5.2.1}User Simulator}{90}{subsection.171}
+\contentsline {subsubsection}{Intent Manager}{90}{section*.172}
+\contentsline {subsubsection}{NLG and Verbosity Manager}{91}{section*.176}
+\contentsline {subsubsection}{Timing and patience manager}{91}{section*.177}
+\contentsline {subsection}{\numberline {5.2.2}ASR output simulator}{92}{subsection.180}
+\contentsline {section}{\numberline {5.3}Personal Agenda management simulated environment}{94}{section.190}
+\contentsline {subsection}{\numberline {5.3.1}The service: personal agenda assistant}{95}{subsection.191}
+\contentsline {subsubsection}{Dialogue Manager}{95}{section*.192}
+\contentsline {subsubsection}{Natural Language Understanding}{96}{section*.195}
+\contentsline {subsection}{\numberline {5.3.2}Simulator instanciation}{97}{subsection.201}
+\contentsline {section}{\numberline {5.4}Functionning illustration}{99}{section.208}
+\contentsline {chapter}{\numberline {6}Handcrafted strategies for improving dialogue efficiency}{101}{chapter.209}
+\contentsline {section}{\numberline {6.1}User and system initiative}{101}{section.210}
+\contentsline {subsection}{\numberline {6.1.1}Strategies}{101}{subsection.211}
+\contentsline {subsection}{\numberline {6.1.2}Experiments}{106}{subsection.214}
+\contentsline {section}{\numberline {6.2}Incremental strategies}{107}{section.217}
+\contentsline {subsection}{\numberline {6.2.1}TTP implementation}{107}{subsection.218}
+\contentsline {paragraph}{FAIL\_RAW:}{107}{section*.219}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{108}{section*.221}
+\contentsline {paragraph}{FEEDBACK:}{108}{section*.222}
+\contentsline {paragraph}{BARGE\_IN\_RESP (System):}{108}{section*.224}
+\contentsline {paragraph}{BARGE\_IN\_RESP (User):}{108}{section*.225}
+\contentsline {subsection}{\numberline {6.2.2}Experiments}{108}{subsection.226}
+\contentsline {chapter}{\numberline {7}Reinforcement learning for turn-taking optimisation}{111}{chapter.231}
+\contentsline {section}{\numberline {7.1}Reinforcement Learning Model}{111}{section.232}
+\contentsline {subsection}{\numberline {7.1.1}Background}{111}{subsection.233}
+\contentsline {subsection}{\numberline {7.1.2}State representation}{112}{subsection.234}
+\contentsline {subsection}{\numberline {7.1.3}Actions, rewards and episodes}{115}{subsection.240}
+\contentsline {subsection}{\numberline {7.1.4}Fitted-Q Value Iteration}{116}{subsection.241}
+\contentsline {section}{\numberline {7.2}Experiment}{118}{section.248}
+\contentsline {subsection}{\numberline {7.2.1}Setup}{118}{subsection.249}
+\contentsline {subsection}{\numberline {7.2.2}Results}{118}{subsection.255}
+\contentsline {chapter}{\numberline {8}Experiment with real users}{121}{chapter.256}
+\contentsline {section}{\numberline {8.1}The Majordomo domain}{121}{section.257}
+\contentsline {section}{\numberline {8.2}Experimental protocol}{122}{section.258}
+\contentsline {subsection}{\numberline {8.2.1}Implementation}{122}{subsection.259}
+\contentsline {subsection}{\numberline {8.2.2}Conduct of the dialogue}{123}{subsection.260}
+\contentsline {subsection}{\numberline {8.2.3}Key Performance Indicators}{124}{subsection.262}
+\contentsline {section}{\numberline {8.3}Results and discussion}{124}{section.263}
+\contentsline {section}{\numberline {8.4}Discussion}{126}{section.268}
+\contentsline {starchapter}{Liste des illustrations}{131}{chapter*.269}
+\contentsline {starchapter}{Liste des tableaux}{133}{chapter*.270}
+\contentsline {starchapter}{Bibliographie}{135}{chapter*.271}

@@ -1,5 +1,5 @@
 %\documentclass[a4paper,8pt,twocolumn]{report}
-\documentclass[a4paper,11pt]{book}
+nn\documentclass[a4paper,11pt]{book}
 %\documentclass[a4paper,9pt]{report}
 \usepackage[english]{babel}
 %\usepackage[frenchb]{babel}
@@ -36,7 +36,7 @@
 %\put(5,0){\includegraphics{pic\thepage.ps}} 
 %\end{picture}} 
 
-% équivalent à \usepackage{palatino}
+% Ã©quivalent Ã  \usepackage{palatino}
 \usepackage{mathpazo} 
 \usepackage[scaled=.95]{helvet} 
 \usepackage{courier} 
@@ -63,7 +63,7 @@
 
 \usepackage{parskip}
 \setlength{\parindent}{1.5em}
-% re-définition des marges
+% re-dÃ©finition des marges
 %\textwidth = 15 cm
 %\textheight = 22 cm
 %\oddsidemargin = 1.0 cm
@@ -84,13 +84,13 @@
 %\vfuzz \hfuzz 
 %\raggedbottom 
 
-%\prefacename Preface Préface 
-%\refname a References Références 
-%\abstractname Abstract Résumé 
+%\prefacename Preface PrÃ©face 
+%\refname a References RÃ©fÃ©rences 
+%\abstractname Abstract RÃ©sumÃ© 
 %\bibname b Bibliography Bibliographie 
 %\chaptername Chapter Chapitre 
 %\appendixname Appendix Annexe 
-%\contentsname Contents Table des matières 
+%\contentsname Contents Table des matiÃ¨res 
 %\listfigurename List of Figures Table des figures 
 %\listtablename List of Tables Liste des tableaux 
 %\indexname Index Index 
@@ -98,7 +98,7 @@
 %\tablename Table TAB . 
 %\partname Part partie 
 %\enclname encl P. J. 
-%\ccname cc Copie à 
+%\ccname cc Copie Ã  
 %\headtoname To 
 %\pagename Page page 
 %\seename see voir 
@@ -124,11 +124,11 @@
 %\newcommand\textsubscript[1]{\ensuremath{_{\text{#1}}}}
 \everymath{\displaystyle}
 
-%\newcommand\todo[1]{[\textcolor[rgb]{0,0,0}{\textbf{à faire:} \textit{#1}}]}
-\newcommand\todo[1]{ [\textcolor[rgb]{0.5,0,0}{\textbf{à faire:} #1}] }
+%\newcommand\todo[1]{[\textcolor[rgb]{0,0,0}{\textbf{Ã  faire:} \textit{#1}}]}
+\newcommand\todo[1]{ [\textcolor[rgb]{0.5,0,0}{\textbf{Ã  faire:} #1}] }
 %\newcommand\todo[1]{}
-%\newcommand\tocite[1]{[\textcolor[rgb]{0,0,0}{\textbf{à citer:} \textit{#1}}]}
-\newcommand\tocite[1]{[\textcolor[rgb]{0,0.5,0}{\textbf{à citer:} #1}]}
+%\newcommand\tocite[1]{[\textcolor[rgb]{0,0,0}{\textbf{Ã  citer:} \textit{#1}}]}
+\newcommand\tocite[1]{[\textcolor[rgb]{0,0.5,0}{\textbf{Ã  citer:} #1}]}
 %\newcommand\tocite[1]{}
 
 %\renewcommand\label[1]{[\textcolor[rgb]{0,0,0.5}{\textbf{label:} #1\label{#1}}]}
@@ -295,6 +295,3 @@
 \usepackage{mathrsfs}
 
 \usepackage{courier}
-
-\usepackage{multibib}
-\newcites{publis}{List of publications}
