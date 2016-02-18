@@ -41,6 +41,13 @@
 \newblock Online-regret bounds for a new reinforcement-learning algorithm.
 \newblock In Proceedings of \textit{ 1st Austrian Cognitive Vision Workshop}.
 
+\bibitem[{Auer \andnamec{} Ortner}(2006){Auer \andnamec{} Ortner}]{Auer2006}
+(Auer \andnamec{} Ortner, 2006) \hspace{.5em}P.~Auer \andname{} R.~Ortner,
+  2006.
+\newblock Logarithmic online regret bounds for undiscounted reinforcement
+  learning.
+\newblock In Proceedings of \textit{ NIPS}.
+
 \bibitem[{Austin}(1962){Austin}]{Austin1962}
 (Austin, 1962) \hspace{.5em}J.~Austin, 1962.
 \newblock \textit{ How to Do Things with Words}.
@@ -50,7 +57,7 @@
   Pietquin}]{Barlier2015}
 (Barlier et~al., 2015) \hspace{.5em}M.~Barlier, R.~Laroche, \andname{}
   O.~Pietquin, 2015.
-\newblock An easy method to make dialogue systems incremental.
+\newblock Human-machine dialogue as a stochastic game.
 \newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
@@ -157,13 +164,13 @@
   N.~Cesa-Bianchi, 2012.
 \newblock Regret analysis of stochastic and nonstochastic multi-armed bandit
   problems.
-\newblock \textit{ Foundations and Trends® in Machine Learning\/}~\textit{5},
+\newblock \textit{ Foundations and Trends in Machine Learning\/}~\textit{5},
   1--122.
 
-\bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lefèvre, \andnamec{}
+\bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lef\`vre, \andnamec{}
   Pietquin}]{Chandramohan2011}
 (Chandramohan et~al., 2011) \hspace{.5em}S.~Chandramohan, M.~Geist,
-  F.~Lefèvre, \andname{} O.~Pietquin, 2011.
+  F.~Lef\`vre, \andname{} O.~Pietquin, 2011.
 \newblock User simulation in dialogue systems using inverse reinforcement
   learning.
 \newblock In Proceedings of \textit{ INTERSPEECH}.
@@ -187,6 +194,16 @@
 (Clark, 1996) \hspace{.5em}H.~H. Clark, 1996.
 \newblock \textit{ Using Language}.
 \newblock Cambridge University Press.
+
+\bibitem[{Claus \andnamec{} Boutilier}(1998){Claus \andnamec{}
+  Boutilier}]{Claus1998}
+(Claus \andnamec{} Boutilier, 1998) \hspace{.5em}C.~Claus \andname{}
+  C.~Boutilier, 1998.
+\newblock The dynamics of reinforcement learning in cooperative multiagent
+  systems.
+\newblock In Proceedings of \textit{ Proceedings of the Fifteenth
+  National/Tenth Conference on Artificial Intelligence/Innovative Applications
+  of Artificial Intelligence}, AAAI '98/IAAI '98.
 
 \bibitem[{Cohen \andnamec{} Levesque}(1990){Cohen \andnamec{}
   Levesque}]{Cohen1990}
@@ -479,21 +496,63 @@
 \newblock In Proceedings of \textit{ In Proceedings of Intelligent Virtual
   Agents (IVA 08},  162--175. Springer.
 
-\bibitem[{Khouzaimi et~al.}(2014){Khouzaimi, Laroche, \andnamec{}
+\bibitem[{Khouzaimi et~al.}(2014a){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2014c}
+(Khouzaimi et~al., 2014a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2014a.
+\newblock Dictanum : syst\`eme de dialogue incr\'emental pour la dict\'ee de
+  num\'eros.
+\newblock In Proceedings of \textit{ Proceedings of the TALN 2014 Conference}.
+
+\bibitem[{Khouzaimi et~al.}(2014b){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2014a}
-(Khouzaimi et~al., 2014) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
-  F.~Lef\`evre, 2014.
+(Khouzaimi et~al., 2014b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2014b.
 \newblock An easy method to make dialogue systems incremental.
 \newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
-\bibitem[{Khouzaimi et~al.}(2015){Khouzaimi, Laroche, \andnamec{}
+\bibitem[{Khouzaimi et~al.}(2015a){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015a}
+(Khouzaimi et~al., 2015a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015a.
+\newblock Dialogue efficiency evaluation of turn-taking phenomena in a
+  multi-layer incremental simulated environment.
+\newblock In Proceedings of \textit{ Proceedings of the HCI International 2015
+  Conference}.
+
+\bibitem[{Khouzaimi et~al.}(2015b){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2015b}
+(Khouzaimi et~al., 2015b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015b.
+\newblock Optimising turn-taking strategies with reinforcement learning.
+\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[{Khouzaimi et~al.}(2015c){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2015c}
-(Khouzaimi et~al., 2015) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
-  F.~Lef\`evre, 2015.
+(Khouzaimi et~al., 2015c) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2015c.
 \newblock Turn-taking phenomena in incremental dialogue systems.
 \newblock In Proceedings of \textit{ Proceedings of the 2015 Conference on
   Empirical Methods in Natural Language Processing (EMNLP)}.
+
+\bibitem[{Khouzaimi et~al.}(2016a){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2016a}
+(Khouzaimi et~al., 2016a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2016a.
+\newblock Incremental human-machine dialogue simulation.
+\newblock In Proceedings of \textit{ Proceedings of the International Workshop
+  on Spoken Dialogue Systems (IWSDS)}.
+
+\bibitem[{Khouzaimi et~al.}(2016b){Khouzaimi, Laroche, \andnamec{}
+  Lef\`evre}]{Khouzaimi2016b}
+(Khouzaimi et~al., 2016b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
+  F.~Lef\`evre, 2016b.
+\newblock Reinforcement learning applied to incremental spoken dialogue systems
+  (submitted).
+\newblock In Proceedings of \textit{ International Joint Conference on
+  Artificial Intelligence (IJCAI)}.
 
 \bibitem[{Kilger \andnamec{} Finkler}(1995){Kilger \andnamec{}
   Finkler}]{Kilger1995}
@@ -714,6 +773,13 @@
 \newblock Towards dynamic multi-domain dialogue processing.
 \newblock In Proceedings of \textit{ 8th European Conference on Speech
   Communication and Technology, EUROSPEECH - INTERSPEECH}.
+
+\bibitem[{Panait \andnamec{} Luke}(2005){Panait \andnamec{} Luke}]{Panait2005}
+(Panait \andnamec{} Luke, 2005) \hspace{.5em}L.~Panait \andname{} S.~Luke,
+  2005.
+\newblock Cooperative multi-agent learning: The state of the art.
+\newblock \textit{ Autonomous Agents and Multi-Agent Systems\/}~\textit{11},
+  387--434.
 
 \bibitem[{Pieraccini \andnamec{} Huerta}(2005){Pieraccini \andnamec{}
   Huerta}]{Pieraccini2005}
@@ -1005,6 +1071,14 @@
 \newblock \textit{ Animal intelligence: An experimental study of the
   associative processes in animals}.
 \newblock Columbia University Press.
+
+\bibitem[{Vogel et~al.}(2013){Vogel, Bodoia, Potts, \andnamec{}
+  Jurafsky}]{Vogel2013}
+(Vogel et~al., 2013) \hspace{.5em}A.~Vogel, M.~Bodoia, C.~Potts, \andname{}
+  D.~Jurafsky, 2013.
+\newblock Emergence of gricean maxims from multi-agent decision theory.
+\newblock In Proceedings of \textit{ Conference of the North American Chapter
+  of the Association of Computational Linguistics (NAACL)}.
 
 \bibitem[{Walker}(2000){Walker}]{Walker2000}
 (Walker, 2000) \hspace{.5em}M.~Walker, 2000.

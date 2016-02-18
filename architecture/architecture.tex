@@ -48,7 +48,7 @@
     
     	During the $p^{th}$ micro-turn of the $k^{th}$ user turn, the client sends $Req^k_p$ to the Scheduler. The latter has to decide whether to send it to the service or not and the corresponding condition is called \textit{ServiceReqCond}. A good example is \textit{ServiceReqCond} = ($Req^k_p \neq Req^k_{p-1}$) as sending the same request twice is useless. Then, the service provides the corresponding response $Resp^k_p$ and the Scheduler stores it. The key idea of this architecture is that the Scheduler decides whether to retrieve this response to the client (making it take the floor through the TTS) or not (waiting for more information to come from the client). This decision can also be forced by the client when sending an end of turn signal signal\_ETC, like a long enough silence for instance. The most interesting fact about the Scheduler is that it is able to decide when to take the floor without waiting for signal\_ETC, the corresponding condition is called \textit{CommitCond}. The Scheduler functioning over time is illustrated in Fig. \ref{fig:schedchrono} (dashed arrows represent the Scheduler's response to the client since they may or may not take place, given the Scheduler's decision to commit or not).
         
-	\begin{figure*}[htp]
+	\begin{table*}[htp]
 		\begin{center}
 		\begin{tabular}{|c|c|c|c|c|}
 			 \hline
@@ -66,10 +66,10 @@
 						 &    ...     &     ...     & ctxt($T^1$) & ... \\
 			 \hline
 		\end{tabular}
-	\end{center}
-	\caption{A double context: the real context and the simulation context.}
-	\label{ContextChrono}
-\end{figure*}
+	        \end{center}
+	        \caption{A double context: the real context and the simulation context.}
+	        \label{tab:contextchrono}
+        \end{table*}
         
         Nevertheless, this approach raises on technical problem. Most of the requests that are made to the service are only aimed to see what would be its response for certain partial utterances and they are discarded right after. However, they might modify the dialogue state in the service which is a side effect to be avoided. As a consequence, two dialogue contexts are maintained:
         
@@ -85,7 +85,7 @@
             \item \textbf{Cancel or rollback:} The scheduler cancels the context changes when it decides to discard the last response obtained from the service and that a new - potentially more complete - partial request is received from the client (as shown in Figure \ref{fig:schedchrono}). In that case, the real context is copied into the simulated one, rollbacking it to its original state.
         \end{itemize}
  
- 		The way the real and the simulated context are managed through the commit and the cancel actions is illustrated in Fig. \ref{fig:contextchrono}.
+ 		The way the real and the simulated context are managed through the commit and the cancel actions is illustrated in Table \ref{tab:contextchrono}.
 
         
 \section{Illustration}
@@ -127,7 +127,7 @@
             \speak{SYSTEM} Thank you for using Dictanum. Bye.
         \end{dialogue}
         
-        With incremental dialogue processing, it is possible to design a strategy that is closer to the human behaviour. To show that, a number dictation dialogue system called Dictanum has been implemented using Disserto. It performs turn-based dialogue hence asking the user for the whole number at once. Here, the client is a web page displayed on the browser that uses Google API for both the ASR and the TTS tasks and the service is a servlet deployed on a servlet container.
+        With incremental dialogue processing, it is possible to design a strategy that is closer to the human behaviour. To show that, a number dictation dialogue system called Dictanum (described in \cite{Khouzaimi2014c})  has been implemented using Disserto. It performs turn-based dialogue hence asking the user for the whole number at once. Here, the client is a web page displayed on the browser that uses Google API for both the ASR and the TTS tasks and the service is a servlet deployed on a servlet container.
         
         Afterwards, the approach introduced here has been used to build the incremental version of the system (like in the case of the CFAsT application, the Scheduler has been deployed as a servlet on the same container as the service). To do so, two silence duration thresholds have been defined: the short silence threshold $\delta_s$ and the long one $\Delta_s$ ($\delta_s \leq \Delta_s$). \textit{EndMicroTurnCond} is triggered when a short silence is detected and similarly, \textit{EndTurnCond} corresponds to long silences. A feedback is delivered to the user in the case of a short silence (repeating the last 4 digits). If the user ignores the feedback and keeps dictating his number, the system keeps on adding digits to its list, however, if the user starts his next utterance with \textit{No}, the feedback content is deleted from the number. Here is a dialogue example:
         
@@ -170,7 +170,7 @@
                 \begin{itemize}
                   \item \textbf{TTS interruption after input analysis:} The user has the ability to interrupt the system (BARGE\_IN\_RESP from the user's side) but also to perform brief feedback (BACKCHANNEL or FEEDBACK TTP from the user's side) without interrupting the system's sentence. All categories except the first one can easily embed this feature.
                   \item \textbf{Link interruption time with TTS:} Useful for simulating REF TTP (REF\_IMPL, REF\_RAW and REF\_INTERP from the user's side). This has been successfully implemented in a system that belongs to the second category in \cite{El-Asri2014a}. Therefore, it can also be implemented in systems with a higher degree of incrementality (categories 3 and 4).
-                  \item \textbf{User interruption by the system:} As it will be shown in the rest of this thesis, interrupting the user can improve the dialogue efficiency in some cases (BARGE\_IN\_RESP from the system's side). To do so, the sytem at hand must offer real incremental capacities which is the case for categories 3 and 4 only.
+                  \item \textbf{User interruption by the system:} As it will be shown in the rest of this thesis, interrupting the user can improve the dialogue efficiency in some cases (BARGE\_- IN\_RESP from the system's side). To do so, the sytem at hand must offer real incremental capacities which is the case for categories 3 and 4 only.
                   \item \textbf{Better reactivity:} One of the main advantages of incremental processing is delivering responses in a quicker fashion since the processing of the user's request starts earlier. Again, real incremental abilities are required which makes it a property that is specific to categories 3 and 4 exclusively. This feature is particularly useful to achieve accurate end point detection (END\_POINT from the system's side).
                   \item \textbf{Optimal processing cost:} The third category processes the user's request in a restart incremental way (sending the whole partial utterance at each new micro-turn). This is not optimal as it is possible to process it chunk by chunk. Therefore, this is an advantage that category 4 offers over all the others.
                 \end{itemize}

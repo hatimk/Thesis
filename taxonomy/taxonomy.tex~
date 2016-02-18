@@ -248,9 +248,9 @@
     \subsection{Dialogue initialisation}
     \label{tax:dialinit}
 		
-         Four TTPs constitute this category: FLOOR\_TAKING\_IMPL, FLOOR\_TAKING\_RAW, FLOOR\_TAKING\_INTERP and INIT\_DIALOGUE. They should be distinguished from REKINDLE TTPs as they take place at the very beginning of the dialogue or when the dialogue participants stopped interaction for a long while (so that it is legitimate to consider that they are engaging in a new interaction). Viewed as phonetic dialogue acts, FLOOR\_TAKING\_IMPL involves implicit gestures and short sounds whereas FLOOR\_- TAKING\_RAW involves longer sentences. In the case of FLOOR\_TAKING\_INTERP and DIALOGUE\_INIT, utterances are even longer in general. However, in some cases, it is possible to inject new information in very short sentences, therefore the length of the sentence cannot be used as a criterion to distinguish between these TTPs, except between FLOOR\_TAKING\_IMPL and the rest. As an illustration, imagine that you observe people that are interacting using a language that is unknown to you. Imagine, that they are silent and suddenly one of them utters a short sound. In that case, it is not obvious whether he just called his interlocutor's name or whether he actually uttered some new piece of information.
+         Four TTPs constitute this category: FLOOR\_TAKING\_IMPL, FLOOR\_TAKING\_RAW, FLOOR\_TAKING\_INTERP and INIT\_DIALOGUE. They should be distinguished from REKINDLE TTPs as they take place at the very beginning of the dialogue or when the dialogue participants stopped interaction for a long while (so that it is legitimate to consider that they are engaging in a new interaction). Viewed as phonetic dialogue acts, FLOOR\_TAKING\_IMPL involves implicit gestures and short sounds whereas FLOOR\_TAKING\_RAW involves longer sentences. In the case of FLOOR\_TAKING\_INTERP and DIALOGUE\_INIT, utterances are even longer in general. However, in some cases, it is possible to inject new information in very short sentences, therefore the length of the sentence cannot be used as a criterion to distinguish between these TTPs, except between FLOOR\_TAKING\_IMPL and the rest. As an illustration, imagine that you observe people that are interacting using a language that is unknown to you. Imagine, that they are silent and suddenly one of them utters a short sound. In that case, it is not obvious whether he just called his interlocutor's name or whether he actually uttered some new piece of information.
 			
-	 Considering the illocutionary level, FLOOR\_TAKING\_IMPL and FLOOR\_TAKING-\_- RAW introduce no new information apart from the fact that T wants to take the floor (however, they are different at the phonetic level). FLOOR\_TAKING\_INTERP, on the other hand, adds new information but which is not relevant to the main topic of the conversation unlike INIT\_DIALOGUE. As a consequence, viewed as a perlocutionary act, INIT\_DIALOGUE plays a double role: making H aware that T is starting an interaction (shared with FLOOR\_TAKING\_IMPL) and adding new information at the same time. Finally, the reason why H performs FLOOR\_TAKING\_IMPL is the the desire to start a new interaction. INIT\_DIALOGUE is also performed for the same reason but in addition, it is also aimed to announce the conversation subject and/or to make H aware of some new piece of information.
+	 Considering the illocutionary level, FLOOR\_TAKING\_IMPL and FLOOR\_TAKING\_RAW introduce no new information apart from the fact that T wants to take the floor (however, they are different at the phonetic level). FLOOR\_TAKING\_INTERP, on the other hand, adds new information but which is not relevant to the main topic of the conversation unlike INIT\_DIALOGUE. As a consequence, viewed as a perlocutionary act, INIT\_DIALOGUE plays a double role: making H aware that T is starting an interaction (shared with FLOOR\_TAKING\_IMPL) and adding new information at the same time. Finally, the reason why H performs FLOOR\_TAKING\_IMPL is the the desire to start a new interaction. INIT\_DIALOGUE is also performed for the same reason but in addition, it is also aimed to announce the conversation subject and/or to make H aware of some new piece of information.
 
     \subsection{Negative feedback}
 
@@ -280,7 +280,7 @@
 
     \subsection{Ordered dialogue acts}
 
-         In this last section, FAIL\_MOVE, INCOHERENCE\_MOVE, BARGE\_IN\_CHANGE,\\ BARGE\_IN\_RESP and END\_POINT are discussed. The simplest way of viewing dialogue is by adopting the walkie-talkie paradigm. Time is shared between participants in a sequential way where each one of them takes the floor and then releases it for the other to speak. As described previously, this corresponds to the END\_POINT phenomenon. Viewed as a phonetic act, it is characterised by the absence of overlap (or very small overlaps) and even a gap most of the time. On the other hand, no gaps are involved in FAIL\_MOVE, INCOHERENCE\_MOVE, BARGE\_IN\_CHANGE and BARGE\_IN\_RESP and overlaps are frequently observed.
+         In this last section, FAIL\_MOVE, INCOHERENCE\_MOVE, BARGE\_IN\_CHANGE, BARGE\_IN\_RESP and END\_POINT are discussed. The simplest way of viewing dialogue is by adopting the walkie-talkie paradigm. Time is shared between participants in a sequential way where each one of them takes the floor and then releases it for the other to speak. As described previously, this corresponds to the END\_POINT phenomenon. Viewed as a phonetic act, it is characterised by the absence of overlap (or very small overlaps) and even a gap most of the time. On the other hand, no gaps are involved in FAIL\_MOVE, INCOHERENCE\_MOVE, BARGE\_IN\_CHANGE and BARGE\_IN\_RESP and overlaps are frequently observed.
 
          From the illocutionary and perlocutionary point of view, FAIL\_MOVE and INCOHERENCE\_MOVE, BARGE\_IN\_CHANGE on the one hand and BARGE\_IN\_RESP and END\_POINT on the other hand for two groups. In the first one, while interrupting H, T suggests to consider a new idea or a new topic therefore making H shift its attention towards it. In the second group, the same conversation topic is developed. The phenomena of the first group can be distinguished following the illocutionary dimension since in the case of FAIL\_MOVE, a misunderstanding is communicated whereas in INCOHERENCE\_MOVE, T communicates that H's utterance is problematic and finally, none of these two problems is communicated during a BARGE\_IN\_CHANGE. As far as the second TTP group is concerned, there is no difference between its two composing phenomena at the illocutionary level, however, considered as perlocutionary acts, T tries to inject new information in both cases but BARGE\_IN\_RESP comes with the additional intent of making H stop talking. T is pushed to act as such whenever she thinks that she has enough information to start uttering her next dialogue act. Therefore, the motivation behind such a behaviour is increasing efficiency by suppressing an unnecessary part of H's utterance hence gaining time. However, in some situations, barge-in cannot be performed either because of real constraints (a real walkie-talkie conversation for example) or because of social codes (politeness, timing allowed during an official meeting or a hearing...).
 				
@@ -300,24 +300,24 @@
 				& & & & \\
 				\hline
                	\rule{0pt}{4ex}
-				\textbf{FLOOR\_TAKING\_IMPL} & \multirow{3}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/initImpl.pdf}} & I need your & \tabitem Shift H's attention & \tabitem Desire to start \\
+				\textbf{FLOOR\_TAKING\_IMPL} & \multirow{3}{*}{\includegraphics[scale=0.5]{TTPProfiles/initImpl.pdf}} & I need your & \tabitem Shift H's attention & \tabitem Desire to start \\
                	& & full attention & towards T & a conversation \\
 				& & & & \\
 				\hline
                	\rule{0pt}{4ex}
-               	\textbf{FLOOR\_TAKING\_RAW} & \multirow{3}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/initRaw.pdf}} & I need your & \tabitem Shift H's attention & \tabitem Desire to start \\
+               	\textbf{FLOOR\_TAKING\_RAW} & \multirow{3}{*}{\includegraphics[scale=0.5]{TTPProfiles/initRaw.pdf}} & I need your & \tabitem Shift H's attention & \tabitem Desire to start \\
            		& & full attention & towards T & a conversation \\
                 & & & & \\                                                  
               	\hline
                	\rule{0pt}{4ex}
-               	\textbf{FLOOR\_TAKING\_INTERP} & \multirow{3}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/init.pdf}} & I need your & \tabitem Shift H's attention & \tabitem Desire to start \\
+               	\textbf{FLOOR\_TAKING\_INTERP} & \multirow{3}{*}{\includegraphics[scale=0.5]{TTPProfiles/init.pdf}} & I need your & \tabitem Shift H's attention & \tabitem Desire to start \\
              	& & full attention & towards T & a conversation \\
                	& & because of x & & \tabitem More efficiency \\
         		& & & & by providing\\
                 & & & & a justification\\
                	\hline
                	\rule{0pt}{4ex}
-              	\textbf{DIALOGUE\_INIT} & \multirow{6}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/init.pdf}} & I start this & \tabitem Shift H's attention & \tabitem Desire to start \\
+              	\textbf{DIALOGUE\_INIT} & \multirow{6}{*}{\includegraphics[scale=0.5]{TTPProfiles/init.pdf}} & I start this & \tabitem Shift H's attention & \tabitem Desire to start \\
               	& & conversation and I & towards T & a conversation \\
                	& & inform you that x & \tabitem Make H aware & about x \\
               	& & & of the dialogue & \\
@@ -325,13 +325,13 @@
 				& & & & \\
                	\hline
                	\rule{0pt}{4ex}
-               	\textbf{FAIL\_IMPL} & \multirow{4}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/implBargeIn.pdf}} & I don't understand & \tabitem Make H stop & \tabitem Fix desynchro- \\
+               	\textbf{FAIL\_IMPL} & \multirow{4}{*}{\includegraphics[scale=0.5]{TTPProfiles/implBargeIn.pdf}} & I don't understand & \tabitem Make H stop & \tabitem Fix desynchro- \\
               	& & what you are & \tabitem Make H repeat & nisation \\
               	& & talking about & or reformulate & \\
 				& & & & \\
                	\hline
               	\rule{0pt}{4ex}
-               	\textbf{FAIL\_RAW} & \multirow{4}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/shortBargeIn.pdf}} & I don't understand & \tabitem Make H stop & \tabitem Fix desynchro- \\
+               	\textbf{FAIL\_RAW} & \multirow{4}{*}{\includegraphics[scale=0.5]{TTPProfiles/shortBargeIn.pdf}} & I don't understand & \tabitem Make H stop & \tabitem Fix desynchro- \\
              	& & what you are & \tabitem Make H repeat & nisation \\
            		& & talking about & or reformulate & \\
 				& & & & \\
@@ -357,14 +357,14 @@
 				& & & & \\
                	\hline
                	\rule{0pt}{4ex}
-          		\textbf{INCOHERENCE\_IMPL} & \multirow{5}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/implBargeIn.pdf}} & What you just said & \tabitem Make H stop & \tabitem Fix desynchro- \\
+          		\textbf{INCOHERENCE\_IMPL} & \multirow{5}{*}{\includegraphics[scale=0.5]{TTPProfiles/implBargeIn.pdf}} & What you just said & \tabitem Make H stop & \tabitem Fix desynchro- \\
              	& & is problematic & \tabitem Make H reconsider & nisation \\
             	& & & what he & \\
                	& & & just said & \\
 				& & & & \\
                	\hline
               	\rule{0pt}{4ex}
-              	\textbf{INCOHERENCE\_RAW} & \multirow{5}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/shortBargeIn.pdf}} & What you just said & \tabitem Make H stop & \tabitem Fix desynchro- \\
+              	\textbf{INCOHERENCE\_RAW} & \multirow{5}{*}{\includegraphics[scale=0.5]{TTPProfiles/shortBargeIn.pdf}} & What you just said & \tabitem Make H stop & \tabitem Fix desynchro- \\
           		& & is problematic & \tabitem Make H reconsider & nisation \\
         		& & & what he & \\
             	& & & just said & \\
@@ -408,12 +408,12 @@
                 & & & & \\
                	\hline
                 \rule{0pt}{4ex}
-                \textbf{BACKCHANNEL} & \multirow{3}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/backchannel.pdf}} & I understand (and & \tabitem Make H continue & \tabitem More information \\
+                \textbf{BACKCHANNEL} & \multirow{3}{*}{\includegraphics[scale=0.5]{TTPProfiles/backchannel.pdf}} & I understand (and & \tabitem Make H continue & \tabitem More information \\
                 & & sometimes: I agree) & & from H \\
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{FEEDBACK\_RAW} & \multirow{7}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/shortFb.pdf}} & I understood that & \tabitem Make H continue & \tabitem More information \\
+                \textbf{FEEDBACK\_RAW} & \multirow{7}{*}{\includegraphics[scale=0.5]{TTPProfiles/shortFb.pdf}} & I understood that & \tabitem Make H continue & \tabitem More information \\
                 & & you said x & \tabitem Make H correct & from H \\
                 & & & in case of a & \tabitem Desire to confirm\\
                 & & & misunderstanding & that H's utterance\\
@@ -422,7 +422,7 @@
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{FEEDBACK\_INTERP} & \multirow{10}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/longFb.pdf}} & I understood that & \tabitem Make H continue & \tabitem More information \\
+                \textbf{FEEDBACK\_INTERP} & \multirow{10}{*}{\includegraphics[scale=0.5]{TTPProfiles/longFb.pdf}} & I understood that & \tabitem Make H continue & \tabitem More information \\
                 & & you said x & \tabitem Make H correct & from H \\
                 & & that is related  & in case of a & \tabitem Desire to confirm\\
                 & & to y & misunderstanding & that H's utterance\\
@@ -434,14 +434,14 @@
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{BARGE\_IN\_CHANGE} & \multirow{10}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/longFb.pdf}} & I understood that & \tabitem Shift H's focus & \tabitem More information \\
+                \textbf{BARGE\_IN\_CHANGE} & \multirow{10}{*}{\includegraphics[scale=0.5]{TTPProfiles/longFb.pdf}} & I understood that & \tabitem Shift H's focus & \tabitem More information \\
                 & & you said x, & towards x & about x \\
                 & & tell me more & & \\
                 & & about it & & \\
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{REF\_IMPL} & \multirow{6}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/implBargeIn.pdf}} & Yes, x & \tabitem Make H stop & \tabitem Selecting an option\\
+                \textbf{REF\_IMPL} & \multirow{6}{*}{\includegraphics[scale=0.5]{TTPProfiles/implBargeIn.pdf}} & Yes, x & \tabitem Make H stop & \tabitem Selecting an option\\
                 & & & and understand & \tabitem Less effort as x \\
                 & & & T is referring to & has already been \\
                 & & & the last element & uttered by H \\
@@ -464,7 +464,7 @@
                 \textbf{TTP} & \textbf{Phonetic act} & \textbf{Illocutionary act} & \textbf{Perlocutionary act} & \textbf{Motivations} \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{REF\_RAW} & \multirow{9}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/shortBargeIn.pdf}} & Yes, x & \tabitem Make H stop & \tabitem Selecting an option\\
+                \textbf{REF\_RAW} & \multirow{9}{*}{\includegraphics[scale=0.5]{TTPProfiles/shortBargeIn.pdf}} & Yes, x & \tabitem Make H stop & \tabitem Selecting an option\\
                 & & & and understand & \tabitem Less effort as x \\
                 & & & T is referring to & has already been \\
                 & & & the last element & uttered by H \\
@@ -501,7 +501,7 @@
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{REKINDLE\_IMPL} & \multirow{6}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/rekindle.pdf}} & The information you & \tabitem Make H resume & \tabitem Fix desynchronisation \\
+                \textbf{REKINDLE\_IMPL} & \multirow{6}{*}{\includegraphics[scale=0.5]{TTPProfiles/rekindle.pdf}} & The information you & \tabitem Make H resume & \tabitem Fix desynchronisation \\
                 & & gave is not & & \\
                 & & enough, please & & \\
                 & & provide more & & \\
@@ -509,7 +509,7 @@
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{REKINDLE\_RAW} & \multirow{6}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/rekindleRaw.pdf}} & The information you & \tabitem Make H resume & \tabitem Fix desynchronisation \\
+                \textbf{REKINDLE\_RAW} & \multirow{6}{*}{\includegraphics[scale=0.5]{TTPProfiles/rekindleRaw.pdf}} & The information you & \tabitem Make H resume & \tabitem Fix desynchronisation \\
                 & & gave is not & & \\
                 & & enough, please & & \\
                 & & provide more & & \\
@@ -517,7 +517,7 @@
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{REKINDLE\_INTERP} & \multirow{6}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/rekindleInterp.pdf}} & The information you & \tabitem Make H provide & \tabitem Complete \\
+                \textbf{REKINDLE\_INTERP} & \multirow{6}{*}{\includegraphics[scale=0.5]{TTPProfiles/rekindleInterp.pdf}} & The information you & \tabitem Make H provide & \tabitem Complete \\
                 & & gave is not & information x & understanding \\
                 & & enough, please & & of H's \\
                 & & provide & & utterance \\
@@ -525,7 +525,7 @@
                 & & & & \\
                 \hline
                 \rule{0pt}{4ex}
-                \textbf{END\_POINT} & \multirow{4}{*}{\includegraphics[scale=0.5]{figures/TTPProfiles/endPoint.pdf}} & x & \tabitem Make H aware & \tabitem Desire to move \\
+                \textbf{END\_POINT} & \multirow{4}{*}{\includegraphics[scale=0.5]{TTPProfiles/endPoint.pdf}} & x & \tabitem Make H aware & \tabitem Desire to move \\
                 & & & of x & the dialogue \\
                 & & & & forward \\
                 & & & & \\
