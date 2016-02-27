@@ -9,7 +9,7 @@
 
         \subsection{Background}
 
-             This section recalls a few elements about reinforcement learning and MDPs (see Chapter \ref{ch:soarl} for more details). The Scheduler is modeled as an MDP: a tuple $(\mathcal{S},\mathcal{A},\mathscr{T},\mathscr{R},\gamma)$ where
+             This section recalls a few elements about reinforcement learning and MDPs (see Chapter \ref{ch:stateofart} for more details). The Scheduler is modeled as an MDP: a tuple $(\mathcal{S},\mathcal{A},\mathscr{T},\mathscr{R},\gamma)$ where
 
              \begin{itemize}
                 \item $\mathcal{S}$ is the state space: all the states in which the agent could be.
@@ -19,7 +19,7 @@
                 \item $\gamma$ is a discount factor in $[0,1[$. The more it is close to 1, the more the agent is farsighted (maximising long term returns).
              \end{itemize}
 
-             The time step at which the Scheduler is run is the micro-turn, therefore, at each new micro-turn, the Scheduler computes the current state and then makes a decision (which action to perform). As discussed in Chapter \ref{ch:soarl}, the state space representation is a challenge in itself since it should embed all the necessary information while being tractable. In the next section, a new state representation adapted to incremental processing is introduced. It is general enough so that it can be easily implemented for any slot-filling task.
+             The time step at which the Scheduler is run is the micro-turn, therefore, at each new micro-turn, the Scheduler computes the current state and then makes a decision (which action to perform). As discussed in Chapter \ref{ch:stateofart}, the state space representation is a challenge in itself since it should embed all the necessary information while being tractable. In the next section, a new state representation adapted to incremental processing is introduced. It is general enough so that it can be easily implemented for any slot-filling task.
 
 	\subsection{State representation}
     

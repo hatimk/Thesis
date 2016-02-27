@@ -5,7 +5,8 @@ A level-1 auxiliary file: acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: abstract/abstract.aux
 A level-1 auxiliary file: abstractfr/abstractfr.aux
 A level-1 auxiliary file: introduction/introduction.aux
-A level-1 auxiliary file: stateofart/stateofart.aux
+A level-1 auxiliary file: soadialogue/soadialogue.aux
+A level-1 auxiliary file: soarl/soarl.aux
 A level-1 auxiliary file: taxonomy/taxonomy.aux
 A level-1 auxiliary file: architecture/architecture.aux
 A level-1 auxiliary file: strategies/strategies.aux
@@ -38,45 +39,45 @@ Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
 Warning--no number and no volume in Witt2011
 Warning--page numbers missing in Witt2011
-You've used 158 entries,
+You've used 157 entries,
             2936 wiz_defined-function locations,
-            1503 strings with 32858 characters,
-and the built_in function-call counts, 97241 in all, are:
-= -- 8231
-> -- 6565
+            1500 strings with 32834 characters,
+and the built_in function-call counts, 96608 in all, are:
+= -- 8176
+> -- 6524
 < -- 12
-+ -- 2020
-- -- 2316
-* -- 6649
-:= -- 16973
-add.period$ -- 478
-call.type$ -- 158
-change.case$ -- 1217
-chr.to.int$ -- 152
-cite$ -- 180
-duplicate$ -- 3491
-empty$ -- 6537
-format.name$ -- 2786
-if$ -- 18635
++ -- 2008
+- -- 2304
+* -- 6596
+:= -- 16866
+add.period$ -- 475
+call.type$ -- 157
+change.case$ -- 1209
+chr.to.int$ -- 151
+cite$ -- 179
+duplicate$ -- 3473
+empty$ -- 6495
+format.name$ -- 2770
+if$ -- 18511
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 158
-newline$ -- 799
-num.names$ -- 1258
-pop$ -- 1619
+missing$ -- 157
+newline$ -- 794
+num.names$ -- 1250
+pop$ -- 1613
 preamble$ -- 1
-purify$ -- 2170
+purify$ -- 2156
 quote$ -- 0
-skip$ -- 2960
+skip$ -- 2943
 stack$ -- 0
-substring$ -- 4157
-swap$ -- 250
+substring$ -- 4116
+swap$ -- 249
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 3026
+type$ -- 3006
 warning$ -- 22
-while$ -- 1052
+while$ -- 1047
 width$ -- 0
-write$ -- 3350
+write$ -- 3329
 (There were 22 warnings)

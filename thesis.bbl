@@ -235,15 +235,6 @@
   processes.
 \newblock In Proceedings of \textit{ Interspeech}.
 
-\bibitem[{Daubigney et~al.}(2013){Daubigney, Geist, \andnamec{}
-  Pietquin}]{Daubigney2013}
-(Daubigney et~al., 2013) \hspace{.5em}L.~Daubigney, M.~Geist, \andname{}
-  O.~Pietquin, 2013.
-\newblock Model-free pomdp optimisation of tutoring systems with echo-state
-  networks.
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
-  Conference}.
-
 \bibitem[{Deng et~al.}(2013){Deng, Li, Huang, Yao, Yu, Seide, Seltzer, Zweig,
   He, Williams, Gong, \andnamec{} Acero}]{Deng2013}
 (Deng et~al., 2013) \hspace{.5em}L.~Deng, J.~Li, J.-T. Huang, K.~Yao, D.~Yu,
@@ -260,14 +251,6 @@
 \newblock Optimising incremental dialogue decisions using information density
   for interactive systems.
 \newblock In Proceedings of \textit{ EMNLP-CoNLL}.
-
-\bibitem[{DeVault et~al.}(2011){DeVault, Sagae, \andnamec{}
-  Traum}]{DeVault2011}
-(DeVault et~al., 2011) \hspace{.5em}D.~DeVault, K.~Sagae, \andname{} D.~Traum,
-  2011.
-\newblock Incremental interpretation and prediction of utterance meaning for
-  interactive dialogue.
-\newblock \textit{ Dialogue and Discourse\/}~\textit{2}, 143--170.
 
 \bibitem[{Doya}(2007){Doya}]{Doya2007}
 (Doya, 2007) \hspace{.5em}K.~Doya, 2007.
@@ -495,6 +478,14 @@
 \newblock Learning smooth, human-like turntaking in realtime dialogue.
 \newblock In Proceedings of \textit{ In Proceedings of Intelligent Virtual
   Agents (IVA 08},  162--175. Springer.
+
+\bibitem[{Jordan et~al.}(2015){Jordan, Albacete, \andnamec{} Katz}]{Jordan2015}
+(Jordan et~al., 2015) \hspace{.5em}P.~Jordan, P.~Albacete, \andname{} S.~Katz,
+  2015.
+\newblock Exploring the effects of redundancy within a tutorial dialogue
+  system: Restating students' responses.
+\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
+  the Special Interest Group on Discourse and Dialogue (SigDial)}.
 
 \bibitem[{Khouzaimi et~al.}(2014a){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2014c}
