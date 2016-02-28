@@ -6,34 +6,34 @@
 \contentsline {xpart}{State of the art}{23}{part.12}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Reinforcement learning in dialogue processing}{41}{chapter.52}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{41}{figure.caption.55}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The interaction cycle between the agent and the environment in reinforcement learning\relax }}{41}{figure.caption.56}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking phenomena taxonomy}{53}{chapter.82}
-\contentsline {xpart}{Contributions}{53}{part.81}
+\contentsline {xchapter}{Turn-taking phenomena taxonomy}{53}{chapter.83}
+\contentsline {xpart}{Contributions}{53}{part.82}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{69}{chapter.127}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{70}{figure.caption.130}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{71}{figure.caption.132}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{72}{figure.caption.135}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The incremental version of the CFAsT project. The traditional view is represented on the left and the new incremental one is depicted on the left.\relax }}{74}{figure.caption.139}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{69}{chapter.128}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{70}{figure.caption.131}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{71}{figure.caption.133}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{72}{figure.caption.136}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The incremental version of the CFAsT project. The traditional view is represented on the left and the new incremental one is depicted on the left.\relax }}{74}{figure.caption.140}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{81}{chapter.145}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{87}{figure.caption.165}
+\contentsline {xchapter}{Dialogue strategies}{81}{chapter.146}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{87}{figure.caption.166}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{91}{chapter.168}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated environment architecture\relax }}{92}{figure.caption.170}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{95}{figure.caption.184}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{97}{figure.caption.191}
+\contentsline {xchapter}{Incremental dialogue simulation}{91}{chapter.169}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated environment architecture\relax }}{92}{figure.caption.171}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{95}{figure.caption.185}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{97}{figure.caption.192}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{103}{chapter.211}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{108}{figure.caption.217}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{111}{figure.caption.229}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{111}{figure.caption.230}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{111}{figure.caption.231}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{103}{chapter.212}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{108}{figure.caption.218}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{111}{figure.caption.230}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{111}{figure.caption.231}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{111}{figure.caption.232}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{113}{chapter.233}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.\relax }}{120}{figure.caption.255}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.\relax }}{121}{figure.caption.256}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{113}{chapter.234}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.\relax }}{120}{figure.caption.256}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.\relax }}{121}{figure.caption.257}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{123}{chapter.258}
-\contentsline {figure}{\numberline {9.1}{\ignorespaces The Majordomo interface\relax }}{125}{figure.caption.265}
+\contentsline {xchapter}{Experiment with real users}{123}{chapter.259}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces The Majordomo interface\relax }}{125}{figure.caption.266}

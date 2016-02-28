@@ -14,6 +14,14 @@
   evidence for advantages over nonincremental methods.
 \newblock In Proceedings of \textit{ Decalog}.
 
+\bibitem[{Anand \andnamec{} Kahn}(1992){Anand \andnamec{} Kahn}]{Anand1992}
+(Anand \andnamec{} Kahn, 1992) \hspace{.5em}T.~Anand \andname{} G.~S. Kahn,
+  1992.
+\newblock Making sense of gigabytes: A system for knowledge-based market
+  analysis.
+\newblock In Proceedings of \textit{ Innovative Applications of Artificial
+  Intelligence (IAAI)}.
+
 \bibitem[{Arnold et~al.}(2000){Arnold, Eisenband, Brown-Schmidt, \andnamec{}
   Trueswell}]{Arnold2000}
 (Arnold et~al., 2000) \hspace{.5em}J.~E. Arnold, J.~G. Eisenband,
@@ -21,12 +29,6 @@
 \newblock The rapid use of gender information: evidence of the time course of
   pronoun resolution from eyetracking.
 \newblock \textit{ Cognition\/}~\textit{ 76\/}(1), B13--B26.
-
-\bibitem[{Asri et~al.}(2012){Asri, Laroche, \andnamec{} Pietquin}]{El-Asri2012}
-(Asri et~al., 2012) \hspace{.5em}L.~E. Asri, R.~Laroche, \andname{}
-  O.~Pietquin, 2012.
-\newblock Reward function learning for dialogue management.
-\newblock In Proceedings of \textit{ STAIRS}.
 
 \bibitem[{Auer et~al.}(2002){Auer, Cesa-Bianchi, \andnamec{}
   Fischer}]{Auer2002}
@@ -309,18 +311,10 @@
 \newblock In Proceedings of \textit{ Proceedings of the 21st Conférence sur le
   Traitement Automatique des Langues Naturelles (TALN)}.
 
-\bibitem[{El~Asri et~al.}(2014a){El~Asri, Khouzaimi, Laroche, \andnamec{}
-  Pietquin}]{El-Asri2014b}
-(El~Asri et~al., 2014a) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
-  \andname{} O.~Pietquin, 2014a.
-\newblock Ordinal regression for interaction quality prediction.
-\newblock In Proceedings of \textit{ Acoustics, Speech and Signal Processing
-  (ICASSP), 2014 IEEE International Conference on}.
-
-\bibitem[{El~Asri et~al.}(2014b){El~Asri, Khouzaimi, Laroche, \andnamec{}
+\bibitem[{El~Asri et~al.}(2014){El~Asri, Khouzaimi, Laroche, \andnamec{}
   Pietquin}]{El-Asri2014d}
-(El~Asri et~al., 2014b) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
-  \andname{} O.~Pietquin, 2014b.
+(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, H.~Khouzaimi, R.~Laroche,
+  \andname{} O.~Pietquin, 2014.
 \newblock Ordinal regression for interaction quality prediction.
 \newblock In Proceedings of \textit{ Acoustics, Speech and Signal Processing
   (ICASSP), 2014 IEEE International Conference on}.
@@ -333,10 +327,17 @@
 \newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
   Conference}.
 
-\bibitem[{El~Asri et~al.}(2014c){El~Asri, Laroche, \andnamec{}
+\bibitem[{El~Asri et~al.}(2012){El~Asri, Laroche, \andnamec{}
+  Pietquin}]{El-Asri2012}
+(El~Asri et~al., 2012) \hspace{.5em}L.~El~Asri, R.~Laroche, \andname{}
+  O.~Pietquin, 2012.
+\newblock Reward function learning for dialogue management.
+\newblock In Proceedings of \textit{ STAIRS}.
+
+\bibitem[{El~Asri et~al.}(2014){El~Asri, Laroche, \andnamec{}
   Pietquin}]{El-Asri2014c}
-(El~Asri et~al., 2014c) \hspace{.5em}L.~El~Asri, R.~Laroche, \andname{}
-  O.~Pietquin, 2014c.
+(El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, R.~Laroche, \andname{}
+  O.~Pietquin, 2014.
 \newblock {DINASTI: Dialogues with a Negotiating Appointment Setting
   Interface}.
 \newblock In Proceedings of \textit{ {Proc. of LREC }}.
@@ -611,6 +612,16 @@
 \newblock In Proceedings of \textit{ Proceedings of the IJCAI Workshop on
   Cooking with Computers}.
 
+\bibitem[{Lef\`evre et~al.}(2012){Lef\`evre, Mostefa, Besacier, Est\`eve,
+  Quignard, Camelin, Favre, Jabaian, \andnamec{} Rojas-Barahona}]{Lefevre2012}
+(Lef\`evre et~al., 2012) \hspace{.5em}F.~Lef\`evre, D.~Mostefa, L.~Besacier,
+  Y.~Est\`eve, M.~Quignard, N.~Camelin, B.~Favre, B.~Jabaian, \andname{} L.~M.
+  Rojas-Barahona, 2012.
+\newblock Leveraging study of robustness and portability of spoken language
+  understanding systems across languages and domains: the portmedia corpora.
+\newblock In Proceedings of \textit{ Proceedings of the Eight International
+  Conference on Language Resources and Evaluation (LREC'12)}.
+
 \bibitem[{Lemon et~al.}(2003){Lemon, Cavedon, \andnamec{} Kelly}]{Lemon2003}
 (Lemon et~al., 2003) \hspace{.5em}O.~Lemon, L.~Cavedon, \andname{} B.~Kelly,
   2003.
@@ -865,6 +876,12 @@
   high-dimensional streaming evidence.
 \newblock In Proceedings of \textit{ Proceedings of the Twenty-Third
   International Joint Conference on Artificial Intelligence (IJCAI)}.
+
+\bibitem[{Russell}(1998){Russell}]{Russell1998}
+(Russell, 1998) \hspace{.5em}S.~Russell, 1998.
+\newblock Learning agents for uncertain environments (extended abstract).
+\newblock In Proceedings of \textit{ Proceedings of the Eleventh Annual
+  Conference on Computational Learning Theory}.
 
 \bibitem[{Sacks et~al.}(1974){Sacks, Schegloff, \andnamec{}
   Jefferson}]{Sacks1974}

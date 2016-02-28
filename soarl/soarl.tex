@@ -6,11 +6,11 @@
 
 	\subsection{Reinforcement in biology}
     
-		Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figures out through the process of \textit{trial and error} what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Figure \ref{fig:rlscheme}).
+		Reinforcement Learning (RL) is a sub-field of machine learning where an agent is put into an environment to interact with, and figures out through the process of \textit{trial and error} what the best actions to take are, given a reward function to maximise \cite{Sutton1998} (see Figure \ref{fig:rlscheme}\footnote{This figure is taken from \cite{Sutton1998}.}).
 			
 			\begin{figure*}[ht]
 				\centering
-				\includegraphics[scale=0.8]{figures/AgentEnv.pdf}
+				\includegraphics[scale=0.7]{figures/rl.png}
 				\caption{The interaction cycle between the agent and the environment in reinforcement learning}
 				\label{fig:rlscheme}
 			\end{figure*}
@@ -21,13 +21,13 @@
 			
 		\subsection{Markov Decision Processes}
         
-			The most common model consists in casting the agent as a Markov Decision Process (MDP) which is a quintuple $\mathcal{M} = (\mathcal{S},\mathcal{A},\mathscr{T},\mathscr{R},\gamma)$ where:
+			The most common model consists in casting the problem as a Markov Decision Process (MDP) which is a quintuple $\mathcal{M} = (\mathcal{S},\mathcal{A},\mathscr{T},\mathscr{R},\gamma)$ where:
 			\begin{itemize}
 					\item $\mathcal{S}$ is the \textit{state space}. At each time step $t$, the agent is in some state $s_t \in \mathcal{S}$.
 					\item $\mathcal{A}$ is the \textit{action space}. At each time step $t$, the agent decides to take action $a_t \in \mathcal{A}$.
 					\item $\mathscr{T}$ is the \textit{transition model} where each $(s,a,s')$ in $\mathcal{S} \text{x} \mathcal{A} \text{x} \mathcal{S}$ is associated with a real number in $[0,1]$ corresponding to the probability $\mathbb{P} (s_{t+1} = s'|s_t = s, a_t=a)$. A more compact notation will be used in the following: $\mathscr{T}_{ss'}^a = \mathscr{T} (s,a,s')$.
 					\item $\mathscr{R}$ is the \textit{reward model}. Let $r$ be the immediate reward due to taking action $a$ in state $s$, then $\mathscr{R}$ is the set of distributions of $r$ for every $(s,a) \in \mathcal{S} \text{x} \mathcal{A}$. The following notation will be used in the rest of this chapter: $\mathscr{R}_{ss'}^a = \mathbb{E} [\mathscr{R} (s,a,s')|s,a,s']$.
-					\item $\gamma \in [0,1[$ is referred to as the \textit{discount factor}. In the RL framework, the aim of the agent is not to maximise the immediate reward but the \textit{expected return}, where the return $R_t$ is defined as follows:
+					\item $\gamma \in [0,1)$ is referred to as the \textit{discount factor}. In the RL framework, the aim of the agent is not to maximise the immediate reward but the \textit{expected return}, where the return $R_t$ is defined as follows:
 					
 					\begin{eqnarray}
 						R_t & = & r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + ... \nonumber \\
@@ -37,7 +37,7 @@
 					Therefore, when $\gamma = 0$, the agent maximises the immediate reward only and when $\gamma$ tends towards 1, the agent maximises the sum of all the future rewards. In other words, the parameter $\gamma$ controls how far-sighted is the agent in terms of future rewards.
 	\end{itemize}
 			
-			A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is at state s. A key aspect of MDPs is the \textit{Markov property}. Being at state $s$ is the only information available to predict the future, and adding information about what happened during previous time steps has no power of prediction. Therefore, given a policy, each state $s \in \mathcal{S}$ is associated with a value $V^\pi (s)$ which is the expected return when at this state and following the policy $\pi$ afterwards:
+			A \textit{policy} $\pi : \mathcal{S} \rightarrow \mathcal{A}$ is a mapping between the state space and the action space. An agent is said to follow the policy $\pi$ when for each time $t$, it takes the action $a_t = \pi(s_t)$. A policy can also be stochastic, in which case, $\pi (s,a)$ denotes the probability of choosing action a when the agent is in state s. A key aspect of MDPs is the \textit{Markov property}. Being in state $s$ is the only information available to predict the future, and adding information about what happened during previous time steps has no power of prediction. Therefore, given a policy, each state $s \in \mathcal{S}$ is associated with a value $V^\pi (s)$ which is the expected return when in this state and following the policy $\pi$ afterwards:
 				
 				\begin{eqnarray}
 					V^{\pi} (s_t) & = & \mathbb{E} [R_t | s_t, \pi] \label{eq:valuefunc}
@@ -104,7 +104,7 @@
 			
 			It is possible to try to learn $\mathscr{T}$ and $\mathscr{R}$ first and then applying a \textit{model-based} algorithm to figure out the optimal policy. Nevertheless, this is not necessary as most algorithms compute the optimal policy by directly estimating the Q-function. This can be done in a straightforward fashion by running several episodes\footnote{To keep things simple in this introduction to reinforcement learning, the MDP is considered to eventually stop.}, computing the returns for each state-action couple and for each episode, then using the mean return over all the episodes as an estimate of $V^\pi$ or $Q^\pi$. Algorithms using this kind of approach belong to the category of \textit{Monte-Carlo methods}.
 			
-			However, as the agent interacts with the environment, it encounters a similar dilemma to the one faced in the bandit problem \cite{Berry1985,Bubeck2012}: how to manage the trade-off between \textit{exploration} and \textit{exploitation}. While being at a state $s \in \mathcal{S}$, the agent can choose one action among many. Let us say that the Q-function is initialised as a zero function. Therefore, at the beginning the agent has no preference and selects a random action. If this yields a positive reward, then the agent has the choice between these two options to make the next decision:
+			However, as the agent interacts with the environment, it encounters the following dilemma which was originally faced in the bandit problem \cite{Berry1985,Bubeck2012}: how to manage the trade-off between \textit{exploration} and \textit{exploitation}. While being at a state $s \in \mathcal{S}$, the agent can choose one action among many. Let us say that the Q-function is initialised as a zero function. Therefore, at the beginning the agent has no preference and selects a random action. If this yields a positive reward, then the agent has the choice between these two options to make the next decision:
 			
 			\begin{enumerate}
 				\item Making the same decision again as it already knows that it is likely to generate a positive reward.
@@ -139,7 +139,7 @@
 		
 		Also, it is noteworthy that even though the main focus in this thesis is dialogue management, reinforcement learning has also been applied to the NLG task in order to optimise information presentation \cite{Walker2000,Rieser2011b} and even TTS to decide what kind of prosody should be used \cite{Bretier2010}.
 	
-	\subsection{Spoken dialogue systems at Orange and the LIA}
+	\subsection{Spoken dialogue systems at Orange and LIA}
 
         	        Important research work have been accomplished at Orange during the CLASSIC project. It was mainly focused on the problem of reconciling academic research with industrial activity \cite{Paek2007}. A new reinforcement model has been developed (in the continuity of work done by \cite{Singh2002,Williams2008}): the Module Variable Decision Process (MVDP) \cite{Laroche2010a}. It has been implemented in an appointment scheduling task hence giving birth to the first dialogue system learning on-line (directly from experience) \cite{Putois2010}. In addition, other research efforts have been made in order to make reinforcement results accessible directly in design mode.
 
@@ -147,10 +147,10 @@
 								
 								Vocal assistants are becoming a part of our everyday life since their introduction in the market. They are able to perform several tasks but they are still static and limited. Therefore, Orange also investigates solutions to make dialogue systems able to manage several tasks by merging dialogue models of different applications which also makes it easily extensible \cite{EkeinhorKomi2014}. Finally, designing systems that can listen to human/human conversations and make decisions based on them is also a topic that is tackled in this lab \cite{Barlier2015}. It is motivated by several applications like connected houses, meeting rooms, call centers...
 
-                As far as the LIA (Laboratoire Informatique d'Avignon) is concerned, several subjects concerning human-robot interaction (mainly through dialogue) and Natural Language Processing (NLP) are are driving the research activity. Among them:
+                As far as LIA (Laboratoire Informatique d'Avignon) is concerned, several subjects concerning human-robot interaction (mainly through dialogue) and Natural Language Processing (NLP) are driving the research activity. Among them:
 
                 \begin{itemize}
-                  \item \textbf{Interactive Voice Response (IVR):} The objective of the Port-MEDIA project is to design robust multi-language and multi-domain models for IVR, an IVR being the interface between a user and a database.
+                  \item \textbf{Interactive Voice Response (IVR):} The objective of the Port-MEDIA \cite{Lefevre2012} project is to design robust multi-language and multi-domain models for IVR, an IVR being the interface between a user and a database.
                   \item \textbf{Human-Robot interaction:} The main objective of this research field is to design adaptive algorithms to improve the interaction between humans and robots. These are mainly reinforcement learning algorithms. The robot performs poorly at an early stage but with experience, through an error-trial process, it learns to better itself and improve the interaction quality.
                   \item \textbf{Automatic Speech Translation:} French/English and English/French translation algorithms have been built in collaboration with the LIG (Laboratoire Informatique de Grenoble), based on the Mooses Toolkit. In 2001, the French/English algorithm won second place in the international campaign WMT.
                 \end{itemize}
@@ -165,20 +165,20 @@
 			User simulation is useful during the conception phase of a dialogue system. However, training the simulator from data needs the dialogue system to be conceived already. Therefore, trying to come up with a simple model with only a few parameters is not always a bad idea as it has been proven to achieve good results as well \cite{Schatzmann2007}.
 			
 			%HK> Citer paradise après la liste des KPIs pour la reward function
-			User simulator is also quite similar to the dialogue management task. As a consequence, it is legitimate to ask the following question: why not use reinforcement learning to train user simulators? The answer is that in the case of dialogue management, it is easier to come up with a reasonable reward function: task completion, dialogue duration, subjective evaluation...etc... When it comes to user simulation, the objective function is how well a real user is imitated which is impossible to evaluate. Fortunately, there exists a framework where the reward function is automatically inferred from data which is particularly useful here: Inverse Reinforcement Learning \cite{Chandramohan2011,El-Asri2012}.
+			User simulator is also quite similar to the dialogue management task. As a consequence, it is legitimate to ask the following question: why not use reinforcement learning to train user simulators? The answer is that in the case of dialogue management, it is easier to come up with a reasonable reward function: task completion, dialogue duration, subjective evaluation...etc... When it comes to user simulation, the objective function is how well a real user is imitated which is difficult to evaluate. Fortunately, there exists a framework where the reward function is automatically inferred from data which is particularly useful here: Inverse Reinforcement Learning \cite{Russell1998,Chandramohan2011,El-Asri2012}.
 			
-			When it comes to incremental dialogue systems, the only existing user simulator in our knowledge is the one described in \cite{Selfridge2012b}. Its state is updated every 10 ms. However, the \textit{ASR instability} phenomenon is not replicated, that is to say that the ASR hypothesis construction is monotonous whereas in reality, it is the heart of the problem. When a new audio signal increment is heard by the ASR, the output can be partially or totally modified. In this simulator, only the simple case where a new increment is added to the output is modeled.
+			When it comes to incremental dialogue systems, the only existing user simulator in our knowledge is the one described in \cite{Selfridge2012b}. Its state is updated every 10 ms. However, the \textit{ASR instability} phenomenon is not replicated, that is to say that the ASR hypothesis construction is monotonous which introduces a certain bias in comparison with incremental dialogue in real conditions: when a new audio signal increment is heard by the ASR, the output can be partially or totally modified. This simulator made it possible to simulate incremental dialogue processing for the first time, nevertheless, only the case where a new increment is added to the output is modeled.
 				
 \section{Reinforcement learning in incremental dialogue systems}
 
-	In the field of incremental dialogue and turn-taking management, supervised learning is more common. The main problem tackled by researchers is the identification of the exact moments where the system should take the floor in order to achieve smooth turn-taking \cite{Raux2008,Gravano2011,Meena2013}. Binary classifiers are used and the features they are fed are of different natures: lexical, semantic, prosodic...etc...However, a few papers tackled this problem by using reinforcement learning.
+	In the field of incremental dialogue and turn-taking management, supervised learning is common. The main problem tackled by researchers is the identification of the exact moments where the system should take the floor in order to achieve smooth turn-taking \cite{Raux2008,Gravano2011,Meena2013}. Binary classifiers are used and the features they use are of different natures: lexical, semantic, prosodic...etc...However, a few papers tackled this problem by using reinforcement learning.
         
 	\cite{Jonsdottir2008} used reinforcement learning while considering prosodic features only. Backchanneling for example can be performed by humans independently from the meaning. The cost function (negative reward) is taken as gaps and overlaps, hence following Sack's principle discussed in Section \ref{soa:ttphuman}.
 	
 	\cite{Dethlefs2012} adopted a complementary approach where only the semantic content of the user's utterance is taken into account (hierarchical reinforcement learning is used). In human conversation, it is more likely for the listener to react right after a relevant information. Similarly, in the case of a restaurant finding spoken dialogue system, the system should react right after understanding the restaurant's type or price range. In this work, the information pertinence is measured by the Information Density (ID). Therefore, the more the ID is high during system actions, the more reward it gets.
 	
-	Instead of trying to minimise gaps and overlaps, the reward function can be designed in a way to optimise dialogue duration and task completion like it is the case in \cite{Selfridge2010}. The system in this paper learns optimal initial turn-taking, in the sense that when a silence is detected, the dialogue participant that has the most relevant thing to say takes the floor first. Like in the previous paper, only semantic features are considered.
+	Instead of trying to minimise gaps and overlaps, the reward function can be designed in a way to optimise dialogue duration and task completion as in \cite{Selfridge2010}. The system in this paper learns optimal initial turn-taking, in the sense that when a silence is detected, the dialogue participant that has the most relevant thing to say takes the floor first (both dialogue participants are modeled). Like in the previous paper, only semantic features are considered.
 	
-	A third approach to optimise turn-taking in spoken dialogue systems is to directly try to imitate human behaviours. In \cite{Kim2014} Inverse Reinforcement Learning is used to infer a reward function directly from user trajectories in a gathered dialogue corpus. Therefore, the reward function automatically incorporates objective and subjective dialogue quality criteria. The authors have made the choice not to consider lexical and semantic features, but rather to limit their work to timing and prosody signals.
+	A third approach to optimise turn-taking in spoken dialogue systems is to directly try to imitate human behaviours. In \cite{Kim2014} Inverse Reinforcement Learning is used to infer a reward function directly from user trajectories in a collected dialogue corpus. Therefore, the reward function automatically incorporates objective and subjective dialogue quality criteria. The authors have made the choice not to consider lexical and semantic features, but rather to limit their work to timing and prosody signals.
 	
 
