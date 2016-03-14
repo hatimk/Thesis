@@ -169,6 +169,22 @@
 \newblock \textit{ Foundations and Trends in Machine Learning\/}~\textit{5},
   1--122.
 
+\bibitem[{Chandramohan et~al.}(2012a){Chandramohan, Geist, Lef{\`e}vre,
+  \andnamec{} Pietquin}]{Chandramohan2012b}
+(Chandramohan et~al., 2012a) \hspace{.5em}S.~Chandramohan, M.~Geist,
+  F.~Lef{\`e}vre, \andname{} O.~Pietquin, 2012a.
+\newblock Behavior specific user simulation in spoken dialogue systems.
+\newblock In Proceedings of \textit{ Speech Communication; 10. ITG Symposium;
+  Proceedings of},  1--4. VDE.
+
+\bibitem[{Chandramohan et~al.}(2012b){Chandramohan, Geist, Lefevre, \andnamec{}
+  Pietquin}]{Chandramohan2012a}
+(Chandramohan et~al., 2012b) \hspace{.5em}S.~Chandramohan, M.~Geist,
+  F.~Lefevre, \andname{} O.~Pietquin, 2012b.
+\newblock Clustering behaviors of spoken dialogue systems users.
+\newblock In Proceedings of \textit{ Acoustics, Speech and Signal Processing
+  (ICASSP), 2012 IEEE International Conference on},  4981--4984. IEEE.
+
 \bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lef\`vre, \andnamec{}
   Pietquin}]{Chandramohan2011}
 (Chandramohan et~al., 2011) \hspace{.5em}S.~Chandramohan, M.~Geist,
@@ -374,6 +390,54 @@
 \newblock Mixed-initiative systems for collaborative problem solving.
 \newblock \textit{ AI Magazine\/}~\textit{28}.
 
+\bibitem[{Ferreira et~al.}(2015a){Ferreira, Jabaian, \andnamec{}
+  Lef{\`e}vre}]{Ferreira2015a}
+(Ferreira et~al., 2015a) \hspace{.5em}E.~Ferreira, B.~Jabaian, \andname{}
+  F.~Lef{\`e}vre, 2015a.
+\newblock Online adaptative zero-shot learning spoken language understanding
+  using word-embedding.
+\newblock In Proceedings of \textit{ ICASSP}.
+
+\bibitem[{Ferreira et~al.}(2015b){Ferreira, Jabaian, \andnamec{}
+  Lef{\`e}vre}]{Ferreira2015b}
+(Ferreira et~al., 2015b) \hspace{.5em}E.~Ferreira, B.~Jabaian, \andname{}
+  F.~Lef{\`e}vre, 2015b.
+\newblock Zero-shot semantic parser for spoken language understanding.
+\newblock In Proceedings of \textit{ INTERSPEECH}.
+
+\bibitem[{Ferreira \andnamec{} Lef{\`e}vre}(2013){Ferreira \andnamec{}
+  Lef{\`e}vre}]{Ferreira2013}
+(Ferreira \andnamec{} Lef{\`e}vre, 2013) \hspace{.5em}E.~Ferreira \andname{}
+  F.~Lef{\`e}vre, 2013.
+\newblock Social signal and user adaptation in reinforcement learning-based
+  dialogue management.
+\newblock In Proceedings of \textit{ MLIS}.
+
+\bibitem[{Ferreira \andnamec{} Lefevre}(2015){Ferreira \andnamec{}
+  Lefevre}]{Ferreira2015c}
+(Ferreira \andnamec{} Lefevre, 2015) \hspace{.5em}E.~Ferreira \andname{}
+  F.~Lefevre, 2015.
+\newblock Reinforcement-learning based dialogue system for human--robot
+  interactions with socially-inspired rewards.
+\newblock \textit{ Computer Speech \& Language\/}~\textit{ 34\/}(1), 256--274.
+
+\bibitem[{Ferreira et~al.}(2015c){Ferreira, Milliez, Lefevre, \andnamec{}
+  Alami}]{Ferreira2015d}
+(Ferreira et~al., 2015c) \hspace{.5em}E.~Ferreira, G.~Milliez, F.~Lefevre,
+  \andname{} R.~Alami, 2015c.
+\newblock Users' belief awareness in reinforcement learning-based situated
+  human-robot dialogue management.
+\newblock In Proceedings of \textit{ IWSDS}.
+
+\bibitem[{Ferreira et~al.}(2016){Ferreira, Reiffers-Masson, Jabaian,
+  \andnamec{} Lef{\`e}vre}]{Ferreira2016}
+(Ferreira et~al., 2016) \hspace{.5em}E.~Ferreira, A.~Reiffers-Masson,
+  B.~Jabaian, \andname{} F.~Lef{\`e}vre, 2016.
+\newblock Adversarial bandit for online interactive active learning of
+  zero-shot spoken language understanding.
+\newblock In Proceedings of \textit{ IEEE International Conference on Acoustics
+  Speech and Signal Processing}.
+
 \bibitem[{Fink et~al.}(1998){Fink, Schillo, Kummert, \andnamec{}
   Sagerer}]{Fink1998}
 (Fink et~al., 1998) \hspace{.5em}G.~A. Fink, C.~Schillo, F.~Kummert, \andname{}
@@ -410,6 +474,15 @@
 \newblock Turn-taking cues in task-oriented dialogue.
 \newblock \textit{ Comput. Speech Lang.\/}~\textit{ 25\/}(3), 601--634.
 
+\bibitem[{Hahn et~al.}(2010){Hahn, Dinarelli, Raymond, Lef{\`e}vre, Lehnen, {De
+  Mori}, Moschitti, Ney, \andnamec{} Riccardi}]{Hahn2010}
+(Hahn et~al., 2010) \hspace{.5em}S.~Hahn, M.~Dinarelli, C.~Raymond,
+  F.~Lef{\`e}vre, P.~Lehnen, R.~{De Mori}, A.~Moschitti, H.~Ney, \andname{}
+  G.~Riccardi, 2010.
+\newblock Comparing stochastic approaches to spoken language understanding in
+  multiple languages.
+\newblock \textit{ IEEE TASLP\/}~\textit{ 19\/}(6), 1569--1583.
+
 \bibitem[{Hastie et~al.}(2013){Hastie, Aufaure, Alexopoulos, Cuay\'{a}huitl,
   Dethlefs, Gasic, Henderson, Lemon, Liu, Mika, Ben~Mustapha, Rieser, Thomson,
   Tsiakoulis, \andnamec{} Vanrompay}]{Hastie2013}
@@ -436,6 +509,14 @@
   interfaces (sassi).
 \newblock \textit{ Natural Language Engineering\/}~\textit{6}, 287--303.
 
+\bibitem[{Huet et~al.}(2013){Huet, Manishina, \andnamec{}
+  Lef{\`e}vre}]{Huet2013}
+(Huet et~al., 2013) \hspace{.5em}S.~Huet, E.~Manishina, \andname{}
+  F.~Lef{\`e}vre, 2013.
+\newblock Factored machine translation systems for russian-english.
+\newblock \textit{ Proceedings of the Eighth Workshop on Statistical Machine
+  Translation\/}, 152--155.
+
 \bibitem[{Ilkin \andnamec{} Sturt}(2011){Ilkin \andnamec{} Sturt}]{Ilkin2011}
 (Ilkin \andnamec{} Sturt, 2011) \hspace{.5em}Z.~Ilkin \andname{} P.~Sturt,
   2011.
@@ -450,6 +531,24 @@
 \newblock Separating data from function in a distributed file system.
 \newblock In Proceedings of \textit{ Second International Symposium on
   Operating Systems Theory and Practice}.
+
+\bibitem[{Jabaian et~al.}(2013){Jabaian, Besacier, \andnamec{}
+  Lefevre}]{Jabaian2013}
+(Jabaian et~al., 2013) \hspace{.5em}B.~Jabaian, L.~Besacier, \andname{}
+  F.~Lefevre, 2013.
+\newblock Comparison and combination of lightly supervised approaches for
+  language portability of a spoken language understanding system.
+\newblock \textit{ Audio, Speech, and Language Processing, IEEE Transactions
+  on\/}~\textit{ 21\/}(3), 636--648.
+
+\bibitem[{Jabaian et~al.}(2016){Jabaian, Lef{\`e}vre, \andnamec{}
+  Besacier}]{Jabaian2016}
+(Jabaian et~al., 2016) \hspace{.5em}B.~Jabaian, F.~Lef{\`e}vre, \andname{}
+  L.~Besacier, 2016.
+\newblock A unified framework for translation and understanding allowing
+  discriminative joint decoding for multilingual speech semantic
+  interpretation.
+\newblock \textit{ Computer Speech \& Language\/}~\textit{35}, 185--199.
 
 \bibitem[{Jaffe \andnamec{} Feldstein}(1970){Jaffe \andnamec{}
   Feldstein}]{Jaffe1970}
@@ -685,6 +784,27 @@
   spoken dialogue systems.}
 \newblock Th\`ese de Doctorat.
 
+\bibitem[{Mairesse et~al.}(2010){Mairesse, Ga{\v{s}}i{\'c},
+  Jur{\v{c}}{\'\i}{\v{c}}ek, Keizer, Thomson, Yu, \andnamec{}
+  Young}]{Mairesse2010}
+(Mairesse et~al., 2010) \hspace{.5em}F.~Mairesse, M.~Ga{\v{s}}i{\'c},
+  F.~Jur{\v{c}}{\'\i}{\v{c}}ek, S.~Keizer, B.~Thomson, K.~Yu, \andname{}
+  S.~Young, 2010.
+\newblock Phrase-based statistical language generation using graphical models
+  and active learning.
+\newblock In Proceedings of \textit{ Proceedings of the 48th Annual Meeting of
+  the Association for Computational Linguistics},  1552--1561. Association for
+  Computational Linguistics.
+
+\bibitem[{Manishina et~al.}(2016){Manishina, Jabaian, Huet, \andnamec{}
+  Lef\`evre}]{Manishina2016}
+(Manishina et~al., 2016) \hspace{.5em}E.~Manishina, B.~Jabaian, S.~Huet,
+  \andname{} F.~Lef\`evre, 2016.
+\newblock Automatic corpus extension for data-driven natural language
+  generation.
+\newblock In Proceedings of \textit{ Proceedings of the Language Resources and
+  Evaluation Conference (LREC)}.
+
 \bibitem[{Matthias}(2009){Matthias}]{Matthias2009}
 (Matthias, 2009) \hspace{.5em}G.~M. Matthias, 2009.
 \newblock Incremental speech understanding in a multimodal web-based spoken
@@ -727,6 +847,14 @@
 \newblock \textit{ Formalisation logique de pr\'ef\'erences qualitatives pour
   la s\'election de la r\'eaction d'un agent rationnel dialoguant}.
 \newblock Th\`ese de Doctorat, Universit\'e de Paris XI.
+
+\bibitem[{Mitchell et~al.}(2014){Mitchell, Bohus, \andnamec{}
+  Kamar}]{Mitchell2014}
+(Mitchell et~al., 2014) \hspace{.5em}M.~Mitchell, D.~Bohus, \andname{}
+  E.~Kamar, 2014.
+\newblock Crowdsourcing language generation templates for dialogue systems.
+\newblock In Proceedings of \textit{ Proceedings of the INLG and SIGDIAL 2014
+  Joint Session}.
 
 \bibitem[{Mohamed et~al.}(2009){Mohamed, Dahl, \andnamec{}
   Hinton}]{Mohamed2009}
@@ -817,6 +945,15 @@
 \newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
   the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
+\bibitem[{Potet et~al.}(2011){Potet, Rubino, Lecouteux, Huet, Blanchon,
+  Besacier, \andnamec{} Lefevre}]{Potet2011}
+(Potet et~al., 2011) \hspace{.5em}M.~Potet, R.~Rubino, B.~Lecouteux, S.~Huet,
+  H.~Blanchon, L.~Besacier, \andname{} F.~Lefevre, 2011.
+\newblock The liga (lig/lia) machine translation system for wmt 2011.
+\newblock In Proceedings of \textit{ Proceedings of the Sixth Workshop on
+  Statistical Machine Translation},  440--446. Association for Computational
+  Linguistics.
+
 \bibitem[{Putois et~al.}(2010){Putois, Laroche, \andnamec{}
   Bretier}]{Putois2010}
 (Putois et~al., 2010) \hspace{.5em}G.~Putois, R.~Laroche, \andname{}
@@ -876,6 +1013,13 @@
   high-dimensional streaming evidence.
 \newblock In Proceedings of \textit{ Proceedings of the Twenty-Third
   International Joint Conference on Artificial Intelligence (IJCAI)}.
+
+\bibitem[{Rubino et~al.}(2012){Rubino, Huet, Avignon, Lefevre, \andnamec{}
+  Linares}]{Rubino2012}
+(Rubino et~al., 2012) \hspace{.5em}R.~Rubino, S.~Huet, F.~Avignon, F.~Lefevre,
+  \andname{} G.~Linares, 2012.
+\newblock Statistical post-editing of machine translation for domain
+  adaptation.
 
 \bibitem[{Russell}(1998){Russell}]{Russell1998}
 (Russell, 1998) \hspace{.5em}S.~Russell, 1998.
@@ -1166,6 +1310,13 @@
 \newblock Using pomdps for dialog management.
 \newblock In Proceedings of \textit{ Spoken Language Technology Workshop
   (SLT)}.
+
+\bibitem[{Yu et~al.}(2011){Yu, Zen, Mairesse, \andnamec{} Young}]{Yu2011}
+(Yu et~al., 2011) \hspace{.5em}K.~Yu, H.~Zen, F.~Mairesse, \andname{} S.~Young,
+  2011.
+\newblock Context adaptive training with factorized decision trees for
+  hmm-based statistical parametric speech synthesis.
+\newblock \textit{ Speech Communication\/}~\textit{ 53\/}(6).
 
 \bibitem[{Yuan et~al.}(2006){Yuan, Liberman, \andnamec{} Cieri}]{Yuan2006}
 (Yuan et~al., 2006) \hspace{.5em}J.~Yuan, M.~Liberman, \andname{} C.~Cieri,

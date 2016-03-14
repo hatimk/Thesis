@@ -25,10 +25,14 @@ Warning--empty publisher in Cohen1990
 Warning--page numbers missing in Collobert2011
 Warning--page numbers missing in Ferguson2007
 Warning--page numbers missing in Gales2007
+Warning--no number and no volume in Huet2013
 Warning--empty school in Macherey2009
 Warning--no number and no volume in Mohamed2009
 Warning--page numbers missing in Mohamed2009
 Warning--page numbers missing in Pietquin2013
+Warning--no journal in Rubino2012
+Warning--no number and no volume in Rubino2012
+Warning--page numbers missing in Rubino2012
 Warning--page numbers missing in Schatzmann2006
 Warning--no number and no volume in Schultz1998
 Warning--page numbers missing in Schultz1998
@@ -39,45 +43,46 @@ Warning--no number and no volume in Williams2007
 Warning--page numbers missing in Williams2007
 Warning--no number and no volume in Witt2011
 Warning--page numbers missing in Witt2011
-You've used 159 entries,
+Warning--page numbers missing in Yu2011
+You've used 177 entries,
             2936 wiz_defined-function locations,
-            1511 strings with 33433 characters,
-and the built_in function-call counts, 98057 in all, are:
-= -- 8291
-> -- 6639
-< -- 12
-+ -- 2042
-- -- 2348
-* -- 6694
-:= -- 17123
-add.period$ -- 481
-call.type$ -- 159
-change.case$ -- 1227
-chr.to.int$ -- 155
-cite$ -- 181
-duplicate$ -- 3525
-empty$ -- 6587
-format.name$ -- 2820
-if$ -- 18783
-int.to.chr$ -- 5
+            1610 strings with 37536 characters,
+and the built_in function-call counts, 110921 in all, are:
+= -- 9366
+> -- 7610
+< -- 16
++ -- 2353
+- -- 2660
+* -- 7737
+:= -- 19306
+add.period$ -- 538
+call.type$ -- 177
+change.case$ -- 1391
+chr.to.int$ -- 170
+cite$ -- 204
+duplicate$ -- 3946
+empty$ -- 7384
+format.name$ -- 3201
+if$ -- 21290
+int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 159
-newline$ -- 804
-num.names$ -- 1268
-pop$ -- 1641
+missing$ -- 177
+newline$ -- 893
+num.names$ -- 1409
+pop$ -- 1839
 preamble$ -- 1
-purify$ -- 2190
+purify$ -- 2456
 quote$ -- 0
-skip$ -- 2987
+skip$ -- 3340
 stack$ -- 0
-substring$ -- 4162
-swap$ -- 251
-text.length$ -- 12
+substring$ -- 4776
+swap$ -- 308
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 3054
-warning$ -- 22
-while$ -- 1063
+type$ -- 3402
+warning$ -- 27
+while$ -- 1165
 width$ -- 0
-write$ -- 3371
-(There were 22 warnings)
+write$ -- 3755
+(There were 27 warnings)
