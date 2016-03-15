@@ -6,31 +6,31 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Reinforcement learning in dialogue processing}{43}{chapter.51}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking phenomena taxonomy}{55}{chapter.82}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Taxonomy labels\relax }}{57}{table.caption.95}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{58}{table.caption.97}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Taxonomy labels (1/3)\relax }}{66}{table.caption.122}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Taxonomy labels (2/3)\relax }}{67}{table.caption.123}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Taxonomy labels (3/3)\relax }}{68}{table.caption.124}
-\contentsline {xpart}{Contributions}{55}{part.81}
+\contentsline {xchapter}{Turn-taking phenomena taxonomy}{57}{chapter.83}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Taxonomy labels\relax }}{59}{table.caption.96}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Turn-taking phenomena taxonomy. The rows/columns correspond to the levels of information added by the floor holder/taker.\relax }}{60}{table.caption.98}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Taxonomy labels (1/3)\relax }}{68}{table.caption.123}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Taxonomy labels (2/3)\relax }}{69}{table.caption.124}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Taxonomy labels (3/3)\relax }}{70}{table.caption.125}
+\contentsline {xpart}{Contributions}{57}{part.82}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{71}{chapter.127}
-\contentsline {table}{\numberline {4.1}{\ignorespaces A double context: the real context and the simulation context.\relax }}{75}{table.caption.136}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{81}{table.caption.144}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{73}{chapter.128}
+\contentsline {table}{\numberline {4.1}{\ignorespaces A double context: the real context and the simulation context.\relax }}{77}{table.caption.137}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{83}{table.caption.145}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{83}{chapter.145}
+\contentsline {xchapter}{Dialogue strategies}{85}{chapter.146}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{93}{chapter.168}
-\contentsline {table}{\numberline {6.1}{\ignorespaces {NLU rules types}\relax }}{101}{table.caption.204}
-\contentsline {table}{\numberline {6.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{103}{table.caption.208}
+\contentsline {xchapter}{Incremental dialogue simulation}{95}{chapter.169}
+\contentsline {table}{\numberline {6.1}{\ignorespaces {NLU rules types}\relax }}{103}{table.caption.205}
+\contentsline {table}{\numberline {6.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{105}{table.caption.209}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{105}{chapter.211}
-\contentsline {table}{\numberline {7.1}{\ignorespaces The three scenarios used in the simulation\relax }}{111}{table.caption.218}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{107}{chapter.212}
+\contentsline {table}{\numberline {7.1}{\ignorespaces The three scenarios used in the simulation\relax }}{113}{table.caption.219}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{115}{chapter.233}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{118}{table.caption.238}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{117}{chapter.234}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{120}{table.caption.239}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{125}{chapter.258}
-\contentsline {table}{\numberline {9.1}{\ignorespaces Majordomo tasks\relax }}{126}{table.caption.261}
-\contentsline {table}{\numberline {9.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{128}{table.caption.268}
-\contentsline {table}{\numberline {9.3}{\ignorespaces Local dialogue evaluation metrics\relax }}{129}{table.caption.270}
+\contentsline {xchapter}{Experiment with real users}{127}{chapter.259}
+\contentsline {table}{\numberline {9.1}{\ignorespaces Majordomo tasks\relax }}{128}{table.caption.262}
+\contentsline {table}{\numberline {9.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{130}{table.caption.269}
+\contentsline {table}{\numberline {9.3}{\ignorespaces Local dialogue evaluation metrics\relax }}{131}{table.caption.271}

@@ -7,6 +7,7 @@ A level-1 auxiliary file: abstractfr/abstractfr.aux
 A level-1 auxiliary file: introduction/introduction.aux
 A level-1 auxiliary file: soadialogue/soadialogue.aux
 A level-1 auxiliary file: soarl/soarl.aux
+A level-1 auxiliary file: soacl/soacl.aux
 A level-1 auxiliary file: taxonomy/taxonomy.aux
 A level-1 auxiliary file: architecture/architecture.aux
 A level-1 auxiliary file: strategies/strategies.aux
@@ -46,7 +47,7 @@ Warning--page numbers missing in Witt2011
 Warning--page numbers missing in Yu2011
 You've used 177 entries,
             2936 wiz_defined-function locations,
-            1610 strings with 37536 characters,
+            1611 strings with 37551 characters,
 and the built_in function-call counts, 110921 in all, are:
 = -- 9366
 > -- 7610
