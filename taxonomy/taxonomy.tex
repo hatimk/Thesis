@@ -16,11 +16,11 @@
 
         Each element of the proposed taxonomy will be referred to as a \textit{turn-taking phenomenon} (TTP). The analysis levels laid in the philosophy of language will be used here while discussing the taxonomy: the locutionary, the illocutionary and the perlocutionary paradigms. Nevertheless, the locutionary act concept is subject to a few disagreements between J. L. Austin and his successor, J. R. Searle. Looking deeper into a locutionary act, it can be broken into three sub-levels: the \textit{phonetic}, the \textit{phatic} and the \textit{rhetic} which correspond to the verbal, the syntactic and the semantic levels.  In \cite{Searle1968}, the author argues that there is no distinction possible between the rhetic level and the illocutionary one and therefore refuses the more general distinction between locutionary and illocutionary level. As a result, he suggests to adopt the four layer structure composed of: \textit{phonetic acts}, \textit{phatic acts}, \textit{propositional acts} (the act of expressing the proposition) and \textit{illocutionary acts}. Nevertheless, the philosophical subtleties brought by these considerations are beyond the scope of this thesis and the objective in this chapter is to provide pragmatic criteria that will make it possible to distinguish the several TTP at hand. Therefore, only the three following analysis levels have been taken from this theory of language (as they are enough for this analysis): the phonetic, the illocutionary and the perlocutionary levels.
 
-        Recall that at the perlocutionary level, the impact that a dialogue act is aimed to have is considered, like convincing, congratulating or insulting for example. Here, an extra dimension is also needed: what is the motivation behind a dialogue act? In the taxonomy introduced in this chapter, some TTPs are exactly the same if viewed as phonetic, illocutionary and perlocutionary dialogue acts, but the reason why they are performed are different. Making this distinction are interesting from a computational point of view as it is directly correlated to the set of features that are considered by the system in order to make turn-taking decisions.
+        Recall that at the perlocutionary level, the impact that a dialogue act is aimed to have is considered, like convincing, congratulating or insulting for example. Here, an extra dimension is also needed: what is the motivation behind a dialogue act? In the taxonomy introduced in this chapter, some TTPs are exactly the same if viewed as phonetic, illocutionary and perlocutionary dialogue acts, but the reasons why they are performed are different. Making this distinction is interesting from a computational point of view as it is directly correlated to the set of features that are considered by the system in order to make turn-taking decisions.
 
 \section{Taxonomy presentation}
 
-        Let us consider the three following dialogue situations.
+        Let us consider the three following dialogue situations:
 
         \paragraph{Dialogue 1}
 
@@ -44,18 +44,18 @@
           \speak{Tania} It is half past two.
         \end{dialogue}
 
-        In all the dialogues, Hector initially has the floor and then Tania performs a dialogue act. In dialogue 1 and 2, she does not wait for him to finish his utterance before doing so, unlike in the last dialogue. Therefore, Tania can choose the timing of her intervention at different stages in the progression of Hector's utterance. The first criterion used in the taxonomy introduced here corresponds this decision. Moreover, in dialogues 1 and 3, Tania utters a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kind of behaviours performed by Tania.
+        In all the dialogues, Hector initially has the floor and then Tania performs a dialogue act. In dialogue 1 and 2, she does not wait for him to finish his utterance before doing so, unlike in the last dialogue. Therefore, Tania can choose the timing of her intervention at different stages in the progression of Hector's utterance. The first criterion used in the taxonomy introduced here corresponds to this decision. Moreover, in dialogues 1 and 3, Tania utters a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kinds of behaviours performed by Tania.
 
 	More formally, turn-taking in dialogue refers to the act of taking the floor by one participant (Tania in the previous examples), here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Holder (H), is already speaking or not (the denomination Holder is more adapted to the case where it has the floor, but it is kept as a convention for the other case).
     
-    The taxonomy introduced here is based on two dimensions:
+    The taxonomy introduced here is mainly aimed to enhance turn-taking behaviours of dialogue systems and compared to several previous studies, the semantic level is given more importance. Therefore, two dimensions are considered:
 
     \begin{enumerate}
       \item \textbf{The quantity of information that H has already injected in the dialogue from T's perspective\footnote{Since T is making the turn-taking decisions, the analysis is performed from her perspective.}:} This measures how early in H's utterance T chooses to perform her dialogue act.
       \item \textbf{The quantity of information that T tries to inject by taking the floor:} T's dialogue act can consist on some implicit reaction (gestures, sounds like \textit{aha}), a complete utterance or something in between.
     \end{enumerate}
 
-    The different levels of information for each dimension are described on Table \ref{tab:taxlabels}.
+    The different levels of information for each dimension are described in Table \ref{tab:taxlabels}.
 
     \begin{table}[th]
 			\footnotesize
@@ -106,11 +106,11 @@
 			\label{tab:TTP}
 		\end{table}
         
-        Table \ref{tab:TTP} describes the taxonomy where turn-taking phenomena (TTP) are depicted. The rows correspond to the levels of information added by H and the columns to the information that T tries to add. In order to describe each one of them in detail, they are discussed row by row.
+        Table \ref{tab:TTP} describes the taxonomy where turn-taking phenomena (TTP) are depicted. The rows correspond to the levels of information added by H and the columns to the information that T intents to add. In order to describe each one of them in detail, they are discussed row by row. Moreover, these TTP are shown to fit into several categories which are represented by different colors in the table and explained in Section \ref{sec:discussion}.
         
         \paragraph{H\_NONE:} H does not have the floor, therefore, T takes the floor for the first time in the dialogue. This can be done implicitly by performing some gesture to catch H's attention or by clearing her throat for instance (FLOOR\_TAKING\_IMPL) or more explicitely either by providing a raw message (FLOOR\_TAKING\_RAW) like \textit{I would like to talk to you} or by providing more details about the reasons why T wants to start a conversation (FLOOR\_TAKING\_INTERP): \textit{I am leaving tomorrow and I really have to talk to you about the problem with my insurance}. On the other hand, she can start speaking normally (INIT\_DIALOGUE).
         
-        \paragraph{H\_FAIL:} H takes the floor for long enough to deliver a message (or at least a chunk of information) but T does not understand anything. This can be due to noise or to the fact that the words and expressions are unknown by T (other language, unknown cultural reference, unknown vocabulary...). T can interrupt H before the end of his utterance as she estimates that letting him finish it is useless. This can be done implicitly (FAIL\_IMPL) using a facial expression (frowning), a gesture or uttering a sound:
+        \paragraph{H\_FAIL:} H takes the floor for long enough to deliver a message (or at least a chunk of information) but T does not understand anything. This can be due to noise or to the fact that the words and expressions are unknown to T (other language, unknown cultural reference, unknown vocabulary...). T can interrupt H before the end of his utterance as she estimates that letting him finish it is useless. This can be done implicitly (FAIL\_IMPL) using a facial expression (frowning), a gesture or uttering a sound:
 				
 					\begin{dialogue}
 						\speak{H} Chaque heure pass\'ee ici...
@@ -195,7 +195,7 @@
                    	\paragraph{H\_SUFFICIENT:} H has not finished talking, yet, all the information that T needs to answer has been conveyed. If H is listing a few options, T can perform a gesture meaning that she is interested in the last option uttered (REF\_IMPL). She can also do it explicitly (REF\_RAW) (see \cite{El-Asri2014a}):
                     
                     	\begin{dialogue}
-							\speak{H} Maybe we can for an appointment on Monday afternoon?...Tuesday morning?...Wednesday afternoon?...
+							\speak{H} Maybe we can schedule an appointment on Monday afternoon?...Tuesday morning?...Wednesday afternoon?...
 							\speak{T} Ok. Fine.
 						\end{dialogue}
                         
@@ -221,10 +221,11 @@
 						\end{dialogue}
 
 \section{Discussion}
+\label{sec:discussion}
 
-	This taxonomy is aimed to clarify the notion of turn-taking. In human-human conversation, this translates into a rich set of behaviours that are depicted and classified given two criteria. Compared to existing classifications of turn-taking behaviours, an important part is given to the semantic content of H's and T's utterances (and other cues like gestures and facial expressions) as well as the reasons that pushed T to take the floor given this information.
+	This taxonomy is aimed to clarify the notion of turn-taking, hence making it easier to analyse such behaviours in the context of dialogue systems. In human-human conversation, this translates into a rich set of behaviours that are depicted and classified given two criteria. Compared to existing classifications of turn-taking behaviours, the focus is on the semantic content of H's and T's utterances (and other cues like gestures and facial expressions) as well as the reasons that pushed T to take the floor given this information.
 
-    As far as replicating TTPs in human-machine interactions is concerned, a big part of research in incremental dialogue systems and turn-taking optimisation has mainly focused on endpoint detection \cite{Raux2008} and smooth turn-taking. Therefore, their objective is to replicate the phenomenon labeled here as BARGE\_IN\_RESP. Some other studies focus on backchanneling and feedback, often neglecting the semantic part of the dialogue participants utterances and focusing exclusively on prosody and acoustic features \cite{Baumann2008,Jonsdottir2008}.
+    As far as replicating TTPs in human-machine interactions is concerned, a big part of research in incremental dialogue systems and turn-taking optimisation has mainly focused on endpoint detection \cite{Raux2008} and smooth turn-taking. Therefore, their objective is mainly to replicate the phenomenon labeled here as BARGE\_IN\_RESP. Some other studies focus on backchanneling and feedback, often neglecting the semantic part of the dialogue participants utterances and focusing exclusively on prosody and acoustic features \cite{Baumann2008,Jonsdottir2008}.
 
     The identified TTP can be classified in five categories (referenced by different colors in Table \ref{tab:TTP}):
     

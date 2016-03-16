@@ -41,10 +41,10 @@
 \contentsline {paragraph}{Dialogue 3}{58}{section*.92}
 \contentsline {paragraph}{H\_NONE:}{59}{section*.99}
 \contentsline {paragraph}{H\_FAIL:}{60}{section*.100}
-\contentsline {paragraph}{H\_INCOHERENCE:}{60}{section*.101}
+\contentsline {paragraph}{H\_INCOHERENCE:}{61}{section*.101}
 \contentsline {paragraph}{H\_INCOMPLETE:}{61}{section*.102}
 \contentsline {paragraph}{H\_SUFFICIENT:}{62}{section*.103}
-\contentsline {paragraph}{H\_COMPLETE:}{62}{section*.104}
+\contentsline {paragraph}{H\_COMPLETE:}{63}{section*.104}
 \contentsline {section}{\numberline {3.3}Discussion}{63}{section.105}
 \contentsline {subsection}{\numberline {3.3.1}Dialogue initialisation}{64}{subsection.115}
 \contentsline {subsection}{\numberline {3.3.2}Negative feedback}{64}{subsection.116}
