@@ -14,23 +14,23 @@
 \contentsline {table}{\numberline {3.5}{\ignorespaces Taxonomy labels (3/3)\relax }}{70}{table.caption.125}
 \contentsline {xpart}{Contributions}{57}{part.82}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{73}{chapter.128}
-\contentsline {table}{\numberline {4.1}{\ignorespaces A double context: the real context and the simulation context.\relax }}{77}{table.caption.137}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{83}{table.caption.145}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{75}{chapter.129}
+\contentsline {table}{\numberline {4.1}{\ignorespaces A double context: the real context and the simulation context.\relax }}{79}{table.caption.138}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Available features for dialogue systems given the way they integrate incrementality\relax }}{85}{table.caption.146}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{85}{chapter.146}
+\contentsline {xchapter}{Dialogue strategies}{87}{chapter.147}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{95}{chapter.169}
-\contentsline {table}{\numberline {6.1}{\ignorespaces {NLU rules types}\relax }}{103}{table.caption.205}
-\contentsline {table}{\numberline {6.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{105}{table.caption.209}
+\contentsline {xchapter}{Incremental dialogue simulation}{97}{chapter.170}
+\contentsline {table}{\numberline {6.1}{\ignorespaces {NLU rules types}\relax }}{105}{table.caption.206}
+\contentsline {table}{\numberline {6.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{107}{table.caption.210}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{107}{chapter.212}
-\contentsline {table}{\numberline {7.1}{\ignorespaces The three scenarios used in the simulation\relax }}{113}{table.caption.219}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{109}{chapter.213}
+\contentsline {table}{\numberline {7.1}{\ignorespaces The three scenarios used in the simulation\relax }}{115}{table.caption.220}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{117}{chapter.234}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{120}{table.caption.239}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{119}{chapter.235}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{122}{table.caption.240}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{127}{chapter.259}
-\contentsline {table}{\numberline {9.1}{\ignorespaces Majordomo tasks\relax }}{128}{table.caption.262}
-\contentsline {table}{\numberline {9.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{130}{table.caption.269}
-\contentsline {table}{\numberline {9.3}{\ignorespaces Local dialogue evaluation metrics\relax }}{131}{table.caption.271}
+\contentsline {xchapter}{Experiment with real users}{129}{chapter.260}
+\contentsline {table}{\numberline {9.1}{\ignorespaces Majordomo tasks\relax }}{130}{table.caption.263}
+\contentsline {table}{\numberline {9.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{132}{table.caption.270}
+\contentsline {table}{\numberline {9.3}{\ignorespaces Local dialogue evaluation metrics\relax }}{133}{table.caption.272}

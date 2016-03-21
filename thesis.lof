@@ -11,29 +11,29 @@
 \contentsline {xchapter}{Turn-taking phenomena taxonomy}{57}{chapter.83}
 \contentsline {xpart}{Contributions}{57}{part.82}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{73}{chapter.128}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{74}{figure.caption.131}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{75}{figure.caption.133}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{76}{figure.caption.136}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces The incremental version of the CFAsT project. The traditional view is represented on the left and the new incremental one is depicted on the left.\relax }}{78}{figure.caption.140}
+\contentsline {xchapter}{Turn-taking decision module: the Scheduler}{75}{chapter.129}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The Scheduler: an interface between the client and the service\relax }}{76}{figure.caption.132}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Time sharing in traditional and incremental settings\relax }}{77}{figure.caption.134}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Incremental behaviour with the Scheduler\relax }}{78}{figure.caption.137}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The incremental version of the CFAsT project. The traditional view is represented on the left and the new incremental one is depicted on the left.\relax }}{80}{figure.caption.141}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dialogue strategies}{85}{chapter.146}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{91}{figure.caption.166}
+\contentsline {xchapter}{Dialogue strategies}{87}{chapter.147}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Slot-filling strategies efficiency comparison ($n_s = 5$)\relax }}{93}{figure.caption.167}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Incremental dialogue simulation}{95}{chapter.169}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated environment architecture\relax }}{96}{figure.caption.171}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{99}{figure.caption.185}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{101}{figure.caption.192}
+\contentsline {xchapter}{Incremental dialogue simulation}{97}{chapter.170}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Simulated environment architecture\relax }}{98}{figure.caption.172}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces ASR score sampling distribution ($\sigma _{conf} = 1$)\relax }}{101}{figure.caption.186}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces An illustration of the incremental ASR output N-Best update (BF=0.2)\relax }}{103}{figure.caption.193}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{107}{chapter.212}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{112}{figure.caption.218}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{115}{figure.caption.230}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{115}{figure.caption.231}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{115}{figure.caption.232}
+\contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{109}{chapter.213}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{114}{figure.caption.219}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{117}{figure.caption.231}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{117}{figure.caption.232}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{117}{figure.caption.233}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{117}{chapter.234}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.\relax }}{124}{figure.caption.256}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.\relax }}{125}{figure.caption.257}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{119}{chapter.235}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.\relax }}{126}{figure.caption.257}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.\relax }}{127}{figure.caption.258}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{127}{chapter.259}
-\contentsline {figure}{\numberline {9.1}{\ignorespaces The Majordomo interface\relax }}{129}{figure.caption.266}
+\contentsline {xchapter}{Experiment with real users}{129}{chapter.260}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces The Majordomo interface\relax }}{131}{figure.caption.267}
