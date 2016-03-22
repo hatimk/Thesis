@@ -5,35 +5,42 @@
 \section{Description}
 	\subsection{Overview}
     
-    	A new incremental dialogue system architecture is introduced in this Chapter. The five modules forming the dialogue chain (see Chapter \ref{ch:soadialogue}) are split in two groups: those forming the \textit{client} and those constituting the \textit{service}. The ASR and the TTS are necessarily included in the client and the  DM in the service. The NLU and the NLG can fit in both categories. This terminology has been borrowed to the computer network field \cite{Israel1978} where the client can refer to the user and to the application that interacts directly with the user in order to gather useful data for the interaction at the same time. Similarly, the server refers to the application that is in charge of handling user's requests, as well as the remote machine it is deployed on. In the case of dialogue systems, both parts can be embedded in the same device and they can also be distributed in two different machines.
+    	A new incremental dialogue system architecture is introduced in this chapter. The five modules forming the dialogue chain (see Chapter \ref{ch:soadialogue}) are split in two groups: those forming the \textit{client} and those constituting the \textit{service}. The ASR and the TTS are necessarily included in the client and the  DM in the service. The NLU and the NLG can fit in both categories. This terminology is borrowed from the computer network field \cite{Israel1978} where the client can refer to the user and to the application that interacts directly with the user in order to gather useful data for the interaction at the same time. Similarly, the server refers to the application that is in charge of handling user's requests, as well as the remote machine it is deployed on. In the case of dialogue systems, both parts can be embedded in the same device and they can also be distributed across two different machines.
         
         Viewing traditional dialogue systems from this point of view translates into a ping-pong game, where the client sends a request which is processed by the service, and the latter sends a response back. The question tackled here is how to break this rigid mechanism in order to make the system able to process the user's speech incrementally. This chapter shows how, by starting from this new view of dialogue systems instead of the sequential one (dialogue chain), an incremental dialogue system can be derived from a traditional one at minimal cost. In the resulting architecture, the turn-taking decision maker is separated from the DM allowing an autonomous control of the nature and timing of the incremental behaviour.
         
-        As illustrated in Fig. \ref{fig:archioverview}, a new interface is inserted between the client and the service \cite{Khouzaimi2014a}. This new module is called the \textit{Scheduler} (this denomination is borrowed from \cite{Laroche2010a}). It can be deployed on the same machine as the client, as the service or in a dedicated server. The objective is to make the set \{Scheduler+service\} behave like an incremental dialogue system from the client's point of view, without modifying the initial functioning of the service. Therefore, this provides a framework that can transform any dialogue system in its incremental version just by adding a new layer.
+        As illustrated in Fig. \ref{fig:archioverview}, a new interface is inserted between the client and the service \cite{Khouzaimi2014a}. This new module is called the \textit{Scheduler} (this denomination is borrowed from \cite{Laroche2010a}). It can be deployed on the same machine as the client, as the service or in a dedicated server. The objective is to make the set \{Scheduler+Service\} behave like an incremental dialogue system from the client's point of view, without modifying the initial functioning of the service. Therefore, this provides a framework that can transform any dialogue system in its incremental version by adding a new layer.
 				
-        This alternative way of designing incremental dialogue systems also has the theoretical advantage of clearly separating turn-taking management from the rest. Turn-taking strategies are conceived and formalised independently from the task at hand: they can be reused as they are for different tasks. They can also be manipulated separately and combined in order to form new complex strategies given specific rules. As a consequence, this kind of architecture has the advantage of being more modular. As it will be seen along this thesis, turn-taking strategies will be implemented exclusively in the Scheduler (the rest of the system remaining the same). Our ultimate goal is to make this module learn optimal turn-taking behaviours by itself.
+        The most classic approach of designing incremental dialogue systems consists in transforming each one of the modules (or only some of them depending on the situation at hand) into its incremental verison \cite{Schlangen2011}. The alternative approach presented here has the theoretical advantage of clearly separating turn-taking management from the rest. Turn-taking strategies are conceived and formalised independently from the task at hand: they can be reused as they are for different tasks. They can also be manipulated separately and combined in order to form new complex strategies given specific rules. As it will be seen along this thesis, turn-taking strategies will be implemented exclusively in the Scheduler (the rest of the system remaining the same). Our ultimate goal is to make this module learn optimal turn-taking behaviours by itself. Nevertheless, this approach is not fully incremental compared to the one described in \cite{Schlangen2011} as it will be shown later, which may lead to lower performances in case the DM involves heavy computational operations.
         
      	\begin{figure*}[t]
           \centering
-          \includegraphics[scale=0.4]{figures/ClientSchedService.jpg}
+          \includegraphics[scale=0.4]{figures/ClientSchedService.pdf}
           \caption{The Scheduler: an interface between the client and the service}
           \label{fig:archioverview}
         \end{figure*}
         
     \subsection{Time sharing}
     
-    	In traditional dialogue systems, time is shared in an ordered and clear manner. The dialogue is a simple sequence of turns $T^1,T^2...$, a turn being the time interval in which a user's utterance followed by the system's corresponding response takes place, or the opposite (depending whether the system adopts a user initiative or a system initiative strategy at each turn). For illustration and to simplify the notation, the system used here is supposed to belong to the first category, therefore, each turn is divided into two smaller time intervals, the user turn $T^{k,U}$ and the system turn $T^{k,S}$: $T^k = T^{k,U} \cup T^{k,S}$ (Fig. \ref{fig:timeshare}).
+    	In traditional dialogue systems, time is shared in an ordered and clear manner. The dialogue is a simple sequence of turns $T^1,T^2...$ a turn being the time interval in which a user's utterance followed by the system's corresponding response takes place, or the opposite (depending whether the system adopts a user initiative or a system initiative strategy at each turn). For illustration and to simplify the notation, the system used here is supposed to belong to the first category, therefore, each turn is divided into two smaller time intervals, the user turn $T^{k,U}$ and the system turn $T^{k,S}$: $T^k = T^{k,U} \cup T^{k,S}$ (the union of the time intervals corresponding to consecutive user and system turns, Figure \ref{fig:tradtimeshare}).
         
         In this chapter, a few conditions are defined to precisely describe time allocation between the system and the user. The \textit{activation time} of a condition refers to the exact moment when it goes from false to true. \textit{EndTurnCond} is the condition that ends a user turn, it is generally assimilated to a long silence \cite{Raux2008,Wlodarczak2013}.
         
         \begin{figure*}[t]
           \centering
-          \includegraphics[scale=0.6]{figures/Timeline.jpg}
-          \caption{Time sharing in traditional and incremental settings}
-          \label{fig:timeshare}
+          \includegraphics[scale=0.6]{figures/TraditionalTimeline.jpg}
+          \caption{Time sharing in traditional settings}
+          \label{fig:tradtimeshare}
+        \end{figure*}
+
+        \begin{figure*}[t]
+          \centering
+          \includegraphics[scale=0.6]{figures/IncrementalTimeline.jpg}
+          \caption{Time sharing in incremental settings}
+          \label{fig:incrtimeshare}
         \end{figure*}
         
-        In incremental settings, this time sharing formalism does not hold anymore and a new condition should be defined: \textit{EndMicroTurnCond} (with \textit{EndTurnCond} $\Rightarrow$ \textit{EndMicroTurnCond}). The time interval separating two activation times of \textit{EndMicroTurnCond} is called a \textit{micro-turn}. As a consequence, the turn $T^{k,U}$ can be divided into $n^{k,U}$ micro-turns $\mu T^{k,U}_i$: $T^{k,U} = \bigcup_{i=1}^{n^{k,U}} \mu T^{k,U}_i$. The $p^{th}$ \textit{sub-turn} of turn $T^{k,U}$ is defined as $T^{k,U}_p = \bigcup_{i=1}^p \mu T^{k,U}_i$.
+        In incremental settings, this time sharing formalism does not hold anymore and a new condition should be defined: \textit{EndMicroTurnCond} (with \textit{EndTurnCond} $\Rightarrow$ \textit{EndMicroTurnCond}). The time interval separating two activation times of \textit{EndMicroTurnCond} is called a \textit{micro-turn}. As a consequence, the turn $T^{k,U}$ can be divided into $n^{k,U}$ micro-turns $\mu T^{k,U}_i$: $T^{k,U} = \bigcup_{i=1}^{n^{k,U}} \mu T^{k,U}_i$. The $p^{th}$ \textit{sub-turn} of turn $T^{k,U}$ is defined as $T^{k,U}_p = \bigcup_{i=1}^p \mu T^{k,U}_i$ (Figure \ref{fig:incrtimeshare}).
         
         The request that the user makes during $T^{k,U}$ is referred to as $Req^k$ and the corresponding response is $Resp^k$. This architecture does not process incremental units like in \cite{Schlangen2011}, instead, at each new micro-turn, it will take the whole information available since the beginning of the turn\footnote{This way of managing incremental dialogue is called \textit{restart incremental} in \cite{Schlangen2011}.} (at the $p^{th}$ micro-turn, all what the user uttered during $T^{k,U}_p$). This \textit{partial request} is called $Req^k_p$.
         
@@ -42,12 +49,10 @@
     	\begin{figure*}[htp]
           \centering
           \includegraphics[scale=0.8]{figures/SchedulerDiagEng.pdf}
-          \caption{Incremental behaviour with the Scheduler}
+          \caption{Incremental request processing with the Scheduler: the conditions in the left column trigger the Client to send partial requests}
           \label{fig:schedchrono}
         \end{figure*}
-    
-    	During the $p^{th}$ micro-turn of the $k^{th}$ user turn, the client sends $Req^k_p$ to the Scheduler. The latter has to decide whether to send it to the service or not and the corresponding condition is called \textit{ServiceReqCond}. A good example is \textit{ServiceReqCond} = ($Req^k_p \neq Req^k_{p-1}$) as sending the same request twice is useless. Then, the service provides the corresponding response $Resp^k_p$ and the Scheduler stores it. The key idea of this architecture is that the Scheduler decides whether to retrieve this response to the client (making it take the floor through the TTS) or not (waiting for more information to come from the client). This decision can also be forced by the client when sending an end of turn signal signal\_ETC, like a long enough silence for instance. The most interesting fact about the Scheduler is that it is able to decide when to take the floor without waiting for signal\_ETC, the corresponding condition is called \textit{CommitCond}. The Scheduler functioning over time is illustrated in Fig. \ref{fig:schedchrono} (dashed arrows represent the Scheduler's response to the client since they may or may not take place, given the Scheduler's decision to commit or not).
-        
+
 	\begin{table*}[htp]
 		\begin{center}
 		\begin{tabular}{|c|c|c|c|c|}
@@ -70,7 +75,9 @@
 	        \caption{A double context: the real context and the simulation context.}
 	        \label{tab:contextchrono}
         \end{table*}
-        
+    
+    	During the $p^{th}$ micro-turn of the $k^{th}$ user turn, the client sends $Req^k_p$ to the Scheduler. The latter has to decide whether to send it to the service or not and the corresponding condition is called \textit{ServiceReqCond}. A good example is \textit{ServiceReqCond} $\leftarrow$ ($Req^k_p \neq Req^k_{p-1}$) as sending the same brequest twice is useless. Then, the service provides the corresponding response $Resp^k_p$ and the Scheduler stores it. The key idea of this architecture is that the Scheduler decides whether to retrieve this response to the client (making it take the floor through the TTS) or not (waiting for more information to come from the client). This decision can also be forced by the client when sending an end of turn signal \textit{signal\_ETC}, like a long enough silence for instance. It is important to note that the Scheduler is able to decide when to take the floor without waiting for \textit{signal\_ETC}, the corresponding condition is called \textit{CommitCond}. The Scheduler functioning over time is illustrated in Fig. \ref{fig:schedchrono} (dashed arrows represent the Scheduler's response to the client since they may or may not take place, given the Scheduler's decision to commit or not).
+                
         Nevertheless, this approach raises on technical problem. Most of the requests that are made to the service are only aimed to see what would be its response for certain partial utterances and they are discarded right after. However, they might modify the dialogue state in the service which is a side effect to be avoided. As a consequence, two dialogue contexts are maintained:
         
         \begin{itemize}
