@@ -1,6 +1,8 @@
 \chapter{Dialogue strategies}
 \label{ch:strategies}
 
+        This chapter sheds light on the most common way task-oriented dialogue systems manipulate concepts: slot-filling. Then several strategies that are used to get the right information from the user are presented and discussed. Finally, based on the TTP taxonomy from Chapter \ref{ch:taxonomy}, an abstract turn-taking strategy is introduced. It will be instanciated later on in the thesis.
+
 \section{Utterance representation}
 \label{sec:represent}
 	
@@ -15,7 +17,7 @@
 		\end{bmatrix}
 		$$
 	
-	Each entry is called a \textit{slot}, it has two attributes: the \textit{slot name} (on the left) and the \textit{slot value} (on the right). Of course, depending on the application at hand, this matrix could be different; some slots could be considered as non relevant hence being discarded, others could be combined and new slots could be added. Therefore, while designing a dialogue system, a representation is chosen and one has to stick to it. This representation is widely used when it comes to dialogue systems design since it is a simple and natural way of representing information. It is well adapted to most tasks where the dialogue system plays the role of an interface between a user and a database. The system expects a user's request with predefined slots and depending on the latter and the database content, a response is computed and returned. This is the representation used in this thesis and Section \ref{sec:elemtask} defines it more formally.
+	Each entry is called a \textit{slot} and it represents a single concept in the utterance. It has two attributes: the \textit{slot name} (on the left) and the \textit{slot value} (on the right). Of course, depending on the application at hand, this matrix could be different; some slots could be considered as non relevant hence being discarded, others could be combined and new slots could be added. Therefore, while designing a dialogue system, a representation is chosen and one has to stick to it. This representation is widely used when it comes to dialogue systems design since it is a simple and natural way of representing information. It is well adapted to most tasks where the dialogue system plays the role of an interface between a user and a database. The system expects a user's request with predefined slots and depending on the latter and the database content, a response is computed and returned. This is the representation used in this thesis and Section \ref{sec:elemtask} defines it more formally.
 
 \section{Elementary tasks}
 \label{sec:elemtask}
@@ -30,11 +32,11 @@
 		\item Modifying a flight reservation
 	\end{itemize}
 	
-	Some tasks involve retrieving information from a database and others make the system modify the outside world (database modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system after it the user has made a request with all the necessary information. The task of scheduling an appointment could involve several elementary tasks, for example
+	Some tasks involve retrieving information from a database and others make the system modify the outside world (database modification, robot movement...). Moreover, a task can involve several \textit{elementary tasks}. An elementary task is defined as an atomic action performed by the system, after the user has made a request with all the necessary information. The task of scheduling an appointment could involve several elementary tasks, for example:
 	
 	\begin{enumerate}
 		\item Proposing a first time window (refused by the system).
-		\item Refusing a second time window that are proposed by the system.
+		\item Refusing a second time window that is proposed by the system.
 		\item Proposing a third time window (accepted by the system).
 	\end{enumerate}
 	
@@ -51,13 +53,13 @@
 		\end{bmatrix}
 		$$
 	
-	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. More precisely,  before performing $ET_k$, the system has to understand the user's request $X_k = (x_1, x_2, ...)$ which is a vector containing the slot values provided in his utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to perform $ET_k$, then $ET_k = f(X_k,C_k)$, $f$ being defined in the dialogue system.
+	In this framework, a dialogue system is viewed as an automaton that is able to perform different types of elementary tasks. Hence, a dialogue is a sequence of elementary tasks: $ET_1,...,ET_k,...$. More precisely,  before performing $ET_k$, the system has to understand the user's request $X_k = (x_1, x_2, ...)$ which is a vector containing the slot values provided in her utterance (the size of the vector depends on the type of elementary task). Let $C_k$ be the dialogue context when it is time to perform $ET_k$, then $ET_k = f(X_k,C_k)$, $f$ being defined in the dialogue system. $(X_k,C_k)$ is commonly referred to as the \textit{dialogue state}.
 	
 	Moreover, a distinction can be made between two kinds of slots:
 	
 	\begin{itemize}
-		\item \textbf{Open slots:} Every input from the user can be considered as a valid value. For example, if the user is asked to utter a message that will be sent to some of his friends later on, he can utter anything. Therefore, unless the system asks for a confirmation, it cannot determine whether the user's input is right or wrong.
 		\item \textbf{Constrained slots:} Some user's inputs are considered valid (but not necessarily correct) and others are not. If the slot at hand is a date and the user responds something which is not a date, this response is not valid in which case it is sure that the slot value is wrong. However, the validity of the response does not guarantee its correctness but it is noteworthy that if a generic ASR with an open grammar domain is used, valid responses that are incorrect are quite rare. On the other hand, if the ASR uses a grammar that is specific to the task at hand, they are more likely to happen.
+                \item \textbf{Open slots:} Every input from the user can be considered as a valid value. For example, if the user is asked to utter a message that will be sent to some of his friends later on, he can utter anything. Therefore, unless the system asks for a confirmation, it cannot determine whether the user's input is right or wrong.
 	\end{itemize}
 	
 	The way these slots are communicated depends on the dialogue strategy, the way the requests are formulated, the noise level and the NLU's ability to recognise a large variety of words and expressions. In Section \ref{sec:slotfillstrat}, three different slot-filling strategies are introduced and discussed.
@@ -65,7 +67,7 @@
 \section{Slot-filling strategies}
 \label{sec:slotfillstrat}
 
-	Depending on the task, the dialogue system and the user, slots can be filled in different ways in order to complete an elementary task. Three generic strategies are presented here but before delving into that, the notion of \textit{initiative} is introduced. Consider the following dialogue between a customer and a receptionist:
+	Depending on the task, the dialogue system and the user, slots can be filled in different ways in order to complete an elementary task. Three generic strategies are presented here but before delving into that, the notion of \textit{initiative} is introduced. Consider the following dialogue between a customer that has just arrived to a hotel and the receptionist:
 	
 	\begin{dialogue}
 		\speak{Customer} Hi. I would like to book a room for tonight please.
@@ -88,22 +90,22 @@
 	
 	\subsection{System initiative strategies}
 	
-		System initiative strategies can be compared to form-filling. The user is asked to fill several slots in a progressive way. Slot values can be asked for one by one or little group by little group. However, the \textit{one by one} case is the most common and the most simple, therefore, this thesis will focus on that case.
+		System initiative strategies can be compared to form-filling. The user is asked to fill several slots in a progressive way. Slot values can be asked for one by one or subset by subset. However, the \textit{one by one} case is the most common and the most simple, therefore, it will be implied when talking about system initiative strategies in the rest of this thesis.
 		
-		Formally, consider an elementary task $ET$ that involves $n$ slots: $slot_1, ..., slot_n$. Completing $ET$ using the system initiative strategies consists on a dialogue with $n$ system questions $ASK(s_1),...,ASK(s_n)$ followed by the $n$ corresponding answers containing the required slot values $x_1,...,x_n$. However, the way errors are managed is different whether the slot at hand is open or constrained. First, it is important to note that in this thesis, the ASR is supposed to run using an open grammar (which is the case in most current dialogue systems). So, in the case of a constrained slot, errors are easier to spot since they generally generate an invalid slot. For example, if the system asks for a date and the user responds \textit{May $4^{th}$} but an ASR error occurs, then this response is more likely to be understood as some utterance which has nothing to do with a date like \textit{Mayflower} or \textit{Make lower} instead of another valid date like \textit{May $5^{th}$}. Therefore, errors are easy to spot in the case of a constrained slot (assuming that an open grammar is used for the ASR). On the other hand, if the system asks for an open slot (small message dictation, event description...) then it has no mean of checking whether an error occured or not (since every input is valid). As a consequence, after the user provides an open slot $s_k$, the system immediately asks for a confirmation $CONFIRM(s_k)$ (relative to that slot only: \textit{Did you say $<$slot$>$?}). This is not the case for constrained slots and the system moves to the next question as soon as a valid answer has been provided (the only confirmation is the final one, concerning the whole elementary task).
+		Formally, consider an elementary task $ET$ that involves $n$ slots: $slot_1, ..., slot_n$. Completing $ET$ using the system initiative strategies consists on a dialogue with $n$ system questions (dialogue acts) called $ASK(slot_1),...,ASK(slot_n)$ followed by the $n$ corresponding answers containing the required slot values $x_1,...,x_n$. However, the way errors are managed is different whether the slot at hand is open or constrained. First, it is important to note that in this thesis, the ASR is supposed to run using an open grammar (which means that most of the words in the ASR language can be recognised). So, in the case of a constrained slot, errors are easier to spot since they generally generate an invalid slot value (an information that is not of the expected type, e.g. a date when expecting a time window, a name when expecting a number, etc.). For example, if the system asks for a date and the user responds \textit{May $4^{th}$} but an ASR error occurs, then this response is more likely to be understood as some utterance which has nothing to do with a date like \textit{Mayflower} or \textit{Make lower} instead of another valid date like \textit{May $5^{th}$}. Therefore, errors are easy to spot in the case of a constrained slot (assuming that an open grammar is used for the ASR). On the other hand, as far as open slots are concerned (small message dictation, event description...), once the user provides an answer, the has no mean of checking whether an error occured or not (since every input is valid). As a consequence, after the user provides an open slot $slot_k$, the system immediately asks for a confirmation $CONFIRM(slot_k)$ (relative to that slot only: \textit{Did you say $<$slot$>$?}). This is not the case for constrained slots and the system moves to the next question as soon as a valid answer has been provided (the only confirmation is the final one, concerning the whole elementary task).
 
-                The example below shows a subdialogue corresponding to an elementary task with three slots, $s_1$ and $s_3$ are constrained whereas $s_2$ is open:
+                The example below shows a subdialogue corresponding to an elementary task with three slots, $slot_1$ and $slot_3$ are constrained whereas $slot_2$ is open (\textit{Confirmation message} refers to the last confirmation request made by the system once it collected all the necessary slot values, like \textit{Ok, so you want to book a non-smoking room for 2 nights starting from tomorrow} or \textit{You want to schedule an appointment with John on March $3^{rd}$ at 2pm. Is that right?} for example):
 		
 		\begin{dialogue}
-			\speak{SYSTEM} $ASK(s_1)$
+			\speak{SYSTEM} $ASK(slot_1)$
                         \speak{USER} <noise>
-			\speak{SYSTEM} Sorry, I don't understand. $ASK(s_1)$
+			\speak{SYSTEM} Sorry, I don't understand. $ASK(slot_1)$
 			\speak{USER} $x_1$
-			\speak{SYSTEM} $ASK(s_2)$
-                        \speak{USER} $\tilde{x}_2$
-                        \speak{SYSTEM} Sorry. $ASK(s_2)$
+			\speak{SYSTEM} $ASK(slot_2)$
+                        \speak{USER} $\tilde{x}_2$ (altered version of $x_2$ due to ASR imperfections)
+                        \speak{SYSTEM} Sorry. $ASK(slot_2)$
                         \speak{USER} $x_2$
-			\speak{SYSTEM} $ASK(s_3)$
+			\speak{SYSTEM} $ASK(slot_3)$
 			\speak{USER} $x_3$
 			\speak{SYSTEM} Confirmation message
                         \speak{USER} Yes
@@ -111,7 +113,7 @@
 	
 	\subsection{User initiative strategies}
 	
-		When the user initiative strategy is used to complete an elementary task $ET$ (involving $n$ slots $s_1,...,s_n$), the user is supposed to provide all the slot values in a complete utterance. If there are missing slots in his request, he is asked to repeat (or reformulate) it. The dialogue then looks like this:
+		In this thesis, \textit{user initiative} refers to the following strategy: in order to complete an elementary task $ET$ (involving $n$ slots $slot_1,...,slot_n$), the user is supposed to provide all the slot values in a complete utterance. If there are missing slots in his request, he is asked to repeat (or reformulate) it. The dialogue then looks like this:
 		
 		\begin{dialogue}
 			\speak{SYSTEM} What can I do for you?
@@ -123,28 +125,28 @@
 	
 	\subsection{Mixed initiative strategies}
 	
-		In noisy environments, the user initiative strategy can be very tiring to the user, especially when the number of slots is important. Another way to deal with incomplete requests is to switch to the system initiative strategy to gather the missing slots. Suppose that the elementary task at hand $ET$ involves $n=5$ slots: $s_1,...,s_5$. A mixed initiative strategy dialogue looks like the following:
+		In noisy environments, the user initiative strategy can be very tiring to the user, especially when the number of slots is important. Another way to deal with incomplete requests is to switch to the system initiative strategy to gather the missing slots. Suppose that the elementary task at hand $ET$ involves $n=5$ slots: $slot_1,...,slot_5$. A mixed initiative strategy dialogue looks like the following:
 		
 		\begin{dialogue}
 			\speak{SYSTEM} What can I do for you?
 			\speak{USER} $x_1$, <noise>,$x_3$,<noise>,$x_n$
-			\speak{SYSTEM} $ASK(s_2)$
+			\speak{SYSTEM} $ASK(slot_2)$
 			\speak{USER} $x_2$
-			\speak{SYSTEM} $ASK(s_4)$
+			\speak{SYSTEM} $ASK(slot_4)$
 			\speak{USER} $x_4$
 			\speak{SYSTEM} Confirmation message
 		\end{dialogue}
 
-                As a side note, one can notice how the initiative strategy influences the way the information is grounded.
+                As a side note, one can notice how the initiative strategy influences the way the information is grounded. The whole request is always grounded at the end but the system initiative and potentially the mixed initiative strategies perform separate slot grounding.
 	
 	\subsection{First efficiency comparison}
 	
-		Let $N$ be the number of turns in the dialogue that are performed to complete the elementary task $ET$ (recall that a dialogue turn is made of a system and a user turn). Also, suppose that for $ET$ to be completed, $n_s$ slots have to be specified. The objective of this preliminary study is to make a rough comparison between the previous strategies in a simple fashion, therefore, the following simplifying assumptions:
+		Let $N$ be the number of turns in the dialogue that are performed to complete the elementary task $ET$ (recall that a dialogue turn is made of a system and a user turn). Also, suppose that for $ET$ to be completed, $n_s$ slots have to be specified. The objective of this preliminary study is to make a rough comparison between the previous strategies in a simple fashion, therefore, the following simplifying assumptions are made:
 		
 		\begin{itemize}
 			\item All the slots have the same probability of not being understood: $p_{err}$.
-			\item The dialogue turns dedicated to greeting, saying bye and confirmation are irrelevant for the comparison and are therefore neglected.
-			\item Only constrained slots are considered (since they are the most frequently used).
+			\item The fixed dialogue turns dedicated to greeting or saying bye for example are irrelevant for the comparison and are therefore neglected.
+			\item Only constrained slots are considered (open slots are more rare and necessitate a special treatment).
 			\item As a consequence, errors are mostly due to invalid input (asked for again right after the request), so the answer to the final confirmation is considered to be always positive.
 		\end{itemize}
 
@@ -184,7 +186,7 @@
                        \mathbb{E} [N] & = & 1 + \frac{p_{err} n_s}{1-p_{err}}
                      \end{eqnarray}
 										
-								Figure \ref{fig:effcompare} compares the efficiency of these three slot-filling strategies under different noise conditions. $\mathbb{E} [N]$ is used as a proxy for efficiency and $p_{err}$ represents the level of noise. It appears that the system initiative strategy is less efficient when the noise level is low compared to the user initiative one. However, as the $p_{err}$ grows, gathering the slots one by one appears to perform better. Finally, the mixed initiative strategy performs best both in low and high noise situations.
+								Figure \ref{fig:effcompare} compares the efficiency of these three slot-filling strategies with five slots and under different noise conditions. $\mathbb{E} [N]$ is used as a proxy for efficiency and $p_{err}$ represents the level of noise. It appears that the system initiative strategy is less efficient when the noise level is low compared to the user initiative one. However, as the $p_{err}$ grows, gathering the slots one by one appears to perform better. Finally, the mixed initiative strategy performs best both in low and high noise situations.
 								
 								\begin{figure}[t]
 				\centering
@@ -403,9 +405,9 @@
 
      Incremental dialogue processing brings a new dimension (a new degree of freedom in the decision) that can be exploited in order to improve the dialogue efficiency. In Chapter \ref{ch:taxonomy}, the following TTP have been selected for implementation: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK\_RAW and BARGE\_IN\_RESP from the user's and the system's perspective. In the following, the ways they can be implemented are presented.
 
-     The concept of elementary task has been proven to be useful for slot-filling strategies analysis. As far as incremental strategies are concerned, analysis is made at a more atomic level since only one dialogue turn is considered. In the following, the user is supposed to have the floor and the system is waiting for her to provide $n_s$ slot values in the same utterance.
+     The concept of elementary task has been proven to be useful for slot-filling strategies analysis. As far as incremental strategies are concerned, analysis is made at a more atomic level since only one dialogue turn is considered. In the following, the user is supposed to have the floor and the system is waiting for her to provide $n_s$ slot. The DM either uses the user initiative or the mixed initiative strategy; in the system initiative strategy, the user's utterances are too short for incremental processing to be relevant.
 
-     The reader should keep in mind that the architecture used here is the one introduced in Chapter \ref{ch:architecture}, therefore, the Scheduler module is in charge of making turn-taking decisions. Moreover, as discussed in Chapter \ref{ch:soadialogue}, another important aspect to consider is \textit{ASR instability} which is one of the major difficulties that incremental processing brings (recall that as the user speaks, his current partial utterance is not necessarily a prefix of the partial utterances to come). Nevertheless, early words in the user's utterance are likely to stay unchanged than later ones \cite{McGraw2012}. As a consequence, making the Scheduler take decisions based on the whole current user's utterance is risky since it is likely to change. Therefore, a \textit{stability margin} (SM) is taken into account. It corresponds to the last part of the utterance that the Scheduler has to discard before making decisions. SM can be expressed in time units (discarding the last second for example) or a number of words or phonemes. The user's request without SM is called the \textit{last stable utterance}.
+     The reader should keep in mind that the architecture used here is the one introduced in Chapter \ref{ch:architecture}, therefore, the Scheduler module is in charge of making turn-taking decisions. Moreover, as discussed in Chapter \ref{ch:soadialogue}, another important aspect to consider is \textit{ASR instability} which is one of the major difficulties that incremental processing brings (recall that as the user speaks, his current partial utterance is not necessarily a prefix of the partial utterances to come). Nevertheless, early words in the user's utterance are more likely to stay unchanged than later ones \cite{McGraw2012}. As a consequence, making the Scheduler take decisions based on the whole current user's utterance is risky since it is likely to change. Therefore, a \textit{stability margin} (SM) is taken into account. It corresponds to the last part of the utterance that the Scheduler has to discard before making decisions. SM can be expressed in time units (discarding the last second for example) or a number of words or phonemes. The user's request without SM is called the \textit{last stable utterance}.
 		
      The Scheduler can perform three kinds of actions:
 
@@ -429,7 +431,7 @@
             \speak{USER} Yes.
           \end{dialogue}
 
-          The user is interrupted by the system at the first dialogue turn. If the latter didn't make such a decision, its response would have been the same (\textit{Sorry, I don't understand. What can I do for you?}) since an important part of the request was lost. Therefore, the system barge-in spared the user some time and energy. In this example, the second time the user tries to formulate his request, he does it in a more concise way and repeats it as an effort to make himself clearer. This kind of behaviour have been noticed as a result of a corpus study led in \cite{Ghigi2014}.
+          The user is interrupted by the system at the first dialogue turn. If the latter didn't make such a decision, its response would have been the same (\textit{Sorry, I don't understand. What can I do for you?}) since an important part of the request was lost. Therefore, the system barge-in spared the user some time and energy. In this example, the second time the user tries to formulate his request, he does it in a more concise way and repeats it as an effort to make himself clearer. This kind of behaviour has been noticed as a result of a corpus study led in \cite{Ghigi2014}.
 
      \item \textbf{INCOHERENCE\_INTERP:} Some user's requests can be problematic for the system because they are not coherent with the current dialogue context. The user might ask for a non existing information or try to perform some forbidden modification in the database for example. This can also be due to a transmission error (noise, ASR imperfection...) or simply because the user is not well aware of the dialogue context and the system's constraints. However, if an open grammar domain is used, the first reason is less likely to be the cause of the problem (a transmission error more often leads to a non understandable utterance by the system). Consider the following example:
 		
@@ -442,9 +444,11 @@
 					
      \item \textbf{FEEDBACK\_RAW:} Providing vocal feedback while the user is speaking can be very useful in some situations, especially when open slots are involved. For the sake of simplicity, only the last word of the last stable utterance is repeated in this thesis but one can go further and try to repeat any part of the user's current partial request. It is used in \cite{Skantze2009,Khouzaimi2014a} in the case of numbers dictation (see Chapter \ref{ch:architecture} for an example).
 			
-				However, implementing this TTP can be very challenging as the user must perceive that even though the system speaks out, it does not plan to take the floor. Moreover, negative reactions to a feedback like \textit{No, I said 45 52} must be clearly separated from positive ones. In this thesis, it will only be implemented in simulation.
+				However, implementing this TTP can be very challenging as the user must perceive that even though the system speaks out, it does not plan to take the floor. Moreover, negative reactions to a feedback like \textit{No, I said 45 52} must be clearly separated from positive ones. For the reasons explained in Chapter \ref{ch:taxonomy}, it will only be implemented in simulation in this thesis.
 				
      \item \textbf{BARGE\_IN\_RESP (System):} When the user has provided all the necessary information for the system to provide an answer, the latter can decide to take the floor right away to improve the dialogue efficiency. The implementation of this behaviour is similar to INCOHERENCE\_INTERP. A list of dialogue acts has to be determined in advance and as soon as the service's response to the last stable utterance belongs to that list, the Scheduler decides to SPEAK.
 			
      \item \textbf{BARGE\_IN\_RESP (User):} This TTP does not involve the Scheduler as the decision to speak is made by the user. However, it is important that the system does not allow user interruptions all the time, otherwise, none of the previous TTP implementations are possible. Suppose that the ASR is always listening and as soon as it detects a new input, if the system speaks, it releases the floor. Also, suppose that the user is speaking and for some reason (previous TTP), the system decides to interrupt him. During a little time window, both the user and the system are speaking and as the system is speaking it is interrupted right away. A simple solution that is adopted in this thesis is to define a time interval during which the ASR is no longer listening after the system takes the floor. Of course, this is only the case when a SPEAK is performed (the REPEAT action is not treated as such).
      \end{itemize}
+
+     To conclude, this chapter clarified the way concepts are manipulated in most current dialogue systems as well as a few DM strategies that will be used in the following. On top of that, a few turn-taking behaviours (based on the TTP taxonomy introduced in Chapter \ref{ch:taxonomy}) and the way they can be implemented have been discussed. In the rest of this thesis, they will be instanciated in two different domains in order to form a new rule-based turn-taking strategy.

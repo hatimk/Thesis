@@ -954,6 +954,16 @@
   Statistical Machine Translation},  440--446. Association for Computational
   Linguistics.
 
+\bibitem[{Povey et~al.}(2011){Povey, Ghoshal, Boulianne, Burget, Glembek, Goel,
+  Hannemann, Motlicek, Qian, Schwarz, Silovsky, Stemmer, \andnamec{}
+  Vesely}]{Povey2011}
+(Povey et~al., 2011) \hspace{.5em}D.~Povey, A.~Ghoshal, G.~Boulianne,
+  L.~Burget, O.~Glembek, N.~Goel, M.~Hannemann, P.~Motlicek, Y.~Qian,
+  P.~Schwarz, J.~Silovsky, G.~Stemmer, \andname{} K.~Vesely, 2011.
+\newblock The kaldi speech recognition toolkit.
+\newblock In Proceedings of \textit{ IEEE 2011 Workshop on Automatic Speech
+  Recognition and Understanding}.
+
 \bibitem[{Putois et~al.}(2010){Putois, Laroche, \andnamec{}
   Bretier}]{Putois2010}
 (Putois et~al., 2010) \hspace{.5em}G.~Putois, R.~Laroche, \andname{}
