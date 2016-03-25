@@ -3,13 +3,13 @@
 
 	% In this chapter, a new simulated environment is introduced. It is based on an incremental dialogue system based on the methodology presented in Chapter \ref{ch:architecture} as well as a new incremental dialogue User Simulator (US) that is able to interact with it. The novelty of the latter is that it is able to simulate the ASR instability phenomenon.
 	
-	Using dialogue simulation techniques is very common in the research community \cite{Eckert1997,Pietquin2013} for several reasons like: the ability to quickly generate dialogue corpora that can be used to develop machine learning techniques, an easy way to model different populations of users and the possibility to use the same user simulator to test and compare concurrent dialogue strategies (see Chapter \ref{ch:soarl} for more details). In this chapter, a new incremental dialogue simulation (published as \cite{Khouzaimi2016a}) framework is introduced. Its novelty resides in the fact that it is able to simulate the ASR instability phenomenon. First, it is presented in its most generic and abstract form that can be used by the reader to instantiate his/her own simulator that is adapted to any target domain. Then, these principles are applied in order to implement a simulated environment where the service is a personal agenda manager.
+	Using dialogue simulation techniques is very common in the research community \cite{Eckert1997,Pietquin2013} for several reasons like: the ability to quickly generate dialogue corpora that can be used to develop machine learning techniques, an easy way to model different populations of users and the possibility to use the same user simulator to test and compare concurrent dialogue strategies (see Chapter \ref{ch:soarl} for more details). In this chapter, a new incremental dialogue simulation framework is introduced (published is \cite{Khouzaimi2016a}). Its novelty resides in the fact that it is able to simulate the ASR instability phenomenon. First, it is presented in its most generic and abstract form that can be used by the reader to instantiate his/her own simulator that is adapted to any target domain. Then, these principles are applied in order to implement a showcase simulated environment where the service is a personal agenda manager.
 	
-	Later on, this simulated environment is used for two main purposes. Firstly, the slot-filling and the incremental dialogue strategies described in Chapter \ref{ch:strategies} are implemented and compared. This somehow validates the preliminary efficiency analysis led in that Chapter. It also provides new analysis elements to go further and prepare a basis for the experiments with real users. Secondly, it is a very useful tool for generating data to train machine learning algorithms. In Chapter \ref{ch:rl}, it is used to train a reinforcement learning algorithm which purpose is to optimise turn-taking decisions.
+	Later on, this simulated environment is used for two main purposes. Firstly, the slot-filling and the incremental dialogue strategies described in Chapter \ref{ch:strategies} are implemented and compared. This somehow validates the preliminary efficiency analysis led in that chapter. It also provides new analysis elements to go further and prepare a basis for the experiments with real users. Secondly, it is a very useful tool for generating data to train machine learning algorithms. In Chapter \ref{ch:rl}, it is used to train a reinforcement learning algorithm which purpose is to optimise turn-taking decisions.
 						
 \section{Overview}
 	
-	How to run dialogues with no users? The well-known answer is: by designing a User Simulator (US). Rigorously, in the case of SDSs, a US should be able to process an input audio signal and to output a new audio signal as well. Even though this method has its merits (noise and ASR imperfections are naturally taken into account), it goes against one of the main advantages of user simulation techniques which is the ability to quickly generate an important number of dialogues. Therefore, the user simulator elaborated here inputs and outputs text. An ASR output simulator is in charge of replicating the ASR behaviour. Figure \ref{fig:simuoverview} gives an overview of how these parts fit together in the whole architecture as well as the composition of the US. The latter is composed of five modules: The Intent Manager, the NLU, the Verbosity Manager, the NLG and the Patience Manager.
+	How to run dialogues with no users? The well-known answer is: by designing a User Simulator (US). Rigorously, in the case of SDSs, a US should be able to process an input audio signal and to output a new audio signal as well. Even though this method has its merits (noise and ASR imperfections are naturally taken into account), it goes against one of the main advantages of user simulation techniques which is the ability to quickly generate an important number of dialogues. Also, making an ASR module listen to a TTS and understand its message is not easy. Therefore, the user simulator elaborated here inputs and outputs text. An ASR output simulator is in charge of replicating the ASR behaviour. Figure \ref{fig:simuoverview} gives an overview of how these parts fit together in the whole architecture as well as the composition of the US. The latter is composed of five modules: The Intent Manager, the NLU, the Verbosity Manager, the NLG and the Patience Manager.
 	
 		\begin{figure*}[htb]
 			\centering
@@ -20,7 +20,7 @@
     
 \section{Incremental dialogue simulation}
 				
-				In a nutshell, at the $p^{th}$ micro-turn of the $k^{th}$ user turn $\mu T^{k,U}_p$, the US generates a partial utterance $Req^k_p$ that is transformed into an N-Best ${(score^k_{p,1}, hyp^k_{p,1}),...,(score^k_{p,N}, hyp^k_{p,N})}$. It corresponds to the whole utterance pronounced during the partial turn $T^{k,U}_p$ (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the dialogue system at a certain micro-turn and it stops speaking\footnote{This is of course an approximation of real barge-in cases since the overlap is neglected.}, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
+				In a nutshell, at the $p^{th}$ micro-turn of the $k^{th}$ user turn $\mu T^{k,U}_p$, the US generates a partial utterance $Req^k_p$ that is transformed into an N-Best ${(score^k_{p,1}, hyp^k_{p,1}),...,(score^k_{p,N}, hyp^k_{p,N})}$, which corresponds to the N recognition hypotheses that have the best confidence scores. It corresponds to the whole utterance pronounced during the partial turn $T^{k,U}_p$ (\textit{restart incremental} mode \cite{Schlangen2011}). On the other hand, either the US receives an answer from the dialogue system at a certain micro-turn and it stops speaking\footnote{This is of course an approximation of real barge-in cases since the overlap is neglected.}, either it does not and it continues speaking if it has additional things to say (releasing the floor otherwise). When the dialogue lasts for too long without achieving the task at hand, the US can end the dialogue.
 
                                 In the following, the role and the functioning of the US and the ASR output simulator are discribed in an abstract fashion before being instanciated later on to give birth to a personal agenda management simulated environment.
     
@@ -49,7 +49,7 @@
 			
 			\subsubsection{NLG and Verbosity Manager}
 				
-				The NLG module transforms the Intent Manager's output into a simple and straightforward utterance. For example:
+				The NLG module of the simulator transforms the Intent Manager's output into a simple and straightforward utterance. For example:
 				
 				\begin{itemize}
 					\item Book a room for tomorrow.
@@ -111,7 +111,7 @@
 					\centering
 					\begin{tikzpicture}[scale=0.8]
 					\begin{axis}[
-						xlabel={Score},
+						xlabel={Confidence score},
 						ylabel={Density},
 						scaled ticks = false,
 						tick label style={/pgf/number format/fixed},
@@ -177,11 +177,11 @@
 						\item Determine whether $w_{t+1}$ is among the N-Best or not with a probability that is computed as follows: (1 - WER) + INBF.WER, where INBF (In N-Best Factor) is a parameter between 0 and 1. If $w_{t+1}$ is not in the N-Best, then the latter contains only scrambled versions of this word and jump to step 4.
 							\item The first hypothesis is set to be $w_{t+1}$ with a probability of (1-WER), otherwise, it is a scrambled version of it.
 							\item If the the first hypothesis is not $w_{t+1}$, then this word's position is randomly chosen between 2 and N. Moreover, the other hypothesis are scrambled versions of it.
-							\item The confidence score associated with the best hypothesis ($score_0$) is sampled as sigmoid(X) where X is a gaussian. More precisely, $X \sim \mathcal{N} (c_{err},\sigma_{conf})$ if the first hypothesis is wrong and $X \sim \mathcal{N} (c_{right},\sigma_{conf})$ when it is right (with $c_{err} < 0 < c_{right}$). By taking the sigmoid, this leads to two distributions\footnote{Confidence score estimation is a complex problem and it is still a research topic \cite{Jiang2005,Seigel2011}. The simple model introduced here is inspired by \cite{Pietquin2005}. Also, notice that the scores are between 0 and 1 but they do not sum up to 1 since they are not probabilities.} (depicted in Figure \ref{fig:scoresample} for $\sigma_{conf} = 1$) with a means on both sides of 0.5 and the same standard deviation for both (which is a growing function of $\sigma_{conf}$ and which can be changed to simulate different levels of accuracy of the confidence score model. Big $\sigma_{conf}$ values lead to spread recognition scores and small differences between $c_{err}$ and $c_{right}$ engender close scores for both cases: right and wrong first hypothesis. Therefore, discriminative models are obtained for small values of $\sigma_{conf}$ and high difference $c_{right}-c_{err}$.
+							\item The confidence score associated with the best hypothesis ($score_0$) is sampled as sigmoid(X) where X follows a gaussian distribution. More precisely, $X \sim \mathcal{N} (c_{err},\sigma_{conf})$ if the first hypothesis is wrong and $X \sim \mathcal{N} (c_{right},\sigma_{conf})$ when it is right (with $c_{err} < 0 < c_{right}$). By taking the sigmoid, this leads to two distributions\footnote{Confidence score estimation is a complex problem and it is still a research topic \cite{Jiang2005,Seigel2011}. The simple model introduced here is inspired by \cite{Pietquin2005}. Also, notice that the scores are between 0 and 1 but they do not sum up to 1 since they are not probabilities.} (depicted in Figure \ref{fig:scoresample} for $\sigma_{conf} = 1$) with a means on both sides of 0.5 and the same standard deviation for both (which is a growing function of $\sigma_{conf}$ and which can be changed to simulate different levels of accuracy of the confidence score model. Big $\sigma_{conf}$ values lead to spread recognition scores and small differences between $c_{err}$ and $c_{right}$ engender close scores for both cases: right and wrong first hypothesis. Therefore, discriminative models are obtained for small values of $\sigma_{conf}$ and high difference $c_{right}-c_{err}$.
 							\item The scores for the other hypotheses are computed in an iterative way. For $i$ between 2 and N, $score_i$ is uniformly sampled in $[0,score_{i-1}]$.
 					\end{enumerate}
 					
-					As already mentioned in this thesis, early partial utterances are not necessarily prefixes of later ones (ASR instability phenomenon). To replicate this behaviour, a language model is needed to compute the scores corresponding to the different hypotheses in the N-Best. Therefore, sentences that are more in alignment with the model have higher scores thus being pushed to the top of this N-Best. Here, the NLU knowledge is used as a proxy for the language model by making the following assumption: \textit{the more an utterance generates key concepts once fed to the NLU, the more it is likely to be the correct one}. Therefore, as soon as a new action, date or time window concept is detected in $hyp^k_{p,i}$, $score^k_{p,i}$ is boosted as follows:
+					As already mentioned in this thesis, early partial utterances are not necessarily prefixes of later ones with a true ASR system (ASR instability phenomenon). To replicate this behaviour, a language model is needed to compute the scores corresponding to the different hypotheses in the N-Best. Therefore, sentences that are more in alignment with the model have higher scores thus being pushed to the top of this N-Best. Here, the NLU knowledge is used as a proxy for the language model by making the following assumption: \textit{the more an utterance generates key concepts once fed to the NLU, the more it is likely to be the correct one}. Therefore, as soon as a new concept is detected in $hyp^k_{p,i}$, $score^k_{p,i}$ is boosted as follows:
 					
 						$$ score^k_{p,i} \leftarrow score^k_{p,i} + BF.(1 - score^k_{p,i}) $$
 							
@@ -196,29 +196,30 @@
 
 \section{Personal Agenda management simulated environment}
 
-	So far, an abstract framework for simulating incremental dialogue has been described. In this section, it is instanciated in order to be able to generate dialogues with an incremental dialogue system which purpose is to help users manage their personal agenda. This task will be used in Chapter \ref{ch:baseline} in order to run a few experiments regarding the dialogue strategies introduced in Chapter \ref{ch:strategies} and in Chapter \ref{ch:rl} in order to test a new reinforcement learning approach. First the service and its dialogue task are presented, then the way the user simulator and the ASR output simulator are instanciated is described.
+	So far, an abstract framework for simulating incremental dialogue has been described. In this section, it is instanciated in order to be able to generate dialogues with an incremental dialogue system which purpose is to help users manage their personal agenda. This task will be used in Chapter \ref{ch:baseline} in order to run a few experiments regarding the dialogue strategies introduced in Chapter \ref{ch:strategies} and in Chapter \ref{ch:rl} in order to test a new reinforcement learning approach. First the Service (system side, Section \ref{subsec:service}) and its dialogue task are presented, then the way the US (user side, Section \ref{subsec:us}) and the ASR output simulator are instanciated is described.
 	
-	\subsection{The service: personal agenda assistant}
+	\subsection{The Service: personal agenda assistant}
+        \label{subsec:service}
 	
 		\subsubsection{Dialogue Manager}
 
-			A personal agenda assistant has been implemented as a new task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in french but they are translated in English to ensure language coherence in this thesis.}. This is a slot-filling task with four slots:
+			A personal agenda assistant has been implemented as a new task for the experiments. The user can add, move or delete events in his agenda. For instance, a request could be: \textit{I would like to add the event football game on March $3^{rd}$ from 9 to 10 pm}\footnote{The dialogues are actually in French but they are translated in English to ensure language coherence in this thesis.}. This is a slot-filling task with four slots:
 				
 				\begin{itemize}
 					\item \textbf{ACTION:} The type of action the user wants to perform. Can take three different values: ADD, MODIFY or DELETE.
-						\item \textbf{DESCRIPTION:} The title of the event.
+						\item \textbf{DESCRIPTION:} The description of the event.
 						\item \textbf{DATE:} The date of the event.
 						\item \textbf{WINDOW:} The time window of the event.
 				\end{itemize}
 				
 				However, no overlap is tolerated between events in the agenda.
 				
-				The US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the agenda before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high priority first\footnote{To make the algorithms easier to understand, the larger priority value, the more important the event, unlike common usage.}. Its aim is to make as many events with the highest priority values as possible fit in the agenda.
+				Each interaction between the US and the system is defined by a scenario. Here, the US is given two lists of events: \textit{InitList} and \textit{ToAddList}. The first one contains the events that already exist in the agenda before the dialogue and the second one contains the ones that the US is supposed to add during the dialogue. Each event is associated with a priority value and the US must prefer adding the ones with high priority first\footnote{To make the algorithms easier to understand, the larger priority value, the more important the event, unlike common usage.}. Its aim is to make as many events with the highest priority values as possible fit in the agenda.
 				
 		
 		\subsubsection{Natural Language Understanding}
 		
-			A rule-based algorithm transforms the user's utterance hypothesis into concepts. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in table \ref{tab:ruletypes}.
+			A rule-based algorithm transforms the user's utterance hypothesis into concepts. To do that, a set of rules have been defined. Each rule transforms a word, a concept or any combination of the two into a new concept. Three types of rules are used; they are depicted in Table \ref{tab:ruletypes}.
 			
 			For instance, parsing the sentence \textit{I want to add the event birthday party on January $6^{th}$ from 9pm to 11pm} is performed following these steps:
 							
@@ -247,6 +248,7 @@
 					\end{enumerate}
 					
 			\subsection{Simulator instanciation}
+                        \label{subsec:us}
 			
 				\begin{table}[t]
 					\fontsize{8}{10}\selectfont
@@ -320,18 +322,18 @@
 								\textbf{Parameters} & \textbf{Value} & \textbf{Justification} \\
 								\hline
 								$p_{od}$ & 0.1 & Based on the corpus study led in \cite{Ghigi2014} \\
-								$p_{rep}$ & 0.3 & Same \\
+								$p_{rep}$ & 0.3 & Id. \\
 								$SR$ & 200 words per minute & See \cite{Yuan2006} \\
 								$\mu_{pat}$ & 3 min & Empirical given the task \\
 								$p_{repl}$ & 0.7 & Empirical (variable and difficult to estimate) \\
-								$p_{add}$ & 0.15 & Same \\
-								$p_{del}$ & 0.15 & Same \\
+								$p_{add}$ & 0.15 & Id. \\
+								$p_{del}$ & 0.15 & Id. \\
 								N & 5 & Empirical (can be anything depending on the ASR configuration) \\
 								INBF & 0.7 & Tuned for a reasonable boosting effect with N=5 \\
-								BF & 0.2 & Same \\
+								BF & 0.2 & Id. \\
 								$c_{err}$ & -1 & Empirical (variable and difficult to estimate) \\
 								$c_{right}$ & 1 & Empirical (variable and difficult to estimate) \\
-								$\sigma_{conf}$ & 1 & Same \\
+								$\sigma_{conf}$ & 1 & Id. \\
 								SM & 2 & words that lasted for more than 0.6 seconds have 90\% chance \\
 								& & of staying unchanged \cite{McGraw2012} \\
 								& & and SR = 200 wpm \\
@@ -353,7 +355,7 @@
 					\item If \texttt{m} is a map, \texttt{m.add(x,y)} adds a new entry to m such that \texttt{m(x) = y}.
 					\item \texttt{AS} is a stack of actions and each action a is a couple (\texttt{a.action},\texttt{a.event}) where \texttt{a.action} is an action type (ADD, MODIFY or DELETE) and \texttt{a.event} is an event caracterised by a description, a date, a time window and a priority value.
 					\item For each event \texttt{e}, \texttt{e.alt} refers to all its alternatives including itself\footnote{The elements of \texttt{e.alt} share the same description and priority value but they have different dates and time windows.}. Its priority is called \texttt{e.prio}.
-					\item The function \texttt{execute()} communicates an intent to the NLG and gets the corresponding response through the NLU. If this response is a misunderstanding declaration, then the same intent is sent again. If it is a declaration of conflict with a set of other events, then a queue with all these events is returned. Finally, if no conflict was detected, then this function returns an empty queue.
+					\item The function \texttt{execute()} communicates an intent to the NLG and gets the corresponding response through the NLU. If this response is a misunderstanding declaration, then the same intent is sent again. If it is a declaration of conflict with a set of other events, then a queue with all these events is returned. Finally, if no conflict was detected, then this function returns an empty queue. This is how the US updates \texttt{AS}.
 				\end{itemize}
 						
 					The other parameters of the US and the ASR output simulator are set as shown in Table \ref{tab:paramvalues}.
@@ -371,4 +373,6 @@
 				
 				Suppose that \textit{CommitCond} in the Scheduler is true if and only if the response to the last stable utterance is either a confirmation question or a conflict declaration (in other words, all the slots have been successfully communicated to the system). Also, suppose that this time, the best ASR hypothesis is 100\% correct. Since SM=2, the Scheduler decides to take the floor as soon as the users decide to utter \textit{Can you please add the event birthday party on January $6^{th}$ from 6pm until 8pm, I repeat}.
 				
-				Since the time window required to organise the birthday party is already taken by the house cleaning event \texttt{execute()} returns a queue (\texttt{conflQ}) containing the latter only, and the entry (\texttt{e},\texttt{conflQ}) is added to \texttt{c}. The priority of the house cleaning event is 3, therefore, the entry \texttt{(e,3)} is added to \texttt{M}. Therefore, $e_{best} =$ \texttt{e} since it is the only element in \texttt{M}. Its priority is lower than \texttt{AS.top.event.prio}. As a consequence, the Intent Manager tries to move the house cleaning event (details about the sentence formulation and management are no longer given) and it ends up to be successful using the first alternative: \textit{January $7^{th}$, from 6pm until 8pm}. By doing so, the event \textit{birthday party is still in the stack} and it is added facing no problem this time since the corresponding time window has been freed.
+				Since the time window required to organise the birthday party is already taken by the house cleaning event \texttt{execute()} returns a queue (\texttt{conflQ}) containing the latter only, and the entry (\texttt{e},\texttt{conflQ}) is added to \texttt{c}. The priority of the house cleaning event is 3, therefore, the entry \texttt{(e,3)} is added to \texttt{M}. Therefore, $e_{best} =$ \texttt{e} since it is the only element in \texttt{M}. Its priority is lower than \texttt{AS.top.event.prio}. As a consequence, the Intent Manager tries to move the house cleaning event (details about the sentence formulation and management are no longer given) and it ends up to be successful using the first alternative: \textit{January $7^{th}$, from 6pm until 8pm}. By doing so, the event \textit{birthday party} is still in the stack and it is added facing no problem this time since the corresponding time window has been freed.
+
+                                To sum up, a new incremental dialogue simulation which supports dialogue instability has been introduced in detail in this chapter. Its different components have been thoroughly described as well as the way they interact with each other to incrementally send requests to the system and to process its responses. In the rest of this thesis, the strategies formerly described are implemented and evaluated in this simulated environment then the latter is used to train a reinforcement learning turn-taking strategy. 

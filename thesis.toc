@@ -80,13 +80,13 @@
 \contentsline {chapter}{\numberline {6}Incremental dialogue simulation}{99}{chapter.172}
 \contentsline {section}{\numberline {6.1}Overview}{99}{section.173}
 \contentsline {section}{\numberline {6.2}Incremental dialogue simulation}{100}{section.175}
-\contentsline {subsection}{\numberline {6.2.1}User Simulator}{100}{subsection.177}
-\contentsline {subsubsection}{Intent Manager}{100}{section*.178}
+\contentsline {subsection}{\numberline {6.2.1}User Simulator}{101}{subsection.177}
+\contentsline {subsubsection}{Intent Manager}{101}{section*.178}
 \contentsline {subsubsection}{NLG and Verbosity Manager}{101}{section*.182}
 \contentsline {subsubsection}{Timing and patience manager}{102}{section*.183}
 \contentsline {subsection}{\numberline {6.2.2}ASR output simulator}{102}{subsection.186}
 \contentsline {section}{\numberline {6.3}Personal Agenda management simulated environment}{104}{section.196}
-\contentsline {subsection}{\numberline {6.3.1}The service: personal agenda assistant}{105}{subsection.197}
+\contentsline {subsection}{\numberline {6.3.1}The Service: personal agenda assistant}{105}{subsection.197}
 \contentsline {subsubsection}{Dialogue Manager}{105}{section*.198}
 \contentsline {subsubsection}{Natural Language Understanding}{106}{section*.201}
 \contentsline {subsection}{\numberline {6.3.2}Simulator instanciation}{107}{subsection.207}
