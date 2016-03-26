@@ -25,12 +25,12 @@
 \contentsline {table}{\numberline {6.2}{\ignorespaces User simulator and ASR output simulator values\relax }}{109}{table.caption.212}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Handcrafted strategies for improving dialogue efficiency}{111}{chapter.215}
-\contentsline {table}{\numberline {7.1}{\ignorespaces The three scenarios used in the simulation\relax }}{117}{table.caption.222}
+\contentsline {table}{\numberline {7.1}{\ignorespaces The three scenarios used in the simulation\relax }}{116}{table.caption.222}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{121}{chapter.237}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{124}{table.caption.242}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{123}{chapter.237}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Dialogue example with state representation features' values.\relax }}{126}{table.caption.242}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{131}{chapter.262}
-\contentsline {table}{\numberline {9.1}{\ignorespaces Majordomo tasks\relax }}{132}{table.caption.265}
-\contentsline {table}{\numberline {9.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{134}{table.caption.272}
-\contentsline {table}{\numberline {9.3}{\ignorespaces Local dialogue evaluation metrics\relax }}{135}{table.caption.274}
+\contentsline {xchapter}{Experiment with real users}{133}{chapter.262}
+\contentsline {table}{\numberline {9.1}{\ignorespaces Majordomo tasks\relax }}{134}{table.caption.265}
+\contentsline {table}{\numberline {9.2}{\ignorespaces Global dialogue evaluation metrics\relax }}{136}{table.caption.272}
+\contentsline {table}{\numberline {9.3}{\ignorespaces Local dialogue evaluation metrics\relax }}{137}{table.caption.274}

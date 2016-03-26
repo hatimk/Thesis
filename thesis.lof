@@ -30,11 +30,11 @@
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Simulated mean duration (left) and dialogue task completion (right) for different noise levels\relax }}{116}{figure.caption.221}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Mean dialogue duration and task completion for aggregated strategies.\relax }}{119}{figure.caption.233}
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Mean dialogue duration and task completion for different turn-taking phenomena.\relax }}{119}{figure.caption.234}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{119}{figure.caption.235}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces INCOHERENCE\_INTERP evaluated in a more adapted task\relax }}{120}{figure.caption.235}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{121}{chapter.237}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.\relax }}{128}{figure.caption.259}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.\relax }}{129}{figure.caption.260}
+\contentsline {xchapter}{Reinforcement learning for turn-taking optimisation}{123}{chapter.237}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Learning curve (0-500: pure exploration, 500-2500: exploration/exploitation, 2500-3000: pure exploitation) with WER$=0.15$.\relax }}{130}{figure.caption.259}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Mean dialogue duration and task for the non-incremental, the baseline incremental and the RL incremental (after convergence) strategies under different noise conditions.\relax }}{131}{figure.caption.260}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experiment with real users}{131}{chapter.262}
-\contentsline {figure}{\numberline {9.1}{\ignorespaces The Majordomo interface\relax }}{133}{figure.caption.269}
+\contentsline {xchapter}{Experiment with real users}{133}{chapter.262}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces The Majordomo interface\relax }}{135}{figure.caption.269}

@@ -3,9 +3,9 @@
 
 	Several strategies for handling slot-filling dialogue tasks have been discussed in Chapter \ref{ch:strategies}. The hypothesis laid stipulates that they perform differently under different noise conditions. A rough study has been made leading to a first model that made it possible to derive the tendencies of these strategies in terms of dialogue duration as a function of noise. In this chapter, the personal agenda simulated environment introduced in Chapter \ref{ch:simulation} is used in order to validate these results.
 	
-	On top of that, incremental processing offers a new degree of freedom that can be used in order to derive new dialogue strategies. Inspired by the TTP taxonomy introduced in Chapter \ref{ch:taxonomy}, five turn-taking strategies have been selected for their a priori potential of improving task oriented dialogue. Here, they are also implemented in the simulated environment and mixed with the previous turn-taking strategies. The new formed strategies are also compared in terms of dialogue duration and task completion (published as \cite{Khouzaimi2015a}).
+	On top of that, incremental processing offers a new degree of freedom that can be used in order to derive new dialogue strategies. Inspired by the TTP taxonomy introduced in Chapter \ref{ch:taxonomy}, five turn-taking strategies have been selected for their a priori potential to improve task oriented dialogue. Here, they are also implemented in the simulated environment and mixed with the previous turn-taking strategies. The new formed strategies are also compared in terms of dialogue duration and task completion (published as \cite{Khouzaimi2015a}).
 	
-	The best strategy obtained in this Chapter will serve as a baseline for the one elaborated later and which is automatically learnt from data.
+	The best strategy obtained in this chapter will serve as a baseline for the one elaborated later (automatically learnt from data).
 
 \section{User and system initiative}
 	\subsection{Strategies}
@@ -16,7 +16,7 @@
       \begin{itemize}
           \item \textbf{System Initiative (SysIni):} Recall that while using this strategy, the system asks the user for the different slot values one by one. The first slot the system asks for is the action type: whether it is an ADD, a MODIFY or a DELETE action. To improve the system's performance, the order the remaining slots are asked for is made dependent on this type of action.
 					
-						In the case of an ADD action, the date and the slot are asked for first. Therefore, in the case of a conflict, there is no need to ask for the description. If no conflict is detected, the description is asked for and as it is an open slot (anything could be taken as a valid description), the user is asked for a confirmation of that particular slot before moving to the general confirmation (related to the complete request with all the associated slots).
+						In the case of an ADD action, the date and the slot are asked first. Therefore, in the case of a conflict, there is no need to ask for the description. If no conflict is detected, the description is asked for and as it is an open slot (anything could be taken as a valid description), the user is asked for a confirmation of that particular slot before moving to the general confirmation (related to the complete request with all the associated slots).
 						
 						As far as MODIFY actions are concerned, the description slot can also be an invalid utterance if the user provides a non existing event\footnote{In order to improve the dialogue efficiency, in the case of MODIFY and DELETE requests, only a prefix of the description is necessary to identify an event. For instance, if the event \textit{Guitar lesson} is planned in the agenda, then the user saying \textit{Guitar} is enough for the system to understand that she is refering to that event. In the case it is a prefix of more than one event, the first one in the system's internal list is taken.}. Therefore, as it involves only one dialogue turn (instead of the two turns required to determine the date and the time window) and as it is more natural to perform a MODIFY action by asking which event is to be moved, the description slot is asked for first.
 						
@@ -297,42 +297,42 @@
                     \label{fig:genstrateval}
               \end{figure*}
               
-  		For the experiments, three dialogue scenarios have been used. As described in \ref{subsec:intentmanager}, a scenario is specified by two lists of events: \textit{InitList} and \textit{ToAddList}. The lists corresponding to the three scenarios are given in Table \ref{tab:expscenarios}.
-        
-       	The WER is varied between 0 and 0.3 with a step of 0.03 in order to analyse the effect of noise on the different strategies. For each noise level, the three scenarios are run 1000 times. The mean duration of the dialogues, their task completion as well as the corresponding 95\% confidence intervals are depicted in Figure \ref{fig:genstrateval}.
-        
-        The results obtained here clearly validate the analysis led in Chapter \ref{ch:strategies} since the graph in Figure \ref{fig:effcompare} is very similar to the ones depicted in Figure \ref{fig:genstrateval}. In low noise setups, SysIni is clearly less efficient than UsrIni; the dialogues take twice more time to finish which in turn translates into a lower task completion ratio. Nevertheless when the noise level reaches about 0.2, SysIni offers better completion rates. The duration is still lower in spite of the correlation between the two metrics. This is due to the fact that the durations distribution for UsrIni is centered on short dialogues whereas the distribution for SysIni is centered on average ones. Finally, MixIni seems to be the best strategy as it allies both the advantages of UsrIni and SysIni.
-        
+  		For the experiments, three dialogue scenarios have been used. As described in \ref{subsec:intentmanager}, a scenario is specified by two lists of events: \textit{InitList} and \textit{ToAddList}. The lists corresponding to these three scenarios are given in Table \ref{tab:expscenarios}.
+
         %HK> Donner les équivalents en français pour la réplicabilité des résultats.
         %HK> Inverser les priorités, c'est bizarre comme ça.
         
-        \begin{table}[b]
-					\fontsize{7}{9}\selectfont
-					\vspace{2mm}
-					\centerline{
-						\begin{tabular}{|c|c|c|c|c|c|c|c|}
-							\hline
-							Scenario&Title (Priority)&Date&Window&DateAlt1&WindowAlt1&DateAlt2&WindowAlt2 \\
-												\hline
-												1-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
-												1-ToAdd&Book reading(8)&November 19$^{th}$&10:30-12:30&November 14$^{th}$&9:30-11:30&November 18$^{th}$&16:30-18:30 \\
-												&Watch the lord of the rings(12)&November 13$^{th}$&9:30-12:30&November 15$^{th}$&11:15-14:15& & \\
-							\hline
-												2-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
-												2-ToAdd&Tennis(5)&November 17$^{th}$&13:15-15:15&November 19$^{th}$&15:15-17:15& & \\
-												&Gardening(9)&November 18$^{th}$&13:15-15:15&November 14$^{th}$&12:30-14:30& & \\
-												\hline
-												3-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
-												&Holidays preparation(1)&November 16$^{th}$&12:30-14:30&November 17$^{th}$&12:15-14:15& & \\
-												&House cleaning(6)&November 13$^{th}$&14:15-16:15&November 17$^{th}$&15:30-17:30& & \\
-												3-ToAdd&Give back book(7)&November 16$^{th}$&14:00-14:30&November 13$^{th}$&14:00-14:30& & \\
-												\hline
-						\end{tabular}
-					}
-					\caption{The three scenarios used in the simulation}
-					\label{tab:expscenarios}
-					\end{table}
-
+        \begin{table}[htp]
+          \fontsize{7}{9}\selectfont
+          \vspace{2mm}
+          \centerline{
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}
+              \hline
+              Scenario&Title (Priority)&Date&Window&DateAlt1&WindowAlt1&DateAlt2&WindowAlt2 \\
+              \hline
+              1-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+              1-ToAdd&Book reading(8)&November 19$^{th}$&10:30-12:30&November 14$^{th}$&9:30-11:30&November 18$^{th}$&16:30-18:30 \\
+                      &Watch the lord of the rings(12)&November 13$^{th}$&9:30-12:30&November 15$^{th}$&11:15-14:15& & \\
+              \hline
+              2-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+              2-ToAdd&Tennis(5)&November 17$^{th}$&13:15-15:15&November 19$^{th}$&15:15-17:15& & \\
+                      &Gardening(9)&November 18$^{th}$&13:15-15:15&November 14$^{th}$&12:30-14:30& & \\
+              \hline
+              3-Init&Guitar lesson(4)&November 17$^{th}$&14:00-15:30&November 15$^{th}$&9:45-11:15& & \\
+                      &Holidays preparation(1)&November 16$^{th}$&12:30-14:30&November 17$^{th}$&12:15-14:15& & \\
+                      &House cleaning(6)&November 13$^{th}$&14:15-16:15&November 17$^{th}$&15:30-17:30& & \\
+              3-ToAdd&Give back book(7)&November 16$^{th}$&14:00-14:30&November 13$^{th}$&14:00-14:30& & \\
+              \hline
+            \end{tabular}
+          }
+          \caption{The three scenarios used in the simulation}
+          \label{tab:expscenarios}
+        \end{table}
+        
+       	The WER is varied between 0 and 0.3 with a step of 0.03 in order to analyse the impact of noise on the different strategies. For each noise level, the three scenarios are run 1000 times. The mean duration of the dialogues, their task completion as well as the corresponding 95\% confidence intervals are depicted in Figure \ref{fig:genstrateval}.
+        
+        The results obtained here clearly validate the analysis led in Chapter \ref{ch:strategies}, even though the simplifying assumptions made in the latter are relaxed here. The graph in Figure \ref{fig:effcompare} is very similar to the ones depicted in Figure \ref{fig:genstrateval} which also confirms the well functioning of the simulated environment. In low noise setups, SysIni is clearly less efficient than UsrIni; the dialogues take twice more time to finish which in turn translates into a lower task completion ratio. Nevertheless when the noise level reaches about 0.2, SysIni offers better completion rates. The duration is still lower in spite of the correlation between the two metrics. This is due to the fact that the durations distribution for UsrIni is centered on short dialogues whereas the distribution for SysIni is centered on average ones. Finally, MixIni is the best strategy since it allies both the advantages of UsrIni and SysIni.
+        
 \section{Incremental strategies}
 
 	%HK> Motiver le choix de la métrique d'étude : duration et task completion.
@@ -373,11 +373,25 @@
          \paragraph{BARGE\_IN\_RESP (System):} Depending on the last system's dialogue act (apart from dialogue acts reporting errors), the system can choose to barge-in once it has all the information needed to provide an answer. Again, it should also wait for the SM.
          
          %HK> Trouver une référence montrant que l'utilisateur peut inférer la fin de la phrase du système avec l'habitude.
-         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the a user's decision. Hence, it has been implemented in the US: a barge-in point has been determined in advance for each system's dialogue act template.
+         \paragraph{BARGE\_IN\_RESP (User):} When the user gets familiar with the system, it tends to predict the system's dialogue act before the system finishes its sentence. Unlike the previous phenomena, this one is due the user's decision. Hence, it has been implemented in the US: a barge-in point has been manually determined in advance for each system's dialogue act template. The following excerpt dialogue illustrates this behaviour:
+
+         \begin{dialogue}
+           \speak{SYSTEM} Hello. Welcome to...
+           \speak{USER} Add
+           \speak{SYSTEM} Please specify a date.
+           \speak{USER} <noise>
+           \speak{SYSTEM} Sorry, I don't...
+           \speak{USER} July 7$^{th}$
+           \speak{SYSTEM} Please specify a time...
+           \speak{USER} From 4pm until 6pm
+           \speak{SYSTEM} Sorry, this time window is already...
+           \speak{USER} Yes
+           \speak{SYSTEM} Please specify a date.
+         \end{dialogue}
     
     \subsection{Experiments}
     
-    	In this experiment, the TTP described in Section \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Section \ref{subsec:strategies}. Incremental processing is useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Figure \ref{fig:generic}.
+    	In this experiment, the TTP described in Section \ref{subsec:ttpimpl} are used on the top of the slot-filling strategies introduced in Section \ref{subsec:strategies}. Incremental processing is more useful when the user makes long utterances. This is not the case in the SysIni strategy where her utterances are very short. Therefore, incremental behaviour have only been added to UsrIni and MixIni to form two new strategies: UsrIni+Incr and MixIni+Incr. The associated performances are depicted in Figure \ref{fig:generic}.
 
         \begin{figure*}[htp]
 			\centering
@@ -1032,9 +1046,11 @@
         %HK> Si on fait de l'apprentissage multi-agent, on peut en parler ici (MixIni+Incr => MixIniRL+Incr => MixIniRL+IncrRL).
      	Adding mixed initiative behaviour or incrementality to UsrIni are both ways to improve its robustness to errors. Figure \ref{fig:generic} shows that incrementality is more efficient. Most importantly, it is shown that MixIni and incremental behaviour can be combined to form the best strategy.
     
-    	As already mentioned in Chapter \ref{ch:taxonomy}, the main objective of the TTP taxonomy is to break human dialogue turn-taking into small pieces in order to get a better understanding of it. To illustrate this approach, a deeper look is taken at MixIni+Incr by isolating its different components\footnote{One of the advantages of the Scheduler approach is that the different TTP are implemented as independent decision makers that can easily be combined to form the aggregated strategies, but that can also be isolated and analysed separately.}: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP (User) and BARGE\_IN\_RESP (System). The results reported in Figure \ref{fig:ttp} show that FEEDBACK contributes the most to improve the baseline followed by BARGE\_IN\_RESP (User) and FAIL\_RAW. INCOHERENCE\_INTERP and BARGE\_IN \_RESP (System) seem to have no effect. This is due to the fact that in general, to detect an incoherence, one must wait until the end of the utterance (same requirement for detecting all the information needed to barge-in and provide an answer). One might argue that in some cases, the US tries to refer to a non existing event (in the case of a MODIFY or DELETE action), therefore triggering an incoherence. However, as stated before, the service is able to recognise an existing event even if only a prefix of its title is recognised. As a consequence, INCOHERENCE\_INTERP is rarely triggered in the middle of a request. Therefore, another scenario where that situation occurs more often has been tested: the US has to try to move an event five times before encountering a free time window has been designed. The results are shown in Figure \ref{fig:incoh}: this time, INCOHERENCE\_INTERP has a visible added value.
+    	As already mentioned in Chapter \ref{ch:taxonomy}, the main objective of the TTP taxonomy is to break human dialogue turn-taking into small pieces in order to get a better understanding of it. To illustrate this approach, a deeper look is taken at MixIni+Incr by isolating its different components\footnote{One of the advantages of the Scheduler approach is that the different TTP are implemented as independent decision makers that can easily be combined to form the aggregated strategies, but that can also be isolated and analysed separately.}: FAIL\_RAW, INCOHERENCE\_INTERP, FEEDBACK, BARGE\_IN\_RESP (User) and BARGE\_IN\_RESP (System). The results reported in Figure \ref{fig:ttp} show that FEEDBACK contributes the most to improve the baseline followed by BARGE\_IN\_RESP (User) and FAIL\_RAW. INCOHERENCE\_INTERP and BARGE\_IN \_RESP (System) seem to have no effect. This is due to the fact that in general, to detect an incoherence, one must wait until the end of the utterance (same requirement for detecting all the information needed to barge-in and provide an answer). One might argue that in some cases, the US tries to refer to a non existing event (in the case of a MODIFY or DELETE action), therefore triggering an incoherence. However, as stated before, the service is able to recognise an existing event even if only a prefix of its description is recognised. As a consequence, INCOHERENCE\_INTERP is rarely triggered before the end of a request. Therefore, another scenario where that situation occurs more often has been tested: the US has to try several time window alternatives to add an event and only the fifth one is free. The results are shown in Figure \ref{fig:incoh}: this time, INCOHERENCE\_INTERP has a visible added value.
 				
-				 This experiment raises an important point when it comes to studying efficiency in task oriented dialogues and as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the nature of the task at hand. In the previous example, INCOHERENCE\_INTERP is shown to have no impact in some kind of situation but it brings some improvement in other situations. Another example is the feedback which is more likely to improve the baseline when open slots are involved and especially long ones like this is the case in message dictation for example (\textit{Send mom a message telling her that...}) whereas it has very limited impact in a train booking dialogue for example, where only constrained slots come into play. It is one of the motivations behind adopting a data-driven approach (see Chapter \ref{ch:rl}), so that the Scheduler figures out by itself what are the appropriate behaviours given the situation at hand.
+				 This experiment raises an important point when it comes to studying efficiency in task oriented dialogues as far as turn-taking mechanisms are concerned. The nature of dialogue is very diverse, therefore, results and the following conclusions (whatever the chosen metric is) should not be given separately from the nature of the task at hand. In the previous example, INCOHERENCE\_INTERP is shown to have no impact in some kind of situation but it brings some improvement in other situations. Another example is the feedback which is more likely to improve the baseline when open slots are involved and especially long ones like this is the case in message dictation for example (\textit{Send mom a message telling her that...}) whereas it may have very limited impact in a train booking dialogue for example, where only constrained slots come into play. It is one of the motivations behind adopting a data-driven approach, so that the Scheduler figures out by itself what are the appropriate behaviours given the situation at hand.
+
+                                 \newpage
         
-        
+                                 So far, a handcrafted turn-taking strategy has been implemented in the simulated environment introduced in Chapter \ref{ch:simulation} along with several slot-filling strategies. These first results show that there is room for dialogue efficiency improvement by enhancing the system's turn-taking capabilities. In the following, this handcrafted strategy is improved using reinforcement learning and the results are validated in a live study with real users.
     
