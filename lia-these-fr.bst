@@ -1167,7 +1167,7 @@ FUNCTION {phdthesis}
   format.btitle
   "title" output.check
   new.block
-  "Th\`ese de Doctorat" format.thesis.type output.nonnull
+  "Phd Thesis" format.thesis.type output.nonnull
   school "school" output.check
   address output
   new.block

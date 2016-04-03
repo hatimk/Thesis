@@ -17,9 +17,8 @@ A level-1 auxiliary file: rl/rl.aux
 A level-1 auxiliary file: experiment/experiment.aux
 A level-1 auxiliary file: conclusion/conclusion.aux
 The style file: lia-these-fr.bst
+A level-1 auxiliary file: glossary/glossary.aux
 Database file #1: biblio.bib
-Warning--no number and no volume in Auer2002
-Warning--page numbers missing in Auer2002
 Warning--no number and no volume in Chao2012
 Warning--page numbers missing in Chao2012
 Warning--empty publisher in Cohen1990
@@ -45,45 +44,45 @@ Warning--page numbers missing in Williams2007
 Warning--no number and no volume in Witt2011
 Warning--page numbers missing in Witt2011
 Warning--page numbers missing in Yu2011
-You've used 178 entries,
+You've used 181 entries,
             2936 wiz_defined-function locations,
-            1616 strings with 37915 characters,
-and the built_in function-call counts, 112091 in all, are:
-= -- 9435
-> -- 7761
-< -- 16
-+ -- 2407
-- -- 2712
-* -- 7859
-:= -- 19527
-add.period$ -- 541
-call.type$ -- 178
-change.case$ -- 1409
-chr.to.int$ -- 171
-cite$ -- 205
-duplicate$ -- 3970
-empty$ -- 7427
-format.name$ -- 3257
-if$ -- 21498
+            1635 strings with 37987 characters,
+and the built_in function-call counts, 114125 in all, are:
+= -- 9616
+> -- 7874
+< -- 17
++ -- 2441
+- -- 2748
+* -- 8005
+:= -- 19856
+add.period$ -- 549
+call.type$ -- 181
+change.case$ -- 1432
+chr.to.int$ -- 174
+cite$ -- 206
+duplicate$ -- 4047
+empty$ -- 7578
+format.name$ -- 3301
+if$ -- 21907
 int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 178
-newline$ -- 898
-num.names$ -- 1417
-pop$ -- 1862
+missing$ -- 181
+newline$ -- 913
+num.names$ -- 1441
+pop$ -- 1891
 preamble$ -- 1
-purify$ -- 2480
+purify$ -- 2521
 quote$ -- 0
-skip$ -- 3357
+skip$ -- 3422
 stack$ -- 0
-substring$ -- 4798
-swap$ -- 309
-text.length$ -- 16
+substring$ -- 4938
+swap$ -- 322
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 3422
-warning$ -- 27
-while$ -- 1169
+type$ -- 3482
+warning$ -- 25
+while$ -- 1191
 width$ -- 0
-write$ -- 3776
-(There were 27 warnings)
+write$ -- 3840
+(There were 25 warnings)

@@ -1,0 +1,17 @@
+\chapter*{Glossary}
+
+\paragraph{Dialogue system:} System communicating with users through natural interaction using natrual language.
+
+\paragraph{Incremental dialogue system:} Dialogue systems which are able to process the user's speech as it is spoken, before the end of the sentence. They are able to take the floor while the user is still speaking and inversely, the latter can also do so while the system is speaking.
+
+\paragraph{Micro-turn:} 
+
+\paragraph{Reinforcement learning:}
+
+\paragraph{Scheduler:}
+
+\paragraph{Spoken dialogue system (SDS):}
+
+\paragraph{Turn-taking phenomenon (TTP):}
+
+\paragraph{Turn-taking:}

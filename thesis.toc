@@ -98,7 +98,7 @@
 \contentsline {section}{\numberline {7.2}Incremental strategies}{117}{section.223}
 \contentsline {subsection}{\numberline {7.2.1}TTP implementation}{117}{subsection.224}
 \contentsline {paragraph}{FAIL\_RAW:}{117}{section*.225}
-\contentsline {paragraph}{INCOHERENCE\_INTERP:}{117}{section*.227}
+\contentsline {paragraph}{INCOHERENCE\_INTERP:}{118}{section*.227}
 \contentsline {paragraph}{FEEDBACK:}{118}{section*.228}
 \contentsline {paragraph}{BARGE\_IN\_RESP (System):}{118}{section*.230}
 \contentsline {paragraph}{BARGE\_IN\_RESP (User):}{118}{section*.231}
@@ -109,19 +109,37 @@
 \contentsline {subsection}{\numberline {8.1.2}State representation}{124}{subsection.240}
 \contentsline {subsection}{\numberline {8.1.3}Actions, rewards and episodes}{127}{subsection.246}
 \contentsline {subsection}{\numberline {8.1.4}Fitted-Q Value Iteration}{128}{subsection.247}
-\contentsline {section}{\numberline {8.2}Experiment}{130}{section.254}
-\contentsline {subsection}{\numberline {8.2.1}Setup}{130}{subsection.255}
-\contentsline {subsection}{\numberline {8.2.2}Results}{130}{subsection.261}
-\contentsline {chapter}{\numberline {9}Experiment with real users}{133}{chapter.262}
-\contentsline {section}{\numberline {9.1}The Majordomo domain}{133}{section.263}
-\contentsline {section}{\numberline {9.2}Experimental protocol}{134}{section.266}
-\contentsline {subsection}{\numberline {9.2.1}Implementation}{134}{subsection.267}
-\contentsline {subsection}{\numberline {9.2.2}Conduct of the dialogue}{135}{subsection.268}
-\contentsline {subsection}{\numberline {9.2.3}Key Performance Indicators}{136}{subsection.270}
-\contentsline {section}{\numberline {9.3}Results and discussion}{136}{section.271}
-\contentsline {section}{\numberline {9.4}Discussion}{138}{section.276}
-\contentsline {paragraph}{Exploration/exploitation:}{142}{section*.278}
-\contentsline {paragraph}{DM-Scheduler co-learning:}{143}{section*.279}
-\contentsline {starchapter}{Liste des illustrations}{145}{section*.279}
-\contentsline {starchapter}{Liste des tableaux}{147}{chapter*.280}
-\contentsline {starchapter}{Bibliographie}{149}{chapter*.281}
+\contentsline {section}{\numberline {8.2}Experiment}{130}{section.255}
+\contentsline {subsection}{\numberline {8.2.1}Setup}{130}{subsection.256}
+\contentsline {subsection}{\numberline {8.2.2}Results}{131}{subsection.262}
+\contentsline {chapter}{\numberline {9}Experiment with real users}{133}{chapter.263}
+\contentsline {section}{\numberline {9.1}The Majordomo domain}{133}{section.264}
+\contentsline {section}{\numberline {9.2}Experimental protocol}{134}{section.267}
+\contentsline {subsection}{\numberline {9.2.1}Implementation}{134}{subsection.268}
+\contentsline {subsection}{\numberline {9.2.2}Conduct of the dialogue}{135}{subsection.269}
+\contentsline {subsection}{\numberline {9.2.3}Key Performance Indicators}{135}{subsection.271}
+\contentsline {section}{\numberline {9.3}Results and discussion}{137}{section.272}
+\contentsline {section}{\numberline {9.4}Discussion}{138}{section.277}
+\contentsline {paragraph}{Exploration/exploitation:}{142}{section*.279}
+\contentsline {paragraph}{DM-Scheduler co-learning:}{143}{section*.280}
+\contentsline {starchapter}{Liste des illustrations}{145}{section*.280}
+\contentsline {starchapter}{Liste des tableaux}{147}{chapter*.281}
+\contentsline {starchapter}{Bibliographie}{149}{chapter*.282}
+\contentsline {paragraph}{Automatic speech recognition (ASR):}{165}{section*.285}
+\contentsline {paragraph}{Client:}{165}{section*.286}
+\contentsline {paragraph}{Confidence score:}{165}{section*.287}
+\contentsline {paragraph}{Dialogue manager (DM):}{165}{section*.288}
+\contentsline {paragraph}{Dialogue system:}{165}{section*.289}
+\contentsline {paragraph}{Incremental dialogue system:}{165}{section*.290}
+\contentsline {paragraph}{Micro-turn:}{165}{section*.291}
+\contentsline {paragraph}{N-Best:}{165}{section*.292}
+\contentsline {paragraph}{Natural language generation (NLG):}{165}{section*.293}
+\contentsline {paragraph}{Natural language understanding (NLU):}{166}{section*.294}
+\contentsline {paragraph}{Reinforcement learning:}{166}{section*.295}
+\contentsline {paragraph}{Scheduler:}{166}{section*.296}
+\contentsline {paragraph}{Service:}{166}{section*.297}
+\contentsline {paragraph}{Spoken dialogue system (SDS):}{166}{section*.298}
+\contentsline {paragraph}{Turn-taking phenomenon (TTP):}{166}{section*.299}
+\contentsline {paragraph}{Text-to-speech (TTS):}{166}{section*.300}
+\contentsline {paragraph}{Turn-taking:}{166}{section*.301}
+\contentsline {paragraph}{User simulator (US):}{166}{section*.302}

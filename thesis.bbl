@@ -12,7 +12,8 @@
   S.~Stoness, M.~Swift, \andname{} M.~K. Tanenhaus, 2007.
 \newblock Incremental understanding in human-computer dialogue and experimental
   evidence for advantages over nonincremental methods.
-\newblock In Proceedings of \textit{ Decalog}.
+\newblock In Proceedings of \textit{ the 11th Workshop on the Semantics and
+  Pragmatics of Dialogue}.
 
 \bibitem[{Anand \andnamec{} Kahn}(1992){Anand \andnamec{} Kahn}]{Anand1992}
 (Anand \andnamec{} Kahn, 1992) \hspace{.5em}T.~Anand \andname{} G.~S. Kahn,
@@ -35,7 +36,7 @@
 (Auer et~al., 2002) \hspace{.5em}P.~Auer, N.~Cesa-Bianchi, \andname{}
   P.~Fischer, 2002.
 \newblock Finite-time analysis of the multiarmed bandit problem.
-\newblock \textit{ Machine Learning\/}.
+\newblock \textit{ Machine Learning Journal\/}~\textit{ 47\/}(2-3), 235--256.
 
 \bibitem[{Auer \andnamec{} Ortner}(2005){Auer \andnamec{} Ortner}]{Auer2005}
 (Auer \andnamec{} Ortner, 2005) \hspace{.5em}P.~Auer \andname{} R.~Ortner,
@@ -48,20 +49,21 @@
   2006.
 \newblock Logarithmic online regret bounds for undiscounted reinforcement
   learning.
-\newblock In Proceedings of \textit{ NIPS}.
+\newblock In Proceedings of \textit{ Advances in Neural Information Processing
+  Systems (NIPS)}.
 
 \bibitem[{Austin}(1962){Austin}]{Austin1962}
 (Austin, 1962) \hspace{.5em}J.~Austin, 1962.
 \newblock \textit{ How to Do Things with Words}.
-\newblock Oxford.
+\newblock Oxford University Press.
 
 \bibitem[{Barlier et~al.}(2015){Barlier, Laroche, \andnamec{}
   Pietquin}]{Barlier2015}
 (Barlier et~al., 2015) \hspace{.5em}M.~Barlier, R.~Laroche, \andname{}
   O.~Pietquin, 2015.
 \newblock Human-machine dialogue as a stochastic game.
-\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Barto \andnamec{} Mahadevan}(2003){Barto \andnamec{}
   Mahadevan}]{Barto2003}
@@ -73,14 +75,14 @@
 \bibitem[{Baumann}(2008){Baumann}]{Baumann2008}
 (Baumann, 2008) \hspace{.5em}T.~Baumann, 2008.
 \newblock Simulating spoken dialogue with a focus on realistic turn-taking.
-\newblock In Proceedings of \textit{ Proceedings of the 5th International
-  Workshop on Constraints and Language Processing (CSLP)}.
+\newblock In Proceedings of \textit{ the 5th International Workshop on
+  Constraints and Language Processing (CSLP)}.
 
 \bibitem[{Baumann}(2014){Baumann}]{Baumann2014}
 (Baumann, 2014) \hspace{.5em}T.~Baumann, 2014.
 \newblock Partial representations improve the prosody of incremental speech
   synthesis.
-\newblock In Proceedings of \textit{ Proceedings of Interspeech}.
+\newblock In Proceedings of \textit{ Interspeech}.
 
 \bibitem[{Baumann \andnamec{} Schlangen}(2011){Baumann \andnamec{}
   Schlangen}]{Baumann2011}
@@ -95,8 +97,8 @@
   D.~Schlangen, 2013.
 \newblock Open-ended, extensible system utterances are preferred, even if they
   require filled pauses.
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
-  Conference}.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Beattie}(1982){Beattie}]{Beattie1982}
 (Beattie, 1982) \hspace{.5em}G.~Beattie, 1982.
@@ -169,29 +171,29 @@
 \newblock \textit{ Foundations and Trends in Machine Learning\/}~\textit{5},
   1--122.
 
+\bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lef\`evre,
+  \andnamec{} Pietquin}]{Chandramohan2011}
+(Chandramohan et~al., 2011) \hspace{.5em}S.~Chandramohan, M.~Geist,
+  F.~Lef\`evre, \andname{} O.~Pietquin, 2011.
+\newblock User simulation in dialogue systems using inverse reinforcement
+  learning.
+\newblock In Proceedings of \textit{ INTERSPEECH}.
+
 \bibitem[{Chandramohan et~al.}(2012a){Chandramohan, Geist, Lef{\`e}vre,
   \andnamec{} Pietquin}]{Chandramohan2012b}
 (Chandramohan et~al., 2012a) \hspace{.5em}S.~Chandramohan, M.~Geist,
   F.~Lef{\`e}vre, \andname{} O.~Pietquin, 2012a.
 \newblock Behavior specific user simulation in spoken dialogue systems.
-\newblock In Proceedings of \textit{ Speech Communication; 10. ITG Symposium;
-  Proceedings of},  1--4. VDE.
+\newblock In Proceedings of \textit{ Speech Communication; 10th ITG Symposium},
+   1--4. VDE.
 
-\bibitem[{Chandramohan et~al.}(2012b){Chandramohan, Geist, Lefevre, \andnamec{}
-  Pietquin}]{Chandramohan2012a}
+\bibitem[{Chandramohan et~al.}(2012b){Chandramohan, Geist, Lef\`evre,
+  \andnamec{} Pietquin}]{Chandramohan2012a}
 (Chandramohan et~al., 2012b) \hspace{.5em}S.~Chandramohan, M.~Geist,
-  F.~Lefevre, \andname{} O.~Pietquin, 2012b.
+  F.~Lef\`evre, \andname{} O.~Pietquin, 2012b.
 \newblock Clustering behaviors of spoken dialogue systems users.
 \newblock In Proceedings of \textit{ Acoustics, Speech and Signal Processing
   (ICASSP), 2012 IEEE International Conference on},  4981--4984. IEEE.
-
-\bibitem[{Chandramohan et~al.}(2011){Chandramohan, Geist, Lef\`vre, \andnamec{}
-  Pietquin}]{Chandramohan2011}
-(Chandramohan et~al., 2011) \hspace{.5em}S.~Chandramohan, M.~Geist,
-  F.~Lef\`vre, \andname{} O.~Pietquin, 2011.
-\newblock User simulation in dialogue systems using inverse reinforcement
-  learning.
-\newblock In Proceedings of \textit{ INTERSPEECH}.
 
 \bibitem[{Chandramohan et~al.}(2010){Chandramohan, Geist, \andnamec{}
   Pietquin}]{Chandramohan2010}
@@ -219,9 +221,9 @@
   C.~Boutilier, 1998.
 \newblock The dynamics of reinforcement learning in cooperative multiagent
   systems.
-\newblock In Proceedings of \textit{ Proceedings of the Fifteenth
-  National/Tenth Conference on Artificial Intelligence/Innovative Applications
-  of Artificial Intelligence}, AAAI '98/IAAI '98.
+\newblock In Proceedings of \textit{ the Fifteenth National/Tenth Conference on
+  Artificial Intelligence/Innovative Applications of Artificial Intelligence},
+  AAAI '98/IAAI '98.
 
 \bibitem[{Cohen \andnamec{} Levesque}(1990){Cohen \andnamec{}
   Levesque}]{Cohen1990}
@@ -252,6 +254,15 @@
 \newblock Hierarchical dialogue optimization using semi-markov decision
   processes.
 \newblock In Proceedings of \textit{ Interspeech}.
+
+\bibitem[{Daubigney et~al.}(2013){Daubigney, Geist, \andnamec{}
+  Pietquin}]{Daubigney2013}
+(Daubigney et~al., 2013) \hspace{.5em}L.~Daubigney, M.~Geist, \andname{}
+  O.~Pietquin, 2013.
+\newblock Model-free pomdp optimisation of tutoring systems with echo-state
+  networks.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Deng et~al.}(2013){Deng, Li, Huang, Yao, Yu, Seide, Seltzer, Zweig,
   He, Williams, Gong, \andnamec{} Acero}]{Deng2013}
@@ -310,7 +321,7 @@
   R.~Pieraccini, 1997.
 \newblock User modeling for spoken dialogue system evaluation.
 \newblock In Proceedings of \textit{ Automatic Speech Recognition and
-  Understanding, 1997. Proceedings., 1997 IEEE Workshop on}.
+  Understanding}.
 
 \bibitem[{Edlund et~al.}(2008){Edlund, Gustafson, Heldner, \andnamec{}
   Hjalmarsson}]{Edlund2008}
@@ -324,8 +335,8 @@
 (Ekeinhor-Komi et~al., 2014) \hspace{.5em}T.~Ekeinhor-Komi, H.~Falih,
   C.~Chardenon, R.~Laroche, \andname{} F.~Lefevre, 2014.
 \newblock Un assistant vocal personnalisable.
-\newblock In Proceedings of \textit{ Proceedings of the 21st Conférence sur le
-  Traitement Automatique des Langues Naturelles (TALN)}.
+\newblock In Proceedings of \textit{ the 21st Conf/'erence sur le Traitement
+  Automatique des Langues Naturelles (TALN)}.
 
 \bibitem[{El~Asri et~al.}(2014){El~Asri, Khouzaimi, Laroche, \andnamec{}
   Pietquin}]{El-Asri2014d}
@@ -340,8 +351,8 @@
 (El~Asri \andnamec{} Laroche, 2013) \hspace{.5em}L.~El~Asri \andname{}
   R.~Laroche, 2013.
 \newblock Will my spoken dialogue system be a slow learner ?
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
-  Conference}.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{El~Asri et~al.}(2012){El~Asri, Laroche, \andnamec{}
   Pietquin}]{El-Asri2012}
@@ -372,7 +383,7 @@
 (El~Asri et~al., 2014) \hspace{.5em}L.~El~Asri, R.~Lemonnier, R.~Laroche,
   O.~Pietquin, \andname{} H.~Khouzaimi, 2014.
 \newblock {NASTIA: Negotiating Appointment Setting Interface}.
-\newblock In Proceedings of \textit{ Proceedings of LREC}.
+\newblock In Proceedings of \textit{ LREC}.
 
 \bibitem[{Evanini et~al.}(2008){Evanini, Hunter, Liscombe, Suendermann,
   Dayanidhi, \andnamec{} Pieraccini}]{Evanini2008}
@@ -456,8 +467,8 @@
 (Gasic et~al., 2013) \hspace{.5em}M.~Gasic, C.~Breslin, M.~Henderson, D.~Kim,
   M.~Szummer, B.~Thomson, P.~Tsiakoulis, \andname{} S.~Young, 2013.
 \newblock Pomdp-based dialogue manager adaptation to extended domains.
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
-  Conference}.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Ghigi et~al.}(2014){Ghigi, Eskenazi, Torres, \andnamec{}
   Lee}]{Ghigi2014}
@@ -492,8 +503,8 @@
   Y.~Vanrompay, 2013.
 \newblock Demonstration of the parlance system: a data-driven incremental,
   spoken dialogue system for interactive search.
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
-  Conference}.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Hirasawa et~al.}(1999){Hirasawa, Nakano, Kawabata, \andnamec{}
   Aikawa}]{Hirasawa1999}
@@ -514,8 +525,8 @@
 (Huet et~al., 2013) \hspace{.5em}S.~Huet, E.~Manishina, \andname{}
   F.~Lef{\`e}vre, 2013.
 \newblock Factored machine translation systems for russian-english.
-\newblock \textit{ Proceedings of the Eighth Workshop on Statistical Machine
-  Translation\/}, 152--155.
+\newblock \textit{ the Eighth Workshop on Statistical Machine Translation\/},
+  152--155.
 
 \bibitem[{Ilkin \andnamec{} Sturt}(2011){Ilkin \andnamec{} Sturt}]{Ilkin2011}
 (Ilkin \andnamec{} Sturt, 2011) \hspace{.5em}Z.~Ilkin \andname{} P.~Sturt,
@@ -568,24 +579,24 @@
   J.~Lieske, A.~Reddy, E.~Selfridge, S.~Stoyanchev, B.~Vasilieff, \andname{}
   J.~Wilpon, 2014.
 \newblock Mva: The multimodal virtual assistant.
-\newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Jonsdottir et~al.}(2008){Jonsdottir, Thorisson, \andnamec{}
   Nivel}]{Jonsdottir2008}
 (Jonsdottir et~al., 2008) \hspace{.5em}G.~R. Jonsdottir, K.~R. Thorisson,
   \andname{} E.~Nivel, 2008.
 \newblock Learning smooth, human-like turntaking in realtime dialogue.
-\newblock In Proceedings of \textit{ In Proceedings of Intelligent Virtual
-  Agents (IVA 08},  162--175. Springer.
+\newblock In Proceedings of \textit{ Intelligent Virtual Agents (IVA 08},
+  162--175. Springer.
 
 \bibitem[{Jordan et~al.}(2015){Jordan, Albacete, \andnamec{} Katz}]{Jordan2015}
 (Jordan et~al., 2015) \hspace{.5em}P.~Jordan, P.~Albacete, \andname{} S.~Katz,
   2015.
 \newblock Exploring the effects of redundancy within a tutorial dialogue
   system: Restating students' responses.
-\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SigDial)}.
+\newblock In Proceedings of \textit{ the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Khouzaimi et~al.}(2014a){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2014c}
@@ -593,15 +604,15 @@
   F.~Lef\`evre, 2014a.
 \newblock Dictanum : syst\`eme de dialogue incr\'emental pour la dict\'ee de
   num\'eros.
-\newblock In Proceedings of \textit{ Proceedings of the TALN 2014 Conference}.
+\newblock In Proceedings of \textit{ the TALN 2014 Conference}.
 
 \bibitem[{Khouzaimi et~al.}(2014b){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2014a}
 (Khouzaimi et~al., 2014b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
   F.~Lef\`evre, 2014b.
 \newblock An easy method to make dialogue systems incremental.
-\newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Khouzaimi et~al.}(2015a){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2015a}
@@ -609,32 +620,31 @@
   F.~Lef\`evre, 2015a.
 \newblock Dialogue efficiency evaluation of turn-taking phenomena in a
   multi-layer incremental simulated environment.
-\newblock In Proceedings of \textit{ Proceedings of the HCI International 2015
-  Conference}.
+\newblock In Proceedings of \textit{ the HCI International 2015 Conference}.
 
 \bibitem[{Khouzaimi et~al.}(2015b){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2015b}
 (Khouzaimi et~al., 2015b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
   F.~Lef\`evre, 2015b.
 \newblock Optimising turn-taking strategies with reinforcement learning.
-\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Khouzaimi et~al.}(2015c){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2015c}
 (Khouzaimi et~al., 2015c) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
   F.~Lef\`evre, 2015c.
 \newblock Turn-taking phenomena in incremental dialogue systems.
-\newblock In Proceedings of \textit{ Proceedings of the 2015 Conference on
-  Empirical Methods in Natural Language Processing (EMNLP)}.
+\newblock In Proceedings of \textit{ the 2015 Conference on Empirical Methods
+  in Natural Language Processing (EMNLP)}.
 
 \bibitem[{Khouzaimi et~al.}(2016a){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2016a}
 (Khouzaimi et~al., 2016a) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
   F.~Lef\`evre, 2016a.
 \newblock Incremental human-machine dialogue simulation.
-\newblock In Proceedings of \textit{ Proceedings of the International Workshop
-  on Spoken Dialogue Systems (IWSDS)}.
+\newblock In Proceedings of \textit{ the International Workshop on Spoken
+  Dialogue Systems (IWSDS)}.
 
 \bibitem[{Khouzaimi et~al.}(2016b){Khouzaimi, Laroche, \andnamec{}
   Lef\`evre}]{Khouzaimi2016b}
@@ -657,34 +667,34 @@
 (Kim \andnamec{} Banchs, 2014) \hspace{.5em}S.~Kim \andname{} R.~E. Banchs,
   2014.
 \newblock Sequential labeling for tracking dynamic dialog states.
-\newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Konolige \andnamec{} Pollack}(1993){Konolige \andnamec{}
   Pollack}]{Konolige1993}
 (Konolige \andnamec{} Pollack, 1993) \hspace{.5em}K.~Konolige \andname{} M.~E.
   Pollack, 1993.
 \newblock A representationalist theory of intention.
-\newblock In Proceedings of \textit{ Proceedings of the 13th International
-  Joint Conference on Artifical Intelligence (IJCAI)}.
+\newblock In Proceedings of \textit{ the 13th International Joint Conference on
+  Artifical Intelligence (IJCAI)}.
 
 \bibitem[{Laroche}(2010){Laroche}]{Laroche2010a}
 (Laroche, 2010) \hspace{.5em}R.~Laroche, 2010.
 \newblock \textit{ Raisonnement sur les incertitudes et apprentissage pour les
   systemes de dialogue conventionnels}.
-\newblock Th\`ese de Doctorat, Paris VI University.
+\newblock Phd Thesis, Paris VI University.
 
 \bibitem[{Laroche}(2014){Laroche}]{Laroche2014}
 (Laroche, 2014) \hspace{.5em}R.~Laroche, 2014.
 \newblock {CFAsT : Content Finder AssistanT}.
-\newblock In Proceedings of \textit{ Proceedings of the 21st Conf\'erence sur
-  le Traitement Automatique des Langues Naturelles (TALN)}.
+\newblock In Proceedings of \textit{ the 21st Conf\'erence sur le Traitement
+  Automatique des Langues Naturelles (TALN)}.
 
 \bibitem[{Laroche}(2015){Laroche}]{Laroche2015}
 (Laroche, 2015) \hspace{.5em}R.~Laroche, 2015.
 \newblock Content finder assistant.
-\newblock In Proceedings of \textit{ Proceedings of the 18th International
-  Conference on Intelligence in Next Generation Networks (ICIN)}. IEEE.
+\newblock In Proceedings of \textit{ the 18th International Conference on
+  Intelligence in Next Generation Networks (ICIN)}.
 
 \bibitem[{Laroche et~al.}(2008){Laroche, Bouchon-Meunier, \andnamec{}
   Bretier}]{Laroche2008}
@@ -708,8 +718,8 @@
 (Laroche et~al., 2013) \hspace{.5em}R.~Laroche, L.~Roussarie, P.~Baczyk,
   \andname{} J.~Dziekan, 2013.
 \newblock Cooking coach spoken/multimodal dialogue systems.
-\newblock In Proceedings of \textit{ Proceedings of the IJCAI Workshop on
-  Cooking with Computers}.
+\newblock In Proceedings of \textit{ the IJCAI Workshop on Cooking with
+  Computers}.
 
 \bibitem[{Lef\`evre et~al.}(2012){Lef\`evre, Mostefa, Besacier, Est\`eve,
   Quignard, Camelin, Favre, Jabaian, \andnamec{} Rojas-Barahona}]{Lefevre2012}
@@ -718,23 +728,33 @@
   Rojas-Barahona, 2012.
 \newblock Leveraging study of robustness and portability of spoken language
   understanding systems across languages and domains: the portmedia corpora.
-\newblock In Proceedings of \textit{ Proceedings of the Eight International
-  Conference on Language Resources and Evaluation (LREC'12)}.
+\newblock In Proceedings of \textit{ the Eight International Conference on
+  Language Resources and Evaluation (LREC'12)}.
 
 \bibitem[{Lemon et~al.}(2003){Lemon, Cavedon, \andnamec{} Kelly}]{Lemon2003}
 (Lemon et~al., 2003) \hspace{.5em}O.~Lemon, L.~Cavedon, \andname{} B.~Kelly,
   2003.
 \newblock Managing dialogue interaction: A multi-layered approach.
-\newblock In Proceedings of \textit{ Proceedings of the 4th SIGDIAL Workshop on
-  Discourse and Dialogue}.
+\newblock In Proceedings of \textit{ the 4th SIGDIAL Workshop on Discourse and
+  Dialogue}.
+
+\bibitem[{Lemon et~al.}(2006){Lemon, Georgila, Henderson, \andnamec{}
+  Stuttle}]{Lemon2006}
+(Lemon et~al., 2006) \hspace{.5em}O.~Lemon, K.~Georgila, J.~Henderson,
+  \andname{} M.~Stuttle, 2006.
+\newblock An isu dialogue system exhibiting reinforcement learning of dialogue
+  policies: Generic slot-filling in the talk in-car system.
+\newblock In Proceedings of \textit{ the 11th Conference of the European
+  Chapter of the Association for Computational Linguistics}, EACL '06,
+  119--122.
 
 \bibitem[{Lemon \andnamec{} Pietquin}(2007){Lemon \andnamec{}
   Pietquin}]{Lemon2007}
 (Lemon \andnamec{} Pietquin, 2007) \hspace{.5em}O.~Lemon \andname{}
   O.~Pietquin, 2007.
 \newblock Machine learning for spoken dialogue systems.
-\newblock In Proceedings of \textit{ Proceedings of the European Conference on
-  Speech Communication and Technologies (Interspeech'07)}.
+\newblock In Proceedings of \textit{ the European Conference on Speech
+  Communication and Technologies (Interspeech'07)}.
 
 \bibitem[{Levelt}(1989){Levelt}]{Levelt1989}
 (Levelt, 1989) \hspace{.5em}W.~J.~M. Levelt, 1989.
@@ -762,14 +782,13 @@
 (Lock, 1965) \hspace{.5em}K.~Lock, 1965.
 \newblock Structuring programs for multiprogram time-sharing on-line
   applications.
-\newblock In Proceedings of \textit{ AFIPS '65 (Fall, part I) Proceedings of
-  the November 30--December 1, 1965, fall joint computer conference, part I}.
+\newblock In Proceedings of \textit{ AFIPS '65 (Fall, part I)}.
 
 \bibitem[{Louis}(2002){Louis}]{Louis2002}
 (Louis, 2002) \hspace{.5em}V.~Louis, 2002.
 \newblock \textit{ Conception et mise en oeuvre de mod\`eles formels du calcul
   de plans d'action complexes par un agent rationnel dialoguant}.
-\newblock Th\`ese de Doctorat, Universit\'e de Caen/Basse-Normandie, France.
+\newblock Phd Thesis, Universit\'e de Caen/Basse-Normandie, France.
 
 \bibitem[{Lu et~al.}(2011){Lu, Nishimoto, \andnamec{} Minematsu}]{Lu2011}
 (Lu et~al., 2011) \hspace{.5em}D.~Lu, T.~Nishimoto, \andname{} N.~Minematsu,
@@ -782,7 +801,7 @@
 (Macherey, 2009) \hspace{.5em}K.~Macherey, 2009.
 \newblock \textit{ Statistical methods in natural language understanding and
   spoken dialogue systems.}
-\newblock Th\`ese de Doctorat.
+\newblock Phd Thesis.
 
 \bibitem[{Mairesse et~al.}(2010){Mairesse, Ga{\v{s}}i{\'c},
   Jur{\v{c}}{\'\i}{\v{c}}ek, Keizer, Thomson, Yu, \andnamec{}
@@ -792,9 +811,9 @@
   S.~Young, 2010.
 \newblock Phrase-based statistical language generation using graphical models
   and active learning.
-\newblock In Proceedings of \textit{ Proceedings of the 48th Annual Meeting of
-  the Association for Computational Linguistics},  1552--1561. Association for
-  Computational Linguistics.
+\newblock In Proceedings of \textit{ the 48th Annual Meeting of the Association
+  for Computational Linguistics},  1552--1561. Association for Computational
+  Linguistics.
 
 \bibitem[{Manishina et~al.}(2016){Manishina, Jabaian, Huet, \andnamec{}
   Lef\`evre}]{Manishina2016}
@@ -802,8 +821,8 @@
   \andname{} F.~Lef\`evre, 2016.
 \newblock Automatic corpus extension for data-driven natural language
   generation.
-\newblock In Proceedings of \textit{ Proceedings of the Language Resources and
-  Evaluation Conference (LREC)}.
+\newblock In Proceedings of \textit{ the Language Resources and Evaluation
+  Conference (LREC)}.
 
 \bibitem[{Matthias}(2009){Matthias}]{Matthias2009}
 (Matthias, 2009) \hspace{.5em}G.~M. Matthias, 2009.
@@ -823,15 +842,14 @@
   Hayes, 1969.
 \newblock Some philosophical problems from the standpoint of artificial
   intelligence.
-\newblock In Proceedings of \textit{ Machine Intelligence},  463--502.
+\newblock In Proceedings of \textit{ Machine Intelligence Journal},  463--502.
 
 \bibitem[{McGraw \andnamec{} Gruenstein}(2012){McGraw \andnamec{}
   Gruenstein}]{McGraw2012}
 (McGraw \andnamec{} Gruenstein, 2012) \hspace{.5em}I.~McGraw \andname{}
   A.~Gruenstein, 2012.
 \newblock Estimating word-stability during incremental speech recognition.
-\newblock In Proceedings of \textit{ Proceedings of the INTERSPEECH 2012
-  Conference}.
+\newblock In Proceedings of \textit{ the INTERSPEECH 2012 Conference}.
 
 \bibitem[{Meena et~al.}(2013){Meena, Skantze, \andnamec{}
   Gustafson}]{Meena2013}
@@ -839,22 +857,21 @@
   J.~Gustafson, 2013.
 \newblock A data-driven model for timing feedback in a map task dialogue
   system.
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2013
-  Conference}.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Meyer}(2006){Meyer}]{Meyer2006}
 (Meyer, 2006) \hspace{.5em}G.~Meyer, 2006.
 \newblock \textit{ Formalisation logique de pr\'ef\'erences qualitatives pour
   la s\'election de la r\'eaction d'un agent rationnel dialoguant}.
-\newblock Th\`ese de Doctorat, Universit\'e de Paris XI.
+\newblock Phd Thesis, Universit\'e de Paris XI.
 
 \bibitem[{Mitchell et~al.}(2014){Mitchell, Bohus, \andnamec{}
   Kamar}]{Mitchell2014}
 (Mitchell et~al., 2014) \hspace{.5em}M.~Mitchell, D.~Bohus, \andname{}
   E.~Kamar, 2014.
 \newblock Crowdsourcing language generation templates for dialogue systems.
-\newblock In Proceedings of \textit{ Proceedings of the INLG and SIGDIAL 2014
-  Joint Session}.
+\newblock In Proceedings of \textit{ the INLG and SIGDIAL 2014 Joint Session}.
 
 \bibitem[{Mohamed et~al.}(2009){Mohamed, Dahl, \andnamec{}
   Hinton}]{Mohamed2009}
@@ -886,9 +903,9 @@
 (Paek, 2007) \hspace{.5em}T.~Paek, 2007.
 \newblock Toward evaluation that leads to best practices: reconciling dialog
   evaluation in research and industry.
-\newblock In Proceedings of \textit{ Proceedings of the Workshop on Bridging
-  the Gap: Academic and Industrial Research in Dialog Technologies},  40--47.
-  Association for Computational Linguistics (ACL).
+\newblock In Proceedings of \textit{ the Workshop on Bridging the Gap: Academic
+  and Industrial Research in Dialog Technologies},  40--47. Association for
+  Computational Linguistics (ACL).
 
 \bibitem[{Paek \andnamec{} Pieraccini}(2008){Paek \andnamec{}
   Pieraccini}]{Paek2008}
@@ -917,8 +934,8 @@
   J.~Huerta, 2005.
 \newblock Where do we go from here? research and commercial spoken dialog
   systems.
-\newblock In Proceedings of \textit{ Proceedings of the 6th SIGdial Workshop on
-  Discourse and Dialogue}.
+\newblock In Proceedings of \textit{ the 6th SIGDIAL Workshop on Discourse and
+  Dialogue}.
 
 \bibitem[{Pietquin \andnamec{} Beaufort}(2005){Pietquin \andnamec{}
   Beaufort}]{Pietquin2005}
@@ -942,17 +959,16 @@
   \andname{} F.~Jur\v{c}\'{i}\v{c}ek, 2014.
 \newblock Free on-line speech recogniser based on kaldi asr toolkit producing
   word posterior lattices.
-\newblock In Proceedings of \textit{ Proceedings of the 15th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 15th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Potet et~al.}(2011){Potet, Rubino, Lecouteux, Huet, Blanchon,
   Besacier, \andnamec{} Lefevre}]{Potet2011}
 (Potet et~al., 2011) \hspace{.5em}M.~Potet, R.~Rubino, B.~Lecouteux, S.~Huet,
   H.~Blanchon, L.~Besacier, \andname{} F.~Lefevre, 2011.
 \newblock The liga (lig/lia) machine translation system for wmt 2011.
-\newblock In Proceedings of \textit{ Proceedings of the Sixth Workshop on
-  Statistical Machine Translation},  440--446. Association for Computational
-  Linguistics.
+\newblock In Proceedings of \textit{ the Sixth Workshop on Statistical Machine
+  Translation},  440--446. Association for Computational Linguistics.
 
 \bibitem[{Povey et~al.}(2011){Povey, Ghoshal, Boulianne, Burget, Glembek, Goel,
   Hannemann, Motlicek, Qian, Schwarz, Silovsky, Stemmer, \andnamec{}
@@ -970,8 +986,8 @@
   P.~Bretier, 2010.
 \newblock Enhanced monitoring tools and online dialogue optimisation merged
   into a new spoken dialogue system design experience.
-\newblock In Proceedings of \textit{ Proceedings of the 11h Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 11h Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Raux \andnamec{} Eskenazi}(2007){Raux \andnamec{}
   Eskenazi}]{Raux2007}
@@ -987,16 +1003,17 @@
   2008.
 \newblock Optimizing endpointing thresholds using dialogue features in a spoken
   dialogue system.
-\newblock In Proceedings of \textit{ SIGDIAL}.
+\newblock In Proceedings of \textit{ the 9th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Raux \andnamec{} Eskenazi}(2009){Raux \andnamec{}
   Eskenazi}]{Raux2009}
 (Raux \andnamec{} Eskenazi, 2009) \hspace{.5em}A.~Raux \andname{} M.~Eskenazi,
   2009.
 \newblock A finite-state turn-taking model for spoken dialog systems.
-\newblock In Proceedings of \textit{ Proceedings of Human Language
-  Technologies: The 2009 Annual Conference of the North American Chapter of the
-  Association for Computational Linguistics}, NAACL '09,  629--637.
+\newblock In Proceedings of \textit{ Human Language Technologies: The 2009
+  Annual Conference of the North American Chapter of the Association for
+  Computational Linguistics}, NAACL '09,  629--637.
 
 \bibitem[{Raux \andnamec{} Eskenazi}(2012){Raux \andnamec{}
   Eskenazi}]{Raux2012}
@@ -1006,6 +1023,12 @@
   systems.
 \newblock \textit{ ACM Transactions on Speech and Language
   Processing\/}~\textit{ 9\/}(1), 1:1--1:23.
+
+\bibitem[{Richard~Bellman}(1959){Richard~Bellman}]{Bellman1959}
+(Richard~Bellman, 1959) \hspace{.5em}S.~D. Richard~Bellman, 1959.
+\newblock Functional approximations and dynamic programming.
+\newblock \textit{ Mathematical Tables and Other Aids to
+  Computation\/}~\textit{13}, 247--251.
 
 \bibitem[{Rieser \andnamec{} Lemon}(2011){Rieser \andnamec{}
   Lemon}]{Rieser2011b}
@@ -1021,8 +1044,8 @@
   \andname{} E.~Horvitz, 2013.
 \newblock Look versus leap: Computing value of information with
   high-dimensional streaming evidence.
-\newblock In Proceedings of \textit{ Proceedings of the Twenty-Third
-  International Joint Conference on Artificial Intelligence (IJCAI)}.
+\newblock In Proceedings of \textit{ the Twenty-Third International Joint
+  Conference on Artificial Intelligence (IJCAI)}.
 
 \bibitem[{Rubino et~al.}(2012){Rubino, Huet, Avignon, Lefevre, \andnamec{}
   Linares}]{Rubino2012}
@@ -1034,8 +1057,8 @@
 \bibitem[{Russell}(1998){Russell}]{Russell1998}
 (Russell, 1998) \hspace{.5em}S.~Russell, 1998.
 \newblock Learning agents for uncertain environments (extended abstract).
-\newblock In Proceedings of \textit{ Proceedings of the Eleventh Annual
-  Conference on Computational Learning Theory}.
+\newblock In Proceedings of \textit{ the Eleventh Annual Conference on
+  Computational Learning Theory}.
 
 \bibitem[{Sacks et~al.}(1974){Sacks, Schegloff, \andnamec{}
   Jefferson}]{Sacks1974}
@@ -1049,7 +1072,7 @@
 (Sadek, 1991) \hspace{.5em}M.~D. Sadek, 1991.
 \newblock \textit{ Attitudes Mentales et Interaction Rationnelle : vers une
   th\'eorie formelle de la Communication}.
-\newblock Th\`ese de Doctorat, Universit\'e de Rennes I, France.
+\newblock Phd Thesis, Universit\'e de Rennes I, France.
 
 \bibitem[{Schatzmann et~al.}(2007){Schatzmann, Thomson, Weilhammer, Ye,
   \andnamec{} Young}]{Schatzmann2007}
@@ -1087,8 +1110,8 @@
   2012.
 \newblock A parameterized and annotated spoken dialog corpus of the cmu let's
   go bus information system.
-\newblock In Proceedings of \textit{ Proceedings of the Eight International
-  Conference on Language Resources and Evaluation (LREC'12)}.
+\newblock In Proceedings of \textit{ the Eight International Conference on
+  Language Resources and Evaluation (LREC'12)}.
 
 \bibitem[{Schultz}(1998){Schultz}]{Schultz1998}
 (Schultz, 1998) \hspace{.5em}W.~Schultz, 1998.
@@ -1133,8 +1156,8 @@
 (Selfridge et~al., 2011) \hspace{.5em}E.~O. Selfridge, I.~Arizmendi, P.~A.
   Heeman, \andname{} J.~D. Williams, 2011.
 \newblock Stability and accuracy in incremental speech recognition.
-\newblock In Proceedings of \textit{ Proceedings of the SIGDIAL 2011
-  Conference}.
+\newblock In Proceedings of \textit{ the 12th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Selfridge et~al.}(2012){Selfridge, Arizmendi, Heeman, \andnamec{}
   Williams}]{Selfridge2012a}
@@ -1142,8 +1165,8 @@
   Heeman, \andname{} J.~D. Williams, 2012.
 \newblock Integrating incremental speech recognition and pomdp-based dialogue
   systems.
-\newblock In Proceedings of \textit{ Proceedings of the 13th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue}.
+\newblock In Proceedings of \textit{ the 13th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Selfridge \andnamec{} Heeman}(2012){Selfridge \andnamec{}
   Heeman}]{Selfridge2012b}
@@ -1151,16 +1174,16 @@
   P.~A. Heeman, 2012.
 \newblock A temporal simulator for developing turn-taking methods for spoken
   dialogue systems.
-\newblock In Proceedings of \textit{ Proceedings of the 13th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue}.
+\newblock In Proceedings of \textit{ the 13th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Sidner et~al.}(2013){Sidner, Bickmore, Rich, Barry, Ring, Behrooz,
   \andnamec{} Shayganfar}]{Sidner2013}
 (Sidner et~al., 2013) \hspace{.5em}C.~Sidner, T.~Bickmore, C.~Rich, B.~Barry,
   L.~Ring, M.~Behrooz, \andname{} M.~Shayganfar, 2013.
 \newblock Demonstration of an always-on companion for isolated older adults.
-\newblock In Proceedings of \textit{ Proceedings of the 14th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Singh et~al.}(2002){Singh, Litman, Kearns, \andnamec{}
   Walker}]{Singh2002}
@@ -1183,8 +1206,8 @@
 (Skantze \andnamec{} Johansson, 2015) \hspace{.5em}G.~Skantze \andname{}
   M.~Johansson, 2015.
 \newblock Modelling situated human-robot interaction using iristk.
-\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Skantze \andnamec{} Schlangen}(2009){Skantze \andnamec{}
   Schlangen}]{Skantze2009}
@@ -1254,8 +1277,8 @@
 (Walker et~al., 1997) \hspace{.5em}M.~A. Walker, D.~J. Litman, C.~A. Kamm,
   \andname{} A.~Abella, 1997.
 \newblock Paradise: a framework for evaluating spoken dialogue agents.
-\newblock In Proceedings of \textit{ Proceedings of the eighth conference on
-  European chapter of the Association for Computational Linguistics}.
+\newblock In Proceedings of \textit{ the eighth conference on European chapter
+  of the Association for Computational Linguistics}.
 
 \bibitem[{Wang et~al.}(2014){Wang, Chen, Wang, Tian, Wu, \andnamec{}
   Wang}]{Wang2014}
@@ -1263,20 +1286,20 @@
   \andname{} H.~Wang, 2014.
 \newblock Policy learning for domain selection in an extensible multi-domain
   spoken dialogue system.
-\newblock In Proceedings of \textit{ Proceedings of the 19th Conference on
-  Empirical Methods in Natural Language Processing (EMNLP)}.
+\newblock In Proceedings of \textit{ the 19th Conference on Empirical Methods
+  in Natural Language Processing (EMNLP)}.
 
 \bibitem[{Watkins}(1989){Watkins}]{Watkins1989}
 (Watkins, 1989) \hspace{.5em}C.~J. C.~H. Watkins, 1989.
 \newblock \textit{ Learning from Delayed Rewards}.
-\newblock Th\`ese de Doctorat, King's College.
+\newblock Phd Thesis, King's College.
 
 \bibitem[{Wei \andnamec{} Rudnicky}(1999){Wei \andnamec{} Rudnicky}]{Wei1999}
 (Wei \andnamec{} Rudnicky, 1999) \hspace{.5em}X.~Wei \andname{} A.~Rudnicky,
   1999.
 \newblock n agenda-based dialog management architecture for spoken language
   systems.
-\newblock In Proceedings of \textit{ Proceedings of IEEE ASRU}.
+\newblock In Proceedings of \textit{ IEEE ASRU}.
 
 \bibitem[{Williams}(2008){Williams}]{Williams2008}
 (Williams, 2008) \hspace{.5em}J.~D. Williams, 2008.
@@ -1290,18 +1313,18 @@
   S.~Young, 2007.
 \newblock Partially observable markov decision processes for spoken dialog
   systems.
-\newblock \textit{ Comput. Speech Lang.\/}.
+\newblock \textit{ Computer Speech and Language Journal\/}.
 
 \bibitem[{Wir\'en}(1992){Wir\'en}]{Wiren1992}
 (Wir\'en, 1992) \hspace{.5em}M.~Wir\'en, 1992.
 \newblock \textit{ Studies in Incremental Natural Language Analysis}.
-\newblock Th\`ese de Doctorat, Linkoping University, Linkoping, Sweden.
+\newblock Phd Thesis, Linkoping University, Linkoping, Sweden.
 
 \bibitem[{Witt}(2011){Witt}]{Witt2011}
 (Witt, 2011) \hspace{.5em}S.~Witt, 2011.
 \newblock A global experience metric for dialog management in spoken dialog
   systems.
-\newblock \textit{ Proceedings of SemDial\/}.
+\newblock \textit{ SemDial\/}.
 
 \bibitem[{Wlodarczak \andnamec{} Wagner}(2013){Wlodarczak \andnamec{}
   Wagner}]{Wlodarczak2013}
@@ -1309,7 +1332,7 @@
   P.~Wagner, 2013.
 \newblock Effects of talk-spurt silence boundary thresholds on distribution of
   gaps and overlaps.
-\newblock In Proceedings of \textit{ INTERSPEECH Proceedings}.
+\newblock In Proceedings of \textit{ INTERSPEECH}.
 
 \bibitem[{Yngve}(1970){Yngve}]{Yngve1970}
 (Yngve, 1970) \hspace{.5em}V.~H. Yngve, 1970.
@@ -1340,7 +1363,7 @@
   2015.
 \newblock An incremental turn-taking model with active system barge-in for
   spoken dialog systems.
-\newblock In Proceedings of \textit{ Proceedings of the 16th Annual Meeting of
-  the Special Interest Group on Discourse and Dialogue (SIGDIAL)}.
+\newblock In Proceedings of \textit{ the 16th Annual Meeting of the Special
+  Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \end{thebibliography}
