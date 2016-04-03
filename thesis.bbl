@@ -111,6 +111,13 @@
 \newblock \textit{ Dynamic Programming}.
 \newblock Princeton University Press.
 
+\bibitem[{Ben~Jannet et~al.}(2015){Ben~Jannet, Galibert, Adda-Decker,
+  \andnamec{} Rosset}]{BenJannet2015}
+(Ben~Jannet et~al., 2015) \hspace{.5em}M.~A. Ben~Jannet, O.~Galibert,
+  M.~Adda-Decker, \andname{} S.~Rosset, 2015.
+\newblock How to evaluate asr errors impact on ner?
+\newblock In Proceedings of \textit{ Errare Workshop}.
+
 \bibitem[{Bengio et~al.}(2003){Bengio, Ducharme, Vincent, \andnamec{}
   Janvin}]{Bengio2003}
 (Bengio et~al., 2003) \hspace{.5em}Y.~Bengio, R.~Ducharme, P.~Vincent,
@@ -331,9 +338,9 @@
 \newblock \textit{ Speech Communication\/}~\textit{50}, 630--645.
 
 \bibitem[{Ekeinhor-Komi et~al.}(2014){Ekeinhor-Komi, Falih, Chardenon, Laroche,
-  \andnamec{} Lefevre}]{EkeinhorKomi2014}
+  \andnamec{} Lef\`evre}]{EkeinhorKomi2014}
 (Ekeinhor-Komi et~al., 2014) \hspace{.5em}T.~Ekeinhor-Komi, H.~Falih,
-  C.~Chardenon, R.~Laroche, \andname{} F.~Lefevre, 2014.
+  C.~Chardenon, R.~Laroche, \andname{} F.~Lef\`evre, 2014.
 \newblock Un assistant vocal personnalisable.
 \newblock In Proceedings of \textit{ the 21st Conf/'erence sur le Traitement
   Automatique des Langues Naturelles (TALN)}.
@@ -424,17 +431,17 @@
   dialogue management.
 \newblock In Proceedings of \textit{ MLIS}.
 
-\bibitem[{Ferreira \andnamec{} Lefevre}(2015){Ferreira \andnamec{}
-  Lefevre}]{Ferreira2015c}
-(Ferreira \andnamec{} Lefevre, 2015) \hspace{.5em}E.~Ferreira \andname{}
-  F.~Lefevre, 2015.
+\bibitem[{Ferreira \andnamec{} Lef\`evre}(2015){Ferreira \andnamec{}
+  Lef\`evre}]{Ferreira2015c}
+(Ferreira \andnamec{} Lef\`evre, 2015) \hspace{.5em}E.~Ferreira \andname{}
+  F.~Lef\`evre, 2015.
 \newblock Reinforcement-learning based dialogue system for human--robot
   interactions with socially-inspired rewards.
 \newblock \textit{ Computer Speech \& Language\/}~\textit{ 34\/}(1), 256--274.
 
-\bibitem[{Ferreira et~al.}(2015c){Ferreira, Milliez, Lefevre, \andnamec{}
+\bibitem[{Ferreira et~al.}(2015c){Ferreira, Milliez, Lef\`evre, \andnamec{}
   Alami}]{Ferreira2015d}
-(Ferreira et~al., 2015c) \hspace{.5em}E.~Ferreira, G.~Milliez, F.~Lefevre,
+(Ferreira et~al., 2015c) \hspace{.5em}E.~Ferreira, G.~Milliez, F.~Lef\`evre,
   \andname{} R.~Alami, 2015c.
 \newblock Users' belief awareness in reinforcement learning-based situated
   human-robot dialogue management.
@@ -544,9 +551,9 @@
   Operating Systems Theory and Practice}.
 
 \bibitem[{Jabaian et~al.}(2013){Jabaian, Besacier, \andnamec{}
-  Lefevre}]{Jabaian2013}
+  Lef\`evre}]{Jabaian2013}
 (Jabaian et~al., 2013) \hspace{.5em}B.~Jabaian, L.~Besacier, \andname{}
-  F.~Lefevre, 2013.
+  F.~Lef\`evre, 2013.
 \newblock Comparison and combination of lightly supervised approaches for
   language portability of a spoken language understanding system.
 \newblock \textit{ Audio, Speech, and Language Processing, IEEE Transactions
@@ -963,9 +970,9 @@
   Interest Group on Discourse and Dialogue (SIGDIAL)}.
 
 \bibitem[{Potet et~al.}(2011){Potet, Rubino, Lecouteux, Huet, Blanchon,
-  Besacier, \andnamec{} Lefevre}]{Potet2011}
+  Besacier, \andnamec{} Lef\`evre}]{Potet2011}
 (Potet et~al., 2011) \hspace{.5em}M.~Potet, R.~Rubino, B.~Lecouteux, S.~Huet,
-  H.~Blanchon, L.~Besacier, \andname{} F.~Lefevre, 2011.
+  H.~Blanchon, L.~Besacier, \andname{} F.~Lef\`evre, 2011.
 \newblock The liga (lig/lia) machine translation system for wmt 2011.
 \newblock In Proceedings of \textit{ the Sixth Workshop on Statistical Machine
   Translation},  440--446. Association for Computational Linguistics.
@@ -1047,10 +1054,10 @@
 \newblock In Proceedings of \textit{ the Twenty-Third International Joint
   Conference on Artificial Intelligence (IJCAI)}.
 
-\bibitem[{Rubino et~al.}(2012){Rubino, Huet, Avignon, Lefevre, \andnamec{}
+\bibitem[{Rubino et~al.}(2012){Rubino, Huet, Avignon, Lef\`evre, \andnamec{}
   Linares}]{Rubino2012}
-(Rubino et~al., 2012) \hspace{.5em}R.~Rubino, S.~Huet, F.~Avignon, F.~Lefevre,
-  \andname{} G.~Linares, 2012.
+(Rubino et~al., 2012) \hspace{.5em}R.~Rubino, S.~Huet, F.~Avignon,
+  F.~Lef\`evre, \andname{} G.~Linares, 2012.
 \newblock Statistical post-editing of machine translation for domain
   adaptation.
 
@@ -1250,6 +1257,15 @@
 \newblock Integration of visual and linguistic information in spoken language
   comprehension.
 \newblock \textit{ Science\/}~\textit{268}, 1632--1634.
+
+\bibitem[{Thomson \andnamec{} Young}(2010){Thomson \andnamec{}
+  Young}]{Thomson2010}
+(Thomson \andnamec{} Young, 2010) \hspace{.5em}B.~Thomson \andname{} S.~J.
+  Young, 2010.
+\newblock Bayesian update of dialogue state: {A} {POMDP} framework for spoken
+  dialogue systems.
+\newblock \textit{ Computer Speech {\&} Language\/}~\textit{ 24\/}(4),
+  562--588.
 
 \bibitem[{Thorndike}(1898){Thorndike}]{Thorndike1898}
 (Thorndike, 1898) \hspace{.5em}E.~L. Thorndike, 1898.

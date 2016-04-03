@@ -122,9 +122,9 @@
 \contentsline {section}{\numberline {9.4}Discussion}{138}{section.277}
 \contentsline {paragraph}{Exploration/exploitation:}{142}{section*.279}
 \contentsline {paragraph}{DM-Scheduler co-learning:}{143}{section*.280}
-\contentsline {starchapter}{Liste des illustrations}{145}{section*.280}
-\contentsline {starchapter}{Liste des tableaux}{147}{chapter*.281}
-\contentsline {starchapter}{Bibliographie}{149}{chapter*.282}
+\contentsline {starchapter}{List of Figures}{145}{section*.280}
+\contentsline {starchapter}{List of Tables}{147}{chapter*.281}
+\contentsline {starchapter}{Bibliography}{149}{chapter*.282}
 \contentsline {paragraph}{Automatic speech recognition (ASR):}{165}{section*.285}
 \contentsline {paragraph}{Client:}{165}{section*.286}
 \contentsline {paragraph}{Confidence score:}{165}{section*.287}

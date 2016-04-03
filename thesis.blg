@@ -44,45 +44,45 @@ Warning--page numbers missing in Williams2007
 Warning--no number and no volume in Witt2011
 Warning--page numbers missing in Witt2011
 Warning--page numbers missing in Yu2011
-You've used 181 entries,
+You've used 183 entries,
             2936 wiz_defined-function locations,
-            1635 strings with 37987 characters,
-and the built_in function-call counts, 114125 in all, are:
-= -- 9616
-> -- 7874
+            1646 strings with 38348 characters,
+and the built_in function-call counts, 115440 in all, are:
+= -- 9731
+> -- 7964
 < -- 17
-+ -- 2441
-- -- 2748
-* -- 8005
-:= -- 19856
-add.period$ -- 549
-call.type$ -- 181
-change.case$ -- 1432
-chr.to.int$ -- 174
-cite$ -- 206
-duplicate$ -- 4047
-empty$ -- 7578
-format.name$ -- 3301
-if$ -- 21907
++ -- 2469
+- -- 2780
+* -- 8106
+:= -- 20081
+add.period$ -- 555
+call.type$ -- 183
+change.case$ -- 1448
+chr.to.int$ -- 176
+cite$ -- 208
+duplicate$ -- 4090
+empty$ -- 7664
+format.name$ -- 3341
+if$ -- 22158
 int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 181
-newline$ -- 913
-num.names$ -- 1441
-pop$ -- 1891
+missing$ -- 183
+newline$ -- 923
+num.names$ -- 1457
+pop$ -- 1910
 preamble$ -- 1
-purify$ -- 2521
+purify$ -- 2549
 quote$ -- 0
-skip$ -- 3422
+skip$ -- 3459
 stack$ -- 0
-substring$ -- 4938
-swap$ -- 322
+substring$ -- 5003
+swap$ -- 325
 text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 3482
+type$ -- 3522
 warning$ -- 25
-while$ -- 1191
+while$ -- 1205
 width$ -- 0
-write$ -- 3840
+write$ -- 3882
 (There were 25 warnings)
