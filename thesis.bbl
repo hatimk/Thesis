@@ -116,7 +116,8 @@
 (Ben~Jannet et~al., 2015) \hspace{.5em}M.~A. Ben~Jannet, O.~Galibert,
   M.~Adda-Decker, \andname{} S.~Rosset, 2015.
 \newblock How to evaluate asr errors impact on ner?
-\newblock In Proceedings of \textit{ Errare Workshop}.
+\newblock In Proceedings of \textit{ Errors by Humans and Machines in
+  Multimedia, Multimodal, Multilingual Data Processing (ERRARE)}.
 
 \bibitem[{Bengio et~al.}(2003){Bengio, Ducharme, Vincent, \andnamec{}
   Janvin}]{Bengio2003}
@@ -469,6 +470,13 @@
 \newblock The application of hidden markov models in speech recognition.
 \newblock \textit{ Found. Trends Signal Process.\/}~\textit{1}.
 
+\bibitem[{Galibert et~al.}(2005){Galibert, Illouz, \andnamec{}
+  Rosset}]{Galibert2005}
+(Galibert et~al., 2005) \hspace{.5em}O.~Galibert, G.~Illouz, \andname{}
+  S.~Rosset, 2005.
+\newblock An open-domain, human-computer dialog system.
+\newblock In Proceedings of \textit{ INTERSPEECH}.
+
 \bibitem[{Gasic et~al.}(2013){Gasic, Breslin, Henderson, Kim, Szummer, Thomson,
   Tsiakoulis, \andnamec{} Young}]{Gasic2013}
 (Gasic et~al., 2013) \hspace{.5em}M.~Gasic, C.~Breslin, M.~Henderson, D.~Kim,
@@ -476,6 +484,15 @@
 \newblock Pomdp-based dialogue manager adaptation to extended domains.
 \newblock In Proceedings of \textit{ the 14th Annual Meeting of the Special
   Interest Group on Discourse and Dialogue (SIGDIAL)}.
+
+\bibitem[{Gelin et~al.}(2010){Gelin, d'Alessandro, Le, Deroo, Doukhan,
+  Pelachaud, Rilliard, \andnamec{} Rosset}]{Gelin2010}
+(Gelin et~al., 2010) \hspace{.5em}R.~Gelin, C.~d'Alessandro, Q.~A. Le,
+  O.~Deroo, J.-C. Doukhan, Davidand~Martin, C.~Pelachaud, A.~Rilliard,
+  \andname{} S.~Rosset, 2010.
+\newblock Towards a storytelling humanoid robot.
+\newblock In Proceedings of \textit{ Workshop "Dialog with Robots", AAAI Fall
+  Symposium.}
 
 \bibitem[{Ghigi et~al.}(2014){Ghigi, Eskenazi, Torres, \andnamec{}
   Lee}]{Ghigi2014}
@@ -657,8 +674,8 @@
   Lef\`evre}]{Khouzaimi2016b}
 (Khouzaimi et~al., 2016b) \hspace{.5em}H.~Khouzaimi, R.~Laroche, \andname{}
   F.~Lef\`evre, 2016b.
-\newblock Reinforcement learning applied to incremental spoken dialogue systems
-  (submitted).
+\newblock Reinforcement learning for turn-taking management in incremental
+  spoken dialogue systems.
 \newblock In Proceedings of \textit{ International Joint Conference on
   Artificial Intelligence (IJCAI)}.
 
@@ -1054,6 +1071,16 @@
 \newblock In Proceedings of \textit{ the Twenty-Third International Joint
   Conference on Artificial Intelligence (IJCAI)}.
 
+\bibitem[{Rosset et~al.}(2013){Rosset, Luzzati, Grouin, Vasilescu, Adda-Decker,
+  Bilinski, Camelin, Kahn, Lailler, \andnamec{} Lamel}]{Rosset2013}
+(Rosset et~al., 2013) \hspace{.5em}S.~Rosset, D.~Luzzati, C.~Grouin,
+  I.~Vasilescu, M.~Adda-Decker, E.~Bilinski, N.~Camelin, J.~Kahn, C.~Lailler,
+  \andname{} L.~Lamel, 2013.
+\newblock Human annotation of asr error regions: Is "gravity" a sharable
+  concept for human annotators?
+\newblock In Proceedings of \textit{ Errors by Humans and Machines in
+  Multimedia, Multimodal, Multilingual Data Processing (ERRARE)}.
+
 \bibitem[{Rubino et~al.}(2012){Rubino, Huet, Avignon, Lef\`evre, \andnamec{}
   Linares}]{Rubino2012}
 (Rubino et~al., 2012) \hspace{.5em}R.~Rubino, S.~Huet, F.~Avignon,
@@ -1355,11 +1382,13 @@
 \newblock On getting a word in edgewise.
 \newblock In Proceedings of \textit{ CLS-70}.
 
-\bibitem[{Young}(2006){Young}]{Young2006}
-(Young, 2006) \hspace{.5em}S.~J. Young, 2006.
-\newblock Using pomdps for dialog management.
-\newblock In Proceedings of \textit{ Spoken Language Technology Workshop
-  (SLT)}.
+\bibitem[{Young et~al.}(2010){Young, Ga\v{s}i\'{c}, Keizer, Mairesse,
+  Schatzmann, Thomson, \andnamec{} Yu}]{Young2010}
+(Young et~al., 2010) \hspace{.5em}S.~Young, M.~Ga\v{s}i\'{c}, S.~Keizer,
+  F.~Mairesse, J.~Schatzmann, B.~Thomson, \andname{} K.~Yu, 2010.
+\newblock The hidden information state model: A practical framework for
+  pomdp-based spoken dialogue management.
+\newblock \textit{ Computer Speech and Language\/}~\textit{ 24\/}(2), 150--174.
 
 \bibitem[{Yu et~al.}(2011){Yu, Zen, Mairesse, \andnamec{} Young}]{Yu2011}
 (Yu et~al., 2011) \hspace{.5em}K.~Yu, H.~Zen, F.~Mairesse, \andname{} S.~Young,
