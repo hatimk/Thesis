@@ -221,6 +221,8 @@ However, this approach based on logic has been abandoned for two main reasons. F
       \label{tab:incrnluex}
     \end{table}
 
+    \newpage
+
     This mechanism allows the system to react earlier, even before the end of the user's utterance. On the other hand, allowing the user to interrupt the system does not require incremental capabilities; it has been successfully implemented in non-incremental dialogue systems \cite{Lamel2000,El-Asri2014a}.
 
       \subsection{Advantages of incremental processing}
@@ -299,7 +301,7 @@ Building an incremental TTS module can also be very tricky. In order for the syn
 \subsection{Existing architectures}
 \subsubsection{Sequential paradigm}
 
-A general abstract model of incremental dialogue systems has been introduced in \cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. This view of incremental dialogue systems will be referred to as the \textit{sequential paradigm}.
+A general abstract model of incremental dialogue systems has been introduced in\\\cite{Schlangen2011}. In this approach, the dialogue chain is maintained and each one of the five components is transformed into its incremental version. This view of incremental dialogue systems will be referred to as the \textit{sequential paradigm}.
 
 Each module is composed of three parts, the Left Buffer (LB), the Internal State (IS) and the Right Buffer (RB). As described in Section \ref{soa:architecture}, each module is also characterised by the type of input it processes as well as the type of output it computes. In incremental dialogue, all these data flows have to be divided into small chunks which are called Incremental Units (IU). For example, the audio signal that is given as an input to the ASR module can be divided into 500ms chunks that are processed one by one. Each IU is first added to the LB, then it is taken by the IS for processing and once a result is available, a new IU of a new kind is outputted in the RB. The RB of one module is the LB of the following one in the dialogue chain so the data propagation through the dialogue system is insured.
 
