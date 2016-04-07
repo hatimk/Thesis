@@ -702,6 +702,13 @@
 \newblock In Proceedings of \textit{ the 13th International Joint Conference on
   Artifical Intelligence (IJCAI)}.
 
+\bibitem[{Lamel et~al.}(2000){Lamel, Rosset, Gauvain, Bennacef, Garnier-Rizet,
+  \andnamec{} Prouts}]{Lamel2000}
+(Lamel et~al., 2000) \hspace{.5em}L.~Lamel, S.~Rosset, J.-L. Gauvain,
+  S.~Bennacef, M.~Garnier-Rizet, \andname{} B.~Prouts, 2000.
+\newblock {The LIMSI ARISE System}.
+\newblock \textit{ Speech Communication\/}~\textit{ 31\/}(4), 339--354.
+
 \bibitem[{Laroche}(2010){Laroche}]{Laroche2010a}
 (Laroche, 2010) \hspace{.5em}R.~Laroche, 2010.
 \newblock \textit{ Raisonnement sur les incertitudes et apprentissage pour les
