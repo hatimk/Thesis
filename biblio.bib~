@@ -1,20 +1,6 @@
-@Article{Auer2002,
-author = {Auer, Peter and Cesa-Bianchi, Nicol\`{o} and Fischer, Paul},
-title = {Finite-time Analysis of the Multiarmed Bandit Problem},
-journal = {Machine Learning},
-year = {2002}
-}
-
-@InProceedings{Auer2005,
-author = {Auer, Peter and Ortner, Ronald},
-title = {Online-Regret Bounds for a New Reinforcement-Learning Algorithm},
-booktitle = {1st Austrian Cognitive Vision Workshop},
-year = {2005}
-}
-
 @InProceedings{Auer2006,
 author = {Auer, Peter and Ortner, Ronald},
-booktitle = {NIPS},
+booktitle = {Advances in Neural Information Processing Systems (NIPS)},
 title = {Logarithmic Online Regret Bounds for Undiscounted Reinforcement Learning.},
 year = {2006}
 }
@@ -29,7 +15,7 @@ year = {2006}
 @InProceedings{Aist2007,
 author = {Gregory Aist and James Allen and Ellen Campana and Carlos Gomez Gallo and Scott Stoness and Mary Swift and Michael K. Tanenhaus},
 title = {Incremental understanding in human-computer dialogue and experimental evidence for advantages over nonincremental methods},
-booktitle = {Decalog},
+booktitle = {the 11th Workshop on the Semantics and Pragmatics of Dialogue},
 year = {2007}
 }
 
@@ -49,6 +35,13 @@ year = {1999},
 pages = {247-264}
 }
 
+@InProceedings{Anand1992,
+author = {Anand, Tej and Kahn, Gary S.},
+booktitle = {Innovative Applications of Artificial Intelligence (IAAI)},
+title = {Making Sense of Gigabytes: A System for Knowledge-Based Market Analysis.},
+year = {1992}
+}
+
 @Article{Arnold2000,
 author = {Arnold, Jennifer E. and Eisenband, Janet G. and Brown-Schmidt, Sarah and Trueswell, John C.},
 title = {The rapid use of gender information: evidence of the time course of pronoun resolution from eyetracking},
@@ -62,7 +55,7 @@ year = {2000}
 @InProceedings{Ashok2014,
 author    = {Ashok, Vikas  and  Borodin, Yevgen  and  Stoyanchev, Svetlana  and  Ramakrishnan, IV},
 title     = {Dialogue Act Modeling for Non-Visual Web Access},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -73,24 +66,42 @@ booktitle = {EACL 2009 Workshop on Semantic Representation of Spoken Language - 
 year = {2009}
 }
 
+@Article{Auer2002,
+author = {Auer, Peter and Cesa-Bianchi, Nicol\`{o} and Fischer, Paul},
+title = {Finite-time Analysis of the Multiarmed Bandit Problem},
+journal = {Machine Learning Journal},
+issue_date = {May-June 2002},
+volume = {47},
+number = {2-3},
+pages = {235--256},
+year = {2002}
+}
+
+@InProceedings{Auer2005,
+author = {Auer, Peter and Ortner, Ronald},
+title = {Online-Regret Bounds for a New Reinforcement-Learning Algorithm},
+booktitle = {1st Austrian Cognitive Vision Workshop},
+year = {2005}
+}
+
 @Book{Austin1962,
 author = {Austin, J.L.},
 title = {How to Do Things with Words},
 year = {1962},
-publisher = {Oxford}
+publisher = {Oxford University Press}
 }
 
 @InProceedings{Banchs2013,
 author    = {Banchs, Rafael E.  and  Jiang, Ridong  and  Kim, Seokhwan  and  Niswar, Arthur  and  Yeo, Kheng Hui},
 title     = {AIDA: Artificial Intelligent Dialogue Agent},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{Barlier2015,
 author    = {Barlier, Merwan  and  Laroche, Romain  and  Pietquin, Olivier},
 title     = {Human-Machine Dialogue as a Stochastic Game},
-booktitle = {Proceedings of the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2015}
 }
 
@@ -106,7 +117,7 @@ year = {2003}
 @InProceedings{Baumann2008,
 author = {Timo Baumann},
 title = {Simulating Spoken Dialogue With a Focus on Realistic Turn-Taking},
-booktitle = {Proceedings of the 5th International Workshop on Constraints and Language Processing (CSLP)},
+booktitle = {the 5th International Workshop on Constraints and Language Processing (CSLP)},
 year = {2008}
 }
 
@@ -122,21 +133,21 @@ pages = {113-141}
 @InProceedings{Baumann2012,
 author = {Timo Baumann and David Schlangen},
 title = {Inpro-iSS A component for just-in-time incremental speech synthesis},
-booktitle = {in Proceedings of ACL System Demonstrations},
+booktitle = {ACL System Demonstrations},
 year = {2012}
 }
 
 @InProceedings{Baumann2013,
 author    = {Baumann, Timo  and  Schlangen, David},
 title     = {Open-ended, Extensible System Utterances Are Preferred, Even If They Require Filled Pauses},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2013}
 }
 
 @InProceedings{Baumann2014,
 author = {Timo Baumann},
 title = {Partial Representations Improve the Prosody of Incremental Speech Synthesis},
-booktitle = {Proceedings of Interspeech},
+booktitle = {Interspeech},
 year = {2014}
 }
 
@@ -156,6 +167,15 @@ publisher = {Princeton University Press},
 year = {1957}
 }
 
+@Article{Bellman1959,
+author = {Richard Bellman, Stuart Dreyfus},
+title = {Functional Approximations and Dynamic Programming},
+journal = {Mathematical Tables and Other Aids to Computation},
+pages = {247-251},
+volume = {13},
+year = {1959}
+}
+
 @Article{Bengio2003,
 author = {Bengio, Yoshua and Ducharme, R{\'e}jean and Vincent, Pascal and Janvin, Christian},
 title = {A Neural Probabilistic Language Model},
@@ -165,6 +185,12 @@ pages = {1137--1155},
 year = {2003}
 } 
 
+@InProceedings{BenJannet2015,
+title = {How to evaluate ASR errors impact on NER?},
+author = {Ben Jannet, Mohamed Ameur and Galibert, Olivier and Adda-Decker, Martine and Rosset, Sophie},
+booktitle = {Errors by Humans and Machines in Multimedia, Multimodal, Multilingual Data Processing (ERRARE)},
+year = {2015}
+}
 
 @Book{Berry1985,
 author = {Berry, Donald A. and Fristedt, Bert},
@@ -224,7 +250,7 @@ Year = {2010}
 @InProceedings{Briggs2014,
 author    = {Briggs, Gordon  and  Scheutz, Matthias},
 title     = {Modeling Blame to Avoid Positive Face Threats in Natural Language Generation},
-booktitle = {Proceedings of the INLG and SIGDIAL 2014 Joint Session},
+booktitle = {the INLG and SIGDIAL 2014 Joint Session},
 year      = {2014}
 }
 
@@ -254,10 +280,27 @@ year      = {2010}
 }
 
 @InProceedings{Chandramohan2011,
-author = {Chandramohan, Senthilkumar and Geist, Matthieu and Lef\`vre, Fabrice and Pietquin, Olivier},
+author = {Chandramohan, Senthilkumar and Geist, Matthieu and Lef\`evre, Fabrice and Pietquin, Olivier},
 booktitle = {INTERSPEECH},
 title = {User Simulation in Dialogue Systems Using Inverse Reinforcement Learning.},
 year = {2011}
+}
+
+@inproceedings{chandramohan2012a,
+title={Clustering behaviors of spoken dialogue systems users},
+author={Chandramohan, Senthilkumar and Geist, Matthieu and Lef\`evre, Fabrice and Pietquin, Olivier},
+booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE International Conference on},
+pages={4981--4984},
+year={2012},
+organization={IEEE}
+}
+@inproceedings{chandramohan2012b,
+title={Behavior specific user simulation in spoken dialogue systems},
+author={Chandramohan, Senthilkumar and Geist, Matthieu and Lef{\`e}vre, Fabrice and Pietquin, Olivier},
+booktitle={Speech Communication; 10th ITG Symposium},
+pages={1--4},
+year={2012},
+organization={VDE}
 }
 
 @Article{Chao2012,
@@ -267,18 +310,17 @@ title = {Timing in Multimodal Turn-Taking Interactions: Control and Analysis Usi
 year = {2012}
 }
 
-
 @InProceedings{Chen2013,
 author    = {Yun-Nung Chen and Florian Metze},
 title     = {Multi-Layer Mutually Reinforced Random Walk with Hidden Parameters for Improved Multi-Party Meeting Summarization},
-booktitle = {INTERSPEECH Proceedings},
+booktitle = {INTERSPEECH},
 year      = {2013}
 }
 
 @InProceedings{Chiba2014,
 author    = {Chiba, Yuya  and  Ito, Masashi  and  Nose, Takashi  and  Ito, Akinori},
 title     = {User Modeling by Using Bag-of-Behaviors for Building a Dialog System Sensitive to the Interlocutor's Internal State},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -299,10 +341,21 @@ publisher= {Cambridge University Press}
 @InProceedings{Claus1998,
 author = {Claus, Caroline and Boutilier, Craig},
 title = {The Dynamics of Reinforcement Learning in Cooperative Multiagent Systems},
-booktitle = {Proceedings of the Fifteenth National/Tenth Conference on Artificial Intelligence/Innovative Applications of Artificial Intelligence},
+booktitle = {the Fifteenth National/Tenth Conference on Artificial Intelligence/Innovative Applications of Artificial Intelligence},
 series = {AAAI '98/IAAI '98},
 year = {1998},
 } 
+
+@Article{Lamel2000,
+  Title                    = {{The LIMSI ARISE System}},
+  Author                   = {Lamel, Lori and Rosset, Sophie and Gauvain, Jean-Luc and Bennacef, Samir and Garnier-Rizet, Martine and Prouts, Bernard},
+  Journal                  = {Speech Communication},
+  Month                    = {Aug},
+  Number                   = {4},
+  Pages                    = {339-354},
+  Volume                   = {31},
+  Year                     = {2000}
+}
 
 @TechReport{CLASSiCd51,
 Author = {Laroche, R. and Putois, G.},
@@ -370,10 +423,20 @@ volume =  {24},
 year = {2012}
 }
 
+@Article{Daubigney2012,
+TITLE = {{A Comprehensive Reinforcement Learning Framework for Dialogue Management Optimisation}},
+AUTHOR = {Daubigney, Lucie and Geist, Matthieu and Chandramohan, Senthilkumar and Pietquin, Olivier},
+JOURNAL = {{IEEE Journal of Selected Topcis in Signal Processing}},
+VOLUME = {6},
+NUMBER = {8},
+PAGES = {891-902},
+YEAR = {2012}
+}
+
 @InProceedings{Daubigney2013,
 author    = {Daubigney, Lucie  and  Geist, Matthieu  and  Pietquin, Olivier},
 title     = {Model-free POMDP optimisation of tutoring systems with echo-state networks},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2013}
 }
 
@@ -420,7 +483,7 @@ pages = {143-170}
 @InProceedings{DeVault2012,
   author    = {DeVault, David  and  Traum, David},
   title     = {A Demonstration of Incremental Speech Understanding and Confidence Estimation in a Virtual Human Dialogue System},
-  booktitle = {Proceedings of the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+  booktitle = {the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
   month     = {July},
   year      = {2012}
 }
@@ -471,7 +534,7 @@ year = {1972}
 @InProceedings{Dusek2014,
 author    = {Du\v{s}ek, Ond\v{r}ej  and  Pl\'{a}tek, Ond\v{r}ej  and  \v{Z}ilka, Luk\'{a}\v{s}  and  Jur\v{c}\'{i}\v{c}ek, Filip},
 title     = {Alex: Bootstrapping a Spoken Dialogue System for a New Domain by Real Users},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -487,7 +550,7 @@ year = {1995}
 
 @InProceedings{Eckert1997, 
 author={Eckert, W. and Levin, E. and Pieraccini, R.}, 
-booktitle={Automatic Speech Recognition and Understanding, 1997. Proceedings., 1997 IEEE Workshop on}, 
+booktitle={Automatic Speech Recognition and Understanding},
 title={User modeling for spoken dialogue system evaluation}, 
 year={1997}
 }
@@ -503,13 +566,13 @@ pages = {630-645}
 
 @InProceedings{EkeinhorKomi2014,
 Title = {Un assistant vocal personnalisable},
-Author = {Ekeinhor-Komi, Tatiana and Falih, Hajar and Chardenon, Christine and Laroche, Romain and Lefevre, Fabrice},
-booktitle = {Proceedings of the 21st Conférence sur le Traitement Automatique des Langues Naturelles (TALN)},
+Author = {Ekeinhor-Komi, Tatiana and Falih, Hajar and Chardenon, Christine and Laroche, Romain and Lef\`evre, Fabrice},
+booktitle = {the 21st Conf/'erence sur le Traitement Automatique des Langues Naturelles (TALN)},
 Year = {2014}
 }
 
 @InProceedings{El-Asri2012,
-author = {Layla El Asri and Romain Laroche and Olivier Pietquin},
+author = {El Asri, Layla and Laroche, Romain and Pietquin, Olivier},
 title = {Reward Function Learning for Dialogue Management},
 booktitle = {STAIRS},
 year = {2012}
@@ -518,14 +581,14 @@ year = {2012}
 @InProceedings{El-Asri2013a,
 author    = {El Asri, Layla  and  Laroche, Romain},
 title     = {Will my Spoken Dialogue System be a Slow Learner ?},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2013}
 }
 
 @InProceedings{El-Asri2014a,
 author = {El Asri, Layla and Remi Lemonnier and Romain Laroche and Olivier Pietquin and Hatim Khouzaimi},
 title = {{NASTIA: Negotiating Appointment Setting Interface}},
-booktitle = {Proceedings of LREC},
+booktitle = {LREC},
 year = {2014}
 }
 
@@ -557,17 +620,24 @@ booktitle={International Workshop Series on Spoken Dialogue Systems Technology (
 year={2016}
 }
 
+@InProceedings{El-Asri2016b,
+author = {Layla El Asri and Bilal PIOT and Matthieu Geist and Romain Laroche and Olivier Pietquin},
+title = {Score-based Inverse Reinforcement Learning},
+booktitle = {International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2016)},
+year = {2016}
+}
+
 @InProceedings{Efstathiou2014,
 author    = {Efstathiou, Ioannis  and  Lemon, Oliver},
 title     = {Learning non-cooperative dialogue behaviours},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Engonopoulos2014,
 author    = {Engonopoulos, Nikolaos  and  Koller, Alexander},
 title     = {Generating effective referring expressions using charts},
-booktitle = {Proceedings of the INLG and SIGDIAL 2014 Joint Session},
+booktitle = {the INLG and SIGDIAL 2014 Joint Session},
 year      = {2014}
 }
 
@@ -581,7 +651,7 @@ year={2008}
 @InProceedings{Ezen-Can2014,
 author    = {Ezen-Can, Aysu  and  Boyer, Kristy},
 title     = {Combining Task and Dialogue Streams in Unsupervised Dialogue Act Models},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -591,6 +661,52 @@ title     = {Mixed-Initiative Systems for Collaborative Problem Solving},
 journal   = {AI Magazine},
 volume    = {28},
 year      = {2007}
+}
+
+@inproceedings{Ferreira2013,
+title={Social signal and user adaptation in reinforcement learning-based dialogue management},
+author={Ferreira, Emmanuel and Lef{\`e}vre, Fabrice},
+booktitle={MLIS},
+year={2013}
+}
+
+@InProceedings{Ferreira2015a,
+title={Online adaptative zero-shot learning spoken language understanding using word-embedding},
+author={Ferreira, E and Jabaian, B and Lef{\`e}vre, F},
+booktitle = {ICASSP},
+year={2015}
+}
+
+@InProceedings{Ferreira2015b,
+title={Zero-shot semantic parser for spoken language understanding},
+author={Ferreira, E and Jabaian, B and Lef{\`e}vre, F},
+booktitle = {INTERSPEECH},
+year={2015}
+}
+
+@Article{Ferreira2015c,
+title={Reinforcement-learning based dialogue system for human--robot interactions with socially-inspired rewards},
+author={Ferreira, Emmanuel and Lef\`evre, Fabrice},
+journal={Computer Speech \& Language},
+volume={34},
+number={1},
+pages={256--274},
+year={2015},
+publisher={Academic Press}
+}
+
+@InProceedings{Ferreira2015d,
+title={Users' Belief Awareness in Reinforcement Learning-based Situated Human-Robot Dialogue Management},
+author={Ferreira, Emmanuel and Milliez, Gr{\'e}goire and Lef\`evre, Fabrice and Alami, Rachid},
+booktitle={IWSDS},
+year={2015}
+}
+
+@InProceedings{Ferreira2016,
+title={Adversarial bandit for online interactive active learning of zero-shot spoken language understanding},
+author={Ferreira, E and Reiffers-Masson, A and Jabaian, B and Lef{\`e}vre, F},
+booktitle={IEEE International Conference on Acoustics Speech and Signal Processing},
+year={2016}
 }
 
 @InProceedings{Fink1998,
@@ -603,7 +719,7 @@ year = {1998}
 @InProceedings{Forbell2013,
 author    = {Forbell, Eric  and  Kalisch, Nicolai  and  Morbini, Fabrizio  and  Christoffersen, Kelly  and  Sagae, Kenji  and  Traum, David  and  Rizzo, Albert A.},
 title     = {Roundtable: An Online Framework for Building Web-based Conversational Agents},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
@@ -613,20 +729,26 @@ title = {The Application of Hidden Markov Models in Speech Recognition},
 journal = {Found. Trends Signal Process.},
 volume = {1},
 year = {2007}
-} 
+}
 
+@InProceedings{Galibert2005,
+  Title                    = {An Open-Domain, Human-Computer Dialog System},
+  Author                   = {Galibert, Olivier and Illouz, Gabriel and Rosset, Sophie},
+  Booktitle                = {INTERSPEECH},
+  Year                     = {2005}
+}
 
 @InProceedings{Gandhe2014,
 author    = {Gandhe, Sudeep  and  Traum, David},
 title     = {SAWDUST: a Semi-Automated Wizard Dialogue Utterance Selection Tool for domain-independent large-domain dialogue},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Gangadharaiah2014,
 author    = {Gangadharaiah, Rashmi  and  Narayanaswamy, Balakrishnan  and  Elkan, Charles},
 title     = {Learning to Re-rank for Interactive Problem Resolution and Query Refinement},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -642,21 +764,28 @@ pages = {171-197}
 @InProceedings{Gasic2013,
 author    = {Gasic, Milica  and  Breslin, Catherine  and  Henderson, Matthew  and  Kim, Dongho  and  Szummer, Martin  and  Thomson, Blaise  and  Tsiakoulis, Pirros  and  Young, Steve},
 title     = {POMDP-based dialogue manager adaptation to extended domains},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2013}
+}
+
+@InProceedings{Gelin2010,
+  Title                    = {Towards a Storytelling Humanoid Robot},
+  Author                   = {Gelin, Rodolphe and d'Alessandro, Christophe and Le, Quok Anh and Deroo, Olivier and Doukhan, Davidand Martin, Jean-Claude and Pelachaud, Catherine and Rilliard, Albert and Rosset, Sophie},
+  Booktitle                = {Workshop "Dialog with Robots", AAAI Fall Symposium.},
+  Year                     = {2010}
 }
 
 @InProceedings{Georgila2013,
 author    = {Georgila, Kallirroi},
 title     = {Reinforcement Learning of Two-Issue Negotiation Dialogue Policies},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{Ghigi2013,
 author    = {Fabrizio Ghigi and Maria Ines Torres and Raquel Justo and Jose-Miguel Benedi},
 title     = {Evaluating Spoken Dialogue Models Under the Interactive Pattern Recognition Framework},
-booktitle = {INTERSPEECH Proceedings},
+booktitle = {INTERSPEECH},
 year      = {2013}
 }
 
@@ -670,7 +799,7 @@ year={2014}
 @InProceedings{Giuliani2014,
 author    = {Giuliani, Manuel  and  Marschall, Thomas  and  Isard, Amy},
 title     = {Using Ellipsis Detection and Word Similarity for Transformation of Spoken Language into Grammatically Valid Sentences},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -696,8 +825,19 @@ pages = {199-233}
 @InProceedings{Ha2013,
 author    = {Ha, Eun  and  Mitchell, Christopher  and  Boyer, Kristy  and  Lester, James},
 title     = {Learning Dialogue Management Models for Task-Oriented Dialogue with Parallel Dialogue and Task Streams},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
+}
+
+@Article{Hahn2010,
+author = {Hahn, S. and Dinarelli, M. and Raymond, C. and Lef{\`e}vre, F. and Lehnen, P. and {De Mori}, R. and Moschitti, A. and Ney, H. and Riccardi, G.},
+journal = {IEEE TASLP},
+number = {6},
+pages = {1569--1583},
+publisher = {IEEE},
+title = {Comparing stochastic approaches to spoken language understanding in multiple languages},
+volume = {19},
+year = {2010}
 }
 
 @Article{Harbusch2011,
@@ -712,28 +852,28 @@ pages = {313-332}
 @InProceedings{Hastie2013,
 author    = {Hastie, Helen  and  Aufaure, Marie-Aude  and  Alexopoulos, Panos  and  Cuay\'{a}huitl, Heriberto  and  Dethlefs, Nina  and  Gasic, Milica  and  Henderson, James  and  Lemon, Oliver  and  Liu, Xingkun  and  Mika, Peter  and  Ben Mustapha, Nesrine  and  Rieser, Verena  and  Thomson, Blaise  and  Tsiakoulis, Pirros  and  Vanrompay, Yves},
 title     = {Demonstration of the PARLANCE system: a data-driven incremental, spoken dialogue system for interactive search},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2013}
 }
 
 @InProceedings{Hastie2014,
 author    = {Hastie, Helen  and  Aufaure, Marie-Aude  and  Alexopoulos, Panos  and  Bouchard, Hugues  and  Breslin, Catherine  and  Cuay\'{a}huitl, Heriberto  and  Dethlefs, Nina  and  Ga\v{s}i\'{c}, Milica  and  Henderson, James  and  Lemon, Oliver  and  Liu, Xingkun  and  Mika, Peter  and  Ben Mustapha, Nesrine  and  Potter, Tim  and  Rieser, Verena  and  Thomson, Blaise  and  Tsiakoulis, Pirros  and  Vanrompay, Yves  and  Villazon-Terrazas, Boris  and  Yazdani, Majid  and  Young, Steve  and  Yu, Yanchao},
 title     = {The PARLANCE mobile application for interactive search in English and Mandarin},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Heintze2010,
 author = {Silvan Heintze and Timo Baumann and David Schlangen},
 title = {Comparing Local and Sequential Models for Statistical Incremental Natural Language Understanding},
-booktitle = {SIGDIAL},
+booktitle = {the 11th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year = {2010}
 }
 
 @InProceedings{Henderson2014,
 author    = {Henderson, Matthew  and  Thomson, Blaise  and  Young, Steve},
 title     = {Word-Based Dialog State Tracking with Recurrent Neural Networks},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -763,6 +903,14 @@ year = {2011},
 pages = {279-311}
 }
 
+@article{Huet2013,
+title={Factored machine translation systems for Russian-English},
+author={Huet, St{\'e}phane and Manishina, Elena and Lef{\`e}vre, Fabrice},
+journal={the Eighth Workshop on Statistical Machine Translation},
+pages={152--155},
+year={2013}
+}
+
 @Article{Hutter2009,
 author    = {Marcus Hutter},
 title     = {Feature Reinforcement Learning: Part I: Unstructured MDPs},
@@ -787,6 +935,27 @@ booktitle = {Second International Symposium on Operating Systems Theory and Prac
 year      = {1978}
 }
 
+@Article{Jabaian2013,
+title={Comparison and combination of lightly supervised approaches for language portability of a spoken language understanding system},
+author={Jabaian, Bassam and Besacier, Laurent and Lef\`evre, Francois},
+journal={Audio, Speech, and Language Processing, IEEE Transactions on},
+volume={21},
+number={3},
+pages={636--648},
+year={2013},
+publisher={IEEE}
+}
+
+@Article{Jabaian2016,
+title={A unified framework for translation and understanding allowing discriminative joint decoding for multilingual speech semantic interpretation},
+author={Jabaian, Bassam and Lef{\`e}vre, Fabrice and Besacier, Laurent},
+journal={Computer Speech \& Language},
+volume={35},
+pages={185--199},
+year={2016},
+publisher={Academic Press}
+}
+
 @Book{Jaffe1970,
 author = {Jaffe, Joseph and Feldstein, Stanley},
 title = {Rhythms of dialogue},
@@ -806,14 +975,14 @@ year = {2005}
 @InProceedings{Johnston2014,
 author    = {Johnston, Michael  and  Chen, John  and  Ehlen, Patrick  and  Jung, Hyuckchul  and  Lieske, Jay  and  Reddy, Aarthi  and  Selfridge, Ethan  and  Stoyanchev, Svetlana  and  Vasilieff, Brant  and  Wilpon, Jay},
 title     = {MVA: The Multimodal Virtual Assistant},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Jonsdottir2008,
 author = {Gudny Ragna Jonsdottir and Kristinn R. Thorisson and Eric Nivel},
 title = {Learning Smooth, Human-Like Turntaking in Realtime Dialogue},
-booktitle = {In Proceedings of Intelligent Virtual Agents (IVA 08},
+booktitle = {Intelligent Virtual Agents (IVA 08},
 year = {2008},
 pages = {162--175},
 publisher = {Springer}
@@ -822,21 +991,21 @@ publisher = {Springer}
 @InProceedings{Jordan2015,
 author    = {Jordan, Pamela  and  Albacete, Patricia  and  Katz, Sandra},
 title     = {Exploring the Effects of Redundancy within a Tutorial Dialogue System: Restating Students' Responses},
-booktitle = {Proceedings of the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+booktitle = {the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2015}
 }
 
 @InProceedings{Keizer2013,
 author    = {Keizer, Simon  and  Foster, Mary Ellen  and  Lemon, Oliver  and  Gaschler, Andre  and  Giuliani, Manuel},
 title     = {Training and evaluation of an MDP model for social multi-user human-robot interaction},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{Kennington2012,
 author    = {Kennington, Casey  and  Schlangen, David},
 title     = {Markov Logic Networks for Situated Incremental Natural Language Understanding},
-booktitle = {Proceedings of the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+booktitle = {the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
 month     = {July},
 year      = {2012},
 }
@@ -844,69 +1013,69 @@ year      = {2012},
 @InProceedings{Kennington2013,
 author    = {Kennington, Casey  and  Kousidis, Spyros  and  Schlangen, David},
 title     = {Interpreting Situated Dialogue Utterances: an Update Model that Uses Speech, Gaze, and Gesture Information},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{Kennington2014,
 author    = {Kennington, Casey  and  Kousidis, Spyros  and  Schlangen, David},
 title     = {InproTKs: A Toolkit for Incremental Situated Processing},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Khouzaimi2014a,
 author    = {Khouzaimi, Hatim  and  Laroche, Romain  and  Lef\`evre, Fabrice},
 title     = {An easy method to make dialogue systems incremental},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Khouzaimi2014b,
 author    = {Hatim Khouzaimi and Romain Laroche and Fabrice Lef\`evre},
 title     = {Vers une approche simplifi\'ee pour introduire le caract\`ere incr\'emental dans les syst\`emes de dialogue},
-booktitle = {Proceedings of the TALN 2014 Conference},
+booktitle = {the TALN 2014 Conference},
 year      = {2014}
 }
 
 @InProceedings{Khouzaimi2014c,
 author    = {Hatim Khouzaimi and Romain Laroche and Fabrice Lef\`evre},
 title     = {DictaNum : syst\`eme de dialogue incr\'emental pour la dict\'ee de num\'eros},
-booktitle = {Proceedings of the TALN 2014 Conference},
+booktitle = {the TALN 2014 Conference},
 year      = {2014}
 }
 
 @InProceedings{Khouzaimi2015a,
 author    = {Khouzaimi, Hatim  and  Laroche, Romain  and  Lef\`evre, Fabrice},
 title     = {Dialogue efficiency evaluation of turn-taking phenomena in a multi-layer incremental simulated environment},
-booktitle = {Proceedings of the HCI International 2015 Conference},
+booktitle = {the HCI International 2015 Conference},
 year      = {2015}
 }
 
 @InProceedings{Khouzaimi2015b,
 author    = {Khouzaimi, Hatim  and  Laroche, Romain  and  Lef\`evre, Fabrice},
 title     = {Optimising Turn-Taking Strategies With Reinforcement Learning},
-booktitle = {Proceedings of the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2015}
 }
 
 @InProceedings{Khouzaimi2015c,
 author    = {Khouzaimi, Hatim  and  Laroche, Romain  and  Lef\`evre, Fabrice},
 title     = {Turn-taking phenomena in incremental dialogue systems},
-booktitle = {Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+booktitle = {the 2015 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
 year      = {2015}
 }
 
 @InProceedings{Khouzaimi2016a,
 author    = {Khouzaimi, Hatim  and  Laroche, Romain  and  Lef\`evre, Fabrice},
 title     = {Incremental Human-machine Dialogue Simulation},
-booktitle = {Proceedings of the International Workshop on Spoken Dialogue Systems (IWSDS)},
+booktitle = {the International Workshop on Spoken Dialogue Systems (IWSDS)},
 year      = {2016}
 }
 
 @InProceedings{Khouzaimi2016b,
 author    = {Khouzaimi, Hatim  and  Laroche, Romain  and  Lef\`evre, Fabrice},
-title     = {Reinforcement Learning applied to Incremental Spoken Dialogue Systems (Submitted)},
+title     = {Reinforcement Learning for Turn-Taking Management in Incremental Spoken Dialogue Systems},
 booktitle = {International Joint Conference on Artificial Intelligence (IJCAI)},
 year      = {2016}
 }
@@ -921,28 +1090,28 @@ institution = {German Research Center for Artificial Intelligence},
 @InProceedings{Kim2014,
 author    = {Kim, Seokhwan  and  Banchs, Rafael E.},
 title     = {Sequential Labeling for Tracking Dynamic Dialog States},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{KimD2014,
 author    = {Dongho Kim and Catherine Breslin and Pirros Tsiakoulis and Milica Gasic and Matthew Henderson and Steve Young},
 title     = {Inverse Reinforcement Learning for Micro-Turn Management},
-booktitle = {INTERSPEECH Proceedings},
+booktitle = {INTERSPEECH},
 year      = {2014}
 }
 
 @InProceedings{Knuuttila2013,
 author    = {Juho Knuuttila and Okko Rasanen and Unto K. Laine},
 title     = {Automatic Self-Supervised Learning of Associations Between Speech and Text},
-booktitle = {INTERSPEECH Proceedings},
+booktitle = {INTERSPEECH},
 year      = {2013}
 }
 
 @InProceedings{Konolige1993,
 author = {Konolige, Kurt and Pollack, Martha E.},
 title = {A Representationalist Theory of Intention},
-booktitle = {Proceedings of the 13th International Joint Conference on Artifical Intelligence (IJCAI)},
+booktitle = {the 13th International Joint Conference on Artifical Intelligence (IJCAI)},
 year = {1993}
 } 
 
@@ -993,50 +1162,66 @@ year={2010}
 @InProceedings{Laroche2013,
 title={Cooking Coach Spoken/Multimodal Dialogue Systems},
 author={Laroche, Romain and Roussarie, Laurent and Baczyk, Piotr and Dziekan, Jan},
-booktitle={Proceedings of the IJCAI Workshop on Cooking with Computers},
+booktitle={the IJCAI Workshop on Cooking with Computers},
 year={2013}
 }
 
 @InProceedings{Laroche2014,
 Title = {{CFAsT : Content Finder AssistanT}},
 Author = {Laroche, Romain},
-booktitle = {Proceedings of the 21st Conf\'erence sur le Traitement Automatique des Langues Naturelles (TALN)},
+booktitle = {the 21st Conf\'erence sur le Traitement Automatique des Langues Naturelles (TALN)},
 Year = {2014}
 }
 
 @InProceedings{Laroche2015,
 title={Content finder AssistanT},
 author={Laroche, Romain},
-booktitle={Proceedings of the 18th International Conference on Intelligence in Next Generation Networks (ICIN)},
-year={2015},
-organization={IEEE}
+booktitle={the 18th International Conference on Intelligence in Next Generation Networks (ICIN)},
+year={2015}
 }
 
 @InProceedings{LeeBJ2014,
 author    = {Lee, Byung-Jun  and  Lim, Woosang  and  Kim, Daejoong  and  Kim, Kee-Eung},
 title     = {Optimizing Generative Dialog State Tracker via Cascading Gradient Descent},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{LeeS2014,
 author    = {Lee, Sungjin},
 title     = {Extrinsic Evaluation of Dialog State Tracking and Predictive Metrics for Dialog Policy Optimization},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
+
+@InProceedings{Lefevre2012,
+author = {Fabrice Lef\`evre and Djamel Mostefa and Laurent Besacier and Yannick Est\`eve and Matthieu Quignard and Nathalie Camelin and Benoit Favre and Bassam Jabaian and Lina M. Rojas-Barahona},
+title = {Leveraging study of robustness and portability of spoken language understanding systems across languages and domains: the PORTMEDIA corpora},
+booktitle = {the Eight International Conference on Language Resources and Evaluation (LREC'12)},
+year = {2012}
+} 
 
 @InProceedings{Lemon2003,
     author = {Oliver Lemon and Lawrence Cavedon and Barbara Kelly},
     title = {Managing Dialogue Interaction: A Multi-Layered Approach},
-    booktitle = {Proceedings of the 4th SIGDIAL Workshop on Discourse and Dialogue},
+    booktitle = {the 4th SIGDIAL Workshop on Discourse and Dialogue},
     year = {2003}
 }
+
+@InProceedings{Lemon2006,
+ author = {Lemon, Oliver and Georgila, Kallirroi and Henderson, James and Stuttle, Matthew},
+ title = {An ISU Dialogue System Exhibiting Reinforcement Learning of Dialogue Policies: Generic Slot-filling in the TALK In-car System},
+ booktitle = {the 11th Conference of the European Chapter of the Association for Computational Linguistics},
+ series = {EACL '06},
+ year = {2006},
+ pages = {119--122},
+ numpages = {4}
+} 
 
 @InProceedings{Lemon2007,
 author = {Oliver Lemon and Olivier Pietquin},
 title = {Machine Learning for Spoken Dialogue Systems},
-booktitle = {Proceedings of the European Conference on Speech Communication and Technologies (Interspeech'07)},
+booktitle = {the European Conference on Speech Communication and Technologies (Interspeech'07)},
 year = {2007}
 }
 
@@ -1071,14 +1256,14 @@ year={1997}
 @InProceedings{Li2014a,
 author    = {Li, Junyi Jessy  and  Nenkova, Ani},
 title     = {Addressing Class Imbalance for Improved Recognition of Implicit Discourse Relations},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Li2014b,
 author    = {Li, Junyi Jessy  and  Nenkova, Ani},
 title     = {Reducing Sparsity Improves the Recognition of Implicit Discourse Relations},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1092,21 +1277,21 @@ year      = {2013}
 @InProceedings{Litman2014,
 author    = {Litman, Diane  and  Forbes-Riley, Katherine},
 title     = {Evaluating a Spoken Dialogue System that Detects and Adapts to User Affective States},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Liu2014,
 author    = {Liu, Alex  and  Sloan, Rose  and  Then, Mei-Vern  and  Stoyanchev, Svetlana  and  Hirschberg, Julia  and  Shriberg, Elizabeth},
 title     = {Detecting Inappropriate Clarification Requests in Spoken Dialogue Systems},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Lock1965,
 author = {Kenneth Lock},
 title = {Structuring programs for multiprogram time-sharing on-line applications},
-booktitle = {AFIPS '65 (Fall, part I) Proceedings of the November 30--December 1, 1965, fall joint computer conference, part I},
+booktitle = {AFIPS '65 (Fall, part I)},
 year = {1965}
 }
 
@@ -1124,11 +1309,26 @@ title = {Decision of response timing for incremental speech recognition with rei
 year = {2011}
 }
 
-
 @PhdThesis{Macherey2009,
 author = {Macherey, Klaus},
 title = {Statistical methods in natural language understanding and spoken dialogue systems.},
 year = {2009}
+}
+
+@InProceedings{Mairesse2010,
+title={Phrase-based statistical language generation using graphical models and active learning},
+author={Mairesse, Fran{\c{c}}ois and Ga{\v{s}}i{\'c}, Milica and Jur{\v{c}}{\'\i}{\v{c}}ek, Filip and Keizer, Simon and Thomson, Blaise and Yu, Kai and Young, Steve},
+booktitle={the 48th Annual Meeting of the Association for Computational Linguistics},
+pages={1552--1561},
+year={2010},
+organization={Association for Computational Linguistics}
+}
+
+@InProceedings{Manishina2016,
+title={Automatic corpus extension for data-driven natural language generation},
+author={Manishina, Elena and Jabaian, Bassam and  Huet, St\'ephane and Lef\`evre, Fabrice},
+booktitle={the Language Resources and Evaluation Conference (LREC)},
+year={2016}
 }
 
 @article{Mangu2000,
@@ -1142,14 +1342,14 @@ year      = {2000}
 @InProceedings{Matsuyama2009,
 author    = {Kyoko Matsuyama and Kazunori Komatani and Tetsuya Ogata and Hiroshi G. Okuno},
 title     = {Enabling a User to Specify an Item at Any Time During System Enumeration. Item Identification for Barge-In-Able Conversational Dialogue Systems.},
-booktitle = {Proceedings of the INTERSPEECH 2009 Conference},
+booktitle = {the INTERSPEECH 2009 Conference},
 year      = {2009}
 }
 
 @InProceedings{Matsuyama2013,
 author    = {Matsuyama, Yoichi  and  Akiba, Iwao  and  Saito, Akihiro  and  Kobayashi, Tetsunori},
 title     = {A Four-Participant Group Facilitation Framework for Conversational Robots},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
@@ -1163,7 +1363,7 @@ year = {2009}
 @InProceedings{McCarthy1969,
 author = {Mccarthy, John and Hayes, Patrick J.},
 title = {Some Philosophical Problems from the Standpoint of Artificial Intelligence},
-booktitle = {Machine Intelligence},
+booktitle = {Machine Intelligence Journal},
 pages = {463--502},
 year = {1969}
 }
@@ -1179,7 +1379,7 @@ year = {1979}
 
 @InProceedings{McGraw2012,
 author = {McGraw, Ian and Gruenstein, Alexander},
-booktitle = {Proceedings of the INTERSPEECH 2012 Conference},
+booktitle = {the INTERSPEECH 2012 Conference},
 title = {Estimating Word-Stability During Incremental Speech Recognition.},
 year = {2012}
 }
@@ -1187,14 +1387,14 @@ year = {2012}
 @InProceedings{Meena2013,
   author    = {Meena, Raveesh  and  Skantze, Gabriel  and  Gustafson, Joakim},
   title     = {A Data-driven Model for Timing Feedback in a Map Task Dialogue System},
-  booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+  booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
   year      = {2013}
 }
 
 @InProceedings{Meena2014,
 author    = {Meena, Raveesh  and  Boye, Johan  and  Skantze, Gabriel  and  Gustafson, Joakim},
 title     = {Crowdsourcing Street-level Geographic Information Using a Spoken Dialogue System},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1215,21 +1415,21 @@ year = {1994}
 @InProceedings{Misu2014,
 author    = {Misu, Teruhisa  and  Raux, Antoine  and  Gupta, Rakesh  and  Lane, Ian},
 title     = {Situated Language Understanding at 25 Miles per Hour},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Mitchell2013,
 author    = {Mitchell, Christopher  and  Boyer, Kristy  and  Lester, James},
 title     = {Evaluating State Representations for Reinforcement Learning of Turn-Taking Policies in Tutorial Dialogue},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{Mitchell2014,
 author    = {Mitchell, Margaret  and  Bohus, Dan  and  Kamar, Ece},
 title     = {Crowdsourcing Language Generation Templates for Dialogue Systems},
-booktitle = {Proceedings of the INLG and SIGDIAL 2014 Joint Session},
+booktitle = {the INLG and SIGDIAL 2014 Joint Session},
 year      = {2014}
 }
 
@@ -1252,14 +1452,14 @@ year = {2009}
 @InProceedings{Morbini2014a,
 author    = {Morbini, Fabrizio  and  Forbell, Eric  and  Sagae, Kenji},
 title     = {Improving Classification-Based Natural Language Understanding with Non-Expert Annotation},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Morbini2014b,
 author    = {Morbini, Fabrizio  and  DeVault, David  and  Georgila, Kallirroi  and  Artstein, Ron  and  Traum, David  and  Morency, Louis-Philippe},
 title     = {A Demonstration of Dialogue Processing in SimSensei Kiosk},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1282,28 +1482,28 @@ year = {1980}
 @InProceedings{Nothdurft2014,
 author    = {Nothdurft, Florian  and  Richter, Felix  and  Minker, Wolfgang},
 title     = {Probabilistic Human-Computer Trust Handling},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Nouri2014,
 author    = {Nouri, Elnaz  and  Traum, David},
 title     = {Initiative Taking in Negotiation},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Oya2014,
 author    = {Oya, Tatsuro  and  Carenini, Giuseppe},
 title     = {Extractive Summarization and Dialogue Act Modeling on Email Threads: An Integrated Probabilistic Approach},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Paek2007,
 title={Toward evaluation that leads to best practices: reconciling dialog evaluation in research and industry},
 author={Paek, Tim},
-booktitle={Proceedings of the Workshop on Bridging the Gap: Academic and Industrial Research in Dialog Technologies},
+booktitle={the Workshop on Bridging the Gap: Academic and Industrial Research in Dialog Technologies},
 pages={40--47},
 organization={Association for Computational Linguistics (ACL)},
 year={2007}
@@ -1337,21 +1537,21 @@ year = {2005}
 @InProceedings{Pappu2014,
 author    = {Pappu, Aasish  and  Rudnicky, Alexander},
 title     = {Knowledge Acquisition Strategies for Goal-Oriented Dialog Systems},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Passonneau2014,
 author    = {Passonneau, Rebecca J.  and  Guan, Boxuan  and  Yeung, Cho Ho  and  Du, Yuan  and  Conner, Emma},
 title     = {Aspectual Properties of Conversational Activities},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Pieraccini2005,
 author = {Pieraccini, R. and Huerta, J.},
 title = {Where do we go from here? Research and commercial spoken dialog systems},
-booktitle = {Proceedings of the 6th SIGdial Workshop on Discourse and Dialogue},
+booktitle = {the 6th SIGDIAL Workshop on Discourse and Dialogue},
 year = {2005}
 }
 
@@ -1360,6 +1560,16 @@ author = {Pietquin, Olivier and Beaufort, Richard},
 booktitle = {9th European Conference on Speech Communication and Technology (Eurospeech/Interspeech)},
 title = {Comparing ASR modeling methods for spoken dialogue simulation and optimal strategy learning.},
 year = {2005}
+}
+
+@Article{Pietquin2006,
+author = {Olivier Pietquin and Thierry Dutoit},
+title = {A Probabilistic Framework for Dialog Simulation and Optimal Strategy Learning},
+journal = {IEEE Transactions on Audio, Speech and Language Processing},
+volume = {14},
+number = {2},
+pages = {589-599},
+year = {2006}
 }
 
 @Article{Pietquin2013,
@@ -1373,7 +1583,7 @@ year = {2013}
 @InProceedings{Platek2014,
 author    = {Pl\'{a}tek, Ond\v{r}ej  and  Jur\v{c}\'{i}\v{c}ek, Filip},
 title     = {Free on-line speech recogniser based on Kaldi ASR toolkit producing word posterior lattices},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1386,10 +1596,26 @@ year = {2011},
 pages = {235-277}
 }
 
+@InProceedings{Potet2011,
+title={The LIGA (LIG/LIA) machine translation system for WMT 2011},
+author={Potet, Marion and Rubino, Rapha{\"e}l and Lecouteux, Benjamin and Huet, St{\'e}phane and Blanchon, Herv{\'e} and Besacier, Laurent and Lef\`evre, Fabrice},
+booktitle={the Sixth Workshop on Statistical Machine Translation},
+pages={440--446},
+year={2011},
+organization={Association for Computational Linguistics}
+}
+
+@InProceedings{Povey2011,
+author = {Povey, Daniel and Ghoshal, Arnab and Boulianne, Gilles and Burget, Lukas and Glembek, Ondrej and Goel, Nagendra and Hannemann, Mirko and Motlicek, Petr and Qian, Yanmin and Schwarz, Petr and Silovsky, Jan and Stemmer, Georg and Vesely, Karel},
+title = {The Kaldi Speech Recognition Toolkit},
+booktitle = {IEEE 2011 Workshop on Automatic Speech Recognition and Understanding},
+year = {2011}
+}
+
 @InProceedings{Putois2010,
 title={Enhanced Monitoring Tools and Online Dialogue Optimisation Merged into a New Spoken Dialogue System Design Experience.},
 author={Putois, Ghislain and Laroche, Romain and Bretier, Philippe},
-booktitle={Proceedings of the 11h Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle={the 11h Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year={2010}
 }
 
@@ -1403,7 +1629,7 @@ year = {2007}
 @InProceedings{Raux2008,
 author = {Antoine Raux and Maxine Eskenazi},
 title = {Optimizing Endpointing Thresholds using Dialogue Features in a Spoken Dialogue System},
-booktitle = {SIGDIAL},
+booktitle = {the 9th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year = {2008}
 }
 
@@ -1417,7 +1643,7 @@ year = {2008}
 @InProceedings{Raux2009,
 author = {Raux, Antoine and Eskenazi, Maxine},
 title = {A Finite-state Turn-taking Model for Spoken Dialog Systems},
-booktitle = {Proceedings of Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics},
+booktitle = {Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics},
 series = {NAACL '09},
 year = {2009},
 pages = {629--637},
@@ -1433,26 +1659,24 @@ pages = {1:1--1:23},
 year = {2012}
 } 
 
-
-
 @InProceedings{Reichel2014,
 author    = {Reichel, Sven  and  Sohn, Jasmin  and  Ehrlich, Ute  and  Berton, Andr\'{e}  and  Weber, Michael},
 title     = {Out-of-Domain Spoken Dialogs in the Car: A WoZ Study},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Ren2014,
 author    = {Ren, Hang  and  Xu, Weiqun  and  Yan, Yonghong},
 title     = {Markovian Discriminative Modeling for Dialog State Tracking},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Riaz2014,
 author    = {Riaz, Mehwish  and  Girju, Roxana},
 title     = {In-depth Exploitation of Noun and Verb Semantics to Identify Causation in Verb-Noun Pairs},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1477,14 +1701,41 @@ year = {2011}
 @InProceedings{Rosenthal2013,
 author = {Rosenthal, Stephanie and Bohus, Dan and Kamar, Ece and Horvitz, Eric},
 title = {Look Versus Leap: Computing Value of Information with High-dimensional Streaming Evidence},
-booktitle = {Proceedings of the Twenty-Third International Joint Conference on Artificial Intelligence (IJCAI)},
+booktitle = {the Twenty-Third International Joint Conference on Artificial Intelligence (IJCAI)},
 year = {2013}
 }
 
+@InProceedings{Rosset2013,
+  Title                    = {Human annotation of ASR error regions: Is "gravity" a sharable concept for human annotators?},
+  Author                   = {Rosset, Sophie and Luzzati, Daniel and Grouin, Cyril and Vasilescu,Ioana and Adda-Decker, Martine and Bilinski, Eric and Camelin, Nathalie and Kahn, Juliette and Lailler, Carole and Lamel, Lori},
+  Booktitle                = {Errors by Humans and Machines in Multimedia, Multimodal, Multilingual Data Processing (ERRARE)},
+  Year                     = {2013},
+}
+
+@InProceedings{Roy2000,
+    author = {Roy, Nicholas and Pineau, Joelle and Thrun, Sebastian},
+    booktitle = {Proceedings of the 38th Annual Meeting on Association for Computational Linguistics (ACL)},
+    title = {Spoken Dialogue Management Using Probabilistic Reasoning},
+    year = {2000}
+}
+
+@Article{Rubino2012,
+title={Statistical Post-Editing of Machine Translation for Domain Adaptation},
+author={Rubino, Rapha{\"e}l and Huet, St{\'e}phane and Avignon, France and Lef\`evre, Fabrice and Linares, Georges},
+year={2012}
+}
+
+@InProceedings{Russell1998,
+author = {Russell, Stuart},
+title = {Learning Agents for Uncertain Environments (Extended Abstract)},
+booktitle = {the Eleventh Annual Conference on Computational Learning Theory},
+year = {1998}
+} 
+
 @InProceedings{Wei1999,
-author = {Wei, X. and Rudnicky A.},
+author = {Wei, X. and Rudnicky, A.},
 title = {n agenda-based dialog management architecture for spoken language systems},
-booktitle = {Proceedings of IEEE ASRU},
+booktitle = {IEEE ASRU},
 year = {1999}
 } 
 
@@ -1575,14 +1826,14 @@ pages = {83-111}
 @InProceedings{Schloder2014,
 author    = {Schl\"{o}der, Julian  and  Fern\'{a}ndez, Raquel},
 title     = {The Role of Polarity in Inferring Acceptance and Rejection in Dialogue},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Schmitt2012,
 author = {Alexander Schmitt and Stefan Ultes and Wolfgang Minker},
 title = {A Parameterized and Annotated Spoken Dialog Corpus of the CMU Let's Go Bus Information System},
-booktitle = {Proceedings of the Eight International Conference on Language Resources and Evaluation (LREC'12)},
+booktitle = {the Eight International Conference on Language Resources and Evaluation (LREC'12)},
 year = {2012}
 }
  
@@ -1634,14 +1885,14 @@ pages     = {177-185}
 @InProceedings{Selfridge2011,
 author = {Selfridge, Ethan O. and Arizmendi, Iker and Heeman, Peter A. and Williams, Jason D.},
 title = {Stability and Accuracy in Incremental Speech Recognition},
-booktitle = {Proceedings of the SIGDIAL 2011 Conference},
+booktitle = {the 12th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year = {2011}
 } 
 
 @InProceedings{Selfridge2012a,
 author    = {Selfridge, Ethan O.  and  Arizmendi, Iker  and  Heeman, Peter A.  and  Williams, Jason D.},
 title     = {Integrating Incremental Speech Recognition and POMDP-Based Dialogue Systems},
-booktitle = {Proceedings of the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+booktitle = {the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 month     = {July},
 year      = {2012}
 }
@@ -1649,28 +1900,28 @@ year      = {2012}
 @InProceedings{Selfridge2012b,
 author    = {Selfridge, Ethan O.  and  Heeman, Peter A.},
 title     = {A Temporal Simulator for Developing Turn-Taking Methods for Spoken Dialogue Systems},
-booktitle = {Proceedings of the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
+booktitle = {the 13th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2012}
 }
 
 @InProceedings{Selfridge2013,
 author    = {Selfridge, Ethan  and  Arizmendi, Iker  and  Heeman, Peter  and  Williams, Jason},
 title     = {Continuously Predicting and Processing Barge-in During a Live Spoken Dialogue Task},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{She2014,
 author    = {She, Lanbo  and  Yang, Shaohua  and  Cheng, Yu  and  Jia, Yunyi  and  Chai, Joyce  and  Xi, Ning},
 title     = {Back to the Blocks World: Learning New Actions through Situated Human-Robot Dialogue},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
 @InProceedings{Sidner2013,
 author    = {Sidner, Candace  and  Bickmore, Timothy  and  Rich, Charles  and  Barry, Barbara  and  Ring, Lazlo  and  Behrooz, Morteza  and  Shayganfar, Mohammad},
 title     = {Demonstration of an Always-On Companion for Isolated Older Adults},
-booktitle = {Proceedings of the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 14th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2013}
 }
 
@@ -1693,7 +1944,7 @@ year={2002}
 title = {Exploring human error handling strategies: implications for spoken dialogue systems},
 author = {Skantze, G.},
 year = {2003},
-booktitle = {Proceedings of ISCA Tutorial and Research Workshop on Error Handling in Spoken Dialogue Systems},
+booktitle = {ISCA Tutorial and Research Workshop on Error Handling in Spoken Dialogue Systems},
 }
 
 @InProceedings{Skantze2009,
@@ -1713,21 +1964,21 @@ year = {2010}
 @InProceedings{Skantze2013,
 author    = {Skantze, Gabriel  and  Hjalmarsson, Anna  and  Oertel, Catharine},
 title     = {Exploring the effects of gaze and pauses in situated human-robot interaction},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
 @InProceedings{Skantze2015,
 author    = {Skantze, Gabriel  and  Johansson, Matrin},
 title     = {Modelling situated human-robot interaction using IrisTK},
-booktitle = {Proceedings of the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2015}
 }
 
 @InProceedings{Smith2014,
 author    = {Smith, Ronnie},
 title     = {Comparative Error Analysis of Dialog State Tracking},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1756,7 +2007,7 @@ publisher={Norton}
 @InProceedings{Sun2014,
 author    = {Sun, Kai  and  Chen, Lu  and  Zhu, Su  and  Yu, Kai},
 title     = {The SJTU System for Dialog State Tracking Challenge 2},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1770,7 +2021,7 @@ publisher= {The MIT Press, Cambridge, Massachusetts, London, England}
 @InProceedings{Swanson2014,
 author    = {Swanson, Reid  and  Rahimtoroghi, Elahe  and  Corcoran, Thomas  and  Walker, Marilyn},
 title     = {Identifying Narrative Clause Types in Personal Stories},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1809,7 +2060,7 @@ publisher={Columbia University Press}
 @InProceedings{Ultes2014,
 author    = {Ultes, Stefan  and  Minker, Wolfgang},
 title     = {Interaction Quality Estimation in Spoken Dialogue Systems Using Hybrid-HMMs},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1825,7 +2076,7 @@ pages = {59-82}
 @InProceedings{Vail2014,
 author    = {Vail, Alexandria  and  Boyer, Kristy},
 title     = {Adapting to Personality Over Time: Examining the Effectiveness of Dialogue Policy Progressions in Task-Oriented Interaction},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1846,7 +2097,7 @@ year      = {2013}
 @InProceedings{Walker1997,
 author = {Walker, Marilyn Anne and Litman, Diane J. and Kamm, Candace A. and Abella, Alicia},
 title = {PARADISE: a framework for evaluating spoken dialogue agents},
-booktitle = {Proceedings of the eighth conference on European chapter of the Association for Computational Linguistics},
+booktitle = {the eighth conference on European chapter of the Association for Computational Linguistics},
 year = {1997}
 }
 
@@ -1862,7 +2113,7 @@ year = {2000}
 @InProceedings{Wang2014,
 Title = {Policy Learning for Domain Selection in an Extensible Multi-domain Spoken Dialogue System},
 Author = {Wang, Zhuoran and Chen, Hongliang and Wang, Guanchun and Tian, Hao and Wu, Hua and Wang, Haifeng},
-Booktitle                = {Proceedings of the 19th Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+Booktitle                = {the 19th Conference on Empirical Methods in Natural Language Processing (EMNLP)},
 Year                     = {2014}
 }
 
@@ -1876,7 +2127,7 @@ year = {1989}
 @article{Williams2007,
 author = {Williams, Jason D. and Young, Steve},
 title = {Partially Observable Markov Decision Processes for Spoken Dialog Systems},
-journal = {Comput. Speech Lang.},
+journal = {Computer Speech and Language Journal},
 year = {2007},
 }
 
@@ -1911,7 +2162,7 @@ year         = {2012}
 @InProceedings{Williams2014,
 author    = {Williams, Jason D},
 title     = {Web-style ranking and SLU combination for dialog state tracking},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1925,21 +2176,21 @@ year = {1992}
 @Article{Witt2011,
 title={A global experience metric for dialog management in spoken dialog systems},
 author={Witt, Silke},
-journal={Proceedings of SemDial},
+journal={SemDial},
 year={2011}
 }
 
 @InProceedings{Wlodarczak2013,
 author = {Marcin Wlodarczak and Petra Wagner},
 title = {Effects of Talk-Spurt Silence Boundary Thresholds on Distribution of Gaps and Overlaps},
-booktitle = {INTERSPEECH Proceedings},
+booktitle = {INTERSPEECH},
 year = {2013}
 }
 
 @InProceedings{Yamauchi2013,
 author    = {Yamauchi, Takashi  and  Nakano, Mikio  and  Funakoshi, Kotaro},
 title     = {A Robotic Agent in a Virtual Environment that Performs Situated Incremental Understanding of Navigational Utterances},
-booktitle = {Proceedings of the SIGDIAL 2013 Conference},
+booktitle = {the SIGDIAL 2013 Conference},
 year      = {2013}
 }
 
@@ -1949,21 +2200,11 @@ booktitle = {CLS-70},
 title = {On getting a word in edgewise},
 year = {1970}
 }
-@InProceedings{jordan-albacete-katz:2015:W15-46,
-  author    = {Jordan, Pamela  and  Albacete, Patricia  and  Katz, Sandra},
-  title     = {Exploring the Effects of Redundancy within a Tutorial Dialogue System: Restating Students' Responses},
-  booktitle = {Proceedings of the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue},
-  month     = {September},
-  year      = {2015},
-  address   = {Prague, Czech Republic},
-  publisher = {Association for Computational Linguistics},
-  pages     = {51--59},
-  url       = {http://aclweb.org/anthology/W15-4607}
-}
+
 @InProceedings{Yoshino2014,
 author    = {Yoshino, Koichiro  and  Kawahara, Tatsuya},
 title     = {Information Navigation System Based on POMDP that Tracks User Focus},
-booktitle = {Proceedings of the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 15th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2014}
 }
 
@@ -1972,6 +2213,35 @@ author    = {Steve J. Young},
 title     = {Using POMDPs for Dialog Management},
 booktitle = {Spoken Language Technology Workshop (SLT)},
 year      = {2006}
+}
+
+@Article{Young2010,
+title = {The Hidden Information State model: A practical framework for POMDP-based spoken dialogue management},
+author = {S. Young and M. Ga\v{s}i\'{c} and S. Keizer and F. Mairesse and J. Schatzmann and B. Thomson and K. Yu},
+journal = {Computer Speech and Language},
+volume = {24},
+number = {2},
+pages = {150-174},
+year = {2010}
+}
+
+@Article{Thomson2010,
+  author    = {Blaise Thomson and Steve J. Young},
+  title     = {Bayesian update of dialogue state: {A} {POMDP} framework for spoken dialogue systems},
+  journal   = {Computer Speech {\&} Language},
+  volume    = {24},
+  number    = {4},
+  pages     = {562--588},
+  year      = {2010}
+}
+
+@Article{Yu2011,
+author = {Yu, Kai and Zen, Heiga and Mairesse, Fran\c{c}ois and Young, Steve},
+title = {Context Adaptive Training with Factorized Decision Trees for HMM-based Statistical Parametric Speech Synthesis},
+journal = {Speech Communication},
+volume = {53},
+number = {6},
+year = {2011}
 }
 
 @InProceedings{Yuan2006,
@@ -1984,6 +2254,6 @@ year = {2006}
 @InProceedings{Zhao2015,
 author    = {Zhao, Tiancheng and Black, Alan W and Eskenazi, Maxine},
 title     = {An Incremental Turn-Taking Model with Active System Barge-in for Spoken Dialog Systems},
-booktitle = {Proceedings of the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
+booktitle = {the 16th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
 year      = {2015}
 }

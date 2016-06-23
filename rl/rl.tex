@@ -5,7 +5,9 @@
 	
 	In this chapter, a new approach is proposed where the Scheduler automatically learns optimal turn-taking behaviours through interactions (published as \cite{Khouzaimi2015b}). Reinforcement learning is applied in order to make decisions at the micro-turn level based on a new state representation model. A new simulation experiment shows that the resulting strategy outperforms the handcrafted one from Chapter \ref{ch:baseline}.
 
-\section{Reinforcement Learning Model}
+        Turn-taking is most of the time locally optimised using supervised learning \cite{Raux2009,Meena2013}. The different moments when a participant takes the floor (either interrupting the initial speaker or not) are treated independently. By using reinforcement learning, no such assumption is made and it is possible to learn different turn-taking behaviours according to the dialogue advancement. Moreover, the purpose of such studies is to minimise gaps and overlaps. However, even though this objective function is justified \cite{Sacks1974}, nothing proves that it leads to optimal dialogues in every situation. Again, using reinforcement learning makes it possible to avoid this second assuption too. Finally, it is also well adapted to learning from delayed rewards which is interesting here since the dialogue quality is only available at the end of the dialogue (or at the end of independent dialogue episodes like it is the case here).
+
+\section{Reinforcement learning Model}
 
         \subsection{Background}
 

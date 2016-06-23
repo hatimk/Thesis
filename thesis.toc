@@ -104,14 +104,14 @@
 \contentsline {paragraph}{BARGE\_IN\_RESP (User):}{118}{section*.231}
 \contentsline {subsection}{\numberline {7.2.2}Experiments}{119}{subsection.232}
 \contentsline {chapter}{\numberline {8}Reinforcement learning for turn-taking optimisation}{123}{chapter.237}
-\contentsline {section}{\numberline {8.1}Reinforcement Learning Model}{123}{section.238}
-\contentsline {subsection}{\numberline {8.1.1}Background}{123}{subsection.239}
+\contentsline {section}{\numberline {8.1}Reinforcement learning Model}{124}{section.238}
+\contentsline {subsection}{\numberline {8.1.1}Background}{124}{subsection.239}
 \contentsline {subsection}{\numberline {8.1.2}State representation}{124}{subsection.240}
-\contentsline {subsection}{\numberline {8.1.3}Actions, rewards and episodes}{127}{subsection.246}
-\contentsline {subsection}{\numberline {8.1.4}Fitted-Q Value Iteration}{128}{subsection.247}
+\contentsline {subsection}{\numberline {8.1.3}Actions, rewards and episodes}{128}{subsection.246}
+\contentsline {subsection}{\numberline {8.1.4}Fitted-Q Value Iteration}{129}{subsection.247}
 \contentsline {section}{\numberline {8.2}Experiment}{130}{section.255}
 \contentsline {subsection}{\numberline {8.2.1}Setup}{130}{subsection.256}
-\contentsline {subsection}{\numberline {8.2.2}Results}{131}{subsection.262}
+\contentsline {subsection}{\numberline {8.2.2}Results}{132}{subsection.262}
 \contentsline {chapter}{\numberline {9}Experiment with real users}{133}{chapter.263}
 \contentsline {section}{\numberline {9.1}The Majordomo domain}{133}{section.264}
 \contentsline {section}{\numberline {9.2}Experimental protocol}{134}{section.267}

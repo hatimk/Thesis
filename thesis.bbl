@@ -31,6 +31,14 @@
   pronoun resolution from eyetracking.
 \newblock \textit{ Cognition\/}~\textit{ 76\/}(1), B13--B26.
 
+\bibitem[{Asri et~al.}(2016){Asri, PIOT, Geist, Laroche, \andnamec{}
+  Pietquin}]{El-Asri2016b}
+(Asri et~al., 2016) \hspace{.5em}L.~E. Asri, B.~PIOT, M.~Geist, R.~Laroche,
+  \andname{} O.~Pietquin, 2016.
+\newblock Score-based inverse reinforcement learning.
+\newblock In Proceedings of \textit{ International Conference on Autonomous
+  Agents and Multiagent Systems (AAMAS 2016)}.
+
 \bibitem[{Auer et~al.}(2002){Auer, Cesa-Bianchi, \andnamec{}
   Fischer}]{Auer2002}
 (Auer et~al., 2002) \hspace{.5em}P.~Auer, N.~Cesa-Bianchi, \andname{}
@@ -977,6 +985,15 @@
 \newblock In Proceedings of \textit{ 9th European Conference on Speech
   Communication and Technology (Eurospeech/Interspeech)}.
 
+\bibitem[{Pietquin \andnamec{} Dutoit}(2006){Pietquin \andnamec{}
+  Dutoit}]{Pietquin2006}
+(Pietquin \andnamec{} Dutoit, 2006) \hspace{.5em}O.~Pietquin \andname{}
+  T.~Dutoit, 2006.
+\newblock A probabilistic framework for dialog simulation and optimal strategy
+  learning.
+\newblock \textit{ IEEE Transactions on Audio, Speech and Language
+  Processing\/}~\textit{ 14\/}(2), 589--599.
+
 \bibitem[{Pietquin \andnamec{} Hastie}(2013){Pietquin \andnamec{}
   Hastie}]{Pietquin2013}
 (Pietquin \andnamec{} Hastie, 2013) \hspace{.5em}O.~Pietquin \andname{}
@@ -1087,6 +1104,12 @@
   concept for human annotators?
 \newblock In Proceedings of \textit{ Errors by Humans and Machines in
   Multimedia, Multimodal, Multilingual Data Processing (ERRARE)}.
+
+\bibitem[{Roy et~al.}(2000){Roy, Pineau, \andnamec{} Thrun}]{Roy2000}
+(Roy et~al., 2000) \hspace{.5em}N.~Roy, J.~Pineau, \andname{} S.~Thrun, 2000.
+\newblock Spoken dialogue management using probabilistic reasoning.
+\newblock In Proceedings of \textit{ Proceedings of the 38th Annual Meeting on
+  Association for Computational Linguistics (ACL)}.
 
 \bibitem[{Rubino et~al.}(2012){Rubino, Huet, Avignon, Lef\`evre, \andnamec{}
   Linares}]{Rubino2012}

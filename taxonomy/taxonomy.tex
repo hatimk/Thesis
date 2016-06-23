@@ -44,7 +44,7 @@
           \speak{Tania} It is half past two.
         \end{dialogue}
 
-        In all the dialogues, Hector initially has the floor and then Tania performs a dialogue act. In dialogue 1 and 2, she does not wait for him to finish his utterance before doing so, unlike in the last dialogue. Therefore, Tania can choose the timing of her intervention at different stages in the progression of Hector's utterance. The first criterion used in the taxonomy introduced here corresponds to this decision. Moreover, in dialogues 1 and 3, Tania utters a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kinds of behaviours performed by Tania.
+        In all the dialogues, Hector initially has the floor and then Tania performs a dialogue act. In dialogues 1 and 2, she does not wait for him to finish his utterance before doing so, unlike in the last dialogue. Therefore, Tania can choose the timing of her intervention at different stages in the progression of Hector's utterance. The first criterion used in the taxonomy introduced here corresponds to this decision. Moreover, in dialogues 1 and 3, Tania utters a complete sentence unlike in dialogue 2. The second criterion is aimed to make the distinction between these kinds of behaviours performed by Tania.
 
 	More formally, turn-taking in dialogue refers to the act of taking the floor by one participant (Tania in the previous examples), here called the Taker (T). Two cases can be distinguished; either the other participant, here called the Holder (H), is already speaking or not (the denomination Holder is more adapted to the case where it has the floor, but it is kept as a convention for the other case).
     
@@ -106,7 +106,7 @@
 			\label{tab:TTP}
 		\end{table}
         
-        Table \ref{tab:TTP} describes the taxonomy where turn-taking phenomena (TTP) are depicted. The rows correspond to the levels of information added by H and the columns to the information that T intents to add. In order to describe each one of them in detail, they are discussed row by row. Moreover, these TTP are shown to fit into several categories which are represented by different colors in the table and explained in Section \ref{sec:discussion}.
+        Table \ref{tab:TTP} describes the taxonomy where turn-taking phenomena (TTP) are depicted. The rows correspond to the levels of information added by H and the columns to the information that T intents to add. In order to describe each one of them in details, they are discussed row by row. Moreover, these TTP are shown to fit into several categories which are represented by different colors in the table and explained in Section \ref{sec:discussion}.
         
         \paragraph{H\_NONE:} H does not have the floor, therefore, T takes the floor for the first time in the dialogue. This can be done implicitly by performing some gesture to catch H's attention or by clearing her throat for instance (FLOOR\_TAKING\_IMPL) or more explicitely either by providing a raw message (FLOOR\_TAKING\_RAW) like \textit{I would like to talk to you} or by providing more details about the reasons why T wants to start a conversation (FLOOR\_TAKING\_INTERP): \textit{I am leaving tomorrow and I really have to talk to you about the problem with my insurance}. On the other hand, she can start speaking normally (INIT\_DIALOGUE).
         
@@ -206,10 +206,10 @@
 							\speak{T} Oh Yeah! That is my favorite, plus, my doctor advised me to have some every day.
 						\end{dialogue}
                     
-                    In the case of goal-oriented dialogue, H keeps talking even though he conveyed all the necessary information for T to formulate an answer. T can choose to interrupt him (BARGE\_IN\_RESP) thus making the dialogue shorter (this can be viewed as a rude move in some cases):
+                    In the case of goal-oriented dialogues, H keeps talking even though he conveyed all the necessary information for T to formulate an answer. T can choose to interrupt him (BARGE\_IN\_RESP) thus making the dialogue shorter (this can be viewed as a rude move in some cases):
                     
                  		\begin{dialogue}
-							\speak{H} I want to book a six person table tomorrow at 6 please, I hope it is possible since I have ...
+							\speak{H} I want to book a six-person table tomorrow at 6 please, I hope it is possible since I have ...
 							\speak{T} Sure, no problem. Can I have your name please?
 						\end{dialogue}
                         
@@ -541,7 +541,7 @@
 		
 	 \section{Turn-taking phenomena in dialogue systems}
 
-                                In this section, the TTP that exist in traditional dialogue systems are first identified. Incremental dialogue systems can extend this list to the other TTP in the taxonomy, however, some of them are very complex to execute and some are unlikely to improve the dialogue efficiency. The objective of this section is to discuss each of the previous TTP in order to determine which one of them are worth implementing in an incremental dialogue system.
+                                In this section, the TTP that exist in traditional dialogue systems are first identified. Incremental dialogue systems can extend this list to the other TTP in the taxonomy, however, some of them are very complex to execute and some are unlikely to improve the dialogue efficiency. The objective of this section is to discuss each of the previous TTP in order to determine which of them are worth implementing in an incremental dialogue system.
 	
 				INIT\_DIALOGUE is a TTP that is involved in every dialogue system, including traditional ones. FLOOR\_TAKING TTPs are of limited interest when it comes to task-oriented dialogue, therefore, they are not implemented in task-oriented dialogue systems. There are two ways of initialising the dialogue, the user initiative one (the user starts speaking first like this is the case for Siri for instance) and the system initiative way (the system delivers an initial prompt, when calling an IVR for example). END\_POINT is also necessary for any kind of dialogue, however, the way the dialogue participants exchange turns is not always the same given the situation at hand. Humans are very good at detecting end of utterance clues beforehand, making them achieve smooth turn-taking. Traditional dialogue systems, on the other hand, rely on long enough silences as markers of end of turn. A research thread is dedicated to studying methods of reducing these silences by considering different clues (prosodic, lexical and semantic) aiming for smoother turn exchange \cite{Raux2008,Gravano2011}. However, even though they have been under study for many years, there is still room for improvement. In the rest of this section, the remaining TTPs are discussed from an implementation point of view. Our goal is to come up with a list of TTPs that are the most likely to improve task-oriented dialogue. Similarly, the REKINDLE TTPs correspond to dialogue management strategies that can be implemented in any traditional dialogue system and as a consequence, it will not be considered here. Moreover, since this thesis focuses on task oriented dialogue, FAIL\_MOVE, INCOHERENCE\_MOVE and BARGE\_IN\_CHANGE are not discussed neither since they are aimed to change the discussion topic.
 
